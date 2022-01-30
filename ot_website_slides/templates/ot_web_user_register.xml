@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="ot_web_user_register" name="User register">
+        <t t-call="website.layout">
+            <script type="text/javascript" src="/web/static/lib/jquery/jquery.js"/>
+            <script>
+                $(document).ready(function (){
+                $('.o_header_standard').hide()
+                });
+            </script>
+            <form>
+                <div class="container-fluid" style="margin: 5%;padding-left: 35%;">
+                    <div class="col-md-6" id="ot_form_register_user" t-name="ot_website_slides.ot_form_register_user">
+                        <div class="form-row" style="align-items: flex-end;">
+                            <div t-if="not employe" name="ot_center_content" style="width: 70%; border: solid 1px; border-radius: 10px 10px 10px 10px;border-color: #e6e6e6;background-color: #e6e6e6;">
+                                <div class="form-group" style="margin-left: 5%; margin-top: 2%;">
+                                    <label for="input_email_user">Correo electronico</label>
+                                    <br/>
+                                    <input type="email" class="form-control" name="email" id="input_email_user"
+                                           placeholder="micorreo@correo.mx" style="width: 80%; display: unset;"/>
+                                    <button id="ot_btn_search222" name="search">Buscar</button>
+                                </div>
+                            </div>
+                            <t t-if="not employe">
+                              <div t-if="email" class="alert alert-warning mt8" role="alert">
+                                El correo: '<t t-esc="email" />' no se encuentra registrado en el sistema.
+                              </div>
+                            </t>
+                            <t t-if="pasw_true == False">
+                              <div class="alert alert-warning mt8" role="alert">
+                                Las Contraseñas ingresadas no son iguales.
+                              </div>
+                            </t>    
+                            <div t-if="employe" name="ot_center_content2"
+                                 style="width: 70%; border: solid 1px; border-radius: 10px 10px 10px 10px;border-color: #e6e6e6;background-color: #e6e6e6;">
+                                <div class="form-group" style="margin-left: 5%; margin-top: 2%;">
+                                    <label for="input_email_user">Correo electronico</label>
+                                    <br/>
+                                    <t t-esc="employe.work_email" type="email" class="form-control" name="email_read" id="input_email_user2" style="width: 80%; display: unset;"/>
+                                </div>
+                                <input type="hidden" t-att-value="employe.work_email" class="form-control" name="email3" id="input_email_user3" style="width: 80%; display: unset;"/>
+                            </div>
+                        </div>
+                        <div t-if="employe" class="form-row" style="align-items: flex-end; padding-top: 3%;">
+                            <div name="ot_center_content"
+                                 style="width: 70%; border: solid 1px; border-radius: 10px 10px 10px 10px;border-color: #e6e6e6;background-color: #e6e6e6;">
+                                <div class="form-group" style="margin-left: 5%; margin-top: 2%;">
+                                    <label for="ot_user_name" style="padding-top: 3%;">Nombre completo</label>
+                                    <br/>
+                                    <t t-esc="employe.name" type="text" class="form-control" id="ot_employee_name" name="fullname" style="width: 93%; display: unset;"/>
+                                    <br/>
+                                    <label for="ot_user_password" style="padding-top: 3%;">Contraseña</label>
+                                    <br/>
+                                    <input type="password" class="form-control" id="ot_user_password" name="pasw" style="width: 93%; display: unset;"/>
+                                    <br/>
+                                    <label for="ot_repeat_password" style="padding-top: 3%;">Repetir contraseña</label>
+                                    <br/>
+                                    <input type="password" class="form-control" id="ot_repeat_password" name="repeat_pasw" style="width: 93%; display: unset;"/>
+                                    <br/>
+                                    <button style="margin-top: 3%;" id="ot_register_user" name="register" class="btn btn-primary">Registrar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </t>
+    </template>
+    
+</odoo>

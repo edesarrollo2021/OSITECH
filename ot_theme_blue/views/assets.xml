@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+
+        <template id="assets_backend" name="Backend Theme"
+                  inherit_id="web.assets_backend">
+            <xpath expr=".">
+                <link rel="stylesheet"
+                      href="/ot_theme_blue/static/src/scss/theme_style_backend.scss"/>
+            </xpath>
+        </template>
+        
+        <template id="assets_backend222" name="Backend Themeee"
+                  inherit_id="portal.assets_frontend">
+            <xpath expr=".">
+                <link rel="stylesheet"
+                      href="/ot_theme_blue/static/src/scss/theme_style_slides.scss"/>
+            </xpath>
+        </template>
+        <template id="assets_frontend33" 
+                inherit_id="website.assets_frontend">
+            <xpath expr="link[last()]" position="after">
+                <link rel="stylesheet" type="text/scss" href="/ot_theme_blue/static/src/scss/website_forum.scss"/>
+            </xpath>
+        </template>
+        
+    </data>
+</odoo>

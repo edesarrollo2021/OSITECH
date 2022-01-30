@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="forum_nav_inherit" inherit_id="website_forum.forum_nav_header" name="forum_nav_inherit">
+        <xpath expr="." position="replace">
+            <div class="navbar navbar-expand-sm navbar-light">
+                <div class="container-fluid">
+                    <a t-if="back_button_url" class="btn btn-light border mr-2 o_back_button" title="Back">
+                        <i class="fa fa-chevron-left mr-1"/>atrás
+                    </a>
+                    <!-- Desktop -->
+                    <ul class="navbar-nav mr-auto d-none d-lg-flex">
+                        <li class="nav-item">
+                            <a t-if="request.website.forums_count > 1" class="nav-link" href="/forum/" title="All forums">
+                                Todos los foros
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a t-attf-href="/forum/#{ slug(forum) }" t-attf-class="nav-link #{question_count and 'active'}">Temas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a t-attf-href="/profile/users?forum_origin=#{request.httprequest.path}"
+                                t-attf-class="nav-link #{searches.get('users') and 'active'}">Personas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a t-attf-href="/forum/#{ slug(forum) }/tag" t-attf-class="nav-link #{searches.get('tags') and 'active'}">Etiquetas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a t-attf-href="/profile/ranks_badges?badge_category=forum&amp;url_origin=#{request.httprequest.path}&amp;name_origin=#{forum.name}"
+                            t-attf-class="nav-link #{searches.get('badges') and 'active'}">Insignias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a t-attf-href="/forum/#{ slug(forum) }/faq" t-attf-class="nav-link #{header.get('is_guidelines') and 'active'}">Acerca de</a>
+                        </li>
+                    </ul>
+
+                    <!-- Mobile -->
+                    <ul class="navbar-nav d-lg-none flex-row flex-grow-1 justify-content-between">
+                        <span class="navbar-text mr-1">Go to:</span>
+                        <li class="nav-item dropdown mr-auto">
+                            <a class="nav-link active dropdown-toggle" type="button" data-toggle="dropdown">
+                                <t t-if="searches.get('users')">Personas</t>
+                                <t t-elif="searches.get('tags')">Etiquetas</t>
+                                <t t-elif="searches.get('badges')">Insignias</t>
+                                <t t-elif="header.get('is_guidelines')">Acerca de</t>
+                                <t t-elif="uid and my == 'favourites'">Favoritos</t>
+                                <t t-elif="uid and my == 'mine'">Mis publicaciones</t>
+                                <t t-elif="uid and my == 'followed'">Seguidores</t>
+                                <t t-elif="question">Pregunta</t>
+                                <t t-else="">Todos los temas</t>
+                            </a>
+                            <div class="dropdown-menu position-absolute">
+                                <a t-if="searches or my or question" t-attf-href="/forum/#{ slug(forum) }" class="dropdown-item">Todos los temas</a>
+                                <a t-if="not searches.get('users')" t-attf-href="/profile/users?forum_origin=#{request.httprequest.path}" class="dropdown-item">Personas</a>
+                                <a t-if="not searches.get('tags')" t-attf-href="/forum/#{slug(forum)}/tag" class="dropdown-item">Etiquetas</a>
+                                <a t-if="not searches.get('badges')" t-attf-href="/profile/ranks_badges?badge_category=forum&amp;url_origin=#{request.httprequest.path}&amp;name_origin=#{forum.name}" class="dropdown-item">Insignias</a>
+                                <a t-if="not header.get('is_guidelines')" t-attf-href="/forum/#{ slug(forum) }/faq" class="dropdown-item">Acerca de</a>
+                                <t t-if="uid">
+                                    <div class="dropdown-divider"/>
+                                    <a t-att-href="'/forum/%s/user/%s?forum_origin=%s' % (slug(forum), uid, request.httprequest.path)"
+                                        class="dropdown-item">Mi perfil</a>
+                                    <a t-if="my != 'mine'" t-att-href="url_for('') + '?' + keep_query( 'search', 'sorting', 'filters', my='mine')" class="dropdown-item">Mis publicaciones</a>
+                                    <a t-if="my != 'favourites'" t-att-href="url_for('') + '?' + keep_query( 'search', 'sorting', 'filters', my='favourites')" class="dropdown-item">Favoritos</a>
+                                    <a t-if="my != 'followed'" t-att-href="url_for('') + '?' + keep_query( 'search', 'sorting', 'filters', my='followed')" class="dropdown-item">Estoy siguiendo</a>
+                                    <a t-if="my != 'tagged'" t-att-href="url_for('') + '?' + keep_query( 'search', 'sorting', 'filters', my='tagged')" class="dropdown-item">Etiquetas que sigo</a>
+                                </t>
+                                <div groups="base.group_erp_manager" class="dropdown-divider"/>
+                                <a groups="base.group_erp_manager" t-attf-href="/web#id=#{forum.id}&amp;view_type=form&amp;model=forum.forum" class="dropdown-item">Editar foro en backend</a>
+                            </div>
+                        </li>
+                        <t t-if="user.karma>=forum.karma_moderate">
+                            <li t-if="forum.count_posts_waiting_validation" class="nav-item">
+                                <a class="nav-link" t-attf-href="/forum/#{slug(forum)}/validation_queue">
+                                    <i class="fa fa-check-square-o fa-fw text-warning"/>
+                                    <b t-esc="forum.count_posts_waiting_validation" class="text-800"/>
+                                </a>
+                            </li>
+                            <li t-if="forum.count_flagged_posts" class="nav-item ml-2">
+                                <a class="nav-link" t-attf-href="/forum/#{slug(forum)}/flagged_queue">
+                                    <i class="fa fa-flag fa-fw text-danger"/>
+                                    <b t-esc="forum.count_flagged_posts" class="text-800"/>
+                                </a>
+                            </li>
+                        </t>
+                        <!-- Mobile 'Search Box' toggler-->
+                        <li class="nav-item ml-4">
+                            <a data-toggle="collapse" href="#o_wforum_search" class="nav-link"><i class="fa fa-search"/></a>
+                        </li>
+                    </ul>
+
+                    <!-- 'Search Box' -->
+                    <form id="o_wforum_search" class="form-inline collapse w-100 w-md-auto pt-2 pt-md-0 d-md-flex"
+                          role="search" t-attf-action="#{url_for('/forum/')}#{slug(forum)}#{tag and ('/tag/%s/questions' % slug(tag))}" method="get">
+                        <t t-call="website.website_search_box">
+                            <t t-set="_classes" t-valuef="w-100"/>
+                        </t>
+
+                        <input t-if="filters" type="hidden" name="filters" t-att-value="filters"/>
+                        <input t-if="my" type="hidden" name="my" t-att-value="my"/>
+                        <input t-if="sorting" type="hidden" name="sorting" t-att-value="sorting"/>
+                    </form>
+                </div>
+            </div>
+        </xpath>
+    </template>
+    
+    <template id="forum_header_inherit" inherit_id="website_forum.header" name="forum_header_inherit">
+        <xpath expr="." position="replace">
+            <t t-if="forum.active" t-call="website_forum.layout">
+                <section t-attf-class="s_cover parallax s_parallax_is_fixed py-3 #{forum.image_1920 and 'bg-black-50' or 'o_wforum_forum_card_bg text-white'}" data-scroll-background-ratio="1" data-snippet="s_cover">
+                    <span t-if="forum.image_1920" class="s_parallax_bg oe_img_bg" t-attf-style="background-image: url('#{website.image_url(forum, 'image_1920')}'); background-position: center;"/>
+                    <div t-if="forum.image_1920" class="o_we_bg_filter bg-black-50"/>
+                    <div class="container">
+                        <div class="row s_nb_column_fixed">
+                            <div class="col-lg-12">
+                                <h1 class="o_default_snippet_text text-center"><t t-esc="forum.name"></t></h1>
+                            </div>
+                        </div>
+                        <div t-if="editable or (is_public_user and not forum_welcome_message)" t-att-class="'css_non_editable_mode_hidden' if editable else 'forum_intro'">
+                            <div t-field="forum.welcome_message"/>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="o_forum_nav_header_container mb-2 mb-md-4">
+                    <t t-call="website_forum.forum_nav_header"></t>
+                </div>
+
+                <div id="wrap" class="container-fluid">
+                    <div class="row">
+                        <div class="col o_wprofile_email_validation_container mb16">
+                            <t t-call="website_profile.email_validation_banner">
+                                <t t-set="redirect_url" t-value="'/forum/%s' % forum.id"/>
+                                <t t-set="send_validation_email_message">Haga clic aquí para enviar un correo electrónico de verificación que le permita participar en el foro.</t>
+                                <t t-set="additional_validated_email_message">Ahora puede participar en nuestros foros.</t>
+                            </t>
+                            <div class="row">
+                                <div class="col">
+                                    <nav t-if="header.get('is_guidelines') or queue_type or new_question or is_edit or tags or reasons" aria-label="breadcrumb">
+                                        <ol class="breadcrumb p-0 bg-white">
+                                            <li class="breadcrumb-item">
+                                                <a t-attf-href="/forum/#{ slug(forum) }" t-esc="forum.name"/>
+                                            </li>
+                                            <t t-if="header.get('is_guidelines')">
+                                                <li class="breadcrumb-item">
+                                                    <a t-if="header.get('is_karma')" t-attf-href="/forum/#{ slug(forum) }/faq">Pautas</a>
+                                                    <t t-else="">
+                                                        Guidelines
+                                                    </t>
+                                                </li>
+                                                <li t-if="header.get('is_karma')" class="breadcrumb-item">Karma</li>
+                                            </t>
+                                            <li t-if="queue_type" class="breadcrumb-item">Moderación</li>
+                                            <li t-if="queue_type == 'validation'" class="breadcrumb-item">Validar</li>
+                                            <li t-if="queue_type == 'flagged'" class="breadcrumb-item">Marcado</li>
+                                            <li t-if="queue_type == 'offensive'" class="breadcrumb-item">Ofensivo</li>
+                                            <li t-if="reasons and offensive" class="breadcrumb-item">Publicación ofensiva</li>
+                                            <li t-if="reasons and not offensive" class="breadcrumb-item">Cerrar publicación</li>
+                                            <li t-if="new_question" class="breadcrumb-item">Nueva publicación</li>
+                                            <t t-if="is_edit">
+                                                <t t-set="target" t-value="post.parent_id if is_answer else post"/>
+                                                <li class="breadcrumb-item text-truncate" style="max-width:150px">
+                                                    <a t-attf-href="/forum/#{ slug(forum) }/#{ slug(target)}" title="Back to Question">
+                                                        <t t-esc="target.name"/>
+                                                    </a>
+                                                </li>
+                                                <li t-if="not is_answer" class="breadcrumb-item">Editar pregunta</li>
+                                                <li t-if="is_answer" class="breadcrumb-item">Editar respuesta</li>
+                                            </t>
+                                            <li t-elif="tags" class="breadcrumb-item">Todas las etiquetas</li>
+                                        </ol>
+                                    </nav>
+                                    <t t-raw="0"/>
+                                </div>
+                                <aside t-if="uid" class="d-none d-lg-flex justify-content-end col-auto">
+                                    <t t-call="website_forum.user_sidebar"/>
+                                </aside>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="oe_structure" id="oe_structure_website_forum_header_1"/>
+            </t>
+            <t t-else="" t-call="website_forum.layout">
+                <t t-set="head">
+                    <meta name="robots" content="noindex, nofollow" />
+                </t>
+                <div class="text-center text-muted">
+                    <p class="css_editable_hidden"><h2>Este foro ha sido archivado.</h2></p>
+                </div>
+            </t>
+     </xpath>
+    </template>
+    
+</odoo>

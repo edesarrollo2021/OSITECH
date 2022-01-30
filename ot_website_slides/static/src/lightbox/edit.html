@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lightbox</title>
+    <link rel="stylesheet" type="text/css" href="css/lightbox.css">
+    <script type="text/javascript" src="js/lightbox.js"></script>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col">
+            <img src="https://static.pexels.com/photos/385997/pexels-photo-385997.jpeg" onclick="openLightbox();toSlide(1)" class="hover-shadow preview">
+        </div>
+    </div>
+    <div id="Lightbox" class="modal">
+        <span class="close pointer" onclick="closeLightbox()">&times;</span>
+        <div class="modal-content">
+            <div class="slide">
+                <img src="https://static.pexels.com/photos/385997/pexels-photo-385997.jpeg" class="image-slide" alt="Toy car on the road." />
+            </div>
+            <div class="slide">
+                <img src="https://static.pexels.com/photos/574521/pexels-photo-574521.jpeg" class="image-slide" alt="Toy car exploring offroad." />
+            </div>
+            <div class="slide">
+                <img src="https://static.pexels.com/photos/386009/pexels-photo-386009.jpeg" class="image-slide" alt="Toy car in the city." />
+            </div>
+            <a class="previous" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+            <div class="dots">
+                
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

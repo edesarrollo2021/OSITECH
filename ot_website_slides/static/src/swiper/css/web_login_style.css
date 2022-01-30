@@ -1,0 +1,81 @@
+
+#background-wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	-webkit-filter: blur(0px);
+	z-index: -1;
+}
+
+.swiper-slide {
+text-align:center;
+}
+.swiper-slide img {
+width:auto;
+height:auto;
+max-width:100%;
+max-height:100%:
+}
+
+.o_database_list input,
+.o_database_list select {
+	background-color: transparent !important;
+	border-radius: 0px;
+	color: #242424;
+	font-size: 18px;
+	font-weight: 300;
+	transition: border-color 0.7s ease;
+	box-shadow: none!important;
+	text-align: left;
+}
+
+.o_database_list input:focus,
+.o_database_list select:focus {
+	border-bottom: 1px solid #ede001;
+	outline: 0 none;
+}
+
+.o_database_list .btn-primary:hover,
+a.btn-select:hover {
+	background-color: #4f58ff;
+	color: #fedb00;
+}
+
+.o_database_list {
+	display: inline-block;
+    vertical-align: middle;
+    padding: 50px;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    float: none;
+    background-color: #242424;
+}
+
+.body_login:before {
+	content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
+}
+
+.body_login {
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* ################### Estilos revisados ############################# */

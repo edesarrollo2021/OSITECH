@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="homepage_mx" model="ir.ui.view">
+            <field name="name">Home</field>
+            <field name="type">qweb</field>
+            <field name="key">website.homepage</field>
+            <field name="arch" type="xml">
+                <t name="Home" t-name="ot_website_slides.homepage_mx">
+                    <t t-call="website.layout">
+                        <t t-set="pageName" t-value="'homepage_mx'"/>
+                        <div id="wrap_home_mx" class="oe_structure oe_empty">
+
+                            <section name="1_ot_carousel" class="s_carousel_wrapper">
+                                <div id="ot_carousel_home" class="s_carousel s_carousel_default carousel slide"
+                                     data-ride="carousel">
+                                    <ol class="carousel-indicators o_we_no_overlay">
+                                        <li data-target="#ot_carousel_home" data-slide-to="0" class="active"></li>
+                                        <li data-target="#ot_carousel_home" data-slide-to="1"></li>
+                                        <li data-target="#ot_carousel_home" data-slide-to="2"></li>
+                                    </ol>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item o_colored_level pb256 pt256 parallax s_parallax_is_fixed s_parallax_no_overflow_hidden active"
+                                             style="background-position: 0% 10.1509%;" data-name="Slide"
+                                             data-original-id="8228"
+                                             data-original-src="/web/image/8228-c0b14f9f/universidad-aeromar-slide-3.jpg"
+                                             data-mimetype="image/jpeg" data-resize-width="1267"
+                                             data-scroll-background-ratio="1">
+                                            <span class="s_parallax_bg oe_img_bg"
+                                                  style="background-image: url(/ot_website_slides/static/src/img/uni_aer_slide_3.jpg);"/>
+                                            <div class="container">
+                                                <div class="row content">
+                                                    <div class="carousel-content o_colored_level col-lg-5 offset-lg-1"
+                                                         style="">
+                                                        <h2 style="text-align: center; ">
+                                                            <font style="font-size: 62px;" class="text-white">
+                                                                <b>
+                                                                    <font style="vertical-align: inherit;">
+                                                                        Bienvenido a bordo...
+                                                                    </font>
+                                                                </b>
+                                                            </font>
+                                                        </h2>
+                                                        <p class="lead" style="text-align: center; ">
+                                                            <font class="text-white" style="">
+                                                                <font style="vertical-align: inherit;">
+                                                                    <font style="vertical-align: inherit;">Universidad
+                                                                        Aeromar te ofrece un plan de vida y carrera, en
+                                                                        donde podrás crecer y desarrollarte dentro de
+                                                                        nuestra organización.</font>
+                                                                </font>
+                                                            </font>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item o_colored_level parallax s_parallax_is_fixed s_parallax_no_overflow_hidden pt256 pb152"
+                                             style="background-position: 0% 19.3699%;" data-name="Slide"
+                                             data-original-id="8226"
+                                             data-original-src="/web/image/8226-2e2ceb2a/universidad-aeromar-slide-4.jpg"
+                                             data-mimetype="image/jpeg" data-resize-width="1267"
+                                             data-scroll-background-ratio="1">
+                                            <span class="s_parallax_bg oe_img_bg"
+                                                  style="background-image: url(/ot_website_slides/static/src/img/uni_aer_slide_4.jpg); background-position: 0% 32.6296%;"/>
+                                            <div class="container">
+                                                <div class="row content">
+                                                    <div class="carousel-content o_colored_level col-lg-5 offset-lg-1">
+                                                        <h2 style="text-align: center; ">
+                                                            <font style="font-size: 62px;" class="text-white">
+                                                                <b>Alcanza tus sueños...</b>
+                                                            </font>
+                                                        </h2>
+                                                        <p class="lead" style="text-align: center; ">
+                                                            <font class="text-white" style="">Universidad Aeromar
+                                                                pone a tu disposición un plan de desarrollo que&amp;nbsp;potencializa
+                                                                tus conocimientos, habilidades y desempeño.&amp;nbsp;&amp;nbsp;</font>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item o_colored_level parallax s_parallax_is_fixed s_parallax_no_overflow_hidden pt256 pb240"
+                                             style="" data-name="Slide" data-original-id="8229"
+                                             data-original-src="/web/image/8229-9266e494/universidad-aeromar-slide-1%20%281%29.jpg"
+                                             data-mimetype="image/jpeg" data-resize-width="1267"
+                                             data-scroll-background-ratio="1">
+                                            <span class="s_parallax_bg oe_img_bg"
+                                                  style="background-image: url(/ot_website_slides/static/src/img/uni_aer_slide_5.jpg); background-position: 0% 33.7407%;"/>
+                                            <div class="container">
+                                                <div class="row content">
+                                                    <div class="carousel-content o_colored_level col-lg-5 offset-lg-1">
+                                                        <h2 style="text-align: center; ">
+                                                            <font style="font-size: 62px;" class="text-white">
+                                                                <b>Emprende el vuelo...</b>
+                                                            </font>
+                                                        </h2>
+                                                        <p class="lead" style="text-align: center; ">
+                                                            <font color="#ffffff">Te capacitamos con planes de
+                                                                estudio y certificaciones que garanticen tu mejor
+                                                                desempeño dentro de nuestra organización.</font>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="carousel-control-prev o_not_editable o_we_no_overlay" href="#s_carousel"
+                                       data-slide="prev" role="img" aria-label="Anterior" title="Anterior">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="carousel-control-next" href="#ot_carousel_home" role="button"
+                                       data-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+
+
+                                    <a class="o_scroll_button rounded-circle align-items-center justify-content-center mx-auto bg-primary o_not_editable mb-5"
+                                       href="#" title="Scroll down to next section">
+                                        <i class="fa fa-angle-down fa-3x"/>
+                                    </a>
+
+
+                                </div>
+                            </section>
+
+                            <section name="2_ot_text_inf" class="s_text_block pb32 o_colored_level pt72">
+                                <div class="s_allow_columns o_container_small">
+                                    <h2 style="text-align: center; ">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">Universidad Aeromar</font>
+                                        </font>
+                                    </h2>
+                                    <p style="text-align: center; ">Te damos la más cordial bienvenida a nuestra
+                                        universidad virtual, una plataforma pensada para ti. En donde encontrarás cursos
+                                        de capacitación y certificaciones que te permitirán acceder a mejores
+                                        condiciones laborales dentro de nuestra organización.&amp;nbsp;</p>
+                                </div>
+                            </section>
+
+                            <section name="3_">
+                                <div class="row">
+                                    <div class="col-md-4" name="sec_3_content_1">
+                                        <div class="row">
+                                            <div class="col-md-12" style="text-align: center;">
+                                                <img class="img-fluid o_we_custom_image m-3 o_animate_both_scroll o_animate o_anim_fade_in_up"
+                                                     src="/ot_website_slides/static/src/img/plancarrera.jpg"/>
+                                            </div>
+                                            <div class="col-md-12" style="text-align: center;">
+                                                <h4>Vida y Carrera</h4>
+                                            </div>
+                                            <div class="col-md-12"
+                                                 style="text-align: center; padding-left: 10%; padding-right: 10%;">
+                                                <p>Conoce el plan de vida y carrera que la nueva Universidad Aeromar ha
+                                                    diseñado para ti.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4" name="sec_3_content_2">
+                                        <div class="row">
+                                            <div class="col-md-12" style="text-align: center;">
+                                                <img class="img-fluid o_we_custom_image m-3 o_animate_both_scroll o_animate o_anim_fade_in_up"
+                                                     src="/ot_website_slides/static/src/img/aviso.jpg"/>
+                                            </div>
+                                            <div class="col-md-12" style="text-align: center;">
+                                                <h4>Avisos Aeromar</h4>
+                                            </div>
+                                            <div class="col-md-12"
+                                                 style="text-align: center; padding-left: 10%; padding-right: 10%;">
+                                                <p>Infórmate a detalle sobre noticias, utilidades y deja que los
+                                                    expertos de
+                                                    ayuden. </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4" name="sec_3_content_3">
+                                        <div class="row">
+                                            <div class="col-md-12" style="text-align: center;">
+                                                <img class="img-fluid o_we_custom_image m-3 o_animate_both_scroll o_animate o_anim_fade_in_up"
+                                                     src="/ot_website_slides/static/src/img/certificados.jpg"/>
+                                            </div>
+                                            <div class="col-md-12" style="text-align: center;">
+                                                <h4>Certificados y Constancias</h4>
+                                            </div>
+                                            <div class="col-md-12"
+                                                 style="text-align: center; padding-left: 10%; padding-right: 10%;">
+                                                <p>Imprime fácil, rápido y en línea tu historial de certificados y
+                                                    constancias.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section name="4_"
+                                     class="s_features o_colored_level pb176 pt136 s_parallax_no_overflow_hidden undefined bg-white">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="pt32 pb32 text-center o_colored_level col-lg-6">
+                                            <img class="img-fluid o_we_custom_image m-3 o_animate o_anim_fade_in_up o_animate_both_scroll"
+                                                 src="/ot_website_slides/static/src/img/plancarrera.jpg"/>
+                                            <h2>
+                                                <font style="color: rgb(13, 16, 20);">Direcciones</font>
+                                            </h2>
+                                            <h4>
+                                                <font style="color: rgb(13, 16, 20);">¿A qué dirección
+                                                    perteneces?</font>
+                                            </h4>
+                                            <p>
+                                                <font style="color: rgb(13, 16, 20);">Haz clic sobre la dirección a la
+                                                    que perteneces y busca tu puesto para ingresar a tu Plan de Vida y
+                                                    Carrera.&amp;nbsp;</font>
+                                            </p>
+                                        </div>
+                                        <div class="text-center o_colored_level col-lg-2 pb0 pt0">
+                                            <small>
+                                                <font style="font-size: 8px;">
+                                                </font>
+                                            </small>
+                                            <img class="img-fluid o_we_custom_image m-3 d-block mx-auto o_animate o_anim_fade_in_down o_animate_both_scroll"
+                                                 src="/ot_website_slides/static/src/img/recurso_78.jpg"/>
+                                            <small>
+                                                <font style="font-size: 8px;">
+                                                </font>
+                                            </small>
+                                            <img class="img-fluid o_we_custom_image m-3 d-block mx-auto o_animate o_anim_fade_in_left o_animate_both_scroll"
+                                                 src="/ot_website_slides/static/src/img/recurso_81.jpg"/>
+                                            <img class="img-fluid o_we_custom_image m-3 d-block mx-auto o_animate o_anim_fade_in_left o_animate_both_scroll"
+                                                 src="/ot_website_slides/static/src/img/recurso_84.jpg"/>
+                                            <img class="img-fluid o_we_custom_image m-3 d-block mx-auto o_animate o_anim_fade_in_up o_animate_both_scroll"
+                                                 src="/ot_website_slides/static/src/img/recurso_87.jpg"/>
+                                        </div>
+                                        <div class="text-center o_colored_level col-lg-2 pb0 pt0">
+                                            <small>
+                                                <font style="font-size: 8px;">
+                                                </font>
+                                            </small>
+                                            <img class="img-fluid o_we_custom_image m-3 d-block mx-auto o_animate o_anim_fade_in_down o_animate_both_scroll"
+                                                 src="/ot_website_slides/static/src/img/recurso_79.jpg"/>
+                                            <small>
+                                                <font style="font-size: 8px;">
+                                                    <small style="font-size: 15.36px;"/>
+                                                </font>
+                                            </small>
+                                            <img class="img-fluid o_we_custom_image m-3 d-block mx-auto o_animate_both_scroll o_animate o_anim_bounce_in"
+                                                 src="/ot_website_slides/static/src/img/recurso_82.jpg"/>
+                                            <img class="img-fluid o_we_custom_image m-3 d-block mx-auto o_animate o_anim_bounce_in o_animate_both_scroll"
+                                                 src="/ot_website_slides/static/src/img/recurso_85.jpg"/>
+                                            <img class="img-fluid o_we_custom_image m-3 d-block mx-auto o_animate o_anim_fade_in_up o_animate_both_scroll"
+                                                 src="/ot_website_slides/static/src/img/recurso_88.jpg"/>
+                                        </div>
+                                        <div class="o_colored_level">
+                                            <small>
+                                                <font style="font-size: 8px;">
+                                                    <br/>
+                                                </font>
+                                            </small>
+                                        </div>
+                                        <div class="text-center o_colored_level col-lg-2 pb0 pt0">
+                                            <small>
+                                                <font style="font-size: 8px;">
+                                                </font>
+                                            </small>
+                                            <img class="img-fluid o_we_custom_image m-3 d-block mx-auto o_animate o_anim_fade_in_down o_animate_both_scroll"
+                                                 src="/ot_website_slides/static/src/img/recurso_80.jpg"/>
+                                            <small>
+                                                <font style="font-size: 8px;">
+                                                </font>
+                                            </small>
+                                            <img class="img-fluid o_we_custom_image m-3 d-block mx-auto o_animate o_anim_fade_in_right o_animate_both_scroll"
+                                                 src="/ot_website_slides/static/src/img/recurso_83.jpg"/>
+                                            <img class="img-fluid o_we_custom_image m-3 d-block mx-auto o_animate o_anim_fade_in_right o_animate_both_scroll"
+                                                 src="/ot_website_slides/static/src/img/recurso_86.jpg"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="o_scroll_button mb-3 rounded-circle align-items-center justify-content-center mx-auto bg-primary o_not_editable"
+                                   href="#" title="Scroll down to next section">
+                                    <i class="fa fa-angle-down fa-3x"/>
+                                </a>
+                            </section>
+
+                            <section name="5_">
+                                <div class="row">
+                                    <div class="col-md-6" style="width:100%; height:auto; padding-right: 0px;">
+                                        <img src="/ot_website_slides/static/src/img/curso_onboarding.jpeg"
+                                             style="width:100%; height:auto;"/>
+                                    </div>
+                                    <div class="col-md-6" style="background-color: rgb(255, 234, 0);">
+                                        <h5 style="text-align: center; padding-top: 25%;">Bienvenido a bordo</h5>
+                                        <h2 style="text-align: center;">Cursos Onboarding</h2>
+                                        <p style="text-align: center;">Diseñado para todos los colaboradores
+                                            de nuevo ingreso.</p>
+                                    </div>
+                                </div>
+
+                            </section>
+
+                            <section name="6_">
+                                <div class="row" style="padding-top: 5%;">
+                                    <div class="col-md-6" style=" padding-top: 10%; padding-left: 20%;">
+                                        <h5 style="text-align: center;">Continúa tu formación con los</h5>
+                                        <h2 style="text-align: center;">Cursos Mandatorios</h2>
+                                        <p style="text-align: center; ">Tan pronto termines la fase de Onboarding
+                                            deberás continuar tu formación con los Cursos Mandatorios para
+                                            fortalecer tu conocimiento y mejorar tu desempeño personal.</p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img src="/ot_website_slides/static/src/img/rec_img_10.jpg"/>
+                                    </div>
+                                </div>
+                                <!--                                <a class="o_scroll_button rounded-circle align-items-center justify-content-center mx-auto bg-primary o_not_editable mb-4"-->
+                                <!--                                   href="#" title="Scroll down to next section">-->
+                                <!--                                    <i class="fa fa-angle-down fa-3x"/>-->
+                                <!--                                </a>-->
+                            </section>
+
+                            <section name="7_">
+                                <div class="row" style="padding-top: 5%;">
+                                    <div class="col-md-6" style="text-align: right;">
+                                        <img src="/ot_website_slides/static/src/img/home/rec_img_11.jpg"/>
+                                    </div>
+                                    <div class="col-md-6" style="padding-top: 10%; padding-right: 20%;">
+                                        <h5 style="text-align: center;">Concluye tu formación con los</h5>
+                                        <h2 style="text-align: center;">Cursos Complementarios</h2>
+                                        <p style="font-size: 19.2px; text-align: center;">Mejora tus habilidades y
+                                            desarrolla tus Soft Skills para desempeñarte de forma eficaz en la
+                                            atención de nuestros pasajeros.</p>
+                                    </div>
+                                </div>
+                                <!--                                <a class="o_scroll_button rounded-circle align-items-center justify-content-center mx-auto bg-primary o_not_editable mb-4"-->
+                                <!--                                   href="#" title="Scroll down to next section">-->
+                                <!--                                    <i class="fa fa-angle-down fa-3x"/>-->
+                                <!--                                </a>-->
+                            </section>
+
+                            <section name="8_">
+                                <div class="row" style="padding-top: 5%; padding-bottom: 5%;">
+                                    <div class="col-md-6" style=" padding-top: 10%; padding-left: 20%;">
+                                        <h5 style="text-align: center;">Valida tu conocimiento con los</h5>
+                                        <h2 style="text-align: center;">Cursos Periódicos</h2>
+                                        <h4/>
+                                        <p style="font-family: Montserrat, &quot;Odoo Unicode Support Noto&quot;, sans-serif; font-size: 19.2px; text-align: center;">
+                                            Desde ahora podrás validar en línea todo tu conocimiento acerca de las
+                                            funciones y deberes relacionados con tu puesto.</p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img src="/ot_website_slides/static/src/img/home/rec_img_12.png"/>
+                                    </div>
+                                </div>
+                                <!--                                <a class="o_scroll_button rounded-circle align-items-center justify-content-center mx-auto bg-primary o_not_editable mb-4"-->
+                                <!--                                   href="#" title="Scroll down to next section">-->
+                                <!--                                    <i class="fa fa-angle-down fa-3x"/>-->
+                                <!--                                </a>-->
+                            </section>
+
+                            <section name="9_"
+                                     class="s_text_image o_colored_level parallax s_parallax_is_fixed s_parallax_no_overflow_hidden pb208 pt216">
+                                <span class="s_parallax_bg oe_img_bg"
+                                      style="background-image: url(/ot_website_slides/static/src/img/home/rec_img_19.jpg);"
+                                      data-original-id="16872"
+                                      data-original-src="/web/image/16872-48f4f1f1/universidad-aeromar-slide-2%20%281%29.jpg"
+                                      data-mimetype="image/jpeg"
+                                      data-resize-width="1449"></span>
+                                <div/>
+                                <div class="container-fluid">
+                                    <div class="row align-items-center">
+                                        <div class="pt16 pb16 o_colored_level col-lg-7" style="">
+                                            <img src="/ot_website_slides/static/src/img/home/rec_img_20.png"
+                                                 class="img img-fluid mx-auto o_animate_both_scroll o_animate o_anim_bounce_in"/>
+                                        </div>
+                                        <div class="pt16 pb16 o_colored_level col-lg-5">
+                                            <h2 style="text-align: center; ">
+                                                <img class="img-fluid o_we_custom_image o_animate o_anim_fade_in_up o_animate_both_scroll"
+                                                     src="/ot_website_slides/static/src/img/home/rec_img_21.png"/>
+                                                <br/>
+                                            </h2>
+                                            <h2 style="text-align: center; ">
+                                                <font style="vertical-align: inherit;">
+                                                    <font style="vertical-align: inherit;" class="text-white">
+                                                        Certificados</font>
+                                                </font>
+                                            </h2>
+                                            <h4 style="text-align: center; ">
+                                                <font style="vertical-align: inherit;">
+                                                    <font style="vertical-align: inherit;" class="text-white">Imprime el
+                                                        historial tu mismo</font>
+                                                </font>
+                                            </h4>
+                                            <p style="text-align: center; ">
+                                                <font color="#ffffff">Comparte tus certificados fácilmente y en tiempo
+                                                    real gracias a las funcionalidades de la nueva plataforma de
+                                                    Universidad Aeromar. Empieza con un cambio orgánico desde hoy y haz
+                                                    mas con menos.</font>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section name="10_">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="row" style="justify-content: center;">
+                                            <div class="col-lg-2 s_col_no_bgcolor pt16 pb16">
+                                                <div class="card bg-white h-100">
+                                                    <img class="card-img-top o_visible o_animated o_animate_both_scroll o_animating"
+                                                         src="/ot_website_slides/static/src/img/home/rec_img_13.jpg"/>
+                                                    <div class="card-body">
+                                                        <h3 class="card-title">Ayuda y Soporte</h3>
+                                                        <p class="card-text">¿Tienes dudas o no sabes por donde empezar?
+                                                            te
+                                                            ayudamos y ofrecemos soporte 24/7. Utiliza el chat, envíanos
+                                                            un
+                                                            mensaje por correo electrónico o simplemente llama al número
+                                                            de
+                                                            contacto: +52 55 5133 1107 Ext. 1297</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 s_col_no_bgcolor pt16 pb16">
+                                                <div class="card bg-white h-100">
+                                                    <img class="card-img-top o_animate_both_scroll o_visible o_animated o_animating"
+                                                         src="/ot_website_slides/static/src/img/home/rec_img_14.png"/>
+                                                    <div class="card-body">
+                                                        <h3 class="card-title">Foro General</h3>
+                                                        <p class="card-text">¿Ayuda y Soporte no contesto? ¿Estás
+                                                            estudiando
+                                                            desde casa y no es hora laboral? Entonces pregunta a la
+                                                            comunidad. Utiliza el Foro General para despejar todas tus
+                                                            dudas
+                                                            sobre el uso de la plataforma.&amp;nbsp;&amp;nbsp;</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 s_col_no_bgcolor pt16 pb16">
+                                                <div class="card bg-white h-100">
+                                                    <img class="card-img-top o_animate_both_scroll o_visible o_animated o_animating"
+                                                         src="/ot_website_slides/static/src/img/home/rec_img_15.jpg"/>
+                                                    <div class="card-body">
+                                                        <h3 class="card-title">Rúbrica</h3>
+                                                        <p class="card-text">Conoce a detalle cómo es que tu instructor
+                                                            va a
+                                                            calificar&amp;nbsp;tu desempeño en cada uno de los cursos,
+                                                            ya
+                                                            que tu aprendizaje no se refleja con un solo examen ni todos
+                                                            los
+                                                            cursos se califican de la misma manera.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section name="11_">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="row" style="justify-content: center;">
+                                            <div class="col-lg-2 s_col_no_bgcolor pt16 pb16">
+                                                <div class="card bg-white h-100">
+                                                    <img class="card-img-top o_visible o_animated o_animate_both_scroll o_animating"
+                                                         src="/ot_website_slides/static/src/img/home/rec_img_16.jpg"/>
+                                                    <div class="card-body">
+                                                        <h3 class="card-title">Mi Vida y Carrera</h3>
+                                                        <p class="card-text">Conoce desde ahora tu plan de vida y
+                                                            carrera
+                                                            para comenzar con tu formación. Haz clic sobre el menú
+                                                            superior
+                                                            con la etiqueta "Mi Plan de Vida y Carrera" para que el
+                                                            sistema
+                                                            te muestre el camino.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 s_col_no_bgcolor pt16 pb16">
+                                                <div class="card bg-white h-100">
+                                                    <img class="card-img-top o_animate_both_scroll o_visible o_animated o_animating"
+                                                         src="/ot_website_slides/static/src/img/home/rec_img_17.jpg"/>
+                                                    <div class="card-body">
+                                                        <h3 class="card-title">Mis Cursos</h3>
+                                                        <p class="card-text">Obtén tu avance en tiempo real con un
+                                                            tablero
+                                                            dinámico que te permite agilizar tu formación.&amp;nbsp;</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 s_col_no_bgcolor pt16 pb16">
+                                                <div class="card bg-white h-100">
+                                                    <img class="card-img-top o_animate_both_scroll o_visible o_animated o_animating"
+                                                         src="/ot_website_slides/static/src/img/home/rec_img_18.jpg"/>
+                                                    <div class="card-body">
+                                                        <h3 class="card-title">Mis Insignias</h3>
+                                                        <p class="card-text">Cada logro se reconoce y la Universidad
+                                                            Aeromar
+                                                            te premia&amp;nbsp;con Insignias. Existen tres niveles de
+                                                            usuario, empiezas en nivel básico, intermedio y
+                                                            avanzado.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                        </div>
+                    </t>
+                </t>
+            </field>
+        </record>
+
+        <record id="view_contactus_inherit_mx" model="ir.ui.view">
+            <field name="name">Contact Us Inherit</field>
+            <field name="key">website.contactus</field>
+            <field name="type">qweb</field>
+            <field name="inherit_id" ref="website.contactus"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@id='wrap']" position="replace">
+                    <div id="wrap">
+                        <div class="oe_structure">
+                            <section class="s_title parallax s_parallax_is_fixed bg-black-50 pt24 pb24" data-vcss="001"
+                                     data-snippet="s_title" data-scroll-background-ratio="1">
+                                <span class="o_wslides_contactus s_parallax_bg oe_img_bg"
+                                      style="background-position: 50% 0;"/>
+                                <div>
+                                    <center><h1>Contáctenos</h1></center>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="container-fluid mt-4 mb-5">
+                            <div class="row">
+                                <div class="col-lg-7 col-xl-6 mr-lg-auto">
+                                    <div class="oe_structure">
+                                        <section class="s_text_block" data-snippet="s_text_block">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        <p>
+                                                            Contáctenos sobre cualquier cosa relacionada con nuestra
+                                                            empresa o nuestros servicios.<br/>
+                                                            Haremos todo lo posible por darle respuesta a la brevedad.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                    <div class="text-center my-3" name="mail_button">
+                                        <a role="button" t-attf-href="mailto:{{ res_company.email }}"
+                                           class="btn btn-primary" id="o_contact_mail">Envíenos un correo
+                                            electrónico</a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 mt-4 mt-lg-0">
+                                    <t t-call="website.company_description"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="oe_structure mt-2"/>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="default_website" model="website">
+            <field name="name">Universidad Aeromar</field>
+            <field name="domain"></field>
+            <field name="logo" type="base64" file="ot_website_slides/static/src/img/airplane.png"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="user_id" ref="base.public_user"/>
+        </record>
+
+        <record id="homepage_page_mx" model="website.page">
+            <field name="is_published">True</field>
+            <field name="url">/home</field>
+            <field name="view_id" ref="homepage_mx"/>
+            <field name="track">True</field>
+        </record>
+
+        <record id="menu_home_mx" model="website.menu">
+            <field name="name">Inicio</field>
+            <field name="url">/home</field>
+            <field name="page_id" ref="ot_website_slides.homepage_page_mx"/>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence" type="int">5</field>
+        </record>
+
+        <record id="website_menu_slides_mx" model="website.menu">
+            <field name="name">Mis cursos</field>
+            <field name="url">/slides/all?my=1</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence" type="int">15</field>
+        </record>
+
+        <record id="menu_calendar" model="website.menu">
+            <field name="name">Calendario</field>
+            <field name="url">/calendar</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence" type="int">30</field>
+        </record>
+
+        <record id="menu_chat" model="website.menu">
+            <field name="name">Chat</field>
+            <field name="url">/livechat</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence" type="int">40</field>
+        </record>
+
+        <delete model="website.menu" search="[('id','=', ref('website.menu_home'))]"/>
+        <delete model="website.menu" search="[('id','=', ref('website_slides.website_menu_slides'))]"/>
+        <delete model="website.menu" search="[('id','=', ref('website.menu_contactus'))]"/>
+        <delete model="website" search="[('id','=', ref('website.default_website'))]"/>
+
+    </data>
+</odoo>

@@ -1,0 +1,183 @@
+/*//Menu Bar*/
+/*Top bar*/
+.o_main_navbar {
+    position: relative;
+    height: 60px;
+    padding-top: 6px;
+    border-bottom: 1px solid #d8e3e7;
+    color: #fff !important;
+    background: linear-gradient(to right, #00205c, #4f58ff); 
+}
+
+
+.o_main_navbar > .o_menu_brand {
+    display: block;
+    float: left;
+    user-select: none;
+    color: white;
+    line-height: 46px;
+    cursor: pointer;
+    color: white !important;
+}
+
+.o_main_navbar > ul > li > a, .o_main_navbar > ul > li > label {
+  height: 46px;
+  padding: 0 10px;
+  color: #fff !important;
+  line-height: 46px;
+  transition: .3s all ease;
+}
+
+.o_main_navbar > ul > li > a:hover, .o_main_navbar > ul > li > label:hover {
+  background: none !important;
+  border: none;
+}
+
+.o_main_navbar > a:hover, .o_main_navbar > a:focus, .o_main_navbar > button:hover, .o_main_navbar > button:focus {
+    background: none;
+    color: inherit;
+}
+
+.o_main_navbar .show .dropdown-toggle {
+    background-color: #ffffff !important;
+    color: #00c1de !important;
+}
+
+.btn-primary {
+  background-color: #00c1de;
+  border-color: #00c1de;
+}
+
+a.btn.btn-primary {
+  color: #00c1de !important;
+}
+
+.btn-primary:hover {
+    background: #00c1de !important;
+    border-color: #00c1de;
+}
+
+.btn-info {
+  color: #fff !important;
+  background-color: #00c1de;
+  border-color: #00c1de;
+}
+
+.o_form_view .o_horizontal_separator {
+  color: #00c1de !important;
+  font-weight: 500 !important;
+}
+
+
+a {
+  color: #00c1de !important;
+}
+
+.o_form_view .o_form_statusbar > .o_statusbar_status > .o_arrow_button:not(:first-child):before, .o_form_view .o_form_statusbar > .o_statusbar_status > .o_arrow_button:not(:first-child):after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: auto;
+  bottom: auto;
+  right: -10px;
+  border-top: 19px solid transparent;
+  border-bottom: 23px solid transparent;
+  border-right: none;
+  border-left: 11px solid white;
+  transition: border 0.2s ease 0s;
+  -moz-transform: scale(0.9999);
+}
+
+.o_form_view .o_form_statusbar > .o_statusbar_status > .o_arrow_button.btn-primary.disabled {
+  color: #00c1de;
+  font-size: 11px;
+  background-color: #e9ecef;
+  cursor: default;
+}
+
+.o_form_view .o_form_statusbar {
+  border-bottom: 1px solid #00c1de;
+}
+
+.o_form_view .o_horizontal_separator {
+  color: #00c1de !important;
+  font-weight: 500 !important;
+}
+
+// Invalid
+.o_field_invalid {
+    &.o_input, .o_input, &.o_form_label {
+        color: #00c1de;
+        border-color: #00c1de; // enterprise o_required_modifier rule overrides this without !important
+    }
+}
+
+.o_control_panel button.btn.btn-secondary.o_button_import {
+  border: 1px solid #00c1de;
+}
+
+.o_control_panel .btn-secondary:not(:disabled):not(.disabled):active, .o_control_panel .btn-secondary:not(:disabled):not(.disabled).active, .o_control_panel .show > .btn-secondary.dropdown-toggle {
+  color: #00c1de;
+  border-color: #00c1de;
+}
+
+.o_control_panel .btn-secondary:hover {
+    color: #00c1de;
+    border-color: #00c1de;
+}
+
+.o_field_widget.badge.badge-primary {
+  background: #00c1de;
+  padding: 5px 8px;
+  border-radius: 0px !important;
+}
+
+aside.o_cp_sidebar button.o_dropdown_toggler_btn.btn.btn-secondary.dropdown-toggle {
+    background: #00c1de;
+}
+
+a:hover {
+  color: #00c1de;
+}
+
+i.fa.fa-th-large {
+  font-size: 26px !important;
+  color: #00c1de !important;
+  margin-top: 10px;
+}
+
+.dropdown-menu a:hover {
+  color: #00c1de !important;
+  background: #ffffff !important;
+}
+
+.o_stat_value {
+    font-weight: 700;
+    color: #00c1de !important;
+    line-height: 1.2;
+}
+
+.o_searchview .o_searchview_facet .o_searchview_facet_label {
+  background-color: #00c1de;
+}
+
+.o_field_widget.badge.badge-primary {
+  background: #00c1de !important;
+  padding: 5px 8px;
+  border-radius: 0px !important;
+}
+
+
+@mixin o-wslides-header-bar() {
+    &:before {
+        content: "";
+        @include o-position-absolute(auto, 0, 0, 0);
+        height: $o-wslides-tabs-height;
+        background: #000000;
+    }
+}
+
+
+
+

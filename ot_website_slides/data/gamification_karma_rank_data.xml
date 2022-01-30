@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!--Karma-->
+        <record id="base.user_root" model="res.users">
+            <field name="karma">2500</field>
+        </record>
+        <record id="base.user_admin" model="res.users">
+            <field name="karma">2500</field>
+        </record>
+
+        <delete model="gamification.karma.rank" search="[('id','=', ref('gamification.rank_newbie'))]"/>
+        <delete model="gamification.karma.rank" search="[('id','=', ref('gamification.rank_student'))]"/>
+        <delete model="gamification.karma.rank" search="[('id','=', ref('gamification.rank_bachelor'))]"/>
+        <delete model="gamification.karma.rank" search="[('id','=', ref('gamification.rank_master'))]"/>
+        <delete model="gamification.karma.rank" search="[('id','=', ref('gamification.rank_doctor'))]"/>
+        
+        <!--Ranks-->
+        <record id="rank_basic" model="gamification.karma.rank">
+            <field name="name">Básico</field>
+            <field name="description" type="html"><p>¡Acabas de empezar la aventura! ¡Bienvenidos!</p></field>
+            <field name="description_motivational" type="html">
+                <div class="media align-items-center">
+                    <div class="media-body">¡Gana tus primeros puntos y únete a la aventura!</div>
+                    <img class="ml-3 img img-fluid" style="max-height: 72px;" src="/gamification/static/img/rank_bachelor_badge.svg"/>
+                </div>
+            </field>
+            <field name="karma_min">1</field>
+            <field name="image_1920" type="base64" file="gamification/static/img/rank_bachelor_badge.svg"/>
+        </record>
+
+        <record id="rank_medium" model="gamification.karma.rank">
+            <field name="name">Medio</field>
+            <field name="description" type="html"><p>Eres un joven ahora. ¡Que la fuerza esté con usted!</p></field>
+            <field name="description_motivational" type="html">
+                <div class="media align-items-center">
+                    <div class="media-body">Alcanza el siguiente rango para demostrarle al resto del mundo que existes.</div>
+                    <img class="ml-3 img img-fluid" style="max-height: 72px;" src="/gamification/static/img/rank_master_badge.svg"/>
+                </div>
+            </field>
+            <field name="karma_min">100</field>
+            <field name="image_1920" type="base64" file="gamification/static/img/rank_master_badge.svg"/>
+        </record>
+
+        <record id="rank_Advanced" model="gamification.karma.rank">
+            <field name="name">Advanzado</field>
+            <field name="description" type="html"><p>Has alcanzado el último rango. ¡Felicidades!</p></field>
+            <field name="description_motivational" type="html">
+                <div class="media align-items-center">
+                    <div class="media-body">¡Alcanza el siguiente rango y conviértete en un usuario poderoso!</div>
+                    <img class="ml-3 img img-fluid" style="max-height: 72px;" src="/gamification/static/img/rank_doctor_badge.svg"/>
+                </div>
+            </field>
+            <field name="karma_min">500</field>
+            <field name="image_1920" type="base64" file="gamification/static/img/rank_doctor_badge.svg"/>
+        </record>
+
+    </data>
+</odoo>

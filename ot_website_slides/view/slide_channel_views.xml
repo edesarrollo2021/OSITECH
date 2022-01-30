@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        
+        <record id="view_slide_channel_form_ositech_mx" model="ir.ui.view">
+            <field name="name">slide.channel.form</field>
+            <field name="model">slide.channel</field>
+            <field name="priority">5</field>
+            <field name="inherit_id" ref="website_slides.view_slide_channel_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='options']//group//field[@name='website_id']" position="before">
+                   <field name="training_model" widget="radio"/>
+                    <field name="type_course_ids" mode="tree">
+                        <tree string="Evaluacion" editable="bottom">
+                            <field name="description"/>
+                            <field name="percentage" sum="percentage"/>
+                        </tree>
+                    </field> 
+                   <field name="constancy" widget="radio"/>
+                   <field name="vigencia"/>
+                </xpath>
+                <xpath expr="//page[@name='options']//group//field[@name='user_id']" position="attributes">
+                    <attribute name="string">Instructor</attribute>
+                </xpath>
+                <xpath expr="//page[@name='options']//group//field[@name='channel_type']" position="attributes">
+                   <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//page[@name='options']//group//field[@name='user_id']" position="before">
+                   <field name="channel_type_mx"/>
+                </xpath>
+                <xpath expr="//page[@name='description']//group//field[@name='description']" position="before">
+                   <field name="general_objective" placeholder="Define what the general objective of this course is"/>
+                </xpath>
+                <xpath expr="//page[@name='description']//group//field[@name='description']" position="after">
+                   <field name="descriptive_picture" widget="image"/>
+                </xpath>
+            </field>
+        </record>
+        
+    </data>
+</odoo>

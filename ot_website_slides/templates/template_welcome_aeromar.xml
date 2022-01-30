@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="ot_assets_frontend_login" inherit_id="website.assets_frontend">
+        <xpath expr="link[last()]" position="after">
+            <link
+                    rel="stylesheet"
+                    type="text/css"
+                    href="/ot_website_slides/static/src/swiper/css/swiper-bundle.min.css"
+            />
+            <link
+                    rel="stylesheet"
+                    type="text/css"
+                    href="/ot_website_slides/static/src/swiper/css/swiper-tema.css"
+            />
+        </xpath>
+    </template>
+
+    <data noupdate="1">
+        <template id="ot_template_welcome_aeromar" name="template_welcome_aeromar">
+            <t t-call="website.layout">
+                <div class="container-fluid">
+                    <script type="text/javascript" src="/web/static/lib/jquery/jquery.js"/>
+                    <script>
+                        $(document).ready(function (){
+                        $('.o_header_standard').hide()
+                        });
+                    </script>
+
+                    <head>
+                        <meta charset="utf-8"/>
+                        <title>Swiper demo</title>
+                        <meta
+                                name="viewport"
+                                content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+                        <link
+                                rel="stylesheet"
+                                href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
+                        <style>
+                            html,
+                            body {
+                            position: relative;
+                            height: 100%;
+                            }
+
+                            body {
+                            background: #eee;
+                            font-size: 14px;
+                            color: #000;
+                            margin: 0;
+                            padding: 0;
+                            }
+
+                            .swiper {
+                            width: 100%;
+                            height: 100%;
+                            background: #000;
+                            }
+
+                            .swiper-slide {
+                            font-size: 18px;
+                            color: #fff;
+                            -webkit-box-sizing: border-box;
+                            box-sizing: border-box;
+                            padding: 40px 60px;
+                            text-align: inherit;
+                            }
+
+                            .parallax-bg {
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            width: 130%;
+                            height: 100%;
+                            -webkit-background-size: cover;
+                            background-size: cover;
+                            background-position: center;
+                            }
+
+                            .swiper-slide .title {
+                            font-size: 59px;
+                            font-weight: 600;
+                            }
+
+                            .swiper-slide .subtitle {
+                            font-size: 21px;
+                            }
+
+                            .swiper-slide .text {
+                            font-size: 20px;
+                            max-width: 600px;
+                            line-height: 1.3;
+                            }
+
+                            .container-fluid {
+                            height:100%;
+                            padding-right: 0px !important;
+                            padding-left: 0px !important;
+                            }
+
+                            ::-webkit-scrollbar {
+                            display: none;
+                            }
+                        </style>
+                    </head>
+
+                    <body>
+
+                        <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+                             class="swiper mySwiper">
+
+                            <div class="parallax-bg"
+                                 style="background-image: url(/ot_website_slides/static/src/img/demo_bg-01.jpg);"
+                                 data-swiper-parallax="-23%"></div>
+
+                            <img src="/ot_website_slides/static/src/img/demo_logo.svg"
+                                 style="width: 30%; float: right; position: inherit;"/>
+
+                            <div class="swiper-wrapper">
+
+                                <div class="swiper-slide">
+                                    <div class="title" data-swiper-parallax="-300"/>
+                                    <div class="subtitle" data-swiper-parallax="-200"/>
+                                    <div class="text" data-swiper-parallax="-100">
+                                        <div style="padding-left: 10%;">
+                                            <div class="title" data-swiper-parallax="-300">Alcanza tus sueños...</div>
+                                            <div class="text" data-swiper-parallax="-100">
+                                                <p>La Universidad AEROMAR pone a tu disposición
+                                                    un plan de desarrollo que potencializa
+                                                    tus conocimientos, habilidades y desempeño.
+                                                </p>
+                                                <button onclick="location.href = '../web/registration';"
+                                                        class="hover-shadow amarillo">
+                                                    Registrarme
+                                                </button>
+                                                <button onclick="location.href = '../web/login';"
+                                                        class="hover-shadow azul submit-button">
+                                                    Iniciar sesión
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="title" data-swiper-parallax="-300"/>
+                                    <div class="subtitle" data-swiper-parallax="-200"/>
+                                    <div class="text" data-swiper-parallax="-100">
+                                        <div style="padding-left: 10%;">
+                                            <div class="title" data-swiper-parallax="-300">Emprende el vuelo...</div>
+                                            <div class="text" data-swiper-parallax="-100">
+                                                <p>Te capacitamos con planes de estudio y certificaciones que
+                                                    garanticen tu mejor
+                                                    desempeño dentro de nuestra organización.
+                                                </p>
+                                                <button onclick="location.href = '../web/registration';"
+                                                        class="hover-shadow amarillo">
+                                                    Registrarme
+                                                </button>
+                                                <button class="hover-shadow azul"
+                                                        onclick="location.href = '../web/login';">
+                                                    Iniciar sesión
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="title" data-swiper-parallax="-300"/>
+                                    <div class="subtitle" data-swiper-parallax="-200"/>
+                                    <div class="text" data-swiper-parallax="-100">
+                                        <div class="title" data-swiper-parallax="-300">Aterriza tus metas y
+                                            propósitos...
+                                        </div>
+                                        <div class="text" data-swiper-parallax="-100">
+                                            <p>Conoce nuestra Universidad Virtual.</p>
+                                            <p>De manera fácil y rápidad podrás tener acceso a tus cursos, ver
+                                                tu historial de avance y
+                                                obtener una constancia o certificación de cada uno de ellos.
+                                            </p>
+                                            <button onclick="location.href = '../web/registration';"
+                                                    class="hover-shadow amarillo">
+                                                Registrarme
+                                            </button>
+                                            <button id="platform_start_aeromar"
+                                                    onclick="location.href = '../web/login';"
+                                                    class="hover-shadow azul">
+                                                Iniciar sesión
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+
+                        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+                        <script>
+                            var swiper = new Swiper(".mySwiper", {
+                            speed: 600,
+                            parallax: true,
+                            pagination: {
+                            el: ".swiper-pagination",
+                            clickable: true,
+                            },
+                            navigation: {
+                            nextEl: ".swiper-button-next",
+                            prevEl: ".swiper-button-prev",
+                            },
+                            });
+                        </script>
+
+                    </body>
+                </div>
+            </t>
+        </template>
+    </data>
+</odoo>

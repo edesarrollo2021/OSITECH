@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        
+        <record id="group_website_slides_sobre" model="res.groups">
+            <field name="name">Sobrecargo</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+            <field name="implied_ids" eval="[(4, ref('website.group_website_publisher'))]"/>
+        </record>
+        
+        <record id="group_website_slides_tra_gene" model="res.groups">
+            <field name="name">Trabajador general</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+            <field name="implied_ids" eval="[(4, ref('website.group_website_publisher'))]"/>
+        </record>
+        
+        
+    </data>
+</odoo>

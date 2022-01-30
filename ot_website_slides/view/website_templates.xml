@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <template id="option_header_brand_logo_mx" inherit_id="website.option_header_brand_logo" name="Header Brand Logo MX" active="True">
+        <xpath expr="//a[@href='/']" position="replace">
+            <span t-attf-class="navbar-brand logo #{_link_class}" t-field="website.logo" t-options="{'widget': 'image'}" role="img" t-att-aria-label="'Logo of %s' % website.name" t-att-title="website.name"/>
+        </xpath>
+    </template>
+    
+    <template id="template_header_default" inherit_id="website.layout" name="Template Header Default" active="True">
+        <xpath expr="//header//nav" position="replace">
+            <nav data-name="Navbar" class="navbar navbar-expand-lg navbar-light o_colored_level o_cc shadow-sm">
+                <div id="top_menu_container" class="container-fluid">
+                    <!-- Brand -->
+                    <t t-call="website.placeholder_header_brand">
+                        <t t-set="_link_class" t-value="'mr-4'"/>
+                    </t>
+                    <!-- Navbar Toggler -->
+                    <t t-call="website.navbar_toggler">
+                        <t t-set="_toggler_class" t-value="'ml-auto'"/>
+                    </t>
+                    <!-- Navbar Collapse -->
+                    <div id="top_menu_collapse" class="collapse navbar-collapse order-last order-lg-0">
+                        <t t-call="website.navbar_nav">
+                            <t t-set="_nav_class" t-value="'flex-grow-1'"/>
+                            <!-- Menu -->
+                            <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                                <t t-call="website.submenu">
+                                    <t t-set="item_class" t-value="'nav-item'"/>
+                                    <t t-set="link_class" t-value="'nav-link'"/>
+                                </t>
+                            </t>
+                            <!-- Sign In -->
+                            <t t-call="portal.placeholder_user_sign_in">
+                                <t t-set="_item_class" t-value="'nav-item ml-lg-auto'"/>
+                                <t t-set="_link_class" t-value="'nav-link font-weight-bold'"/>
+                            </t>
+                            <!-- User Dropdown -->
+                            <t t-call="portal.user_dropdown">
+                                <t t-set="_user_name" t-value="true"/>
+                                <t t-set="_item_class" t-value="'nav-item dropdown ml-lg-auto'"/>
+                                <t t-set="_link_class" t-value="'nav-link font-weight-bold'"/>
+                            </t>
+                        </t>
+                    </div>
+                    <!-- Language Selector -->
+                    <t t-call="website.placeholder_header_language_selector">
+                        <t t-set="_div_classes" t-value="'ml-2'"/>
+                    </t>
+                    <!-- Button -->
+                    <div class="oe_structure oe_structure_solo" id="oe_structure_header_default_1"/>
+                </div>
+            </nav>
+        </xpath>
+    </template>
+
+    <template id="layout" name="Main layout" inherit_id="portal.frontend_layout">
+        <xpath expr="//footer//span[hasclass('o_footer_copyright_name')]" position="replace">
+            <span class="o_footer_copyright_name mr-2 text_value_color">Derechos Reservados 2022 © Universidad Aeromar</span>
+        </xpath>
+    </template>
+
+    <!-- Footer templates -->
+    <template id="footer_custom" inherit_id="website.layout" name="Default" active="True">
+        <xpath expr="//div[@id='footer']" position="replace">
+            <div id="footer" class="o_footer" style="font-size: 18px;">
+                <section>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-2 pt24" style="padding-left: 80px;">
+                                <img src="/ot_website_slides/static/src/img/logo.png" class="img-fluid" aria-label="Logo of My Company" title="Aeromar" role="img"/>
+                            </div>
+                            <div class="col-lg-9 pt24 pb24">
+                                <p style="font-size: 28px;">Hacemos la diferencia, capacítate con nosotros...</p>
+                                <br></br>
+                                <p style="font-size: 20px;">En la Universidad Aeromar capacitamos a todos nuestros colaboradores para brindar a nuestros pasajeros la mejor experiencia de vuelo.</p>
+                                <br></br>
+                                <p><a class="o_footer" href="https://www.aeromar.mx/es/aviso-de-privacidad">Aviso de privacidad</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-2" style="padding-left: 80px;">
+                                <ul>
+                                    <li><a class="o_footer" href="/">Inicio</a></li>
+                                    <li><a class="o_footer" href="/contactus">Contáctenos</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-9">
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <i class="fa fa-phone fa-fw mr-2"></i>
+                                        <a class="o_footer" href="tel:+52 55 5133 1107 Ext. 1297">+52 (55) 5133-1107 Ext. 1297</a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-envelope fa-fw mr-2"></i>
+                                        <a class="o_footer" href="mailto:claudia.martinez@aeromar.com.mx">claudia.martinez@aeromar.com.mx</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </xpath>
+    </template>
+
+</odoo>

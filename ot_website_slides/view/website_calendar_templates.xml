@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="index_inherit" inherit_id="website_calendar.index" name="traductor">
+        <xpath expr="//div/div/h1" position="replace">
+            <h1 class="o_page_header mt32">
+                Programar Mi Curso
+            </h1>
+        </xpath>
+    </template>
+
+</odoo>

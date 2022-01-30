@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="assets_login" inherit_id="web.assets_frontend">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" href="/ot_website_slides/static/src/swiper/css/web_login_style.css"/>
+        </xpath>
+    </template>
+
+    <template id="login_layout" inherit_id="web.login_layout" name="Login Layout Inherit">
+
+        <!--<xpath expr="//div[@t-attf-class='card border-0 mx-auto bg-100 {{login_card_classes}} o_database_list']" style="max-width: 300px;']"
+               position="replace">
+            <div class="card-body">
+                <div t-attf-class="text-center pb-3 border-bottom {{'mb-3' if form_small else 'mb-4'}}">
+                    <img t-attf-src="/web/binary/company_logo{{ '?dbname='+db if db else '' }}" alt="Logo" style="max-height:120px; max-width: 100%; width:auto"/>
+                </div>
+                <t t-raw="0"/>
+                <div class="text-center small mt-4 pt-3 border-top" style="display:none;" t-if="not disable_footer">
+                    <t t-if="not disable_database_manager">
+                        <a class="border-right pr-2 mr-1" href="/web/database/manager">Manage Databases</a>
+                    </t>
+                    <a href="https://www.odoo.com?utm_source=db&amp;utm_medium=auth" target="_blank">Powered by <span>Odoo</span></a>
+                </div>
+            </div>
+
+        </xpath>-->
+
+        <xpath expr="//t[@t-set='body_classname']" position="after">
+            <t t-set="body_classname" t-value="''"/>
+        </xpath>
+
+        <xpath expr="//div[hasclass('container')]" position="attributes">
+            <attribute name="class">body_login</attribute>
+        </xpath>
+
+        <xpath expr="//div[@t-attf-class='card border-0 mx-auto bg-100 {{login_card_classes}} o_database_list']"
+               position="before">
+            <div id="background-wrapper"
+                 t-attf-style="background-image: url('/ot_website_slides/static/src/img/background_login_aeromar.png'); position: fixed !important;"></div>
+        </xpath>
+
+        <xpath expr="//div[@t-attf-class='card border-0 mx-auto bg-100 {{login_card_classes}} o_database_list']"
+               position="attributes">
+            <attribute name="class">col-lg-3 col-md-4 col-sm-4 col-xs-11 o_database_list</attribute>
+            <attribute name="style"></attribute>
+        </xpath>
+
+    </template>
+
+    <template id="ot_auth_signup" inherit_id="auth_signup.signup" name="Auth Signup Inherit">
+
+        <xpath expr="." position="replace">
+
+            <t t-call="web.frontend_layout">
+                <t t-set="html_data" t-value="{'style': 'height: 100%;'}"/>
+                <t t-set="body_classname" t-value="'bg-100'"/>
+                <t t-set="no_header" t-value="True"/>
+                <t t-set="no_footer" t-value="True"/>
+                <div class="container py-5">
+                    <div t-attf-class="card border-0 mx-auto bg-100 {{login_card_classes}} o_database_list"
+                         style="max-width: 300px;">
+                        <div class="card-body">
+                            <t t-raw="0"/>
+                        </div>
+                    </div>
+                </div>
+            </t>
+
+        </xpath>
+
+    </template>
+
+    <template id="login" inherit_id="web.login" name="Login Inherit">
+
+        <!--<xpath expr="//div[@t-attf-class='card border-0 mx-auto bg-100 {{login_card_classes}} o_database_list']" style="max-width: 300px;']"
+               position="replace">
+            <div class="card-body" style="display:none;">
+            <div t-attf-class="text-center pb-3 border-bottom {{'mb-3' if form_small else 'mb-4'}}">
+                <img t-attf-src="/web/binary/company_logo{{ '?dbname='+db if db else '' }}" alt="Logo" style="max-height:120px; max-width: 100%; width:auto"/>
+            </div>
+            <t t-raw="0"/>
+            <div class="text-center small mt-4 pt-3 border-top" style="display:none;" t-if="not disable_footer">
+                <t t-if="not disable_database_manager">
+                    <a class="border-right pr-2 mr-1" href="/web/database/manager">Manage Databases</a>
+                </t>
+                <a href="https://www.odoo.com?utm_source=db&amp;utm_medium=auth" target="_blank">Powered by <span>Odoo</span></a>
+            </div>
+        </div>
+
+        </xpath>-->
+
+        <xpath expr="." position="replace">
+            <t t-call="web.login_layout">
+                <table class="ot_tabla_login">
+                    <tr>
+                        <td style="background-color: white; padding-left: 30px; padding-right: 30px; text-align:left; width:800px; height:400px;">
+                            <img src="/ot_website_slides/static/src/img/login_logo_aeromar.png"
+                                 style="vertical-align:baseline; max-width:400px; padding-top:40px;"/>
+
+                            <form class="oe_login_form" role="form" t-attf-action="/web/login" method="post"
+                                  onsubmit="this.action = '/web/login' + location.hash">
+                                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                <div class="form-group field-login">
+                                    <label for="login">Email</label>
+                                    <input type="text" placeholder="Email" name="login" t-att-value="login" id="login"
+                                           t-attf-class="form-control #{'form-control-sm' if form_small else ''}"
+                                           required="required" autofocus="autofocus" autocapitalize="off"/>
+                                </div>
+
+                                <div class="form-group field-password">
+                                    <label for="password">Password</label>
+                                    <input type="password" placeholder="Password" name="password" id="password"
+                                           t-attf-class="form-control #{'form-control-sm' if form_small else ''}"
+                                           required="required" autocomplete="current-password"
+                                           t-att-autofocus="'autofocus' if login else None" maxlength="4096"/>
+                                </div>
+
+                                <p class="alert alert-danger" t-if="error" role="alert">
+                                    <t t-esc="error"/>
+                                </p>
+                                <p class="alert alert-success" t-if="message" role="status">
+                                    <t t-esc="message"/>
+                                </p>
+
+                                <div t-attf-class="clearfix oe_login_buttons text-center mb-1 {{'pt-2' if form_small else 'pt-3'}}">
+                                    <button type="submit" style="width:40%;" class="btn btn-primary btn-block">Ingresar</button>
+                                    <t t-if="debug">
+                                        <button type="submit" name="redirect" value="/web/become"
+                                                class="btn btn-link btn-sm btn-block">Log in as superuser</button>
+                                    </t>
+                                    <div class="o_login_auth"/>
+                                </div>
+
+                                <input type="hidden" name="redirect" t-att-value="redirect"/>
+                            </form>
+                        </td>
+                        <td>
+                            <img src="/ot_website_slides/static/src/img/aeromoza_img_login.jpg"
+                                 style="vertical-align:baseline;max-width:440px; vertical-align: bottom !important;"/>
+                        </td>
+                    </tr>
+                </table>
+            </t>
+        </xpath>
+
+        <xpath expr="//form" position="replace">
+            <form class="oe_login_form" role="form" t-attf-action="/web/login" method="post"
+                  onsubmit="this.action = '/web/login' + location.hash">
+
+                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+
+                <div class="form-group field-db" style="display:none;" t-if="databases and len(databases) &gt; 1">
+                    <label for="db" class="col-form-label">Database</label>
+                    <div t-attf-class="input-group {{'input-group-sm' if form_small else ''}}">
+                        <input type="text" name="db" t-att-value="request.db" id="db"
+                               t-attf-class="form-control #{'form-control-sm' if form_small else ''}"
+                               required="required" readonly="readonly"/>
+                        <span class="input-group-append">
+                            <a role="button" href="/web/database/selector" class="btn btn-secondary">Select <i
+                                    class="fa fa-database" role="img" aria-label="Database" title="Database"></i></a>
+                        </span>
+                    </div>
+                </div>
+
+                <div>
+                    <h3><p style="padding-left: 13px">Inicia Sesión</p></h3>
+                    <p style="padding-left:11px">
+                        Ingresa tu correo electrónico y la contraseña que elegiste para iniciar sesión
+                    </p>
+                </div>
+<!--                <p>Correo electrónico</p>-->
+                <div class="form-group field-login">
+                    <label for="login">Correo electrónico</label>
+                    <input type="text" placeholder="micorreo@correo.mx" name="login" t-att-value="login" id="login"
+                           t-attf-class="form-control #{'form-control-sm' if form_small else ''}" required="required"
+                           autofocus="autofocus" autocapitalize="off"/>
+                </div>
+
+                <div class="form-group field-password">
+                    <label for="password">Contraseña</label>
+                    <input type="password" placeholder="Password" name="password" id="password"
+                           t-attf-class="form-control #{'form-control-sm' if form_small else ''}" required="required"
+                           autocomplete="current-password" t-att-autofocus="'autofocus' if login else None"
+                           maxlength="4096"/>
+                </div>
+
+                <p class="alert alert-danger" t-if="error" role="alert">
+                    <t t-esc="error"/>
+                </p>
+                <p class="alert alert-success" t-if="message" role="status">
+                    <t t-esc="message"/>
+                </p>
+
+                <div t-attf-class="clearfix oe_login_buttons text-center mb-1 {{'pt-2' if form_small else 'pt-3'}}">
+                    <button type="submit" style="width:50%; margin-left: 10px;" class="btn btn-primary btn-block">INGRESAR</button>
+                    <div class="o_login_auth"/>
+                    <button type="button" style="width:50%; margin-left: 10px; margin-top: 5px; height:41px;" class="btn btn-danger btn-block" onclick="location.href = '../';">REGRESAR</button>
+
+                </div>
+
+                <div style="padding-left: 13%;">
+                    <a href="/web/reset_password/" class="btn btn-link" role="button">¿Se te olvidó tu contraseña?</a>
+                </div>
+
+                <input type="hidden" name="redirect" t-att-value="redirect"/>
+            </form>
+
+        </xpath>
+        <xpath expr="//label[@for='db']" position="replace"/>
+        <xpath expr="//input[@name='login']" position="attributes">
+            <attribute name="placeholder">micorreo@correo.mx</attribute>
+            <attribute name="autocomplete">off</attribute>
+            <attribute name="autocorrect">off</attribute>
+        </xpath>
+        <xpath expr="//input[@name='password']" position="attributes">
+            <attribute name="placeholder"></attribute>
+        </xpath>
+    </template>
+
+
+</odoo>

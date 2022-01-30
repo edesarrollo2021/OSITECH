@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <data noupdate="1">
+        <record id="forum_help" model="forum.forum">
+            <field name="name">Foro de participación Universidad Aeromar</field>
+            <field name="description">Esta comunidad es para todos los colaboradores de Aeromar, en donde podrás compartir los mejores contenidos y nuevas ideas que nos impulsen a crecer dentro de nuestra Empresa.</field>
+        </record>
+    </data>
+    
+     <delete model="forum.forum" search="[('id','=', ref('website_forum.forum_help'))]"/>
+     
+</odoo>

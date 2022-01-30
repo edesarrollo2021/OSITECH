@@ -1,0 +1,130 @@
+
+
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    background: #000;
+}
+
+.swiper-wrapper {
+    padding: 40px 60px;
+}
+
+.swiper-slide {
+    font-size: 18px;
+    color: #fff;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 89%;
+}
+
+.parallax-bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 127%;
+    height: 110%;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: left -2px;
+}
+
+.swiper-slide .subtitle {
+    font-size: 21px;
+}
+
+.swiper-slide .text {
+    font-size: 17px;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.swiper-slide .title {
+    font-family: "Century Gothic";
+    font-weight: 600;
+    font-size: 60px;
+}
+
+button, input {
+    font-family: "OPTIFuturaDemiBold";
+    font-size: 17px;
+    border-radius: 3px;
+}
+
+button {
+    border: 0;
+}
+
+input {
+    border: 1px solid #BBBCBC;
+}
+
+button.azul, button.amarillo {
+    padding: 14px 0px 14px 0px;
+    font-size: 21px;
+    font-family: "Century Gothic";
+    font-weight: 500;
+    background-color: #fedb31;
+    border: 0;
+    width: 49%;
+}
+
+button.azul:hover, button.amarillo:hover {
+    background: #fff;
+    color: #01205C;
+}
+
+button.azul {
+    background:#01205C;
+    color: #FFF;
+}
+
+@media screen and (min-height: 600px) {
+    .swiper-slide {
+        padding-top: 12%;
+    }
+}
+
+@media screen and (min-height: 700px) {
+    .swiper-slide {
+        padding-top: 16%;
+    }
+}
+
+@media screen and (min-height: 800px) {
+    .swiper-slide {
+        padding-top: 20%;
+    }
+}
+
+.o_database_list{
+    padding: 0px!important;
+    background-color: #282828;}
+
+.card {
+background-color: transparent !important;
+}
+
+.card-body{
+background-color: transparent !important;
+}
+
+.oe_login_form{
+max-width: none;
+}
+
+.swiper-wrapper{
+width:0%;
+height:0%;
+}
+
+
+/*
+html, body, #wrapwrap {
+justify-content: center;
+text-align: -webkit-center;
+}
+*/
+
+/* ################### Estilos revisados ############################# */
