@@ -2,18 +2,742 @@
 <odoo>
     <data>
         
-        <record id="group_website_slides_sobre" model="res.groups">
-            <field name="name">Sobrecargo</field>
+        <record id="group_website_slides_1" model="res.groups">
+            <field name="name">Director General</field>
             <field name="category_id" ref="base.module_category_website_elearning"/>
-            <field name="implied_ids" eval="[(4, ref('website.group_website_publisher'))]"/>
         </record>
         
-        <record id="group_website_slides_tra_gene" model="res.groups">
-            <field name="name">Trabajador general</field>
+        <record id="group_website_slides_2" model="res.groups">
+            <field name="name">Gerente de Adquisiciones y Cadena de Suministros</field>
             <field name="category_id" ref="base.module_category_website_elearning"/>
-            <field name="implied_ids" eval="[(4, ref('website.group_website_publisher'))]"/>
         </record>
         
+        <record id="group_website_slides_3" model="res.groups">
+            <field name="name">Gerente de Planeación Estratégica y Análisis de Negocios</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_4" model="res.groups">
+            <field name="name">Gerente Jurídico</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_5" model="res.groups">
+            <field name="name">Jefe de Proyectos</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_6" model="res.groups">
+            <field name="name">Jefe de Auditorías</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_7" model="res.groups">
+            <field name="name">Coordinador de Procesos</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_8" model="res.groups">
+            <field name="name">Coordinador BI</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_9" model="res.groups">
+            <field name="name">QAVoz del Cliente</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_10" model="res.groups">
+            <field name="name">Auditor Interno</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_11" model="res.groups">
+            <field name="name">Analista de Procesos</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_12" model="res.groups">
+            <field name="name">Analista BI</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_13" model="res.groups">
+            <field name="name">Analista de Proyectos Green</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_14" model="res.groups">
+            <field name="name">Director de Finanzas</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_15" model="res.groups">
+            <field name="name">Gerente Senior Administrativo</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_16" model="res.groups">
+            <field name="name">Gerente de Costos y Análisis Financiero</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_17" model="res.groups">
+            <field name="name">Gerente de Ingresos</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_18" model="res.groups">
+            <field name="name">Gerente de Impuestos</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_19" model="res.groups">
+            <field name="name">Gerente Junior Tesorería</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_20" model="res.groups">
+            <field name="name">Jefe Contable ERP Green</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_21" model="res.groups">
+            <field name="name">Jefe de Información Financiera</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_22" model="res.groups">
+            <field name="name">Jefe de Tesorería</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_23" model="res.groups">
+            <field name="name">Jefe de Facturación Interlineal</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_24" model="res.groups">
+            <field name="name">Jefe de Seguros y Fianzas</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_25" model="res.groups">
+            <field name="name">Coordinador de Viajes</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_26" model="res.groups">
+            <field name="name">Coordinador de Ingresos</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_27" model="res.groups">
+            <field name="name">Coordinador de Impuestos</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_28" model="res.groups">
+            <field name="name">Supervisor de Caja</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_29" model="res.groups">
+            <field name="name">Supervisor Contable de Ingresos Ventas</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_30" model="res.groups">
+            <field name="name">Supervisor Contable de Egresos Green</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_31" model="res.groups">
+            <field name="name">Supervisor Reporte de Ventas</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_32" model="res.groups">
+            <field name="name">Supervisor de Reembolsos</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_33" model="res.groups">
+            <field name="name">Analista de Información Financiera</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_34" model="res.groups">
+            <field name="name">Analista Contable de Costos Aeroportuario B</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_35" model="res.groups">
+            <field name="name">Analista de Cuentas por Pagar</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_36" model="res.groups">
+            <field name="name">Analista de Facturación Green</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_37" model="res.groups">
+            <field name="name">Analista Administrativo</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_38" model="res.groups">
+            <field name="name">Auxiliar Contable de Costos Aeroportuario</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_39" model="res.groups">
+            <field name="name">Auxiliar Administrativo de Tesorería</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_40" model="res.groups">
+            <field name="name">Auxiliar de Caja</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_41" model="res.groups">
+            <field name="name">Auxiliar Cupones Volados</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_42" model="res.groups">
+            <field name="name">Auxiliar Contable</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_43" model="res.groups">
+            <field name="name">Auxiliar de Facturación Interlinea</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_44" model="res.groups">
+            <field name="name">Auxiliar Contable de Reporte de Ventas</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_45" model="res.groups">
+            <field name="name">Mensajero</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_46" model="res.groups">
+            <field name="name">Director de Estrategias y Red de Alianzas</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_47" model="res.groups">
+            <field name="name">Gerente de Planeación de Red de Alianzas e Interlineal</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_48" model="res.groups">
+            <field name="name">Gerente de Itinerarios</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_49" model="res.groups">
+            <field name="name">Jefe de Itinerarios</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_50" model="res.groups">
+            <field name="name">Analista Senior de Alianzas A</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_51" model="res.groups">
+            <field name="name">Analista Senior de Alianzas B</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_52" model="res.groups">
+            <field name="name">Analista Senior de Itinerarios</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_53" model="res.groups">
+            <field name="name">Director de TI y Transformación Digital</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_54" model="res.groups">
+            <field name="name">Gerente de Desarrollo y Operaciones de Sistemas</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_55" model="res.groups">
+            <field name="name">Gerente de Sistemas Administrativos y Comerciales</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_56" model="res.groups">
+            <field name="name">Gerente de Sistemas Operativos y Host</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_57" model="res.groups">
+            <field name="name">Gerente de Infraestructura y Comunicación</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_58" model="res.groups">
+            <field name="name">Coordinador de Soporte Servidores y Equipos</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_59" model="res.groups">
+            <field name="name">Coordinador de Service Desk y Seguridad Aplicativa</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_60" model="res.groups">
+            <field name="name">Coordinador DBA/DWH</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_61" model="res.groups">
+            <field name="name">Programador de BI</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_62" model="res.groups">
+            <field name="name">Desarrollador Full Stack</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_63" model="res.groups">
+            <field name="name">Ingeniero de Soporte Técnico Senior</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_64" model="res.groups">
+            <field name="name">Ingeniero de Soporte Técnico</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_65" model="res.groups">
+            <field name="name">Especialista de Redes y Seguridad</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_66" model="res.groups">
+            <field name="name">Analista de Negocios Senior</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_67" model="res.groups">
+            <field name="name">Analista de Negocios</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_68" model="res.groups">
+            <field name="name">Agente de Service Deck</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_69" model="res.groups">
+            <field name="name">Director de Talento Humano</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_70" model="res.groups">
+            <field name="name">Gerente Senior de Administración de Personal</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_71" model="res.groups">
+            <field name="name">Gerente de Capacitación y Cultura Organizacional</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_72" model="res.groups">
+            <field name="name">Gerente de Nóminas</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_73" model="res.groups">
+            <field name="name">Jefe de Servicio al Cliente Interno</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_74" model="res.groups">
+            <field name="name">Jefe de Procesos de Aprendizaje</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_75" model="res.groups">
+            <field name="name">Jefe de Desarrollo Organizacional</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_76" model="res.groups">
+            <field name="name">Coordinador de Servicio al Cliente Interno</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_77" model="res.groups">
+            <field name="name">Coordinador de Adiestramiento de Operaciones</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_78" model="res.groups">
+            <field name="name">Coordinador de Capacitación</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_79" model="res.groups">
+            <field name="name">Coordinador de Ground Operations</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_80" model="res.groups">
+            <field name="name">Coordinador de Capacitación Soft Skill</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_81" model="res.groups">
+            <field name="name">Coordinador DO</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_82" model="res.groups">
+            <field name="name">Especialista de Servicio al Cliente Interno Green</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_83" model="res.groups">
+            <field name="name">Especialista de Información Green</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_84" model="res.groups">
+            <field name="name">Especialista Amadeus</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_85" model="res.groups">
+            <field name="name">Director de Operaciones Terrestres</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_86" model="res.groups">
+            <field name="name">Gerente de Operaciones Terrestres</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_87" model="res.groups">
+            <field name="name">Líder Base México</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_88" model="res.groups">
+            <field name="name">Líder Regional de Aeropuerto</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_89" model="res.groups">
+            <field name="name">Jefe de Aseguramiento de Calidad</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_90" model="res.groups">
+            <field name="name">Trabajador General Instructor Back up</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_91" model="res.groups">
+            <field name="name">Trabajador General</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_92" model="res.groups">
+            <field name="name">Gerente Senior de Ventas</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_93" model="res.groups">
+            <field name="name">Gerente de Ventas Charters</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_94" model="res.groups">
+            <field name="name">Gerente de Distribución y CRC</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_95" model="res.groups">
+            <field name="name">Gerente de Cuentas Clave</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_96" model="res.groups">
+            <field name="name">Gerente de Carga</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_97" model="res.groups">
+            <field name="name">Gerente de Previsión de Ingresos</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_98" model="res.groups">
+            <field name="name">Gerente de Servicios al Cliente</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_99" model="res.groups">
+            <field name="name">Gerente de Mercadotecnia</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_100" model="res.groups">
+            <field name="name">Gerente de Ventas Carga</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_101" model="res.groups">
+            <field name="name">Gerente Junior de Estándares de Servicio al Cliente</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_102" model="res.groups">
+            <field name="name">Director Técnico</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_103" model="res.groups">
+            <field name="name">Gerente Senior de Flota y Suministros Técnicos</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_104" model="res.groups">
+            <field name="name">Gerente de Ingeniería</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_105" model="res.groups">
+            <field name="name">Gerente de Mantenimiento</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        <record id="group_website_slides_106" model="res.groups">
+            <field name="name">Director</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_107" model="res.groups">
+            <field name="name">Director de Seguridad</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_108" model="res.groups">
+            <field name="name">Gerencia de Seguridad</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_109" model="res.groups">
+            <field name="name">Jefe QA</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_110" model="res.groups">
+            <field name="name">Director de Estrategia Financiera</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_111" model="res.groups">
+            <field name="name">Gerente Senior de Inteligencia de Negocios y Planeación Financiera</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_112" model="res.groups">
+            <field name="name">Director de Operaciones de Vuelo</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_113" model="res.groups">
+            <field name="name">Gerente de Operaciones A</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_114" model="res.groups">
+            <field name="name">Gerente de Estándares en Cabina</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_115" model="res.groups">
+            <field name="name">Gerente de Operaciones B</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_116" model="res.groups">
+            <field name="name">Jefe de Adiestramiento de Pilotos</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_117" model="res.groups">
+            <field name="name">Jefe de Adiestramiento de Servicio a Bordo</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_118" model="res.groups">
+            <field name="name">Jefe de Control de Tripulaciones</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_119" model="res.groups">
+            <field name="name">Jefe de Gestión de Slots y Charters</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_120" model="res.groups">
+            <field name="name">Jefe de Ingeniería de Operaciones</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_121" model="res.groups">
+            <field name="name">Jefe de Pilotos</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_122" model="res.groups">
+            <field name="name">Jefe de Planeación Gestión y Presupuesto</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_123" model="res.groups">
+            <field name="name">Jefe de Sobrecargos</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_124" model="res.groups">
+            <field name="name">Jefe del CCO</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_125" model="res.groups">
+            <field name="name">Subjefe de Adiestramiento de Pilotos</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_126" model="res.groups">
+            <field name="name">Subjefe de Pilotos</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_127" model="res.groups">
+            <field name="name">Coordinador de Planeación y Programación de Presupuestos </field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_128" model="res.groups">
+            <field name="name">Ingeniero de Operaciones</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_129" model="res.groups">
+            <field name="name">Ingeniero de Adiestramiento de Pilotos</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_130" model="res.groups">
+            <field name="name">Supervisor ACDM</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_131" model="res.groups">
+            <field name="name">Supervisor de Control de Tripulaciones</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_132" model="res.groups">
+            <field name="name">Supervisor de CCO</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_133" model="res.groups">
+            <field name="name">Supervisor de Slots</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_134" model="res.groups">
+            <field name="name">Programador de Tripulaciones</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_135" model="res.groups">
+            <field name="name">Capitán</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_136" model="res.groups">
+            <field name="name">Primer Oficial</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_137" model="res.groups">
+            <field name="name">Gerente</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_138" model="res.groups">
+            <field name="name">Instructor Piloto</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_139" model="res.groups">
+            <field name="name">Asesor Instructor Piloto</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_140" model="res.groups">
+            <field name="name">Aspirante a Primer Oficial</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        <record id="group_website_slides_141" model="res.groups">
+            <field name="name">Sobrecargos</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_142" model="res.groups">
+            <field name="name">Sobrecargo A</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_143" model="res.groups">
+            <field name="name">Instructor Sobrecargos</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_144" model="res.groups">
+            <field name="name">Asesor Sobrecargos</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        <record id="group_website_slides_145" model="res.groups">
+            <field name="name">Analista A</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_146" model="res.groups">
+            <field name="name">Analista de Gestión</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_147" model="res.groups">
+            <field name="name">Analista de Planeación</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
+        
+        <record id="group_website_slides_148" model="res.groups">
+            <field name="name">Analista de Slots</field>
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+        </record>
         
     </data>
 </odoo>

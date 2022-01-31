@@ -8,6 +8,13 @@
             <field name="priority">5</field>
             <field name="inherit_id" ref="website_slides.view_slide_channel_form"/>
             <field name="arch" type="xml">
+                <xpath expr="//page[@name='options']//group[@name='access_rights']" position="replace">
+                   <group name="access_rights_mx" string="Permisos de acceso">
+                        <field name="enroll" widget="radio" options="{'horizontal': true}" invisible="1"/>
+                        <field name="upload_group_ids" widget="many2many_tags" domain="[('category_id','=','eLearning')]"/>
+                        <field name="enroll_group_ids" widget="many2many_tags" string="Suscribir grupos" domain="[('category_id','=','eLearning')]"/>
+                    </group>
+                </xpath>
                 <xpath expr="//page[@name='options']//group//field[@name='website_id']" position="before">
                    <field name="training_model" widget="radio"/>
                     <field name="type_course_ids" mode="tree">

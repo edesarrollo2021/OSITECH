@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="ot_web_adresses" name="Adresses">
+        <t t-call="website.layout">
+            <form>
+                <div class="container-fluid row" style="padding-left: 20%;">
+                    <t t-foreach="addresses" t-as="add">
+                      <section>
+                        <div class="col-lg-40" style="margin: 5%">
+                            <img class="img-fluid o_we_custom_image m-3 d- mx-auto" t-attf-src="data:image/*;base64,{{add.image}}"/>
+                            <input t-att-value="add.name" class="form-control" name="name_adresse" id="name_adresse_id" />
+                            <button id="ot_btn_s2" name="search">Buscar</button>
+                        </div>
+                      </section>
+                    </t>
+                </div>
+            </form>
+        </t>
+    </template>
+    
+    
+    
+    
+</odoo>

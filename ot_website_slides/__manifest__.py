@@ -22,15 +22,19 @@
         'website_livechat',
     ],
     "data": [
+        'templates/ot_web_adresses.xml',
         'data/website_data.xml',
         'data/forum_data.xml',
         'data/ir_config_parameter.xml',
         'data/gamification_karma_rank_data.xml',
+        'data/job_positions.xml',
+        'data/adresses.xml',
         'security/ir.model.access.csv',
         'security/website_slides_security.xml',
         'view/website_templates.xml',
         'view/website_calendar_templates.xml',
         'view/website_forum.xml',
+        'view/addresses.xml',
         'view/res_users_views.xml',
         'view/website_slides_templates_course.xml',
         'view/http_routing_template.xml',
@@ -40,6 +44,7 @@
         'templates/web_client_templates.xml',
         'templates/template_welcome_aeromar.xml',
         'templates/ot_web_user_register.xml',
+
     ],
     'odoo-apps' : True
 }

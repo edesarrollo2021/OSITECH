@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <record id="view_addresses_mx_form" model="ir.ui.view">
+        <field name="name">slide.addresses.form</field>
+        <field name="model">slide.addresses</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                        <group>
+                            <field name="image" widget="image" class="oe_avatar"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="job_positions_ids"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    
+    <record id="view_addresses_mx_tree" model="ir.ui.view">
+        <field name="name">slide.addresses.tree</field>
+        <field name="model">slide.addresses</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_job_positions_mx_form" model="ir.ui.view">
+        <field name="name">slide.job.positions.form</field>
+        <field name="model">slide.job.positions</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                        <group>
+                            <field name="image" widget="image" class="oe_avatar"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_job_positions_mx_tree" model="ir.ui.view">
+        <field name="name">slide.job.positions.tree</field>
+        <field name="model">slide.job.positions</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+        
+    <record id="action_addresses_mx" model="ir.actions.act_window">
+        <field name="name">Addresses</field>
+        <field name="res_model">slide.addresses</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    
+    <record id="action_job_positions_mx" model="ir.actions.act_window">
+        <field name="name">Job Positions</field>
+        <field name="res_model">slide.job.positions</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="menu_addresses_mx"
+        name="Direcciones"
+        action="action_addresses_mx"
+        parent="website_slides.website_slides_menu_configuration"
+        groups="base.group_user"/>
+
+    <menuitem
+        id="menu_job_positions_mx"
+        name="Puestos de trabajo"
+        action="action_job_positions_mx"
+        parent="website_slides.website_slides_menu_configuration"
+        groups="base.group_user"/>
+
+</odoo>
