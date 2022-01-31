@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data noupdate="1">
-        <template id="ot_constancy" inherit_id="survey.certification_report_view_modern"
-                  active="True" customize_show="True" name='Constancy of courses'>
+        <template id="ot_constancy" inherit_id="survey.certification_report_view_modern" active="True" customize_show="True" name='Constancy of courses'>
             <xpath expr="//div[@id='o_survey_certification']" position="replace">
                 <div id="o_survey_certification"
                      t-att-data-oe-model="user_input._name"
@@ -15,10 +14,10 @@
                                 <p style="font-size:30px; margin-bottom: -15px; padding-top: 15px;">EL CENTRO DE CAPACITACIÓN Y ADIESTRAMIENTO</p>
                                 <p style="font-size:30px;">TRANSPORTES AEROMAR, S.A. DE C.V.</p>
                                 <p style="font-size:30px">Otorga el presente</p>
-                                <p style="font-size:65px">XXXXXXXXXXX</p>
                                 <p style="font-size:45px">a: </p>
+                                <p style="font-size:65px"><t t-esc="user_input.partner_id.name or user_input.email"/></p>
                                 <p style="font-size:30px">Por haber completado satisfactoriamente el curso:</p>
-                                <p style="font-size:45px">XXXXXXXXXXX</p>
+                                <p style="font-size:45px"><t t-esc="user_input.survey_id.slide_channel_ids.name"/></p>
                                 <p style="font-size:25px; margin-bottom: -7px;">Impartido el: XXXXXXXXXXX,</p>
                                 <p style="font-size:25px; margin-bottom: -7px;">con una duración de: XXXXXXXXXXX hrs.</p>
                                 <p style="font-size:25px; margin-bottom: -7px;">Obteniendo una calificación de: XXXXXXXXXXX.</p>
