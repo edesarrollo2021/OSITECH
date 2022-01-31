@@ -1,133 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data noupdate="1">
-        <template id="ot_email_template_course_expired">
-
-            <record id="ot_constancy_type_a" model="ir.actions.report">
-                <field name="name">OT Constancy Type A</field>
-                <field name="model">apr.general.balance.wizard</field>
-                <field name="report_type">qweb-pdf</field>
-                <field name="report_name">accounting_plan_report.apr_general_balance_template</field>
-                <field name="print_report_name">'General balance'</field>
-            </record>
-
-            <template id="apr_general_balance_template">
-                <t t-call="web.html_container">
-                    <t t-set="data_report_margin_top" t-value="12"/>
-                    <t t-set="data_report_header_spacing" t-value="9"/>
-                    <t t-call="web.external_layout">
-                        <div class="page">
-                            <table class="table">
-                                <tbody>
-                                    <tr>
-                                        <td class="text-center"
-                                            style="border-top: 0px; border: solid 0px black; margin: 0px; padding: 0px;">
-                                            <h4 class="text-center"><span
-                                                    t-esc="(company_id or res_company).name"/></h4>
-                                        </td>
-
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center" style="padding-top:10px; border: solid 0px black;">
-                                            <h4 class="text-center">Balance General</h4>
-                                            <h4 class="text-center">(Al <span t-esc="data['form']['date_end_str']"/>
-                                                )</h4>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-
-                            <table class="table">
-
-                                <tbody>
-                                    <t t-set="aut_val" t-value="0"/>
-                                    <t t-set="acc_nam" t-value="list(acc_val_data.keys())"/>
-                                    <t t-foreach="acc_val_data.values()" t-as="acc_typ">
-                                        <t t-set="acc_name" t-value="(acc_nam[aut_val].name).upper()"/>
-                                        <t t-set="acc_tot" t-value="0"/>
-                                        <tr>
-                                            <td style="margin: 0px; padding-left: 0px;  padding-top: 30px; padding-bottom: 0px; border:solid 0px black;">
-                                                <strong><p><t t-esc="acc_name"/></p></strong>
-                                            </td>
-                                        </tr>
-                                        <span t-set="acc_sub_typ" t-value="list(acc_typ.keys())"/>
-                                        <t t-set="aut_val" t-value="aut_val+1"/>
-                                        <t t-foreach="acc_sub_typ" t-as="acc_sub_key">
-                                            <tr>
-                                                <td style="margin: 0px; padding-left: 60px;  padding-top: 10px; padding-bottom: 0px; border:solid 0px black;">
-                                                    <p><span t-esc="acc_sub_key.name"/></p>
-                                                </td>
-                                            </tr>
-                                            <t t-set="accounts" t-value="acc_typ[acc_sub_key]"/>
-                                            <t t-set="acc_sub_tot" t-value="0"/>
-                                            <t t-set="aut_val2" t-value="0"/>
-                                            <t t-foreach="accounts" t-as="acc">
-                                                <p><t t-set="acc_rec" t-value="len(accounts)"/></p>
-
-                                                <t t-foreach="acc" t-as="val">
-                                                    <t t-set="aut_val2" t-value="aut_val2+1"/>
-                                                    <t t-set="acc_tot" t-value="acc_tot+acc[val]"/>
-                                                    <t t-set="acc_sub_tot" t-value="acc_sub_tot+acc[val]"/>
-                                                    <tr>
-                                                        <td style="margin: 0px; padding-top: 0px; padding-left: 120px; padding-bottom: 0px;  border:solid 0px black;">
-                                                            <p><span t-esc="val.name"/></p>
-                                                        </td>
-                                                        <td style="margin: 0px;  padding-bottom: 0px; border:solid 0px black; text-align: right; padding-top: 0px;">
-                                                            <p><span t-esc="acc[val]"
-                                                                     t-options="{'widget': 'monetary', 'display_currency': (company_id or res_company).currency_id}"/></p>
-                                                        </td>
-                                                        <t t-if="aut_val2 == acc_rec">
-                                                            <td style="margin: 0px;  padding-bottom: 0px; border:solid 0px black; text-align: right; padding-top: 0px;">
-                                                                <p><span t-esc="acc_sub_tot"
-                                                                         t-options="{'widget': 'monetary', 'display_currency': (company_id or res_company).currency_id}"/></p>
-                                                            </td>
-                                                        </t>
-
-                                                    </tr>
-                                                </t>
-                                            </t>
-                                        </t>
-                                        <tr>
-                                            <td style="border-top:solid 1px #e6e6e6;">
-                                                <p>TOTAL <span t-esc="acc_name"/>:</p>
-                                            </td>
-                                            <td style="border-top:solid 1px #e6e6e6;"></td>
-                                            <td style="text-align: right; border-top: solid 1px black;">
-                                                <strong>
-                                                    <p>
-                                                        <span t-esc="acc_tot"
-                                                              t-options="{'widget': 'monetary', 'display_currency': (company_id or res_company).currency_id}"/>
-                                                    </p>
-                                                </strong>
-                                            </td>
-                                        </tr>
-                                    </t>
-                                </tbody>
-                            </table>
-
-                            <table>
-                                <tr>
-                                    <td style="text-align:center; border: solid 1px black; padding-top:10px; padding-left:30px; padding-right:30px;">
-                                        <p>Total pasivo + Patrimonio</p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="text-align:center; border: solid 1px black; padding-top:25px;">
-                                        <p><span t-esc="lia_equ"
-                                                 t-options="{'widget': 'monetary', 'display_currency': (company_id or res_company).currency_id}"/></p>
-                                    </td>
-                                </tr>
-                            </table>
-
-                        </div>
-
-                    </t>
-
-                </t>
-
-            </template>
-
+        <template id="ot_constancy" inherit_id="survey.certification_report_view_modern"
+                  active="True" customize_show="True" name='Constancy of courses'>
+            <xpath expr="//div[@id='o_survey_certification']" position="replace">
+                <div id="o_survey_certification"
+                     t-att-data-oe-model="user_input._name"
+                     t-att-data-oe-id="user_input.id"
+                     t-att-class="'article ' ">
+                    <table style="width: 100%;">
+                        <tr>
+                            <td style="text-align:center;">
+                                <img src="/ot_website_slides/static/src/img/logo_aeromar_separ.png" style="height:85px;"/>
+                                <p style="font-size:30px; margin-bottom: -15px; padding-top: 15px;">EL CENTRO DE CAPACITACIÓN Y ADIESTRAMIENTO</p>
+                                <p style="font-size:30px;">TRANSPORTES AEROMAR, S.A. DE C.V.</p>
+                                <p style="font-size:30px">Otorga el presente</p>
+                                <p style="font-size:65px">XXXXXXXXXXX</p>
+                                <p style="font-size:45px">a: </p>
+                                <p style="font-size:30px">Por haber completado satisfactoriamente el curso:</p>
+                                <p style="font-size:45px">XXXXXXXXXXX</p>
+                                <p style="font-size:25px; margin-bottom: -7px;">Impartido el: XXXXXXXXXXX,</p>
+                                <p style="font-size:25px; margin-bottom: -7px;">con una duración de: XXXXXXXXXXX hrs.</p>
+                                <p style="font-size:25px; margin-bottom: -7px;">Obteniendo una calificación de: XXXXXXXXXXX.</p>
+                                <p style="font-size:25px; margin-bottom: -7px;">En Hangar 1 Zona "D" Col. Federal,</p>
+                                <p style="font-size:25px; margin-bottom: -7px;">Ciudad de México.</p>
+                                <p style="font-size:25px; margin-bottom: -7px;">Modalidad: XXXXXXXXXXX</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <table style="width: 100%;">
+                        <tr>
+                            <td style="text-align:center; width: 50%; padding-top: 230px;">
+                                <p><span style="font-size:25px; font-weight: bold;">XXXXXXXXXXX</span></p>
+                                <p><span style="font-size:25px;">Jefe de Procesos de Aprendizaje</span></p>
+                            </td>
+                            <td style="text-align:center; width: 50%;">
+                                <p><span style="font-size:25px; font-weight: bold;">XXXXXXXXXXX</span></p>
+                                <p><span style="font-size:25px;">Instructor</span></p>
+                            </td>
+                        </tr>
+                    </table>
+                    <div>
+                    </div>
+                </div>
+            </xpath>
         </template>
-
     </data>
 </odoo>

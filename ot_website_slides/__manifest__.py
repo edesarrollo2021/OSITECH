@@ -20,6 +20,7 @@
         'gamification',
         'ot_theme_blue',
         'website_livechat',
+        'survey',
     ],
     "data": [
         'templates/ot_web_adresses.xml',
@@ -40,6 +41,7 @@
         'view/http_routing_template.xml',
         'view/slide_channel_views.xml',
         'view/website_slides_templates_homepage.xml',
+        'view/ot_constancy.xml',
         'templates/website_delete_elements_templates.xml',
         'templates/web_client_templates.xml',
         'templates/template_welcome_aeromar.xml',
