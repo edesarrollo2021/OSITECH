@@ -48,6 +48,9 @@
         'templates/ot_web_user_register.xml',
 
     ],
+    'css': [
+        '/ot_website_slides/static/src/swiper/css/swiper-tema.css',
+        ],
     'odoo-apps' : True
 }
 

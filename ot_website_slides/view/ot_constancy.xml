@@ -1,5 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <data>
+        <record id="paperformat_low_monthly_report" model="report.paperformat">
+            <field name="name">PF Monthly Report</field>
+            <field name="default" eval="True"/>
+            <field name="format">A4</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">0</field>
+            <field name="margin_bottom">0</field>
+            <field name="margin_left">0</field>
+            <field name="margin_right">0</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">0</field>
+            <field name="dpi">0</field>
+        </record>
+        <!-- QWeb Reports -->
+        <record id="survey.certification_report" model="ir.actions.report">
+            <field name="name">Certifications</field>
+            <field name="model">survey.user_input</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">survey.certification_report_view</field>
+            <field name="report_file">survey.certification_report_view</field>
+            <field name="print_report_name">'Certification - %s' % (object.survey_id.display_name)</field>
+            <field name="paperformat_id" ref="ot_website_slides.paperformat_low_monthly_report"/>
+            <field name="attachment">'certification.pdf'</field>
+            <field name="binding_model_id" ref="survey.model_survey_user_input"/>
+            <field name="binding_type">report</field>
+        </record>
+    </data>
+
     <data noupdate="1">
         <template id="ot_constancy" inherit_id="survey.certification_report_view_modern" active="True"
                   customize_show="True" name='Constancy of courses'>
@@ -8,24 +39,39 @@
                      t-att-data-oe-model="user_input._name"
                      t-att-data-oe-id="user_input.id"
                      t-att-class="'article ' ">
+                    <style type="text/css">
+                        @font-face {
+                            font-family: Castellar;
+                            font-style: normal;
+                            src: url(/ot_website_slides/static/src/fonts/Castellar/Castellar.ttf)
+                        }
+                        @font-face {
+                            font-family: Tahoma;
+                            font-style: normal;
+                            src: url(/ot_website_slides/static/src/fonts/Castellar/tahoma_regular_font.ttf)
+                        }
+                        font_cas{
+                            font-family:Castellar;
+                         }
+                        </style>
                     <div class="page">
-                        <table style="width: 100%;">
+                        <img src="/ot_website_slides/static/src/img/barra_derecha_reporte.png" style="position:absolute; width: 158.2px; top: -3%; ;right:-1%;"/>
+                        <table style="width: 100%; float: left; font-family: Tahoma;">
                             <tr>
-                                <td style="text-align:center;">
+                                <td style="text-align:center; padding-top: 150px; background-image:url(/ot_website_slides/static/src/img/fondo_avion_report.png); background-repeat: no-repeat; background-position:25% 95%; background-size:800px;">
                                     <img src="/ot_website_slides/static/src/img/logo_aeromar_separ.png"
                                          style="height:85px;"/>
-                                    <p style="font-size:30px; margin-bottom: -15px; padding-top: 15px;">EL CENTRO DE
-                                        CAPACITACIÓN Y ADIESTRAMIENTO</p>
+                                    <div style="font-size:30px; margin-bottom:-15px; padding-top: 15px;">
+                                        EL CENTRO DE CAPACITACIÓN Y ADIESTRAMIENTO</div>
                                     <p style="font-size:30px;">TRANSPORTES AEROMAR, S.A. DE C.V.</p>
-                                    <p style="font-size:30px">Otorga el presente</p>
+                                    <p style="font-size:30px" >Otorga el presente</p>
                                     <p style="font-size:60px" class="text-uppercase">
                                         <span t-if="user_input.survey_id.slide_channel_ids.constancy == 'certificate'"
                                               t-esc="'certificado'"/>
                                         <span t-else="">constancia</span></p>
-                                    <p style="font-size:45px">a: <t t-esc="user_input.partner_id.name"/></p>
-                                    <p style="font-size:30px">Por haber completado satisfactoriamente el curso:</p>
-                                    <p style="font-size:45px" class="text-uppercase"><t
-                                            t-esc="user_input.survey_id.slide_channel_ids.name"/></p>
+                                    <span style="font-size:45px;">a: </span><span style="font-size:45px; font-family: Castellar;" class="text-uppercase "><t t-esc="user_input.partner_id.name" /></span>
+                                    <p style="font-size:30px; padding-top:40px;">Por haber completado satisfactoriamente el curso:</p>
+                                    <span style="font-size:45px; font-family: Castellar;" class="text-uppercase"><span t-esc="user_input.survey_id.slide_channel_ids.name"/></span>
                                     <t t-foreach="user_input.survey_id.slide_channel_ids.channel_partner_ids"
                                        t-as="line">
                                         <t t-if="line.id == user_input.partner_id.user_ids.id">
@@ -50,7 +96,7 @@
                         </table>
 
                         <span t-if="user_input.survey_id.slide_channel_ids.constancy == 'certificate'">
-                            <table style="width: 100%;">
+                            <table style="width: 90%; font-family: Tahoma;">
                                 <tr>
                                     <td style="text-align:center; width: 50%; padding-top: 80px;">
                                         <img src="/ot_website_slides/static/src/img/firma_jefe_proceso_aprendizaje.png"
@@ -59,11 +105,11 @@
                                             Olguin</span></p>
                                         <p><span style="font-size:25px;">Jefe de Procesos de Aprendizaje</span></p>
                                     </td>
-                                    <td style="text-align:center; width: 50%;">
+                                    <td style="text-align:center; width: 40%;">
                                         <img src="/ot_website_slides/static/src/img/firma_instructor.png"
                                              style="height:120px;"/>
-                                        <p><span style="font-size:25px; font-weight: bold;">Marco Antonio López
-                                            Avilés</span></p>
+                                        <p><span style="font-size:25px; font-weight: bold;">
+                                            Marco Antonio López</span></p>
                                         <p><span style="font-size:25px;">Instructor</span></p>
                                     </td>
                                 </tr>
@@ -86,25 +132,25 @@
                     </div>
                     <span t-if="user_input.survey_id.slide_channel_ids.constancy == 'certificate'">
                         <p style="page-break-after:always;"/>
-                        <table style="width: 100%; font-size: 20px;}">
+                        <table style="width: 100%; font-size: 20px;">
                             <tr style="text-align: center;">
-                                <td colspan="2" style="padding-bottom:50px; font-weight:900;">
+                                <td colspan="2" style="padding-bottom:50px; font-weight:900; padding-top:150px;">
                                     CONTENIDO TEMÁTICO
                                 </td>
                             </tr>
                             <tr>
-                                <td colspan="2">PUESTO DE TRABAJO: <t
+                                <td colspan="2" style="padding-left: 60px; padding-right: 20px; padding-bottom:30px;">PUESTO DE TRABAJO: <t
                                         t-esc="user_input.partner_id.user_id.employee_ids.name"/></td>
                             </tr>
                             <tr>
-                                <th style="width:75%;">TEORÍA</th>
-                                <th style="width:24%;">DURACIÓN PRACTICA</th>
+                                <th style="width:75%; padding-left: 60px; padding-right: 20px;">TEORÍA</th>
+                                <th style="width:24%; padding-left: 60px; padding-right: 20px;">DURACIÓN PRACTICA</th>
                             </tr>
                             <t t-foreach="user_input.survey_id.slide_channel_ids.slide_content_ids" t-as="line"
                                colspan="2">
                                 <tr>
-                                    <td><t t-esc="line.name" class="text-uppercase"/></td>
-                                    <td><t t-esc="line.completion_time"
+                                    <td style="padding-left: 60px; padding-right: 20px;"><span class="text-uppercase" t-esc="line.name"/></td>
+                                    <td style="padding-left: 60px; padding-right: 20px;"><span class="text-uppercase" t-esc="line.completion_time"
                                            t-options="{'widget': 'duration', 'unit': 'hour', 'round': 'minute'}"/></td>
                                 </tr>
                             </t>
