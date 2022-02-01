@@ -1,87 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data noupdate="1">
-        <template id="ot_constancy" inherit_id="survey.certification_report_view_modern" active="True" customize_show="True" name='Constancy of courses'>
+        <template id="ot_constancy" inherit_id="survey.certification_report_view_modern" active="True"
+                  customize_show="True" name='Constancy of courses'>
             <xpath expr="//div[@id='o_survey_certification']" position="replace">
                 <div id="o_survey_certification"
                      t-att-data-oe-model="user_input._name"
                      t-att-data-oe-id="user_input.id"
                      t-att-class="'article ' ">
                     <div class="page">
-                    <table style="width: 100%;">
-                        <tr>
-                            <td style="text-align:center;">
-                                <img src="/ot_website_slides/static/src/img/logo_aeromar_separ.png" style="height:85px;"/>
-                                <p style="font-size:30px; margin-bottom: -15px; padding-top: 15px;">EL CENTRO DE CAPACITACIÓN Y ADIESTRAMIENTO</p>
-                                <p style="font-size:30px;">TRANSPORTES AEROMAR, S.A. DE C.V.</p>
-                                <p style="font-size:30px">Otorga el presente</p>
-                                <p style="font-size:60px" class="text-uppercase">
-                                    <span t-if="user_input.survey_id.slide_channel_ids.constancy == 'certificate'" t-esc="'certificado'" />
-                                    <span t-else="">constancia</span></p>
-                                <p style="font-size:45px">a: <t t-esc="user_input.partner_id.name"/></p>
-                                <p style="font-size:30px">Por haber completado satisfactoriamente el curso:</p>
-                                <p style="font-size:45px" class="text-uppercase"><t t-esc="user_input.survey_id.slide_channel_ids.name"/></p>
-                                <p style="font-size:25px; margin-bottom: -7px;">Impartido el: <t t-esc="user_input.survey_id.slide_channel_ids.channel_partner_ids"/>,</p>
-                                <p style="font-size:25px; margin-bottom: -7px;">con una duración de: <t t-esc="user_input.survey_id.slide_channel_ids.total_time"  t-options="{'widget': 'duration', 'unit': 'hour', 'round': 'minute'}"/>.</p>
-                                <p style="font-size:25px; margin-bottom: -7px;">Obteniendo una calificación de: <t t-esc="user_input.last_displayed_page_id.answer_score"/>.</p>
-                                <p style="font-size:25px; margin-bottom: -7px;">En Hangar 1 Zona "D" Col. Federal,</p>
-                                <p style="font-size:25px; margin-bottom: -7px;">Ciudad de México.</p>
-                                <p style="font-size:25px; margin-bottom: -7px;">Modalidad: <t t-esc="user_input.survey_id.slide_channel_ids.training_model"/></p>
-                            </td>
-                        </tr>
-                    </table>
+                        <table style="width: 100%;">
+                            <tr>
+                                <td style="text-align:center;">
+                                    <img src="/ot_website_slides/static/src/img/logo_aeromar_separ.png"
+                                         style="height:85px;"/>
+                                    <p style="font-size:30px; margin-bottom: -15px; padding-top: 15px;">EL CENTRO DE
+                                        CAPACITACIÓN Y ADIESTRAMIENTO</p>
+                                    <p style="font-size:30px;">TRANSPORTES AEROMAR, S.A. DE C.V.</p>
+                                    <p style="font-size:30px">Otorga el presente</p>
+                                    <p style="font-size:60px" class="text-uppercase">
+                                        <span t-if="user_input.survey_id.slide_channel_ids.constancy == 'certificate'"
+                                              t-esc="'certificado'"/>
+                                        <span t-else="">constancia</span></p>
+                                    <p style="font-size:45px">a: <t t-esc="user_input.partner_id.name"/></p>
+                                    <p style="font-size:30px">Por haber completado satisfactoriamente el curso:</p>
+                                    <p style="font-size:45px" class="text-uppercase"><t
+                                            t-esc="user_input.survey_id.slide_channel_ids.name"/></p>
+                                    <t t-foreach="user_input.survey_id.slide_channel_ids.channel_partner_ids"
+                                       t-as="line">
+                                        <t t-if="line.id == user_input.partner_id.user_ids.id">
+                                            <t t-set="create_date_course" t-value="line.create_date"
+                                               t-options='{"widget": "date"}'/>
+                                            <p style="font-size:25px; margin-bottom: -7px;">Impartido el: <span
+                                                    t-esc="create_date_course"/>,</p>
+                                        </t>
+                                    </t>
+                                    <p style="font-size:25px; margin-bottom: -7px;">con una duración de: <t
+                                            t-esc="user_input.survey_id.slide_channel_ids.total_time"
+                                            t-options="{'widget': 'duration', 'unit': 'hour', 'round': 'minute'}"/>.</p>
+                                    <p style="font-size:25px; margin-bottom: -7px;">Obteniendo una calificación de: <t
+                                            t-esc="user_input.last_displayed_page_id.answer_score"/>.</p>
+                                    <p style="font-size:25px; margin-bottom: -7px;">En Hangar 1 Zona "D" Col.
+                                        Federal,</p>
+                                    <p style="font-size:25px; margin-bottom: -7px;">Ciudad de México.</p>
+                                    <p style="font-size:25px; margin-bottom: -7px;">Modalidad: <t
+                                            t-esc="user_input.survey_id.slide_channel_ids.training_model"/></p>
+                                </td>
+                            </tr>
+                        </table>
 
+                        <span t-if="user_input.survey_id.slide_channel_ids.constancy == 'certificate'">
+                            <table style="width: 100%;">
+                                <tr>
+                                    <td style="text-align:center; width: 50%; padding-top: 80px;">
+                                        <img src="/ot_website_slides/static/src/img/firma_jefe_proceso_aprendizaje.png"
+                                             style="height:120px;"/>
+                                        <p><span style="font-size:25px; font-weight: bold;">Lic. Eréndira Velázquez
+                                            Olguin</span></p>
+                                        <p><span style="font-size:25px;">Jefe de Procesos de Aprendizaje</span></p>
+                                    </td>
+                                    <td style="text-align:center; width: 50%;">
+                                        <img src="/ot_website_slides/static/src/img/firma_instructor.png"
+                                             style="height:120px;"/>
+                                        <p><span style="font-size:25px; font-weight: bold;">Marco Antonio López
+                                            Avilés</span></p>
+                                        <p><span style="font-size:25px;">Instructor</span></p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </span>
+
+                        <span t-else="">
+                            <table style="width: 100%;">
+                                <tr>
+                                    <td style="text-align:center; padding-top: 80px;">
+                                        <img src="/ot_website_slides/static/src/img/firma_jefe_proceso_aprendizaje.png"
+                                             style="height:120px;"/>
+                                        <p><span style="font-size:25px; font-weight: bold;">Lic. Eréndira Velázquez
+                                            Olguin</span></p>
+                                        <p><span style="font-size:25px;">Jefe de Procesos de Aprendizaje</span></p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </span>
+                    </div>
                     <span t-if="user_input.survey_id.slide_channel_ids.constancy == 'certificate'">
-                        <table style="width: 100%;">
-                        <tr>
-                            <td style="text-align:center; width: 50%; padding-top: 80px;">
-                                <img src="/ot_website_slides/static/src/img/firma_jefe_proceso_aprendizaje.png" style="height:120px;"/>
-                                <p><span style="font-size:25px; font-weight: bold;">Lic. Eréndira Velázquez Olguin</span></p>
-                                <p><span style="font-size:25px;">Jefe de Procesos de Aprendizaje</span></p>
-                            </td>
-                            <td style="text-align:center; width: 50%;">
-                                <img src="/ot_website_slides/static/src/img/firma_jefe_proceso_aprendizaje.png" style="height:120px;"/>
-                                <p><span style="font-size:25px; font-weight: bold;">Marco Antonio López Avilés</span></p>
-                                <p><span style="font-size:25px;">Instructor</span></p>
-                            </td>
-                        </tr>
-                    </table>
+                        <p style="page-break-after:always;"/>
+                        <table style="width: 100%; font-size: 20px;}">
+                            <tr style="text-align: center;">
+                                <td colspan="2" style="padding-bottom:50px; font-weight:900;">
+                                    CONTENIDO TEMÁTICO
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">PUESTO DE TRABAJO: <t
+                                        t-esc="user_input.partner_id.user_id.employee_ids.name"/></td>
+                            </tr>
+                            <tr>
+                                <th style="width:75%;">TEORÍA</th>
+                                <th style="width:24%;">DURACIÓN PRACTICA</th>
+                            </tr>
+                            <t t-foreach="user_input.survey_id.slide_channel_ids.slide_content_ids" t-as="line"
+                               colspan="2">
+                                <tr>
+                                    <td><t t-esc="line.name" class="text-uppercase"/></td>
+                                    <td><t t-esc="line.completion_time"
+                                           t-options="{'widget': 'duration', 'unit': 'hour', 'round': 'minute'}"/></td>
+                                </tr>
+                            </t>
+                        </table>
                     </span>
-
-                    <span t-else="">
-                        <table style="width: 100%;">
-                        <tr>
-                            <td style="text-align:center; padding-top: 230px;">
-                                <p><span style="font-size:25px; font-weight: bold;">Lic. Eréndira Velázquez Olguin</span></p>
-                                <p><span style="font-size:25px;">Jefe de Procesos de Aprendizaje</span></p>
-                            </td>
-                        </tr>
-                    </table>
-                    </span>
-                </div>
-                <p style="page-break-after:always;"/>
-                   <table>
-                       <tr style="text-align: center;">
-                           <td colspan="3" style="padding-bottom:50px;">
-                               CONTENIDO TEMÁTICO
-                           </td>
-                       </tr>
-                       <tr>
-                           <td colspan="3">PUESTO DE TRABAJO: </td>
-                       </tr>
-                       <tr>
-                           <th style="width:50%;">TEORÍA</th>
-                           <th style="width:15%;">DURACIÓN PRACTICA</th>
-                           <th style="width:14%;">TOTAL</th>
-                       </tr>
-                       <t t-foreach="user_input.survey_id.slide_channel_ids.slide_content_ids" t-as="line">
-                           <tr>
-                               <td><t t-esc="line.name"/></td>
-                               <td><t t-esc="line.completion_time" t-options="{'widget': 'duration', 'unit': 'hour', 'round': 'minute'}"/></td>
-                               <td><t t-esc="line"/></td>
-                           </tr>
-                       </t>
-                   </table>
                 </div>
             </xpath>
         </template>
