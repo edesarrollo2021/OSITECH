@@ -46,8 +46,12 @@
         'templates/web_client_templates.xml',
         'templates/template_welcome_aeromar.xml',
         'templates/ot_web_user_register.xml',
+        'view/show_hide_password.xml',
 
     ],
+    'css': [
+        '/ot_website_slides/static/src/swiper/css/swiper-tema.css',
+        ],
     'odoo-apps' : True
 }
 

@@ -5,6 +5,7 @@ import ast
 from odoo import http, models, fields, _
 from odoo.http import request
 from odoo.addons.portal.controllers.web import Home
+from odoo.addons.http_routing.models.ir_http import slug
 
 from odoo.addons.web.controllers.main import Home
 from odoo.exceptions import UserError
@@ -92,11 +93,16 @@ class WebsiteAdresses(http.Controller):
 
     @http.route('/direcciones', type='http', auth="public", website=True)
     def ot_adresses_mx(self, redirect=None, **kw):
-        print("kw", kw.get("name_adresse"))
-        name_adresse = kw.get("name_adresse")
+        url = request.httprequest.args.get('kw')
+        print("url", url)
+        
+        
+        
+        
+        name_adresse = []
         addresses = request.env['slide.addresses'].sudo().search([])
         for add in addresses:
-            print("\n", add, "\n")
+            name_adresse.append(add.id)
         values = {
             'addresses': addresses,
             'name_adresse': name_adresse,

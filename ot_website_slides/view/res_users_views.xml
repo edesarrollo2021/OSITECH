@@ -23,7 +23,7 @@
 
     <template id="ot_auth_signup_signup_mod" inherit_id="auth_signup.reset_password" name="Sign up login">
         <xpath expr="//form[@class='oe_reset_password_form']" position="replace">
-            <div class="row" style="background-color: white;">
+            <div class="row Ot_ShowHidePassword" style="background-color: white;">
                 <div class="col-sm-12" style="border: solid 100px white;">
                     <form class="oe_reset_password_form" role="form" method="post" t-if="not message">
                     <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
@@ -35,8 +35,15 @@
                     <t t-if="not token">
                         <div class="form-group field-login">
                             <label for="login" class="col-form-label">Ingrese su correo</label>
+                            <div class="input-group">
                             <input type="text" name="login" t-att-value="login" id="login" class="form-control"
                                    autofocus="autofocus" required="required" autocapitalize="off"/>
+                            <div class="input-group-append">
+                                <button class="btn btn-secondary" type="button">
+                                    <i class="fa fa-eye"></i>
+                                </button>
+                            </div>
+                            </div>
                         </div>
                     </t>
                     <p class="alert alert-danger" t-if="error" role="alert">

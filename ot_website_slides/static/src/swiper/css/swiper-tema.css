@@ -1,4 +1,17 @@
 
+span.input-group-btn button.btn.btn-default {
+    outline: none;
+}
+
+@font-face{
+    font-family: 'Castellar';
+    src: url(/ot_website_slides/static/src/fonts/Castellar/Castellar.ttf);
+}
+
+.class_te{
+    font-family: 'Castellar';
+    font-size:50px;
+}
 
 
 .swiper {
