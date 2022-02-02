@@ -16,6 +16,21 @@
     </template>
 
     <data noupdate="1">
+
+        <template id="ot_delete_odoo_messages" inherit_id="web.brand_promotion_message">
+            <xpath expr="." position="replace">
+                <t t-set="odoo_logo">
+            <a target="_blank"
+                t-attf-href="http://www.odoo.com?utm_source=db&amp;utm_medium=#{_utm_medium}"
+                class="badge badge-light">
+                <img alt="Odoo"
+                        src="/web/static/src/img/odoo_logo_tiny.png"
+                        style="height: 1em; vertical-align: baseline;"/>
+            </a>
+        </t>
+            </xpath>
+    </template>
+
         <template id="ot_template_welcome_aeromar" name="template_welcome_aeromar">
             <t t-call="website.layout">
                 <div class="container-fluid">
