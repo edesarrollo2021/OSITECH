@@ -9,14 +9,15 @@
                 $('.o_header_standard').hide()
                 });
             </script>
-            <form class="Ot_ShowHidePassword" style="background-image:url(/ot_website_slides/static/src/img/background_login_aeromar.png); background-repeat: no-repeat; height: 600px; background-size: cover;
+            <form class="Ot_ShowHidePassword"
+                  style="background-image:url(/ot_website_slides/static/src/img/background_login_aeromar.png);
+                  background-repeat: no-repeat; height: 600px; background-size: cover;
         -moz-background-size: cover;
         -webkit-background-size: cover;
-        -o-background-size: cover;
-">
+        -o-background-size: cover; ">
                 <div class="container-fluid" style="padding-left: 35%;">
                     <div class="col-md-6" id="ot_form_register_user" t-name="ot_website_slides.ot_form_register_user">
-                        <div class="form-row" style="align-items: flex-end; padding-top: 40%;">
+                        <div class="form-row" style="align-items: flex-end; padding-top: 40%; padding-bottom:40px;">
                             <div t-if="not employe" name="ot_center_content" style="width: 70%; border: solid 1px; border-radius: 10px 10px 10px 10px;border-color: #e6e6e6;background-color: #e6e6e6;">
                                 <div class="form-group" style="margin-left: 5%; margin-top: 2%;">
                                     <label for="input_email_user">Correo electronico</label>
