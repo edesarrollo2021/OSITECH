@@ -9,7 +9,7 @@
                 $('.o_header_standard').hide()
                 });
             </script>
-            <form>
+            <form class="Ot_ShowHidePassword">
                 <div class="container-fluid" style="margin: 5%;padding-left: 35%;">
                     <div class="col-md-6" id="ot_form_register_user" t-name="ot_website_slides.ot_form_register_user">
                         <div class="form-row" style="align-items: flex-end;">
@@ -52,12 +52,26 @@
                                     <br/>
                                     <label for="ot_user_password" style="padding-top: 3%;">Contraseña</label>
                                     <br/>
-                                    <input type="password" class="form-control" id="ot_user_password" name="pasw" style="width: 93%; display: unset;"/>
-                                    <br/>
+                                    <div class="input-group">
+                                        <input type="password" class="form-control Ot_showHidePassword" id="ot_user_password" name="pasw" style="width: 93%; display: unset;"/>
+                                        <div class="input-group-append">
+                                        <button class="btn btn-secondary" type="button">
+                                            <i class="fa fa-eye"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                        <br/>
                                     <label for="ot_repeat_password" style="padding-top: 3%;">Repetir contraseña</label>
                                     <br/>
+                                    <div class="input-group">
                                     <input type="password" class="form-control" id="ot_repeat_password" name="repeat_pasw" style="width: 93%; display: unset;"/>
-                                    <br/>
+                                        <div class="input-group-append">
+                                        <button class="btn btn-secondary" type="button">
+                                            <i class="fa fa-eye"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                        <br/>
                                     <button style="margin-top: 3%;" id="ot_register_user" name="register" class="btn btn-primary">Registrar</button>
                                 </div>
                             </div>

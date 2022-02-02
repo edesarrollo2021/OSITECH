@@ -42,6 +42,7 @@
         'view/slide_channel_views.xml',
         'view/website_slides_templates_homepage.xml',
         'view/ot_constancy.xml',
+        'view/show_hide_password.xml',
         'templates/website_delete_elements_templates.xml',
         'templates/web_client_templates.xml',
         'templates/template_welcome_aeromar.xml',
