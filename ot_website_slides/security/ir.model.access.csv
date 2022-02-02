@@ -1,2 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_slide_evaluation_mx,slide.evaluation.manager,model_type_course,,1,1,1,1
+access_slide_adresses_mx,slide.adresses.manager,model_slide_addresses,,1,1,1,1
+access_slide_job_positions_mx,slide.job.positions.manager,model_slide_job_positions,,1,1,1,1

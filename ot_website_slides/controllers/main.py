@@ -87,4 +87,30 @@ class WebsiteUserRegister(http.Controller):
             'pasw_true': pasw_true,
         }
         return request.render("ot_website_slides.ot_web_user_register", values)
+        
+class WebsiteAdresses(http.Controller):
 
+    @http.route('/direcciones', type='http', auth="public", website=True)
+    def ot_adresses_mx(self, redirect=None, **kw):
+        print("kw", kw.get("name_adresse"))
+        name_adresse = kw.get("name_adresse")
+        addresses = request.env['slide.addresses'].sudo().search([])
+        for add in addresses:
+            print("\n", add, "\n")
+        values = {
+            'addresses': addresses,
+            'name_adresse': name_adresse,
+        }
+        print("\n values", values, "\n")
+        return request.render("ot_website_slides.ot_web_adresses", values)
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        
+        <record id="slide_addresses_1" model="slide.addresses">
+            <field name="name">Dirección General</field>
+            <field name="image" type="base64" file="ot_website_slides/static/src/img/recurso_78.jpg"/>
+            <field name="job_positions_ids" eval="[(4, ref('ot_website_slides.job_position_1')),
+                                                   (4, ref('ot_website_slides.job_position_2')),
+                                                   (4, ref('ot_website_slides.job_position_3')),
+                                                   (4, ref('ot_website_slides.job_position_4')),
+                                                   (4, ref('ot_website_slides.job_position_5')),
+                                                   (4, ref('ot_website_slides.job_position_6')),
+                                                   (4, ref('ot_website_slides.job_position_7')),
+                                                   (4, ref('ot_website_slides.job_position_8')),
+                                                   (4, ref('ot_website_slides.job_position_9')),
+                                                   (4, ref('ot_website_slides.job_position_10')),
+                                                   (4, ref('ot_website_slides.job_position_11')),
+                                                   (4, ref('ot_website_slides.job_position_12')),
+                                                   (4, ref('ot_website_slides.job_position_13'))]"/>
+        </record>
+        
+        <record id="slide_addresses_2" model="slide.addresses">
+            <field name="name">Dirección de Finanzas</field>
+            <field name="image" type="base64" file="ot_website_slides/static/src/img/recurso_79.jpg"/>
+            <field name="job_positions_ids" eval="[(4, ref('ot_website_slides.job_position_14')),
+                                                   (4, ref('ot_website_slides.job_position_15')),
+                                                   (4, ref('ot_website_slides.job_position_16')),
+                                                   (4, ref('ot_website_slides.job_position_17')),
+                                                   (4, ref('ot_website_slides.job_position_18')),
+                                                   (4, ref('ot_website_slides.job_position_19')),
+                                                   (4, ref('ot_website_slides.job_position_20')),
+                                                   (4, ref('ot_website_slides.job_position_21')),
+                                                   (4, ref('ot_website_slides.job_position_22')),
+                                                   (4, ref('ot_website_slides.job_position_23')),
+                                                   (4, ref('ot_website_slides.job_position_24')),
+                                                   (4, ref('ot_website_slides.job_position_25')),
+                                                   (4, ref('ot_website_slides.job_position_26')),
+                                                   (4, ref('ot_website_slides.job_position_27')),
+                                                   (4, ref('ot_website_slides.job_position_28')),
+                                                   (4, ref('ot_website_slides.job_position_29')),
+                                                   (4, ref('ot_website_slides.job_position_30')),
+                                                   (4, ref('ot_website_slides.job_position_31')),
+                                                   (4, ref('ot_website_slides.job_position_32')),
+                                                   (4, ref('ot_website_slides.job_position_33')),
+                                                   (4, ref('ot_website_slides.job_position_34')),
+                                                   (4, ref('ot_website_slides.job_position_35')),
+                                                   (4, ref('ot_website_slides.job_position_36')),
+                                                   (4, ref('ot_website_slides.job_position_37')),
+                                                   (4, ref('ot_website_slides.job_position_38')),
+                                                   (4, ref('ot_website_slides.job_position_39')),
+                                                   (4, ref('ot_website_slides.job_position_40')),
+                                                   (4, ref('ot_website_slides.job_position_41')),
+                                                   (4, ref('ot_website_slides.job_position_42')),
+                                                   (4, ref('ot_website_slides.job_position_43')),
+                                                   (4, ref('ot_website_slides.job_position_44')),
+                                                   (4, ref('ot_website_slides.job_position_45'))]"/>
+        </record>
+        
+        <record id="slide_addresses_3" model="slide.addresses">
+            <field name="name">Dirección de Estrategias y Red de Alianzas</field>
+            <field name="image" type="base64" file="ot_website_slides/static/src/img/recurso_80.jpg"/>
+            <field name="job_positions_ids" eval="[(4, ref('ot_website_slides.job_position_46')),
+                                                   (4, ref('ot_website_slides.job_position_47')),
+                                                   (4, ref('ot_website_slides.job_position_48')),
+                                                   (4, ref('ot_website_slides.job_position_49')),
+                                                   (4, ref('ot_website_slides.job_position_50')),
+                                                   (4, ref('ot_website_slides.job_position_51')),
+                                                   (4, ref('ot_website_slides.job_position_52'))]"/>
+        </record>
+        
+        <record id="slide_addresses_4" model="slide.addresses">
+            <field name="name">Dirección de TI y Transformación Digital</field>
+            <field name="image" type="base64" file="ot_website_slides/static/src/img/recurso_81.jpg"/>
+            <field name="job_positions_ids" eval="[(4, ref('ot_website_slides.job_position_53')),
+                                                   (4, ref('ot_website_slides.job_position_54')),
+                                                   (4, ref('ot_website_slides.job_position_55')),
+                                                   (4, ref('ot_website_slides.job_position_56')),
+                                                   (4, ref('ot_website_slides.job_position_57')),
+                                                   (4, ref('ot_website_slides.job_position_58')),
+                                                   (4, ref('ot_website_slides.job_position_59')),
+                                                   (4, ref('ot_website_slides.job_position_60')),
+                                                   (4, ref('ot_website_slides.job_position_61')),
+                                                   (4, ref('ot_website_slides.job_position_62')),
+                                                   (4, ref('ot_website_slides.job_position_63')),
+                                                   (4, ref('ot_website_slides.job_position_64')),
+                                                   (4, ref('ot_website_slides.job_position_65')),
+                                                   (4, ref('ot_website_slides.job_position_66')),
+                                                   (4, ref('ot_website_slides.job_position_67')),
+                                                   (4, ref('ot_website_slides.job_position_68'))]"/>
+        </record>
+        
+        <record id="slide_addresses_5" model="slide.addresses">
+            <field name="name">Dirección de Talento Humano</field>
+            <field name="image" type="base64" file="ot_website_slides/static/src/img/recurso_82.jpg"/>
+            <field name="job_positions_ids" eval="[(4, ref('ot_website_slides.job_position_69')),
+                                                   (4, ref('ot_website_slides.job_position_70')),
+                                                   (4, ref('ot_website_slides.job_position_71')),
+                                                   (4, ref('ot_website_slides.job_position_72')),
+                                                   (4, ref('ot_website_slides.job_position_73')),
+                                                   (4, ref('ot_website_slides.job_position_74')),
+                                                   (4, ref('ot_website_slides.job_position_75')),
+                                                   (4, ref('ot_website_slides.job_position_76')),
+                                                   (4, ref('ot_website_slides.job_position_77')),
+                                                   (4, ref('ot_website_slides.job_position_78')),
+                                                   (4, ref('ot_website_slides.job_position_79')),
+                                                   (4, ref('ot_website_slides.job_position_80')),
+                                                   (4, ref('ot_website_slides.job_position_81')),
+                                                   (4, ref('ot_website_slides.job_position_82')),
+                                                   (4, ref('ot_website_slides.job_position_83')),
+                                                   (4, ref('ot_website_slides.job_position_84'))]"/>
+        </record>
+        
+        <record id="slide_addresses_6" model="slide.addresses">
+            <field name="name">Dirección de Operaciones Terrestres</field>
+            <field name="image" type="base64" file="ot_website_slides/static/src/img/recurso_83.jpg"/>
+            <field name="job_positions_ids" eval="[(4, ref('ot_website_slides.job_position_85')),
+                                                   (4, ref('ot_website_slides.job_position_86')),
+                                                   (4, ref('ot_website_slides.job_position_87')),
+                                                   (4, ref('ot_website_slides.job_position_88')),
+                                                   (4, ref('ot_website_slides.job_position_89')),
+                                                   (4, ref('ot_website_slides.job_position_90')),
+                                                   (4, ref('ot_website_slides.job_position_91'))]"/>
+        </record>
+        
+        <record id="slide_addresses_7" model="slide.addresses">
+            <field name="name">Dirección Comercial</field>
+            <field name="image" type="base64" file="ot_website_slides/static/src/img/recurso_84.jpg"/>
+            <field name="job_positions_ids" eval="[(4, ref('ot_website_slides.job_position_92')),
+                                                   (4, ref('ot_website_slides.job_position_93')),
+                                                   (4, ref('ot_website_slides.job_position_94')),
+                                                   (4, ref('ot_website_slides.job_position_95')),
+                                                   (4, ref('ot_website_slides.job_position_96')),
+                                                   (4, ref('ot_website_slides.job_position_97')),
+                                                   (4, ref('ot_website_slides.job_position_98')),
+                                                   (4, ref('ot_website_slides.job_position_99')),
+                                                   (4, ref('ot_website_slides.job_position_100')),
+                                                   (4, ref('ot_website_slides.job_position_101'))]"/>
+        </record>
+        
+        <record id="slide_addresses_8" model="slide.addresses">
+            <field name="name">Dirección Técnica</field>
+            <field name="image" type="base64" file="ot_website_slides/static/src/img/recurso_85.jpg"/>
+            <field name="job_positions_ids" eval="[(4, ref('ot_website_slides.job_position_102')),
+                                                   (4, ref('ot_website_slides.job_position_103')),
+                                                   (4, ref('ot_website_slides.job_position_104')),
+                                                   (4, ref('ot_website_slides.job_position_105')),
+                                                   (4, ref('ot_website_slides.job_position_106'))]"/>
+        </record>
+        
+        <record id="slide_addresses_9" model="slide.addresses">
+            <field name="name">Dirección de Seguridad</field>
+            <field name="image" type="base64" file="ot_website_slides/static/src/img/recurso_86.jpg"/>
+            <field name="job_positions_ids" eval="[(4, ref('ot_website_slides.job_position_107')),
+                                                   (4, ref('ot_website_slides.job_position_108')),
+                                                   (4, ref('ot_website_slides.job_position_109'))]"/>
+        </record>
+        
+        <record id="slide_addresses_10" model="slide.addresses">
+            <field name="name">Dirección de Estrategia Financiera</field>
+            <field name="image" type="base64" file="ot_website_slides/static/src/img/recurso_87.jpg"/>
+            <field name="job_positions_ids" eval="[(4, ref('ot_website_slides.job_position_110')),
+                                                   (4, ref('ot_website_slides.job_position_111'))]"/>
+        </record>
+        
+        <record id="slide_addresses_11" model="slide.addresses">
+            <field name="name">Dirección de Operaciones de Vuelo</field>
+            <field name="image" type="base64" file="ot_website_slides/static/src/img/recurso_88.jpg"/>
+            <field name="job_positions_ids" eval="[(4, ref('ot_website_slides.job_position_112')),
+                                                   (4, ref('ot_website_slides.job_position_113')),
+                                                   (4, ref('ot_website_slides.job_position_114')),
+                                                   (4, ref('ot_website_slides.job_position_115')),
+                                                   (4, ref('ot_website_slides.job_position_116')),
+                                                   (4, ref('ot_website_slides.job_position_117')),
+                                                   (4, ref('ot_website_slides.job_position_118')),
+                                                   (4, ref('ot_website_slides.job_position_119')),
+                                                   (4, ref('ot_website_slides.job_position_120')),
+                                                   (4, ref('ot_website_slides.job_position_121')),
+                                                   (4, ref('ot_website_slides.job_position_122')),
+                                                   (4, ref('ot_website_slides.job_position_123')),
+                                                   (4, ref('ot_website_slides.job_position_124')),
+                                                   (4, ref('ot_website_slides.job_position_125')),
+                                                   (4, ref('ot_website_slides.job_position_126')),
+                                                   (4, ref('ot_website_slides.job_position_127')),
+                                                   (4, ref('ot_website_slides.job_position_128')),
+                                                   (4, ref('ot_website_slides.job_position_129')),
+                                                   (4, ref('ot_website_slides.job_position_130')),
+                                                   (4, ref('ot_website_slides.job_position_131')),
+                                                   (4, ref('ot_website_slides.job_position_132')),
+                                                   (4, ref('ot_website_slides.job_position_133')),
+                                                   (4, ref('ot_website_slides.job_position_134')),
+                                                   (4, ref('ot_website_slides.job_position_135')),
+                                                   (4, ref('ot_website_slides.job_position_136')),
+                                                   (4, ref('ot_website_slides.job_position_137')),
+                                                   (4, ref('ot_website_slides.job_position_138')),
+                                                   (4, ref('ot_website_slides.job_position_139')),
+                                                   (4, ref('ot_website_slides.job_position_140')),
+                                                   (4, ref('ot_website_slides.job_position_141')),
+                                                   (4, ref('ot_website_slides.job_position_142')),
+                                                   (4, ref('ot_website_slides.job_position_143')),
+                                                   (4, ref('ot_website_slides.job_position_144')),
+                                                   (4, ref('ot_website_slides.job_position_145')),
+                                                   (4, ref('ot_website_slides.job_position_146')),
+                                                   (4, ref('ot_website_slides.job_position_147')),
+                                                   (4, ref('ot_website_slides.job_position_148'))]"/>
+        </record>
+        
+    </data>
+</odoo>

@@ -581,6 +581,13 @@
             <field name="view_id" ref="homepage_mx"/>
             <field name="track">True</field>
         </record>
+        
+        <record id="adresses_page_mx" model="website.page">
+            <field name="is_published">True</field>
+            <field name="url">/direcciones</field>
+            <field name="view_id" ref="ot_website_slides.ot_web_adresses"/>
+            <field name="track">True</field>
+        </record>
 
         <record id="menu_home_mx" model="website.menu">
             <field name="name">Inicio</field>
@@ -595,6 +602,13 @@
             <field name="url">/slides/all?my=1</field>
             <field name="parent_id" ref="website.main_menu"/>
             <field name="sequence" type="int">15</field>
+        </record>
+        
+        <record id="website_menu_adresses_mx" model="website.menu">
+            <field name="name">Direcciones</field>
+            <field name="url">/direcciones</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence" type="int">25</field>
         </record>
 
         <record id="menu_calendar" model="website.menu">
