@@ -9,82 +9,128 @@
                 $('.o_header_standard').hide()
                 });
             </script>
-            <form class="Ot_ShowHidePassword"
-                  style="background-image:url(/ot_website_slides/static/src/img/background_login_aeromar.png);
-                  background-repeat: no-repeat; height: 600px; background-size: cover;
-        -moz-background-size: cover;
-        -webkit-background-size: cover;
-        -o-background-size: cover; height: 800px;">
-                <div class="container-fluid" style="padding-left: 35%;">
-                    <div class="col-md-6" id="ot_form_register_user" t-name="ot_website_slides.ot_form_register_user">
-                        <div class="form-row" style="align-items: flex-end; padding-top: 40%;">
-                            <div t-if="not employe" name="ot_center_content" style="width: 70%; border: solid 1px; border-radius: 10px 10px 10px 10px;border-color: #e6e6e6;background-color: #e6e6e6;">
-                                <div class="form-group" style="margin-left: 5%; margin-top: 2%;">
-                                    <label for="input_email_user">Correo electronico</label>
-                                    <br/>
-                                    <input type="email" class="form-control" name="email" id="input_email_user"
-                                           placeholder="micorreo@correo.mx" style="width: 80%; display: unset;"/>
-                                    <button id="ot_btn_search222" name="search">Buscar</button>
-                                </div>
-                            </div>
-                            <t t-if="not employe">
-                              <div t-if="email" class="alert alert-warning mt8" role="alert">
-                                El correo: '<t t-esc="email" />' no se encuentra registrado en el sistema.
-                              </div>
-                            </t>
-                            <t t-if="pasw_true == False">
-                              <div class="alert alert-warning mt8" role="alert">
-                                Las Contraseñas ingresadas no son iguales.
-                              </div>
-                            </t>    
-                            <div t-if="employe" name="ot_center_content2"
-                                 style="width: 70%; border: solid 1px; border-radius: 10px 10px 10px 10px;border-color: #e6e6e6;background-color: #e6e6e6;">
-                                <div class="form-group" style="margin-left: 5%; margin-top: 2%;">
-                                    <label for="input_email_user">Correo electronico</label>
-                                    <br/>
-                                    <t t-esc="employe.work_email" type="email" class="form-control" name="email_read" id="input_email_user2" style="width: 80%; display: unset;"/>
-                                </div>
-                                <input type="hidden" t-att-value="employe.work_email" class="form-control" name="email3" id="input_email_user3" style="width: 80%; display: unset;"/>
-                            </div>
+            <div class="container-fluid"
+                 style="background-image:url(/ot_website_slides/static/src/img/wallpaper/wall08.png); font-family:CenturyGothic;
+                background-repeat: no-repeat; background-size: cover;
+">
+                <div class="row" style="height:80px;">
+                    <div class="col-12"></div>
+                </div>
+                <div class="row col-sm-12 col-md-12 col-lg-12 col-xl-12" style="height:100%;">
+                    <div class="col-4 d-none d-sm-block"/>
+                    <div class="col-sm-12 col-md-4 col-lg-8 col-xl-4 border"
+                         style="border-radius: 30px; padding:0%; height: 100%; background: radial-gradient(circle, rgba(0,31,181,1) 0%, rgba(0,1,46,1) 100%);">
+                        <div style="color:black; border: solid 1px #4e4e4e;border-radius:30px 30px 0px 0px;padding-top: 10%;padding-left: 10%;padding-right: 10%;padding-bottom: 10%;">
+                            <!--                            <img src="/ot_website_slides/static/src/img/log01.png" style="height:30px; text-align:center;"/>-->
+                            <p style="margin: 0px;font-size: 35px;font-weight: 900; color: white;">Universidad de AEROMAR</p>
+                            <p style="margin: 0px;font-size: 15px; color: white;">
+                                Bienvenido a nuestra plataforma educativa, te deseamos el mayor de los éxitos.</p>
                         </div>
-                        <div t-if="employe" class="form-row" style="align-items: flex-end; padding-top: 3%;">
-                            <div name="ot_center_content"
-                                 style="width: 70%; border: solid 1px; border-radius: 10px 10px 10px 10px;border-color: #e6e6e6;background-color: #e6e6e6;">
-                                <div class="form-group" style="margin-left: 5%; margin-top: 2%;">
-                                    <label for="ot_user_name" style="padding-top: 3%;">Nombre completo</label>
-                                    <br/>
-                                    <t t-esc="employe.name" type="text" class="form-control" id="ot_employee_name" name="fullname" style="width: 93%; display: unset;"/>
-                                    <br/>
-                                    <label for="ot_user_password" style="padding-top: 3%;">Contraseña</label>
-                                    <br/>
-                                    <div class="input-group">
-                                        <input type="password" class="form-control Ot_showHidePassword" id="ot_user_password" name="pasw" style="width: 93%; display: unset;"/>
-                                        <div class="input-group-append">
-                                        <button class="btn btn-secondary" type="button">
-                                            <i class="fa fa-eye"></i>
-                                            </button>
+                        <div style="color:black; background-color:white; border: solid 1px #4e4e4e; border-top:0px;border-radius:0px 0px 30px 30px;padding-top: 10%;padding-left: 10%;padding-right: 10%;padding-bottom: 10%;">
+                            <form class="Ot_ShowHidePassword">
+                                <div><p style="margin: 0px;font-size: 25px;font-weight: 900; color: #646060; text-align: center; padding-bottom: 10%;">REGISTRO</p></div>
+                                <div id="ot_form_register_user" t-name="ot_website_slides.ot_form_register_user" style="font-size:20px;">
+                                    <div>
+                                        <div t-if="not employe" name="ot_center_content">
+                                            <div>
+                                                <label for="input_email_user" style="color:#646060;">Correo electronico</label>
+                                                <br/>
+                                                <div class="input-group">
+                                                    <input type="email" name="email"
+                                                           id="input_email_user"
+                                                           placeholder="micorreo@correo.mx"
+                                                           style="border: none; border-bottom: 1px solid black; width:100%; outline: none; margin-right:10px;"/>
+                                                    <div class="input-group-append">
+                                                        <button id="ot_btn_search222" name="search" style="background-color: darkblue; color:white; color: white; width: 90px; height: 36px;">
+                                                            Buscar
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <t t-if="not employe">
+                                            <div t-if="email" class="alert alert-warning mt8" role="alert">
+                                                El correo: '<t t-esc="email"/>' no se encuentra registrado en el
+                                                sistema.
+                                            </div>
+                                        </t>
+                                        <t t-if="pasw_true == False">
+                                            <div class="alert alert-warning mt8" role="alert">
+                                                Las Contraseñas ingresadas no son iguales.
+                                            </div>
+                                        </t>
+                                        <div t-if="employe" name="ot_center_content2"
+                                             style="border-bottom: solid 1px black; width: 99%;">
+                                            <div>
+                                                <label for="input_email_user" style="color:#646060;">Correo electronico</label>
+                                                <br/>
+                                                <t t-esc="employe.work_email" type="email"
+                                                   name="email_read" id="input_email_user2"
+                                                />
+                                            </div>
+                                            <input type="hidden" t-att-value="employe.work_email"
+                                                   style="border: none; border-bottom: 1px solid black; width:100%; outline: none;"
+                                                   name="email3" id="input_email_user3"
+                                            />
                                         </div>
                                     </div>
-                                        <br/>
-                                    <label for="ot_repeat_password" style="padding-top: 3%;">Repetir contraseña</label>
-                                    <br/>
-                                    <div class="input-group">
-                                    <input type="password" class="form-control" id="ot_repeat_password" name="repeat_pasw" style="width: 93%; display: unset;"/>
-                                        <div class="input-group-append">
-                                        <button class="btn btn-secondary" type="button">
-                                            <i class="fa fa-eye"></i>
-                                            </button>
+                                    <div t-if="employe">
+                                        <div name="ot_center_content">
+                                            <div style="border-bottom: solid 1px black; width: 99%;">
+                                                <label for="ot_user_name" style="padding-top: 5%; color:#646060;">
+                                                    Nombre completo</label>
+                                                <br/>
+                                                <span t-esc="employe.name" type="text"
+                                                      id="ot_employee_name" name="fullname"
+                                                      style="width:100%; "/>
+                                                <br/>
+                                            </div>
+                                            <label for="ot_user_password" style="padding-top: 5%; margin-bottom: 0px; color:#646060;">
+                                                Contraseña</label>
+                                            <br/>
+                                            <div class="input-group">
+                                                <input type="password" class=" Ot_showHidePassword"
+                                                       id="ot_user_password" name="pasw"
+                                                       style="border: none; border-bottom: 1px solid black; width:100%; outline: none; margin-right:10px;"
+                                                />
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-secondary" type="button" style="background-color: darkblue;">
+                                                        <i class="fa fa-eye"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <br/>
+                                            <label for="ot_repeat_password" style="margin-bottom: 0px; color:#646060;">Repetir
+                                                contraseña</label>
+                                            <br/>
+                                            <div class="input-group">
+                                                <input type="password"
+                                                       style="border: none; border-bottom: 1px solid black; width:100%; outline: none; margin-right:10px;"
+                                                       id="ot_repeat_password" name="repeat_pasw"/>
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-secondary" type="button" style="background-color: darkblue;">
+                                                        <i class="fa fa-eye"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <br/>
+                                            <button id="ot_register_user" style="background-color: darkblue;"
+                                                    name="register" class="btn btn-primary">Registrar</button>
+                                            <p style="margin: 0px;font-size: 15px; color: black; padding-top:10px;"><a href="../web/login" role="button">Ya tengo una cuenta</a></p>
+
                                         </div>
                                     </div>
-                                        <br/>
-                                    <button style="margin-top: 3%;" id="ot_register_user" name="register" class="btn btn-primary">Registrar</button>
                                 </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
+                    <div class="col-4 d-none d-sm-block"/>
                 </div>
-            </form>
+                <div class="row" style="height:30px; height: 100%; padding-bottom: 5%;">
+                    <div class="clo-12"></div>
+                </div>
+            </div>
         </t>
     </template>
-    
+
 </odoo>

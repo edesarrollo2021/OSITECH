@@ -8,6 +8,11 @@ span.input-group-btn button.btn.btn-default {
     src: url(/ot_website_slides/static/src/fonts/Castellar/Castellar.ttf);
 }
 
+@font-face{
+    font-family: 'CenturyGothic';
+    src: url(/ot_website_slides/static/src/fonts/century-gothic/CenturyGothic.ttf);
+}
+
 .class_te{
     font-family: 'Castellar';
     font-size:50px;
