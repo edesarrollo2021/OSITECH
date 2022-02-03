@@ -88,7 +88,7 @@ class WebsiteUserRegister(http.Controller):
             'pasw_true': pasw_true,
         }
         return request.render("ot_website_slides.ot_web_user_register", values)
-        
+
 class WebsiteAdresses(http.Controller):
 
     @http.route('/direcciones', type='http', auth="public", website=True)
