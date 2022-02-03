@@ -109,7 +109,11 @@ class WebsiteAdresses(http.Controller):
         }
         print("\n values", values, "\n")
         return request.render("ot_website_slides.ot_web_adresses", values)
-        
+
+    @http.route('/registrationhttp', type='json', auth="public", website=True)
+    def ot_met_web_user_register(self, redirect=None, **kw):
+        print("\n",kw,"\n",)
+
         
         
         
