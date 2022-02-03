@@ -72,8 +72,8 @@ class WebsiteUserRegister(http.Controller):
             'company_ids': [[6, False, [1]]], 
             'company_id': 1, 
             'sel_groups_1_9_10': 9, 
-            'active': True, 'lang': 'es_MX',
-            'action_id': False, 'notification_type': 'email', 'odoobot_state': False, 
+            'active': True,
+            'action_id': False, 'notification_type': 'email',
             'signature': '<p style="margin:0px;font-size:13px;font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif;"><br></p>', 
             'karma': 0, 
             'livechat_username': False}] 
