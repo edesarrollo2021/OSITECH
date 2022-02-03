@@ -16,13 +16,18 @@
                         </group>
                     </group>
                     <group>
-                        <field name="job_positions_ids"/>
+                        <field name="job_positions_ids">
+                            <tree default_order="order_by Asc">
+                                <field name="name"/>
+                                <field name="order_by" />
+                            </tree>
+                        </field>
                     </group>
                 </sheet>
             </form>
         </field>
     </record>
-    
+
     <record id="view_addresses_mx_tree" model="ir.ui.view">
         <field name="name">slide.addresses.tree</field>
         <field name="model">slide.addresses</field>
@@ -37,11 +42,12 @@
         <field name="name">slide.job.positions.form</field>
         <field name="model">slide.job.positions</field>
         <field name="arch" type="xml">
-            <form>
+            <form create="0" edit="0">
                 <sheet>
                     <group>
                         <group>
                             <field name="name"/>
+                            <field name="order_by"/>
                         </group>
                         <group>
                             <field name="image" widget="image" class="oe_avatar"/>
@@ -56,7 +62,7 @@
         <field name="name">slide.job.positions.tree</field>
         <field name="model">slide.job.positions</field>
         <field name="arch" type="xml">
-            <tree>
+            <tree create="0">
                 <field name="name"/>
             </tree>
         </field>

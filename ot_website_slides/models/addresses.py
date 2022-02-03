@@ -16,4 +16,5 @@ class JobPositions(models.Model):
     name = fields.Char("Puestos de trabajo", required=True)
     image = fields.Binary(string="Imagen", required=True)
     addresses_id = fields.Many2one('slide.addresses', string="Direcciones")
+    order_by = fields.Float("Order")
     
