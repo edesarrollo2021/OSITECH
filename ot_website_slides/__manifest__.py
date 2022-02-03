@@ -45,9 +45,8 @@
         'templates/website_delete_elements_templates.xml',
         'templates/web_client_templates.xml',
         'templates/template_welcome_aeromar.xml',
-        'templates/ot_web_user_register.xml',
         'view/show_hide_password.xml',
-        'templates/ot_web_user_register_2.xml',
+        'templates/ot_web_user_register.xml',
 
     ],
     'css': [
