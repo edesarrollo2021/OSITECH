@@ -23,6 +23,9 @@
                             </tree>
                         </field>
                     </group>
+                    <group>
+                        <field name="instructions"/>
+                    </group>
                 </sheet>
             </form>
         </field>
