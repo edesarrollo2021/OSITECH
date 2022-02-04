@@ -3,23 +3,62 @@
 
     <template id="ot_web_adresses" name="Adresses">
         <t t-call="website.layout">
-            <form id="ot_web_adresses">
+            <script type="text/javascript" src="/web/static/lib/jquery/jquery.js"/>
+            <script>
+                $(document).ready(function() {
+                odoo.define('ot_website_slides.ot_register_employee_3223324545', function (require) {
+                const publicWidget = require('web.public.widget');
+                var ajax = require('web.ajax');
+                var core = require('web.core');
+                var rpc = require('web.rpc');
+                var session = require('web.session');
+
+                publicWidget.registry.otRegisterEmployee = publicWidget.Widget.extend({
+                selector: '#ot_web_adresses',
+                events: {
+                'click #btnGuaido': '_metodoEjemplo',
+                },
+                start:function(){
+                    console.log("1111111111111111111111");
+                    console.log("1111111111111111111111");
+                    console.log("1111111111111111111111");
+                    console.log("1111111111111111111111");
+                },
+                _metodoEjemplo: function(){
+                console.log("Hola mundo...");
+                console.log("Hola mundo...");
+                console.log("Hola mundo...");
+                console.log("Hola mundo...");
+                $('#input_guaido').val("Hola Guaido");
+                },
+
+                });
+                return publicWidget.registry.otRegisterEmployee;
+
+                });
+                });
+            </script>
+            <form id="ot_web_adresses" id-select-direction="TEST_WQWQW" class="selectpicker">
                 <div class="container-fluid row" style="padding-left: 20%;">
                     <t t-set="val" t-value="1"/>
                     <t t-foreach="addresses" t-as="add">
-                         <a t-attf-href="direcciones/##{val}">
-                              <section>
-                                <div class="col-lg-40 directionAEROMAR" style="margin: 5%">
-                                    <img class="img-fluid o_we_custom_image m-3 d- mx-auto" t-attf-src="data:image/*;base64,{{add.image}}"/>
+                        <a t-attf-href="direcciones/##{val}">
+                            <input name="test" id="rerereererddjjd"/>
+                            <section>
+                                <div id="directionAEROMAR" class="col-lg-40 " style="margin: 5%">
+                                    <img class="img-fluid o_we_custom_image m-3 d- mx-auto"
+                                         t-attf-src="data:image/*;base64,{{add.image}}"/>
                                 </div>
-                              </section>
-                         </a>
-                   <t t-set="val" t-value="val + 1"/>
+                            </section>
+                        </a>
+                        <t t-set="val" t-value="val + 1"/>
                     </t>
                 </div>
+                <input id="input_guaido"/>
+                <button type="button" id="btnGuaido" class="btn btn-primary">Primary</button>
 
             </form>
         </t>
     </template>
-    
+
 </odoo>
