@@ -13,35 +13,3 @@ $(document).ready(function() {
         });
     });
 });
-
-odoo.define('ot_website_slides.ot_register_employee_322332', function (require) {
-'use strict';
-
-const publicWidget = require('web.public.widget');
-var ajax = require('web.ajax');
-var core = require('web.core');
-var rpc = require('web.rpc');
-var session = require('web.session');
-
-publicWidget.registry.otRegisterEmployee = publicWidget.Widget.extend({
-    selector: '#ot_web_adresses',
-    events: {
-        'click .directionAEROMAR': '_getURL',
-    },
-
-    _getURL: function () {
-
-        var origin = window.location.href
-        console.log("HOLA MUNDO...", origin);
-        return ajax.jsonRpc('/registrationhttp', 'call', {
-                    'origin': origin,
-                    })
-                    .then(function (result) {
-
-                    });
-    },
-});
-
-return publicWidget.registry.otRegisterEmployee;
-
-});

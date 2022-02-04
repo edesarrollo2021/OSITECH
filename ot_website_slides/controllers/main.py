@@ -93,12 +93,6 @@ class WebsiteAdresses(http.Controller):
 
     @http.route('/direcciones', type='http', auth="public", website=True)
     def ot_adresses_mx(self, redirect=None, **kw):
-        url = request.httprequest.args.get('kw')
-        print("url", url)
-        
-        
-        
-        
         name_adresse = []
         addresses = request.env['slide.addresses'].sudo().search([])
         for add in addresses:
@@ -110,9 +104,32 @@ class WebsiteAdresses(http.Controller):
         print("\n values", values, "\n")
         return request.render("ot_website_slides.ot_web_adresses", values)
 
-    @http.route('/registrationhttp', type='json', auth="public", website=True)
+    @http.route('/adresses_mx', type='json', auth="public", website=True)
     def ot_met_web_user_register(self, redirect=None, **kw):
-        print("\n",kw,"\n",)
+        print("kw", kw.get("id"))
+        id_add = kw.get("id")
+        addresses = request.env['slide.addresses'].sudo().search([('id', '=', id_add)], limit=1)
+        jobs = addresses.job_positions_ids
+        print ("addresses", addresses)
+        dict_mx = {}
+        list_dir = []
+        list_temp = []
+        val_r = False
+        val_temp = 0
+        for job in jobs:
+            val = str(job.order_by)[0]
+            if val not in list_temp:
+                if len(list_dir) > 0:
+                    dict_mx[val_r] = list_dir
+                val_r = val
+                list_dir = []
+                list_temp.append(val)
+            if val in list_temp:
+                list_dir.append(job)
+                
+            
+        
+        return dict_mx
 
         
         
