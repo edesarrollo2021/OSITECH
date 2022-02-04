@@ -48,8 +48,11 @@ class Website(Home):
 
     @http.route('/', type='http', auth="public", website=True, sitemap=True)
     def index_welcome_aeromar(self, redirect=None, **kw):
-        # uid = request.session.uid
-        return request.render("ot_website_slides.ot_template_welcome_aeromar")
+        uid = request.session.uid
+        if not uid:
+            return request.render("ot_website_slides.ot_template_welcome_aeromar")
+        else:
+            return request.render("ot_website_slides.ot_webHome")
 
 class WebsiteUserRegister(http.Controller):
 
