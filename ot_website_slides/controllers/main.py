@@ -110,34 +110,22 @@ class WebsiteAdresses(http.Controller):
         id_add = kw.get("id")
         addresses = request.env['slide.addresses'].sudo().search([('id', '=', id_add)], limit=1)
         jobs = addresses.job_positions_ids
-        print ("addresses", addresses)
         dict_mx = {}
-        list_dir = []
         list_temp = []
-        val_r = False
-        val_temp = 0
+        list_obj = []
         for job in jobs:
             val = str(job.order_by)[0]
-            if val not in list_temp:
-                if len(list_dir) > 0:
-                    dict_mx[val_r] = list_dir
-                val_r = val
-                list_dir = []
+            if not len(list_temp):
                 list_temp.append(val)
-            if val in list_temp:
-                list_dir.append(job)
-                
-            
-        
+                list_obj.append(job)
+            elif val in list_temp:
+                list_obj.append(job)
+            elif val not in list_temp:
+                if len(list_obj):
+                    dict_mx[list_temp[0]] = list_obj
+                    list_temp = []
+                    list_obj = []
+                    list_temp.append(val)
+                    list_obj.append(job)
+        print("dict_mx", dict_mx)
         return dict_mx
-
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
