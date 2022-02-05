@@ -3,8 +3,10 @@
 
     <template id="ot_web_adresses" name="Adresses">
         <t t-call="website.layout">
-            <form id="ot_web_adresses">
+            <form id="ot_web_adresses_121212">
                 <div class="container-fluid row" style="padding-left: 20%;">
+                    <button type="button" id="1111111999999999dsdsd" class="btn btn-primary">Primary</button>
+                    <div id="div_prueba_llamada" class="bt_class"></div>
                     <t t-foreach="addresses" t-as="add">
                         <section>
                             <div class="bt_class col-lg-40 " style="margin: 5%" data-name="string">
@@ -15,37 +17,62 @@
                     </t>
                 </div>
             </form>
-             <script type="text/javascript" src="/web/static/lib/jquery/jquery.js"/>
+
+            <script type="text/javascript" src="/web/static/lib/jquery/jquery.js"/>
             <script>
-                $(document).ready(function() {
+            $(document).ready(function() {
                 odoo.define('ot_website_slides.ot_register_employee_mx', function (require) {
+    var Widget = require('web.Widget');
                 const publicWidget = require('web.public.widget');
-                var ajax = require('web.ajax');
-                var core = require('web.core');
-                var rpc = require('web.rpc');
-                var session = require('web.session');
+                    var ajax = require('web.ajax');
+                    var core = require('web.core');
+                    var rpc = require('web.rpc');
+                    var session = require('web.session');
+                    var qweb = core.qweb;
 
-                publicWidget.registry.otRegisterEmployee = publicWidget.Widget.extend({
-                selector: '#ot_web_adresses',
-                events: {
-                'click .bt_class': '_url_adresses',
-                },
-                start:function(){
-                },
-                _url_adresses: function(e){
-                return ajax.jsonRpc('/adresses_mx', 'call', {
-                    "id": e.target.id,
-                    })
-                    .then(function (result) {
+                    publicWidget.registry.otRegisterEmployee = publicWidget.Widget.extend({
+                    selector: '#ot_web_adresses_121212',
+
+                    events: {
+                        'click .bt_class': '_url_adresses',
+                        'click #1111111999999999dsdsd': '_url_adresses',
+                    },
+
+                    start:function(){
+                        console.log("DDDDDDDDDDDDDDDDDDDDDDDDDD");
+                        console.log("DDDDDDDDDDDDDDDDDDDDDDDDDD");
+                        console.log("DDDDDDDDDDDDDDDDDDDDDDDDDD");
+                        this.self= this
+                        this.template = ajax.loadXML('/ot_website_slides/static/src/xml/ot_website_slides.templates_direcciones.xml', qweb);
+
+
+                    },
+
+                    _url_adresses: function(e){
+                        console.log("11111111111111");
+
+
+
+
+
+
+
+                    return ajax.jsonRpc('/adresses_mx', 'call', {
+                        "id": e.target.id,
+                        })
+                        .then(function (result) {
+
+                        var container = $('#div_prueba_llamada');
+                            container.replaceWith(qweb.render('ot_website_slides.warning_format_number', result))
+
+                        });
+                    },
                     });
-                },
+                    return publicWidget.registry.otRegisterEmployee;
                 });
-                return publicWidget.registry.otRegisterEmployee;
+            });
+        </script>
 
-                });
-                });
-            </script>
-            
         </t>
     </template>
 

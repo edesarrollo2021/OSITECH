@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+        <t t-name="ot_website_slides.warning_format_number">
+            <p>@@@@@@@@@@@@@@@@@@@@@@@@</p>
+            <p><t t-esc="result"/></p>
+            <t t-foreach="2" t-as="add">
+                <p><t t-esc="add"/></p>
+            </t>
+            <p>@@@@@@@@@@@@@@@@@@@@@@@@</p>
+            <p>@@@@@@@@@@@@@@@@@@@@@@@@</p>
+        </t>
+    </templates>

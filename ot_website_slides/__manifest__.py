@@ -52,6 +52,10 @@
     'css': [
         '/ot_website_slides/static/src/swiper/css/swiper-tema.css',
         ],
+'qweb': [
+
+        "/ot_website_slides/static/src/xml/ot_website_slides.templates_direcciones.xml",
+    ],
     'odoo-apps' : True
 }
 
