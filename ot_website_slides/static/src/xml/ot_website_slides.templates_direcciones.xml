@@ -3,10 +3,18 @@
 <templates xml:space="preserve">
     <t t-name="ot_website_slides.warning_format_number">
     <t t-set="accountant" t-value="0"/>
+    <t t-set="position" t-value="position_job[0]"/>
+    <t t-set="position_final" t-value="position_job[0]"/>
         <div cass="container">
         <t t-name="ot_website_slides.warning_format_number">
         <div class="row" style="padding-left: 20%; padding-right: 20%; padding-top: 2%; padding-bottom: 2%;">
             <t t-foreach="name_job" t-as="name">
+
+                <t t-set="position" t-value="position_job[accountant]"/>
+                <t t-if="position != position_final">
+                    <t t-set="position_final" t-value="position_job[accountant]"/>
+                    <div class="col-12" style="height:50px; border-top: dashed; border-color: rgb(155, 155, 160)"/>
+                </t>
                 <div class="bt_class col-4"
                      style="display: block; width: 100% !important; height: auto !important; text-align: center;"
                      data-name="string">

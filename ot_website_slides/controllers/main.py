@@ -112,13 +112,16 @@ class WebsiteAdresses(http.Controller):
         addresses = request.env['slide.addresses'].sudo().search([('id', '=', id_add)], limit=1)
         name_job = []
         image_job = []
+        position_job = []
         for job in addresses:
             for name in job.job_positions_ids:
                 name_job.append(name.name)
                 image_job.append(name.image)
+                position_job.append(str(name.order_by)[0])
         values = {
             'name_job': name_job,
             'image_job': image_job,
+            'position_job': position_job,
         }
         return values
 
