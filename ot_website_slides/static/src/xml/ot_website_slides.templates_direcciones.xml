@@ -1,25 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <templates xml:space="preserve">
-    
+    <t t-name="ot_website_slides.warning_format_number">
+    <t t-set="accountant" t-value="0"/>
+        <div cass="container">
         <t t-name="ot_website_slides.warning_format_number">
-            <div class="bt_class container row">
-                <t t-foreach="name_job" t-as="name">
-                    <section>
-                        <div class="bt_class col-lg-40 " style="margin: 5%" data-name="string">
-                            <p t-esc="name"></p>
-                        </div>
-                    </section>
-                </t>
-                <t t-foreach="image_job" t-as="image">
-                    <section>
-                        <div class="bt_class col-lg-40 " style="margin: 5%" data-name="string">
-                            <img class="img-fluid o_we_custom_image m-3 d- mx-auto"
-                                    t-attf-src="data:image/*;base64,{{image}}"/>
-                        </div>
-                    </section>
-                </t>
-            </div>
-        </t>
-        
+        <div class="row" style="padding-left: 20%; padding-right: 20%; padding-top: 2%; padding-bottom: 2%;">
+            <t t-foreach="name_job" t-as="name">
+                <div class="bt_class col-4"
+                     style="display: block; width: 100% !important; height: auto !important; text-align: center;"
+                     data-name="string">
+                    <img class="img-fluid o_we_custom_image m-3 d- mx-auto"
+                         t-attf-src="data:image/*;base64,{{image_job[accountant]}}"/>
+                    <p t-esc="name_job[accountant]"/>
+                </div>
+                <t t-set="accountant" t-value="accountant + 1"/>
+            </t>
+        </div>
+    </t>
+    </div>
+    </t>
 </templates>

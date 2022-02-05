@@ -3,18 +3,17 @@
 
     <template id="ot_web_adresses" name="Adresses">
         <t t-call="website.layout">
-            <form id="ot_web_adresses_mx">
-                <div id="div_mx" class="bt_class container-fluid row" style="padding-left: 20%;">
+            <div cass="container" id="ot_web_adresses_mx">
+                <div id="div_mx" class="row" style="padding-left: 20%; padding-right: 20%; padding-top: 2%; padding-bottom: 2%;">
                     <t t-foreach="addresses" t-as="add">
-                        <section>
-                            <div class="bt_class col-lg-40 " style="margin: 5%" data-name="string">
-                                <img t-att-id="add.id" class="img-fluid o_we_custom_image m-3 d- mx-auto"
-                                    t-attf-src="data:image/*;base64,{{add.image}}"/>
-                            </div>
-                        </section>
+                        <div class="bt_class col-4" style="display: block; width: 100% !important; height: auto !important;" data-name="string">
+                            <img t-att-id="add.id"
+                                 class="img-fluid o_we_custom_image m-3 d- mx-auto"
+                                t-attf-src="data:image/*;base64,{{add.image}}"/>
+                        </div>
                     </t>
                 </div>
-            </form>
+            </div>
 
             <script type="text/javascript" src="/web/static/lib/jquery/jquery.js"/>
             <script>
