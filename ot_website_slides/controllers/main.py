@@ -104,31 +104,21 @@ class WebsiteAdresses(http.Controller):
             'addresses': addresses,
             'name_adresse': name_adresse,
         }
-        print("\n values", values, "\n")
         return request.render("ot_website_slides.ot_web_adresses", values)
 
     @http.route('/adresses_mx', type='json', auth="public", website=True)
     def ot_met_web_user_register(self, redirect=None, **kw):
-        print("kw", kw.get("id"))
         id_add = kw.get("id")
         addresses = request.env['slide.addresses'].sudo().search([('id', '=', id_add)], limit=1)
-        jobs = addresses.job_positions_ids
-        dict_mx = {}
-        list_temp = []
-        list_obj = []
-        for job in jobs:
-            val = str(job.order_by)[0]
-            if not len(list_temp):
-                list_temp.append(val)
-                list_obj.append(job)
-            elif val in list_temp:
-                list_obj.append(job)
-            elif val not in list_temp:
-                if len(list_obj):
-                    dict_mx[list_temp[0]] = list_obj
-                    list_temp = []
-                    list_obj = []
-                    list_temp.append(val)
-                    list_obj.append(job)
-        print("dict_mx", dict_mx)
-        return dict_mx
+        name_job = []
+        image_job = []
+        for job in addresses:
+            for name in job.job_positions_ids:
+                name_job.append(name.name)
+                image_job.append(name.image)
+        values = {
+            'name_job': name_job,
+            'image_job': image_job,
+        }
+        return values
+

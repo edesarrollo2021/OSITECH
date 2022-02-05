@@ -1,12 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <templates xml:space="preserve">
+    
         <t t-name="ot_website_slides.warning_format_number">
-            <p>@@@@@@@@@@@@@@@@@@@@@@@@</p>
-            <p><t t-esc="result"/></p>
-            <t t-foreach="2" t-as="add">
-                <p><t t-esc="add"/></p>
-            </t>
-            <p>@@@@@@@@@@@@@@@@@@@@@@@@</p>
-            <p>@@@@@@@@@@@@@@@@@@@@@@@@</p>
+            <div class="bt_class container row">
+                <t t-foreach="name_job" t-as="name">
+                    <section>
+                        <div class="bt_class col-lg-40 " style="margin: 5%" data-name="string">
+                            <p t-esc="name"></p>
+                        </div>
+                    </section>
+                </t>
+                <t t-foreach="image_job" t-as="image">
+                    <section>
+                        <div class="bt_class col-lg-40 " style="margin: 5%" data-name="string">
+                            <img class="img-fluid o_we_custom_image m-3 d- mx-auto"
+                                    t-attf-src="data:image/*;base64,{{image}}"/>
+                        </div>
+                    </section>
+                </t>
+            </div>
         </t>
-    </templates>
+        
+</templates>
