@@ -144,34 +144,27 @@ class WebsiteAdresses(http.Controller):
     def ot_my_life_mx_register(self, redirect=None, **kw):
         id_add = kw.get("id")
         job_position = request.env['slide.job.positions'].sudo().search([('id', '=', id_add)], limit=1)
-        slide = request.env['slide.channel'].sudo().search([('enroll_group_ids', 'in', job_position.enroll_group_id.id)])
+        members = request.env['slide.channel'].sudo().search([('enroll_group_ids', 'in', job_position.enroll_group_id.id)])
         slide_public = request.env['slide.channel'].sudo().search([('visibility', '=', 'public')])
-        list_image_public = []
-        list_pref_public = []
-        for i in slide_public:
-            list_image_public.append(i.image_1920)
-            list_pref_public.append(i.name.split("|"))
+        mandatarios = {}
+        name = ""
+        acronym = ""
+
+        for member in members:
+            image = member.image_1920 or False
+            if "|" in member.name:
+                position_I = member.name.find('|')
+                name = str(member.name)[position_I +1:]
+                acronym = str(member.name)[0: position_I]
+            else:
+                name = member.name
+                acronym = ""
+            mandatarios[member.id] = [image, acronym, name]
+
         values = {
         'image': job_position.addresses_id.image,
         'name': job_position.name,
         'slide_public': slide_public,
-        'list_image_public': list_image_public,
-        'list_pref_public': list_pref_public[0][0],
-        'list_name_course': list_pref_public[0][1],
+        'mandatarios': mandatarios,
         }
-        print("slide_public", slide_public)
-        print("list_pref_public", list_pref_public[0][0])
         return values
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        

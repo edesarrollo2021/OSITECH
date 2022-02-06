@@ -92,31 +92,33 @@
                 <span style="font-size: 3.09002344rem;"><t t-esc="name"/></span>
             </div>
 
-            <section name="">
+            <div class="container">
                 <div class="row">
-                    <div class="col-lg-12">
-                        <h3 style="padding-bottom: 20px; border-bottom: solid 2px aquamarine; border-bottom-style: dashed;  padding-top: 60px;">
-                            <b>Mandatorios</b>
-                        </h3>
-                        <div class="row" style="justify-content: left;">
-                            <div class="col-2 s_col_no_bgcolor pt16 pb16">
-                                <div class="card bg-white h-100"
-                                     style="align-items: center; border:solid 0px !important;">
-                                    <div>
-                                        <img class="img-fluid o_we_custom_image m-3 d- mx-auto"
-                                             t-attf-src="data:image/*;base64,{{list_image_public[0]}}"/>
-                                    </div>
-                                    <div style="text-align: center; font-size:1.97753906rem;"><span><t t-esc="list_pref_public[0]"/></span></div>
-                                    <div style="text-align: center;"><span><t t-esc="list_name_course[0]"/></span></div>
-                                    <a href="/slides/abc-curso-publico-1-1"
-                                       class="btn btn-outline-primary rounded-circle btn-lg">Ingresar</a>
-                                </div>
+                    <div class="col-12">
+                    <h3 style="padding-bottom: 20px; border-bottom: solid 2px aquamarine; border-bottom-style: dashed;  padding-top: 60px;">
+                        <b>Mandatorios</b>
+                    </h3>
+                    <div class="row" style="padding-bottom: 10%;">
+                        <t t-foreach="mandatarios" t-as="mandatario">
+                            <div class="col-2">
+                            <div class="card bg-white h-100"
+                                style="align-items: center; border:solid 0px !important;">
+
+                            <div>
+                                <img class="img-fluid o_we_custom_image m-3 d- mx-auto" style="height: 200px;"
+                                     t-attf-src="data:image/*;base64,{{mandatario_value[0]}}"/>
                             </div>
-                        </div>
+                            <div style="text-align: center; font-size:1.97753906rem;"><span><t t-esc="mandatario_value[1]"/></span></div>
+                            <div style="text-align: center;"><span><t t-esc="mandatario_value[2]"/></span></div>
+                            <a href="/slides/abc-curso-publico-1-1"
+                               class="btn btn-outline-primary rounded-circle btn-lg">Ingresar</a>
+                            </div>
+                            </div>
+                        </t>
                     </div>
                 </div>
-            </section>
-
+            </div>
+            </div>
         </div>
     </t>
     
