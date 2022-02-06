@@ -3,7 +3,7 @@
 
     <template id="ot_web_adresses" name="Adresses">
         <t t-call="website.layout">
-            <div cass="container" id="ot_web_adresses_mx">
+            <div id="ot_web_adresses_mx">
                 <div id="div_mx" class="row" style="padding-left: 20%; padding-right: 20%; padding-top: 2%; padding-bottom: 2%;">
                     <t t-foreach="addresses" t-as="add">
                         <div class="bt_class col-4" style="display: block; width: 100% !important; height: auto !important;" data-name="string">
@@ -30,6 +30,7 @@
                     selector: '#ot_web_adresses_mx',
                     events: {
                         'click .bt_class': '_url_adresses',
+                        'click .jobs_pos': '_url_my_life',
                     },
                     start:function(){
                         this.self= this
@@ -44,11 +45,21 @@
                             container.replaceWith(qweb.render('ot_website_slides.warning_format_number', result))
                         });
                     },
+                    _url_my_life: function(e){
+                    return ajax.jsonRpc('/my_life_mx', 'call', {
+                        "id": e.target.id,
+                        })
+                        .then(function (result) {
+                        var container = $('#jobs_position');
+                            container.replaceWith(qweb.render('ot_website_slides.my_life_mx', result))
+                        
+                        });
+                    },
                     });
                     return publicWidget.registry.otRegisterEmployee;
                 });
-            });
-        </script>
+                });
+            </script>
         </t>
     </template>
 

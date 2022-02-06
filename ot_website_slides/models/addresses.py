@@ -22,4 +22,6 @@ class JobPositions(models.Model):
     image = fields.Binary(string="Imagen", required=True)
     addresses_id = fields.Many2one('slide.addresses', string="Direcciones")
     order_by = fields.Float("Order")
+    enroll_group_id = fields.Many2one('res.groups', string='Suscribir grupo')
+    
     

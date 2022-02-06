@@ -115,10 +115,12 @@ class WebsiteAdresses(http.Controller):
         image_job = []
         position_job = []
         list_pos = []
+        list_id = []
         for job in addresses:
             for name in job.job_positions_ids:
                 name_job.append(name.name)
                 image_job.append(name.image)
+                list_id.append(name.id)
                 position_job.append(str(name.order_by)[0])
         counter = collections.Counter(position_job)
         clients_sort = sorted(counter.items())
@@ -131,9 +133,45 @@ class WebsiteAdresses(http.Controller):
             'name_job': name_job,
             'image_job': image_job,
             'position_job': position_job,
+            'list_id': list_id,
             'name_addresses': addresses.name,
             'image_addresses': addresses.image,
             'list_pos': list_pos
         }
         return values
-
+        
+    @http.route('/my_life_mx', type='json', auth="public", website=True)
+    def ot_my_life_mx_register(self, redirect=None, **kw):
+        id_add = kw.get("id")
+        job_position = request.env['slide.job.positions'].sudo().search([('id', '=', id_add)], limit=1)
+        slide = request.env['slide.channel'].sudo().search([('enroll_group_ids', 'in', job_position.enroll_group_id.id)])
+        slide_public = request.env['slide.channel'].sudo().search([('visibility', '=', 'public')])
+        list_image_public = []
+        list_pref_public = []
+        for i in slide_public:
+            list_image_public.append(i.image_1920)
+            list_pref_public.append(i.name.split("|"))
+        values = {
+        'image': job_position.addresses_id.image,
+        'name': job_position.name,
+        'slide_public': slide_public,
+        'list_image_public': list_image_public,
+        'list_pref_public': list_pref_public[0][0],
+        'list_name_course': list_pref_public[0][1],
+        }
+        print("slide_public", slide_public)
+        print("list_pref_public", list_pref_public[0][0])
+        return values
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        

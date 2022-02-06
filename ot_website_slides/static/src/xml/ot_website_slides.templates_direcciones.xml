@@ -5,8 +5,9 @@
     <t t-set="accountant" t-value="0"/>
     <t t-set="position" t-value="position_job[0]"/>
     <t t-set="position_final" t-value="position_job[0]"/>
-        <t t-set="div_none" t-value="list_pos"/>
-        <div cass="container">
+    <t t-set="id" t-value="list_id"/>
+    <t t-set="div_none" t-value="list_pos"/>
+    <div id="jobs_position" > 
         <t t-name="ot_website_slides.warning_format_number">
         <div class="row" style="padding-left: 30%; padding-right: 20%; padding-top: 2%; padding-bottom: 2%;">
             <div class="pt16 pb16 col-lg-5 offset-lg-1 o_colored_level"
@@ -41,10 +42,10 @@
                 </t>
                 </t>
                 <t t-set="posi" t-value="posi + 1"/>
-                <div class="bt_class col-4"
+                <div class="jobs_pos col-4"
                      style="display: block; width: 100% !important; height: auto !important; text-align: center;"
                      data-name="string">
-                    <img class="img-fluid o_we_custom_image m-3 d- mx-auto"
+                    <img t-att-id="list_id[accountant]" class="img-fluid o_we_custom_image m-3 d- mx-auto"
                          style="height:35%;" t-attf-src="data:image/*;base64,{{image_job[accountant]}}"/>
                     <p t-esc="name_job[accountant]"/>
                 </div>
@@ -54,4 +55,40 @@
     </t>
     </div>
     </t>
+    
+    <t t-name="ot_website_slides.my_life_mx">
+     <div>
+        <img class="img-fluid o_we_custom_image m-3 d- mx-auto"
+             t-attf-src="data:image/*;base64,{{image}}"/>
+    </div>
+    
+    <div class="col-lg-4">
+        <h5 style="text-align: center;"><span>Plan de Vida y Carrera para <t t-esc="name"/></span></h5>
+    </div>
+    
+    <div class="col-lg-4">
+        <img src="/ot_website_slides/static/src/img/plandevida.jpg"/>
+    </div>
+    
+    <div class="col-lg-4">
+        <h5 style="text-align: center;"><span><t t-esc="name"/></span></h5>
+    </div>
+    
+     <div>
+        <img class="img-fluid o_we_custom_image m-3 d- mx-auto"
+             t-attf-src="data:image/*;base64,{{list_image_public[1]}}"/>
+    </div>
+        
+    <div class="col-lg-4">
+        <h5 style="text-align: center;"><span><t t-esc="list_pref_public"/></span></h5>
+        <h5 style="text-align: center;"><span><t t-esc="list_name_course"/></span></h5>
+    </div>
+    
+    <a href="/slides/abc-curso-publico-1-1" class="btn btn-outline-primary rounded-circle btn-lg">Ingresar</a>
+    
+    
+    </t>
+    
 </templates>
+
+
