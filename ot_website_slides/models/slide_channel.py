@@ -24,6 +24,18 @@ class Channel(models.Model):
                                     ('otro', 'Otro')], string="Tipo", default="inducción", required=True)
     type_course_ids = fields.One2many('type.course', 'course_id', 'Evaluacion')
 
+    @api.onchange('enroll_group_ids')
+    def slide_visibility(self):
+        if self.enroll_group_ids:
+            self.visibility = 'members'
+        
+            
+    @api.onchange('visibility')
+    def slide_visibility_public(self):
+        if self.visibility == 'public':
+            print("AAAAAAA")
+            self.enroll_group_ids = False
+            
     @api.onchange('type_course_ids')
     def _validate_field_type_course_ids(self):
         type_course_ids = self.type_course_ids

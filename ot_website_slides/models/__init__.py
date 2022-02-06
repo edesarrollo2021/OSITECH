@@ -2,3 +2,4 @@
 
 from . import slide_channel
 from . import addresses
+from . import res_config_settings

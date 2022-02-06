@@ -106,6 +106,15 @@ class WebsiteAdresses(http.Controller):
             'name_adresse': name_adresse,
         }
         return request.render("ot_website_slides.ot_web_adresses", values)
+        
+    @http.route('/miplandevidaycarrera', type='http', auth="public", website=True)
+    def ot_my_life_mx(self, redirect=None, **kw):
+        list_prueba = str([0,1,2,3,4,5])
+        values = {
+        "number": str(1)
+        }
+        print("values", values)
+        return request.render("ot_website_slides.ot_web_my_life", values)
 
     @http.route('/adresses_mx', type='json', auth="public", website=True)
     def ot_met_web_user_register(self, redirect=None, **kw):

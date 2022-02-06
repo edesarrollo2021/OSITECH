@@ -24,6 +24,7 @@
     ],
     "data": [
         'templates/ot_web_adresses.xml',
+        'templates/ot_web_my_life.xml',
         'security/ir.model.access.csv',
         'security/website_slides_security.xml',
         'data/website_data.xml',
