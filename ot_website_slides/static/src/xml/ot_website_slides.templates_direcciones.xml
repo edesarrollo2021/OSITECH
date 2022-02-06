@@ -3,11 +3,11 @@
 <templates xml:space="preserve">
     <t t-name="ot_website_slides.warning_format_number">
     <t t-set="accountant" t-value="0"/>
-    <t t-set="position" t-value="position_job[0]"/>
-    <t t-set="position_final" t-value="position_job[0]"/>
-    <t t-set="id" t-value="list_id"/>
-    <t t-set="div_none" t-value="list_pos"/>
-    <div id="jobs_position" > 
+        <t t-set="position" t-value="position_job[0]"/>
+        <t t-set="position_final" t-value="position_job[0]"/>
+        <t t-set="id" t-value="list_id"/>
+        <t t-set="div_none" t-value="list_pos"/>
+        <div id="jobs_position">
         <t t-name="ot_website_slides.warning_format_number">
         <div class="row" style="padding-left: 30%; padding-right: 20%; padding-top: 2%; padding-bottom: 2%;">
             <div class="pt16 pb16 col-lg-5 offset-lg-1 o_colored_level"
@@ -18,75 +18,106 @@
             </div>
             <div class="col-lg-4">
                 <h2 style="text-align: center; padding-top: 20%;">Bienvenido</h2>
-                <h5 style="text-align: center;"><span>La <t t-esc="name_addresses"/> te invita a seleccionar el puesto que te corresponde para conocer tu plan de vida y carrera.</span></h5>
+                <h5 style="text-align: center;"><span>La <t t-esc="name_addresses"/> te invita a seleccionar el puesto
+                    que te corresponde para conocer tu plan de vida y carrera.</span></h5>
             </div>
         </div>
-        <div class="row" style="padding-left: 20%; padding-right: 20%; padding-top: 2%; padding-bottom: 2%;">
+            <div class="row" style="padding-left: 20%; padding-right: 20%; padding-top: 2%; padding-bottom: 2%;">
             <t t-set="posi" t-value="0"/>
-            <t t-foreach="name_job" t-as="name">
+                <t t-foreach="name_job" t-as="name">
                 <t t-set="position" t-value="position_job[accountant]"/>
-                <t t-if="div_none[posi] == 1">
+                    <t t-if="div_none[posi] == 1">
                     <t t-if="position != position_final">
                     <t t-set="position_final" t-value="position_job[accountant]"/>
-                    <div class="col-12" style="height:50px; border-top: dashed; border-color: rgb(155, 155, 160)"/>
+                        <div class="col-12" style="height:50px; border-top: dashed; border-color: rgb(155, 155, 160)"/>
                 </t>
-                    <div class="bt_class col-4"
-                     style="display: block; width: 100% !important; height: auto !important; text-align: center;"
-                     data-name="string">
+                        <div class="bt_class col-4"
+                             style="display: block; width: 100% !important; height: auto !important; text-align: center;"
+                             data-name="string">
                     </div>
                 </t>
-                <t t-if="div_none[posi] != 1">
+                    <t t-if="div_none[posi] != 1">
                 <t t-if="position != position_final">
                     <t t-set="position_final" t-value="position_job[accountant]"/>
                     <div class="col-12" style="height:50px; border-top: dashed; border-color: rgb(155, 155, 160)"/>
                 </t>
                 </t>
-                <t t-set="posi" t-value="posi + 1"/>
-                <div class="jobs_pos col-4"
-                     style="display: block; width: 100% !important; height: auto !important; text-align: center;"
-                     data-name="string">
+                    <t t-set="posi" t-value="posi + 1"/>
+                    <div class="jobs_pos col-4"
+                         style="display: block; width: 100% !important; height: auto !important; text-align: center;"
+                         data-name="string">
                     <img t-att-id="list_id[accountant]" class="img-fluid o_we_custom_image m-3 d- mx-auto"
                          style="height:35%;" t-attf-src="data:image/*;base64,{{image_job[accountant]}}"/>
-                    <p t-esc="name_job[accountant]"/>
+                        <p t-esc="name_job[accountant]"/>
                 </div>
-                <t t-set="accountant" t-value="accountant + 1"/>
+                    <t t-set="accountant" t-value="accountant + 1"/>
             </t>
         </div>
     </t>
     </div>
     </t>
-    
+
     <t t-name="ot_website_slides.my_life_mx">
-     <div>
-        <img class="img-fluid o_we_custom_image m-3 d- mx-auto"
-             t-attf-src="data:image/*;base64,{{image}}"/>
-    </div>
-    
-    <div class="col-lg-4">
-        <h5 style="text-align: center;"><span>Plan de Vida y Carrera para <t t-esc="name"/></span></h5>
-    </div>
-    
-    <div class="col-lg-4">
-        <img src="/ot_website_slides/static/src/img/plandevida.jpg"/>
-    </div>
-    
-    <div class="col-lg-4">
-        <h5 style="text-align: center;"><span><t t-esc="name"/></span></h5>
-    </div>
-    
-     <div>
-        <img class="img-fluid o_we_custom_image m-3 d- mx-auto"
-             t-attf-src="data:image/*;base64,{{list_image_public[1]}}"/>
-    </div>
-        
-    <div class="col-lg-4">
-        <h5 style="text-align: center;"><span><t t-esc="list_pref_public"/></span></h5>
-        <h5 style="text-align: center;"><span><t t-esc="list_name_course"/></span></h5>
-    </div>
-    
-    <a href="/slides/abc-curso-publico-1-1" class="btn btn-outline-primary rounded-circle btn-lg">Ingresar</a>
-    
-    
+
+        <div class="container">
+        <div class="row" style="padding-top: 5%;">
+         <div class="col-6">
+            <img class="img-fluid o_we_custom_image m-3 d- mx-auto"
+                 t-attf-src="data:image/*;base64,{{image}}"/>
+         </div>
+            <div class="col-6" style="-webkit-user-modify: read-write-plaintext-only;">
+             <h1>(OJO - ESTATICO) | Gerencia de Operaciones Terrestres</h1>
+         </div>
+        </div>
+            <div class="col-12" style="padding-top: 5%; padding-bottom: 5%; text-align: center;">
+                <span style="font-size: 48px; ">
+                    Plan de Vida y Carrera para<t t-esc="name"/></span>
+             </div>
+
+            <section name="">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="row" style="justify-content: center;">
+                            <div class="col-lg-12 s_col_no_bgcolor pt16 pb16">
+                                <div class="card bg-white h-100"
+                                     style="align-items: center; border:solid 0px !important;">
+                                    <img style="width: 80%;" src="/ot_website_slides/static/src/img/plandevida.jpg"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="col-12" style="text-align: center; padding-bottom: 32px !important; border-bottom: solid 2px;">
+                <span style="font-size: 3.09002344rem;"><t t-esc="name"/></span>
+            </div>
+
+            <section name="">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h3 style="padding-bottom: 20px; border-bottom: solid 2px aquamarine; border-bottom-style: dashed;  padding-top: 60px;">
+                            <b>Mandatorios</b>
+                        </h3>
+                        <div class="row" style="justify-content: left;">
+                            <div class="col-2 s_col_no_bgcolor pt16 pb16">
+                                <div class="card bg-white h-100"
+                                     style="align-items: center; border:solid 0px !important;">
+                                    <div>
+                                        <img class="img-fluid o_we_custom_image m-3 d- mx-auto"
+                                             t-attf-src="data:image/*;base64,{{list_image_public[0]}}"/>
+                                    </div>
+                                    <div style="text-align: center; font-size:1.97753906rem;"><span><t t-esc="list_pref_public[0]"/></span></div>
+                                    <div style="text-align: center;"><span><t t-esc="list_name_course[0]"/></span></div>
+                                    <a href="/slides/abc-curso-publico-1-1"
+                                       class="btn btn-outline-primary rounded-circle btn-lg">Ingresar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
     </t>
     
 </templates>
