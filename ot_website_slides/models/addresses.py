@@ -16,6 +16,7 @@ class Addresses(models.Model):
 
 class JobPositions(models.Model):
     _name = 'slide.job.positions'
+    _order = 'order_by asc'
 
     name = fields.Char("Puestos de trabajo", required=True)
     image = fields.Binary(string="Imagen", required=True)
