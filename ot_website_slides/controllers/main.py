@@ -122,6 +122,8 @@ class WebsiteAdresses(http.Controller):
             'name_job': name_job,
             'image_job': image_job,
             'position_job': position_job,
+            'name_addresses': addresses.name,
+            'image_addresses': addresses.image,
         }
         return values
 

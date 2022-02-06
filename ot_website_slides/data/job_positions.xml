@@ -275,515 +275,614 @@
         <record id="job_position_46" model="slide.job.positions">
             <field name="name">Director de Estrategias y Red de Alianzas</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_24.jpg"/>
+            <field name="order_by">1.00</field>
         </record>
         
         <record id="job_position_47" model="slide.job.positions">
             <field name="name">Gerente de Planeación de Red de Alianzas e Interlineal</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_25.jpg"/>
+            <field name="order_by">2.00</field>
         </record>
         
         <record id="job_position_48" model="slide.job.positions">
             <field name="name">Gerente de Itinerarios</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_26.jpg"/>
+            <field name="order_by">2.10</field>
         </record>
         
         <record id="job_position_49" model="slide.job.positions">
             <field name="name">Jefe de Itinerarios</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_26.jpg"/>
+            <field name="order_by">3.00</field>
         </record>
         
         <record id="job_position_50" model="slide.job.positions">
             <field name="name">Analista Senior de Alianzas A</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_27.jpg"/>
+            <field name="order_by">4.00</field>
         </record>
         
         <record id="job_position_51" model="slide.job.positions">
             <field name="name">Analista Senior de Alianzas B</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_27.jpg"/>
+            <field name="order_by">4.10</field>
         </record>
         
         <record id="job_position_52" model="slide.job.positions">
             <field name="name">Analista Senior de Itinerarios</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_26.jpg"/>
+            <field name="order_by">4.20</field>
         </record>
         
         <record id="job_position_53" model="slide.job.positions">
             <field name="name">Director de TI y Transformación Digital</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_28.jpg"/>
+            <field name="order_by">1.00</field>
         </record>
         
         <record id="job_position_54" model="slide.job.positions">
             <field name="name">Gerente de Desarrollo y Operaciones de Sistemas</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_29.jpg"/>
+            <field name="order_by">2.10</field>
         </record>
         
         <record id="job_position_55" model="slide.job.positions">
             <field name="name">Gerente de Sistemas Administrativos y Comerciales</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_30.jpg"/>
+            <field name="order_by">2.20</field>
         </record>
         
         <record id="job_position_56" model="slide.job.positions">
             <field name="name">Gerente de Sistemas Operativos y Host</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_31.jpg"/>
+            <field name="order_by">2.30</field>
         </record>
         
         <record id="job_position_57" model="slide.job.positions">
             <field name="name">Gerente de Infraestructura y Comunicación</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_32.jpg"/>
+            <field name="order_by">2.40</field>
         </record>
         
         <record id="job_position_58" model="slide.job.positions">
             <field name="name">Coordinador de Soporte Servidores y Equipos</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_33.jpg"/>
+            <field name="order_by">3.00</field>
         </record>
         
         <record id="job_position_59" model="slide.job.positions">
             <field name="name">Coordinador de Service Desk y Seguridad Aplicativa</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_34.jpg"/>
+            <field name="order_by">3.10</field>
         </record>
         
         <record id="job_position_60" model="slide.job.positions">
             <field name="name">Coordinador DBA/DWH</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_35.jpg"/>
+            <field name="order_by">3.20</field>
         </record>
         
         <record id="job_position_61" model="slide.job.positions">
             <field name="name">Programador de BI</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_32.jpg"/>
+            <field name="order_by">4.00</field>
         </record>
         
         <record id="job_position_62" model="slide.job.positions">
             <field name="name">Desarrollador Full Stack</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_35.jpg"/>
+            <field name="order_by">4.10</field>
         </record>
         
         <record id="job_position_63" model="slide.job.positions">
             <field name="name">Ingeniero de Soporte Técnico Senior</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_33.jpg"/>
+            <field name="order_by">4.20</field>
         </record>
         
         <record id="job_position_64" model="slide.job.positions">
             <field name="name">Ingeniero de Soporte Técnico</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_33.jpg"/>
+            <field name="order_by">4.30</field>
         </record>
         
         <record id="job_position_65" model="slide.job.positions">
             <field name="name">Especialista de Redes y Seguridad</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_36.jpg"/>
+            <field name="order_by">4.40</field>
         </record>
         
         <record id="job_position_66" model="slide.job.positions">
             <field name="name">Analista de Negocios Senior</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_37.jpg"/>
+            <field name="order_by">4.50</field>
         </record>
         
         <record id="job_position_67" model="slide.job.positions">
             <field name="name">Analista de Negocios</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_37.jpg"/>
+            <field name="order_by">4.60</field>
         </record>
         
         <record id="job_position_68" model="slide.job.positions">
             <field name="name">Agente de Service Deck</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_34.jpg"/>
+            <field name="order_by">4.70</field>
         </record>
         
         <record id="job_position_69" model="slide.job.positions">
             <field name="name">Director de Talento Humano</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_38.jpg"/>
+            <field name="order_by">1.00</field>
         </record>
         
         <record id="job_position_70" model="slide.job.positions">
             <field name="name">Gerente Senior de Administración de Personal</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_39.jpg"/>
+            <field name="order_by">2.10</field>
         </record>
         
         <record id="job_position_71" model="slide.job.positions">
             <field name="name">Gerente de Capacitación y Cultura Organizacional</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_40.jpg"/>
+            <field name="order_by">2.20</field>
         </record>
         
         <record id="job_position_72" model="slide.job.positions">
             <field name="name">Gerente de Nóminas</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_41.jpg"/>
+            <field name="order_by">2.30</field>
         </record>
         
         <record id="job_position_73" model="slide.job.positions">
             <field name="name">Jefe de Servicio al Cliente Interno</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_42.jpg"/>
+            <field name="order_by">3.00</field>
         </record>
         
         <record id="job_position_74" model="slide.job.positions">
             <field name="name">Jefe de Procesos de Aprendizaje</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_43.jpg"/>
+            <field name="order_by">3.10</field>
         </record>
         
         <record id="job_position_75" model="slide.job.positions">
             <field name="name">Jefe de Desarrollo Organizacional</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_44.jpg"/>
+            <field name="order_by">3.20</field>
         </record>
         
         <record id="job_position_76" model="slide.job.positions">
             <field name="name">Coordinador de Servicio al Cliente Interno</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_45.jpg"/>
+            <field name="order_by">4.00</field>
         </record>
         
         <record id="job_position_77" model="slide.job.positions">
             <field name="name">Coordinador de Adiestramiento de Operaciones</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_46.jpg"/>
+            <field name="order_by">4.10</field>
         </record>
         
         <record id="job_position_78" model="slide.job.positions">
             <field name="name">Coordinador de Capacitación</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_47.jpg"/>
+            <field name="order_by">4.20</field>
         </record>
         
         <record id="job_position_79" model="slide.job.positions">
             <field name="name">Coordinador de Ground Operations</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_48.jpg"/>
+            <field name="order_by">4.30</field>
         </record>
         
         <record id="job_position_80" model="slide.job.positions">
             <field name="name">Coordinador de Capacitación Soft Skill</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_49.jpg"/>
+            <field name="order_by">4.40</field>
         </record>
         
         <record id="job_position_81" model="slide.job.positions">
             <field name="name">Coordinador DO</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_50.jpg"/>
+            <field name="order_by">4.50</field>
         </record>
         
         <record id="job_position_82" model="slide.job.positions">
             <field name="name">Especialista de Servicio al Cliente Interno Green</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_42.jpg"/>
+            <field name="order_by">5.00</field>
         </record>
         
         <record id="job_position_83" model="slide.job.positions">
             <field name="name">Especialista de Información Green</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_51.jpg"/>
+            <field name="order_by">5.20</field>
         </record>
         
         <record id="job_position_84" model="slide.job.positions">
             <field name="name">Especialista Amadeus</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_52.jpg"/>
+            <field name="order_by">5.30</field>
         </record>
         
         <record id="job_position_85" model="slide.job.positions">
             <field name="name">Director de Operaciones Terrestres</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_53.jpg"/>
+            <field name="order_by">1.00</field>
         </record>
+        
         <record id="job_position_86" model="slide.job.positions">
             <field name="name">Gerente de Operaciones Terrestres</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_54.jpg"/>
+            <field name="order_by">2.00</field>
         </record>
         
         <record id="job_position_87" model="slide.job.positions">
             <field name="name">Líder Base México</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_55.jpg"/>
+            <field name="order_by">3.00</field>
         </record>
         
         <record id="job_position_88" model="slide.job.positions">
             <field name="name">Líder Regional de Aeropuerto</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_56.jpg"/>
+            <field name="order_by">3.10</field>
         </record>
         
         <record id="job_position_89" model="slide.job.positions">
             <field name="name">Jefe de Aseguramiento de Calidad</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_57.jpg"/>
+            <field name="order_by">4.00</field>
         </record>
         
         <record id="job_position_90" model="slide.job.positions">
             <field name="name">Trabajador General Instructor Back up</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_58.jpg"/>
+            <field name="order_by">5.00</field>
         </record>
         
         <record id="job_position_91" model="slide.job.positions">
             <field name="name">Trabajador General</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_59.jpg"/>
+            <field name="order_by">5.10</field>
         </record>
         
         <record id="job_position_92" model="slide.job.positions">
             <field name="name">Gerente Senior de Ventas</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_60.jpg"/>
+            <field name="order_by">1.00</field>
         </record>
         
         <record id="job_position_93" model="slide.job.positions">
             <field name="name">Gerente de Ventas Charters</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_61.jpg"/>
+            <field name="order_by">1.10</field>
         </record>
         
         <record id="job_position_94" model="slide.job.positions">
             <field name="name">Gerente de Distribución y CRC</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_62.jpg"/>
+            <field name="order_by">1.20</field>
         </record>
         
         <record id="job_position_95" model="slide.job.positions">
             <field name="name">Gerente de Cuentas Clave</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_63.jpg"/>
+            <field name="order_by">1.30</field>
         </record>
         
         <record id="job_position_96" model="slide.job.positions">
             <field name="name">Gerente de Carga</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_64.jpg"/>
+            <field name="order_by">1.40</field>
         </record>
         
         <record id="job_position_97" model="slide.job.positions">
             <field name="name">Gerente de Previsión de Ingresos</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_65.jpg"/>
+            <field name="order_by">1.50</field>
         </record>
         
         <record id="job_position_98" model="slide.job.positions">
             <field name="name">Gerente de Servicios al Cliente</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_66.jpg"/>
+            <field name="order_by">1.60</field>
         </record>
         
         <record id="job_position_99" model="slide.job.positions">
             <field name="name">Gerente de Mercadotecnia</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_67.jpg"/>
+            <field name="order_by">1.70</field>
         </record>
         
         <record id="job_position_100" model="slide.job.positions">
             <field name="name">Gerente de Ventas Carga</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_68.jpg"/>
+            <field name="order_by">1.80</field>
         </record>
         
         <record id="job_position_101" model="slide.job.positions">
             <field name="name">Gerente Junior de Estándares de Servicio al Cliente</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_69.jpg"/>
+            <field name="order_by">1.90</field>
         </record>
         
         <record id="job_position_102" model="slide.job.positions">
             <field name="name">Director Técnico</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_70.jpg"/>
+            <field name="order_by">1.00</field>
         </record>
         
         <record id="job_position_103" model="slide.job.positions">
             <field name="name">Gerente Senior de Flota y Suministros Técnicos</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_71.jpg"/>
+            <field name="order_by">2.00</field>
         </record>
         
         <record id="job_position_104" model="slide.job.positions">
             <field name="name">Gerente de Ingeniería</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_72.jpg"/>
+            <field name="order_by">2.10</field>
         </record>
         
         <record id="job_position_105" model="slide.job.positions">
             <field name="name">Gerente de Mantenimiento</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_73.jpg"/>
+            <field name="order_by">2.20</field>
         </record>
         
         <record id="job_position_106" model="slide.job.positions">
             <field name="name">Director</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_74.jpg"/>
+            <field name="order_by">3.00</field>
         </record>
         
         <record id="job_position_107" model="slide.job.positions">
             <field name="name">Director de Seguridad</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_75.jpg"/>
+            <field name="order_by">1.00</field>
         </record>
         
         <record id="job_position_108" model="slide.job.positions">
             <field name="name">Gerencia de Seguridad</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_76.jpg"/>
+            <field name="order_by">2.00</field>
         </record>
         
         <record id="job_position_109" model="slide.job.positions">
             <field name="name">Jefe QA</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_77.jpg"/>
+            <field name="order_by">3.00</field>
         </record>
         
         <record id="job_position_110" model="slide.job.positions">
             <field name="name">Director de Estrategia Financiera</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_77.jpg"/>
+            <field name="order_by">1.00</field>
         </record>
         
         <record id="job_position_111" model="slide.job.positions">
             <field name="name">Gerente Senior de Inteligencia de Negocios y Planeación Financiera</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_77.jpg"/>
+            <field name="order_by">2.00</field>
         </record>
         
         <record id="job_position_112" model="slide.job.positions">
             <field name="name">Director de Operaciones de Vuelo</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_77.jpg"/>
+            <field name="order_by">1.00</field>
         </record>
         
         <record id="job_position_113" model="slide.job.positions">
             <field name="name">Gerente de Operaciones A</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_77.jpg"/>
+            <field name="order_by">2.00</field>
         </record>
         
         <record id="job_position_114" model="slide.job.positions">
             <field name="name">Gerente de Estándares en Cabina</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_77.jpg"/>
+            <field name="order_by">2.10</field>
         </record>
         
         <record id="job_position_115" model="slide.job.positions">
             <field name="name">Gerente de Operaciones B</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_77.jpg"/>
+            <field name="order_by">2.20</field>
         </record>
         
         <record id="job_position_116" model="slide.job.positions">
             <field name="name">Jefe de Adiestramiento de Pilotos</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_77.jpg"/>
+            <field name="order_by">3.00</field>
         </record>
         
         <record id="job_position_117" model="slide.job.positions">
             <field name="name">Jefe de Adiestramiento de Servicio a Bordo</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_77.jpg"/>
+            <field name="order_by">3.10</field>
         </record>
         
         <record id="job_position_118" model="slide.job.positions">
             <field name="name">Jefe de Control de Tripulaciones</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_77.jpg"/>
+            <field name="order_by">3.20</field>
         </record>
         
         <record id="job_position_119" model="slide.job.positions">
             <field name="name">Jefe de Gestión de Slots y Charters</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_77.jpg"/>
+            <field name="order_by">3.30</field>
         </record>
         
         <record id="job_position_120" model="slide.job.positions">
             <field name="name">Jefe de Ingeniería de Operaciones</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_77.jpg"/>
-        </record>
-        
-        <record id="job_position_121" model="slide.job.positions">
-            <field name="name">Jefe de Ingeniería de Operaciones</field>
-            <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_77.jpg"/>
+            <field name="order_by">3.40</field>
         </record>
         
         <record id="job_position_122" model="slide.job.positions">
             <field name="name">Jefe de Pilotos</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_77.jpg"/>
+            <field name="order_by">3.50</field>
         </record>
+        
+        <record id="job_position_121" model="slide.job.positions">
+            <field name="name">Jefe de Planeación Gestión y Presupuesto</field>
+            <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_77.jpg"/>
+            <field name="order_by">3.60</field>
+        </record>
+        
         
         <record id="job_position_123" model="slide.job.positions">
             <field name="name">Jefe de Sobrecargos</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_77.jpg"/>
+            <field name="order_by">3.70</field>
         </record>
         
         <record id="job_position_124" model="slide.job.positions">
             <field name="name">Jefe del CCO</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_77.jpg"/>
+            <field name="order_by">3.80</field>
         </record>
         
         <record id="job_position_125" model="slide.job.positions">
             <field name="name">Subjefe de Adiestramiento de Pilotos</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_77.jpg"/>
+            <field name="order_by">3.90</field>
         </record>
         
         <record id="job_position_126" model="slide.job.positions">
             <field name="name">Subjefe de Pilotos</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_77.jpg"/>
+            <field name="order_by">3.95</field>
         </record>
         
         <record id="job_position_127" model="slide.job.positions">
             <field name="name">Coordinador de Planeación y Programación de Presupuestos </field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_77.jpg"/>
+            <field name="order_by">4.00</field>
         </record>
         
         <record id="job_position_128" model="slide.job.positions">
             <field name="name">Ingeniero de Operaciones</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_77.jpg"/>
+            <field name="order_by">5.00</field>
         </record>
         
         <record id="job_position_129" model="slide.job.positions">
             <field name="name">Ingeniero de Adiestramiento de Pilotos</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_77.jpg"/>
+            <field name="order_by">5.10</field>
         </record>
         
         <record id="job_position_130" model="slide.job.positions">
             <field name="name">Supervisor ACDM</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_77.jpg"/>
+            <field name="order_by">6.00</field>
         </record>
         
         <record id="job_position_131" model="slide.job.positions">
             <field name="name">Supervisor de Control de Tripulaciones</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_77.jpg"/>
+            <field name="order_by">6.10</field>
         </record>
         
         <record id="job_position_132" model="slide.job.positions">
             <field name="name">Supervisor de CCO</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_77.jpg"/>
+            <field name="order_by">6.20</field>
         </record>
         
         <record id="job_position_133" model="slide.job.positions">
             <field name="name">Supervisor de Slots</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_77.jpg"/>
+            <field name="order_by">6.30</field>
         </record>
         
         <record id="job_position_134" model="slide.job.positions">
             <field name="name">Programador de Tripulaciones</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_77.jpg"/>
+            <field name="order_by">7.00</field>
         </record>
         
         <record id="job_position_135" model="slide.job.positions">
             <field name="name">Capitán</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_77.jpg"/>
+            <field name="order_by">7.10</field>
         </record>
         
         <record id="job_position_136" model="slide.job.positions">
             <field name="name">Primer Oficial</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_77.jpg"/>
-        </record>
-        
-        <record id="job_position_137" model="slide.job.positions">
-            <field name="name">Gerente</field>
-            <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_77.jpg"/>
+            <field name="order_by">7.20</field>
         </record>
         
         <record id="job_position_138" model="slide.job.positions">
             <field name="name">Instructor Piloto</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_77.jpg"/>
+            <field name="order_by">7.30</field>
         </record>
         
         <record id="job_position_139" model="slide.job.positions">
             <field name="name">Asesor Instructor Piloto</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_77.jpg"/>
+            <field name="order_by">7.40</field>
         </record>
         
         <record id="job_position_140" model="slide.job.positions">
             <field name="name">Aspirante a Primer Oficial</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_77.jpg"/>
+            <field name="order_by">7.50</field>
         </record>
         
         <record id="job_position_141" model="slide.job.positions">
             <field name="name">Sobrecargos</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_77.jpg"/>
+            <field name="order_by">7.60</field>
         </record>
         
         <record id="job_position_142" model="slide.job.positions">
             <field name="name">Sobrecargo A</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_77.jpg"/>
+            <field name="order_by">7.70</field>
         </record>
         
         <record id="job_position_143" model="slide.job.positions">
             <field name="name">Instructor Sobrecargos</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_77.jpg"/>
+            <field name="order_by">7.80</field>
         </record>
         
         <record id="job_position_144" model="slide.job.positions">
             <field name="name">Asesor Sobrecargos</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_77.jpg"/>
+            <field name="order_by">7.90</field>
         </record>
         
         <record id="job_position_145" model="slide.job.positions">
             <field name="name">Analista A</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_77.jpg"/>
+            <field name="order_by">7.91</field>
         </record>
         
         <record id="job_position_146" model="slide.job.positions">
             <field name="name">Analista de Gestión</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_77.jpg"/>
+            <field name="order_by">7.92</field>
         </record>
         
         <record id="job_position_147" model="slide.job.positions">
             <field name="name">Analista de Planeación</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_77.jpg"/>
+            <field name="order_by">7.93</field>
         </record>
         
         <record id="job_position_148" model="slide.job.positions">
             <field name="name">Analista de Slots</field>
             <field name="image" type="base64" file="ot_website_slides/static/src/img/Recurso_77.jpg"/>
+            <field name="order_by">7.94</field>
         </record>
 
     </data>
