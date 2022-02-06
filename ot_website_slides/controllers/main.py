@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import ast
+import collections
 
 from odoo import http, models, fields, _
 from odoo.http import request
@@ -113,17 +114,26 @@ class WebsiteAdresses(http.Controller):
         name_job = []
         image_job = []
         position_job = []
+        list_pos = []
         for job in addresses:
             for name in job.job_positions_ids:
                 name_job.append(name.name)
                 image_job.append(name.image)
                 position_job.append(str(name.order_by)[0])
+        counter = collections.Counter(position_job)
+        clients_sort = sorted(counter.items())
+        for val in clients_sort:
+            val_1 = val[1]
+            for dato in range(val_1):
+                list_pos.append(val_1)
+
         values = {
             'name_job': name_job,
             'image_job': image_job,
             'position_job': position_job,
             'name_addresses': addresses.name,
             'image_addresses': addresses.image,
+            'list_pos': list_pos
         }
         return values
 
