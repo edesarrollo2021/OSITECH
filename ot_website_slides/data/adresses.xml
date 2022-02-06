@@ -4,7 +4,7 @@
         
         <record id="slide_addresses_1" model="slide.addresses">
             <field name="name">Dirección General</field>
-            <field name="image" type="base64" file="ot_website_slides/static/src/img/recurso_78.jpg"/>
+            <field name="image" type="base64" file="ot_website_slides/static/src/img/recurso78.jpg"/>
             <field name="job_positions_ids" eval="[(4, ref('ot_website_slides.job_position_1')),
                                                    (4, ref('ot_website_slides.job_position_2')),
                                                    (4, ref('ot_website_slides.job_position_3')),
@@ -22,7 +22,7 @@
         
         <record id="slide_addresses_2" model="slide.addresses">
             <field name="name">Dirección de Finanzas</field>
-            <field name="image" type="base64" file="ot_website_slides/static/src/img/recurso_79.jpg"/>
+            <field name="image" type="base64" file="ot_website_slides/static/src/img/recurso79.jpg"/>
             <field name="job_positions_ids" eval="[(4, ref('ot_website_slides.job_position_14')),
                                                    (4, ref('ot_website_slides.job_position_15')),
                                                    (4, ref('ot_website_slides.job_position_16')),
@@ -59,7 +59,7 @@
         
         <record id="slide_addresses_3" model="slide.addresses">
             <field name="name">Dirección de Estrategias y Red de Alianzas</field>
-            <field name="image" type="base64" file="ot_website_slides/static/src/img/recurso_80.jpg"/>
+            <field name="image" type="base64" file="ot_website_slides/static/src/img/recurso80.jpg"/>
             <field name="job_positions_ids" eval="[(4, ref('ot_website_slides.job_position_46')),
                                                    (4, ref('ot_website_slides.job_position_47')),
                                                    (4, ref('ot_website_slides.job_position_48')),
@@ -71,7 +71,7 @@
         
         <record id="slide_addresses_4" model="slide.addresses">
             <field name="name">Dirección de TI y Transformación Digital</field>
-            <field name="image" type="base64" file="ot_website_slides/static/src/img/recurso_81.jpg"/>
+            <field name="image" type="base64" file="ot_website_slides/static/src/img/recurso81.jpg"/>
             <field name="job_positions_ids" eval="[(4, ref('ot_website_slides.job_position_53')),
                                                    (4, ref('ot_website_slides.job_position_54')),
                                                    (4, ref('ot_website_slides.job_position_55')),
@@ -92,7 +92,7 @@
         
         <record id="slide_addresses_5" model="slide.addresses">
             <field name="name">Dirección de Talento Humano</field>
-            <field name="image" type="base64" file="ot_website_slides/static/src/img/recurso_82.jpg"/>
+            <field name="image" type="base64" file="ot_website_slides/static/src/img/recurso82.jpg"/>
             <field name="job_positions_ids" eval="[(4, ref('ot_website_slides.job_position_69')),
                                                    (4, ref('ot_website_slides.job_position_70')),
                                                    (4, ref('ot_website_slides.job_position_71')),
@@ -113,7 +113,7 @@
         
         <record id="slide_addresses_6" model="slide.addresses">
             <field name="name">Dirección de Operaciones Terrestres</field>
-            <field name="image" type="base64" file="ot_website_slides/static/src/img/recurso_83.jpg"/>
+            <field name="image" type="base64" file="ot_website_slides/static/src/img/recurso83.jpg"/>
             <field name="job_positions_ids" eval="[(4, ref('ot_website_slides.job_position_85')),
                                                    (4, ref('ot_website_slides.job_position_86')),
                                                    (4, ref('ot_website_slides.job_position_87')),
@@ -125,7 +125,7 @@
         
         <record id="slide_addresses_7" model="slide.addresses">
             <field name="name">Dirección Comercial</field>
-            <field name="image" type="base64" file="ot_website_slides/static/src/img/recurso_84.jpg"/>
+            <field name="image" type="base64" file="ot_website_slides/static/src/img/recurso84.jpg"/>
             <field name="job_positions_ids" eval="[(4, ref('ot_website_slides.job_position_92')),
                                                    (4, ref('ot_website_slides.job_position_93')),
                                                    (4, ref('ot_website_slides.job_position_94')),
@@ -140,7 +140,7 @@
         
         <record id="slide_addresses_8" model="slide.addresses">
             <field name="name">Dirección Técnica</field>
-            <field name="image" type="base64" file="ot_website_slides/static/src/img/recurso_85.jpg"/>
+            <field name="image" type="base64" file="ot_website_slides/static/src/img/recurso85.jpg"/>
             <field name="job_positions_ids" eval="[(4, ref('ot_website_slides.job_position_102')),
                                                    (4, ref('ot_website_slides.job_position_103')),
                                                    (4, ref('ot_website_slides.job_position_104')),
@@ -150,7 +150,7 @@
         
         <record id="slide_addresses_9" model="slide.addresses">
             <field name="name">Dirección de Seguridad</field>
-            <field name="image" type="base64" file="ot_website_slides/static/src/img/recurso_86.jpg"/>
+            <field name="image" type="base64" file="ot_website_slides/static/src/img/recurso86.jpg"/>
             <field name="job_positions_ids" eval="[(4, ref('ot_website_slides.job_position_107')),
                                                    (4, ref('ot_website_slides.job_position_108')),
                                                    (4, ref('ot_website_slides.job_position_109'))]"/>
@@ -158,14 +158,14 @@
         
         <record id="slide_addresses_10" model="slide.addresses">
             <field name="name">Dirección de Estrategia Financiera</field>
-            <field name="image" type="base64" file="ot_website_slides/static/src/img/recurso_87.jpg"/>
+            <field name="image" type="base64" file="ot_website_slides/static/src/img/recurso87.jpg"/>
             <field name="job_positions_ids" eval="[(4, ref('ot_website_slides.job_position_110')),
                                                    (4, ref('ot_website_slides.job_position_111'))]"/>
         </record>
         
         <record id="slide_addresses_11" model="slide.addresses">
             <field name="name">Dirección de Operaciones de Vuelo</field>
-            <field name="image" type="base64" file="ot_website_slides/static/src/img/recurso_88.jpg"/>
+            <field name="image" type="base64" file="ot_website_slides/static/src/img/recurso88.jpg"/>
             <field name="job_positions_ids" eval="[(4, ref('ot_website_slides.job_position_112')),
                                                    (4, ref('ot_website_slides.job_position_113')),
                                                    (4, ref('ot_website_slides.job_position_114')),
@@ -191,7 +191,6 @@
                                                    (4, ref('ot_website_slides.job_position_134')),
                                                    (4, ref('ot_website_slides.job_position_135')),
                                                    (4, ref('ot_website_slides.job_position_136')),
-                                                   (4, ref('ot_website_slides.job_position_137')),
                                                    (4, ref('ot_website_slides.job_position_138')),
                                                    (4, ref('ot_website_slides.job_position_139')),
                                                    (4, ref('ot_website_slides.job_position_140')),

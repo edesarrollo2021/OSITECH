@@ -15,7 +15,7 @@
                      t-attf-src="data:image/*;base64,{{image_addresses}}"/>
             </div>
             <div class="col-lg-4">
-                <h2 style="text-align: center;">Bienvenido</h2>
+                <h2 style="text-align: center; padding-top: 20%;">Bienvenido</h2>
                 <h5 style="text-align: center;"><span>La <t t-esc="name_addresses"/> te invita a seleccionar el puesto que te corresponde para conocer tu plan de vida y carrera.</span></h5>
             </div>
         </div>
