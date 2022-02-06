@@ -147,8 +147,20 @@ class WebsiteAdresses(http.Controller):
         members = request.env['slide.channel'].sudo().search([('enroll_group_ids', 'in', job_position.enroll_group_id.id)])
         slide_public = request.env['slide.channel'].sudo().search([('visibility', '=', 'public')])
         mandatarios = {}
+        public_courses = {}
         name = ""
         acronym = ""
+
+        for public in slide_public:
+            image = public.image_1920 or False
+            if "|" in public.name:
+                position_I = public.name.find('|')
+                name = str(public.name)[position_I +1:]
+                acronym = str(public.name)[0: position_I]
+            else:
+                name = public.name
+                acronym = False
+            public_courses[public.id] = [image, acronym, name]
 
         for member in members:
             image = member.image_1920 or False
@@ -158,7 +170,7 @@ class WebsiteAdresses(http.Controller):
                 acronym = str(member.name)[0: position_I]
             else:
                 name = member.name
-                acronym = ""
+                acronym = False
             mandatarios[member.id] = [image, acronym, name]
 
         values = {
@@ -166,5 +178,6 @@ class WebsiteAdresses(http.Controller):
         'name': job_position.name,
         'slide_public': slide_public,
         'mandatarios': mandatarios,
+        'public_courses': public_courses,
         }
         return values
