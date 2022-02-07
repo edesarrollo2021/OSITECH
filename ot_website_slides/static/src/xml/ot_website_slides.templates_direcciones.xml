@@ -7,6 +7,7 @@
         <t t-set="position_final" t-value="position_job[0]"/>
         <t t-set="id" t-value="list_id"/>
         <t t-set="div_none" t-value="list_pos"/>
+
         <div id="jobs_position">
         <t t-name="ot_website_slides.warning_format_number">
         <div class="row" style="padding-left: 30%; padding-right: 20%; padding-top: 2%; padding-bottom: 2%;">
@@ -22,6 +23,8 @@
                     que te corresponde para conocer tu plan de vida y carrera.</span></h5>
             </div>
         </div>
+
+
             <div class="row" style="padding-left: 20%; padding-right: 20%; padding-top: 2%; padding-bottom: 2%;">
             <t t-set="posi" t-value="0"/>
                 <t t-foreach="name_job" t-as="name">

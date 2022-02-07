@@ -136,7 +136,7 @@ class WebsiteAdresses(http.Controller):
         list_id = []
         for job in addresses:
             for name in job.job_positions_ids:
-                name_job.append(name.name)
+                name_job.append(name.job_id.name)
                 image_job.append(name.image)
                 list_id.append(name.id)
                 position_job.append(str(name.order_by)[0])
@@ -152,7 +152,7 @@ class WebsiteAdresses(http.Controller):
             'image_job': image_job,
             'position_job': position_job,
             'list_id': list_id,
-            'name_addresses': addresses.name,
+            'name_addresses': addresses.direction_id.name,
             'image_addresses': addresses.image,
             'list_pos': list_pos
         }
@@ -193,7 +193,7 @@ class WebsiteAdresses(http.Controller):
 
         values = {
         'image': job_position.addresses_id.image,
-        'name': job_position.name,
+        'name': job_position.job_id.name,
         'slide_public': slide_public,
         'mandatarios': mandatarios,
         'public_courses': public_courses,

@@ -9,16 +9,16 @@
                 <sheet>
                     <group>
                         <group>
-                            <field name="name"/>
+                            <field name="direction_id"/>
                         </group>
                         <group>
-                            <field name="image" widget="image" class="oe_avatar"/>
+                            <field name="image" widget="image"  class="oe_avatar"/>
                         </group>
                     </group>
                     <group>
                         <field name="job_positions_ids">
                             <tree default_order="order_by Asc">
-                                <field name="name"/>
+                                <field name="job_id"/>
                                 <field name="order_by" />
                             </tree>
                         </field>
@@ -36,7 +36,7 @@
         <field name="model">slide.addresses</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="name"/>
+                <field name="direction_id"/>
             </tree>
         </field>
     </record>
@@ -49,12 +49,12 @@
                 <sheet>
                     <group>
                         <group>
-                            <field name="name"/>
+                            <field name="job_id"/>
                             <field name="order_by"/>
                             <field name="enroll_group_id" domain="[('category_id','=','eLearning')]"/>
                         </group>
                         <group>
-                            <field name="image" widget="image" class="oe_avatar"/>
+                            <field name="image"  widget="image" class="oe_avatar"/>
                         </group>
                     </group>
                 </sheet>
@@ -67,7 +67,7 @@
         <field name="model">slide.job.positions</field>
         <field name="arch" type="xml">
             <tree create="0">
-                <field name="name"/>
+                <field name="job_id"/>
             </tree>
         </field>
     </record>
