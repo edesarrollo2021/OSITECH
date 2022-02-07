@@ -13,7 +13,6 @@
                 </div>
             </div>
         </div>
-<!--
         <script type="text/javascript" src="/web/static/lib/jquery/jquery.js"/>
         <script>
         $(document).ready(function() {
@@ -31,15 +30,19 @@
                     'click .jobs_pos': '_url_my_life',
                 },
                 start:function(){
+                    console.log("Hola mundo");
+                    console.log("Hola mundo");
+                    console.log("Hola mundo");
                     this.self= this
                     this.template = ajax.loadXML('/ot_website_slides/static/src/xml/ot_website_slides.templates_direcciones.xml', qweb);
+                    
                 },
                 _url_my_life: function(e){
                 return ajax.jsonRpc('/my_life_mx', 'call', {
-                    "id": e.target.id,
+                    "id": 2,
                     })
                     .then(function (result) {
-                    var container = $('#dddd');
+                        var container = $('#dddd');
                         container.replaceWith(qweb.render('ot_website_slides.warning_format_number', result))
                     
                     });
@@ -49,7 +52,6 @@
             });
             });
         </script>
--->
         </t>
     </template>
 

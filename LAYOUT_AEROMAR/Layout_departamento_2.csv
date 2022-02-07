@@ -1,0 +1,71 @@
+Nombre de la Direccion/Departamento,Codigo,Direccion Padre
+Dirección General,6101,
+Dirección de Finanzas,6111,
+Dirección de talento humano,6121,
+Dirección de TI y Tansformación Digital,6131,
+Gastos Generales de Administración,,
+Dirección Comercial,6201,
+Dirección de Estrategica de Red y Alianzas,6211,
+Gastos Generales de venta,,
+Dirección Técnica,5101,
+Dirección de Operaciones Terrestres,5201,
+Dirección de operaciones vuelo,5401,
+Dirección de seguridad aerea,5501,
+Otros costos de Operación,,
+Gerencia de suministros,6102,6101
+Gerencia Legal,6103,6101
+Gerencia de Impuestos,6112,6111
+Costos y Análisis Financiero,6113,6111
+Gerencia de Tesorería,6114,6111
+Gerencia de Ingresos,6115,6111
+Gerencia Administrativa,6116,6111
+Gerencia Sr. de Admon de personal,6122,6121
+Gerencia Capacitación y Cultura ORG,6123,6121
+Gerencia de Nominas,6124,6121
+Gerencia de Desarrollo y Oper de Sistemas,6132,6131
+Gerencia de Sistemas Advos y Comerciales,6133,6131
+Gerencia de Operaciones y HOST,6134,6131
+Gerencia de Infraestructura y Comunic.,6135,6131
+Gerencia Ventas,6202,6201
+Gerencia de distribución,6203,6201
+Gerencia de Servicio al Cliente,6204,6201
+Gerencia de Estanderes de Servicio al Cliente,6205,6201
+Gerencia de Reveue,6206,6201
+Gerencia de Carga,6207,6201
+Gerencia de Marketing,6208,6201
+Gerencia de Itinerarios,6212,6211
+Gerencia de Ingenieria,5102,5101
+Gerencia de Planeación de Flota y Suministros Tecnicos,5103,5101
+Gerencia de Control de Calidad,5104,5101
+Gerencia de Mantenimiento,5105,5101
+Salon AEROMAR,5202,5201
+Coordinación de apoyo móvil,5203,5201
+Gerencia de operaciones terrestres,5204,5201
+Jefe de Servicios a Bordo,5205,5201
+Estación AICM,5301,5201
+Central de RED AEROPUERTOS,5302,5201
+Estación Acapulco (ACA),5303,5201
+Estación Colimna(CLQ),5304,5201
+Estación Ciudad Victoria (CVM),5305,5201
+Estación Guadalajara (GDL),5306,5201
+Estación Ixtepec (IZT),5307,5201
+Estación Lazaro Cardenas (LZC),5308,5201
+Estación Cancun (CUN),5309,5201
+Estación Piedras Negras (PDS),5310,5201
+Estación Puerto Vallarta (PVR),5311,5201
+Estación Puerto Escondido (PXM),5312,5201
+Estación Tepic (TPQ),5313,5201
+Estación Villahermosa,5314,5201
+Estación Veracuz (VER),5315,5201
+Estación Zihuatanejo (ZIH),5316,5201
+Estación Monterrey (MTY),5317,5201
+Estación Mazatlan (MZT),5318,5201
+Estación La Paz (LAP),5319,5201
+Estación San Luis Potosi (SLP),5320,5201
+Estación Torreon (TRC),5321,5201
+Estación Aguascalientes (AGU),5322,5201
+Gerencia de Operaciones,5402,5401
+Gerente de Estandares en Cabina,5403,5401
+Jefatura y Adiestramiento de Pilotos,5404,5401
+Jefatura y Adiestramiento de Sobrecargos,5405,5401
+Gerencia de Seguridad Aerea,5502,5501

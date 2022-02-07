@@ -64,6 +64,7 @@ class WebsiteUserRegister(http.Controller):
         email3 = kw.get('email3')
         employe = request.env['hr.employee'].sudo().search([('work_email', '=', email)], limit=1)
         employe_one = request.env['hr.employee'].sudo().search([('work_email', '=', email3)], limit=1)
+        print("employe", employe)
         pasw = kw.get('pasw') or ''
         repeat_pasw = kw.get('repeat_pasw') or ''
         if pasw == repeat_pasw and pasw != '' and repeat_pasw != '':
@@ -83,6 +84,11 @@ class WebsiteUserRegister(http.Controller):
             'livechat_username': False}] 
             user = request.env['res.users']
             user.sudo().create(vals_list)
+            user = request.env['res.users'].sudo().search([('login', '=', email3)], limit=1)
+            employe = request.env['hr.employee'].sudo().search([('work_email', '=', email3)], limit=1)
+            print("user", user)
+            print("employe", employe)
+            employe.write({"user_id": user.id})
             return http.local_redirect('/web/login', query=request.params, keep_hash=True)
         if pasw != '' and repeat_pasw != '' and pasw != repeat_pasw:
             pasw_true = False
@@ -109,12 +115,15 @@ class WebsiteAdresses(http.Controller):
         
     @http.route('/miplandevidaycarrera', type='http', auth="public", website=True)
     def ot_my_life_mx(self, redirect=None, **kw):
-        list_prueba = str([0,1,2,3,4,5])
-        values = {
-        "number": str(1)
-        }
-        print("values", values)
-        return request.render("ot_website_slides.ot_web_my_life", values)
+        uid = request.session.uid
+        if uid:
+            employe = request.env['hr.employee'].sudo().search([('user_id', '=', uid)], limit=1)
+            print("employe233", employe.job_id)
+            values = {
+            "job_pos": employe.job_id.id
+            }
+            print("values", values)
+            return request.render("ot_website_slides.ot_web_my_life", values)
 
     @http.route('/adresses_mx', type='json', auth="public", website=True)
     def ot_met_web_user_register(self, redirect=None, **kw):
