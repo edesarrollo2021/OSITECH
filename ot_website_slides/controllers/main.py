@@ -196,31 +196,21 @@ class WebsiteAdresses(http.Controller):
         'mandatarios': mandatarios,
         'public_courses': public_courses,
         }
-
-        print("*******************/*/*/*/*/*/*/*")
-        print("*******************/*/*/*/*/*/*/*")
-        print("*******************/*/*/*/*/*/*/*")
-
         return values
 
     @http.route('/controller_my_life_mx', type='json', auth="public", website=True)
     def ot_controller_my_life_mx_register(self, redirect=None, **kw):
         user_id = request.session.uid
         employee = request.env['hr.employee'].sudo().search([('user_id', '=', user_id)], limit=1)
-        job_position = request.env['slide.job.positions'].sudo().search([('id', '=', employee.job_id.id)], limit=1)
+        job_position = request.env['hr.job'].sudo().search([('id', '=', employee.job_id.id)], limit=1)
+        slide_job = request.env['slide.job.positions'].sudo().search([('job_id', '=', job_position.id)], limit=1)
         members = request.env['slide.channel'].sudo().search(
-            [('enroll_group_ids', 'in', job_position.enroll_group_id.id)])
+            [('enroll_group_ids', 'in', slide_job.enroll_group_id.id)])
         slide_public = request.env['slide.channel'].sudo().search([('visibility', '=', 'public')])
         mandatarios = {}
         public_courses = {}
         name = ""
         acronym = ""
-
-        print('\nemployee.job_id', employee.job_id.id)
-        print("\njob_position::: ", job_position.job_id.id)
-        print("\njob_position.enroll_group_id.id::: ", job_position.id)
-        print("\njob_position.enroll_group_id.id::: ", job_position.id)
-        print("\nmembers::: ", members)
 
         for public in slide_public:
             image = public.image_1920 or False
@@ -247,8 +237,8 @@ class WebsiteAdresses(http.Controller):
         print("\nmandatarios:::", mandatarios)
 
         values = {
-            'image': job_position.addresses_id.image,
-            'name': job_position.job_id.name,
+            'image': slide_job.image,
+            'name': job_position.name,
             'slide_public': slide_public,
             'mandatarios': mandatarios,
             'public_courses': public_courses,
