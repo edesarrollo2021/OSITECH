@@ -647,12 +647,12 @@
                                             (4,ref('hr_payroll_mexico.structure_17')),
                                             (4,ref('hr_payroll_mexico.structure_18')),
                                             (4,ref('hr_payroll_mexico.structure_19')),
-                                            (4,ref('hr_payroll_mexico.structure_26)),
-                                            (4,ref('hr_payroll_mexico.structure_27)),
-                                            (4,ref('hr_payroll_mexico.structure_28)),
-                                            (4,ref('hr_payroll_mexico.structure_29)),
-                                            (4,ref('hr_payroll_mexico.structure_30)),
-                                            (4,ref('hr_payroll_mexico.structure_31)),
+                                            (4,ref('hr_payroll_mexico.structure_26')),
+                                            (4,ref('hr_payroll_mexico.structure_27')),
+                                            (4,ref('hr_payroll_mexico.structure_28')),
+                                            (4,ref('hr_payroll_mexico.structure_29')),
+                                            (4,ref('hr_payroll_mexico.structure_30')),
+                                            (4,ref('hr_payroll_mexico.structure_31')),
                                             ]"/>
         </record>
         <record id="hr_payslip_input_type_2" model="hr.payslip.input.type">
@@ -698,12 +698,12 @@
                                             (4,ref('hr_payroll_mexico.structure_17')),
                                             (4,ref('hr_payroll_mexico.structure_18')),
                                             (4,ref('hr_payroll_mexico.structure_19')),
-                                            (4,ref('hr_payroll_mexico.structure_26)),
-                                            (4,ref('hr_payroll_mexico.structure_27)),
-                                            (4,ref('hr_payroll_mexico.structure_28)),
-                                            (4,ref('hr_payroll_mexico.structure_29)),
-                                            (4,ref('hr_payroll_mexico.structure_30)),
-                                            (4,ref('hr_payroll_mexico.structure_31)),
+                                            (4,ref('hr_payroll_mexico.structure_26')),
+                                            (4,ref('hr_payroll_mexico.structure_27')),
+                                            (4,ref('hr_payroll_mexico.structure_28')),
+                                            (4,ref('hr_payroll_mexico.structure_29')),
+                                            (4,ref('hr_payroll_mexico.structure_30')),
+                                            (4,ref('hr_payroll_mexico.structure_31')),
                                             ]"/>
         </record>
         
@@ -777,12 +777,12 @@
                                             (4,ref('hr_payroll_mexico.structure_17')),
                                             (4,ref('hr_payroll_mexico.structure_18')),
                                             (4,ref('hr_payroll_mexico.structure_19')),
-                                            (4,ref('hr_payroll_mexico.structure_26)),
-                                            (4,ref('hr_payroll_mexico.structure_27)),
-                                            (4,ref('hr_payroll_mexico.structure_28)),
-                                            (4,ref('hr_payroll_mexico.structure_29)),
-                                            (4,ref('hr_payroll_mexico.structure_30)),
-                                            (4,ref('hr_payroll_mexico.structure_31)),
+                                            (4,ref('hr_payroll_mexico.structure_26')),
+                                            (4,ref('hr_payroll_mexico.structure_27')),
+                                            (4,ref('hr_payroll_mexico.structure_28')),
+                                            (4,ref('hr_payroll_mexico.structure_29')),
+                                            (4,ref('hr_payroll_mexico.structure_30')),
+                                            (4,ref('hr_payroll_mexico.structure_31')),
                                             ]"/>
         </record>
         <record id="hr_payslip_input_type_10" model="hr.payslip.input.type">
@@ -873,12 +873,12 @@
                                             (4,ref('hr_payroll_mexico.structure_17')),
                                             (4,ref('hr_payroll_mexico.structure_18')),
                                             (4,ref('hr_payroll_mexico.structure_19')),
-                                            (4,ref('hr_payroll_mexico.structure_26)),
-                                            (4,ref('hr_payroll_mexico.structure_27)),
-                                            (4,ref('hr_payroll_mexico.structure_28)),
-                                            (4,ref('hr_payroll_mexico.structure_29)),
-                                            (4,ref('hr_payroll_mexico.structure_30)),
-                                            (4,ref('hr_payroll_mexico.structure_31)),
+                                            (4,ref('hr_payroll_mexico.structure_26')),
+                                            (4,ref('hr_payroll_mexico.structure_27')),
+                                            (4,ref('hr_payroll_mexico.structure_28')),
+                                            (4,ref('hr_payroll_mexico.structure_29')),
+                                            (4,ref('hr_payroll_mexico.structure_30')),
+                                            (4,ref('hr_payroll_mexico.structure_31')),
                                             ]"/>
         </record>
         <record id="hr_payslip_input_type_17" model="hr.payslip.input.type">
@@ -896,12 +896,12 @@
                                             (4,ref('hr_payroll_mexico.structure_17')),
                                             (4,ref('hr_payroll_mexico.structure_18')),
                                             (4,ref('hr_payroll_mexico.structure_19')),
-                                            (4,ref('hr_payroll_mexico.structure_26)),
-                                            (4,ref('hr_payroll_mexico.structure_27)),
-                                            (4,ref('hr_payroll_mexico.structure_28)),
-                                            (4,ref('hr_payroll_mexico.structure_29)),
-                                            (4,ref('hr_payroll_mexico.structure_30)),
-                                            (4,ref('hr_payroll_mexico.structure_31)),
+                                            (4,ref('hr_payroll_mexico.structure_26')),
+                                            (4,ref('hr_payroll_mexico.structure_27')),
+                                            (4,ref('hr_payroll_mexico.structure_28')),
+                                            (4,ref('hr_payroll_mexico.structure_29')),
+                                            (4,ref('hr_payroll_mexico.structure_30')),
+                                            (4,ref('hr_payroll_mexico.structure_31')),
                                             ]"/>
         </record>
     
@@ -914,12 +914,12 @@
                                             (4,ref('hr_payroll_mexico.structure_4')),
                                             (4,ref('hr_payroll_mexico.structure_5')),
                                             (4,ref('hr_payroll_mexico.structure_6')),
-                                            (4,ref('hr_payroll_mexico.structure_26)),
-                                            (4,ref('hr_payroll_mexico.structure_27)),
-                                            (4,ref('hr_payroll_mexico.structure_28)),
-                                            (4,ref('hr_payroll_mexico.structure_29)),
-                                            (4,ref('hr_payroll_mexico.structure_30)),
-                                            (4,ref('hr_payroll_mexico.structure_31)),
+                                            (4,ref('hr_payroll_mexico.structure_26')),
+                                            (4,ref('hr_payroll_mexico.structure_27')),
+                                            (4,ref('hr_payroll_mexico.structure_28')),
+                                            (4,ref('hr_payroll_mexico.structure_29')),
+                                            (4,ref('hr_payroll_mexico.structure_30')),
+                                            (4,ref('hr_payroll_mexico.structure_31')),
                                             ]"/>
         </record>
         <record id="hr_payslip_input_type_19" model="hr.payslip.input.type">
@@ -961,12 +961,12 @@
                                             (4,ref('hr_payroll_mexico.structure_17')),
                                             (4,ref('hr_payroll_mexico.structure_18')),
                                             (4,ref('hr_payroll_mexico.structure_19')),
-                                            (4,ref('hr_payroll_mexico.structure_26)),
-                                            (4,ref('hr_payroll_mexico.structure_27)),
-                                            (4,ref('hr_payroll_mexico.structure_28)),
-                                            (4,ref('hr_payroll_mexico.structure_29)),
-                                            (4,ref('hr_payroll_mexico.structure_30)),
-                                            (4,ref('hr_payroll_mexico.structure_31)),
+                                            (4,ref('hr_payroll_mexico.structure_26')),
+                                            (4,ref('hr_payroll_mexico.structure_27')),
+                                            (4,ref('hr_payroll_mexico.structure_28')),
+                                            (4,ref('hr_payroll_mexico.structure_29')),
+                                            (4,ref('hr_payroll_mexico.structure_30')),
+                                            (4,ref('hr_payroll_mexico.structure_31')),
                                             ]"/>
         </record>
         <record id="hr_payslip_input_type_22" model="hr.payslip.input.type">
@@ -979,12 +979,12 @@
                                             (4,ref('hr_payroll_mexico.structure_15')),
                                             (4,ref('hr_payroll_mexico.structure_16')),
                                             (4,ref('hr_payroll_mexico.structure_17')),
-                                            (4,ref('hr_payroll_mexico.structure_26)),
-                                            (4,ref('hr_payroll_mexico.structure_27)),
-                                            (4,ref('hr_payroll_mexico.structure_28)),
-                                            (4,ref('hr_payroll_mexico.structure_29)),
-                                            (4,ref('hr_payroll_mexico.structure_30)),
-                                            (4,ref('hr_payroll_mexico.structure_31)),
+                                            (4,ref('hr_payroll_mexico.structure_26')),
+                                            (4,ref('hr_payroll_mexico.structure_27')),
+                                            (4,ref('hr_payroll_mexico.structure_28')),
+                                            (4,ref('hr_payroll_mexico.structure_29')),
+                                            (4,ref('hr_payroll_mexico.structure_30')),
+                                            (4,ref('hr_payroll_mexico.structure_31')),
                                             ]"/>
         </record>
         <record id="hr_payslip_input_type_23" model="hr.payslip.input.type">
