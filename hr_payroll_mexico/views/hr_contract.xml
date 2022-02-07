@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+     <record id="hr_contract_view_form_inherit_payroll2" model="ir.ui.view">
+        <field name="name">hr.contract.mexico.form.inherit</field>
+        <field name="model">hr.contract</field>
+        <field name="type">form</field>
+        <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button
+                        type="action"
+                        name="%(action_reverse_calculation_salary)d"
+                        class="btn btn-primary"
+                        string="Reverse Calculation Salary"
+                        context="{'default_contract_id': id}"
+                    />
+            </xpath>
+        </field>
+    </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,17 @@
+unoconv==0.9.0
+py3o.template==0.10.0
+genshi
+xlwt
+xlrd
+py3o.template==0.10.0
+xlsxwriter
+pandas
+qrcode
+zeep
+cryptography
+cffi
+M2Crypto
+boto3
+imgkit
+openpyxl
+pdfminer

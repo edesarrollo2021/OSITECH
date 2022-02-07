@@ -1,0 +1,35 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_table_settings_user,table.settings,model_table_settings,hr.group_hr_user,1,1,1,1
+access_table_isr_daily_user,table.isr.daily,model_table_isr_daily,hr.group_hr_user,1,1,1,1
+access_table_isr_daily_subsidy_user,table.isr.daily.subsidy,model_table_isr_daily_subsidy,hr.group_hr_user,1,1,1,1
+access_table_isr_weekly_user,table.isr.weekly,model_table_isr_weekly,hr.group_hr_user,1,1,1,1
+access_table_isr_weekly_subsidy_user,table.isr.weekly.subsidy,model_table_isr_weekly_subsidy,hr.group_hr_user,1,1,1,1
+access_table_isr_decennial_user,table.isr.decennial,model_table_isr_decennial,hr.group_hr_user,1,1,1,1
+access_table_isr_decennial_subsidy_user,table.isr.decennial.subsidy,model_table_isr_decennial_subsidy,hr.group_hr_user,1,1,1,1
+access_table_isr_biweekly_user,table.isr.biweekly,model_table_isr_biweekly,hr.group_hr_user,1,1,1,1
+access_table_isr_biweekly_subsidy_user,table.isr.biweekly.subsidy,model_table_isr_biweekly_subsidy,hr.group_hr_user,1,1,1,1
+access_table_isr_monthly_user,table.isr.monthly,model_table_isr_monthly,hr.group_hr_user,1,1,1,1
+access_table_isr_monthly_subsidy_user,table.isr.monthly.subsidy,model_table_isr_monthly_subsidy,hr.group_hr_user,1,1,1,1
+access_table_isr_annual_user,table.isr.annual,model_table_isr_annual,hr.group_hr_user,1,1,1,1
+access_hr_payroll_period_hr_user,Payroll Period,model_hr_payroll_period,hr.group_hr_user,1,0,0,0
+access_hr_payroll_period_payroll_user,HR Payroll Period,model_hr_payroll_period,hr_payroll.group_hr_payroll_user,1,1,1,1
+access_vacation_premium_allowance_user,vacation.premium.allowance.pay.user,model_vacation_premium_allowance,hr_payroll.group_hr_payroll_user,1,1,1,1
+access_hr_payroll_period_generate_manager,Error CFDI,model_hr_payroll_period_generate,hr_payroll.group_hr_payroll_user,1,1,1,1
+access_inputs_user,Inputs_user,model_hr_inputs,hr_payroll.group_hr_payroll_user,1,1,1,1
+access_input_with_share_user,input.with.share.user,model_input_with_share,hr_payroll.group_hr_payroll_user,1,1,1,1
+access_reverse_calculation_salary_user,reverse.calculation.salary.user,model_reverse_calculation_salary,hr.group_hr_user,1,1,1,1
+access_hr_isn_hr_payroll_user_line,hr_isn_hr_payroll_user_line,model_hr_isn_range_line,hr.group_hr_user,1,0,0,0
+access_hr_isn_hr_payroll_manager_line,hr_isn_hr_payroll_manager_line,model_hr_isn_range_line,hr.group_hr_manager,1,1,1,1
+access_res_country_state_isn_user,res_country_state_isn_user,model_res_country_state_isn,hr.group_hr_user,1,0,0,0
+access_res_country_state_isn_manager,res_country_state_isn_manager,model_res_country_state_isn,hr.group_hr_manager,1,1,1,1
+access_hr_provisions_user,hr.provisions.users,model_hr_provisions,hr.group_hr_user,1,1,1,1
+access_hr_payroll_pension_deductions_user,hr.payroll.pension.deductions,model_hr_payroll_pension_deductions,hr.group_hr_user,1,1,1,1
+access_input_with_share_line_user,input.with.share.line,model_input_with_share_line,hr.group_hr_user,1,1,1,1
+access_hr_payslip_cfdi_user,hr.payslip.cfdi,model_hr_payslip_cfdi,hr_payroll.group_hr_payroll_user,1,1,1,1
+access_hr_payslip_cfdi_hr_user,hr.payslip.cfdi,model_hr_payslip_cfdi,hr.group_hr_user,1,0,0,0
+access_annual_isr_adjustment_hr_user,annual.isr.adjustment.hr.user,model_annual_isr_adjustment,hr.group_hr_user,1,1,1,1
+access_annual_isr_adjustment_line_hr_user,annual.isr.adjustment.line.hr.user,model_annual_isr_adjustment_line,hr.group_hr_user,1,1,1,1
+access_annual_isr_adjustment_employee_hr_user,annual.isr.adjustment.employee.hr.user,model_annual_isr_adjustment_employee,hr.group_hr_user,1,1,1,1
+access_hr_ptu_hr_user,hr.ptu.hr.user,model_hr_ptu,hr.group_hr_user,1,1,1,1
+access_hr_ptu_line_hr_user,hr.ptu.line.hr.user,model_hr_ptu_line,hr.group_hr_user,1,1,1,1
+access_hr_ptu_employees_hr_user,hr.ptu.employees.hr.user,model_hr_ptu_employees,hr.group_hr_user,1,1,1,1

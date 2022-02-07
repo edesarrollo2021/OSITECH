@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!--   Pilotos    -->
+        <record model="ir.actions.report" id="action_report_tmpl_cap_ini_primer_oficial">
+            <field name="name">Primer Oficial (Capacitacion Inicial)</field>
+            <field name="model">hr.contract</field>
+            <field name="report_type">controller</field>
+            <field name="report_name">Cap_Ini_Primer_Oficial</field>
+            <field name="print_report_name">'Cap Init PO Contract - %s' % (object.code)</field>
+            <field name="output_file">pdf</field>
+            <field name="contract" eval="True"/>
+            <field name="template_id" ref="hr_employe_mexico.tmpl_cap_ini_primer_oficial"/>
+        </record>
+
+        <record model="ir.actions.report" id="action_report_tmpl_planta_primer_oficial">
+            <field name="name">Primer Oficial (Planta)</field>
+            <field name="model">hr.contract</field>
+            <field name="report_type">controller</field>
+            <field name="report_name">Planta_Primer_Oficial</field>
+            <field name="print_report_name">'Planta PO Contract - %s' % (object.code)</field>
+            <field name="output_file">pdf</field>
+            <field name="contract" eval="True"/>
+            <field name="template_id" ref="hr_employe_mexico.tmpl_planta_primer_oficial"/>
+        </record>
+
+        <!--   Sobrecargo     -->
+        <record model="ir.actions.report" id="action_report_tmpl_cap_init_sobrecargo">
+            <field name="name">Sobrecargo (Capacitación Inicial)</field>
+            <field name="model">hr.contract</field>
+            <field name="report_type">controller</field>
+            <field name="report_name">Cap_Init_Sobrecargo</field>
+            <field name="print_report_name">'Cap Init SOB Contract - %s' % (object.code)</field>
+            <field name="output_file">pdf</field>
+            <field name="contract" eval="True"/>
+            <field name="template_id" ref="hr_employe_mexico.tmpl_cap_init_sobrecargo"/>
+        </record>
+
+        <record model="ir.actions.report" id="action_report_tmpl_determinado_sobrecargo">
+            <field name="name">Sobrecargo (Determinado)</field>
+            <field name="model">hr.contract</field>
+            <field name="report_type">controller</field>
+            <field name="report_name">Det_Sobrecargo</field>
+            <field name="print_report_name">'Determinado SOB Contract - %s' % (object.code)</field>
+            <field name="output_file">pdf</field>
+            <field name="contract" eval="True"/>
+            <field name="template_id" ref="hr_employe_mexico.tmpl_determinado_sobrecargo"/>
+        </record>
+
+        <record model="ir.actions.report" id="action_report_tmpl_planta_sobrecargo">
+            <field name="name">Sobrecargo (Planta)</field>
+            <field name="model">hr.contract</field>
+            <field name="report_type">controller</field>
+            <field name="report_name">Planta_Sobrecargo</field>
+            <field name="print_report_name">'Planta SOB Contract - %s' % (object.code)</field>
+            <field name="output_file">pdf</field>
+            <field name="contract" eval="True"/>
+            <field name="template_id" ref="hr_employe_mexico.tmpl_planta_sobrecargo"/>
+        </record>
+
+        <!--   Tierra    -->
+        <record model="ir.actions.report" id="action_report_tmpl_cap_init_pres_ley">
+            <field name="name">Prestaciones de Ley (Capacitación Inicial)</field>
+            <field name="model">hr.contract</field>
+            <field name="report_type">controller</field>
+            <field name="report_name">Cap_Ini_Ind_Pres_Ley</field>
+            <field name="print_report_name">'Cap Ini IPL Contract - %s' % (object.code)</field>
+            <field name="output_file">pdf</field>
+            <field name="contract" eval="True"/>
+            <field name="template_id" ref="hr_employe_mexico.tmpl_cap_init_pres_ley"/>
+        </record>
+
+        <record model="ir.actions.report" id="action_report_tmpl_planta_pres_ley">
+            <field name="name">Prestaciones de Ley (Planta)</field>
+            <field name="model">hr.contract</field>
+            <field name="report_type">controller</field>
+            <field name="report_name">Planta_Pres_Ley</field>
+            <field name="print_report_name">'Planta PL Contract - %s' % (object.code)</field>
+            <field name="output_file">pdf</field>
+            <field name="contract" eval="True"/>
+            <field name="template_id" ref="hr_employe_mexico.tmpl_planta_pres_ley"/>
+        </record>
+
+        <record model="ir.actions.report" id="action_report_tmpl_planta_superiores">
+            <field name="name">Superiores (Planta)</field>
+            <field name="model">hr.contract</field>
+            <field name="report_type">controller</field>
+            <field name="report_name">Planta_Superiores</field>
+            <field name="print_report_name">'Planta SU Contract - %s' % (object.code)</field>
+            <field name="output_file">pdf</field>
+            <field name="contract" eval="True"/>
+            <field name="template_id" ref="hr_employe_mexico.tmpl_planta_superiores"/>
+        </record>
+
+        <record model="ir.actions.report" id="action_report_tmpl_determinado_pl">
+            <field name="name">Prestaciones de Ley (Determinado)</field>
+            <field name="model">hr.contract</field>
+            <field name="report_type">controller</field>
+            <field name="report_name">Determinado_Pres_Ley</field>
+            <field name="print_report_name">'Determinado PL Contract - %s' % (object.code)</field>
+            <field name="output_file">pdf</field>
+            <field name="contract" eval="True"/>
+            <field name="template_id" ref="hr_employe_mexico.tmpl_determinado_pl"/>
+        </record>
+
+        <record model="ir.actions.report" id="action_report_tmpl_determinado_superiores">
+            <field name="name">Superiores (Determinado)</field>
+            <field name="model">hr.contract</field>
+            <field name="report_type">controller</field>
+            <field name="report_name">Determinado_Superiores</field>
+            <field name="print_report_name">'Determinado SU Contract - %s' % (object.code)</field>
+            <field name="output_file">pdf</field>
+            <field name="contract" eval="True"/>
+            <field name="template_id" ref="hr_employe_mexico.tmpl_determinado_superiores"/>
+        </record>
+
+        <record model="ir.actions.report" id="action_report_tmpl_cap_init_superiores">
+            <field name="name">Superiores (Capacitación Inicial)</field>
+            <field name="model">hr.contract</field>
+            <field name="report_type">controller</field>
+            <field name="report_name">Cap_Ini_Superiores</field>
+            <field name="print_report_name">'Cap Ini SU Contract - %s' % (object.code)</field>
+            <field name="output_file">pdf</field>
+            <field name="contract" eval="True"/>
+            <field name="template_id" ref="hr_employe_mexico.tmpl_cap_init_superiores"/>
+        </record>
+
+        <!--  Anexo   -->
+        <record model="ir.actions.report" id="action_report_tmpl_anexo_Superiores">
+            <field name="name">Anexo Superiores</field>
+            <field name="model">hr.contract</field>
+            <field name="report_type">controller</field>
+            <field name="report_name">anexo_Superiores</field>
+            <field name="print_report_name">'Anexo Superiores - %s' % (object.code)</field>
+            <field name="output_file">pdf</field>
+            <field name="contract" eval="True"/>
+            <field name="template_id" ref="hr_employe_mexico.tmpl_anexo_contrato_superiores"/>
+        </record>
+
+        <record model="ir.actions.report" id="action_report_tmpl_anx_prestaciones_de_ley">
+            <field name="name">Anexo Prestaciones de Ley</field>
+            <field name="model">hr.contract</field>
+            <field name="report_type">controller</field>
+            <field name="report_name">anx_prestaciones_de_ley</field>
+            <field name="print_report_name">'Anexo prestaciones de ley - %s' % (object.code)</field>
+            <field name="output_file">pdf</field>
+            <field name="contract" eval="True"/>
+            <field name="template_id" ref="hr_employe_mexico.tmpl_anexo_contrato_prestaciones_de_ley"/>
+        </record>
+
+    </data>
+</odoo>

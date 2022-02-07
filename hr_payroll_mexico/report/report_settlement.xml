@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <record id="action_print_settlement" model="ir.actions.report">
+        <field name="name">Print Settlement</field>
+        <field name="model">hr.payslip</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">hr_payroll_mexico.report_payslip_settlement</field>
+        <field name="report_file">hr_payroll_mexico.report_payslip_settlement</field>
+        <field name="print_report_name">'Settlement - %s' % (object.employee_id.complete_name)</field>
+        <field name="paperformat_id" ref="hr_payroll_mexico.paperformat_payslip_mx"/>
+        <field name="binding_model_id" ref="model_hr_payslip"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="report_payslip_settlement">
+        <t t-foreach="docs" t-as="o">
+            <t t-set="inside_foreach_docs" t-value="o"/>
+            <t t-call="hr_payroll_mexico.payslip_settlement" t-lang="o.employee_id.sudo().address_home_id.lang"/>
+        </t>
+    </template>
+
+    <template id="payslip_settlement">
+        <t t-call="web.html_container">
+            <t t-call="hr_payroll_mexico.external_layout_mx">
+                <t t-set="o" t-value="o.with_context(lang=o.employee_id.address_home_id.lang or o.env.lang)"/>
+                <t t-set="data" t-value="o.to_json()"/>
+                <t t-set="payroll" t-value="data['payroll']"/>
+                <t t-set="currency" t-value="o.currency_id"/>
+                <div class="page" style="font-size:14px;" t-if="o.settlement">
+                <div class="text-justify">
+                    <p> Recibí de <strong><t t-esc="o.company_id.name"/></strong> la cantidad de
+                    <strong><t t-esc="data['amount_total']" t-options='{"widget": "monetary", "display_currency": currency}'/></strong>
+                    por concluido voluntariamente el Contrato individual o Relación de trabajo que me ligaba con la
+                    Compañía desde el día <strong><t t-esc="o.contract_id.date_start_letter"/></strong> hasta el día
+                    <strong><t t-esc="o.contract_id.date_end_letter"/></strong> en virtud del cual desempeñaba el puesto de
+                    <strong><t t-esc="o.contract_id.job_id.name"/></strong>.</p><br/>
+
+                    <p>El importe anterior, incluye los siguientes conceptos: </p>
+                </div>
+                <div class="row">
+                    <t t-set="total_deductions" t-value="float(0.0)"/>
+                    <t t-set="total_perceptions" t-value="float(0.0)"/>
+                    <div class="col-6">
+                        <table border="0" class="table table-sm table-condensed" name="percept_table">
+                            <thead>
+                                <tr style="background-color: #F1F1F1">
+                                    <th colspan="6" style="text-align:center;">PERCEPCIONES</th>
+                                </tr>
+                                <tr border="0">
+                                    <th style="text-align:center;">CONCEPTO</th>
+                                    <th style="text-align:center;">DÍAS</th>
+                                    <th style="text-align:center;">IMPORTE</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr border="0" t-foreach="sorted(payroll['perceptions'], key=lambda k: k['sequence'])" t-as="percept">
+<!--                                <tr border="0" t-foreach="payroll['perceptions']" t-as="percept">-->
+                                    <td><t t-esc="percept['concept']"/></td>
+                                    <td><t t-esc="percept['days']"/></td>
+                                    <td style="text-align:right;"><t t-esc="percept['amount_t']" t-options='{"widget": "monetary", "display_currency": currency}'/></td>
+                                    <t t-set="total_perceptions" t-value="total_perceptions + float(percept['amount_t'])"/>
+                                </tr>
+                                <tr border="0">
+                                    <th colspan="2" style="text-align:right;">TOTAL PERCEPCIONES:</th>
+                                    <td style="text-align:right;">
+                                        <span t-esc="float(total_perceptions)" t-options='{"widget": "monetary", "display_currency": currency}'/>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-6">
+                        <table border="0" class="table table-sm table-condensed" name="deductions_table">
+                            <thead>
+                                <tr style="background-color: #BBBBBB">
+                                    <th colspan="12" style="text-align:center;">DEDUCCIONES</th>
+                                </tr>
+                                <tr border="0">
+                                    <th style="text-align:center;">CONCEPTO</th>
+                                    <th style="text-align:center;">DÍAS</th>
+                                    <th style="text-align:center;">IMPORTE</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr border="0" t-foreach="payroll['deductions']" t-as="ded">
+                                    <td><t t-esc="ded['concept']"/></td>
+                                    <td><t t-esc="ded['days']"/></td>
+                                    <td style="text-align:right;"><t t-esc="ded['amount']" t-options='{"widget": "monetary", "display_currency": currency}'/></td>
+                                    <t t-set="total_deductions" t-value="total_deductions + ded['amount']"/>
+                                </tr>
+                                <tr border="0">
+                                    <th colspan="2" style="text-align:right;">TOTAL DEDUCCIONES:</th>
+                                    <td style="text-align:right;"><t t-esc="float(total_deductions)" t-options='{"widget": "monetary", "display_currency": currency}'/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <br/>
+                <!-- Total Perception and Total Deductions-->
+                <div class="row">
+                    <div class="col-6"/>
+                    <div class="col-6">
+                        <table border="0" class="table table-sm table-condensed">
+                            <tbody>
+                                <tr border="0">
+                                    <th style="text-align:right;">Total Neto a Recibir:</th>
+                                    <td style="text-align:right;"><t t-esc="float(total_perceptions) - float(total_deductions)" t-options='{"widget": "monetary", "display_currency": currency}'/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <br/><br/>
+                <div class="text-justify">
+                    <p>Hago constar desde este momento para todos los efectos legales a que haya lugar, que durante el
+                    tiempo que presté mis servicios en <strong><t t-esc="o.company_id.name"/></strong> siempre me
+                    fueron cubiertos en forma íntegra, puntual y en lugar convenido, todos y cada uno de los salarios
+                    y prestaciones que tuve derecho de conformidad con lo establecido tanto en la Ley Federal del
+                    Trabajo como en el Contrato Individual de Trabajo que al efecto celebré con la Compañía, razón por
+                    la cual desde este momento extiendo mi más amplio finiquito que en derecho proceda, no reservándome
+                    en consecuencia acción o derecho que ejerza con posterioridad en contra de la Compañía, de quien
+                    represente sus intereses.</p>
+                </div>
+                <br/>
+                <div class="row">
+                    <div class="col-4"/>
+                    <div class="col-4 text-center">
+                        <p><strong>RECIBÍ</strong></p>
+                        <br/>
+                        <p>___________________________________</p>
+                        <p><strong><t t-esc="o.employee_id.complete_name"/></strong></p>
+                    </div>
+                    <div class="col-4"/>
+                </div>
+                <br/>
+                <div class="row">
+                    <div class="col-6">
+                        <table border="0" style="border: 0;">
+                            <tbody>
+                                <tr/>
+                                <tr>
+                                    <td>No. Empleado:</td>
+                                    <td><t t-esc="payroll['no_emp'].zfill(6)"/></td>
+                                </tr>
+                                <tr>
+                                    <td>RFC:</td>
+                                    <td><t t-esc="data['receiver_rfc']"/></td>
+                                </tr>
+                                <tr>
+                                    <td>DEPTO.:</td>
+                                    <td><t t-esc="o.employee_id.department_id.name"/></td>
+                                </tr>
+                                <tr/>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                </div>
+            </t>
+        </t>
+    </template>
+
+    </data>
+</odoo>

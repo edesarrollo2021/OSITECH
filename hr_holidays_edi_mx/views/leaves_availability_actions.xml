@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <record id="action_report_holiday_availability" model="ir.actions.client">
+        <field name="name">Vacation Availability</field>
+        <field name="tag">employee_report</field>
+        <field name="context" eval="{'model': 'hr.holiday.history'}"/>
+    </record>
+
+    <record id="action_report_personal_availability" model="ir.actions.client">
+        <field name="name">Personal Days Availability</field>
+        <field name="tag">employee_report</field>
+        <field name="context" eval="{'model': 'hr.personal.days.history'}"/>
+    </record>
+
+    <menuitem id="menu_action_report_availability"
+              name="Absence availability"
+              parent="hr_holidays.menu_hr_holidays_report"/>
+
+    <menuitem id="menu_action_report_holidays_availability"
+              name="Vacation Availability"
+              action="action_report_holiday_availability"
+              sequence="5"
+              parent="menu_action_report_availability"/>
+
+    <menuitem id="menu_action_report_personal_availability"
+              name="Personal Days Availability"
+              action="action_report_personal_availability"
+              sequence="10"
+              parent="menu_action_report_availability"/>
+    </data>
+</odoo>

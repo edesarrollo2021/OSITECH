@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <!--  Holidays  -->
+    <record id="tmpl_holidays_report" model="ir.attachment">
+        <field name="name">formato_de_vacaciones.odt</field>
+        <field name="type">binary</field>
+        <field name="datas" type="base64" file="hr_holidays_edi_mx/templates/formato_de_vacaciones.odt"/>
+    </record>
+
+    <record model="ir.actions.report" id="action_report_tmpl_holidays_report">
+        <field name="name">Holidays Report</field>
+        <field name="model">hr.leave</field>
+        <field name="report_type">controller</field>
+        <field name="report_name">Report Holiday</field>
+        <field name="print_report_name">'Holidays Report - %s' % (object.employee_id.name)</field>
+        <field name="output_file">pdf</field>
+        <field name="contract" eval="True"/>
+        <field name="template_id" ref="hr_holidays_edi_mx.tmpl_holidays_report"/>
+    </record>
+
+    <!--  Personal Days  -->
+    <record id="tmpl_personal_days_report" model="ir.attachment">
+        <field name="name">formato_de_dias_personales.odt</field>
+        <field name="type">binary</field>
+        <field name="datas" type="base64" file="hr_holidays_edi_mx/templates/formato_de_dias_personales.odt"/>
+    </record>
+
+    <record model="ir.actions.report" id="action_report_tmpl_personal_days_report">
+        <field name="name">Personal Days Report</field>
+        <field name="model">hr.leave</field>
+        <field name="report_type">controller</field>
+        <field name="report_name">Report Personal Days</field>
+        <field name="print_report_name">'Personal Days Report - %s' % (object.employee_id.name)</field>
+        <field name="output_file">pdf</field>
+        <field name="contract" eval="True"/>
+        <field name="template_id" ref="hr_holidays_edi_mx.tmpl_personal_days_report"/>
+    </record>
+
+    </data>
+</odoo>

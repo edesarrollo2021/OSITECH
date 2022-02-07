@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <record id="view_report_consolidate_form" model="ir.ui.view">
+        <field name="name">report.consolidate.form</field>
+        <field name="model">report.consolidate</field>
+        <field name="arch" type="xml">
+        <form string="Generate Report Consolidate">
+            <sheet>
+            <group>
+                <group>
+                    <field name="company_ids" groups="base.group_multi_company" options='{"no_open":True}'
+                           widget="many2many_tags"/>
+                    <field name="type"/>
+                </group>
+            </group>
+            <label for="run_ids"/>
+            <group>
+                <field name="run_ids" nolabel="1"/>
+            </group>
+            </sheet>
+            <footer>
+                <button name="generate_report" string="Generate Report" type="object" class="btn-primary"/>
+                <button string="Cancel" special="cancel" class="btn-default"/>
+            </footer>
+        </form>
+        </field>
+    </record>
+
+    <record id="action_report_consolidate" model="ir.actions.act_window">
+        <field name="name">Generate Report Consolidate</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">report.consolidate</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem
+        id="menu_report_consolidate"
+        name="Reports Consolidates"
+        parent="hr_payroll.menu_hr_payroll_report"
+        action="action_report_consolidate"
+        sequence="20"/>
+
+    </data>
+</odoo>

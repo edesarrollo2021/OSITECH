@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <record id="payroll_period_multi_company_rule" model="ir.rule">
+        <field name="name">Payroll Periods multi-company</field>
+        <field ref="model_hr_payroll_period" name="model_id"/>
+        <field eval="True" name="global"/>
+        <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+    </record>
+
+    <record id="group_open_period" model="res.groups">
+        <field name="name">Open Period (Ordinary/Extraordinary)</field>
+        <field name="category_id" ref="base.module_category_human_resources_payroll"/>
+    </record>
+
+    <record id="group_open_period_set" model="res.groups">
+        <field name="name">Open Period (Settlement)</field>
+        <field name="category_id" ref="base.module_category_human_resources_payroll"/>
+    </record>
+
+    <record id="group_provisions" model="res.groups">
+        <field name="name">Create Provisions</field>
+        <field name="category_id" ref="base.module_category_human_resources_payroll"/>
+    </record>
+
+    </data>
+</odoo>

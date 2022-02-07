@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_mas_empl_modification_form" model="ir.ui.view">
+            <field name="name">massive.employee.modification.form</field>
+            <field name="model">massive.employee.modification</field>
+            <field name="arch" type="xml">
+            <form string="Massive Employee Modification">
+                <group>
+                    <group>
+                        <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+                        <field name="change_fields"/>
+                        <field name="date"/>
+                    </group>
+                    <group string="File">
+                        <field name="file_id" widget="many2many_binary"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="generate_change" string="Import File" type="object" class="btn-primary"/>
+                    <button string="Cancel" special="cancel" class="btn-default"/>
+                </footer>
+            </form>
+            </field>
+        </record>
+
+        <record id="action_mas_empl_modification_import" model="ir.actions.act_window">
+            <field name="name">Massive Employee Modification</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">massive.employee.modification</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem
+            id="menu_mas_empl_modification_import"
+            name="Massive Employee Modification"
+            parent="menu_hr_employee_import"
+            sequence="10"
+            action="action_mas_empl_modification_import"/>
+
+    </data>
+</odoo>

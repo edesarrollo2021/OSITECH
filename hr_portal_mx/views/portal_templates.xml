@@ -1,0 +1,1534 @@
+<odoo>
+
+    <template id="portal_my_home_menu_inability" name="Portal layout : inabilities menu entries" inherit_id="portal.portal_breadcrumbs" priority="30">
+        <xpath expr="//ol[hasclass('o_portal_submenu')]" position="inside">
+            <!--  Inabilities   -->
+            <li t-if="page_name == 'inabilities'" t-attf-class="breadcrumb-item #{'active ' if not leave else ''}">
+                <a t-if="leave" t-attf-href="/my/inabilities?{{ keep_query() }}">Inabilities</a>
+                <t t-else="">Inabilities</t>
+            </li>
+            <li t-if="leave" class="breadcrumb-item active">
+                <t t-esc="leave.name" t-if="leave.name != '/'"/>
+                <t t-else=""><em>Inabilities</em></t>
+            </li>
+            <!--  Holidays  -->
+            <li t-if="page_name == 'holidays'" t-attf-class="breadcrumb-item #{'active ' if not holiday else ''}">
+                <a t-if="holiday" t-attf-href="/my/holidays?{{ keep_query() }}">Holidays</a>
+                <t t-else="">Holidays</t>
+            </li>
+            <li t-if="holiday" class="breadcrumb-item active">
+                <t t-esc="holiday.name" t-if="holiday.name != '/'"/>
+                <t t-else=""><em>Holidays</em></t>
+            </li>
+            <!--  Holidays Requests  -->
+            <li t-if="page_name == 'holidays_requests'" t-attf-class="breadcrumb-item #{'active ' if not holidays_request else ''}">
+                <a t-if="holidays_request" t-attf-href="/my/holidays_requests?{{ keep_query() }}">Holidays Request</a>
+                <t t-else="">Holidays Request</t>
+            </li>
+            <li t-if="holidays_request" class="breadcrumb-item active">
+                <t t-esc="holidays_request.employee_id.complete_name"/>
+            </li>
+            <!--  Personal Days  -->
+            <li t-if="page_name == 'personal'" t-attf-class="breadcrumb-item #{'active ' if not personal else ''}">
+                <a t-if="personal" t-attf-href="/my/personal_days?{{ keep_query() }}">Personal Days</a>
+                <t t-else="">Personal Days</t>
+            </li>
+            <li t-if="personal" class="breadcrumb-item active">
+                <t t-esc="personal.name" t-if="personal.name != '/'"/>
+                <t t-else=""><em>Personal Days</em></t>
+            </li>
+            <!--  Personal Days Requests  -->
+            <li t-if="page_name == 'personal_days_requests'" t-attf-class="breadcrumb-item #{'active ' if not personal_days_request else ''}">
+                <a t-if="personal_days_request" t-attf-href="/my/personal_days_requests?{{ keep_query() }}">Personal Days Request</a>
+                <t t-else="">Personal Days Request</t>
+            </li>
+            <li t-if="personal_days_request" class="breadcrumb-item active">
+                <t t-esc="personal_days_request.employee_id.complete_name"/>
+            </li>
+        </xpath>
+    </template>
+
+    <template id="portal_my_home_mx" name="MX my home" inherit_id="portal.portal_my_home" customize_show="True" priority="30">
+        <xpath expr="//div[hasclass('o_portal_docs')]" position="inside">
+            <t t-call="portal.portal_docs_entry">
+                <t t-set="title">Inabilities</t>
+                <t t-set="url" t-value="'/my/inabilities'"/>
+                <t t-set="placeholder_count" t-value="'leaves_count'"/>
+            </t>
+            <t t-call="portal.portal_docs_entry">
+                <t t-set="title">Holidays</t>
+                <t t-set="url" t-value="'/my/holidays'"/>
+                <t t-set="placeholder_count" t-value="'holidays_count'"/>
+            </t>
+            <t t-call="portal.portal_docs_entry" t-if="user_id.approve_holidays">
+                <t t-set="title">Holidays Request</t>
+                <t t-set="url" t-value="'/my/holidays_requests'"/>
+                <t t-set="placeholder_count" t-value="'holidays_requests_count'"/>
+            </t>
+            <t t-call="portal.portal_docs_entry">
+                <t t-set="title">Personal Days</t>
+                <t t-set="url" t-value="'/my/personal_days'"/>
+                <t t-set="placeholder_count" t-value="'personals_count'"/>
+            </t>
+            <t t-call="portal.portal_docs_entry" t-if="user_id.approve_holidays">
+                <t t-set="title">Personal Days Request</t>
+                <t t-set="url" t-value="'/my/personal_days_requests'"/>
+                <t t-set="placeholder_count" t-value="'personals_requests_count'"/>
+            </t>
+        </xpath>
+    </template>
+
+    <!--  error permission  -->
+    <template id="error_permission" name="Error Permission">
+        <t t-call="website.layout">
+            <t t-set="is_portal" t-value="True"/>
+            <div id="wrap" class="oe_structure oe_empty">
+                <div class="container">
+                    <div clas="row">
+                        <h1 class="text-center"><i class="fa fa-times-circle fa-2x text-danger" role="img" aria-label="Fail" title="Fail"></i></h1>
+                        <h1 class="text-center">You do not have permission to access this site</h1>
+                        <h4 class="text-center">Return to my home <a href="/my/home"><i class="fa fa-home"></i></a></h4>
+                    </div>
+                </div>
+            </div>
+         </t>
+    </template>
+
+    <template id="error_dowload_economicdays" name="Error Download">
+        <t t-call="website.layout">
+            <t t-set="is_portal" t-value="True"/>
+            <div id="wrap" class="oe_structure oe_empty">
+                <div class="container">
+                     <t t-call="portal.portal_record_layout">
+                        <t t-set="card_header">
+                            <h4 class="title">This document could not be downloaded</h4>
+                        </t>
+                     </t>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <!--  Inabilities  -->
+    <template id="portal_my_inabilities" name="My Inabilities">
+        <t t-call="portal.portal_layout">
+            <t t-set="breadcrumbs_searchbar" t-value="True"/>
+
+            <t t-call="portal.portal_searchbar">
+                <t t-set="title">Inabilities</t>
+            </t>
+            <nav class="navbar navbar-light border o_portal_navbar">
+                <div class="pull-right" >
+                    <a class="btn btn-sm btn-primary" icon="fa-pencil-square-o" role="button" name="Sign_document" t-att-href="'/inability/new/'">
+                    <span class="fa fa-pencil-square-o"></span>Leave New</a>
+                </div>
+            </nav>
+
+            <t t-if="not leaves">
+                <p>There are currently no inabilities your account.</p>
+            </t>
+            <t t-if="leaves" t-call="portal.portal_table">
+                <thead>
+                    <tr class="active">
+                        <th>Nro.</th>
+                        <th>Date From</th>
+                        <th>Date to</th>
+                        <th>Leave type</th>
+                        <th>Create Date</th>
+                        <th class="text-right">State</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <t t-set="count" t-value="0"/>
+                    <t t-foreach="leaves" t-as="leave">
+                        <tr>
+                            <t t-set="count" t-value="count+1"/>
+                            <td><t t-esc="count"/></td>
+                            <td><t t-esc="leave.request_date_from.strftime('%d/%m/%Y')"/></td>
+                            <td><t t-esc="leave.request_date_to.strftime('%d/%m/%Y')"/></td>
+                            <td><a t-attf-href="/inabilities/detail/#{leave.id}"><t t-esc="leave.holiday_status_id.name"/></a></td>
+                            <td><t t-esc="leave.create_date.strftime('%d/%m/%Y')"/></td>
+                            <td class="text-right"><t t-esc="dict(leave._fields['state']._description_selection(leave.env)).get(leave.state)"/></td>
+                        </tr>
+                    </t>
+                </tbody>
+            </t>
+        </t>
+    </template>
+
+    <template id="portal_leave_details" name="Leaves Inhabilitys">
+        <t t-call="portal.portal_layout">
+            <t t-set="breadcrumbs_searchbar" t-value="True"/>
+            <t t-call="portal.portal_searchbar">
+                <t t-set="title">Inabilities</t>
+            </t>
+            <t t-call="portal.portal_record_layout">
+            <t t-set="card_header">
+                <div class="row no-gutters">
+                    <div class="col-md">
+                        <h5 class="mb-1 mb-md-0">
+                            <span t-field="leave.name"/>
+                            <small class="text-muted"> (#<span t-field="leave.id"/>)</small>
+                        </h5>
+                    </div>
+                    <div class="col-md text-md-right">
+                        <small class="text-right">State:</small>
+                        <span t-field="leave.state" class=" badge badge-pill badge-info" title="Current stage of this leave"/>
+                    </div>
+                </div>
+            </t>
+            <t t-set="card_body">
+                <div class="row mb-4">
+                    <strong class="col-lg-2">From</strong>
+                    <span class="col-lg-4" t-field="leave.date_from" t-options='{"widget": "date"}'/>
+                    <strong class="col-lg-2">To</strong>
+                    <span class="col-lg-4" t-field="leave.date_to" t-options='{"widget": "date"}'/>
+                </div>
+                <div class="row mb-4">
+                    <strong t-if='leave.folio' class="col-lg-2">Folio</strong>
+                    <span class="col-lg-4" t-field="leave.folio"/>
+                    <strong t-if='leave.holiday_status_id' class="col-lg-2">Leave Type</strong>
+                    <span class="col-lg-4" t-field="leave.holiday_status_id"/>
+                </div>
+                <div class="row mb-4">
+                    <strong t-if='leave.type_inhability_id' class="col-lg-2">Type of disability</strong>
+                    <span class="col-lg-4" t-field="leave.type_inhability_id"/>
+                    <strong t-if='leave.inhability_classification_id' class="col-lg-2">Classification</strong>
+                    <span class="col-lg-4" t-field="leave.inhability_classification_id"/>
+                </div>
+                <div class="row mb-4">
+                    <strong t-if='leave.inhability_category_id' class="col-lg-2">Category</strong>
+                    <span class="col-lg-4" t-field="leave.inhability_category_id"/>
+                     <strong t-if='leave.inhability_subcategory_id' class="col-lg-2">Subcategory</strong>
+                    <span class="col-lg-4" t-field="leave.inhability_subcategory_id"/>
+                </div>
+                <div class="row mb-4">
+                    <strong class="col-lg-2">Description</strong>
+                    <div t-if="leave.name" class="col-lg-10" t-field="leave.name"/>
+                    <div t-else="" class="col-lg-10">
+                        <em class="text-muted"><small>No description</small></em>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <strong class="col-lg-2">Reported on</strong>
+                    <span class="col-lg-4" t-field="leave.create_date" t-options='{"widget": "date"}'/>
+                     <strong class="col-lg-2">Reported by</strong>
+                    <div class="col-lg-4">
+                        <div class="row">
+                            <div class="col flex-grow-0 pr-3">
+                                <img t-if="leave.create_uid.partner_id.image_1024" class="rounded-circle o_portal_contact_img" t-attf-src="data:image/png;base64,#{leave.create_uid.partner_id.image_1024}" alt="Contact"/>
+                                <img t-else="" class="rounded-circle o_portal_contact_img" src="/web/static/src/img/user_menu_avatar.png" alt="Contact"/>
+                            </div>
+                            <div class="col pl-sm-0">
+                                <div t-field="leave.create_uid.partner_id" t-options='{"widget": "contact", "fields": ["name", "email"], "no_marker": true}'/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                </div>
+                <div class="row mb-4">
+                    <strong class="col-lg-2">Responsible comment</strong>
+                    <div t-if="leave.report_note" class="col-lg-10" t-field="leave.report_note"/>
+                    <div t-else="" class="col-lg-10">
+                        <em class="text-muted"><small>Without description</small></em>
+                    </div>
+                </div>
+            </t>
+            </t>
+            <div id="invoice_communication" class="mt-4">
+                <h2>History</h2>
+                <t t-call="portal.message_thread">
+                    <t t-set="object" t-value="leave"/>
+                </t>
+            </div>
+        </t>
+    </template>
+
+    <!--  Holidays  -->
+    <template id="portal_my_holidays" name="My Holidays">
+        <t t-call="portal.portal_layout">
+            <t t-set="breadcrumbs_searchbar" t-value="True"/>
+
+            <t t-call="portal.portal_searchbar">
+                <t t-set="title">Holidays</t>
+            </t>
+            <nav class="navbar navbar-light border o_portal_navbar">
+                <div class="pull-right" >
+                    <a class="btn btn-sm btn-primary" icon="fa-pencil-square-o" role="button" name="Sign_document" t-att-href="'/holiday/new/'">
+                    <span class="fa fa-pencil-square-o"></span>Holiday New</a>
+                </div>
+            </nav>
+            <t t-if="not holidays">
+                <p>There are currently no holidays your account.</p>
+            </t>
+            <t t-if="holidays" t-call="portal.portal_table">
+                <thead>
+                    <tr class="active">
+                        <th>Nro.</th>
+                        <th>Date From</th>
+                        <th>Date to</th>
+                        <th>Holiday</th>
+                        <th>Create Date</th>
+                        <th class="text-right">State</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <t t-set="count" t-value="0"/>
+                    <t t-foreach="holidays" t-as="holiday">
+                        <tr>
+                            <t t-set="count" t-value="count+1"/>
+                            <td><t t-esc="count"/></td>
+                            <td><t t-esc="holiday.request_date_from.strftime('%d/%m/%Y')"/></td>
+                            <td><t t-esc="holiday.request_date_to.strftime('%d/%m/%Y')"/></td>
+                            <td><a t-attf-href="/holidays/detail/#{holiday.id}"><t t-esc="holiday.holiday_status_id.name"/></a></td>
+                            <td><t t-esc="holiday.create_date.strftime('%d/%m/%Y')"/></td>
+                            <td class="text-right"><t t-esc="dict(holiday._fields['state']._description_selection(holiday.env)).get(holiday.state)"/></td>
+                        </tr>
+                    </t>
+                </tbody>
+            </t>
+        </t>
+    </template>
+
+    <template id="portal_holiday_details" name="Leaves Holidays">
+        <t t-call="portal.portal_layout">
+            <!--   Init Modal    -->
+            <div class="modal fade" role="dialog" id="reason_cancellation">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Request Cancellation</h5>
+                            <button type="button" class="close" data-dismiss="modal">×</button>
+                        </div>
+                        <form method="post" id="reason_cancel_form">
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label class="col-form-label" for="description_cancellation">Information</label>
+                                    <textarea name="description_cancellation" placeholder="Enter additional information ..." class="form-control description"/>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <div class="mt16 clearfix">
+                                  <button type="button" class="btn btn-primary o_portal_reason_cancel_submit float-right">Send</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!--    End Modal    -->
+            <t t-set="breadcrumbs_searchbar" t-value="True"/>
+            <t t-call="portal.portal_searchbar">
+                <t t-set="title">Holidays</t>
+            </t>
+            <t t-call="portal.portal_record_layout">
+            <t t-set="card_header">
+                <div class="row no-gutters">
+                    <div class="col-md">
+                        <h5 class="mb-1 mb-md-0">
+                            <span t-field="holiday.description"/>
+                            <small class="text-muted"> (#<span t-field="holiday.id"/>)</small>
+                        </h5>
+                    </div>
+                    <div class="col-md text-md-right">
+                        <small class="text-right">State:</small>
+                        <span t-field="holiday.state" class=" badge badge-pill badge-info" title="Current stage of this holiday"/>
+                    </div>
+                </div>
+            </t>
+            <t t-set="card_body">
+                <div t-if="holiday.state == 'validate'" class="pull-right">
+                    <form id="HolidaysCancellationForm" action="/holidays/cancellation/" method="post" class="s_website_form container-fluid mt32" enctype="multipart/form-data" data-model_name="" t-attf-data-success_page="/holidays/detail/#{holiday.id}">
+                        <t t-if="holiday.sign_status == 'sent' and holiday.sign_request_id">
+                            <a class="btn btn-sm btn-primary" role="button" t-attf-href="/my/signature/#{holiday.sign_request_id.id}">Sign Document</a>
+                        </t>
+                        <t t-if="holiday.sign_status == 'signed' and holiday.sign_request_id">
+                            <a class="btn btn-sm btn-primary" role="button" t-attf-href="/my/signature/#{holiday.sign_request_id.id}">Download Document</a>
+                        </t>
+                        <t t-if="not holiday.cancellation">
+                            <button name="cancel" id="cancel" type="button" class="btn btn-sm btn-secondary btn-cancel" data-toggle="modal" data-target="#reason_cancellation">Request Cancel</button>
+                        </t>
+                        <button name="approve" type="submit" class="btn btn-primary o_website_form_send" style="display: none;"/>
+                        <input name="holiday_id" type="number" hidden="True" t-att-value="holiday.id"/>
+                        <input name="state" id="state_input" type="text" hidden="True"/>
+                        <input name="description_cancellation" id="description_cancellation" type="text" hidden="True"/>
+                        <div class="mb-4">
+                            <div id="o_website_form_result">
+                                <t t-esc="validation_error"/>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="row mb-4">
+                    <strong class="col-lg-2">From</strong>
+                    <span class="col-lg-4" t-field="holiday.date_from" t-options='{"widget": "date"}'/>
+                    <strong class="col-lg-2">To</strong>
+                    <span class="col-lg-4" t-field="holiday.date_to" t-options='{"widget": "date"}'/>
+                </div>
+                <div class="row mb-4">
+                    <strong t-if='holiday.holiday_status_id' class="col-lg-2">holiday Type</strong>
+                    <span class="col-lg-4" t-field="holiday.holiday_status_id"/>
+                </div>
+                <div class="row mb-4">
+                    <strong class="col-lg-2">Description</strong>
+                    <div t-if="holiday.name" class="col-lg-10" t-field="holiday.description"/>
+                    <div t-else="" class="col-lg-10">
+                        <em class="text-muted"><small>No description</small></em>
+                    </div>
+                </div>
+                <div class="row mb-4" t-if="holiday.state == 'refuse'">
+                    <strong class="col-lg-2">Reason Reject</strong>
+                    <div t-if="holiday.reason_reject" class="col-lg-4" t-field="holiday.reason_reject"/>
+                    <div t-else="" class="col-lg-4">
+                        <em class="text-muted"><small>--</small></em>
+                    </div>
+                    <strong class="col-lg-2">Description Reject</strong>
+                    <div t-if="holiday.description_reject" class="col-lg-4" t-field="holiday.description_reject"/>
+                    <div t-else="" class="col-lg-4">
+                        <em class="text-muted"><small>--</small></em>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <strong class="col-lg-2">Reported on</strong>
+                    <span class="col-lg-4" t-field="holiday.create_date" t-options='{"widget": "date"}'/>
+                     <strong class="col-lg-2">Reported by</strong>
+                    <div class="col-lg-4">
+                        <div class="row">
+                            <div class="col flex-grow-0 pr-3">
+                                <img t-if="holiday.create_uid.partner_id.image_1024" class="rounded-circle o_portal_contact_img" t-attf-src="data:image/png;base64,#{holiday.create_uid.partner_id.image_1024}" alt="Contact"/>
+                                <img t-else="" class="rounded-circle o_portal_contact_img" src="/web/static/src/img/user_menu_avatar.png" alt="Contact"/>
+                            </div>
+                            <div class="col pl-sm-0">
+                                <div t-field="holiday.create_uid.partner_id" t-options='{"widget": "contact", "fields": ["name", "email"], "no_marker": true}'/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                </div>
+                <div class="row mb-4">
+                    <strong class="col-lg-2">Responsible comment</strong>
+                    <div t-if="holiday.report_note" class="col-lg-10" t-field="holiday.report_note"/>
+                    <div t-else="" class="col-lg-10">
+                        <em class="text-muted"><small>Without description</small></em>
+                    </div>
+                </div>
+                <hr/>
+                <div class="row mb-4" t-if="holiday.cancellation">
+                    <strong class="col-lg-2">Reason Cancellation</strong>
+                    <div t-if="holiday.description_cancellation" class="col-lg-4" t-field="holiday.description_cancellation"/>
+                    <div t-else="" class="col-lg-4">
+                        <em class="text-muted"><small>--</small></em>
+                    </div>
+                </div>
+                <div class="row mb-4" t-if="holiday.reject_cancellation and not holiday.cancellation">
+                    <strong class="col-lg-2">Reject Cancellation</strong>
+                    <div class="col-lg-4" t-field="holiday.reject_cancellation"/>
+                </div>
+            </t>
+            </t>
+            <div id="invoice_communication" class="mt-4">
+                <h2>History</h2>
+                <t t-call="portal.message_thread">
+                    <t t-set="object" t-value="holiday"/>
+                </t>
+            </div>
+        </t>
+    </template>
+
+    <!--  Holidays Requests  -->
+    <template id="holidays_requests">
+         <t t-call="portal.portal_layout">
+            <t t-set="breadcrumbs_searchbar" t-value="True"/>
+
+            <t t-call="portal.portal_searchbar">
+                <t t-set="title">Holidays Request</t>
+            </t>
+            <t t-if="not holidays_requests">
+                <p>There are currently no holidays requests your account.</p>
+            </t>
+            <t t-if="holidays_requests" t-call="portal.portal_table">
+                <thead>
+                    <tr class="active">
+                        <th>Nro</th>
+                        <th>Type</th>
+                        <th>Name</th>
+                        <th>From</th>
+                        <th>To</th>
+                        <th>Qty. Days</th>
+                        <th>State</th>
+                        <th>Report</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <t t-set="count" t-value="0"/>
+                    <tr t-foreach="holidays_requests" t-as="o">
+                        <t t-set="count" t-value="count+1"/>
+                        <td><t t-esc="count"/></td>
+                        <td><a t-attf-href="/holidays_request/detail/#{o.id}"><t t-esc="o.holiday_status_id.name"/></a></td>
+                        <td><t t-esc="o.employee_id.complete_name"/></td>
+                        <td><t t-esc="o.request_date_from.strftime('%d/%m/%Y')"/></td>
+                        <td><t t-esc="o.request_date_to.strftime('%d/%m/%Y')"/></td>
+                        <td style="text-align:center"><t t-esc="o.number_of_days_display" t-options='{"widget": "integer"}'/></td>
+                        <td><t t-esc="dict(o._fields['state']._description_selection(o.env)).get(o.state)"/></td>
+                        <td>
+                            <a t-if="o.state == 'validate' and o.sign_request_id" class="btn btn-sm btn-light" icon="fa-pencil-square-o" role="button" name="Download" t-att-href="'/report/personal_days/%s' % (o.id)">
+                            <span class="fa fa-download"></span>Download</a>
+                            <t t-if="o.state != 'validate' and (not o.sign_request_id or o.sign_request_id.state == 'canceled')">Without proof</t>
+                        </td>
+                    </tr>
+                </tbody>
+            </t>
+        </t>
+    </template>
+
+    <template id="portal_holidays_request_details" name="Holidays Requests">
+        <t t-call="portal.portal_layout">
+            <!--   Init Modal    -->
+            <div class="modal fade" role="dialog" id="reason_rejects">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Cancel request</h5>
+                            <button type="button" class="close" data-dismiss="modal">×</button>
+                        </div>
+                        <form method="post" id="reason_rejects_form">
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label class="col-form-label" for="reason_reject">Reason for rejection</label>
+                                    <select class="form-control reason_id">
+                                        <option t-foreach="reason_reject" t-as="res" t-att-value="res.id">
+                                            <t t-esc="res.name"/>
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-form-label" for="description_reject">Additional Information</label>
+                                    <textarea name="description_reject" placeholder="Enter additional information ..." class="form-control description"/>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <div class="mt16 clearfix">
+                                    <button type="button" class="btn btn-primary o_portal_reason_reject_submit float-right">Send</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" role="dialog" id="reject_cancellation">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Reject Cancellation</h5>
+                            <button type="button" class="close" data-dismiss="modal">×</button>
+                        </div>
+                        <form method="post" id="reject_cancel_form">
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label class="col-form-label" for="description_cancellation">Description</label>
+                                    <textarea name="description_cancellation" placeholder="Enter additional information ..." class="form-control description"/>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <div class="mt16 clearfix">
+                                  <button type="button" class="btn btn-primary o_portal_reject_cancel_submit float-right">Send</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!--    End Modal    -->
+            <t t-set="breadcrumbs_searchbar" t-value="True"/>
+            <t t-call="portal.portal_searchbar">
+                <t t-set="title">Holidays Requests</t>
+            </t>
+
+            <t t-call="portal.portal_record_layout">
+                <t t-set="card_header">
+                    <div class="row no-gutters">
+                        <div t-if="holidays_request.state == 'confirm'">
+                            <form id="HolidaysRequestForm" action="/holidays_request/send/" method="post" class="s_website_form container-fluid mt32" enctype="multipart/form-data" data-model_name="" t-attf-data-success_page="/holidays_request/detail/#{holidays_request.id}">
+                                <button name="approve" id="approve" type="submit" class="btn btn-primary o_website_form_send o_default_snippet_text" value="approve">Approve</button>
+                                <button name="cancel" id="cancel" type="button" class="btn btn-secondary btn-cancel" data-toggle="modal" data-target="#reason_rejects">Reject</button>
+                                <input name="holiday_id" type="number" hidden="True" t-att-value="holidays_request.id"/>
+                                <input name="state" id="state_input" type="text" hidden="True"/>
+                                <input name="reason_reject" id="reason_reject" type="text" hidden="True"/>
+                                <input name="description_reject" id="description_reject" type="text" hidden="True"/>
+                                <div class="mb-4">
+                                    <div id="o_website_form_result">
+                                        <t t-esc="validation_error"/>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div t-if="holidays_request.cancellation and holidays_request.state != 'cancel'" style="margin: 2px;">
+                            <form id="HolidaysCancellationForm" action="/holidays_request/send/" method="post" class="s_website_form container-fluid mt32" enctype="multipart/form-data" data-model_name="" t-attf-data-success_page="/holidays_request/detail/#{holidays_request.id}">
+                                <button name="accept_cancellation" id="accept_cancellation" type="submit" class="btn btn-primary o_website_form_send o_default_snippet_text">Accept Cancellation</button>
+                                <button name="reject_cancellation" id="reject_cancellation" type="button" class="btn btn-secondary btn-cancel" data-toggle="modal" data-target="#reject_cancellation">Reject Cancellation</button>
+                                <input name="holiday_id" type="number" hidden="True" t-att-value="holidays_request.id"/>
+                                <input name="cancellation" type="number" hidden="True" t-att-value="1"/>
+                                <input name="description_cancellation" id="description_cancellation" type="text" hidden="True"/>
+                                <div class="mb-4">
+                                    <div id="o_website_form_result">
+                                        <t t-esc="validation_error"/>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+<!--                        <div t-if="holidays_request.state == 'validate' and holidays_request.employee_id.sign_holidays_report">-->
+<!--                            <form id="HolidaysRequestForm" action="/holidays_request/send_to_sign/" method="post" class="s_website_form container-fluid mt32" enctype="multipart/form-data" data-model_name="" t-attf-data-success_page="/holidays_request/detail/#{holidays_request.id}">-->
+<!--                                <button name="send_to_sign" id="sendToSign" href="" type="submit" class="btn btn-secondary o_website_form_send o_default_snippet_text" value="approve">Enviar comprobante para Firmar</button>-->
+<!--                                <input name="holiday_id" type="number" hidden="True" t-att-value="holidays_request.id"/>-->
+<!--                            </form>-->
+<!--                        </div>-->
+                        <div class="col-md text-md-right">
+                           <h4><small class="text-right">Status:</small>
+                               <span t-field="holidays_request.state" class="badge badge-pill badge-info" title="Current stage of this holiday"/></h4>
+                        </div>
+                    </div>
+                </t>
+                <t t-set="card_body">
+                    <div class="row mb-4">
+                         <strong class="col-lg-2">Type</strong>
+                        <h5><span class="col-lg-4" t-field="holidays_request.holiday_status_id.name"/></h5>
+                    </div>
+                    <hr/>
+                    <div class="row mb-4">
+                        <strong class="col-lg-2">From</strong>
+                        <span class="col-lg-4" t-field="holidays_request.date_from" t-options='{"widget": "date"}'/>
+                        <strong class="col-lg-2">To</strong>
+                        <span class="col-lg-4" t-field="holidays_request.date_to" t-options='{"widget": "date"}'/>
+                    </div>
+                    <div class="row mb-4">
+                        <strong class="col-lg-2">Employee</strong>
+                        <span class="col-lg-4" t-field="holidays_request.employee_id.complete_name"/>
+                        <strong class="col-lg-2">Department</strong>
+                        <span class="col-lg-4" t-field="holidays_request.department_id.name"/>
+                    </div>
+                    <div class="row mb-4">
+                        <strong class="col-lg-2">Description</strong>
+                        <div t-if="holidays_request.name" class="col-lg-4" t-field="holidays_request.description"/>
+                        <div t-else="" class="col-lg-4">
+                            <em class="text-muted"><small>Without description</small></em>
+                        </div>
+                        <strong class="col-lg-2">Qty Days</strong>
+                        <div t-if="holidays_request.number_of_days_display" class="col-lg-4" t-field="holidays_request.number_of_days_display" t-options='{"widget": "integer"}'/>
+                        <div t-else="" class="col-lg-4">
+                            <em class="text-muted"><small>No info</small></em>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <strong class="col-lg-2">Reported on</strong>
+                        <span class="col-lg-4" t-field="holidays_request.create_date" t-options='{"widget": "date"}'/>
+                         <strong class="col-lg-2">Reported by</strong>
+                        <div class="col-lg-4">
+                            <div class="row">
+                                <div class="col flex-grow-0 pr-3">
+                                    <img t-if="holidays_request.create_uid.partner_id.image_1024" class="rounded-circle o_portal_contact_img" t-attf-src="data:image/png;base64,#{holidays_request.create_uid.partner_id.image_1024}" alt="Contact"/>
+                                    <img t-else="" class="rounded-circle o_portal_contact_img" src="/web/static/src/img/user_menu_avatar.png" alt="Contact"/>
+                                </div>
+                                <div class="col pl-sm-0">
+                                    <div t-field="holidays_request.create_uid.partner_id" t-options='{"widget": "contact", "fields": ["name", "email"], "no_marker": true}'/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-4" t-if="holidays_request.state == 'refuse'">
+                        <strong class="col-lg-2">Reason Reject</strong>
+                        <div t-if="holidays_request.reason_reject" class="col-lg-4" t-field="holidays_request.reason_reject"/>
+                        <div t-else="" class="col-lg-4">
+                            <em class="text-muted"><small>--</small></em>
+                        </div>
+                        <strong class="col-lg-2">Description Reject</strong>
+                        <div t-if="holidays_request.description_reject" class="col-lg-4" t-field="holidays_request.description_reject"/>
+                        <div t-else="" class="col-lg-4">
+                            <em class="text-muted"><small>--</small></em>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                    </div>
+                    <div class="row mb-4">
+                        <strong class="col-lg-2">Responsible comment</strong>
+                        <div t-if="holidays_request.report_note" class="col-lg-10" t-field="holidays_request.report_note"/>
+                        <div t-else="" class="col-lg-10">
+                            <em class="text-muted"><small>Without description</small></em>
+                        </div>
+                    </div>
+                    <hr/>
+                    <div class="row mb-4" t-if="holidays_request.cancellation">
+                        <strong class="col-lg-2">Reason Cancellation</strong>
+                        <div t-if="holidays_request.description_cancellation" class="col-lg-4" t-field="holidays_request.description_cancellation"/>
+                        <div t-else="" class="col-lg-4">
+                            <em class="text-muted"><small>--</small></em>
+                        </div>
+                    </div>
+                    <div class="row mb-4" t-if="holidays_request.reject_cancellation and not holidays_request.cancellation">
+                        <strong class="col-lg-2">Reject Cancellation</strong>
+                        <div class="col-lg-4" t-field="holidays_request.reject_cancellation"/>
+                    </div>
+                </t>
+            </t>
+            <div id="invoice_communication" class="mt-4">
+                <h2>History</h2>
+                <t t-call="portal.message_thread">
+                    <t t-set="object" t-value="holidays_request"/>
+                </t>
+            </div>
+        </t>
+    </template>
+
+    <!--  Personal Days  -->
+    <template id="portal_my_personals" name="My Personal Days">
+        <t t-call="portal.portal_layout">
+            <t t-set="breadcrumbs_searchbar" t-value="True"/>
+
+            <t t-call="portal.portal_searchbar">
+                <t t-set="title">Personal Days</t>
+            </t>
+            <nav class="navbar navbar-light border o_portal_navbar">
+                <div class="pull-right" >
+                    <a class="btn btn-sm btn-primary" icon="fa-pencil-square-o" role="button" name="Sign_document" t-att-href="'/personal_days/new/'">
+                    <span class="fa fa-pencil-square-o"></span>Personal Day New</a>
+                </div>
+            </nav>
+            <t t-if="not personals">
+                <p>There are currently no personal days your account.</p>
+            </t>
+            <t t-if="personals" t-call="portal.portal_table">
+                <thead>
+                    <tr class="active">
+                        <th>Nro.</th>
+                        <th>Date From</th>
+                        <th>Date to</th>
+                        <th>Type</th>
+                        <th>Create Date</th>
+                        <th class="text-right">State</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <t t-set="count" t-value="0"/>
+                    <t t-foreach="personals" t-as="personal">
+                        <tr>
+                            <t t-set="count" t-value="count+1"/>
+                            <td><t t-esc="count"/></td>
+                            <td><t t-esc="personal.request_date_from.strftime('%d/%m/%Y')"/></td>
+                            <td><t t-esc="personal.request_date_to.strftime('%d/%m/%Y')"/></td>
+                            <td><a t-attf-href="/personal_days/detail/#{personal.id}"><t t-esc="personal.holiday_status_id.name"/></a></td>
+                            <td><t t-esc="personal.create_date.strftime('%d/%m/%Y')"/></td>
+                            <td class="text-right"><t t-esc="dict(personal._fields['state']._description_selection(personal.env)).get(personal.state)"/></td>
+                        </tr>
+                    </t>
+                </tbody>
+            </t>
+        </t>
+    </template>
+
+    <template id="portal_personal_days_details" name="Leaves Personal Days">
+        <t t-call="portal.portal_layout">
+            <!--   Init Modal    -->
+            <div class="modal fade" role="dialog" id="reason_cancellation">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Request Cancellation</h5>
+                            <button type="button" class="close" data-dismiss="modal">×</button>
+                        </div>
+                        <form method="post" id="reason_cancel_form">
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label class="col-form-label" for="description_cancellation">Information</label>
+                                    <textarea name="description_cancellation" placeholder="Enter additional information ..." class="form-control description"/>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <div class="mt16 clearfix">
+                                  <button type="button" class="btn btn-primary o_portal_reason_cancel_submit float-right">Send</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!--    End Modal    -->
+            <t t-set="breadcrumbs_searchbar" t-value="True"/>
+            <t t-call="portal.portal_searchbar">
+                <t t-set="title">Personal Days</t>
+            </t>
+            <t t-call="portal.portal_record_layout">
+            <t t-set="card_header">
+                <div class="row no-gutters">
+                    <div class="col-md">
+                        <h5 class="mb-1 mb-md-0">
+                            <span t-field="personal.description"/>
+                            <small class="text-muted"> (#<span t-field="personal.id"/>)</small>
+                        </h5>
+                    </div>
+                    <div class="col-md text-md-right">
+                        <small class="text-right">State:</small>
+                        <span t-field="personal.state" class=" badge badge-pill badge-info" title="Current stage of this personal day"/>
+                    </div>
+                </div>
+            </t>
+            <t t-set="card_body">
+                <div t-if="personal.state == 'validate'" class="pull-right">
+                    <form id="HolidaysCancellationForm" action="/personal_days/cancellation/" method="post" class="s_website_form container-fluid mt32" enctype="multipart/form-data" data-model_name="" t-attf-data-success_page="/personal_days/detail/#{personal.id}">
+                        <t t-if="personal.sign_status == 'sent' and personal.sign_request_id">
+                            <a class="btn btn-sm btn-primary" role="button" t-attf-href="/my/signature/#{personal.sign_request_id.id}">Sign Document</a>
+                        </t>
+                        <t t-if="personal.sign_status == 'signed' and personal.sign_request_id">
+                            <a class="btn btn-sm btn-primary" role="button" t-attf-href="/my/signature/#{personal.sign_request_id.id}">Download Document</a>
+                        </t>
+                        <t t-if="not personal.cancellation">
+                            <button name="cancel" id="cancel" type="button" class="btn btn-sm btn-secondary btn-cancel" data-toggle="modal" data-target="#reason_cancellation">Request Cancel</button>
+                        </t>
+                        <button name="approve" type="submit" class="btn btn-primary o_website_form_send" style="display: none;"/>
+                        <input name="personal_day_id" type="number" hidden="True" t-att-value="personal.id"/>
+                        <input name="state" id="state_input" type="text" hidden="True"/>
+                        <input name="description_cancellation" id="description_cancellation" type="text" hidden="True"/>
+                        <div class="mb-4">
+                            <div id="o_website_form_result">
+                                <t t-esc="validation_error"/>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="row mb-4">
+                    <strong class="col-lg-2">From</strong>
+                    <span class="col-lg-4" t-field="personal.date_from" t-options='{"widget": "date"}'/>
+                    <strong class="col-lg-2">To</strong>
+                    <span class="col-lg-4" t-field="personal.date_to" t-options='{"widget": "date"}'/>
+                </div>
+                <div class="row mb-4">
+                    <strong t-if='personal.holiday_status_id' class="col-lg-2">Personal Day Type</strong>
+                    <span class="col-lg-4" t-field="personal.holiday_status_id"/>
+                </div>
+                <div class="row mb-4">
+                    <strong class="col-lg-2">Description</strong>
+                    <div t-if="personal.name" class="col-lg-10" t-field="personal.description"/>
+                    <div t-else="" class="col-lg-10">
+                        <em class="text-muted"><small>No description</small></em>
+                    </div>
+                </div>
+                <div class="row mb-4" t-if="personal.state == 'refuse'">
+                    <strong class="col-lg-2">Reason Reject</strong>
+                    <div t-if="personal.reason_reject" class="col-lg-4" t-field="personal.reason_reject"/>
+                    <div t-else="" class="col-lg-4">
+                        <em class="text-muted"><small>--</small></em>
+                    </div>
+                    <strong class="col-lg-2">Description Reject</strong>
+                    <div t-if="personal.description_reject" class="col-lg-4" t-field="personal.description_reject"/>
+                    <div t-else="" class="col-lg-4">
+                        <em class="text-muted"><small>--</small></em>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <strong class="col-lg-2">Reported on</strong>
+                    <span class="col-lg-4" t-field="personal.create_date" t-options='{"widget": "date"}'/>
+                     <strong class="col-lg-2">Reported by</strong>
+                    <div class="col-lg-4">
+                        <div class="row">
+                            <div class="col flex-grow-0 pr-3">
+                                <img t-if="personal.create_uid.partner_id.image_1024" class="rounded-circle o_portal_contact_img" t-attf-src="data:image/png;base64,#{personal.create_uid.partner_id.image_1024}" alt="Contact"/>
+                                <img t-else="" class="rounded-circle o_portal_contact_img" src="/web/static/src/img/user_menu_avatar.png" alt="Contact"/>
+                            </div>
+                            <div class="col pl-sm-0">
+                                <div t-field="personal.create_uid.partner_id" t-options='{"widget": "contact", "fields": ["name", "email"], "no_marker": true}'/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                </div>
+                <div class="row mb-4">
+                    <strong class="col-lg-2">Responsible comment</strong>
+                    <div t-if="personal.report_note" class="col-lg-10" t-field="personal.report_note"/>
+                    <div t-else="" class="col-lg-10">
+                        <em class="text-muted"><small>Without description</small></em>
+                    </div>
+                </div>
+                <hr/>
+                <div class="row mb-4" t-if="personal.cancellation">
+                    <strong class="col-lg-2">Reason Cancellation</strong>
+                    <div t-if="personal.description_cancellation" class="col-lg-4" t-field="personal.description_cancellation"/>
+                    <div t-else="" class="col-lg-4">
+                        <em class="text-muted"><small>--</small></em>
+                    </div>
+                </div>
+                <div class="row mb-4" t-if="personal.reject_cancellation and not personal.cancellation">
+                    <strong class="col-lg-2">Reject Cancellation</strong>
+                    <div class="col-lg-4" t-field="personal.reject_cancellation"/>
+                </div>
+            </t>
+            </t>
+            <div id="invoice_communication" class="mt-4">
+                <h2>History</h2>
+                <t t-call="portal.message_thread">
+                    <t t-set="object" t-value="personal"/>
+                </t>
+            </div>
+        </t>
+    </template>
+
+    <!--  Personal Days Requests  -->
+    <template id="personal_days_requests">
+        <t t-call="portal.portal_layout">
+            <t t-set="breadcrumbs_searchbar" t-value="True"/>
+
+            <t t-call="portal.portal_searchbar">
+                <t t-set="title">Personal Days Request</t>
+            </t>
+            <t t-if="not personal_days_requests">
+                <p>There are currently no personal days requests your account.</p>
+            </t>
+            <t t-if="personal_days_requests" t-call="portal.portal_table">
+                <thead>
+                    <tr class="active">
+                        <th>Nro</th>
+                        <th>Type</th>
+                        <th>Name</th>
+                        <th>From</th>
+                        <th>To</th>
+                        <th>Qty. Days</th>
+                        <th>State</th>
+                        <th>Report</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <t t-set="count" t-value="0"/>
+                    <tr t-foreach="personal_days_requests" t-as="o">
+                        <t t-set="count" t-value="count+1"/>
+                        <td><t t-esc="count"/></td>
+                        <td><a t-attf-href="/personal_days_requests/detail/#{o.id}"><t t-esc="o.holiday_status_id.name"/></a></td>
+                        <td><t t-esc="o.employee_id.complete_name"/></td>
+                        <td><t t-esc="o.request_date_from.strftime('%d/%m/%Y')"/></td>
+                        <td><t t-esc="o.request_date_to.strftime('%d/%m/%Y')"/></td>
+                        <td style="text-align:center"><t t-esc="o.number_of_days_display" t-options='{"widget": "integer"}'/></td>
+                        <td><t t-esc="dict(o._fields['state']._description_selection(o.env)).get(o.state)"/></td>
+                        <td>
+                            <a t-if="o.state == 'validate' and o.sign_request_id" class="btn btn-sm btn-light" icon="fa-pencil-square-o" role="button" name="Download" t-att-href="'/report/personal_days/%s' % (o.id)">
+                            <span class="fa fa-download"></span>Download</a>
+                            <t t-if="o.state != 'validate' and (not o.sign_request_id or o.sign_request_id.state == 'canceled')">Without proof</t>
+                        </td>
+                    </tr>
+                </tbody>
+            </t>
+        </t>
+    </template>
+
+    <template id="portal_personal_days_requests_details" name="Personal Days Requests">
+        <t t-call="portal.portal_layout">
+            <!--   Init Modal    -->
+            <div class="modal fade" role="dialog" id="reason_rejects">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Cancel request</h5>
+                            <button type="button" class="close" data-dismiss="modal">×</button>
+                        </div>
+                        <form method="post" id="reason_rejects_form">
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label class="col-form-label" for="reason_reject">Reason for rejection</label>
+                                    <select class="form-control reason_id">
+                                        <option t-foreach="reason_reject" t-as="res" t-att-value="res.id">
+                                            <t t-esc="res.name"/>
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-form-label" for="description_reject">Additional Information</label>
+                                    <textarea name="description_reject" placeholder="Enter additional information ..." class="form-control description"/>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <div class="mt16 clearfix">
+                                  <button type="button" class="btn btn-primary o_portal_reason_reject_submit float-right">Send</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" role="dialog" id="reject_cancellation">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Reject Cancellation</h5>
+                            <button type="button" class="close" data-dismiss="modal">×</button>
+                        </div>
+                        <form method="post" id="reject_cancel_form">
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label class="col-form-label" for="description_cancellation">Description</label>
+                                    <textarea name="description_cancellation" placeholder="Enter additional information ..." class="form-control description"/>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <div class="mt16 clearfix">
+                                  <button type="button" class="btn btn-primary o_portal_reject_cancel_submit float-right">Send</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!--    End Modal    -->
+            <t t-set="breadcrumbs_searchbar" t-value="True"/>
+            <t t-call="portal.portal_searchbar">
+                <t t-set="title">Personal Days Requests</t>
+            </t>
+
+            <t t-call="portal.portal_record_layout">
+                <t t-set="card_header">
+                    <div class="row no-gutters">
+                        <div t-if="personal_days_request.state == 'confirm'">
+                            <form id="HolidaysRequestForm" action="/personal_days_requests/send/" method="post" class="s_website_form container-fluid mt32" enctype="multipart/form-data" data-model_name="" t-attf-data-success_page="/personal_days_requests/detail/#{personal_days_request.id}">
+                                <button name="approve" id="approve" type="submit" class="btn btn-primary o_website_form_send o_default_snippet_text" value="approve">Approve</button>
+                                <button name="cancel" id="cancel" type="button" class="btn btn-secondary btn-cancel" data-toggle="modal" data-target="#reason_rejects">Reject</button>
+                                <input name="personal_day_id" type="number" hidden="True" t-att-value="personal_days_request.id"/>
+                                <input name="state" id="state_input" type="text" hidden="True"/>
+                                <input name="reason_reject" id="reason_reject" type="text" hidden="True"/>
+                                <input name="description_reject" id="description_reject" type="text" hidden="True"/>
+                                <div class="mb-4">
+                                    <div id="o_website_form_result">
+                                        <t t-esc="validation_error"/>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div t-if="personal_days_request.cancellation and personal_days_request.state != 'cancel'" style="margin: 2px;">
+                            <form id="HolidaysCancellationForm" action="/personal_days_requests/send/" method="post" class="s_website_form container-fluid mt32" enctype="multipart/form-data" data-model_name="" t-attf-data-success_page="/personal_days_requests/detail/#{personal_days_request.id}">
+                                <button name="accept_cancellation" id="accept_cancellation" type="submit" class="btn btn-primary o_website_form_send o_default_snippet_text">Accept Cancellation</button>
+                                <button name="reject_cancellation" id="reject_cancellation" type="button" class="btn btn-secondary btn-cancel" data-toggle="modal" data-target="#reject_cancellation">Reject Cancellation</button>
+                                <input name="personal_day_id" type="number" hidden="True" t-att-value="personal_days_request.id"/>
+                                <input name="cancellation" type="number" hidden="True" t-att-value="1"/>
+                                <input name="description_cancellation" id="description_cancellation" type="text" hidden="True"/>
+                                <div class="mb-4">
+                                    <div id="o_website_form_result">
+                                        <t t-esc="validation_error"/>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+<!--                        <div t-if="personal_days_request.state == 'validate' and personal_days_request.employee_id.sign_holidays_report">-->
+<!--                            <form id="HolidaysRequestForm" action="/personal_days_request/send_to_sign/" method="post" class="s_website_form container-fluid mt32" enctype="multipart/form-data" data-model_name="" t-attf-data-success_page="/personal_days_requests/detail/#{personal_days_request.id}">-->
+<!--                                <button name="send_to_sign" id="sendToSign" href="" type="submit" class="btn btn-secondary o_website_form_send o_default_snippet_text" value="approve">Enviar comprobante para Firmar</button>-->
+<!--                                <input name="holiday_id" type="number" hidden="True" t-att-value="personal_days_request.id"/>-->
+<!--                            </form>-->
+<!--                        </div>-->
+                        <div class="col-md text-md-right">
+                           <h4><small class="text-right">Status:</small>
+                               <span t-field="personal_days_request.state" class="badge badge-pill badge-info" title="Current stage of this personal day"/></h4>
+                        </div>
+                    </div>
+                </t>
+                <t t-set="card_body">
+                    <div class="row mb-4">
+                         <strong class="col-lg-2">Type</strong>
+                        <h5><span class="col-lg-4" t-field="personal_days_request.holiday_status_id.name"/></h5>
+                    </div>
+                    <hr/>
+                    <div class="row mb-4">
+                        <strong class="col-lg-2">From</strong>
+                        <span class="col-lg-4" t-field="personal_days_request.date_from" t-options='{"widget": "date"}'/>
+                        <strong class="col-lg-2">To</strong>
+                        <span class="col-lg-4" t-field="personal_days_request.date_to" t-options='{"widget": "date"}'/>
+                    </div>
+                    <div class="row mb-4">
+                        <strong class="col-lg-2">Employee</strong>
+                        <span class="col-lg-4" t-field="personal_days_request.employee_id.complete_name"/>
+                        <strong class="col-lg-2">Department</strong>
+                        <span class="col-lg-4" t-field="personal_days_request.department_id.name"/>
+                    </div>
+                    <div class="row mb-4">
+                        <strong class="col-lg-2">Description</strong>
+                        <div t-if="personal_days_request.name" class="col-lg-4" t-field="personal_days_request.description"/>
+                        <div t-else="" class="col-lg-4">
+                            <em class="text-muted"><small>Without description</small></em>
+                        </div>
+                        <strong class="col-lg-2">Qty Days</strong>
+                        <div t-if="personal_days_request.number_of_days_display" class="col-lg-4" t-field="personal_days_request.number_of_days_display" t-options='{"widget": "integer"}'/>
+                        <div t-else="" class="col-lg-4">
+                            <em class="text-muted"><small>No info</small></em>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <strong class="col-lg-2">Reported on</strong>
+                        <span class="col-lg-4" t-field="personal_days_request.create_date" t-options='{"widget": "date"}'/>
+                         <strong class="col-lg-2">Reported by</strong>
+                        <div class="col-lg-4">
+                            <div class="row">
+                                <div class="col flex-grow-0 pr-3">
+                                    <img t-if="personal_days_request.create_uid.partner_id.image_1024" class="rounded-circle o_portal_contact_img" t-attf-src="data:image/png;base64,#{personal_days_request.create_uid.partner_id.image_1024}" alt="Contact"/>
+                                    <img t-else="" class="rounded-circle o_portal_contact_img" src="/web/static/src/img/user_menu_avatar.png" alt="Contact"/>
+                                </div>
+                                <div class="col pl-sm-0">
+                                    <div t-field="personal_days_request.create_uid.partner_id" t-options='{"widget": "contact", "fields": ["name", "email"], "no_marker": true}'/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-4" t-if="personal_days_request.state == 'refuse'">
+                        <strong class="col-lg-2">Reason Reject</strong>
+                        <div t-if="personal_days_request.reason_reject" class="col-lg-4" t-field="personal_days_request.reason_reject"/>
+                        <div t-else="" class="col-lg-4">
+                            <em class="text-muted"><small>--</small></em>
+                        </div>
+                        <strong class="col-lg-2">Description Reject</strong>
+                        <div t-if="personal_days_request.description_reject" class="col-lg-4" t-field="personal_days_request.description_reject"/>
+                        <div t-else="" class="col-lg-4">
+                            <em class="text-muted"><small>--</small></em>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                    </div>
+                    <div class="row mb-4">
+                        <strong class="col-lg-2">Responsible comment</strong>
+                        <div t-if="personal_days_request.report_note" class="col-lg-10" t-field="personal_days_request.report_note"/>
+                        <div t-else="" class="col-lg-10">
+                            <em class="text-muted"><small>Without description</small></em>
+                        </div>
+                    </div>
+                    <hr/>
+                    <div class="row mb-4" t-if="personal_days_request.cancellation">
+                        <strong class="col-lg-2">Reason Cancellation</strong>
+                        <div t-if="personal_days_request.description_cancellation" class="col-lg-4" t-field="personal_days_request.description_cancellation"/>
+                        <div t-else="" class="col-lg-4">
+                            <em class="text-muted"><small>--</small></em>
+                        </div>
+                    </div>
+                    <div class="row mb-4" t-if="personal_days_request.reject_cancellation and not personal_days_request.cancellation">
+                        <strong class="col-lg-2">Reject Cancellation</strong>
+                        <div class="col-lg-4" t-field="personal_days_request.reject_cancellation"/>
+                    </div>
+                </t>
+            </t>
+            <div id="communication" class="mt-4">
+                <h2>History</h2>
+                <t t-call="portal.message_thread">
+                    <t t-set="object" t-value="personal_days_request"/>
+                </t>
+            </div>
+        </t>
+    </template>
+
+
+    <!--
+    ************************
+        FORMS
+    ************************
+    -->
+
+    <!--  Inabilities  -->
+    <template id="leave_submited" name="Ticket Leave Received">
+        <t t-call="website.layout">
+            <t t-set="is_portal" t-value="True"/>
+            <div id="wrap" class="oe_structure oe_empty">
+                <div class="container">
+                    <div clas="row">
+                        <h1 class="text-center"><i class="fa fa-check-circle fa-2x text-success" role="img" aria-label="Success" title="Success"/></h1>
+                        <h1 class="text-center">Thank you for registering your disability</h1>
+                        <h4 class="text-center">Return to my disabilities <a href="/my/inabilities"><i class="fa fa-suitcase"></i></a></h4>
+                    </div>
+                </div>
+            </div>
+         </t>
+    </template>
+
+    <template id="leave_submit" name="Inhability: Submit a Leave">
+        <t t-call="portal.portal_layout">
+            <t t-set="breadcrumbs_searchbar" t-value="True"/>
+            <t t-call="portal.portal_searchbar">
+                <t t-set="title">Inabilities</t>
+            </t>
+            <div class="container">
+             <t t-call="portal.portal_record_layout">
+                <t t-set="card_header">
+                    <h4 class="title">New Inability</h4>
+                </t>
+                <div class="row">
+                    <t t-set="card_body">
+                    <section id="forms">
+                        <form action="/leave/save/" id="inhabilityForm" method="post" class="s_website_form container-fluid mt32" enctype="multipart/form-data" data-model_name="" data-success_page="/leave-submited">
+                            <div class="form-group row form-field o_website_form_required" t-attf-id="datetimepicker_1" data-target-input="nearest">
+                                <div class="col-lg-3 col-md-4 text-right">
+                                    <label class="col-form-label" for="request_date_from">From *</label>
+                                </div>
+                                <div class="input-group-append col-lg-7 col-md-8" t-attf-data-target="#datetimepicker_1">
+                                    <input type="date" class="form-control datepicker-input o_website_form_input" t-attf-data-target="#datetimepicker_1" name="request_date_from" required="1"/>
+                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                </div>
+                            </div>
+                            <div class="form-group row form-field o_website_form_required" t-attf-id="datetimepicker_2" data-target-input="nearest">
+                                <div class="col-lg-3 col-md-4 text-right">
+                                    <label class="col-form-label" for="request_date_to">To *</label>
+                                </div>
+                                <div class="input-group-append col-lg-7 col-md-8" t-attf-data-target="#datetimepicker_2">
+                                    <input type="date" class="form-control datepicker-input o_website_form_input" t-attf-data-target="#datetimepicker_2" name="request_date_to" required="1"/>
+                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                </div>
+                            </div>
+                            <div class="form-group row form-field o_website_form_required">
+                                <div class="col-lg-3 col-md-4 text-right">
+                                    <label class="col-form-label" for="folio">Folio *</label>
+                                </div>
+                                <div class="col-lg-7 col-md-8">
+                                    <input type="text" class="form-control o_website_form_input" name="folio" required="1"/>
+                                </div>
+                            </div>
+                            <div class="form-group row form-field o_website_form_required">
+                                <div class="col-lg-3 col-md-4 text-right">
+                                    <label class="col-form-label" for="name">Description *</label>
+                                </div>
+                                <div class="col-lg-7 col-md-8">
+                                    <input type="text" class="form-control o_website_form_input" name="name" required="1"/>
+                                </div>
+                            </div>
+                            <div t-if="len(default_values.get('holiday_status_ids', '')) > 0" class="form-group row form-field" style="display:none">
+                                <div class="col-lg-3 col-md-4 text-right">
+                                    <label class="col-form-label" for="holiday_status_id">Type of Absence</label>
+                                </div>
+                                <div class="col-lg-7 col-md-8">
+                                    <select id="holiday_status_id" name="holiday_status_id" class="form-control o_website_form_input">
+                                        <t t-foreach="default_values.get('holiday_status_ids', '')" t-as="holiday_status">
+                                            <option t-att-value="holiday_status.id" t-esc="holiday_status.name"/>
+                                        </t>
+                                    </select>
+                                </div>
+                            </div>
+                            <div t-if="len(default_values.get('type_inhability_ids', '')) > 0" class="form-group row form-field">
+                                <div class="col-lg-3 col-md-4 text-right">
+                                    <label class="col-form-label" for="type_inhability_id">Type of Disability</label>
+                                </div>
+                                <div class="col-lg-7 col-md-8">
+                                    <select id="type_inhability_id" name="type_inhability_id" class="form-control o_website_form_input">
+                                        <t t-foreach="default_values.get('type_inhability_ids', '')" t-as="type_inhability">
+                                            <option t-att-value="type_inhability.id" t-esc="type_inhability.name"/>
+                                        </t>
+                                    </select>
+                                </div>
+                            </div>
+                            <div t-if="len(default_values.get('inhability_classification_ids', '')) > 0" class="form-group row form-field">
+                                <div class="col-lg-3 col-md-4 text-right">
+                                    <label class="col-form-label" for="inhability_classification_id">Classification</label>
+                                </div>
+                                <div class="col-lg-7 col-md-8">
+                                    <select id="inhability_classification_id" name="inhability_classification_id" class="form-control o_website_form_input">
+                                        <t t-foreach="default_values.get('inhability_classification_ids', '')" t-as="inhability_classification">
+                                            <option t-att-value="inhability_classification.id" t-esc="inhability_classification.name"/>
+                                        </t>
+                                    </select>
+                                </div>
+                            </div>
+                            <div t-if="len(default_values.get('inhability_category_ids', '')) > 0" class="form-group row form-field">
+                                <div class="col-lg-3 col-md-4 text-right">
+                                    <label class="col-form-label" for="inhability_category_id">Category</label>
+                                </div>
+                                <div class="col-lg-7 col-md-8">
+                                    <select id="inhability_category_id" name="inhability_category_id" class="form-control o_website_form_input">
+                                        <t t-foreach="default_values.get('inhability_category_ids', '')" t-as="inhability_category">
+                                            <option t-att-value="inhability_category.id" t-esc="inhability_category.name"/>
+                                        </t>
+                                    </select>
+                                </div>
+                            </div>
+                            <div t-if="len(default_values.get('inhability_subcategory_ids', '')) > 0" class="form-group row form-field">
+                                <div class="col-lg-3 col-md-4 text-right">
+                                    <label class="col-form-label" for="inhability_subcategory_id">Subcategory</label>
+                                </div>
+                                <div class="col-lg-7 col-md-8">
+                                    <select id="inhability_subcategory_id" name="inhability_subcategory_id" class="form-control o_website_form_input">
+                                        <t t-foreach="default_values.get('inhability_subcategory_ids', '')" t-as="inhability_subcategory">
+                                            <option t-att-value="inhability_subcategory.id" t-esc="inhability_subcategory.name"/>
+                                        </t>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row form-field">
+                                <div class="col-lg-3 col-md-4 text-right">
+                                    <label class="col-form-label" for="attachments">Attachment(s)</label>
+                                </div>
+                                <div class="col-lg-7 col-md-8">
+                                    <input type="file" name="attachments" class="form-control o_website_form_input" multiple="true" accept="image/*,application/pdf,video/*"/>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="offset-lg-3 offset-md-4 col-md-8 col-lg-7">
+                                    <div id="o_website_form_result">
+                                        <t t-esc="error_validation"/>
+                                    </div>
+                                </div>
+                                <div class="offset-lg-3 offset-md-4 col-md-8 col-lg-7">
+                                    <button type="submit" class="btn btn-primary btn-lg o_website_form_send o_default_snippet_text">Send</button>
+                                </div>
+                            </div>
+                            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                        </form>
+                    </section>
+                    </t>
+                </div>
+             </t>
+        </div>
+        </t>
+    </template>
+
+    <!--  Holidays  -->
+    <template id="holiday_submited" name="Ticket Holiday Received">
+        <t t-call="website.layout">
+            <t t-set="is_portal" t-value="True"/>
+            <div id="wrap" class="oe_structure oe_empty">
+                <div class="container">
+                    <div clas="row">
+                        <h1 class="text-center"><i class="fa fa-check-circle fa-2x text-success" role="img" aria-label="Success" title="Success"/></h1>
+                        <h1 class="text-center">Thank you for registering your holiday</h1>
+                        <h4 class="text-center">Return to my holidays <a href="/my/holidays"><i class="fa fa-suitcase"></i></a></h4>
+                    </div>
+                </div>
+            </div>
+         </t>
+    </template>
+
+    <template id="holiday_submit" name="Holiday: Submit a Holiday">
+        <t t-call="portal.portal_layout">
+            <t t-set="breadcrumbs_searchbar" t-value="True"/>
+            <t t-call="portal.portal_searchbar">
+                <t t-set="title">Holidays</t>
+            </t>
+            <div class="container">
+             <t t-call="portal.portal_record_layout">
+                <t t-set="card_header">
+                    <h4 class="title">New Holiday</h4>
+                </t>
+                <div class="row">
+                    <t t-set="card_body">
+                    <section id="forms">
+                        <form action="/holiday/save/" id="holidayForm" method="post" class="s_website_form container-fluid mt32" enctype="multipart/form-data" data-model_name="" data-success_page="/holiday-submited">
+                            <div class="alert alert-info hidden holidays_remaining">
+                                <center>
+                                    <strong>
+                                        <t t-esc="default_values['holiday_remaining_days'][default_values['holiday_status_ids'][0].id]['virtual_remaining_leaves']" t-options="{'widget':'integer'}"/>
+                                    Días disponibles de <t t-esc="default_values['holiday_remaining_days'][default_values['holiday_status_ids'][0].id]['total_days']" t-options="{'widget':'integer'}"/>
+                                    </strong>
+                                </center>
+                            </div>
+                            <div t-if="len(default_values.get('holiday_status_ids', '')) > 0" class="form-group row form-field">
+                                <div class="col-lg-3 col-md-4 text-right">
+                                    <label class="col-form-label" for="holiday_status_id">Type of Absence</label>
+                                </div>
+                                <div class="col-lg-7 col-md-8">
+                                    <select id="holiday_status_id" name="holiday_status_id" class="form-control o_website_form_input">
+                                        <t t-foreach="default_values.get('holiday_status_ids', '')" t-as="holiday_status">
+                                            <option t-att-value="holiday_status.id" t-att-disabled="default_values['holiday_remaining_days'][holiday_status.id]['disabled']" t-esc="holiday_status.name"/>
+                                        </t>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row form-field o_website_form_required" t-attf-id="datetimepicker_1" data-target-input="nearest">
+                                <div class="col-lg-3 col-md-4 text-right">
+                                    <label class="col-form-label" for="request_date_from">From *</label>
+                                </div>
+                                <div class="input-group-append col-lg-7 col-md-8" t-attf-data-target="#datetimepicker_1">
+                                    <input type="date" class="form-control datepicker-input o_website_form_input" id="dateFrom" t-attf-data-target="#datetimepicker_1" name="request_date_from" required="1"/>
+                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                </div>
+                            </div>
+                            <div class="form-group row form-field o_website_form_required" t-attf-id="datetimepicker_2" data-target-input="nearest">
+                                <div class="col-lg-3 col-md-4 text-right">
+                                    <label class="col-form-label" for="request_date_to">To *</label>
+                                </div>
+                                <div class="input-group-append col-lg-7 col-md-8" t-attf-data-target="#datetimepicker_2">
+                                    <input type="date" class="form-control datepicker-input o_website_form_input" id="dateTo" t-attf-data-target="#datetimepicker_2" name="request_date_to" required="1"/>
+                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                </div>
+                            </div>
+                            <div class="form-group row form-field o_website_form_required">
+                                <div class="col-lg-3 col-md-4 text-right">
+                                    <label class="col-form-label" for="name">Description *</label>
+                                </div>
+                                <div class="col-lg-7 col-md-8">
+                                    <input type="text" class="form-control o_website_form_input" name="name" required="1"/>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="offset-lg-3 offset-md-4 col-md-8 col-lg-7">
+                                    <div id="o_website_form_result">
+                                        <t t-esc="error_validation"/>
+                                    </div>
+                                </div>
+                                <div class="offset-lg-3 offset-md-4 col-md-8 col-lg-7">
+                                    <button type="submit" class="btn btn-primary btn-lg o_website_form_send o_default_snippet_text">Send</button>
+                                </div>
+                            </div>
+                            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                        </form>
+                    </section>
+                    </t>
+                </div>
+             </t>
+        </div>
+        </t>
+    </template>
+
+    <template id="holidays_unavailable" name="Inhability: Submit a Holiday">
+        <t name="Helpdesk" priority="29" t-name="payroll_portal.leave">
+             <t t-call="website.layout">
+                <t t-set="is_portal" t-value="True"/>
+                <t t-set="additional_title">New Holiday</t>
+                <div id="wrap" class="oe_structure oe_empt">
+                    <div class="container">
+                        <br></br>
+                        <nav class="navbar navbar-light border o_portal_navbar">
+                            <span><a href="/my/home" aria-label="Home" title="Home"><i class="fa fa-home"/></a> <a href="/my/holidays">My Holidays</a></span>
+                        </nav>
+                        <t t-call="portal.portal_record_layout">
+                            <t t-set="card_header">
+                                <h4 class="title">No vacation days available</h4>
+                            </t>
+                            <div class="row">
+                                <t t-set="card_body">
+                                <section id="forms">
+                                    <div class="alert alert-danger hidden holidays_remaining">
+                                        <center><strong>You do not have days available to request vacations.</strong></center>
+                                    </div>
+                                </section>
+                                </t>
+                            </div>
+                        </t>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+
+    <!--  Personal Days  -->
+    <template id="personal_days_submited" name="Ticket Personal Day Received">
+        <t t-call="website.layout">
+            <t t-set="is_portal" t-value="True"/>
+            <div id="wrap" class="oe_structure oe_empty">
+                <div class="container">
+                    <div clas="row">
+                        <h1 class="text-center"><i class="fa fa-check-circle fa-2x text-success" role="img" aria-label="Success" title="Success"/></h1>
+                        <h1 class="text-center">Thank you for registering your personal day</h1>
+                        <h4 class="text-center">Return to my personal day <a href="/my/personal_days"><i class="fa fa-suitcase"></i></a></h4>
+                    </div>
+                </div>
+            </div>
+         </t>
+    </template>
+
+    <template id="personal_days_submit" name="Personal Day: Submit a Personal Day">
+        <t t-call="portal.portal_layout">
+            <t t-set="breadcrumbs_searchbar" t-value="True"/>
+            <t t-call="portal.portal_searchbar">
+                <t t-set="title">Personal Day</t>
+            </t>
+            <div class="container">
+             <t t-call="portal.portal_record_layout">
+                <t t-set="card_header">
+                    <h4 class="title">New Personal Day</h4>
+                </t>
+                <div class="row">
+                    <t t-set="card_body">
+                    <section id="forms">
+                        <form action="/personal_days/save/" id="holidayForm" method="post" class="s_website_form container-fluid mt32" enctype="multipart/form-data" data-model_name="" data-success_page="/personal_days-submited">
+                            <div class="alert alert-info hidden holidays_remaining">
+                                <center>
+                                    <strong>
+                                        <t t-esc="default_values['holiday_remaining_days'][default_values['holiday_status_ids'][0].id]['virtual_remaining_leaves']" t-options="{'widget':'integer'}"/>
+                                    Días disponibles de <t t-esc="default_values['holiday_remaining_days'][default_values['holiday_status_ids'][0].id]['total_days']" t-options="{'widget':'integer'}"/>
+                                    </strong>
+                                </center>
+                            </div>
+                            <div t-if="len(default_values.get('holiday_status_ids', '')) > 0" class="form-group row form-field">
+                                <div class="col-lg-3 col-md-4 text-right">
+                                    <label class="col-form-label" for="holiday_status_id">Type of Absence</label>
+                                </div>
+                                <div class="col-lg-7 col-md-8">
+                                    <select id="holiday_status_id" name="holiday_status_id" class="form-control o_website_form_input">
+                                        <t t-foreach="default_values.get('holiday_status_ids', '')" t-as="holiday_status">
+                                            <option t-att-value="holiday_status.id" t-esc="holiday_status.name"/>
+                                        </t>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row form-field o_website_form_required" t-attf-id="datetimepicker_1" data-target-input="nearest">
+                                <div class="col-lg-3 col-md-4 text-right">
+                                    <label class="col-form-label" for="request_date_from">From *</label>
+                                </div>
+                                <div class="input-group-append col-lg-7 col-md-8" t-attf-data-target="#datetimepicker_1">
+                                    <input type="date" class="form-control datepicker-input o_website_form_input" id="dateFrom" t-attf-data-target="#datetimepicker_1" name="request_date_from" required="1"/>
+                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                </div>
+                            </div>
+                            <div class="form-group row form-field o_website_form_required" t-attf-id="datetimepicker_2" data-target-input="nearest">
+                                <div class="col-lg-3 col-md-4 text-right">
+                                    <label class="col-form-label" for="request_date_to">To *</label>
+                                </div>
+                                <div class="input-group-append col-lg-7 col-md-8" t-attf-data-target="#datetimepicker_2">
+                                    <input type="date" class="form-control datepicker-input o_website_form_input" id="dateTo" t-attf-data-target="#datetimepicker_2" name="request_date_to" required="1"/>
+                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                </div>
+                            </div>
+                            <div class="form-group row form-field o_website_form_required">
+                                <div class="col-lg-3 col-md-4 text-right">
+                                    <label class="col-form-label" for="name">Description *</label>
+                                </div>
+                                <div class="col-lg-7 col-md-8">
+                                    <input type="text" class="form-control o_website_form_input" name="name" required="1"/>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="offset-lg-3 offset-md-4 col-md-8 col-lg-7">
+                                    <div id="o_website_form_result">
+                                        <t t-esc="error_validation"/>
+                                    </div>
+                                </div>
+                                <div class="offset-lg-3 offset-md-4 col-md-8 col-lg-7">
+                                    <button type="submit" class="btn btn-primary btn-lg o_website_form_send o_default_snippet_text">Send</button>
+                                </div>
+                            </div>
+                            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                        </form>
+                    </section>
+                    </t>
+                </div>
+             </t>
+        </div>
+        </t>
+    </template>
+
+    <template id="personal_days_unavailable" name="Inhability: Submit a Personal Day">
+        <t name="Helpdesk" priority="29" t-name="payroll_portal.leave">
+             <t t-call="website.layout">
+                <t t-set="is_portal" t-value="True"/>
+                <t t-set="additional_title">New Personal Day</t>
+                <div id="wrap" class="oe_structure oe_empt">
+                    <div class="container">
+                        <br></br>
+                        <nav class="navbar navbar-light border o_portal_navbar">
+                            <span><a href="/my/home" aria-label="Home" title="Home"><i class="fa fa-home"/></a> <a href="/my/holidays">My Personal Days</a></span>
+                        </nav>
+                        <t t-call="portal.portal_record_layout">
+                            <t t-set="card_header">
+                                <h4 class="title">No personal days available</h4>
+                            </t>
+                            <div class="row">
+                                <t t-set="card_body">
+                                <section id="forms">
+                                    <div class="alert alert-danger hidden holidays_remaining">
+                                        <center><strong>You do not have days available to request personal days.</strong></center>
+                                    </div>
+                                </section>
+                                </t>
+                            </div>
+                        </t>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+
+</odoo>

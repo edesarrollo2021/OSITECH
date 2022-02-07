@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <template id="search_template_credits_filter">
+        <button type="button" class="o_dropdown_toggler_btn btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+            <span class="fa fa-bar-chart"/> Filter:
+            <t t-if="options['filters_credits'].get('string') and options['filters_credits'].get('filter') != 'custom'"><t t-esc="options['filters_credits']['string']"/></t>
+        </button>
+        <div class="dropdown-menu o_filter_menu" role="menu">
+            <a role="menuitem" title="No Filter" data-filter="no_filter" class="dropdown-item js_credit_report_filter">No Filter</a>
+            <div role="separator" class="dropdown-divider"></div>
+            <a role="menuitem" class="dropdown-item js_foldable_trigger o_closed_menu" data-filter='enrollment_filter'>Employee Enrollment</a>
+            <div class="o_foldable_menu o_closed_menu o_account_report_search" data-filter='enrollment_filter'>
+                <label for="enrollment_number">Enrollment :</label><br />
+                <input type="text" name="enrollment_number" t-att-value="options['filters_credits'].get('enrollment')"/><br />
+                <button type="button" class="btn btn-primary js_credit_report_filter" data-filter='enrollment_empl'>Apply</button>
+            </div>
+            <div role="separator" class="dropdown-divider"></div>
+            <a role="menuitem" class="dropdown-item js_foldable_trigger o_closed_menu" data-filter='employee_filter'>Employee Name</a>
+            <div class="o_foldable_menu o_closed_menu o_account_report_search" data-filter='employee_filter'>
+                <label for="employee_name">Employee :</label><br />
+                <input type="text" name="employee_name" t-att-value="options['filters_credits'].get('period')"/><br />
+                <button type="button" class="btn btn-primary js_credit_report_filter" data-filter='employee'>Apply</button>
+            </div>
+        </div>
+    </template>
+
+    <template id="search_template_periods">
+        <button type="button" class="o_dropdown_toggler_btn btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+            <span class="fa fa-book"/>
+            Periods:
+            <t t-set="selected_periods" t-value="', '.join(period.get('code') for period in options['filters_periods'] if period.get('selected'))"/>
+            <t t-if="selected_periods">
+                <t t-esc="selected_periods"/>
+            </t>
+            <t t-else="">
+                All
+            </t>
+        </button>
+        <div class="o_dropdown_menu dropdown-menu o_filter_menu" role="menu">
+            <t t-foreach="options['filters_periods']" t-as="j">
+                <a role="menuitem" class="dropdown-item js_account_report_choice_filter" t-att-title="j.get('name')" t-att-data-id="j.get('id')" data-filter="filters_periods">
+                    <t t-esc="j.get('name')"/>
+                </a>
+            </t>
+        </div>
+    </template>
+
+    <template id="search_template" inherit_id="hr_employe_mexico.search_template">
+        <xpath expr="." position="inside">
+            <div class="btn-group o_dropdown" t-if="options.get('filters_credits') != None">
+                <t t-call="hr_infonavit_fonacot.search_template_credits_filter"/>
+            </div>
+            <div class="btn-group o_dropdown" t-if="options.get('filters_periods') != None">
+                <t t-call="hr_infonavit_fonacot.search_template_periods"/>
+            </div>
+        </xpath>
+    </template>
+
+    </data>
+</odoo>

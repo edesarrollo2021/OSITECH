@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <record id="vacation_premium_allowance_view" model="ir.ui.view">
+        <field name="name">vacation.premium.allowance.wizard</field>
+        <field name="model">vacation.premium.allowance</field>
+        <field name="arch" type="xml">
+            <form string="Vacation Premium Allowance">
+                <group>
+                    <group>
+                        <field name="payment_holidays_bonus"/>
+                        <field name="date_from"/>
+                        <field name="date_to"/>
+                        <field name="payroll_period_id" domain="[('state','=','open')]"/>
+                        <field name="input_id"/>
+                    </group>
+                    <group>
+                        <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="assign" string="Asignar" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_vacation_premium_allowance_wizard" model="ir.actions.act_window">
+        <field name="name">Vacation Premium Allowance</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">vacation.premium.allowance</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem
+        id="menu_vacation_premium_allowance_wizard"
+        name="Vacation Premium Allowance"
+        sequence="50"
+        parent="hr_work_entry_contract.menu_hr_payroll_root"
+        action="action_vacation_premium_allowance_wizard"/>
+
+    </data>
+</odoo>

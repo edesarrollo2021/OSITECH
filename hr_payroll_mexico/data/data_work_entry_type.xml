@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        
+    <record id="work_entry_type_home_working2" model="hr.work.entry.type">
+        <field name="name">Días laborables normales pagados al 100%	</field>
+        <field name="code">WORK1101</field>
+        <field name="color">2</field>
+        <field name="sequence">1</field>
+        <field name="is_leave">0</field>
+    </record>
+    
+    <record id="hr_work_entry_type_diasemana" model="hr.work.entry.type">
+        <field name="name">Días de la semana</field>
+        <field name="code">DIASEMANA</field>
+        <field name="color">2</field>
+        <field name="sequence">2</field>
+        <field name="is_leave">0</field>
+    </record>
+    
+    <record id="hr_work_entry_type_factordia" model="hr.work.entry.type">
+        <field name="name">Factor De Días</field>
+        <field name="code">FACTORDIA</field>
+        <field name="color">2</field>
+        <field name="sequence">3</field>
+        <field name="is_leave">0</field>
+    </record>
+    
+    <record id="hr_work_entry_type_factormensual" model="hr.work.entry.type">
+        <field name="name">Periodo mensual</field>
+        <field name="code">PERIODO100</field>
+        <field name="color">2</field>
+        <field name="sequence">4</field>
+        <field name="is_leave">0</field>
+    </record>
+    
+    <record id="hr_work_entry_type_diaimss" model="hr.work.entry.type">
+        <field name="name">Días IMSS</field>
+        <field name="code">DIASIMSS</field>
+        <field name="color">2</field>
+        <field name="sequence">5</field>
+        <field name="is_leave">0</field>
+    </record>
+
+    <record id="hr_work_entry_type_01" model="hr.work.entry.type">
+        <field name="name">Vacaciones-2021</field>
+        <field name="code">F08-2021</field>
+        <field name="is_leave">1</field>
+        <field name="type_leave">holidays</field>
+        <field name="leave_type_ids" eval="[(6,0,[ref('hr_holidays_edi_mx.leave_holidays_2021')])]"/>
+    </record>
+
+    <record id="hr_work_entry_type_02" model="hr.work.entry.type">
+        <field name="name">Días Personales-2021</field>
+        <field name="code">F11-2021</field>
+        <field name="is_leave">1</field>
+        <field name="type_leave">personal_days</field>
+        <field name="leave_type_ids" eval="[(6,0,[ref('hr_holidays_edi_mx.leave_personal_days_2021')])]"/>
+    </record>
+
+    <record id="hr_work_entry_type_03" model="hr.work.entry.type">
+        <field name="name">Incapacidad Por Enfermedad General</field>
+        <field name="code">F01</field>
+        <field name="is_leave">1</field>
+        <field name="type_leave">inability</field>
+        <field name="leave_type_ids" eval="[(6,0,[ref('hr_holidays_edi_mx.leave_type_f01')])]"/>
+    </record>
+
+    <record id="hr_work_entry_type_04" model="hr.work.entry.type">
+        <field name="name">Incapacidad Por Riesgo de Trabajo</field>
+        <field name="code">F02</field>
+        <field name="is_leave">1</field>
+        <field name="type_leave">inability</field>
+        <field name="leave_type_ids" eval="[(6,0,[ref('hr_holidays_edi_mx.leave_type_f02')])]"/>
+    </record>
+
+    <record id="hr_work_entry_type_05" model="hr.work.entry.type">
+        <field name="name">Incapacidad Por Maternidad</field>
+        <field name="code">F03</field>
+        <field name="is_leave">1</field>
+        <field name="type_leave">inability</field>
+        <field name="leave_type_ids" eval="[(6,0,[ref('hr_holidays_edi_mx.leave_type_f03')])]"/>
+    </record>
+
+    <record id="hr_work_entry_type_06" model="hr.work.entry.type">
+        <field name="name">Falta Injustificada</field>
+        <field name="code">F04</field>
+        <field name="is_leave">1</field>
+        <field name="type_leave">leave</field>
+        <field name="leave_type_ids" eval="[(6,0,[ref('hr_holidays_edi_mx.leave_type_f04')])]"/>
+    </record>
+
+    <record id="hr_work_entry_type_07" model="hr.work.entry.type">
+        <field name="name">Falta Justificada</field>
+        <field name="code">F05</field>
+        <field name="is_leave">1</field>
+        <field name="type_leave">leave</field>
+        <field name="leave_type_ids" eval="[(6,0,[ref('hr_holidays_edi_mx.leave_type_f05')])]"/>
+    </record>
+
+    <record id="hr_work_entry_type_08" model="hr.work.entry.type">
+        <field name="name">Permiso con gose de sueldo</field>
+        <field name="code">F06</field>
+        <field name="is_leave">1</field>
+        <field name="type_leave">leave</field>
+        <field name="leave_type_ids" eval="[(6,0,[ref('hr_holidays_edi_mx.leave_type_f06')])]"/>
+    </record>
+
+    <record id="hr_work_entry_type_09" model="hr.work.entry.type">
+        <field name="name">Permiso sin gose de sueldo</field>
+        <field name="code">F07</field>
+        <field name="is_leave">1</field>
+        <field name="type_leave">leave</field>
+        <field name="leave_type_ids" eval="[(6,0,[ref('hr_holidays_edi_mx.leave_type_f07')])]"/>
+    </record>
+
+    <record id="hr_work_entry_type_010" model="hr.work.entry.type">
+        <field name="name">Licencia por cuidados médicos de hijos diagnosticados con cáncer</field>
+        <field name="code">F09</field>
+        <field name="is_leave">1</field>
+        <field name="type_leave">inability</field>
+        <field name="leave_type_ids" eval="[(6,0,[ref('hr_holidays_edi_mx.leave_type_f09')])]"/>
+    </record>
+
+    <record id="hr_work_entry_type_010" model="hr.work.entry.type">
+        <field name="name">Suspenciones</field>
+        <field name="code">F10</field>
+        <field name="is_leave">1</field>
+        <field name="type_leave">leave</field>
+        <field name="leave_type_ids" eval="[(6,0,[ref('hr_holidays_edi_mx.leave_type_f10')])]"/>
+    </record>
+
+    <record id="hr_work_entry_type_011" model="hr.work.entry.type">
+        <field name="name">Falta por Retardo</field>
+        <field name="code">F11</field>
+        <field name="is_leave">1</field>
+        <field name="type_leave">leave</field>
+        <field name="leave_type_ids" eval="[(6,0,[ref('hr_holidays_edi_mx.leave_type_f11')])]"/>
+    </record>
+
+    </data>
+</odoo>

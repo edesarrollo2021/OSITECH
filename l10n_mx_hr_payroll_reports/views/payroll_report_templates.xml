@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+<!--        <template id="search_template_structure">-->
+<!--            <button t-if="options.get('structure')" type="button" class="o_dropdown_toggler_btn btn btn-secondary dropdown-toggle account_partner_filter" data-toggle="dropdown">-->
+<!--                <span class="fa fa-folder-open"/> Structure-->
+<!--            </button>-->
+<!--            <ul class="dropdown-menu o_filter_menu" role="menu">-->
+<!--                <li class="o_account_report_search js_account_partner_m2m"/>-->
+<!--            </ul>-->
+<!--        </template>-->
+
+<!--        <template id="search_template" inherit_id="account_reports.search_template">-->
+<!--            <xpath expr="." position="inside">-->
+<!--                <div class="btn-group o_dropdown o_account_reports_filter_payroll_structure" t-if="options.get('structure') != None">-->
+<!--                    <t t-call="l10n_mx_hr_payroll_reports.search_template_payroll_structure"/>-->
+<!--                </div>-->
+<!--                <div class="btn-group o_dropdown o_account_reports_filter_date" t-if="options.get('date') != None">-->
+<!--                    <t t-call="account_reports.search_template_payroll_structure"/>-->
+<!--                </div>-->
+<!--            </xpath>-->
+<!--        </template>-->
+
+<!--        <template id="search_template_payroll_structure">-->
+<!--            <div class="col-4">-->
+<!--                <div class="col-12">-->
+<!--                    <t t-if="options.get('payroll_structure') != None">-->
+<!--                        Payroll Structure:-->
+<!--                        <t t-set="payroll_structure_value">All</t>-->
+<!--                        <t t-foreach="options['selected_payroll_structure']" t-as="payroll_structure_name">-->
+<!--                            <t t-set="payroll_structure_value" t-value="''"/>-->
+<!--                            <t t-esc="payroll_structure_name"/>-->
+<!--                        </t>-->
+<!--                        <t t-esc="payroll_structure_value"/>-->
+<!--                    </t>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </template>-->
+
+        <template id="search_template_payroll_structure">
+            <button type="button" class="o_dropdown_toggler_btn btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+                <span class="fa fa-book"/>
+                    Structures:
+                <t t-set="selected_structures" t-value="', '.join(journal.get('name') for struct in options['structures'] if struct.get('selected') "/>
+                <t t-if="selected_structures">
+                    <t t-esc="selected_structures"/>
+                </t>
+                <t t-else="">
+                    All
+                </t>
+            </button>
+            <div class="o_dropdown_menu dropdown-menu o_filter_menu" role="menu">
+                <t t-foreach="options['structures']" t-as="j">
+                    <t t-if="j.get('id') == 'divider'">
+                        <div role="separator" class="dropdown-divider"/>
+                        <b role="menuitem" class="ml4 dropdown-item-text"><t t-esc="j.get('name')"/></b>
+                        <div role="separator" class="dropdown-divider"/>
+                    </t>
+                    <t t-if="j.get('id') != 'divider'">
+                        <t t-if="j.get('id') == 'group'">
+                            <a role="menuitem" class="dropdown-item js_account_report_group_choice_filter" data-filter="structures" t-att-data-id="j.get('id')" t-att-data-member-ids="j.get('ids')">
+                                <t t-esc="j.get('name')"/>
+                            </a>
+                        </t>
+                        <t t-else="">
+                            <a role="menuitem" class="dropdown-item js_account_report_choice_filter" t-att-title="j.get('name')" t-att-data-id="j.get('id')" data-filter="structures">
+                                <t t-esc="j.get('name')"/>
+                            </a>
+                        </t>
+                    </t>
+                </t>
+            </div>
+<!--            <a type="button" class="dropdown-toggle" data-toggle="dropdown">-->
+<!--                <span class="fa fa-user"/>-->
+<!--                Payroll Structure:-->
+<!--                <t t-set="structure_value">All</t>-->
+<!--                <t t-foreach="options['selected_structure']" t-as="structure">-->
+<!--                    <t t-if="structure.get('selected') == True">-->
+<!--                        <t t-set="All" t-value="'sdsdsd'"/>-->
+<!--                        <t t-esc="structure.get('name')"/>-->
+<!--                    </t>-->
+<!--                </t>-->
+<!--                <t t-esc="structure_value"/>-->
+<!--            </a>-->
+<!--            <div class="dropdown-menu o_filter_menu" role="menu">-->
+<!--                <t t-foreach="options['selected_structure']" t-as="a">-->
+<!--                    <a role="menuitem"-->
+<!--                       class="dropdown-item js_account_report_choice_filter"-->
+<!--                       t-att-title="a.get('name')"-->
+<!--                       t-att-data-id="a.get('id')"-->
+<!--                       data-filter="structure_value">-->
+<!--                        <t t-esc="a.get('name')"/>-->
+<!--                    </a>-->
+<!--                </t>-->
+<!--            </div>-->
+        </template>
+
+        <template id="search_template" inherit_id="account_reports.search_template">
+            <xpath expr="." position="inside">
+                <div class="btn-group o_dropdown o_account_reports_filter_structure"
+                     t-if="options.get('structure') != None">
+                    <t t-call="l10n_mx_hr_payroll_reports.search_template_payroll_structure"/>
+                </div>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>

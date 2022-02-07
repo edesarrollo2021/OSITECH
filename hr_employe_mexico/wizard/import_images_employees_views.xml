@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <record id="view_import_images_employees_form" model="ir.ui.view">
+        <field name="name">import.images.employees.form</field>
+        <field name="model">import.images.employees</field>
+        <field name="arch" type="xml">
+        <form string="Import Images Employees">
+            <group>
+                <group string="Attach Documents">
+                    <field name="file_zip_ids" widget="many2many_binary"/>
+                </group>
+                <group string="File">
+                    <field name="file_ids" widget="many2many_binary"/>
+                </group>
+            </group>
+            <group>
+                <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+            </group>
+            <footer>
+                <button name="import_file_document" string="Import File" type="object" class="btn-primary"/>
+                <button string="Cancel" special="cancel" class="btn-default"/>
+            </footer>
+        </form>
+        </field>
+    </record>
+
+    <record id="action_import_images_employees" model="ir.actions.act_window">
+        <field name="name">Import Images Employees</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">import.images.employees</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem
+        id="menu_import_images_employees"
+        name="Import Images Employees"
+        parent="menu_hr_employee_import"
+        sequence="10"
+        action="action_import_images_employees"/>
+
+    </data>
+</odoo>

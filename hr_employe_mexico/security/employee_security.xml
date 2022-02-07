@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        
+    <record id="group_salary_changes" model="res.groups">
+        <field name="name">Salary changes</field>
+        <field name="category_id" ref="base.module_category_human_resources_payroll"/>
+    </record>
+
+    <record id="employee_mx_multi_company_rule" model="ir.rule">
+        <field name="name">Affiliate Movements multi-company</field>
+        <field ref="model_hr_employee_affiliate_movements" name="model_id"/>
+        <field eval="True" name="global"/>
+        <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+    </record>
+
+    </data>
+</odoo>

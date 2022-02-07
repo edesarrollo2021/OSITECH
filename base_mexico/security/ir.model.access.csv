@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_res_employer_register_manager,Employer register,model_res_employer_register,base.group_erp_manager,1,1,1,1
+access_res_employer_register_user,Employer register,model_res_employer_register,,1,0,0,0
+access_res_company_delegation_user,res_company_delegation,model_res_company_delegation,hr.group_hr_user,1,1,1,1
+access_res_company_subdelegation_user,hr_res_company_subdelegation,model_res_company_subdelegation,hr.group_hr_user,1,1,1,1
+access_res_group_risk_factor_user,hr_res_group_risk_factor,model_res_group_risk_factor,hr.group_hr_user,1,1,1,1
+access_res_company_economic_sector_user,res_company_economic_sector,model_res_company_economic_sector,hr.group_hr_user,1,1,1,1

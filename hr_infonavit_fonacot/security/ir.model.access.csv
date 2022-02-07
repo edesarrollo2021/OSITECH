@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_infonavit_credit_line_user,INFONAVIT,model_hr_infonavit_credit_line,hr.group_hr_user,1,1,1,1
+access_hr_fonacot_credit_line_user,hr.fonacot.credit.line,model_hr_fonacot_credit_line,hr.group_hr_user,1,1,1,1
+access_hr_fonacot_credit_line_payslip,hr.fonacot.credit.line.payslip,model_hr_fonacot_credit_line_payslip,hr.group_hr_user,1,1,1,1

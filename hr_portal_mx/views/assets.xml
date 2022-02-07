@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <template id="assets_frontend" name="Mexico Frontend" inherit_id="web.assets_frontend">
+        <xpath expr="script[last()]" position="after">
+            <script type="text/javascript" src="/hr_portal_mx/static/src/js/holidays.js"></script>
+        </xpath>
+    </template>
+
+    </data>
+</odoo>

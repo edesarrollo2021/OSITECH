@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <record id="view_annual_isr_adjustment_employee2" model="ir.ui.view">
+        <field name="name">annual.isr.adjustment.employee.form</field>
+        <field name="model">annual.isr.adjustment.employee</field>
+        <field name="arch" type="xml">
+            <form string="Annual ISR Adjustment Employee">
+                <group>
+                    <span colspan="4" nolabel="1">Solo puede generarle ISR Anual a los empleados configurados para ello con contratos activos.</span>
+                </group>
+                <group>
+                    <field name="all_employees"/>
+                    <field name="adjustment_id" invisible="1"/>
+                </group>
+                <group string="Employees">
+                    <field name="employee_ids" readonly="0" nolabel="1"/>
+                </group>
+                <footer>
+                    <button name="save_employees" string="Save" type="object" class="btn-primary"/>
+                    <button string="Cancel" special="cancel" class="btn-default"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_isr_adjustment_employee3" model="ir.actions.act_window">
+        <field name="name">Annual ISR Adjustment Employee</field>
+        <field name="res_model">annual.isr.adjustment.employee</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <record id="contract_salary_change_form_view" model="ir.ui.view">
+        <field name="name">contract.salary.change.line.form</field>
+        <field name="model">contract.salary.change.line</field>
+        <field name="arch" type="xml">
+        <form string="Contract Salary Change Line">
+           <group>
+               <group>
+                   <field name="name" invisible="1"/>
+                   <field name="date_start"/>
+                   <field name="wage"/>
+                   <field name="sdi"/>
+                   <field name="sbc"/>
+                   <field name="seniority_premium"/>
+               </group>
+               <group>
+                   <field name="date_end"/>
+                   <field name="daily_salary"/>
+                   <field name="integrated_salary"/>
+                   <field name="contract_id" invisible="0"/>
+               </group>
+           </group>
+         </form>
+       </field>
+    </record>
+
+    <record id="contract_salary_change_tree_view" model="ir.ui.view">
+        <field name="name">contract.salary.change.line.tree</field>
+        <field name="model">contract.salary.change.line</field>
+        <field name="arch" type="xml">
+            <tree string="Contract Salary Change Line">
+               <field name="date_start"/>
+               <field name="date_end"/>
+               <field name="wage"/>
+               <field name="sbc"/>
+               <field name="sdi" optional="show"/>
+               <field name="daily_salary" optional="hide"/>
+               <field name="seniority_premium" optional="hide"/>
+               <field name="integrated_salary" optional="hide"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="contract_salary_change_action" model="ir.actions.act_window">
+        <field name="name">Contract Salary Change Line</field>
+        <field name="res_model">contract.salary.change.line</field>
+        <field name="domain">[('contract_id', '=', active_id)]</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    </data>
+</odoo>

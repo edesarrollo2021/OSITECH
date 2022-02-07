@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <record id="vacation_premium_cron" model="ir.cron">
+       <field name="name">Vacation Premium Cron</field>
+       <field name="model_id" ref="hr_contract.model_hr_contract"/>
+       <field name="state">code</field>
+       <field name="code">model.vacation_premium_employee()</field>
+       <field name="user_id" ref="base.group_user"/>
+       <field name='interval_number'>1</field>
+       <field name='interval_type'>days</field>
+       <field name="numbercall">-1</field>
+       <field name="doall" eval="False"/>
+   </record>
+
+    </data>
+</odoo>

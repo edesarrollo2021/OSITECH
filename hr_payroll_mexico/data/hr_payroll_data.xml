@@ -1,0 +1,1098 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+
+<!--
+        tipos de estructura
+-->
+
+        <record id="structure_type_1" model="hr.payroll.structure.type">
+            <field name="name">General de Tierra</field>
+        </record>
+        <record id="structure_type_2" model="hr.payroll.structure.type">
+            <field name="name">Pilotos</field>
+        </record>
+        <record id="structure_type_3" model="hr.payroll.structure.type">
+            <field name="name">Sobrecargos A</field>
+        </record>
+        <record id="structure_type_4" model="hr.payroll.structure.type">
+            <field name="name">Sobrecargos B</field>
+        </record>
+        <record id="structure_type_5" model="hr.payroll.structure.type">
+            <field name="name">Confidencial</field>
+        </record>
+        <record id="structure_type_6" model="hr.payroll.structure.type">
+            <field name="name">Tierra</field>
+        </record>
+        <record id="structure_type_7" model="hr.payroll.structure.type">
+            <field name="name">Asimilados a Salarios</field>
+        </record>
+        
+        
+<!--
+        estructuras
+-->
+        
+        
+        <record id="structure_1" model="hr.payroll.structure">
+            <field name="name">General de Tierra</field>
+            <field name="type_id" ref="structure_type_1"/>
+            <field name="payroll_type">O</field>
+            <field name="payslip_code">01</field>
+            <field name="unpaid_work_entry_type_ids" eval="[(4,ref('hr_payroll_mexico.work_entry_type_home_working2')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_diasemana')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_factordia')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_factormensual')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_diaimss')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_01')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_02')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_03')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_04')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_05')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_06')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_09')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_010')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_010')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_011')),
+                                            ]"/>
+        </record>
+        <record id="structure_2" model="hr.payroll.structure">
+            <field name="name">Pilotos</field>
+            <field name="type_id" ref="structure_type_2"/>
+            <field name="payroll_type">O</field>
+            <field name="payslip_code">02</field>
+            <field name="aspa_report">True</field>
+            <field name="social_objective">True</field>
+            <field name="unpaid_work_entry_type_ids" eval="[(4,ref('hr_payroll_mexico.work_entry_type_home_working2')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_diasemana')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_factordia')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_factormensual')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_diaimss')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_01')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_02')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_03')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_04')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_05')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_06')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_09')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_010')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_010')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_011')),
+                                            ]"/>
+        </record>
+        <record id="structure_3" model="hr.payroll.structure">
+            <field name="name">Sobrecargos A</field>
+            <field name="type_id" ref="structure_type_3"/>
+            <field name="payroll_type">O</field>
+            <field name="payslip_code">SB</field>
+            <field name="assa_report">True</field>
+            <field name="unpaid_work_entry_type_ids" eval="[(4,ref('hr_payroll_mexico.work_entry_type_home_working2')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_diasemana')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_factordia')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_factormensual')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_diaimss')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_01')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_02')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_03')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_04')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_05')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_06')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_09')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_010')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_010')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_011')),
+                                            ]"/>
+        </record>
+        <record id="structure_4" model="hr.payroll.structure">
+            <field name="name">Sobrecargos B</field>
+            <field name="type_id" ref="structure_type_4"/>
+            <field name="payroll_type">O</field>
+            <field name="payslip_code">03</field>
+            <field name="assa_report">True</field>
+            <field name="unpaid_work_entry_type_ids" eval="[(4,ref('hr_payroll_mexico.work_entry_type_home_working2')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_diasemana')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_factordia')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_factormensual')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_diaimss')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_01')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_02')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_03')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_04')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_05')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_06')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_09')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_010')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_010')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_011')),
+                                            ]"/>
+        </record>
+        <record id="structure_5" model="hr.payroll.structure">
+            <field name="name">Confidencial</field>
+            <field name="type_id" ref="structure_type_5"/>
+            <field name="payroll_type">O</field>
+            <field name="payslip_code">NC</field>
+            <field name="unpaid_work_entry_type_ids" eval="[(4,ref('hr_payroll_mexico.work_entry_type_home_working2')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_diasemana')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_factordia')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_factormensual')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_diaimss')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_01')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_02')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_03')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_04')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_05')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_06')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_09')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_010')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_010')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_011')),
+                                            ]"/>
+        </record>
+        <record id="structure_6" model="hr.payroll.structure">
+            <field name="name">Tierra</field>
+            <field name="type_id" ref="structure_type_6"/>
+            <field name="payroll_type">O</field>
+            <field name="payslip_code">TR</field>
+            <field name="unpaid_work_entry_type_ids" eval="[(4,ref('hr_payroll_mexico.work_entry_type_home_working2')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_diasemana')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_factordia')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_factormensual')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_diaimss')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_01')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_02')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_03')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_04')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_05')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_06')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_09')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_010')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_010')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_011')),
+                                            ]"/>
+        </record>
+        <record id="structure_7" model="hr.payroll.structure">
+            <field name="name">Asimilados a Salarios</field>
+            <field name="type_id" ref="structure_type_7"/>
+            <field name="payroll_type">O</field>
+            <field name="payslip_code">AS</field>
+            <field name="unpaid_work_entry_type_ids" eval="[(4,ref('hr_payroll_mexico.work_entry_type_home_working2')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_diasemana')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_factordia')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_factormensual')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_01')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_02')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_03')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_04')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_05')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_06')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_09')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_010')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_010')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_011')),
+                                            ]"/>
+        </record>
+        <record id="structure_8" model="hr.payroll.structure">
+            <field name="name">Aguinaldo General de Tierra</field>
+            <field name="type_id" ref="structure_type_1"/>
+            <field name="payroll_type">E</field>
+            <field name="payslip_code">01</field>
+            <field name="unpaid_work_entry_type_ids" eval="[(4,ref('hr_payroll_mexico.work_entry_type_home_working2')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_factordia')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_factormensual')),
+                                            ]"/>
+        </record>
+        <record id="structure_9" model="hr.payroll.structure">
+            <field name="name">Aguinaldo Pilotos</field>
+            <field name="type_id" ref="structure_type_2"/>
+            <field name="payroll_type">E</field>
+            <field name="payslip_code">02</field>
+            <field name="unpaid_work_entry_type_ids" eval="[(4,ref('hr_payroll_mexico.work_entry_type_home_working2')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_factordia')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_factormensual')),
+                                            ]"/>
+        </record>
+        <record id="structure_10" model="hr.payroll.structure">
+            <field name="name">Aguinaldo Sobrecargos A</field>
+            <field name="type_id" ref="structure_type_3"/>
+            <field name="payroll_type">E</field>
+            <field name="payslip_code">SB</field>
+            <field name="unpaid_work_entry_type_ids" eval="[(4,ref('hr_payroll_mexico.work_entry_type_home_working2')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_factordia')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_factormensual')),
+                                            ]"/>
+        </record>
+        <record id="structure_11" model="hr.payroll.structure">
+            <field name="name">Aguinaldo Sobrecargos B</field>
+            <field name="type_id" ref="structure_type_4"/>
+            <field name="payroll_type">E</field>
+            <field name="payslip_code">03</field>
+            <field name="unpaid_work_entry_type_ids" eval="[(4,ref('hr_payroll_mexico.work_entry_type_home_working2')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_factordia')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_factormensual')),
+                                            ]"/>
+        </record>
+        <record id="structure_12" model="hr.payroll.structure">
+            <field name="name">Aguinaldo Confidencial</field>
+            <field name="type_id" ref="structure_type_5"/>
+            <field name="payroll_type">E</field>
+            <field name="payslip_code">NC</field>
+            <field name="unpaid_work_entry_type_ids" eval="[(4,ref('hr_payroll_mexico.work_entry_type_home_working2')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_factordia')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_factormensual')),
+                                            ]"/>
+        </record>
+        <record id="structure_13" model="hr.payroll.structure">
+            <field name="name">Aguinaldo Tierra</field>
+            <field name="type_id" ref="structure_type_6"/>
+            <field name="payroll_type">E</field>
+            <field name="payslip_code">TR</field>
+            <field name="unpaid_work_entry_type_ids" eval="[(4,ref('hr_payroll_mexico.work_entry_type_home_working2')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_factordia')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_factormensual')),
+                                            ]"/>
+        </record>
+        <record id="structure_14" model="hr.payroll.structure">
+            <field name="name">Finiquito (General de Tierra)</field>
+            <field name="type_id" ref="structure_type_1"/>
+            <field name="payroll_type">E</field>
+            <field name="payslip_code">01</field>
+            <field name="settlement">True</field>
+            <field name="unpaid_work_entry_type_ids" eval="[(4,ref('hr_payroll_mexico.work_entry_type_home_working2')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_diasemana')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_factordia')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_factormensual')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_diaimss')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_01')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_02')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_03')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_04')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_05')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_06')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_09')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_010')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_010')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_011')),
+                                            ]"/>
+        </record>
+        <record id="structure_15" model="hr.payroll.structure">
+            <field name="name">Finiquito (Pilotos)</field>
+            <field name="type_id" ref="structure_type_2"/>
+            <field name="payroll_type">E</field>
+            <field name="payslip_code">02</field>
+            <field name="settlement">True</field>
+            <field name="aspa_report">True</field>
+            <field name="social_objective">True</field>
+            <field name="unpaid_work_entry_type_ids" eval="[(4,ref('hr_payroll_mexico.work_entry_type_home_working2')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_diasemana')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_factordia')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_factormensual')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_diaimss')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_01')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_02')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_03')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_04')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_05')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_06')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_09')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_010')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_010')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_011')),
+                                            ]"/>
+        </record>
+        <record id="structure_16" model="hr.payroll.structure">
+            <field name="name">Finiquito (Sobrecargos A)</field>
+            <field name="type_id" ref="structure_type_3"/>
+            <field name="payroll_type">E</field>
+            <field name="payslip_code">SB</field>
+            <field name="settlement">True</field>
+            <field name="assa_report">True</field>
+            <field name="unpaid_work_entry_type_ids" eval="[(4,ref('hr_payroll_mexico.work_entry_type_home_working2')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_diasemana')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_factordia')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_factormensual')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_diaimss')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_01')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_02')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_03')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_04')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_05')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_06')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_09')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_010')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_010')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_011')),
+                                            ]"/>
+        </record>
+        <record id="structure_17" model="hr.payroll.structure">
+            <field name="name">Finiquito (Sobrecargos B)</field>
+            <field name="type_id" ref="structure_type_4"/>
+            <field name="payroll_type">E</field>
+            <field name="payslip_code">03</field>
+            <field name="settlement">True</field>
+            <field name="assa_report">True</field>
+            <field name="unpaid_work_entry_type_ids" eval="[(4,ref('hr_payroll_mexico.work_entry_type_home_working2')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_diasemana')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_factordia')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_factormensual')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_diaimss')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_01')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_02')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_03')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_04')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_05')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_06')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_09')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_010')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_010')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_011')),
+                                            ]"/>
+        </record>
+        <record id="structure_18" model="hr.payroll.structure">
+            <field name="name">Finiquito (Confidencial)</field>
+            <field name="type_id" ref="structure_type_5"/>
+            <field name="payroll_type">E</field>
+            <field name="payslip_code">NC</field>
+            <field name="settlement">True</field>
+            <field name="unpaid_work_entry_type_ids" eval="[(4,ref('hr_payroll_mexico.work_entry_type_home_working2')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_diasemana')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_factordia')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_factormensual')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_diaimss')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_01')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_02')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_03')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_04')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_05')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_06')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_09')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_010')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_010')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_011')),
+                                            ]"/>
+        </record>
+        <record id="structure_19" model="hr.payroll.structure">
+            <field name="name">Finiquito (Tierra)</field>
+            <field name="type_id" ref="structure_type_6"/>
+            <field name="payroll_type">E</field>
+            <field name="payslip_code">TR</field>
+            <field name="settlement">True</field>
+            <field name="unpaid_work_entry_type_ids" eval="[(4,ref('hr_payroll_mexico.work_entry_type_home_working2')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_diasemana')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_factordia')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_factormensual')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_diaimss')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_01')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_02')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_03')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_04')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_05')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_06')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_09')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_010')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_010')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_011')),
+                                            ]"/>
+        </record>
+        
+        
+        <record id="structure_20" model="hr.payroll.structure">
+            <field name="name">PTU (General de tierra)</field>
+            <field name="type_id" ref="structure_type_1"/>
+            <field name="payroll_type">E</field>
+            <field name="payslip_code">01</field>
+            <field name="ptu_payslip">True</field>
+        </record>
+        
+        <record id="structure_21" model="hr.payroll.structure">
+            <field name="name">PTU (Pilotos)</field>
+            <field name="type_id" ref="structure_type_2"/>
+            <field name="payroll_type">E</field>
+            <field name="payslip_code">02</field>
+            <field name="ptu_payslip">True</field>
+        </record>
+        
+        <record id="structure_22" model="hr.payroll.structure">
+            <field name="name">PTU (Sobrecargos A)</field>
+            <field name="type_id" ref="structure_type_3"/>
+            <field name="payroll_type">E</field>
+            <field name="payslip_code">SB</field>
+            <field name="ptu_payslip">True</field>
+        </record>
+        
+        <record id="structure_23" model="hr.payroll.structure">
+            <field name="name">PTU (Sobrecargos B)</field>
+            <field name="type_id" ref="structure_type_4"/>
+            <field name="payroll_type">E</field>
+            <field name="payslip_code">03</field>
+            <field name="ptu_payslip">True</field>
+        </record>
+        
+        <record id="structure_24" model="hr.payroll.structure">
+            <field name="name">PTU (Confidencial)</field>
+            <field name="type_id" ref="structure_type_5"/>
+            <field name="payroll_type">E</field>
+            <field name="payslip_code">NC</field>
+            <field name="ptu_payslip">True</field>
+        </record>
+        
+        <record id="structure_25" model="hr.payroll.structure">
+            <field name="name">PTU (Tierra)</field>
+            <field name="type_id" ref="structure_type_6"/>
+            <field name="payroll_type">E</field>
+            <field name="payslip_code">TR</field>
+            <field name="ptu_payslip">True</field>
+        </record>
+        
+        
+        
+        
+<!--
+        NOMINAS ESPECIALES
+-->
+        
+        <record id="structure_26" model="hr.payroll.structure">
+            <field name="name">General de Tierra (Especial)</field>
+            <field name="type_id" ref="structure_type_1"/>
+            <field name="payroll_type">E</field>
+            <field name="payslip_code">01</field>
+            <field name="unpaid_work_entry_type_ids" eval="[(4,ref('hr_payroll_mexico.work_entry_type_home_working2')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_diasemana')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_factordia')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_factormensual')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_diaimss')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_01')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_02')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_03')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_04')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_05')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_06')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_09')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_010')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_010')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_011')),
+                                            ]"/>
+        </record>
+        <record id="structure_27" model="hr.payroll.structure">
+            <field name="name">Pilotos (Especial)</field>
+            <field name="type_id" ref="structure_type_2"/>
+            <field name="payroll_type">E</field>
+            <field name="payslip_code">02</field>
+            <field name="unpaid_work_entry_type_ids" eval="[(4,ref('hr_payroll_mexico.work_entry_type_home_working2')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_diasemana')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_factordia')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_factormensual')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_diaimss')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_01')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_02')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_03')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_04')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_05')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_06')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_09')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_010')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_010')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_011')),
+                                            ]"/>
+        </record>
+        <record id="structure_28" model="hr.payroll.structure">
+            <field name="name">Sobrecargos A (Especial)</field>
+            <field name="type_id" ref="structure_type_3"/>
+            <field name="payroll_type">E</field>
+            <field name="payslip_code">SB</field>
+            <field name="unpaid_work_entry_type_ids" eval="[(4,ref('hr_payroll_mexico.work_entry_type_home_working2')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_diasemana')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_factordia')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_factormensual')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_diaimss')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_01')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_02')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_03')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_04')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_05')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_06')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_09')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_010')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_010')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_011')),
+                                            ]"/>
+        </record>
+        <record id="structure_29" model="hr.payroll.structure">
+            <field name="name">Sobrecargos B (Especial)</field>
+            <field name="type_id" ref="structure_type_4"/>
+            <field name="payroll_type">E</field>
+            <field name="payslip_code">03</field>
+            <field name="unpaid_work_entry_type_ids" eval="[(4,ref('hr_payroll_mexico.work_entry_type_home_working2')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_diasemana')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_factordia')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_factormensual')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_diaimss')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_01')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_02')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_03')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_04')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_05')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_06')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_09')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_010')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_010')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_011')),
+                                            ]"/>
+        </record>
+        <record id="structure_30" model="hr.payroll.structure">
+            <field name="name">Confidencial (Especial)</field>
+            <field name="type_id" ref="structure_type_5"/>
+            <field name="payroll_type">E</field>
+            <field name="payslip_code">NC</field>
+            <field name="unpaid_work_entry_type_ids" eval="[(4,ref('hr_payroll_mexico.work_entry_type_home_working2')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_diasemana')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_factordia')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_factormensual')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_diaimss')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_01')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_02')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_03')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_04')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_05')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_06')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_09')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_010')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_010')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_011')),
+                                            ]"/>
+        </record>
+        <record id="structure_31" model="hr.payroll.structure">
+            <field name="name">Tierra (Especial)</field>
+            <field name="type_id" ref="structure_type_6"/>
+            <field name="payroll_type">E</field>
+            <field name="payslip_code">TR</field>
+            <field name="unpaid_work_entry_type_ids" eval="[(4,ref('hr_payroll_mexico.work_entry_type_home_working2')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_diasemana')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_factordia')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_factormensual')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_diaimss')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_01')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_02')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_03')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_04')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_05')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_06')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_09')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_010')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_010')),
+                                            (4,ref('hr_payroll_mexico.hr_work_entry_type_011')),
+                                            ]"/>
+        </record>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+<!--
+        categorias de estructuras
+-->
+        
+        <record id="salary_rule_category_1" model="hr.salary.rule.category">
+            <field name="name">Uso Interno</field>
+            <field name="code">UI</field>
+        </record>
+        <record id="salary_rule_category_2" model="hr.salary.rule.category">
+            <field name="name">Percepciones</field>
+            <field name="code">PERC</field>
+        </record>
+        <record id="salary_rule_category_4" model="hr.salary.rule.category">
+            <field name="name">Total deducciones</field>
+            <field name="code">DEDT</field>
+        </record>
+        <record id="salary_rule_category_5" model="hr.salary.rule.category">
+            <field name="name">Bruto grabable</field>
+            <field name="code">BRUTOG</field>
+        </record>
+        <record id="salary_rule_category_6" model="hr.salary.rule.category">
+            <field name="name">Provisiones</field>
+            <field name="code">PRV</field>
+        </record>
+        <record id="salary_rule_category_7" model="hr.salary.rule.category">
+            <field name="name">Clausula Sindical</field>
+            <field name="code">CS</field>
+        </record>
+        
+        
+<!--
+        otras entradas de nomina
+-->
+
+        <record id="hr_payslip_input_type_1" model="hr.payslip.input.type">
+            <field name="name">COMISIONES</field>
+            <field name="code">P002</field>
+            <field name="struct_ids" eval="[(4,ref('hr_payroll_mexico.structure_1')),
+                                            (4,ref('hr_payroll_mexico.structure_2')),
+                                            (4,ref('hr_payroll_mexico.structure_3')),
+                                            (4,ref('hr_payroll_mexico.structure_4')),
+                                            (4,ref('hr_payroll_mexico.structure_5')),
+                                            (4,ref('hr_payroll_mexico.structure_6')),
+                                            (4,ref('hr_payroll_mexico.structure_14')),
+                                            (4,ref('hr_payroll_mexico.structure_15')),
+                                            (4,ref('hr_payroll_mexico.structure_16')),
+                                            (4,ref('hr_payroll_mexico.structure_17')),
+                                            (4,ref('hr_payroll_mexico.structure_18')),
+                                            (4,ref('hr_payroll_mexico.structure_19')),
+                                            (4,ref('hr_payroll_mexico.structure_26)),
+                                            (4,ref('hr_payroll_mexico.structure_27)),
+                                            (4,ref('hr_payroll_mexico.structure_28)),
+                                            (4,ref('hr_payroll_mexico.structure_29)),
+                                            (4,ref('hr_payroll_mexico.structure_30)),
+                                            (4,ref('hr_payroll_mexico.structure_31)),
+                                            ]"/>
+        </record>
+        <record id="hr_payslip_input_type_2" model="hr.payslip.input.type">
+            <field name="name">HORAS EXTRA DOBLES</field>
+            <field name="code">P003</field>
+            <field name="struct_ids" eval="[(4,ref('hr_payroll_mexico.structure_1')),
+                                            (4,ref('hr_payroll_mexico.structure_5')),
+                                            (4,ref('hr_payroll_mexico.structure_6')),
+                                            (4,ref('hr_payroll_mexico.structure_14')),
+                                            (4,ref('hr_payroll_mexico.structure_18')),
+                                            (4,ref('hr_payroll_mexico.structure_19')),
+                                            (4,ref('hr_payroll_mexico.structure_26')),
+                                            (4,ref('hr_payroll_mexico.structure_30')),
+                                            (4,ref('hr_payroll_mexico.structure_31')),
+                                            ]"/>
+        </record>
+        <record id="hr_payslip_input_type_3" model="hr.payslip.input.type">
+            <field name="name">HORAS EXTRA TRIPLES</field>
+            <field name="code">P004</field>
+            <field name="struct_ids" eval="[(4,ref('hr_payroll_mexico.structure_1')),
+                                            (4,ref('hr_payroll_mexico.structure_5')),
+                                            (4,ref('hr_payroll_mexico.structure_6')),
+                                            (4,ref('hr_payroll_mexico.structure_14')),
+                                            (4,ref('hr_payroll_mexico.structure_18')),
+                                            (4,ref('hr_payroll_mexico.structure_19')),
+                                            (4,ref('hr_payroll_mexico.structure_26')),
+                                            (4,ref('hr_payroll_mexico.structure_30')),
+                                            (4,ref('hr_payroll_mexico.structure_31')),
+                                            ]"/>
+        </record>
+        <record id="hr_payslip_input_type_4" model="hr.payslip.input.type">
+            <field name="name">PRIMA DOMINICAL</field>
+            <field name="code">P007</field>
+            <field name="struct_ids" eval="[(4,ref('hr_payroll_mexico.structure_1')),
+                                            (4,ref('hr_payroll_mexico.structure_2')),
+                                            (4,ref('hr_payroll_mexico.structure_3')),
+                                            (4,ref('hr_payroll_mexico.structure_4')),
+                                            (4,ref('hr_payroll_mexico.structure_5')),
+                                            (4,ref('hr_payroll_mexico.structure_6')),
+                                            (4,ref('hr_payroll_mexico.structure_14')),
+                                            (4,ref('hr_payroll_mexico.structure_15')),
+                                            (4,ref('hr_payroll_mexico.structure_16')),
+                                            (4,ref('hr_payroll_mexico.structure_17')),
+                                            (4,ref('hr_payroll_mexico.structure_18')),
+                                            (4,ref('hr_payroll_mexico.structure_19')),
+                                            (4,ref('hr_payroll_mexico.structure_26)),
+                                            (4,ref('hr_payroll_mexico.structure_27)),
+                                            (4,ref('hr_payroll_mexico.structure_28)),
+                                            (4,ref('hr_payroll_mexico.structure_29)),
+                                            (4,ref('hr_payroll_mexico.structure_30)),
+                                            (4,ref('hr_payroll_mexico.structure_31)),
+                                            ]"/>
+        </record>
+        
+        
+        
+        
+        <record id="hr_payslip_input_type_5" model="hr.payslip.input.type">
+            <field name="name">HORAS EXTRAS 1.42%</field>
+            <field name="code">P008</field>
+            <field name="struct_ids" eval="[
+                                            (4,ref('hr_payroll_mexico.structure_3')),
+                                            (4,ref('hr_payroll_mexico.structure_4')),
+                                            (4,ref('hr_payroll_mexico.structure_16')),
+                                            (4,ref('hr_payroll_mexico.structure_17')),
+                                            (4,ref('hr_payroll_mexico.structure_28')),
+                                            (4,ref('hr_payroll_mexico.structure_29')),
+                                            ]"/>
+        </record>
+        
+        
+        
+        
+        <record id="hr_payslip_input_type_6" model="hr.payslip.input.type">
+            <field name="name">HORAS EXTRAS 1.11%</field>
+            <field name="code">P009</field>
+            <field name="struct_ids" eval="[
+                                            (4,ref('hr_payroll_mexico.structure_3')),
+                                            (4,ref('hr_payroll_mexico.structure_4')),
+                                            (4,ref('hr_payroll_mexico.structure_16')),
+                                            (4,ref('hr_payroll_mexico.structure_17')),
+                                            (4,ref('hr_payroll_mexico.structure_28')),
+                                            (4,ref('hr_payroll_mexico.structure_29')),
+                                            ]"/>
+        </record>
+        
+        
+        
+        
+        
+        
+        <record id="hr_payslip_input_type_7" model="hr.payslip.input.type">
+            <field name="name">HORAS EXTRAS 1.0</field>
+            <field name="code">P011</field>
+            <field name="struct_ids" eval="[
+                                            (4,ref('hr_payroll_mexico.structure_2')),
+                                            (4,ref('hr_payroll_mexico.structure_15')),
+                                            (4,ref('hr_payroll_mexico.structure_27')),
+                                            ]"/>
+        </record>
+        <record id="hr_payslip_input_type_8" model="hr.payslip.input.type">
+            <field name="name">HORAS EXTRAS 2.0</field>
+            <field name="code">P012</field>
+            <field name="struct_ids" eval="[
+                                            (4,ref('hr_payroll_mexico.structure_2')),
+                                            (4,ref('hr_payroll_mexico.structure_15')),
+                                            (4,ref('hr_payroll_mexico.structure_27')),
+                                            ]"/>
+        </record>
+        <record id="hr_payslip_input_type_9" model="hr.payslip.input.type">
+            <field name="name">DIA FESTIVO LABORADO</field>
+            <field name="code">P025</field>
+            <field name="struct_ids" eval="[(4,ref('hr_payroll_mexico.structure_1')),
+                                            (4,ref('hr_payroll_mexico.structure_2')),
+                                            (4,ref('hr_payroll_mexico.structure_3')),
+                                            (4,ref('hr_payroll_mexico.structure_4')),
+                                            (4,ref('hr_payroll_mexico.structure_5')),
+                                            (4,ref('hr_payroll_mexico.structure_6')),
+                                            (4,ref('hr_payroll_mexico.structure_14')),
+                                            (4,ref('hr_payroll_mexico.structure_15')),
+                                            (4,ref('hr_payroll_mexico.structure_16')),
+                                            (4,ref('hr_payroll_mexico.structure_17')),
+                                            (4,ref('hr_payroll_mexico.structure_18')),
+                                            (4,ref('hr_payroll_mexico.structure_19')),
+                                            (4,ref('hr_payroll_mexico.structure_26)),
+                                            (4,ref('hr_payroll_mexico.structure_27)),
+                                            (4,ref('hr_payroll_mexico.structure_28)),
+                                            (4,ref('hr_payroll_mexico.structure_29)),
+                                            (4,ref('hr_payroll_mexico.structure_30)),
+                                            (4,ref('hr_payroll_mexico.structure_31)),
+                                            ]"/>
+        </record>
+        <record id="hr_payslip_input_type_10" model="hr.payslip.input.type">
+            <field name="name">BONO DE PRODUCTIVIDAD</field>
+            <field name="code">P014</field>
+            <field name="struct_ids" eval="[
+                                            (4,ref('hr_payroll_mexico.structure_1')),
+                                            (4,ref('hr_payroll_mexico.structure_14')),
+                                            (4,ref('hr_payroll_mexico.structure_26')),
+                                            ]"/>
+        </record>
+        <record id="hr_payslip_input_type_11" model="hr.payslip.input.type">
+            <field name="name">BONO DE DESGASTE DE HERRAMIENTA</field>
+            <field name="code">P016</field>
+            <field name="struct_ids" eval="[
+                                            (4,ref('hr_payroll_mexico.structure_1')),
+                                            (4,ref('hr_payroll_mexico.structure_14')),
+                                            (4,ref('hr_payroll_mexico.structure_26')),
+                                            ]"/>
+        </record>
+        <record id="hr_payslip_input_type_12" model="hr.payslip.input.type">
+            <field name="name">DIA DE DESCANSO LABORADO</field>
+            <field name="code">P017</field>
+            <field name="struct_ids" eval="[
+                                            (4,ref('hr_payroll_mexico.structure_1')),
+                                            (4,ref('hr_payroll_mexico.structure_5')),
+                                            (4,ref('hr_payroll_mexico.structure_6')),
+                                            (4,ref('hr_payroll_mexico.structure_14')),
+                                            (4,ref('hr_payroll_mexico.structure_18')),
+                                            (4,ref('hr_payroll_mexico.structure_19')),
+                                            (4,ref('hr_payroll_mexico.structure_26')),
+                                            (4,ref('hr_payroll_mexico.structure_30')),
+                                            (4,ref('hr_payroll_mexico.structure_31')),
+                                            ]"/>
+        </record>
+        <record id="hr_payslip_input_type_13" model="hr.payslip.input.type">
+            <field name="name">GRATIFICACION TEMPORAL POR PROMOCION</field>
+            <field name="code">P018</field>
+            <field name="struct_ids" eval="[
+                                            (4,ref('hr_payroll_mexico.structure_1')),
+                                            (4,ref('hr_payroll_mexico.structure_5')),
+                                            (4,ref('hr_payroll_mexico.structure_6')),
+                                            (4,ref('hr_payroll_mexico.structure_14')),
+                                            (4,ref('hr_payroll_mexico.structure_18')),
+                                            (4,ref('hr_payroll_mexico.structure_19')),
+                                            (4,ref('hr_payroll_mexico.structure_26')),
+                                            (4,ref('hr_payroll_mexico.structure_30')),
+                                            (4,ref('hr_payroll_mexico.structure_31')),
+                                            ]"/>
+        </record>
+        <record id="hr_payslip_input_type_14" model="hr.payslip.input.type">
+            <field name="name">COMPENSACION RO</field>
+            <field name="code">P020</field>
+            <field name="struct_ids" eval="[
+                                            (4,ref('hr_payroll_mexico.structure_1')),
+                                            (4,ref('hr_payroll_mexico.structure_6')),
+                                            (4,ref('hr_payroll_mexico.structure_14')),
+                                            (4,ref('hr_payroll_mexico.structure_19')),
+                                            (4,ref('hr_payroll_mexico.structure_26')),
+                                            (4,ref('hr_payroll_mexico.structure_31')),
+                                            ]"/>
+        </record>
+    
+        <record id="hr_payslip_input_type_15" model="hr.payslip.input.type">
+            <field name="name">COMPENSACION TRIPLE MINIMA</field>
+            <field name="code">P021</field>
+            <field name="struct_ids" eval="[
+                                            (4,ref('hr_payroll_mexico.structure_3')),
+                                            (4,ref('hr_payroll_mexico.structure_4')),
+                                            (4,ref('hr_payroll_mexico.structure_16')),
+                                            (4,ref('hr_payroll_mexico.structure_17')),
+                                             (4,ref('hr_payroll_mexico.structure_28')),
+                                            (4,ref('hr_payroll_mexico.structure_29')),
+                                            ]"/>
+        </record>
+        <record id="hr_payslip_input_type_16" model="hr.payslip.input.type">
+            <field name="name">DESCUENTO ANTICIPO DE SUELDO</field>
+            <field name="code">D007</field>
+            <field name="struct_ids" eval="[(4,ref('hr_payroll_mexico.structure_1')),
+                                            (4,ref('hr_payroll_mexico.structure_2')),
+                                            (4,ref('hr_payroll_mexico.structure_3')),
+                                            (4,ref('hr_payroll_mexico.structure_4')),
+                                            (4,ref('hr_payroll_mexico.structure_5')),
+                                            (4,ref('hr_payroll_mexico.structure_6')),
+                                            (4,ref('hr_payroll_mexico.structure_14')),
+                                            (4,ref('hr_payroll_mexico.structure_15')),
+                                            (4,ref('hr_payroll_mexico.structure_16')),
+                                            (4,ref('hr_payroll_mexico.structure_17')),
+                                            (4,ref('hr_payroll_mexico.structure_18')),
+                                            (4,ref('hr_payroll_mexico.structure_19')),
+                                            (4,ref('hr_payroll_mexico.structure_26)),
+                                            (4,ref('hr_payroll_mexico.structure_27)),
+                                            (4,ref('hr_payroll_mexico.structure_28)),
+                                            (4,ref('hr_payroll_mexico.structure_29)),
+                                            (4,ref('hr_payroll_mexico.structure_30)),
+                                            (4,ref('hr_payroll_mexico.structure_31)),
+                                            ]"/>
+        </record>
+        <record id="hr_payslip_input_type_17" model="hr.payslip.input.type">
+            <field name="name">OTROS DESCUENTOS</field>
+            <field name="code">D008</field>
+            <field name="struct_ids" eval="[(4,ref('hr_payroll_mexico.structure_1')),
+                                            (4,ref('hr_payroll_mexico.structure_2')),
+                                            (4,ref('hr_payroll_mexico.structure_3')),
+                                            (4,ref('hr_payroll_mexico.structure_4')),
+                                            (4,ref('hr_payroll_mexico.structure_5')),
+                                            (4,ref('hr_payroll_mexico.structure_6')),
+                                            (4,ref('hr_payroll_mexico.structure_14')),
+                                            (4,ref('hr_payroll_mexico.structure_15')),
+                                            (4,ref('hr_payroll_mexico.structure_16')),
+                                            (4,ref('hr_payroll_mexico.structure_17')),
+                                            (4,ref('hr_payroll_mexico.structure_18')),
+                                            (4,ref('hr_payroll_mexico.structure_19')),
+                                            (4,ref('hr_payroll_mexico.structure_26)),
+                                            (4,ref('hr_payroll_mexico.structure_27)),
+                                            (4,ref('hr_payroll_mexico.structure_28)),
+                                            (4,ref('hr_payroll_mexico.structure_29)),
+                                            (4,ref('hr_payroll_mexico.structure_30)),
+                                            (4,ref('hr_payroll_mexico.structure_31)),
+                                            ]"/>
+        </record>
+    
+        <record id="hr_payslip_input_type_18" model="hr.payslip.input.type">
+            <field name="name">PRIMA VACACIONAL</field>
+            <field name="code">P023</field>
+            <field name="struct_ids" eval="[(4,ref('hr_payroll_mexico.structure_1')),
+                                            (4,ref('hr_payroll_mexico.structure_2')),
+                                            (4,ref('hr_payroll_mexico.structure_3')),
+                                            (4,ref('hr_payroll_mexico.structure_4')),
+                                            (4,ref('hr_payroll_mexico.structure_5')),
+                                            (4,ref('hr_payroll_mexico.structure_6')),
+                                            (4,ref('hr_payroll_mexico.structure_26)),
+                                            (4,ref('hr_payroll_mexico.structure_27)),
+                                            (4,ref('hr_payroll_mexico.structure_28)),
+                                            (4,ref('hr_payroll_mexico.structure_29)),
+                                            (4,ref('hr_payroll_mexico.structure_30)),
+                                            (4,ref('hr_payroll_mexico.structure_31)),
+                                            ]"/>
+        </record>
+        <record id="hr_payslip_input_type_19" model="hr.payslip.input.type">
+            <field name="name">SEPTIMO DIA</field>
+            <field name="code">P028</field>
+            <field name="struct_ids" eval="[
+                                            (4,ref('hr_payroll_mexico.structure_2')),
+                                            (4,ref('hr_payroll_mexico.structure_3')),
+                                            (4,ref('hr_payroll_mexico.structure_4')),
+                                            (4,ref('hr_payroll_mexico.structure_15')),
+                                            (4,ref('hr_payroll_mexico.structure_16')),
+                                            (4,ref('hr_payroll_mexico.structure_17')),
+                                             (4,ref('hr_payroll_mexico.structure_27')),
+                                             (4,ref('hr_payroll_mexico.structure_28')),
+                                            (4,ref('hr_payroll_mexico.structure_29')),
+                                            ]"/>
+        </record>
+        <record id="hr_payslip_input_type_20" model="hr.payslip.input.type">
+            <field name="name">HORAS EXTRA EN DIA FESTIVO</field>
+            <field name="code">P029</field>
+            <field name="struct_ids" eval="[
+                                            (4,ref('hr_payroll_mexico.structure_2')),
+                                            (4,ref('hr_payroll_mexico.structure_15')),
+                                            (4,ref('hr_payroll_mexico.structure_27')),
+                                            ]"/>
+        </record>
+        <record id="hr_payslip_input_type_21" model="hr.payslip.input.type">
+            <field name="name">NOTAS DE DEBITO</field>
+            <field name="code">D017</field>
+            <field name="struct_ids" eval="[(4,ref('hr_payroll_mexico.structure_1')),
+                                            (4,ref('hr_payroll_mexico.structure_2')),
+                                            (4,ref('hr_payroll_mexico.structure_3')),
+                                            (4,ref('hr_payroll_mexico.structure_4')),
+                                            (4,ref('hr_payroll_mexico.structure_5')),
+                                            (4,ref('hr_payroll_mexico.structure_6')),
+                                            (4,ref('hr_payroll_mexico.structure_14')),
+                                            (4,ref('hr_payroll_mexico.structure_15')),
+                                            (4,ref('hr_payroll_mexico.structure_16')),
+                                            (4,ref('hr_payroll_mexico.structure_17')),
+                                            (4,ref('hr_payroll_mexico.structure_18')),
+                                            (4,ref('hr_payroll_mexico.structure_19')),
+                                            (4,ref('hr_payroll_mexico.structure_26)),
+                                            (4,ref('hr_payroll_mexico.structure_27)),
+                                            (4,ref('hr_payroll_mexico.structure_28)),
+                                            (4,ref('hr_payroll_mexico.structure_29)),
+                                            (4,ref('hr_payroll_mexico.structure_30)),
+                                            (4,ref('hr_payroll_mexico.structure_31)),
+                                            ]"/>
+        </record>
+        <record id="hr_payslip_input_type_22" model="hr.payslip.input.type">
+            <field name="name">INCIDENCIAS ADEUDADAS</field>
+            <field name="code">P019</field>
+            <field name="struct_ids" eval="[
+                                            (4,ref('hr_payroll_mexico.structure_2')),
+                                            (4,ref('hr_payroll_mexico.structure_3')),
+                                            (4,ref('hr_payroll_mexico.structure_4')),
+                                            (4,ref('hr_payroll_mexico.structure_15')),
+                                            (4,ref('hr_payroll_mexico.structure_16')),
+                                            (4,ref('hr_payroll_mexico.structure_17')),
+                                            (4,ref('hr_payroll_mexico.structure_26)),
+                                            (4,ref('hr_payroll_mexico.structure_27)),
+                                            (4,ref('hr_payroll_mexico.structure_28)),
+                                            (4,ref('hr_payroll_mexico.structure_29)),
+                                            (4,ref('hr_payroll_mexico.structure_30)),
+                                            (4,ref('hr_payroll_mexico.structure_31)),
+                                            ]"/>
+        </record>
+        <record id="hr_payslip_input_type_23" model="hr.payslip.input.type">
+            <field name="name">SEG. GPO VIDA 19-20</field>
+            <field name="code">D028</field>
+            <field name="struct_ids" eval="[
+                                            (4,ref('hr_payroll_mexico.structure_3')),
+                                            (4,ref('hr_payroll_mexico.structure_4')),
+                                            (4,ref('hr_payroll_mexico.structure_16')),
+                                            (4,ref('hr_payroll_mexico.structure_17')),
+                                            (4,ref('hr_payroll_mexico.structure_28')),
+                                            (4,ref('hr_payroll_mexico.structure_29')),
+                                            ]"/>
+        </record>
+        <record id="hr_payslip_input_type_24" model="hr.payslip.input.type">
+            <field name="name">SEG. GPO VIDA 20-21</field>
+            <field name="code">D027</field>
+            <field name="struct_ids" eval="[
+                                            (4,ref('hr_payroll_mexico.structure_3')),
+                                            (4,ref('hr_payroll_mexico.structure_4')),
+                                            (4,ref('hr_payroll_mexico.structure_16')),
+                                            (4,ref('hr_payroll_mexico.structure_17')),
+                                            (4,ref('hr_payroll_mexico.structure_28')),
+                                            (4,ref('hr_payroll_mexico.structure_29')),
+                                            ]"/>
+        </record>
+        <record id="hr_payslip_input_type_25" model="hr.payslip.input.type">
+            <field name="name">SEG. GPO VIDA 18-19</field>
+            <field name="code">D029</field>
+            <field name="struct_ids" eval="[
+                                            (4,ref('hr_payroll_mexico.structure_3')),
+                                            (4,ref('hr_payroll_mexico.structure_4')),
+                                            (4,ref('hr_payroll_mexico.structure_16')),
+                                            (4,ref('hr_payroll_mexico.structure_17')),
+                                            (4,ref('hr_payroll_mexico.structure_28')),
+                                            (4,ref('hr_payroll_mexico.structure_29')),
+                                            ]"/>
+        </record>
+        <record id="hr_payslip_input_type_26" model="hr.payslip.input.type">
+            <field name="name">PRESTAMOS SINDICALES</field>
+            <field name="code">D035</field>
+            <field name="struct_ids" eval="[
+                                            (4,ref('hr_payroll_mexico.structure_3')),
+                                            (4,ref('hr_payroll_mexico.structure_4')),
+                                            (4,ref('hr_payroll_mexico.structure_16')),
+                                            (4,ref('hr_payroll_mexico.structure_17')),
+                                            (4,ref('hr_payroll_mexico.structure_28')),
+                                            (4,ref('hr_payroll_mexico.structure_29')),
+                                            ]"/>
+        </record>
+        <record id="hr_payslip_input_type_27" model="hr.payslip.input.type">
+            <field name="name">SEG. GPO VIDA 21-22</field>
+            <field name="code">D038</field>
+            <field name="struct_ids" eval="[
+                                            (4,ref('hr_payroll_mexico.structure_3')),
+                                            (4,ref('hr_payroll_mexico.structure_4')),
+                                            (4,ref('hr_payroll_mexico.structure_16')),
+                                            (4,ref('hr_payroll_mexico.structure_17')),
+                                            (4,ref('hr_payroll_mexico.structure_28')),
+                                            (4,ref('hr_payroll_mexico.structure_29')),
+                                            ]"/>
+        </record>
+        <record id="hr_payslip_input_type_28" model="hr.payslip.input.type">
+            <field name="name">GRATIFICACIÓN</field>
+            <field name="code">P037</field>
+            <field name="struct_ids" eval="[
+                                            (4,ref('hr_payroll_mexico.structure_14')),
+                                            (4,ref('hr_payroll_mexico.structure_15')),
+                                            (4,ref('hr_payroll_mexico.structure_16')),
+                                            (4,ref('hr_payroll_mexico.structure_17')),
+                                            (4,ref('hr_payroll_mexico.structure_18')),
+                                            (4,ref('hr_payroll_mexico.structure_28')),
+                                            (4,ref('hr_payroll_mexico.structure_29')),
+                                            ]"/>
+        </record>
+        
+        <record id="hr_payslip_input_type_29" model="hr.payslip.input.type">
+            <field name="name">COMPENSACION</field>
+            <field name="code">P039</field>
+            <field name="struct_ids" eval="[
+                                            (4,ref('hr_payroll_mexico.structure_1')),
+                                            (4,ref('hr_payroll_mexico.structure_6')),
+                                            (4,ref('hr_payroll_mexico.structure_14')),
+                                            (4,ref('hr_payroll_mexico.structure_19')),
+                                            (4,ref('hr_payroll_mexico.structure_31')),
+                                            (4,ref('hr_payroll_mexico.structure_26')),
+                                            ]"/>
+        </record>
+        
+        <record id="hr_payslip_input_type_30" model="hr.payslip.input.type">
+            <field name="name">AGUINALDO</field>
+            <field name="code">P032</field>
+            <field name="struct_ids" eval="[
+                                            (4,ref('hr_payroll_mexico.structure_1')),
+                                            (4,ref('hr_payroll_mexico.structure_2')),
+                                            (4,ref('hr_payroll_mexico.structure_3')),
+                                            (4,ref('hr_payroll_mexico.structure_4')),
+                                            (4,ref('hr_payroll_mexico.structure_5')),
+                                            (4,ref('hr_payroll_mexico.structure_6')),
+                                            (4,ref('hr_payroll_mexico.structure_26')),
+                                            (4,ref('hr_payroll_mexico.structure_27')),
+                                            (4,ref('hr_payroll_mexico.structure_28')),
+                                            (4,ref('hr_payroll_mexico.structure_29')),
+                                            (4,ref('hr_payroll_mexico.structure_30')),
+                                            (4,ref('hr_payroll_mexico.structure_31')),
+                                            ]"/>
+        </record>
+    
+
+    </data>
+</odoo>

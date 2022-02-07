@@ -1,0 +1,148 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_attendance_mexico
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-26 13:52+0000\n"
+"PO-Revision-Date: 2022-01-26 13:52+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_attendance_mexico
+#: code:addons/hr_attendance_mexico/wizard/massive_attendance.py:0
+#, python-format
+msgid ""
+"\n"
+"Invalid format: \n"
+msgstr ""
+"\n"
+"Formato invalido: \n"
+
+#. module: hr_attendance_mexico
+#: code:addons/hr_attendance_mexico/wizard/massive_attendance.py:0
+#, python-format
+msgid ""
+"\n"
+"No results were found for: \n"
+msgstr ""
+"\n"
+"No se encontraron resultados para: \n"
+
+#. module: hr_attendance_mexico
+#: code:addons/hr_attendance_mexico/wizard/massive_attendance.py:0
+#, python-format
+msgid ""
+"\n"
+"The following fields are mandatory: \n"
+msgstr ""
+"\n"
+"Los siguientes campos son obligatorios: \n"
+
+#. module: hr_attendance_mexico
+#: code:addons/hr_attendance_mexico/wizard/massive_attendance.py:0
+#: code:addons/hr_attendance_mexico/wizard/massive_attendance.py:0
+#, python-format
+msgid "%s with the value (%s) in row %s. \n"
+msgstr "%s con el valor (%s) en la fila %s. \n"
+
+#. module: hr_attendance_mexico
+#: code:addons/hr_attendance_mexico/wizard/massive_attendance.py:0
+#, python-format
+msgid "Attendances"
+msgstr "Asistencias"
+
+#. module: hr_attendance_mexico
+#: model_terms:ir.ui.view,arch_db:hr_attendance_mexico.view_massive_attendance_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: hr_attendance_mexico
+#: model:ir.model.fields,field_description:hr_attendance_mexico.field_massive_attendance__company_id
+msgid "Company"
+msgstr "Empresa"
+
+#. module: hr_attendance_mexico
+#: model:ir.model.fields,field_description:hr_attendance_mexico.field_massive_attendance__create_uid
+msgid "Created by"
+msgstr "creado por"
+
+#. module: hr_attendance_mexico
+#: model:ir.model.fields,field_description:hr_attendance_mexico.field_massive_attendance__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: hr_attendance_mexico
+#: model:ir.model.fields,field_description:hr_attendance_mexico.field_massive_attendance__display_name
+msgid "Display Name"
+msgstr "Nombre Mostrado"
+
+#. module: hr_attendance_mexico
+#: code:addons/hr_attendance_mexico/wizard/massive_attendance.py:0
+#, python-format
+msgid "Employee registration %s in the row %s. \n"
+msgstr "Registro de empleado %s en la fila %s. \n"
+
+#. module: hr_attendance_mexico
+#: model_terms:ir.ui.view,arch_db:hr_attendance_mexico.view_massive_attendance_form
+msgid "File"
+msgstr "Archivo"
+
+#. module: hr_attendance_mexico
+#: model:ir.model.fields,field_description:hr_attendance_mexico.field_massive_attendance__file_id
+msgid "File excel"
+msgstr "Archivo excel"
+
+#. module: hr_attendance_mexico
+#: model_terms:ir.ui.view,arch_db:hr_attendance_mexico.view_massive_attendance_form
+msgid "Generate"
+msgstr "Generar"
+
+#. module: hr_attendance_mexico
+#: model:ir.model.fields,field_description:hr_attendance_mexico.field_massive_attendance__id
+msgid "ID"
+msgstr ""
+
+#. module: hr_attendance_mexico
+#: model:ir.ui.menu,name:hr_attendance_mexico.menu_import_attendance
+msgid "Import"
+msgstr "Importar"
+
+#. module: hr_attendance_mexico
+#: model:ir.model.fields,field_description:hr_attendance_mexico.field_massive_attendance____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: hr_attendance_mexico
+#: model:ir.model.fields,field_description:hr_attendance_mexico.field_massive_attendance__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: hr_attendance_mexico
+#: model:ir.model.fields,field_description:hr_attendance_mexico.field_massive_attendance__write_date
+msgid "Last Updated on"
+msgstr "Ultima actualización en"
+
+#. module: hr_attendance_mexico
+#: model:ir.actions.act_window,name:hr_attendance_mexico.action_massive_attendance_import
+#: model:ir.ui.menu,name:hr_attendance_mexico.menu_massive_attendance_import
+#: model_terms:ir.ui.view,arch_db:hr_attendance_mexico.view_massive_attendance_form
+msgid "Massive Employee Attendance"
+msgstr "Asistencia masiva de empleados"
+
+#. module: hr_attendance_mexico
+#: code:addons/hr_attendance_mexico/wizard/massive_attendance.py:0
+#, python-format
+msgid "There is no EXCEL file"
+msgstr "No hay archivo EXCEL"
+
+#. module: hr_attendance_mexico
+#: model:ir.model,name:hr_attendance_mexico.model_massive_attendance
+msgid "Wizard for massive employee attendance creation"
+msgstr "Asistente para la creación de asistencia masiva de empleados"

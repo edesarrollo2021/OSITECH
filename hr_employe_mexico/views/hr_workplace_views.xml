@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_hr_workplace_form" model="ir.ui.view">
+            <field name="name">hr.workplace.form</field>
+            <field name="model">hr.workplace</field>
+            <field name="arch" type="xml">
+                <form string="Workplace">
+                    <sheet>
+                        <group>
+                            <group><field name="name"/></group>
+                            <group><field name="code"/></group>
+                        </group>
+                        <group>
+                            <group>
+                            <label for="street" string="Address"/>
+                            <div class="o_address_format" name="div_address">
+                                <field name="country_id" placeholder="Country" class="o_address_country" options='{"no_open": True, "no_create": True}'/>
+                                <field name="city" placeholder="City" class="o_address_city"/>
+                                <field name="state_id" class="o_address_state" placeholder="State" options='{"no_open": True}'
+                                       context="{'default_country_id': country_id}"/>
+                                <field name="zip" placeholder="ZIP" class="o_address_zip"/>
+                                <field name="municipality_id" placeholder="Mayoralty/Municipality" class="o_address_country"
+                                    options='{"no_open": True, "no_create": True}'/>
+                                <field name="suburb_id" class="o_address_country" placeholder="Suburb"
+                                    context="{'default_municipality_id': municipality_id}"/>
+                                <field name="street" placeholder="Street..." class="o_address_street"/>
+                                <field name="street2" placeholder="Street 2..." class="o_address_street"/>
+                            </div>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_hr_workplace_tree" model="ir.ui.view">
+            <field name="name">hr.workplace.tree</field>
+            <field name="model">hr.workplace</field>
+            <field name="arch" type="xml">
+                <tree string="Workplaces">
+                    <field name="name"/>
+                    <field name="code"/>
+                </tree>
+            </field>
+        </record>
+
+<!--        <record id="view_hr_workplace_filter" model="ir.ui.view">-->
+<!--            <field name="name">hr.workplace.search</field>-->
+<!--            <field name="model">hr.workplace</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <search string="Workplace">-->
+<!--                    <field name="name" string="JWorkplace"/>-->
+<!--                </search>-->
+<!--            </field>-->
+<!--        </record>-->
+
+        <record id="action_hr_workplace" model="ir.actions.act_window">
+            <field name="name">Workplaces</field>
+            <field name="res_model">hr.workplace</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                Create your first workplace
+              </p>
+            </field>
+        </record>
+
+        <menuitem
+            id="menu_view_hr_workplace"
+            action="action_hr_workplace"
+            parent="hr.menu_human_resources_configuration"
+            sequence="1"/>
+
+    </data>
+</odoo>

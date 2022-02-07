@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_wizard_payroll_report_filter_form" model="ir.ui.view">
+            <field name="name">wizard.payroll.report.filter</field>
+            <field name="model">wizard.payroll.report.filter</field>
+            <field name="arch" type="xml">
+                <form string="Download Report">
+                    <group>
+                        <group>
+                            <field name="type" invisible="1"/>
+                            <field name="structure_ids" widget="many2many_tags" required="1"/>
+                        </group>
+                        <group>
+                            <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+                        </group>
+                    </group>
+                    <label for="period_ids"/>
+                    <group>
+                        <field name="period_ids" required="1" nolabel="1"
+                               context="{'search_default_group_by_year': 1, 'search_default_group_by_type': 1}"/>
+                    </group>
+                    <footer>
+                        <button string="Export (XLSX)" name="export_report" type="object" class="oe_highlight" attrs="{'invisible': [('type', '=', 'isn')]}"/>
+                        <button string="Export (XLSX)" name="export_report_ins" type="object" class="oe_highlight" attrs="{'invisible': [('type', '!=', 'isn')]}"/>
+                        <button string="Close" class="oe_link" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_wizard_payroll_report_filter" model="ir.actions.act_window">
+            <field name="name">Payroll Report</field>
+            <field name="res_model">wizard.payroll.report.filter</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="context">{'default_type': 'payroll'}</field>
+        </record>
+
+        <record id="action_wizard_taxed_report_filter" model="ir.actions.act_window">
+            <field name="name">Taxed Report</field>
+            <field name="res_model">wizard.payroll.report.filter</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="context">{'default_type': 'taxed'}</field>
+        </record>
+
+        <record id="action_wizard_assa_report_filter" model="ir.actions.act_window">
+            <field name="name">ASSA Report</field>
+            <field name="res_model">wizard.payroll.report.filter</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="context">{'default_type': 'assa'}</field>
+        </record>
+
+        <record id="action_wizard_aspa_report_filter" model="ir.actions.act_window">
+            <field name="name">ASPA Report</field>
+            <field name="res_model">wizard.payroll.report.filter</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="context">{'default_type': 'aspa'}</field>
+        </record>
+
+
+        <record id="action_wizard_saving_fund_report_filter" model="ir.actions.act_window">
+            <field name="name">Saving Fund Report</field>
+            <field name="res_model">wizard.payroll.report.filter</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="context">{'default_type': 'saving'}</field>
+      </record>
+
+        <record id="action_wizard_isn_report" model="ir.actions.act_window">
+            <field name="name">ISN Report</field>
+            <field name="res_model">wizard.payroll.report.filter</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="context">{'default_type': 'isn'}</field>
+        </record>
+
+        <menuitem id="menu_action_hr_payroll_report_filter"
+                  name="Payroll Report"
+                  action="action_wizard_payroll_report_filter"
+                  parent="hr_payroll.menu_hr_payroll_report"/>
+
+        <menuitem id="menu_action_taxed_report_filter"
+                  name="Taxed Report"
+                  sequence="20"
+                  action="action_wizard_taxed_report_filter"
+                  parent="hr_payroll.menu_hr_payroll_report"/>
+
+        <menuitem id="menu_wizard_isn_report"
+                  name="ISN Report"
+                  sequence="30"
+                  action="action_wizard_isn_report"
+                  parent="hr_payroll.menu_hr_payroll_report"/>
+
+<!--        <menuitem id="menu_action_assa_report_filter"-->
+<!--                  name="ASSA Report"-->
+<!--                  sequence="25"-->
+<!--                  action="action_wizard_assa_report_filter"-->
+<!--                  parent="hr_payroll.menu_hr_payroll_report"/>-->
+
+<!--        <menuitem id="menu_action_aspa_report_filter"-->
+<!--                  name="ASPA Report"-->
+<!--                  sequence="30"-->
+<!--                  action="action_wizard_aspa_report_filter"-->
+<!--                  parent="hr_payroll.menu_hr_payroll_report"/>-->
+
+        <menuitem id="menu_action_saving_fund_report_filter"
+                  name="Saving Fund Report"
+                  sequence="35"
+                  action="action_wizard_saving_fund_report_filter"
+                  parent="hr_payroll.menu_hr_payroll_report"/>
+
+    <record model="ir.actions.server" id="action_hr_payroll_taxed_payroll">
+        <field name="name">Taxed Report</field>
+        <field name="model_id" ref="hr_payroll.model_hr_payslip_run"/>
+        <field name="binding_model_id" ref="hr_payroll.model_hr_payslip_run"/>
+        <field name="state">code</field>
+        <field name="code">
+            if records:
+                action = records.with_context(one_lote=True).report_taxed_print()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_hr_payroll_aspa_report">
+        <field name="name">ASPA Report</field>
+        <field name="model_id" ref="hr_payroll.model_hr_payslip_run"/>
+        <field name="binding_model_id" ref="hr_payroll.model_hr_payslip_run"/>
+        <field name="state">code</field>
+        <field name="code">
+            if records:
+                action = records.with_context(one_lote=True).report_aspa_print()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_hr_payroll_assa_report">
+        <field name="name">ASSA Report</field>
+        <field name="model_id" ref="hr_payroll.model_hr_payslip_run"/>
+        <field name="binding_model_id" ref="hr_payroll.model_hr_payslip_run"/>
+        <field name="state">code</field>
+        <field name="code">
+            if records:
+                action = records.with_context(one_lote=True).report_assa_print()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_hr_payroll_aspa_txt_report">
+        <field name="name">ASPA Report (TXT)</field>
+        <field name="model_id" ref="hr_payroll.model_hr_payslip_run"/>
+        <field name="binding_model_id" ref="hr_payroll.model_hr_payslip_run"/>
+        <field name="binding_view_types">form</field>
+        <field name="state">code</field>
+        <field name="code">
+            if records:
+                if records.structure_id.aspa_report:
+                    action = {
+                        "type": "ir.actions.act_url",
+                        "url": "/aspa_report/" + str(records.id),
+                    }
+                else:
+                    raise Warning('This salary structure is not configured for the ASPA report')
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_social_objective_report">
+        <field name="name">Social Objective Report</field>
+        <field name="model_id" ref="hr_payroll.model_hr_payslip_run"/>
+        <field name="binding_model_id" ref="hr_payroll.model_hr_payslip_run"/>
+        <field name="state">code</field>
+        <field name="code">
+            if records:
+                if records.structure_id.social_objective:
+                    action = records.with_context(one_lote=True).report_social_objective_print()
+                else:
+                    raise Warning('This salary structure is not configured for the Social Objective reports')
+        </field>
+    </record>
+
+   </data>
+</odoo>

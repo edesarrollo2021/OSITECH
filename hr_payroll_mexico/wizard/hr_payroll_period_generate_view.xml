@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <record id="view_hr_payroll_period_generate_form" model="ir.ui.view">
+        <field name="name">hr.payroll.period.generate.form</field>
+        <field name="model">hr.payroll.period.generate</field>
+        <field name="arch" type="xml">
+        <form string="Payroll Period Generate">
+            <sheet>
+            <group>
+                <group>
+                    <field name="company_ids" groups="base.group_multi_company" options='{"no_open":True}'
+                           widget="many2many_tags"/>
+                </group>
+                <group>
+                    <field name="type"/>
+                    <field name="year" attrs="{'invisible': [('type', '!=', 'ordinary')], 'required': [('type', '=', 'ordinary')]}"/>
+                    <field name="month" attrs="{'invisible': [('type', '!=', 'ordinary')], 'required': [('type', '=', 'ordinary')]}"/>
+                    <field name="date_start" attrs="{'invisible': [('type', '!=', 'extraordinary')], 'required': [('type', '=', 'extraordinary')]}"/>
+                    <field name="date_end" attrs="{'invisible': [('type', '!=', 'extraordinary')], 'required': [('type', '=', 'extraordinary')]}"/>
+                    <field name="payroll_period" attrs="{'invisible': [('type', '=', 'extraordinary')], 'required': [('type', '!=', 'extraordinary')]}"/>
+                </group>
+            </group>
+            </sheet>
+            <footer>
+                <button name="generate_payroll_period" string="Generate" type="object" class="btn-primary"/>
+                <button string="Cancel" special="cancel" class="btn-default"/>
+            </footer>
+        </form>
+        </field>
+    </record>
+
+    <record id="action_hr_payroll_period_generate" model="ir.actions.act_window">
+        <field name="name">Payroll Period Generate</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.payroll.period.generate</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem
+        id="menu_hr_payroll_period_generate"
+        name="Payroll Period Generate"
+        parent="hr_payroll_mexico.menu_hr_payroll_period"
+        groups="hr_payroll.group_hr_payroll_user"
+        action="action_hr_payroll_period_generate"
+        sequence="20"/>
+
+    </data>
+</odoo>

@@ -1,0 +1,1644 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* import_employees
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-16 17:19+0000\n"
+"PO-Revision-Date: 2021-12-16 17:19+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__signature_count
+msgid "# Signatures"
+msgstr "# Firmas"
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__l10n_mx_edi_addenda
+msgid "A view representing the addenda"
+msgstr "Una vista que representa la addenda"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__property_account_payable_id
+msgid "Account Payable"
+msgstr "Cuenta por pagar"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__property_account_receivable_id
+msgid "Account Receivable"
+msgstr "Cuenta por cobrar"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__message_needaction
+msgid "Action Needed"
+msgstr "Accion necesaria"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__active
+msgid "Active"
+msgstr "Activo"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__active_lang_count
+msgid "Active Lang Count"
+msgstr "Recuento de idiomas activo"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__activity_ids
+msgid "Activities"
+msgstr "Actividades"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Decoración de excepción de actividad"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__activity_state
+msgid "Activity State"
+msgstr "Estado de actividad"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Icono de tipo de actividad"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__l10n_mx_edi_addenda
+msgid "Addenda"
+msgstr ""
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__l10n_mx_edi_addenda_doc
+msgid "Addenda Documentation"
+msgstr "Documentación de Addenda"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__additional_info
+msgid "Additional info"
+msgstr "Información adicional"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__type
+msgid "Address Type"
+msgstr "Tipo de dirección"
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__lang
+msgid ""
+"All the emails and documents sent to this contact will be translated in this"
+" language."
+msgstr ""
+"Todos los correos electrónicos y documentos enviados a este contacto serán "
+"traducidos a este. idioma."
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__message_attachment_count
+msgid "Attachment Count"
+msgstr "Recuento de archivos adjuntos"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__bank_account_count
+msgid "Bank"
+msgstr "Banco"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__bank_ids
+msgid "Banks"
+msgstr "Bancos"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__barcode
+msgid "Barcode"
+msgstr "Código de barras"
+
+#. module: import_employees
+#: model:ir.model,name:import_employees.model_base_import_import
+msgid "Base Import"
+msgstr "Importar base"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__is_blacklisted
+msgid "Blacklist"
+msgstr "Lista negra"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__mobile_blacklisted
+msgid "Blacklisted Phone Is Mobile"
+msgstr "El teléfono de la lista negra es móvil"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__phone_blacklisted
+msgid "Blacklisted Phone is Phone"
+msgstr "Teléfono en lista negra"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__message_bounce
+msgid "Bounce"
+msgstr "Rebote"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__building
+msgid "Building"
+msgstr "Edificio y/o Departamento"
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__building
+msgid "Building and/or Department"
+msgstr "Edificio y/o Departamento"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__curp
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__l10n_mx_edi_curp
+msgid "CURP"
+msgstr ""
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__can_publish
+msgid "Can Publish"
+msgstr "Puede publicar"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__channel_ids
+msgid "Channels"
+msgstr "Canales"
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__is_company
+msgid "Check if the contact is a company, otherwise it is a person"
+msgstr "Marque si el contacto es una empresa, de lo contrario es una persona"
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__employee
+msgid "Check this box if this contact is an Employee."
+msgstr "Marque esta casilla si este contacto es un empleado"
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__country_enforce_cities
+msgid ""
+"Check this box to ensure every address created in that country has a 'City' "
+"chosen in the list of the country's cities."
+msgstr ""
+"Marque esta casilla para asegurarse de que todas las direcciones creadas en "
+"ese país tengan una 'Ciudad' elegido en la lista de ciudades del país."
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__city
+msgid "City"
+msgstr "Ciudad"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__city_id
+msgid "City of Address"
+msgstr "Ciudad de direccion"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__l10n_mx_edi_colony_code
+msgid "Colony Code"
+msgstr "Código de la colonia"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__l10n_mx_edi_colony
+msgid "Colony Name"
+msgstr "Nombre de la colonia"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__color
+msgid "Color Index"
+msgstr "Indice de color"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__commercial_partner_id
+msgid "Commercial Entity"
+msgstr "Entidad comercial"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__ref_company_ids
+msgid "Companies that refers to partner"
+msgstr "Empresas que se refiere a socio"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__company_id
+msgid "Company"
+msgstr "Compañía"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__slide_channel_company_count
+msgid "Company Course Count"
+msgstr "Recuento de cursos de la empresa"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__company_name
+msgid "Company Name"
+msgstr "Nombre de la compañía"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__commercial_company_name
+msgid "Company Name Entity"
+msgstr "Nombre de la empresa Entidad"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__company_type
+msgid "Company Type"
+msgstr "Tipo de compañía"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__partner_gid
+msgid "Company database ID"
+msgstr "ID de base de datos de la empresa"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__contact_address
+msgid "Complete Address"
+msgstr "Dirección completa"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__child_ids
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__contact_address_complete
+msgid "Contact Address Complete"
+msgstr "Dirección de contacto completa"
+
+#. module: import_employees
+#: model:ir.model.fields.selection,name:import_employees.selection__hr_employee_import__type__contract
+msgid "Contract"
+msgstr "Contracto"
+
+#. module: import_employees
+#: model:ir.actions.act_window,name:import_employees.action_view_menu_contract_import
+msgid "Contract Structure"
+msgstr "Estructura de contratos"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__payment_token_count
+msgid "Count Payment Token"
+msgstr "Contar token de pago"
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__message_bounce
+msgid "Counter of the number of bounced emails for this contact"
+msgstr ""
+"Contador de la cantidad de correos electrónicos devueltos para este "
+"contacto."
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__country_id
+msgid "Country"
+msgstr "País"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__slide_channel_count
+msgid "Course Count"
+msgstr "Recuento de cursos"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_import__create_uid
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_import__create_date
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__credit_limit
+msgid "Credit Limit"
+msgstr "Límite de crédito"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__currency_id
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__property_payment_term_id
+msgid "Customer Payment Terms"
+msgstr "Condiciones de pago del cliente"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__customer_rank
+msgid "Customer Rank"
+msgstr "Rango de cliente"
+
+#. module: import_employees
+#: code:addons/import_employees/models/hr_employee_import.py:0
+#, python-format
+msgid "DATE FORMAT: value (%s) field %s in row %s.\n"
+msgstr "FORMATO FECHA: Valor (%s) columna %s en la fila %s.\n"
+
+#. module: import_employees
+#: code:addons/import_employees/models/hr_employee_import.py:0
+#, python-format
+msgid "DUPLICATE: (%s) Column %s in row %s.\n"
+msgstr "DUPLICADO: (%s) Columna %s en la fila %s.\n"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__data_line
+msgid "Data line"
+msgstr "Linea de datos"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__data_line_abbr
+msgid "Data line abbreviation"
+msgstr "Abreviatura de la línea de datos"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__data_line_break
+msgid "Data line break"
+msgstr "Salto de línea de datos"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__data_line_break_abbr
+msgid "Data line break abbreviation"
+msgstr "Abreviatura de salto de línea de datos"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__data_line_break_icon
+msgid "Data line break icon"
+msgstr "Icono de salto de línea de datos"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__data_line_icon
+msgid "Data line icon"
+msgstr "Icono de línea de datos"
+
+#. module: import_employees
+#: code:addons/import_employees/models/hr_contract_import.py:0
+#: code:addons/import_employees/models/hr_contract_import.py:0
+#, python-format
+msgid "Database ID"
+msgstr "ID de la base de datos"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__date
+msgid "Date"
+msgstr "Fecha"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__trust
+msgid "Degree of trust you have in this debtor"
+msgstr "Grado de confianza que tiene en este deudor"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_base_import_import__display_name
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee__display_name
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_import__display_name
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__display_address
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__display_address_without_company
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__display_address_without_company_line
+msgid "Display addres"
+msgstr "Mostrar dirección"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__document_count
+msgid "Document Count"
+msgstr "Recuento de documentos"
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__partner_share
+msgid ""
+"Either customer (not a user), either shared user. Indicated the current "
+"partner is a customer without access or with a limited access created for "
+"sharing data."
+msgstr ""
+"Cualquier cliente (no usuario), usuario compartido. Indicó que el socio "
+"actual es un cliente sin acceso o con un acceso limitado creado para "
+"compartir datos."
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__email
+msgid "Email"
+msgstr "Correo"
+
+#. module: import_employees
+#: model:ir.model,name:import_employees.model_hr_employee
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__employee
+#: model:ir.model.fields.selection,name:import_employees.selection__hr_employee_import__type__employee
+msgid "Employee"
+msgstr "Empleado"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__employee_id
+msgid "Employee Import"
+msgstr "Importar Empleado"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee__partner_employee_ids
+msgid "Employee Partner Import"
+msgstr "Empleados socios para importar"
+
+#. module: import_employees
+#: model:ir.model,name:import_employees.model_hr_employee_partner_import
+msgid "Employee Partners"
+msgstr "Empleados socios"
+
+#. module: import_employees
+#: model_terms:ir.ui.view,arch_db:import_employees.view_employee_import_tree
+#: model_terms:ir.ui.view,arch_db:import_employees.view_menu_hr_import
+msgid "Employees"
+msgstr "Empleados"
+
+#. module: import_employees
+#: model:ir.actions.act_window,name:import_employees.action_view_menu_hr_import
+msgid "Employees Structure"
+msgstr "Estructura de empleados"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__country_enforce_cities
+msgid "Enforce Cities"
+msgstr "Hacer cumplir las ciudades"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__street_number
+msgid "Exterior/Block No."
+msgstr "Número Exterior-Manzana"
+
+#. module: import_employees
+#: code:addons/import_employees/models/hr_contract_import.py:0
+#: code:addons/import_employees/models/hr_contract_import.py:0
+#, python-format
+msgid "External ID"
+msgstr "ID externo"
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__phone_sanitized
+msgid ""
+"Field used to store sanitized phone number. Helps speeding up searches and "
+"comparisons."
+msgstr ""
+"Campo utilizado para almacenar el número de teléfono desinfectado. Ayuda a "
+"acelerar las búsquedas y comparaciones"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__property_account_position_id
+msgid "Fiscal Position"
+msgstr "Posición fiscal"
+
+#. module: import_employees
+#: code:addons/import_employees/models/hr_employee_import.py:0
+#, python-format
+msgid "Fixed ASSA resistance fund"
+msgstr "Fondo fijo de resistencia ASSA"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__followup_level
+msgid "Follow-up Level"
+msgstr "Nivel del seguimiento"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__payment_responsible_id
+msgid "Follow-up Responsible"
+msgstr "Responsable del seguimiento"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__followup_status
+msgid "Follow-up Status"
+msgstr "Estado del seguimiento"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Seguidores (Canales)"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores (Socios)"
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Icono de fuente impresionante, p. Ej. fa-tareas"
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__email_formatted
+msgid "Format email address \"Name <email@domain>\""
+msgstr ""
+"Dar formato a la dirección de correo electrónico \"Nombre <email@domain>\""
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__email_formatted
+msgid "Formatted Email"
+msgstr "Correo electrónico formateado"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__partner_latitude
+msgid "Geo Latitude"
+msgstr "Latitud geográfica"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__partner_longitude
+msgid "Geo Longitude"
+msgstr "Longitud geográfica"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__has_unreconciled_entries
+msgid "Has Unreconciled Entries"
+msgstr "Tiene entradas no reconciliadas"
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__l10n_mx_edi_addenda_doc
+msgid ""
+"How should be done the addenda for this customer (try to put human readable "
+"information here to help the invoice people to fill properly the fields in "
+"the invoice)"
+msgstr ""
+"Cómo debería construirse la  addenda para este cliente (intente poner aquí "
+"información legible por personas para facilitar el llenado apropiado de los "
+"campos de la factura)"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_base_import_import__id
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee__id
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_import__id
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__id
+msgid "ID"
+msgstr "Identificación"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__im_status
+msgid "IM Status"
+msgstr "Mi Status"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__activity_exception_icon
+msgid "Icon"
+msgstr "ícono"
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "ícono para indicar una actividad de excepción."
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__message_needaction
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Si está marcada, los mensajes nuevos requieren su atención."
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__message_has_error
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si está marcada, los mensajes nuevos requieren su atención."
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__is_blacklisted
+msgid ""
+"If the email address is on the blacklist, the contact won't receive mass "
+"mailing anymore, from any list"
+msgstr ""
+"Si la dirección de correo electrónico está en la lista negra, el contacto ya"
+" no recibirá correos masivos, de ninguna lista."
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__phone_sanitized_blacklisted
+msgid ""
+"If the sanitized phone number is on the blacklist, the contact won't receive"
+" mass mailing sms anymore, from any list"
+msgstr ""
+"Si el número de teléfono desinfectado está en la lista negra, el contacto ya"
+" no recibirá sms de correo masivo, de ninguna lista."
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__image_1920
+msgid "Image"
+msgstr "Imagén"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__image_1024
+msgid "Image 1024"
+msgstr "Imagén 1024"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__image_128
+msgid "Image 128"
+msgstr "Imagén 128"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__image_256
+msgid "Image 256"
+msgstr "Imagén 256"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__image_512
+msgid "Image 512"
+msgstr "Imagén 512"
+
+#. module: import_employees
+#. openerp-web
+#: code:addons/import_employees/static/src/js/contract_import.js:0
+#: model:ir.ui.menu,name:import_employees.menu_hr_import_contract
+#, python-format
+msgid "Import Contract"
+msgstr "Importar contratos"
+
+#. module: import_employees
+#. openerp-web
+#: code:addons/import_employees/static/src/js/employee_import.js:0
+#, python-format
+msgid "Import Employee"
+msgstr "Importar empleados"
+
+#. module: import_employees
+#: model:ir.model,name:import_employees.model_hr_employee_import
+#: model:ir.ui.menu,name:import_employees.menu_hr_import_employee
+msgid "Import Employees"
+msgstr "Importar empleados"
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__l10n_mx_edi_curp
+msgid ""
+"In Mexico, the Single Code of Population Registration (CURP) is a unique "
+"alphanumeric code of 18 characters used to officially identify both "
+"residents and Mexican citizens throughout the country."
+msgstr ""
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__l10n_mx_type_of_operation
+msgid ""
+"Indicate the operations type that makes this supplier. Is the second column "
+"in DIOT report"
+msgstr ""
+"Indique el tipo de operaciones que realiza a este proveedor. Es la segunda "
+"columna del reporte de DIOT"
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__l10n_mx_type_of_third
+msgid ""
+"Indicate the type of third that is the supplier. Is the first column in DIOT"
+" report."
+msgstr ""
+"Indica el tipo de tercero que es el proveedor. Es la primera columna del "
+"reporte de DIOT."
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__mobile_blacklisted
+msgid ""
+"Indicates if a blacklisted sanitized phone number is a mobile number. Helps "
+"distinguish which number is blacklisted             when there is both a "
+"mobile and phone field in a model."
+msgstr ""
+"Indica si el número de teléfono de la lista negra es un número celular. "
+"Sirve para distinguir qué número está en la lista negra             cuando "
+"hay un campo de celular y otro de teléfono fijo en un modelo."
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__phone_blacklisted
+msgid ""
+"Indicates if a blacklisted sanitized phone number is a phone number. Helps "
+"distinguish which number is blacklisted             when there is both a "
+"mobile and phone field in a model."
+msgstr ""
+"Indica si el número de teléfono de la lista negra es un teléfono fijo. Sirve"
+" para distinguir qué número está en la lista negra cuando hay un campo de "
+"celular y otro de teléfono fijo en un modelo."
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__industry_id
+msgid "Industry"
+msgstr "Industría"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__street_number2
+msgid "Interior"
+msgstr "Número Interior"
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__street_number2
+msgid "Interior/Lot No."
+msgstr "Número Interior"
+
+#. module: import_employees
+#: code:addons/import_employees/models/hr_employee_import.py:0
+#, python-format
+msgid "Invalid cell value at row %(row)s, column %(col)s: %(cell_value)s"
+msgstr ""
+"Valor de celda invalido en la fila%(row)s, columna%(col)s: %(cell_value)s"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__invoice_warn
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__type
+msgid ""
+"Invoice & Delivery addresses are used in sales orders. Private addresses are"
+" only visible by authorized users."
+msgstr ""
+"Las direcciones de facturación y entrega se utilizan en los pedidos de "
+"venta.  Las direcciones privadas solo son visibles para los usuarios "
+"autorizados."
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__invoice_ids
+msgid "Invoices"
+msgstr "Facturas"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__message_is_follower
+msgid "Is Follower"
+msgstr "Es seguidor"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__is_published
+msgid "Is Published"
+msgstr "Está publicado"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__is_company
+msgid "Is a Company"
+msgstr "Es una compañía"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__function
+msgid "Job Position"
+msgstr "Puesto de trabajo"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__journal_item_count
+msgid "Journal Items"
+msgstr "Apuntes contables"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__l10n_mx_nationality
+msgid "L10N Mx Nationality"
+msgstr "Nacionalidad"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__l10n_mx_type_of_operation
+msgid "L10N Mx Type Of Operation"
+msgstr "Tipo de operación"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__l10n_mx_type_of_third
+msgid "L10N Mx Type Of Third"
+msgstr "Tipo de Tercero"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__lang
+msgid "Language"
+msgstr "Idioma"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_base_import_import____last_update
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee____last_update
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_import____last_update
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_import__write_uid
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_import__write_date
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__calendar_last_notif_ack
+msgid "Last notification marked as read from base Calendar"
+msgstr "Última notificación marcada como leída del calendario base"
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__last_time_entries_checked
+msgid ""
+"Last time the invoices & payments matching was performed for this partner. "
+"It is set either if there's not at least an unreconciled debit and an "
+"unreconciled credit or if you click the \"Done\" button."
+msgstr ""
+"Última vez que se conciliaron facturas y pagos de este partner. Se configura"
+" incluso si no hay ningún débito o crédito por conciliar, o si pulsas el "
+"botón \"Hecho\"."
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__last_time_entries_checked
+msgid "Latest Invoices & Payments Matching Date"
+msgstr "Fecha de la última conciliación de facturas y pagos"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__l10n_mx_edi_locality_id
+msgid "Locality"
+msgstr "Localidad"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__l10n_mx_edi_locality
+msgid "Locality Name"
+msgstr "Nombre de la localidad"
+
+#. module: import_employees
+#: code:addons/import_employees/models/hr_employee_import.py:0
+#, python-format
+msgid "MANY COINCIDENCES: value (%s) field %s in row %s.\n"
+msgstr "MULTIPLES COINCIDENCIAS: Valor (%s) Columna %s ien la fila %s.\n"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Archivo principal"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__image_medium
+msgid "Medium-sized image"
+msgstr "Imagen de tamaño mediano"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__message_has_error
+msgid "Message Delivery error"
+msgstr "Error de entrega de mensaje"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__invoice_warn_msg
+msgid "Message for Invoice"
+msgstr "Mensajes para facturas"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__message_ids
+msgid "Messages"
+msgstr "Mensajes"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__mobile
+msgid "Mobile"
+msgstr "Móvil"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Mi fecha límite de actividad"
+
+#. module: import_employees
+#: code:addons/import_employees/models/hr_employee_import.py:0
+#, python-format
+msgid "NOT AVAILABLE: Living Room (%s) Column %s in row %s.\n"
+msgstr "NO DISPONIBLE: Plaza (%s), Columna %s en la fila %s.\n"
+
+#. module: import_employees
+#: code:addons/import_employees/models/hr_employee_import.py:0
+#, python-format
+msgid "NOT FOUND: value (%s) field %s in row %s, POSSIBLE VALUES %s.\n"
+msgstr ""
+"NO ENCONTRADO: Valor (%s), Columna %s en la fila %s, POSIBLES VALORES %s.\n"
+
+#. module: import_employees
+#: code:addons/import_employees/models/hr_employee_import.py:0
+#, python-format
+msgid "NOT FOUND: value (%s) field %s in row %s.\n"
+msgstr "NO ENCONTRADO: Valor (%s) Columna %s en la fila %s.\n"
+
+#. module: import_employees
+#: code:addons/import_employees/models/hr_employee_import.py:0
+#, python-format
+msgid ""
+"NOT MATCH: Living Room (%s) with Jop Posisition (%s) Column %s in row %s.\n"
+msgstr ""
+"NO COINCIDE: Plaza (%s) no pertenece al Puesto de trabajo (%s), Columna %s en la fila %s.\n"
+
+#. module: import_employees
+#: code:addons/import_employees/models/hr_employee_import.py:0
+#, python-format
+msgid "NUMBER FORMAT: value (%s) field %s in row %s.\n"
+msgstr "FORMATO NÚMERO: Valor (%s), Columna %s en la fila %s.\n"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__l10n_mx_nationality
+msgid ""
+"Nationality based in the supplier country. Is the seventh column in DIOT "
+"report"
+msgstr ""
+"Nacionalidad basada en el país proveedor. Es la séptima columna en el "
+"informe DIOT"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__l10n_mx_edi_external_trade
+msgid "Need external trade?"
+msgstr "¿Necesitas comercio exterior?"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__payment_next_action_date
+msgid "Next Action Date"
+msgstr "Fecha de siguiente acción"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Fecha límite para la próxima actividad"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__activity_summary
+msgid "Next Activity Summary"
+msgstr "Resumen de la siguiente actividad"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__activity_type_id
+msgid "Next Activity Type"
+msgstr "Siguiente tipo de actividad"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_import__file_name
+msgid "Nombre del archivo"
+msgstr ""
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__email_normalized
+msgid "Normalized Email"
+msgstr "Correo electrónico normalizado"
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__l10n_mx_edi_colony_code
+msgid ""
+"Note: Only use this field if this partner is the company address or if it is a branch office.\n"
+"Colony code that will be used in the CFDI with the external trade as Emitter colony. It must be a code from the SAT catalog."
+msgstr ""
+"Nota: Solo utilice este campo si este registro es la dirección de la compañía o si es una sucursal.\n"
+"El código de colonia será utilizado en el CFDI con comercio exterior como colonia emisora. Debe ser un código del catálogo del SAT."
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__comment
+msgid "Notes"
+msgstr "Notas"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Numero de acciones"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__message_has_error_counter
+msgid "Number of errors"
+msgstr "Numero de errores"
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Número de mensajes que requieren una acción"
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Número de mensajes con error de entrega"
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Número de mensajes no leídos"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__ocn_token
+msgid "OCN Token"
+msgstr "Token OCN"
+
+#. module: import_employees
+#: code:addons/import_employees/models/hr_employee_import.py:0
+#, python-format
+msgid "OPEN CONTRACT: Employee (%s) Column %s in row %s.\n"
+msgstr "CONTRATO ABIERO: Empleado (%s), Columna %s en la fila %s.\n"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__online_partner_bank_account
+msgid "Online Partner Bank Account"
+msgstr "Cuenta bancaria en línea para partners"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__online_partner_information
+msgid "Online Partner Information"
+msgstr "Información en línea del socio"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__online_partner_vendor_name
+msgid "Online Partner Vendor Name"
+msgstr "Nombre del proveedor del proveedor en línea"
+
+#. module: import_employees
+#: code:addons/import_employees/models/hr_employee_import.py:0
+#, python-format
+msgid "Only one XLSX file can be selected."
+msgstr "Solo se puede seleccionar un archivo XLSX."
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__l10n_mx_edi_locality_id
+msgid ""
+"Optional attribute used in the XML that serves to define the locality where "
+"the domicile is located."
+msgstr ""
+"Atributo opcional utilizado en el XML que sirve para definir la localidad donde "
+"se ubica el domicilio.."
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__payment_responsible_id
+msgid ""
+"Optionally you can assign a user to this field, which will make him "
+"responsible for the action."
+msgstr ""
+"Puede asignar un usuario a este campo de manera opcional. Esto hará que ese "
+"usuario sea el responsable de realizar la acción."
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__parent_name
+msgid "Parent name"
+msgstr "Nombre del padre"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__contract_ids
+msgid "Partner Contracts"
+msgstr "Contratos de partner"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__partner_id
+msgid "Partner Import"
+msgstr "Importación de socios"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__same_vat_partner_id
+msgid "Partner with same Tax ID"
+msgstr "Socio con el mismo número de identificación fiscal"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__debit_limit
+msgid "Payable Limit"
+msgstr "Límite por pagar"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__payment_token_ids
+msgid "Payment Tokens"
+msgstr "Tableros de pago"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__phone
+msgid "Phone"
+msgstr "Teléfono"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__phone_sanitized_blacklisted
+msgid "Phone Blacklisted"
+msgstr "Lista negra del Teléfono"
+
+#. module: import_employees
+#: model_terms:ir.ui.view,arch_db:import_employees.view_menu_hr_import
+msgid "Preview File"
+msgstr "Vista previa"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__property_product_pricelist
+msgid "Pricelist"
+msgstr "Lista de precios"
+
+#. module: import_employees
+#: code:addons/import_employees/models/hr_employee_import.py:0
+#, python-format
+msgid "REQUIRED: field %s in row %s.\n"
+msgstr "REQUERIDO: Columna %s en la fila %s.\n"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__rfc
+msgid "RFC"
+msgstr ""
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_import__read_file
+msgid "Read File"
+msgstr "Leer archivo"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__ref
+msgid "Reference"
+msgstr "Referencia"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__parent_id
+msgid "Related Company"
+msgstr "Compañía"
+
+#. module: import_employees
+#: model_terms:ir.ui.view,arch_db:import_employees.view_menu_hr_import
+msgid "Remaining leaves"
+msgstr "Hojas restantes"
+
+#. module: import_employees
+#: model_terms:ir.ui.view,arch_db:import_employees.view_menu_hr_import
+msgid "Remove File"
+msgstr "Remover Layout"
+
+#. module: import_employees
+#: code:addons/import_employees/models/hr_employee_import.py:0
+#, python-format
+msgid "Resistance fund ASSA new income"
+msgstr "Fondo de resistencia ASSA nuevo ingreso"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__activity_user_id
+msgid "Responsible User"
+msgstr "Usuario responsable"
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__website_id
+msgid "Restrict publishing to this website."
+msgstr "Restrinja la publicación en este sitio web."
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__is_seo_optimized
+msgid "SEO optimized"
+msgstr "SEO optimizado"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Error de entrega del SMS"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__user_id
+msgid "Salesperson"
+msgstr "Vendedor"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__phone_sanitized
+msgid "Sanitized Number"
+msgstr "Número depurado"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_import__file_ids
+msgid "Select Layout"
+msgstr "Seleccionar Layout"
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__invoice_warn
+msgid ""
+"Selecting the \"Warning\" option will notify user with the message, "
+"Selecting \"Blocking Message\" will throw an exception with the message and "
+"block the flow. The Message has to be written in the next field."
+msgstr ""
+"Si selecciona la opción \"Aviso\" se notificará a los usuarios con el "
+"mensaje, si selecciona \"Mensaje de bloqueo\" se lanzará una excepción con "
+"el mensaje y se bloqueará el flujo. El mensaje debe escribirse en el "
+"siguiente campo."
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__self
+msgid "Self"
+msgstr "Sí mismo"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__seo_name
+msgid "Seo name"
+msgstr "Seo nombre"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__partner_share
+msgid "Share Partner"
+msgstr "Socio de acciones"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__signup_expiration
+msgid "Signup Expiration"
+msgstr "Caducidad de la suscripción"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__signup_token
+msgid "Signup Token"
+msgstr "Token de registro"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__signup_type
+msgid "Signup Token Type"
+msgstr "Tipo de token de registro"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__signup_valid
+msgid "Signup Token is Valid"
+msgstr "El token de registro es válido"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__signup_url
+msgid "Signup URL"
+msgstr "URL de registro"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__state_id
+msgid "State"
+msgstr "Estatus"
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Estado basado en actividades\n"
+"Vencido: la fecha de vencimiento ya ha pasado\n"
+"Hoy: la fecha de actividad es hoy\n"
+"Planificado: actividades futuras."
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__street
+msgid "Street"
+msgstr "Calle"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__street_name
+msgid "Street Name"
+msgstr "Nombre de calle"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__street2
+msgid "Street2"
+msgstr "Calle 2"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__supplier_rank
+msgid "Supplier Rank"
+msgstr "Rango de proveedor"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__category_id
+msgid "Tags"
+msgstr "Etiquetas"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__vat
+msgid "Tax ID"
+msgstr "RFC"
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__online_partner_bank_account
+msgid ""
+"Technical field used to store information from plaid/yodlee to match partner"
+msgstr ""
+"Campo técnico utilizado para almacenar información de plaid/yodlee para que "
+"coincida con el partner"
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__online_partner_vendor_name
+msgid ""
+"Technical field used to store information from plaid/yodlee to match partner"
+" (used when a purchase is made)"
+msgstr ""
+"Campo técnico utilizado para almacenar información de plaid/yodlee para que "
+"coincida con el partner (utilizado cuando se realiza una compra)"
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__vat
+msgid ""
+"The Tax Identification Number. Complete it if the contact is subjected to "
+"government taxes. Used in some legal statements."
+msgstr ""
+"El número de identificación fiscal. Rellénelo si el contacto está sujeto a "
+"impuestos gubernamentales. Utilizado en algunas declaraciones legales."
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__payment_next_action_date
+msgid "The date before which no action should be taken."
+msgstr "La fecha antes de la cual no se debe tomar ninguna acción."
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__property_account_position_id
+msgid ""
+"The fiscal position determines the taxes/accounts used for this contact."
+msgstr ""
+"La posición fiscal determina los impuestos/cuentas utilizados para este "
+"contacto. "
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__website_url
+msgid "The full URL to access the document through the website."
+msgstr "La URL completa para acceder al documento a través del sitio web."
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__user_id
+msgid "The internal user in charge of this contact."
+msgstr "El usuario interno a cargo de este contacto."
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__has_unreconciled_entries
+msgid ""
+"The partner has at least one unreconciled debit and credit since last time "
+"the invoices & payments matching was performed."
+msgstr ""
+"El partner tiene al menos un débito o crédito no conciliado desde la última "
+"vez que se realizó la conciliación de facturas y pagos."
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__property_account_payable_id
+msgid ""
+"This account will be used instead of the default one as the payable account "
+"for the current partner"
+msgstr ""
+"Esta cuenta se utilizará en lugar de la cuenta predeterminada como la cuenta"
+" por pagar del partner actual"
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__property_account_receivable_id
+msgid ""
+"This account will be used instead of the default one as the receivable "
+"account for the current partner"
+msgstr ""
+"Esta cuenta se utilizará en lugar de la cuenta predeterminada como la cuenta"
+" por cobrar del partner actual"
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__email_normalized
+msgid ""
+"This field is used to search on email address as the primary email field can"
+" contain more than strictly an email address."
+msgstr ""
+"Este campo se utiliza para buscar direcciones de correo electrónico, ya que "
+"el  campo de correo electrónico principal puede contener más que "
+"estrictamente una dirección de correo electrónico."
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__property_supplier_payment_term_id
+msgid ""
+"This payment term will be used instead of the default one for purchase "
+"orders and vendor bills"
+msgstr ""
+"Se utilizará este plazo de pago en lugar del predeterminado para las órdenes"
+" de compra y las facturas de proveedor."
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__property_payment_term_id
+msgid ""
+"This payment term will be used instead of the default one for sales orders "
+"and customer invoices"
+msgstr ""
+"Se utilizará este plazo de pago en lugar del predeterminado para órdenes de "
+"venta y facturas de clientes"
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__property_product_pricelist
+msgid ""
+"This pricelist will be used, instead of the default one, for sales to the "
+"current partner"
+msgstr ""
+"Esta tarifa se utilizará, en lugar de la por defecto, para las ventas de la "
+"empresa actual."
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__tz
+msgid "Timezone"
+msgstr "Zona horaria"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__tz_offset
+msgid "Timezone offset"
+msgstr "Desplazamiento de zona horaria"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__title
+msgid "Title"
+msgstr "Título"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__total_due
+msgid "Total Due"
+msgstr "Adeudo Total"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__total_invoiced
+msgid "Total Invoiced"
+msgstr "Total facturado"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__total_overdue
+msgid "Total Overdue"
+msgstr "Total de Vencido"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__debit
+msgid "Total Payable"
+msgstr "Total por pagar"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__credit
+msgid "Total Receivable"
+msgstr "Total por cobrar"
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__credit
+msgid "Total amount this customer owes you."
+msgstr "Importe total que el cliente te debe."
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__debit
+msgid "Total amount you have to pay to this vendor."
+msgstr "Importe total a pagar a este proveedor."
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_import__type
+msgid "Type"
+msgstr "Tipo"
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Tipo de actividad de excepción registrada."
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__unpaid_invoices
+msgid "Unpaid Invoices"
+msgstr "Facturas sin pagar"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__message_unread
+msgid "Unread Messages"
+msgstr "Mensajes no leídos"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Contador de mensajes no leídos"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__unreconciled_aml_ids
+msgid "Unreconciled Aml"
+msgstr "AML no conciliado"
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__barcode
+msgid "Use a barcode to identify this contact."
+msgstr "Utilice un código de barras para identificar este contacto."
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__ocn_token
+msgid "Used for sending notification to registered devices"
+msgstr "Usado para enviar la notificación a los dispositivos registrados"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__user_ids
+msgid "Users"
+msgstr "Usuarios"
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__currency_id
+msgid "Utility field to express amount currency"
+msgstr "Campo útil para expresar importe en divisa"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__vat_label
+msgid "Vat label"
+msgstr "Etiqueta de IVA"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__vat_label_full
+msgid "Vat label full"
+msgstr "Etiqueta de IVA full"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__property_supplier_payment_term_id
+msgid "Vendor Payment Terms"
+msgstr "Plazo de pago del proveedor"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__website_published
+msgid "Visible on current website"
+msgstr "Visible en el sitio web actual"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__visitor_ids
+msgid "Visitors"
+msgstr "Visitantes"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__website_id
+msgid "Website"
+msgstr "Sitio web"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__website
+msgid "Website Link"
+msgstr "Enlace de página web"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__website_message_ids
+msgid "Website Messages"
+msgstr "Mensajes del sitio web"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__website_description
+msgid "Website Partner Full Description"
+msgstr "Descripción completa del socio del sitio web"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__website_short_description
+msgid "Website Partner Short Description"
+msgstr "Descripción breve del socio del sitio web"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__website_url
+msgid "Website URL"
+msgstr "URL del sitio web"
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__website_message_ids
+msgid "Website communication history"
+msgstr "Historial de comunicaciones del sitio web"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__website_meta_description
+msgid "Website meta description"
+msgstr "Meta descripción del sitio web"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__website_meta_keywords
+msgid "Website meta keywords"
+msgstr "Meta palabras clave del sitio web"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__website_meta_title
+msgid "Website meta title"
+msgstr "Meta título del sitio web"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__website_meta_og_img
+msgid "Website opengraph image"
+msgstr "Imagen de opengraph del sitio web"
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__tz
+msgid ""
+"When printing documents and exporting/importing data, time values are computed according to this timezone.\n"
+"If the timezone is not set, UTC (Coordinated Universal Time) is used.\n"
+"Anywhere else, time values are computed according to the time offset of your web client."
+msgstr ""
+"Al imprimir documentos y exportar e importar datos, los valores de fechas y horas se calculan con base en esta zona horaria.\n"
+"Si no se ha fijado una zona horaria, se usa UTC (Tiempo Universal Coordinado).\n"
+"En cualquier otro lado, los valores se calculan de acuerdo al desfase de su navegador."
+
+#. module: import_employees
+#: code:addons/import_employees/models/hr_employee_import.py:0
+#, python-format
+msgid "XLSX files only. File not supported."
+msgstr "Solo archivos XLSX. Archivo no admitido."
+
+#. module: import_employees
+#: code:addons/import_employees/models/hr_employee_import.py:0
+#: code:addons/import_employees/models/hr_employee_import.py:0
+#, python-format
+msgid "You must configure at least one field to import"
+msgstr "Debes configurar al menos un campo a importar"
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__zip
+msgid "Zip"
+msgstr "C.P."
+
+#. module: import_employees
+#: model:ir.model.fields,help:import_employees.field_hr_employee_partner_import__l10n_mx_edi_external_trade
+msgid ""
+"check this box to add by default the external trade complement in invoices "
+"for this customer."
+msgstr ""
+"Marque esta casilla para agregar por defecto el complemento de comercio "
+"exterior en las facturas de este cliente."
+
+#. module: import_employees
+#: model:ir.model.fields,field_description:import_employees.field_hr_employee_partner_import__slide_channel_ids
+msgid "eLearning Courses"
+msgstr "Cursos de eLearning"
+
+#. module: import_employees
+#: code:addons/import_employees/models/hr_employee_import.py:0
+#, python-format
+msgid "unknown error code %s"
+msgstr "código de error desconocido %s"
+
+#. module: import_employees
+#: code:addons/import_employees/models/hr_contract_import.py:0
+#: code:addons/import_employees/models/hr_employee_import.py:0
+#, python-format
+msgid "¡Oops!, wrong file: \n"
+msgstr "¡Ups!, archivo incorrecto: \n"

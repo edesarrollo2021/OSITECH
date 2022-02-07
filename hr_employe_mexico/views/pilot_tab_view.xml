@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+   <record id="hr_pilot_tab_form_view" model="ir.ui.view">
+        <field name="name">hr.pilot.tab.form</field>
+        <field name="model">hr.pilot.tab</field>
+        <field name="arch" type="xml">
+        <form string="Pilot Tab">
+             <div class="oe_title">
+				<label for="name" class="oe_edit_only"/>
+				<h1>
+					<field name="name" placeholder="Name" required="True"/>
+				</h1>
+			</div>
+           <group>
+                <field name="pilot_tab_line" string="Pilot Tab">
+                    <tree editable="bottom">
+                        <field name="year" />
+                        <field name="salary"/>
+                        <field name="seniority_premium"/>
+                    </tree>
+                </field>
+            </group>
+         </form>
+       </field>
+    </record>
+
+    <record id="hr_pilot_tab_tree_view" model="ir.ui.view">
+        <field name="name">hr.pilot.tab.tree</field>
+        <field name="model">hr.pilot.tab</field>
+        <field name="arch" type="xml">
+            <tree string="Pilot tab">
+               <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="hr_pilot_tab_search_view" model="ir.ui.view">
+        <field name="name">hr.pilot.tab.search</field>
+        <field name="model">hr.pilot.tab</field>
+        <field name="arch" type="xml">
+            <search string="Table of antiquity">
+               <field name="name" />
+            </search>
+        </field>
+    </record>
+
+    <record id="hr_pilot_tab_action" model="ir.actions.act_window">
+        <field name="name">Pilot Tab</field>
+        <field name="res_model">hr.pilot.tab</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="hr_pilot_tab_tree_view" />
+        <field name="search_view_id" ref="hr_pilot_tab_search_view" />
+    </record>
+
+    <menuitem
+          name="Pilot Tab"
+          parent="hr.menu_human_resources_configuration"
+          groups="hr.group_hr_manager,hr.group_hr_user"
+          id="hr_pilot_tab_menu"
+          action="hr_pilot_tab_action"
+          sequence="50"
+      />
+
+</odoo>

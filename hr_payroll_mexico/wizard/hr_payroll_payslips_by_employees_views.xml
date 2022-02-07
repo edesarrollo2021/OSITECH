@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+        <record id="hr_payroll.view_hr_payslip_by_employees" model="ir.ui.view">
+            <field name="name">hr_payroll_payslip_employees</field>
+            <field name="model">hr.payslip.employees</field>
+            <field name="arch" type="xml">
+                <form string="Payslips by Employees">
+                    <group>
+                        <span colspan="4" nolabel="1">This wizard will generate payslips for all selected employee(s) based on the dates specified on Payslips Run.</span>
+                    </group>
+                    <group colspan="2" invisible="1">
+                        <separator string="Salary Structure" colspan="2"/>
+                        <newline/>
+                        <span class="text-muted">Set a specific structure if you wish to make an extra payslip (eg: End of the year bonus). If you leave this field empty, a regular payslip will be generated for all the selected employees, based on their contracts configuration.</span>
+                        <field name="structure_id" nolabel="1"/>
+                    </group>
+                    <group>
+                        <field name="select_all_employees" attrs="{'readonly': [('state', '=', 'done')]}"/>
+                    </group>
+                    <group colspan="4" >
+                        <separator string="Employees" colspan="4"/>
+                        <newline/>
+                        <field name="employee_ids" nolabel="1" attrs="{'readonly': [('state', '=', 'done')]}">
+                            <tree>
+                                <field name="complete_name"/>
+                                <field name="department_id"/>
+                                <field name="job_id"/>
+                            </tree>
+                        </field>
+                    </group>
+                    <field name="state" invisible="1"/>
+                    <footer>
+                        <button string="Save" name="save" type="object" class="oe_highlight" states="draft"/>
+                        <widget name="payslip_lot" context="{'employee_ids': employee_ids}" states="done"/>
+<!--                        <button icon="fa-cogs" string="Generate" name="compute_sheet" type="object" class="oe_highlight"/>-->
+                        <button string="Cancel" class="btn btn-secondary" special="cancel"/>
+                    </footer>
+               </form>
+            </field>
+        </record>
+
+</odoo>

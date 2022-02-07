@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="res_config_settings_view_form" model="ir.ui.view">
+            <field name="name">res.config.settings.pmx.view.form</field>
+            <field name="model">res.config.settings</field>
+            <field name="priority" eval="70"/>
+            <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@id='hr_payroll_localization']" position="inside">
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_right_pane">
+                            <label for="configuration_table_id"/>
+                            <div class="text-muted">
+                                table of default settings for ISR
+                            </div>
+                            <field name="configuration_table_id" required="1"/>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_right_pane">
+                            <label for="pantry_voucher_factor"/>
+                            <div>
+                            <field name="pantry_voucher_factor" required="1"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_right_pane">
+                            <label for="holiday_bonus_factor"/>
+                            <div><field name="holiday_bonus_factor" required="1"/></div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_right_pane">
+                            <label for="bonus_factor"/>
+                            <div><field name="bonus_factor" required="1"/></div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_right_pane">
+                            <label for="savings_fund_factor"/>
+                            <div><field name="savings_fund_factor" required="1"/></div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_right_pane">
+                            <label for="extra_time_factor"/>
+                            <div><field name="extra_time_factor" required="1"/></div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_right_pane">
+                            <label for="sunday_prime_factor"/>
+                            <div><field name="sunday_prime_factor" required="1"/></div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_right_pane">
+                            <label for="clearance_factor"/>
+                            <div><field name="clearance_factor" required="1"/></div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_right_pane">
+                            <label for="factor_ptu"/>
+                            <div><field name="factor_ptu" required="1"/></div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_right_pane">
+                            <label for="vacation_input_id"/>
+                            <div><field name="vacation_input_id" required="1"/></div>
+                        </div>
+                    </div>
+                </xpath>
+                <xpath expr="//div[@id='hr_payroll_localization']" position="after">
+                    <h2 attrs="{'invisible': [('country_code', '!=', 'MX')]}">Electronic invoicing the payroll (MX)</h2>
+                    <div class="row mt16 o_settings_container" id="l10n_mx_edi_payroll_settings" attrs="{'invisible': [('country_code', '!=', 'MX')]}">
+                        <div class="col-12 col-lg-6 o_setting_box" title="The parameters to configure the MX PAC.">
+                            <div class="o_setting_left_pane"/>
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label">MX PAC</span>
+                                <div class="text-muted">
+                                    Configure the Authorized Certification Provider (PAC) for payroll.
+                                </div>
+                                <div class="row mt16">
+                                    <label string="PAC" for="l10n_mx_edi_pac_payrol" class="col-lg-3 o_light_label"/>
+                                    <field name="l10n_mx_edi_pac_payrol"/>
+                                </div>
+                                <div class="row">
+                                    <label string="PAC username" for="l10n_mx_edi_pac_username_payroll" class="col-lg-3 o_light_label"/>
+                                    <field name="l10n_mx_edi_pac_username_payroll"/>
+                                </div>
+                                <div class="row">
+                                    <label string="PAC password" for="l10n_mx_edi_pac_password_payroll" class="col-lg-3 o_light_label"/>
+                                    <field name="l10n_mx_edi_pac_password_payroll" password="True"/>
+                                </div>
+                                <div class="row">
+                                    <label for="l10n_mx_edi_pac_test_env_payroll" class="col-lg-3 o_light_label"/>
+                                    <field name="l10n_mx_edi_pac_test_env_payroll" class="oe_inline"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box" title="The parameters to configure the MX certificate.">
+                            <div class="o_setting_left_pane"/>
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label">MX Certificates</span>
+                                <div class="text-muted">
+                                    Configure your SAT certificates.
+                                </div>
+                                <div class="row mt16">
+                                    <field name="l10n_mx_edi_certificate_payroll_ids"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

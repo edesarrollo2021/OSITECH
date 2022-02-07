@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="hr_leave_import_view" model="ir.ui.view">
+            <field name="name">hr.leave.import.view.wizard</field>
+            <field name="model">hr.leave.import.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Time Off Import">
+                    <group>
+<!--                        <group string="Attach Documents">-->
+<!--                            <field name="create_document"/>-->
+<!--                            <field name="file_zip" filename="zip_name" attrs="{'invisible': [('create_document', '=', False)]}"/>-->
+<!--                            <field name="zip_name" invisible="1"/>-->
+<!--                        </group>-->
+                        <group string="Attach Layout">
+                            <field name="file_ids" widget="many2many_binary"/>
+                            <label for="clean_file_ids" string=""/>
+                            <div class="o_row">
+                                <button
+                                    type="object"
+                                    name="clean_file_ids"
+                                    class="btn-sm btn-link mb4 fa fa-trash-o"
+                                    aria-label="Remove File"
+                                    title="Remove File"
+                                    attrs="{'invisible':[('file_ids', '=', False)]}"
+                                    help="Remaining leaves"
+                                />
+                            </div>
+                        </group>
+                    </group>
+                    <footer>
+                        <button name="import_file" string="Load" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_hr_leave_import_wizard" model="ir.actions.act_window">
+            <field name="name">Time Off Import</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.leave.import.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="binding_model_id" ref="hr_holidays.model_hr_leave"/>
+            <field name="binding_type">report</field>
+        </record>
+
+        <menuitem
+            id="menu_hr_leave_import_wizard"
+            name="Time Off Import"
+            parent="hr_holidays_edi_mx.menu_hr_holidays_file_upload"
+            action="action_hr_leave_import_wizard"/>
+
+    </data>
+</odoo>

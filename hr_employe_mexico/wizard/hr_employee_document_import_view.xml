@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!--wizard to employee document import-->
+        <record id="view_hr_employee_document_import_form" model="ir.ui.view">
+            <field name="name">hr.employee.document.import.form</field>
+            <field name="model">hr.employee.document.import</field>
+            <field name="arch" type="xml">
+            <form string="Employee Document Import">
+                <group>
+                    <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+                </group>
+                <group>
+                    <group string="Attach Documents">
+                        <field name="file_zip_ids" widget="many2many_binary"/>
+                    </group>
+                    <group string="File">
+                        <field name="file_ids" widget="many2many_binary"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="import_file_document" string="Import File" type="object" class="btn-primary"/>
+                    <button string="Cancel" special="cancel" class="btn-default"/>
+                </footer>
+            </form>
+            </field>
+        </record>
+
+        <record id="action_hr_employee_document_import" model="ir.actions.act_window">
+            <field name="name">Employee Document Import</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.employee.document.import</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem
+            id="menu_hr_employee_import"
+            name="Import"
+            parent="hr.menu_hr_root"
+            sequence="20"/>
+
+        <menuitem
+            id="menu_hr_employee_document_import"
+            name="Import Employee Document"
+            parent="menu_hr_employee_import"
+            sequence="20"
+            action="action_hr_employee_document_import"/>
+
+    </data>
+</odoo>

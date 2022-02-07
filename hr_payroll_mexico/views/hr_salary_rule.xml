@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <record id="hr_salary_rule_view_mx_form" model="ir.ui.view">
+        <field name="name">hr.salary.rule.form.inherit</field>
+        <field name="model">hr.salary.rule</field>
+        <field name="inherit_id" ref="hr_payroll.hr_salary_rule_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='appears_on_payslip']" position="after">
+                <field name="taxable"/>
+                <field name="print_to_excel"/>
+                <field name="report_imss"/>
+                <field name="report_isn"/>
+                <field name="consolidate"/>
+            </xpath>
+            <xpath expr="//group[1]" position="after">
+                <group col="4">
+                   <field name="type" widget="radio"/>
+                   <field name="type_perception" attrs="{'invisible': [('type', '!=', 'perception')],'required': [('type', '=', 'perception')]}"/>
+                   <field name="type_overtime" attrs="{'invisible': [('type_perception', '!=', '019')],'required': [('type_perception', '=', '019')]}"/>
+                   <field name="type_deduction" attrs="{'invisible': [('type', '!=', 'deductions')],'required': [('type', '=', 'deductions')]}"/>
+                   <field name="type_disability" attrs="{'invisible': [('type_deduction', '!=', '006')],'required': [('type_deduction', '=', '006')]}"/>
+                   <field name="type_other_payment" attrs="{'invisible': [('type', '!=', 'other_payment')],'required': [('type', '=', 'other_payment')]}"/>
+                   <field name="provision"/>
+                   <field name="union_dues"/>
+                   <field name="saving_fund"/>
+                   <field name="social_objective"/>
+                   <field name="provision_type" attrs="{'invisible': [('provision', '=', False)],'required': [('provision', '=', True)]}"/>
+                   <field name="payroll_tax" attrs="{'invisible': [('type', 'not in', ['perception','deductions','other_payment'])]}"/>
+                   <field name="payment_type" attrs="{'invisible': [('type', 'not in', ['perception','other_payment'])],'required': [('type', 'in', ['perception','other_payment'])]}"/>
+                   <field name="apply_variable_compute"/>
+                   <field name="country_id" invisible="1"/>
+                   <field name="state_ids" attrs="{'invisible': [('payroll_tax', '!=', True)]}" string="Stations" widget="many2many_tags"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="hr_payroll_salary_rule_tree" model="ir.ui.view">
+        <field name="name">hr.salary.rule.inherit.tree</field>
+        <field name="model">hr.salary.rule</field>
+        <field name="inherit_id" ref="hr_payroll.hr_salary_rule_list"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='sequence']" position="attributes">
+                <attribute name="invisible">0</attribute>
+            </xpath>
+        </field>
+    </record>
+    
+    <record id="hr_payroll_structure_type_view_inherit_form" model="ir.ui.view">
+        <field name="name">hr.payroll.structure.type.inherit.form</field>
+        <field name="model">hr.payroll.structure.type</field>
+        <field name="inherit_id" ref="hr_payroll.hr_payroll_structure_type_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='wage_type']" position="replace">
+            </xpath>
+            <xpath expr="//field[@name='default_schedule_pay']" position="replace">
+            </xpath>
+            <xpath expr="//field[@name='default_resource_calendar_id']" position="replace">
+            </xpath>
+            <xpath expr="//field[@name='default_struct_id']" position="replace">
+            </xpath>
+            <xpath expr="//field[@name='country_id']" position="after">
+                <field name="trusted_staff"/>
+                <field name="percentage_discount_covid"/>
+            </xpath>
+        </field>
+    </record>
+    
+    <record id="hr_payroll_structure_type_view_inherit_tree" model="ir.ui.view">
+        <field name="name">hr.payroll.structure.type.inherit.tree</field>
+        <field name="model">hr.payroll.structure.type</field>
+        <field name="inherit_id" ref="hr_payroll.hr_payroll_structure_type_view_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='wage_type']" position="replace">
+            </xpath>
+            <xpath expr="//field[@name='default_schedule_pay']" position="replace">
+            </xpath>
+            <xpath expr="//field[@name='default_resource_calendar_id']" position="replace">
+            </xpath>
+            <xpath expr="//field[@name='default_struct_id']" position="replace">
+            </xpath>
+        </field>
+    </record>
+    
+    <record id="view_hr_employee_grade_inherit_form" model="ir.ui.view">
+        <field name="name">hr.payroll.structure</field>
+        <field name="model">hr.payroll.structure</field>
+        <field name="inherit_id" ref="hr_payroll.view_hr_employee_grade_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='schedule_pay']" position="replace">
+            </xpath>
+            <xpath expr="//field[@name='report_id']" position="replace">
+            </xpath>
+            <xpath expr="//field[@name='journal_id']" position="before">
+                <field name="settlement"/>
+                <field name="payroll_type"/>
+                <field name="assa_report"/>
+                <field name="aspa_report"/>
+                <field name="social_objective"/>
+                <field name="payslip_code"/>
+                <field name="ptu_payslip"/>
+            </xpath>
+        </field>
+    </record>
+
+    </data>
+</odoo>

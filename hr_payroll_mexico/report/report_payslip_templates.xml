@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+
+        <record id="paperformat_payslip_mx" model="report.paperformat">
+            <field name="name">A4</field>
+            <field name="default" eval="True" />
+            <field name="format">A4</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">30</field>
+            <field name="margin_bottom">32</field>
+            <field name="margin_left">7</field>
+            <field name="margin_right">7</field>
+            <field name="header_line" eval="False" />
+            <field name="header_spacing">21</field>
+            <field name="dpi">90</field>
+        </record>
+
+
+        <record id="hr_payroll.action_report_payslip" model="ir.actions.report">
+            <field name="binding_model_id" eval="False"/>
+        </record>
+
+        <record id="action_report_payslips" model="ir.actions.report">
+            <field name="name">Payslip</field>
+            <field name="model">hr.payslip</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">hr_payroll_mexico.report_payslip_lang</field>
+            <field name="report_file">hr_payroll_mexico.report_payslip_lang</field>
+            <field name="print_report_name">'Payslip - %s' % (object.employee_id.name)</field>
+            <field name="paperformat_id" ref="hr_payroll_mexico.paperformat_payslip_mx"/>
+<!--            <field name="binding_model_id" ref="hr_payroll.model_hr_payslip"/>-->
+<!--            <field name="binding_type">report</field>-->
+        </record>
+
+        <template id="payslip_cfdi">
+            <t t-call="web.html_container">
+                <t t-call="hr_payroll_mexico.external_layout_mx">
+                    <t t-set="o" t-value="o.with_context(lang=o.employee_id.address_home_id.lang or o.env.lang)"/>
+                    <t t-set="payroll" t-value="data['payroll']"/>
+                    <t t-set="currency" t-value="o.currency_id"/>
+                    <div class="page" style="font-size:10px;">
+<!--                        <table border="0" cellpadding="0" cellspacing="0"  class="table table-sm table-condensed">-->
+<!--                        <table class="table-sm" cellpadding="0" cellspacing="0" style="width:100%; table-layout: auto; border-top: 1px solid">-->
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: none; padding: 0; border-collapse:separate;">
+                            <tbody>
+                                <tr>
+                                    <td>No. Trabajador:</td>
+                                    <td><t t-esc="payroll['no_emp'].zfill(6)"/></td>
+                                    <td>Tipo Comprobante:</td>
+                                    <td><t t-esc="payroll['type_voucher']"/></td>
+                                    <td>Tipo de Nómina:</td>
+                                    <td><t t-esc="payroll['type']"/></td>
+                                    <td>Fecha Ingreso:</td>
+                                    <td><t t-esc="payroll['date_start_contract']" t-options='{"widget": "date"}'/></td>
+                                </tr>
+                                <tr>
+                                    <td>Nombre:</td>
+                                    <td style="font-size:9px;"><t t-esc="payroll['emp_name']"/></td>
+                                    <td>Salario Diario:</td>
+                                    <td><t t-esc="payroll['daily_salary']"/></td>
+                                    <td>Antigüedad:</td>
+                                    <td><t t-esc="payroll['seniority_emp']"/></td>
+                                    <td>Días Pagados:</td>
+                                    <td><t t-esc="payroll['days_work']"/></td>
+                                </tr>
+                                <tr>
+                                    <td>CURP:</td>
+                                    <td><t t-esc="payroll['curp_emp']"/></td>
+                                    <td>SDI:</td>
+                                    <td><t t-esc="payroll['emp_diary_salary']"/></td>
+                                    <td>Sindicalizado:</td>
+                                    <td><t t-esc="payroll['emp_syndicated']"/></td>
+                                    <td>No. de faltas:</td>
+                                    <td><t t-esc="payroll['leave']"/></td>
+                                </tr>
+                                <tr>
+                                    <td>N.S.S.:</td>
+                                    <td><t t-esc="payroll['nss_emp']"/></td>
+                                    <td>Período de Pago:</td>
+                                    <td><t t-esc="payroll['date_from']" t-options='{"widget": "date"}'/> a <t t-esc="payroll['date_to']" t-options='{"widget": "date"}'/></td>
+                                    <td>Jornada:</td>
+                                    <td><t t-esc="payroll['working_day_name']"/></td>
+                                    <td>Incapacidades:</td>
+                                    <td><t t-esc="payroll['inability']"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Tipo de Contrato:</td>
+                                    <td><t t-esc="payroll['contract_type']"/></td>
+                                    <td>Fecha de Pago:</td>
+                                    <td><t t-esc="payroll['payment_date']" t-options='{"widget": "date"}'/></td>
+                                    <td>Uso del CFDI:</td>
+                                    <td><t t-esc="payroll['receiver_use_cfdi_name']"/></td>
+                                    <td>Vacaciones:</td>
+                                    <td><t t-esc="payroll['holidays']"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Régimen del Receptor:</td>
+                                    <td><t t-esc="payroll['emp_regimen_name']"/></td>
+                                    <td>Banco:</td>
+                                    <td><t t-esc="payroll['emp_bank_name']"/></td>
+                                    <td>Forma de pago:</td>
+                                    <td><t t-esc="payroll['payment_policy_name']"/></td>
+                                    <td>Subtotal:</td>
+                                    <td><t t-esc="float(data['subtotal'])" t-options='{"widget": "monetary", "display_currency": currency}'/></td>
+                                </tr>
+                                <tr>
+                                    <td>Área / Depto:</td>
+                                    <td style="font-size:9px;"><t t-esc="payroll['departament']"/></td>
+                                    <td>Cuenta Bancaria:</td>
+                                    <td><t t-esc="payroll['emp_account']"/></td>
+                                    <td>Periodicidad:</td>
+                                    <td><t t-esc="payroll['payment_periodicity']"/></td>
+                                    <td>Descuento:</td>
+                                    <td><t t-esc="data['discount_amount']" t-options='{"widget": "monetary", "display_currency": currency}'/></td>
+                                </tr>
+                                <tr>
+                                    <td>Puesto:</td>
+                                    <td style="font-size:9px;"><t t-esc="payroll['emp_job']"/></td>
+                                    <td>Folio Fiscal:</td>
+                                    <td colspan="3" style="font-size:9px;"><t t-esc="payroll['uuid_sat']"/></td>
+                                    <td>Total:</td>
+                                    <td><t t-esc="data['amount_total']" t-options='{"widget": "monetary", "display_currency": currency}'/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="row col-12">
+                            <div class="col-12">
+                            <table class="table-sm" style="width:100%;">
+                                <thead>
+                                    <tr class="text-center">
+                                        <td colspan="12" style="text-align:center;"><strong>CONCEPTOS</strong></td>
+                                    </tr>
+                                    <tr border="0">
+                                        <th style="text-align:left;">Clave Prod. Serv.</th>
+                                        <th style="text-align:left;">Cantidad</th>
+                                        <th style="text-align:left;">Clave de Unidad</th>
+                                        <th style="text-align:left;">Descripción</th>
+                                        <th style="text-align:center;">Valor Unitario</th>
+                                        <th style="text-align:center;">Importe</th>
+                                        <th style="text-align:center;">Descuento</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr border="0">
+                                        <td style="text-align:left;"><t t-esc="payroll['emp_job_sat_code']"/></td>
+                                        <td style="text-align:left;">1</td>
+                                        <td style="text-align:left;"><t t-esc="payroll['unit_key_sat']"/></td>
+                                        <td style="text-align:left;"><t t-esc="payroll['description_sat']"/></td>
+                                        <td style="text-align:right;"><t t-esc="float(data['subtotal'])" t-options='{"widget": "monetary", "display_currency": currency}'/></td>
+                                        <td style="text-align:right;"><t t-esc="float(data['subtotal'])" t-options='{"widget": "monetary", "display_currency": currency}'/></td>
+                                        <td style="text-align:right;"><t t-esc="data['discount_amount']" t-options='{"widget": "monetary", "display_currency": currency}'/></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            </div>
+                        </div>
+                        <div class="row col-12">
+                            <t t-set="total_deductions" t-value="float(0.0)"/>
+                            <t t-set="total_perceptions" t-value="float(0.0)"/>
+                            <div class="col-6">
+                                <table border="0" class="table table-sm table-condensed" name="percept_table">
+                                    <thead>
+                                        <tr style="background-color: #F1F1F1">
+                                            <th colspan="6" style="text-align:center;">PERCEPCIONES</th>
+                                        </tr>
+                                        <tr border="0">
+                                            <th style="text-align:center;">CLAVE</th>
+                                            <th style="text-align:center;">CONCEPTO</th>
+                                            <th style="text-align:center;">EXENTO</th>
+                                            <th style="text-align:center;">GRAVADO</th>
+                                            <th style="text-align:center;">TOTAL</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr border="0" t-foreach="payroll['perceptions']" t-as="percept">
+                                            <td><t t-esc="percept['key']"/></td>
+                                            <td><t t-esc="percept['concept']"/></td>
+                                            <td style="text-align:right;"><t t-esc="percept['amount_e']"/></td>
+                                            <td style="text-align:right;"><t t-esc="percept['amount_g']"/></td>
+                                            <td style="text-align:right;"><t t-esc="percept['amount_t']"/></td>
+                                            <t t-set="total_perceptions" t-value="total_perceptions + float(percept['amount_t'])"/>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-6">
+                                <table border="0" class="table table-sm table-condensed" name="deductions_table">
+                                    <thead>
+                                        <tr style="background-color: #BBBBBB">
+                                            <th colspan="12" style="text-align:center;">DEDUCCIONES</th>
+                                        </tr>
+                                        <tr border="0">
+                                            <th style="text-align:center;">CLAVE</th>
+                                            <th style="text-align:center;">CONCEPTO</th>
+                                            <th style="text-align:center;">TOTAL</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr border="0" t-foreach="payroll['deductions']" t-as="ded">
+                                            <td><t t-esc="ded['key']"/></td>
+                                            <td><t t-esc="ded['concept']"/></td>
+                                            <td style="text-align:right;"><t t-esc="ded['amount']"/></td>
+                                            <t t-set="total_deductions" t-value="total_deductions + ded['amount']"/>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- Total Perception and Total Deductions-->
+                        <div class="row col-12">
+                            <div class="col-6">
+                                <table border="0" class="table table-sm table-condensed">
+                                    <tbody>
+                                        <tr border="0">
+                                            <th style="text-align:right;">Total Percepciones:</th>
+                                            <td style="text-align:right;">
+                                                <span t-esc="float(total_perceptions)" t-options='{"widget": "monetary", "display_currency": currency}'/>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-6">
+                                <table border="0" class="table table-sm table-condensed">
+                                    <tbody>
+                                        <tr border="0">
+                                            <th style="text-align:right;">Total Deducciones:</th>
+                                            <td style="text-align:right;"><t t-esc="float(total_deductions)" t-options='{"widget": "monetary", "display_currency": currency}'/></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- Other Payments-->
+                        <div class="row col-12" name="other_payments">
+                            <div class="col-6">
+                                <table border="0" class="table table-sm table-condensed" name="other_payments_table">
+                                    <thead>
+                                        <tr style="background-color: #F1F1F1">
+                                            <th colspan="6" style="text-align:center;">OTROS PAGOS</th>
+                                        </tr>
+<!--                                        <tr border="0" style="background-color: #F1F1F1">-->
+<!--                                            <th style="text-align:center;">CLAVE</th>-->
+<!--                                            <th style="text-align:center;">CONCEPTO</th>-->
+<!--                                            <th style="text-align:center;">TOTAL</th>-->
+<!--                                        </tr>-->
+                                    </thead>
+                                    <tbody>
+                                        <tr border="0" t-foreach="payroll['other_payments']" t-as="other">
+                                            <td><t t-esc="other['key']"/></td>
+                                            <td><t t-esc="other['concept']"/></td>
+                                            <td style="text-align:right;"><t t-esc="other['amount']"/></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-6">
+                                <table border="0" class="table table-sm table-condensed" name="subsidy_table">
+                                    <thead>
+                                        <tr style="background-color: #F1F1F1">
+                                            <th colspan="6" style="text-align:center;">SUBSIDIO AL EMPLEO</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr border="0">
+                                            <th style="text-align:right;">Subsidio Causado:</th>
+                                            <td style="text-align:right;"><t t-esc="payroll['subsidy_caused']" t-options='{"widget": "monetary", "display_currency": currency}'/></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row col-12" name="qe_file">
+                            <div class="col-6">
+                                <table class="table table-sm o_main_table" name="timbre_table">
+                                    <tr>
+                                    </tr>
+                                    <tr>
+                                        <td>Expedido en:</td>
+                                        <td><t t-esc="o.company_id.zip"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Régimen fiscal del emisor:</td>
+                                        <td><t t-esc="data['emitter_fiscal_position_name']"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Método de Pago:</td>
+                                        <td><t t-esc="data['pay_method_name']"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fecha de timbrado:</td>
+                                        <td><t t-esc="payroll['date_stamped']" t-options='{"widget": "datetime"}'/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fecha de emisión:</td>
+                                        <td><t t-esc="payroll['cfdi_issue_date']" t-options='{"widget": "datetime"}'/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>No. de serie del CSD del emisor:</td>
+                                        <td><t t-esc="payroll['certificate_number_emisor']"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>No. de serie del CSD del SAT:</td>
+                                        <td><t t-esc="payroll['certificate_number']"/></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="col-6">
+                                <table class="table table-sm o_main_table" name="timbre_qr_table">
+                                    <tr>
+                                        <td></td>
+                                        <td style="text-align:center;" t-if="payroll['qr_timbre']">
+                                            <img t-att-src="image_data_uri(payroll['qr_timbre'])" alt="QR" style="max-height: 200px;"/>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row col-12" style="font-size:8px; float:left;">
+                            <div class="col-auto mw-100 mb-2">
+                                <strong>Sello digital del CFDI:</strong>
+                                <span class="m-0"><t t-esc="payroll['stamp_cfd']"/></span>
+                            </div>
+                        </div>
+                        <div class="row col-12" style="font-size:8px; float:left;">
+                            <div class="col-auto mw-100 mb-2">
+                                <strong>Sello del SAT:</strong>
+                                <span class="m-0"><t t-esc="payroll['stamp_sat']"/></span>
+                            </div>
+                        </div>
+                        <div class="row col-12" style="font-size:8px; float:left;">
+                            <div class="col-auto mw-100 mb-2">
+                                <strong>Cadena original del complemento de certificación digital del SAT:</strong><br/>
+                                <span class="text-justify m-0"><t t-esc="payroll['original_string']"/></span>
+                            </div>
+                        </div>
+                        <div class="row col-12">
+                            <div class="col-8">
+                                <table class="table-sm" style="width:100%; border-left: 1px solid #fff; border-right: 1px solid #fff; border-top: 1px solid #fff;">
+                                    <tr class="text-justify">
+                                        <td>RECIBÍ DE LA COMPAÑÍA LA CANTIDAD NETA A QUE ESTE DOCUMENTO SE REFIERE POR CONCEPTO
+                                            DE MI SALARIO QUE INCLUYE ADEMÁS IMPORTE TOTAL DE HORAS EXTRAS TRABAJADAS Y DEMÁS
+                                            PRESTACIONES CORRESPONDIENTES AL PERIODO QUE HOY TERMINA SIN QUE A LA FECHA
+                                            SE ME ADEUDE NINGUNA CANTIDAD POR CONCEPTO ALGUNO HABIENDOSE HECHO LOS DESCUENTOS DE LEY Y LOS DE CARÁCTER PRIVADO.</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="col-4 text-center">
+                                <table class="table-sm" style="width:100%;">
+                                    <tr class="text-center">
+                                        <td style="color: #FFFFFF">-</td>
+                                    </tr>
+                                    <tr class="border-black text-center">
+                                        <td id="signature"><strong>FIRMA DEL TRABAJADOR</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Este documento es una representación impresa de un CFDI</th>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </template>
+
+        <template id="report_payslip_lang">
+            <t t-foreach="docs" t-as="o">
+                <t t-set="inside_foreach_docs" t-value="o"/>
+                <t t-call="hr_payroll_mexico.payslip_cfdi" t-lang="o.employee_id.sudo().address_home_id.lang"/>
+            </t>
+        </template>
+
+    </data>
+</odoo>

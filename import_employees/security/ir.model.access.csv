@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_employee_import_user,hr.employee.import.user,model_hr_employee_import,hr.group_hr_user,1,1,1,0
+access_hr_employee_import_manager,hr.employee.import.manager,model_hr_employee_import,hr.group_hr_manager,1,1,1,1
+access_hr_employee_partner_import_all,hr.employee.partner.import.All Groups,model_hr_employee_partner_import,,1,1,1,1

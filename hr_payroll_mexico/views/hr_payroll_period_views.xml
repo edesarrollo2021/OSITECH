@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <record id="view_payroll_period_form" model="ir.ui.view">
+        <field name="name">hr.payroll.period.form</field>
+        <field name="model">hr.payroll.period</field>
+        <field name="arch" type="xml">
+            <form string="Payroll Period" create="0">
+            <header>
+                <button string="Open Period" name="open_payroll_period" type="object" class="oe_highlight"
+                        groups="hr_payroll_mexico.group_open_period" attrs="{'invisible': ['|',('type', '=', 'settlement'),('state', '!=', 'draft')]}"/>
+                <button string="Open Period" name="open_payroll_period" type="object" class="oe_highlight"
+                        groups="hr_payroll_mexico.group_open_period_set" attrs="{'invisible': ['|',('type', '!=', 'settlement'),('state', '!=', 'draft')]}"/>
+                <button string="Close" name="close_payroll_period" type="object" class="oe_highlight" states="open"
+                        confirm="Confirm that you want to close the payroll period, once closed you will not be able to reopen."
+                        groups="hr_payroll.group_hr_payroll_user"/>
+                <field name="state" widget="statusbar" statusbar_visible="open,done"/>
+            </header>
+            <sheet>
+                <div class="oe_title">
+                    <h1>
+                        <field name="code" attrs="{'invisible': [('code','=',False)]}" readonly="1"/>
+                    </h1>
+                </div>
+                <group>
+                  <group>
+                      <field name="name" attrs="{'readonly': [('type', '=', 'special')]}"/>
+                      <field name="year" attrs="{'readonly': [('type', '=', 'special')]}"/>
+                      <field name="month" attrs="{'readonly': [('type', '=', 'special')]}"/>
+                      <field name="payroll_period" attrs="{'readonly': [('type', '=', 'special')]}"/>
+                      <field name="date_start" attrs="{'readonly': [('type', '=', 'special')]}"/>
+                      <field name="date_end" attrs="{'readonly': [('type', '=', 'special')]}"/>
+                  </group>
+                  <group>
+                      <field name="company_id" groups="base.group_multi_company" options='{"no_open":True}'/>
+                      <field name="folder_id" readonly="1"/>
+                      <field name="start_monthly_period" attrs="{'readonly': [('type', '=', 'special')]}"/>
+                      <field name="end_monthly_period" attrs="{'readonly': [('type', '=', 'special')]}"/>
+                      <field name="start_bumonthly_period" attrs="{'readonly': [('type', '=', 'special')]}"/>
+                      <field name="end_bumonthly_period" attrs="{'readonly': [('type', '=', 'special')]}"/>
+                      <field name="type"/>
+                  </group>
+                </group>
+            </sheet>
+            <div class="oe_chatter">
+                <field name="message_follower_ids" widget="mail_followers"/>
+                <field name="activity_ids" widget="mail_activity"/>
+                <field name="message_ids" widget="mail_thread"/>
+            </div>
+        </form>
+        </field>
+    </record>
+
+    <record id="view_hr_payroll_period_tree" model="ir.ui.view">
+        <field name="name">hr.payroll.period.tree</field>
+        <field name="model">hr.payroll.period</field>
+        <field name="arch" type="xml">
+            <tree create="0">
+                <field name="name"/>
+                <field name="year"/>
+                <field name="month"/>
+                <field name="company_id"/>
+                <field name="payroll_period"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_hr_payroll_period_filter" model="ir.ui.view">
+        <field name="name">hr.payroll.period.filter</field>
+        <field name="model">hr.payroll.period</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="code"/>
+                <field name="name"/>
+                <field name="year"/>
+                <group expand="0" string="Group By">
+                    <filter name="group_by_year" string="Year" context="{'group_by':'year'}"/>
+                    <filter name="group_by_company_id" string="Company" context="{'group_by':'company_id'}"/>
+                    <filter name="group_by_type" string="Type" context="{'group_by':'type'}"/>
+                    <filter name="group_by_payroll_period" string="Payroll Period" context="{'group_by':'payroll_period'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="hr_payroll_period_action" model="ir.actions.act_window">
+        <field name="name">Payroll Period</field>
+        <field name="res_model">hr.payroll.period</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'search_default_group_by_year': 1, 'search_default_group_by_type': 1, 'search_default_group_by_payroll_period': 1}</field>
+        <field name="search_view_id" ref="view_hr_payroll_period_filter"/>
+    </record>
+
+    <menuitem
+        name="Payroll Period"
+        id="menu_hr_payroll_period"
+        groups="hr.group_hr_user"
+        parent="hr_work_entry_contract.menu_hr_payroll_root" sequence="80"/>
+
+        <menuitem
+            name="Payroll Period"
+            id="menu_hr_payroll_period2"
+            action="hr_payroll_period_action"
+            groups="hr.group_hr_user"
+            parent="hr_payroll_mexico.menu_hr_payroll_period" sequence="10"/>
+
+    </data>
+</odoo>

@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_payslip_variability_user,hr.payslip.variability.user,model_hr_payslip_variability,,1,1,1,1
+access_wizard_payslip_variability_user,wizard.payslip.variability.user,model_wizard_payslip_variability,,1,1,1,1
+access_wizard_payslip_variability_line_user,wizard.payslip.variability.line.user,model_wizard_payslip_variability_line,,1,1,1,1

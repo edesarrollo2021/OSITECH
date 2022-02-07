@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <!-- shares links Payslip -->
+    <record id="share_payslips_view_form" model="ir.ui.view">
+        <field name="name">Share Payslips form</field>
+        <field name="model">documents.share.payslip</field>
+        <field name="arch" type="xml">
+            <form string="Download ZIP">
+                    <div states="choose">
+                        <group>
+                            <group>
+                                <field name="name" required="1"/>
+                                <field name="type_search" widget="radio"/>
+                            </group>
+                            <group>
+                                <field name="payroll_run_ids" attrs="{'invisible' : [('type_search', '=', 'employee')], 'required' : [('type_search', '=', 'period')],}"/>
+                                <label for="date_from" string="Periodo" attrs="{'invisible' : [('type_search', '=', 'period')], 'required' : [('type_search', '=', 'employee')],}"/>
+                                <div attrs="{'invisible' : [('type_search', '=', 'period')], 'required' : [('type_search', '=', 'employee')],}">
+                                    <field name="date_from" class="oe_inline"/>
+                                    -
+                                    <field name="date_to" class="oe_inline" nolabel="1"/>
+                                </div>
+                                <field name="employee_id" attrs="{'invisible' : [('type_search', '=', 'period')], 'required': [('type_search', '=', 'employee')],}"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="include_xml"/>
+                        </group>
+                    </div>
+                    <div states="get">
+                        <h2>Exportación completada</h2>
+                        <p>Aquí está el archivo ZIP exportado: <field name="data" readonly="1" filename="name"/></p>
+                    </div>
+                    <field name="attachment_ids" invisible="1"/>
+                    <field name="state" invisible="1"/>
+
+                <footer states="choose">
+                    <button string="Generate ZIP" type="object" class="oe_highlight" name="search_attachments"/>
+                    <button string="Cancel" class="oe_link" special="cancel"/>
+                </footer>
+                <footer states="get">
+                    <button special="cancel" string="Close" type="object" class="btn-primary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="share_payslip_action" model="ir.actions.act_window">
+        <field name="name">Payroll ZIP</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">documents.share.payslip</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem action="share_payslip_action"
+              name="Export ZIP of Documents"
+              id="menu_document_payslip_menu"
+              parent="hr_payroll.menu_hr_payroll_employees_root"
+              groups="hr_payroll.group_hr_payroll_user" sequence="35"/>
+
+
+    </data>
+</odoo>

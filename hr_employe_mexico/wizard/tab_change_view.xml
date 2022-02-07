@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <record id="view_tab_change_form" model="ir.ui.view">
+        <field name="name">tab.change.form</field>
+        <field name="model">tab.change</field>
+        <field name="arch" type="xml">
+        <form string="Tab Change">
+            <group>
+                <group>
+                    <h6>
+                        Indicate the percentage to be added for these pilot tables
+                    </h6>
+                </group>
+                <group>
+                    <label for="percentage"/>
+                    <div><field name="percentage" class="oe_inline"/>%</div>
+                    <label for="percentage_antiquity"/>
+                    <div><field name="percentage_antiquity" class="oe_inline"/>%</div>
+                </group>
+            </group>
+            <group string="Pilot Tab">
+                <field name="pilot_tab_id" options="{'no_create': True}" nolabel="1"/>
+            </group>
+            <footer>
+                <button name="generate_increment" string="Increase" type="object" class="btn-primary"/>
+                <button string="Cancel" special="cancel" class="btn-default"/>
+            </footer>
+        </form>
+        </field>
+    </record>
+
+    <record id="action_tab_change" model="ir.actions.act_window">
+        <field name="name">Tab Change</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">tab.change</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem
+        id="menu_tab_change"
+        name="Tab Change"
+        parent="hr.menu_hr_employee_payroll"
+        sequence="15"
+        action="action_tab_change"/>
+
+    </data>
+</odoo>

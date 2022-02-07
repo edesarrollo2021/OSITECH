@@ -1,0 +1,905 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">  
+		
+<!--
+		delegationes
+-->
+		
+		<record id="res_company_delegation_1" model="res.company.delegation">
+			<field name="name">AGUASCALIENTES</field>
+			<field name="code">01</field>
+		</record>
+		<record id="res_company_delegation_2" model="res.company.delegation">
+			<field name="name">BAJA CALIFORNIA NORTE</field>
+			<field name="code">02</field>
+		</record>
+		<record id="res_company_delegation_3" model="res.company.delegation">
+			<field name="name">BAJA CALIFORNIA SUR</field>
+			<field name="code">03</field>
+		</record>
+		<record id="res_company_delegation_4" model="res.company.delegation">
+			<field name="name">CAMPECHE</field>
+			<field name="code">04</field>
+		</record>
+		<record id="res_company_delegation_5" model="res.company.delegation">
+			<field name="name">COAHUILA</field>
+			<field name="code">05</field>
+		</record>
+		<record id="res_company_delegation_6" model="res.company.delegation">
+			<field name="name">COLIMA</field>
+			<field name="code">06</field>
+		</record>
+		<record id="res_company_delegation_7" model="res.company.delegation">
+			<field name="name">CHIAPAS</field>
+			<field name="code">07</field>
+		</record>
+		<record id="res_company_delegation_8" model="res.company.delegation">
+			<field name="name">CHIHUAHUA</field>
+			<field name="code">08</field>
+		</record>
+		<record id="res_company_delegation_10" model="res.company.delegation">
+			<field name="name">DURANGO</field>
+			<field name="code">10</field>
+		</record>
+		<record id="res_company_delegation_11" model="res.company.delegation">
+			<field name="name">GUANAJUATO</field>
+			<field name="code">11</field>
+		</record>
+		<record id="res_company_delegation_12" model="res.company.delegation">
+			<field name="name">GUERRERO</field>
+			<field name="code">12</field>
+		</record>
+		<record id="res_company_delegation_13" model="res.company.delegation">
+			<field name="name">HIDALGO</field>
+			<field name="code">13</field>
+		</record>
+		<record id="res_company_delegation_14" model="res.company.delegation">
+			<field name="name">JALISCO</field>
+			<field name="code">14</field>
+		</record>
+		<record id="res_company_delegation_15" model="res.company.delegation">
+			<field name="name">VALLE DE MEXICO</field>
+			<field name="code">15</field>
+		</record>
+		<record id="res_company_delegation_16" model="res.company.delegation">
+			<field name="name">EDO. DE MEXICO</field>
+			<field name="code">16</field>
+		</record>
+		<record id="res_company_delegation_17" model="res.company.delegation">
+			<field name="name">MICHOACAN</field>
+			<field name="code">17</field>
+		</record>
+		<record id="res_company_delegation_18" model="res.company.delegation">
+			<field name="name">MORELOS</field>
+			<field name="code">18</field>
+		</record>
+		<record id="res_company_delegation_19" model="res.company.delegation">
+			<field name="name">NAYARIT</field>
+			<field name="code">19</field>
+		</record>
+		<record id="res_company_delegation_20" model="res.company.delegation">
+			<field name="name">NUEVO LEON</field>
+			<field name="code">20</field>
+		</record>
+		<record id="res_company_delegation_21" model="res.company.delegation">
+			<field name="name">OAXACA</field>
+			<field name="code">21</field>
+		</record>
+		<record id="res_company_delegation_22" model="res.company.delegation">
+			<field name="name">PUEBLA</field>
+			<field name="code">22</field>
+		</record>
+		<record id="res_company_delegation_23" model="res.company.delegation">
+			<field name="name">QUERETARO</field>
+			<field name="code">23</field>
+		</record>
+		<record id="res_company_delegation_24" model="res.company.delegation">
+			<field name="name">QUINTANA ROO</field>
+			<field name="code">24</field>
+		</record>
+		<record id="res_company_delegation_25" model="res.company.delegation">
+			<field name="name">SAN LUIS POTOSI</field>
+			<field name="code">25</field>
+		</record>
+		<record id="res_company_delegation_26" model="res.company.delegation">
+			<field name="name">SINALOA</field>
+			<field name="code">26</field>
+		</record>
+		<record id="res_company_delegation_27" model="res.company.delegation">
+			<field name="name">SONORA</field>
+			<field name="code">27</field>
+		</record>
+		<record id="res_company_delegation_28" model="res.company.delegation">
+			<field name="name">TABASCO</field>
+			<field name="code">28</field>
+		</record>
+		<record id="res_company_delegation_29" model="res.company.delegation">
+			<field name="name">TAMAULIPAS</field>
+			<field name="code">29</field>
+		</record>
+		<record id="res_company_delegation_30" model="res.company.delegation">
+			<field name="name">TLAXCALA</field>
+			<field name="code">30</field>
+		</record>
+		<record id="res_company_delegation_31" model="res.company.delegation">
+			<field name="name">VERACRÚZ NORTE</field>
+			<field name="code">31</field>
+		</record>
+		<record id="res_company_delegation_32" model="res.company.delegation">
+			<field name="name">VERACRÚZ SUR</field>
+			<field name="code">32</field>
+		</record>
+		<record id="res_company_delegation_33" model="res.company.delegation">
+			<field name="name">YUCATAN</field>
+			<field name="code">33</field>
+		</record>
+		<record id="res_company_delegation_34" model="res.company.delegation">
+			<field name="name">ZACATECAS</field>
+			<field name="code">34</field>
+		</record>
+		<record id="res_company_delegation_35" model="res.company.delegation">
+			<field name="name">delegation NOROESTE (D.F.)</field>
+			<field name="code">35</field>
+		</record>
+		<record id="res_company_delegation_36" model="res.company.delegation">
+			<field name="name">delegation NORESTE (D.F.)</field>
+			<field name="code">36</field>
+		</record>
+		<record id="res_company_delegation_37" model="res.company.delegation">
+			<field name="name">delegation SUROESTE</field>
+			<field name="code">37</field>
+		</record>
+		<record id="res_company_delegation_38" model="res.company.delegation">
+			<field name="name">delegation SURESTE</field>
+			<field name="code">38</field>
+		</record>
+		<record id="res_company_delegation_39" model="res.company.delegation">
+			<field name="name">delegation NORTE (D.F.)</field>
+			<field name="code">39</field>
+		</record>
+		<record id="res_company_delegation_40" model="res.company.delegation">
+			<field name="name">delegation SUR (D.F.)</field>
+			<field name="code">40</field>
+		</record>
+		
+<!--
+		subdelegationes
+-->
+		
+		<record id="res_company_subdelegation_agusacaliente_norte" model="res.company.subdelegation">
+			<field name="name">SUBDELEGACIÓN NORTE</field>
+			<field name="code">01</field>
+			<field name="delegation_id" ref="res_company_delegation_1"/>
+		</record>
+		<record id="res_company_subdelegation_agusacaliente_sur" model="res.company.subdelegation">
+			<field name="name">SUBDELEGACIÓN SUR</field>
+			<field name="code">19</field>
+			<field name="delegation_id" ref="res_company_delegation_1"/>
+		</record>
+		<record id="res_company_subdelegation_baja_california_norte_mexicali" model="res.company.subdelegation">
+			<field name="name">MEXICALI</field>
+			<field name="code">01</field>
+			<field name="delegation_id" ref="res_company_delegation_2"/>
+		</record>
+		<record id="res_company_subdelegation_baja_california_norte_tecate" model="res.company.subdelegation">
+			<field name="name">TECATE</field>
+			<field name="code">02</field>
+			<field name="delegation_id" ref="res_company_delegation_2"/>
+		</record>
+		<record id="res_company_subdelegation_baja_california_norte_ensenada" model="res.company.subdelegation">
+			<field name="name">ENSENADA</field>
+			<field name="code">03</field>
+			<field name="delegation_id" ref="res_company_delegation_2"/>
+		</record>
+		<record id="res_company_subdelegation_baja_california_norte_san_luis" model="res.company.subdelegation">
+			<field name="name">SAN LUIS RIO COLORADO</field>
+			<field name="code">04</field>
+			<field name="delegation_id" ref="res_company_delegation_2"/>
+		</record>
+		<record id="res_company_subdelegation_baja_california_norte_tijuana" model="res.company.subdelegation">
+			<field name="name">TIJUANA</field>
+			<field name="code">05</field>
+			<field name="delegation_id" ref="res_company_delegation_2"/>
+		</record>
+		<record id="res_company_subdelegation_baja_california_sur_paz" model="res.company.subdelegation">
+			<field name="name">LA PAZ</field>
+			<field name="code">01</field>
+			<field name="delegation_id" ref="res_company_delegation_3"/>
+		</record>
+		<record id="res_company_subdelegation_baja_california_sur_cabos" model="res.company.subdelegation">
+			<field name="name">LOS CABOS</field>
+			<field name="code">08</field>
+			<field name="delegation_id" ref="res_company_delegation_3"/>
+		</record>
+		<record id="res_company_subdelegation_campeche_campeche" model="res.company.subdelegation">
+			<field name="name">CAMPECHE</field>
+			<field name="code">01</field>
+			<field name="delegation_id" ref="res_company_delegation_4"/>
+		</record>
+		<record id="res_company_subdelegation_campeche_campeche" model="res.company.subdelegation">
+			<field name="name">CD. DEL CARMEN</field>
+			<field name="code">04</field>
+			<field name="delegation_id" ref="res_company_delegation_4"/>
+		</record>
+		<record id="res_company_subdelegation_cohauila_saltillo" model="res.company.subdelegation">
+			<field name="name">SALTILLO</field>
+			<field name="code">03</field>
+			<field name="delegation_id" ref="res_company_delegation_5"/>
+		</record>
+		<record id="res_company_subdelegation_cohauila_torreon" model="res.company.subdelegation">
+			<field name="name">TORREON</field>
+			<field name="code">09</field>
+			<field name="delegation_id" ref="res_company_delegation_5"/>
+		</record>
+		<record id="res_company_subdelegation_cohauila_acu" model="res.company.subdelegation">
+			<field name="name">CD. ACUÑA</field>
+			<field name="code">11</field>
+			<field name="delegation_id" ref="res_company_delegation_5"/>
+		</record>
+		<record id="res_company_subdelegation_cohauila_piedras_negras" model="res.company.subdelegation">
+			<field name="name">PIEDRAS NEGRAS</field>
+			<field name="code">12</field>
+			<field name="delegation_id" ref="res_company_delegation_5"/>
+		</record>
+		<record id="res_company_subdelegation_cohauila_monclova" model="res.company.subdelegation">
+			<field name="name">MONCLOVA</field>
+			<field name="code">17</field>
+			<field name="delegation_id" ref="res_company_delegation_5"/>
+		</record>
+		<record id="res_company_subdelegation_cohauila_sabimas" model="res.company.subdelegation">
+			<field name="name">SABINAS</field>
+			<field name="code">23</field>
+			<field name="delegation_id" ref="res_company_delegation_5"/>
+		</record>
+		<record id="res_company_subdelegation_colima_colima" model="res.company.subdelegation">
+			<field name="name">COLIMA</field>
+			<field name="code">01</field>
+			<field name="delegation_id" ref="res_company_delegation_6"/>
+		</record>
+		<record id="res_company_subdelegation_colima_manzanillo" model="res.company.subdelegation">
+			<field name="name">MANZANILLO</field>
+			<field name="code">03</field>
+			<field name="delegation_id" ref="res_company_delegation_6"/>
+		</record>
+		<record id="res_company_subdelegation_colima_tecoman" model="res.company.subdelegation">
+			<field name="name">TECOMÁN</field>
+			<field name="code">07</field>
+			<field name="delegation_id" ref="res_company_delegation_6"/>
+		</record>
+		<record id="res_company_subdelegation_chiapas_tuztla" model="res.company.subdelegation">
+			<field name="name">TUXTLA GUTIERREZ</field>
+			<field name="code">01</field>
+			<field name="delegation_id" ref="res_company_delegation_7"/>
+		</record>
+		<record id="res_company_subdelegation_chiapas_tapachula" model="res.company.subdelegation">
+			<field name="name">TAPACHULA</field>
+			<field name="code">02</field>
+			<field name="delegation_id" ref="res_company_delegation_7"/>
+		</record>
+		<record id="res_company_subdelegation_chihuahua_chihuahua" model="res.company.subdelegation">
+			<field name="name">CHIHUAHUA</field>
+			<field name="code">01</field>
+			<field name="delegation_id" ref="res_company_delegation_8"/>
+		</record>
+		<record id="res_company_subdelegation_chihuahua_cuauhtemoc" model="res.company.subdelegation">
+			<field name="name">CD. CUAUHTEMOC</field>
+			<field name="code">03</field>
+			<field name="delegation_id" ref="res_company_delegation_8"/>
+		</record>
+		<record id="res_company_subdelegation_chihuahua_delicias" model="res.company.subdelegation">
+			<field name="name">CD. DELICIAS</field>
+			<field name="code">05</field>
+			<field name="delegation_id" ref="res_company_delegation_8"/>
+		</record>
+		<record id="res_company_subdelegation_chihuahua_nuevos_casa_grande" model="res.company.subdelegation">
+			<field name="name">NUEVO CASAS GRANDES</field>
+			<field name="code">08</field>
+			<field name="delegation_id" ref="res_company_delegation_8"/>
+		</record>
+		<record id="res_company_subdelegation_chihuahua_juarez_uno" model="res.company.subdelegation">
+			<field name="name">JUÁREZ UNO</field>
+			<field name="code">10</field>
+			<field name="delegation_id" ref="res_company_delegation_8"/>
+		</record>
+		<record id="res_company_subdelegation_chihuahua_hidalgo_parral" model="res.company.subdelegation">
+			<field name="name">HIDALGO DEL PARRAL</field>
+			<field name="code">22</field>
+			<field name="delegation_id" ref="res_company_delegation_8"/>
+		</record>
+		<record id="res_company_subdelegation_chihuahua_juarez_dos" model="res.company.subdelegation">
+			<field name="name">JUÁREZ DOS</field>
+			<field name="code">60</field>
+			<field name="delegation_id" ref="res_company_delegation_8"/>
+		</record>
+		<record id="res_company_subdelegation_durango_durango" model="res.company.subdelegation">
+			<field name="name">DURANGO</field>
+			<field name="code">01</field>
+			<field name="delegation_id" ref="res_company_delegation_10"/>
+		</record>
+		<record id="res_company_subdelegation_durango_gomez_palacio" model="res.company.subdelegation">
+			<field name="name">GÓMEZ PALACIO</field>
+			<field name="code">13</field>
+			<field name="delegation_id" ref="res_company_delegation_10"/>
+		</record>
+		<record id="res_company_subdelegation_guanaguato_guanaguato" model="res.company.subdelegation">
+			<field name="name">GUANAJUATO</field>
+			<field name="code">01</field>
+			<field name="delegation_id" ref="res_company_delegation_11"/>
+		</record>
+		<record id="res_company_subdelegation_guanaguato_irapuato" model="res.company.subdelegation">
+			<field name="name">IRAPUATO</field>
+			<field name="code">05</field>
+			<field name="delegation_id" ref="res_company_delegation_11"/>
+		</record>
+		<record id="res_company_subdelegation_guanaguato_celaya" model="res.company.subdelegation">
+			<field name="name">CELAYA</field>
+			<field name="code">08</field>
+			<field name="delegation_id" ref="res_company_delegation_11"/>
+		</record>
+		<record id="res_company_subdelegation_guanaguato_salamaca" model="res.company.subdelegation">
+			<field name="name">SALAMANCA</field>
+			<field name="code">14</field>
+			<field name="delegation_id" ref="res_company_delegation_11"/>
+		</record>
+		<record id="res_company_subdelegation_guanaguato_leon" model="res.company.subdelegation">
+			<field name="name">LEÓN</field>
+			<field name="code">17</field>
+			<field name="delegation_id" ref="res_company_delegation_11"/>
+		</record>
+		<record id="res_company_subdelegation_guanaguato_ghilpancingo" model="res.company.subdelegation">
+			<field name="name">CHILPANCINGO</field>
+			<field name="code">01</field>
+			<field name="delegation_id" ref="res_company_delegation_12"/>
+		</record>
+<!--
+		<record id="res_company_subdelegation_guerrero_chilpancingo" model="res.company.subdelegation">
+			<field name="name">CHILPANCINGO</field>
+			<field name="code">01</field>
+			<field name="delegation_id" ref="res_company_delegation_12"/>
+		</record>
+-->
+		<record id="res_company_subdelegation_guerrero_chilpancingo" model="res.company.subdelegation">
+			<field name="name">ACAPULCO</field>
+			<field name="code">02</field>
+			<field name="delegation_id" ref="res_company_delegation_12"/>
+		</record>
+		<record id="res_company_subdelegation_guerrero_iguala" model="res.company.subdelegation">
+			<field name="name">IGUALA</field>
+			<field name="code">03</field>
+			<field name="delegation_id" ref="res_company_delegation_12"/>
+		</record>
+		<record id="res_company_subdelegation_guerrero_zihuatanejo" model="res.company.subdelegation">
+			<field name="name">ZIHUATANEJO</field>
+			<field name="code">13</field>
+			<field name="delegation_id" ref="res_company_delegation_12"/>
+		</record>
+		<record id="res_company_subdelegation_hidalgo_pachuca" model="res.company.subdelegation">
+			<field name="name">PACHUCA</field>
+			<field name="code">01</field>
+			<field name="delegation_id" ref="res_company_delegation_13"/>
+		</record>
+		<record id="res_company_subdelegation_hidalgo_tulancingo" model="res.company.subdelegation">
+			<field name="name">TULANCINGO</field>
+			<field name="code">05</field>
+			<field name="delegation_id" ref="res_company_delegation_13"/>
+		</record>
+		<record id="res_company_subdelegation_hidalgo_sahagun" model="res.company.subdelegation">
+			<field name="name">CD. SAHAGÚN</field>
+			<field name="code">07</field>
+			<field name="delegation_id" ref="res_company_delegation_13"/>
+		</record>
+		<record id="res_company_subdelegation_hidalgo_tula_allende" model="res.company.subdelegation">
+			<field name="name">TULA DE ALLENDE</field>
+			<field name="code">10</field>
+			<field name="delegation_id" ref="res_company_delegation_13"/>
+		</record>
+		<record id="res_company_subdelegation_jalisco_guadalajara" model="res.company.subdelegation">
+			<field name="name">GUADALAJARA</field>
+			<field name="code">01</field>
+			<field name="delegation_id" ref="res_company_delegation_14"/>
+		</record>
+		<record id="res_company_subdelegation_jalisco_teratitlan" model="res.company.subdelegation">
+			<field name="name">TEPATITLÁN DE MORELOS</field>
+			<field name="code">12</field>
+			<field name="delegation_id" ref="res_company_delegation_14"/>
+		</record>
+		<record id="res_company_subdelegation_jalisco_ocotlan" model="res.company.subdelegation">
+			<field name="name">OCOTLÁN</field>
+			<field name="code">15</field>
+			<field name="delegation_id" ref="res_company_delegation_14"/>
+		</record>
+		<record id="res_company_subdelegation_jalisco_ciuda_guzman" model="res.company.subdelegation">
+			<field name="name">CIUDAD GUZMÁN</field>
+			<field name="code">22</field>
+			<field name="delegation_id" ref="res_company_delegation_14"/>
+		</record>
+		<record id="res_company_subdelegation_jalisco_b" model="res.company.subdelegation">
+			<field name="name">SUBDELEGACIÓN "B" HIDALGO</field>
+			<field name="code">38</field>
+			<field name="delegation_id" ref="res_company_delegation_14"/>
+		</record>
+		<record id="res_company_subdelegation_jalisco_c" model="res.company.subdelegation">
+			<field name="name">SUBDELEGACIÓN "C" LIBERTAD REFORMA</field>
+			<field name="code">39</field>
+			<field name="delegation_id" ref="res_company_delegation_14"/>
+		</record>
+		<record id="res_company_subdelegation_jalisco_a" model="res.company.subdelegation">
+			<field name="name">SUBDELEGACIÓN "A" JUÁREZ</field>
+			<field name="code">40</field>
+			<field name="delegation_id" ref="res_company_delegation_14"/>
+		</record>
+		<record id="res_company_subdelegation_jalisco_puerto_vallarta" model="res.company.subdelegation">
+			<field name="name">PUERTO VALLARTA</field>
+			<field name="code">50</field>
+			<field name="delegation_id" ref="res_company_delegation_14"/>
+		</record>
+		<record id="res_company_subdelegation_valle_mexico_tlalnepantla" model="res.company.subdelegation">
+			<field name="name">TLALNEPANTLA</field>
+			<field name="code">06</field>
+			<field name="delegation_id" ref="res_company_delegation_15"/>
+		</record>
+		<record id="res_company_subdelegation_valle_mexico_ecatepec" model="res.company.subdelegation">
+			<field name="name">ECATEPEC</field>
+			<field name="code">54</field>
+			<field name="delegation_id" ref="res_company_delegation_15"/>
+		</record>
+		<record id="res_company_subdelegation_valle_mexico_reyes" model="res.company.subdelegation">
+			<field name="name">LOS REYES - LA PAZ</field>
+			<field name="code">80</field>
+			<field name="delegation_id" ref="res_company_delegation_15"/>
+		</record>
+		<record id="res_company_subdelegation_edo_mexico_toluca" model="res.company.subdelegation">
+			<field name="name">TOLUCA</field>
+			<field name="code">01</field>
+			<field name="delegation_id" ref="res_company_delegation_16"/>
+		</record>
+		<record id="res_company_subdelegation_edo_mexico_naucalpan" model="res.company.subdelegation">
+			<field name="name">NAUCALPAN-LOMAS VERDES</field>
+			<field name="code">05</field>
+			<field name="delegation_id" ref="res_company_delegation_16"/>
+		</record>
+		<record id="res_company_subdelegation_michoacan_morelia" model="res.company.subdelegation">
+			<field name="name">MORELIA</field>
+			<field name="code">03</field>
+			<field name="delegation_id" ref="res_company_delegation_17"/>
+		</record>
+		<record id="res_company_subdelegation_michoacan_uruapan" model="res.company.subdelegation">
+			<field name="name">URUAPAN DEL PROGRESO</field>
+			<field name="code">09</field>
+			<field name="delegation_id" ref="res_company_delegation_17"/>
+		</record>
+		<record id="res_company_subdelegation_michoacan_zamora" model="res.company.subdelegation">
+			<field name="name">ZAMORA DE HIDALGO</field>
+			<field name="code">13</field>
+			<field name="delegation_id" ref="res_company_delegation_17"/>
+		</record>
+		<record id="res_company_subdelegation_michoacan_zitacuaro" model="res.company.subdelegation">
+			<field name="name">ZITACUARO</field>
+			<field name="code">17</field>
+			<field name="delegation_id" ref="res_company_delegation_17"/>
+		</record>
+		<record id="res_company_subdelegation_michoacan_lazaro" model="res.company.subdelegation">
+			<field name="name">LAZARO CARDENAS</field>
+			<field name="code">27</field>
+			<field name="delegation_id" ref="res_company_delegation_17"/>
+		</record>
+		<record id="res_company_subdelegation_morelos_cuernavaca" model="res.company.subdelegation">
+			<field name="name">CUERNAVACA</field>
+			<field name="code">01</field>
+			<field name="delegation_id" ref="res_company_delegation_18"/>
+		</record>
+		<record id="res_company_subdelegation_morelos_cuautla" model="res.company.subdelegation">
+			<field name="name">CUAUTLA DE MORELOS</field>
+			<field name="code">11</field>
+			<field name="delegation_id" ref="res_company_delegation_18"/>
+		</record>
+		<record id="res_company_subdelegation_morelos_zacatepec" model="res.company.subdelegation">
+			<field name="name">ZACATEPEC</field>
+			<field name="code">15</field>
+			<field name="delegation_id" ref="res_company_delegation_18"/>
+		</record>
+		<record id="res_company_subdelegation_nayarit_tepic" model="res.company.subdelegation">
+			<field name="name">TEPIC</field>
+			<field name="code">01</field>
+			<field name="delegation_id" ref="res_company_delegation_19"/>
+		</record>
+		<record id="res_company_subdelegation_nuevo_leon_monterrey" model="res.company.subdelegation">
+			<field name="name">MONTERREY</field>
+			<field name="code">01</field>
+			<field name="delegation_id" ref="res_company_delegation_20"/>
+		</record>
+		<record id="res_company_subdelegation_nuevo_leon_montemorelos" model="res.company.subdelegation">
+			<field name="name">MONTEMORELOS</field>
+			<field name="code">06</field>
+			<field name="delegation_id" ref="res_company_delegation_20"/>
+		</record>
+	
+		<record id="res_company_subdelegation_nuevo_leon_apodaca" model="res.company.subdelegation">
+			<field name="name">APODACA</field>
+			<field name="code">08</field>
+			<field name="delegation_id" ref="res_company_delegation_20"/>
+		</record>
+		<record id="res_company_subdelegation_nuevo_leon_2" model="res.company.subdelegation">
+			<field name="name">SUBDELEGACIÓN 2 NORESTE H. FF. CC.</field>
+			<field name="code">31</field>
+			<field name="delegation_id" ref="res_company_delegation_20"/>
+		</record>
+		<record id="res_company_subdelegation_nuevo_leon_1" model="res.company.subdelegation">
+			<field name="name">SUBDELEGACIÓN 1 NOROESTE V. VERDE</field>
+			<field name="code">32</field>
+			<field name="delegation_id" ref="res_company_delegation_20"/>
+		</record>
+		<record id="res_company_subdelegation_nuevo_leon_4" model="res.company.subdelegation">
+			<field name="name">SUBDELEGACIÓN 4 SURESTE NVO. REP.</field>
+			<field name="code">33</field>
+			<field name="delegation_id" ref="res_company_delegation_20"/>
+		</record>
+		<record id="res_company_subdelegation_nuevo_leon_3" model="res.company.subdelegation">
+			<field name="name">SUBDELEGACIÓN 3 SUROESTE C. MONTERREY</field>
+			<field name="code">34</field>
+			<field name="delegation_id" ref="res_company_delegation_20"/>
+		</record>
+		<record id="res_company_subdelegation_oaxaca_oaxaca" model="res.company.subdelegation">
+			<field name="name">OAXACA</field>
+			<field name="code">02</field>
+			<field name="delegation_id" ref="res_company_delegation_21"/>
+		</record>
+		<record id="res_company_subdelegation_oaxaca_salina" model="res.company.subdelegation">
+			<field name="name">SALINA CRUZ</field>
+			<field name="code">03</field>
+			<field name="delegation_id" ref="res_company_delegation_21"/>
+		</record>
+		<record id="res_company_subdelegation_oaxaca_san_juan" model="res.company.subdelegation">
+			<field name="name">SAN JUAN BAUTISTA TUXTEPEC</field>
+			<field name="code">04</field>
+			<field name="delegation_id" ref="res_company_delegation_21"/>
+		</record>
+		<record id="res_company_subdelegation_oaxaca_santa_maria" model="res.company.subdelegation">
+			<field name="name">SANTA MARIA HUATULCO</field>
+			<field name="code">53</field>
+			<field name="delegation_id" ref="res_company_delegation_21"/>
+		</record>
+		<record id="res_company_subdelegation_oaxaca_puebla_norte" model="res.company.subdelegation">
+			<field name="name">PUEBLA NORTE</field>
+			<field name="code">01</field>
+			<field name="delegation_id" ref="res_company_delegation_22"/>
+		</record>
+		<record id="res_company_subdelegation_oaxaca_teziutlan" model="res.company.subdelegation">
+			<field name="name">TEZIUTLÁN</field>
+			<field name="code">05</field>
+			<field name="delegation_id" ref="res_company_delegation_22"/>
+		</record>
+		<record id="res_company_subdelegation_oaxaca_tehuacan" model="res.company.subdelegation">
+			<field name="name">TEHUACAN</field>
+			<field name="code">06</field>
+			<field name="delegation_id" ref="res_company_delegation_22"/>
+		</record>
+		<record id="res_company_subdelegation_oaxaca_izucar" model="res.company.subdelegation">
+			<field name="name">IZÚCAR DE MATAMOROS</field>
+			<field name="code">08</field>
+			<field name="delegation_id" ref="res_company_delegation_22"/>
+		</record>
+		<record id="res_company_subdelegation_oaxaca_puebla_sur" model="res.company.subdelegation">
+			<field name="name">PUEBLA SUR</field>
+			<field name="code">22</field>
+			<field name="delegation_id" ref="res_company_delegation_22"/>
+		</record>
+		<record id="res_company_subdelegation_queretaro_queretaro" model="res.company.subdelegation">
+			<field name="name">QUERETARO</field>
+			<field name="code">01</field>
+			<field name="delegation_id" ref="res_company_delegation_23"/>
+		</record>
+		<record id="res_company_subdelegation_queretaro_san_juan" model="res.company.subdelegation">
+			<field name="name">SAN JUAN DEL RIO</field>
+			<field name="code">03</field>
+			<field name="delegation_id" ref="res_company_delegation_23"/>
+		</record>
+		<record id="res_company_subdelegation_quintana_chetumal" model="res.company.subdelegation">
+			<field name="name">CHETUMAL</field>
+			<field name="code">01</field>
+			<field name="delegation_id" ref="res_company_delegation_24"/>
+		</record>
+		<record id="res_company_subdelegation_quintana_playa_carmen" model="res.company.subdelegation">
+			<field name="name">PLAYA DEL CARMEN</field>
+			<field name="code">02</field>
+			<field name="delegation_id" ref="res_company_delegation_24"/>
+		</record>
+		<record id="res_company_subdelegation_quintana_cancun" model="res.company.subdelegation">
+			<field name="name">CANCUN</field>
+			<field name="code">07</field>
+			<field name="delegation_id" ref="res_company_delegation_24"/>
+		</record>
+		<record id="res_company_subdelegation_potosi_potosi" model="res.company.subdelegation">
+			<field name="name">SAN LUIS POTOSÍ ORIENTE</field>
+			<field name="code">01</field>
+			<field name="delegation_id" ref="res_company_delegation_25"/>
+		</record>
+		<record id="res_company_subdelegation_potosi_matehuala" model="res.company.subdelegation">
+			<field name="name">MATEHUALA</field>
+			<field name="code">03</field>
+			<field name="delegation_id" ref="res_company_delegation_25"/>
+		</record>
+		<record id="res_company_subdelegation_potosi_ciudad_valles" model="res.company.subdelegation">
+			<field name="name">CIUDAD VALLES</field>
+			<field name="code">05</field>
+			<field name="delegation_id" ref="res_company_delegation_25"/>
+		</record>
+		<record id="res_company_subdelegation_potosi_potosi_poniente" model="res.company.subdelegation">
+			<field name="name">SAN LUIS POTOSÍ PONIENTE</field>
+			<field name="code">60</field>
+			<field name="delegation_id" ref="res_company_delegation_25"/>
+		</record>
+		<record id="res_company_subdelegation_sinaloa_culiacan" model="res.company.subdelegation">
+			<field name="name">CULIACAN</field>
+			<field name="code">01</field>
+			<field name="delegation_id" ref="res_company_delegation_26"/>
+		</record>
+		<record id="res_company_subdelegation_sinaloa_mochis" model="res.company.subdelegation">
+			<field name="name">LOS MOCHIS</field>
+			<field name="code">03</field>
+			<field name="delegation_id" ref="res_company_delegation_26"/>
+		</record>
+		<record id="res_company_subdelegation_sinaloa_guasave" model="res.company.subdelegation">
+			<field name="name">GUASAVE</field>
+			<field name="code">04</field>
+			<field name="delegation_id" ref="res_company_delegation_26"/>
+		</record>
+		<record id="res_company_subdelegation_sinaloa_mzatlan" model="res.company.subdelegation">
+			<field name="name">MAZATLAN</field>
+			<field name="code">05</field>
+			<field name="delegation_id" ref="res_company_delegation_26"/>
+		</record>
+		<record id="res_company_subdelegation_zonora_hermosillo" model="res.company.subdelegation">
+			<field name="name">HERMOSILLO</field>
+			<field name="code">01</field>
+			<field name="delegation_id" ref="res_company_delegation_27"/>
+		</record>
+		<record id="res_company_subdelegation_zonora_guaymas" model="res.company.subdelegation">
+			<field name="name">GUAYMAS</field>
+			<field name="code">03</field>
+			<field name="delegation_id" ref="res_company_delegation_27"/>
+		</record>
+		<record id="res_company_subdelegation_zonora_navojoa" model="res.company.subdelegation">
+			<field name="name">NAVOJOA</field>
+			<field name="code">07</field>
+			<field name="delegation_id" ref="res_company_delegation_27"/>
+		</record>
+		<record id="res_company_subdelegation_zonora_nogales" model="res.company.subdelegation">
+			<field name="name">NOGALES</field>
+			<field name="code">10</field>
+			<field name="delegation_id" ref="res_company_delegation_27"/>
+		</record>
+		<record id="res_company_subdelegation_zonora_caborca" model="res.company.subdelegation">
+			<field name="name">CABORCA</field>
+			<field name="code">13</field>
+			<field name="delegation_id" ref="res_company_delegation_27"/>
+		</record>
+		<record id="res_company_subdelegation_zonora_agua_prieta" model="res.company.subdelegation">
+			<field name="name">AGUA PRIETA</field>
+			<field name="code">51</field>
+			<field name="delegation_id" ref="res_company_delegation_27"/>
+		</record>
+		<record id="res_company_subdelegation_zonora_nacozari" model="res.company.subdelegation">
+			<field name="name">NACOZARI DE GARCÍA</field>
+			<field name="code">57</field>
+			<field name="delegation_id" ref="res_company_delegation_27"/>
+		</record>
+		<record id="res_company_subdelegation_zonora_ciudad" model="res.company.subdelegation">
+			<field name="name">CIUDAD OBREGÓN</field>
+			<field name="code">70</field>
+			<field name="delegation_id" ref="res_company_delegation_27"/>
+		</record>
+		<record id="res_company_subdelegation_tabasco_villahermosa" model="res.company.subdelegation">
+			<field name="name">VILLAHERMOSA</field>
+			<field name="code">01</field>
+			<field name="delegation_id" ref="res_company_delegation_28"/>
+		</record>
+		<record id="res_company_subdelegation_tabasco_cardenas" model="res.company.subdelegation">
+			<field name="name">CÁRDENAS</field>
+			<field name="code">02</field>
+			<field name="delegation_id" ref="res_company_delegation_28"/>
+		</record>
+		<record id="res_company_subdelegation_tamaulipas_ciudad_victoria" model="res.company.subdelegation">
+			<field name="name">CIUDAD VICTORIA</field>
+			<field name="code">01</field>
+			<field name="delegation_id" ref="res_company_delegation_29"/>
+		</record>
+		<record id="res_company_subdelegation_tamaulipas_reynosa" model="res.company.subdelegation">
+			<field name="name">REYNOSA</field>
+			<field name="code">04</field>
+			<field name="delegation_id" ref="res_company_delegation_29"/>
+		</record>
+		<record id="res_company_subdelegation_tamaulipas_tampico" model="res.company.subdelegation">
+			<field name="name">TAMPICO</field>
+			<field name="code">10</field>
+			<field name="delegation_id" ref="res_company_delegation_29"/>
+		</record>
+		<record id="res_company_subdelegation_tamaulipas_ciudad_mauntes" model="res.company.subdelegation">
+			<field name="name">CIUDAD MANTE</field>
+			<field name="code">13</field>
+			<field name="delegation_id" ref="res_company_delegation_29"/>
+		</record>
+		<record id="res_company_subdelegation_tamaulipas_nuevo_laredo" model="res.company.subdelegation">
+			<field name="name">NUEVO LAREDO</field>
+			<field name="code">18</field>
+			<field name="delegation_id" ref="res_company_delegation_29"/>
+		</record>
+		<record id="res_company_subdelegation_tamaulipas_matamoros" model="res.company.subdelegation">
+			<field name="name">MATAMOROS</field>
+			<field name="code">19</field>
+			<field name="delegation_id" ref="res_company_delegation_29"/>
+		</record>
+		<record id="res_company_subdelegation_tlaxcala_tlaxcala" model="res.company.subdelegation">
+			<field name="name">TLAXCALA</field>
+			<field name="code">01</field>
+			<field name="delegation_id" ref="res_company_delegation_30"/>
+		</record>
+		<record id="res_company_subdelegation_veracrus_norte_jalapa" model="res.company.subdelegation">
+			<field name="name">JALAPA</field>
+			<field name="code">02</field>
+			<field name="delegation_id" ref="res_company_delegation_31"/>
+		</record>
+		<record id="res_company_subdelegation_veracruz_norte_poza" model="res.company.subdelegation">
+			<field name="name">POZA RICA</field>
+			<field name="code">07</field>
+			<field name="delegation_id" ref="res_company_delegation_31"/>
+		</record>
+		<record id="res_company_subdelegation_veracruz_norte_martinez" model="res.company.subdelegation">
+			<field name="name">MARTÍNEZ DE LA TORRE</field>
+			<field name="code">09</field>
+			<field name="delegation_id" ref="res_company_delegation_31"/>
+		</record>
+		<record id="res_company_subdelegation_veracruz_norte_veracruz" model="res.company.subdelegation">
+			<field name="name">VERACRÚZ</field>
+			<field name="code">12</field>
+			<field name="delegation_id" ref="res_company_delegation_31"/>
+		</record>
+		<record id="res_company_subdelegation_veracruz_norte_lerdo" model="res.company.subdelegation">
+			<field name="name">LERDO DE TEJADA</field>
+			<field name="code">25</field>
+			<field name="delegation_id" ref="res_company_delegation_31"/>
+		</record>
+		<record id="res_company_subdelegation_veracruz_sur_cordoba" model="res.company.subdelegation">
+			<field name="name">CORDOBA</field>
+			<field name="code">02</field>
+			<field name="delegation_id" ref="res_company_delegation_32"/>
+		</record>
+		<record id="res_company_subdelegation_veracruz_sur_orizaba" model="res.company.subdelegation">
+			<field name="name">ORIZABA</field>
+			<field name="code">03</field>
+			<field name="delegation_id" ref="res_company_delegation_32"/>
+		</record>
+		<record id="res_company_subdelegation_veracruz_sur_cosamalopan" model="res.company.subdelegation">
+			<field name="name">COSAMALOAPAN DEL CARPIO</field>
+			<field name="code">38</field>
+			<field name="delegation_id" ref="res_company_delegation_32"/>
+		</record>
+		<record id="res_company_subdelegation_veracruz_sur_coatzacoalcos" model="res.company.subdelegation">
+			<field name="name">COATZACOALCOS</field>
+			<field name="code">45</field>
+			<field name="delegation_id" ref="res_company_delegation_32"/>
+		</record>
+		<record id="res_company_subdelegation_yucatan_merida_norte" model="res.company.subdelegation">
+			<field name="name">MERIDA NORTE</field>
+			<field name="code">01</field>
+			<field name="delegation_id" ref="res_company_delegation_33"/>
+		</record>
+		<record id="res_company_subdelegation_yucatan_merida_sur" model="res.company.subdelegation">
+			<field name="name">MERIDA SUR</field>
+			<field name="code">33</field>
+			<field name="delegation_id" ref="res_company_delegation_33"/>
+		</record>
+		<record id="res_company_subdelegation_zacatecas_zacatecas" model="res.company.subdelegation">
+			<field name="name">ZACATECAS</field>
+			<field name="code">01</field>
+			<field name="delegation_id" ref="res_company_delegation_34"/>
+		</record>
+		<record id="res_company_subdelegation_zacatecas_fresillo" model="res.company.subdelegation">
+			<field name="name">FRESNILLO</field>
+			<field name="code">09</field>
+			<field name="delegation_id" ref="res_company_delegation_34"/>
+		</record>
+		<record id="res_company_subdelegation_noroeste_magdalena" model="res.company.subdelegation">
+			<field name="name">SUBDELEGACIÓN MAGDALENA DE LAS SALINAS</field>
+			<field name="code">11</field>
+			<field name="delegation_id" ref="res_company_delegation_35"/>
+		</record>
+		<record id="res_company_subdelegation_noroeste_polanco" model="res.company.subdelegation">
+			<field name="name">SUBDELEGACIÓN POLANCO</field>
+			<field name="code">16</field>
+			<field name="delegation_id" ref="res_company_delegation_35"/>
+		</record>
+		<record id="res_company_subdelegation_noroeste_santa" model="res.company.subdelegation">
+			<field name="name">SUBDELEGACIÓN SANTA MARÍA LA RIBERA</field>
+			<field name="code">54</field>
+			<field name="delegation_id" ref="res_company_delegation_35"/>
+		</record>
+		<record id="res_company_subdelegation_noreste_guerrero" model="res.company.subdelegation">
+			<field name="name">SUBDELEGACIÓN GUERRERO</field>
+			<field name="code">56</field>
+			<field name="delegation_id" ref="res_company_delegation_36"/>
+		</record>
+		<record id="res_company_subdelegation_noreste_centro" model="res.company.subdelegation">
+			<field name="name">SUBDELEGACIÓN CENTRO</field>
+			<field name="code">57</field>
+			<field name="delegation_id" ref="res_company_delegation_36"/>
+		</record>
+		<record id="res_company_subdelegation_suroeste_angel" model="res.company.subdelegation">
+			<field name="name">SUBDELEGACIÓN SAN ANGEL</field>
+			<field name="code">01</field>
+			<field name="delegation_id" ref="res_company_delegation_37"/>
+		</record>
+		<record id="res_company_subdelegation_suroeste_valle" model="res.company.subdelegation">
+			<field name="name">SUBDELEGACIÓN DEL VALLE</field>
+			<field name="code">06</field>
+			<field name="delegation_id" ref="res_company_delegation_37"/>
+		</record>
+		<record id="res_company_subdelegation_suroeste_piedad" model="res.company.subdelegation">
+			<field name="name">SUBDELEGACIÓN PIEDAD NARVARTE</field>
+			<field name="code">54</field>
+			<field name="delegation_id" ref="res_company_delegation_37"/>
+		</record>
+		<record id="res_company_subdelegation_sureste_anita" model="res.company.subdelegation">
+			<field name="name">SUBDELEGACIÓN STA. ANITA</field>
+			<field name="code">11</field>
+			<field name="delegation_id" ref="res_company_delegation_38"/>
+		</record>
+		<record id="res_company_subdelegation_sureste_churubusco" model="res.company.subdelegation">
+			<field name="name">SUBDELEGACIÓN CHURUBUSCO</field>
+			<field name="code">54</field>
+			<field name="delegation_id" ref="res_company_delegation_38"/>
+		</record>
+		<record id="res_company_subdelegation_norte_magdalena" model="res.company.subdelegation">
+			<field name="name">SUBDELEGACIÓN MAGDALENA DE LAS SALINAS</field>
+			<field name="code">11</field>
+			<field name="delegation_id" ref="res_company_delegation_39"/>
+		</record>
+		<record id="res_company_subdelegation_norte_polanco" model="res.company.subdelegation">
+			<field name="name">SUBDELEGACIÓN POLANCO</field>
+			<field name="code">16</field>
+			<field name="delegation_id" ref="res_company_delegation_39"/>
+		</record>
+		<record id="res_company_subdelegation_norte_santa_maria" model="res.company.subdelegation">
+			<field name="name">SUBDELEGACIÓN SANTA MARIA LA RIBERA</field>
+			<field name="code">54</field>
+			<field name="delegation_id" ref="res_company_delegation_39"/>
+		</record>
+		<record id="res_company_subdelegation_norte_guerrero" model="res.company.subdelegation">
+			<field name="name">SUBDELEGACIÓN GUERRERO</field>
+			<field name="code">56</field>
+			<field name="delegation_id" ref="res_company_delegation_39"/>
+		</record>
+		<record id="res_company_subdelegation_norte_centro" model="res.company.subdelegation">
+			<field name="name">SUBDELEGACIÓN CENTRO</field>
+			<field name="code">57</field>
+			<field name="delegation_id" ref="res_company_delegation_39"/>
+		</record>
+		<record id="res_company_subdelegation_sur_angel" model="res.company.subdelegation">
+			<field name="name">SUBDELEGACIÓN SAN ANGEL</field>
+			<field name="code">01</field>
+			<field name="delegation_id" ref="res_company_delegation_40"/>
+		</record>
+		<record id="res_company_subdelegation_sur_valle" model="res.company.subdelegation">
+			<field name="name">SUBDELEGACIÓN DEL VALLE</field>
+			<field name="code">06</field>
+			<field name="delegation_id" ref="res_company_delegation_40"/>
+		</record>
+		<record id="res_company_subdelegation_sur_anita" model="res.company.subdelegation">
+			<field name="name">SUBDELEGACIÓN STA. ANITA</field>
+			<field name="code">11</field>
+			<field name="delegation_id" ref="res_company_delegation_40"/>
+		</record>
+		<record id="res_company_subdelegation_sur_churubusco" model="res.company.subdelegation">
+			<field name="name">SUBDELEGACIÓN CHURUBUSCO</field>
+			<field name="code">54</field>
+			<field name="delegation_id" ref="res_company_delegation_40"/>
+		</record>
+		<record id="res_company_subdelegation_sur_piedad" model="res.company.subdelegation">
+			<field name="name">SUBDELEGACIÓN PIEDAD NARVARTE</field>
+			<field name="code">58</field>
+			<field name="delegation_id" ref="res_company_delegation_40"/>
+		</record>
+		
+   </data>
+</odoo>

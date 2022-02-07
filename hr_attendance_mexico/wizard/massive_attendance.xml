@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <record id="view_massive_attendance_form" model="ir.ui.view">
+        <field name="name">massive.attendance.form</field>
+        <field name="model">massive.attendance</field>
+        <field name="arch" type="xml">
+        <form string="Massive Employee Attendance">
+            <group>
+                <group string="File">
+                    <field name="file_id" widget="many2many_binary"/>
+                </group>
+                <group>
+                    <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+                </group>
+            </group>
+            <footer>
+                <button name="generate_attendance" string="Generate" type="object" class="btn-primary"/>
+                <button string="Cancel" special="cancel" class="btn-default"/>
+            </footer>
+        </form>
+        </field>
+    </record>
+
+    <record id="action_massive_attendance_import" model="ir.actions.act_window">
+        <field name="name">Massive Employee Attendance</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">massive.attendance</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem
+        id="menu_import_attendance"
+        name="Import"
+        parent="hr_attendance.menu_hr_attendance_root"
+        sequence="10"/>
+
+    <menuitem
+        id="menu_massive_attendance_import"
+        name="Massive Employee Attendance"
+        parent="menu_import_attendance"
+        sequence="5"
+        action="action_massive_attendance_import"/>
+
+    </data>
+</odoo>

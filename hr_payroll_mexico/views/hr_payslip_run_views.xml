@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <record model="ir.ui.view" id="view_hr_payslip_run_mexico_form">
+        <field name="name">view.hr.payslip.run.mexico.form</field>
+        <field name="model">hr.payslip.run</field>
+        <field name="priority">6</field>
+        <field name="inherit_id" ref="hr_payroll.hr_payslip_run_form"/>
+        <field name="arch" type="xml">
+            
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button name="action_open_payslips_cfdi_error" class="oe_stat_button" icon="fa-book" type="object" help="Payroll in which the CFDI generated an error" attrs="{'invisible': [('cfdi_error_count', '=', 0)]}">
+                    <div class="o_field_widget o_stat_info">
+                        <span class="o_stat_value"><field name="cfdi_error_count"/></span>
+                        <span class="o_stat_text">CFDI Error</span>
+                     </div>
+                </button>
+            </xpath>
+            <xpath expr="//sheet/group" position="after">
+                <group>
+                    <group>
+                        <field name="payroll_period_id" required="1" attrs="{'readonly': [('state', 'not in', ['draft'])]}"
+                               domain="[('company_id','=',company_id), ('state', 'in', ['open'])]"/>
+                        <field name="structure_id" attrs="{'readonly': [('state', 'not in', ['draft'])]}" required="1"/>
+                    </group>
+                    <group>
+                        <field name="type"/>
+                        <field name="year"/>
+                        <field name="month"/>
+                        <field name="payroll_period"/>
+                        <field name="payment_date" required="1" attrs="{'readonly': [('state', 'not in', ['draft'])]}"/>
+                        <field name="year_ptu" attrs="{'invisible': [('ptu_payslip', '!=', True)]}"/>
+                        <field name="ptu_payslip" invisible="1"/>
+                        <field name="annual_adjustment" attrs="{'invisible': [('month', '!=', '12')]}"/>
+                        <field name="adjustment_id" attrs="{'invisible': [('annual_adjustment', '!=', True)],
+                                                            'required': [('annual_adjustment', '=', True)]}"
+                                                            domain="[('year','=',year)]"/>
+                    </group>
+                </group>
+            </xpath>
+            <xpath expr="//sheet/group[1]" position="before">
+                <group col="4" name="processed">
+                    <label for="progress_compute" string="Processed payroll"/>
+                    <div>
+                        <field name="progress_compute" class="oe_inline" widget="progressbar"/> | <field name="payslips_computed" class="oe_inline"/> / <field name="payslips_total" class="oe_inline"/>
+                        <widget name="repayslip_lot" states="verify" groups="hr_payroll.group_hr_payroll_user" type="link"/>
+                    </div>
+                    <br/>
+                </group>
+                <group col="4" name="compute_cfdi">
+                    <label for="cfdi_compute" string="CFDI Processed" attrs="{'invisible': [('state', 'not in', ['close'])]}"/>
+                    <div attrs="{'invisible': [('state', 'not in', ['close'])]}">
+                        <field name="cfdi_compute" class="oe_inline" widget="progressbar"/> | <field name="cfdi_computed" class="oe_inline"/> / <field name="cfdi_total" class="oe_inline"/>
+                    </div>
+                    <br/>
+                </group>
+            </xpath>
+            <xpath expr="//field[@name='date_start']" position="attributes">
+                <attribute name="readonly">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='date_end']" position="attributes">
+                <attribute name="readonly">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='credit_note']" position="replace">
+            </xpath>
+            <xpath expr="//button[@name='%(hr_payroll.action_hr_payslip_by_employees)d']" position="replace">
+                <button name="%(hr_payroll.action_hr_payslip_by_employees)d" type="action" attrs="{'invisible': ['|',('state', 'not in', ['draft','verify']),('type', 'not in', ['ordinary','special'])]}" string="Generate Payslips" class="oe_highlight"/>
+                <widget name="repayslip_lot" attrs="{'invisible': ['|',('state', 'not in', ['verify']),('type', 'not in', ['ordinary','special'])]}" groups="hr_payroll.group_hr_payroll_user" type="button"/>
+                <widget name="cfdi_lot" states="close" groups="hr_payroll.group_hr_payroll_user" type="button"/>
+                <button name="action_calcel" type="object" string="Cancel Payroll" states="verify" class="oe_highlight"/>
+                <button name="action_verify" type="object" string="Open Payroll" states="cancel,close" class="oe_highlight"/>
+                <button name="action_verify_settlement" type="object" string="Open Payroll" attrs="{'invisible': ['|',('state', 'not in', ['draft']),('type', 'in', ['ordinary','special'])]}" class="oe_highlight"/>
+             </xpath>
+        </field>
+    </record>
+    
+    <record model="ir.ui.view" id="hr_payslip_run_view_form_inherit">
+        <field name="name">view.hr.payslip.run.mexico.form</field>
+        <field name="model">hr.payslip.run</field>
+        <field name="priority">6</field>
+        <field name="inherit_id" ref="hr_payroll_account.hr_payslip_run_view_form"/>
+        <field name="arch" type="xml">
+          <xpath expr="//button[@name='action_validate']" position="replace">
+            <button name="action_validate" type="object" string="Close Payroll" states="verify" class="oe_highlight" context="{'payslip_generate_pdf': True}"/>
+         </xpath>
+        </field>
+    </record>
+
+    </data>
+</odoo>

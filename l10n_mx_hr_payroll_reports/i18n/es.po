@@ -1,0 +1,560 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_mx_hr_payroll_reports
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-28 19:37+0000\n"
+"PO-Revision-Date: 2022-01-28 19:37+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_reports.selection__report_consolidate__type__aspa
+msgid "ASPA"
+msgstr ""
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.actions.act_window,name:l10n_mx_hr_payroll_reports.action_wizard_aspa_report_filter
+#: model:ir.actions.server,name:l10n_mx_hr_payroll_reports.action_hr_payroll_aspa_report
+#: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_reports.selection__wizard_payroll_report_filter__type__aspa
+msgid "ASPA Report"
+msgstr "Reporte ASPA"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.actions.server,name:l10n_mx_hr_payroll_reports.action_hr_payroll_aspa_txt_report
+msgid "ASPA Report (TXT)"
+msgstr "Reporte ASPA (TXT)"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_reports.selection__report_consolidate__type__assa
+msgid "ASSA"
+msgstr ""
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.actions.act_window,name:l10n_mx_hr_payroll_reports.action_wizard_assa_report_filter
+#: model:ir.actions.server,name:l10n_mx_hr_payroll_reports.action_hr_payroll_assa_report
+#: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_reports.selection__wizard_payroll_report_filter__type__assa
+msgid "ASSA Report"
+msgstr "Reporte ASSA"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_reports.selection__wizard_payment_file__account_type__001
+msgid "Account"
+msgstr "Cuenta"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_wizard_payment_file__account_type
+msgid "Account type"
+msgstr "Tipo de cuenta"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_wizard_payment_file__bank_id
+msgid "Bank"
+msgstr "Banco"
+
+#. module: l10n_mx_hr_payroll_reports
+#: code:addons/l10n_mx_hr_payroll_reports/wizard/wizard_payment_file.py:0
+#: code:addons/l10n_mx_hr_payroll_reports/wizard/wizard_payment_file.py:0
+#, python-format
+msgid "Bank %s does not have a layout available"
+msgstr "El banco (%s) no tiene un layout de dispersión configurado."
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_wizard_payment_file__bank_code
+msgid "Bank Code"
+msgstr "Código del Banco"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.actions.act_window,name:l10n_mx_hr_payroll_reports.action_wizard_payment_file
+#: model:ir.model,name:l10n_mx_hr_payroll_reports.model_wizard_payment_file
+#: model_terms:ir.ui.view,arch_db:l10n_mx_hr_payroll_reports.view_wizard_payment_file_form
+msgid "Bank Dispersion"
+msgstr "Dispersión Bancaria"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_report_credit__bimester
+msgid "Bimester"
+msgstr "Bimestre"
+
+#. module: l10n_mx_hr_payroll_reports
+#: code:addons/l10n_mx_hr_payroll_reports/models/payroll_report.py:0
+#, python-format
+msgid "C. Costo"
+msgstr ""
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_reports.selection__wizard_payment_file__account_type__040
+msgid "CLABE"
+msgstr ""
+
+#. module: l10n_mx_hr_payroll_reports
+#: model_terms:ir.ui.view,arch_db:l10n_mx_hr_payroll_reports.view_report_consolidate_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_reports.selection__wizard_payment_file__account_type__099
+msgid "Check"
+msgstr "Cheque"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model_terms:ir.ui.view,arch_db:l10n_mx_hr_payroll_reports.view_hr_payroll_run_details_cfdi_wizard
+#: model_terms:ir.ui.view,arch_db:l10n_mx_hr_payroll_reports.view_wizard_file_download_form
+#: model_terms:ir.ui.view,arch_db:l10n_mx_hr_payroll_reports.view_wizard_payment_file_form
+#: model_terms:ir.ui.view,arch_db:l10n_mx_hr_payroll_reports.view_wizard_payroll_report_filter_form
+#: model_terms:ir.ui.view,arch_db:l10n_mx_hr_payroll_reports.view_wizard_report_credit_form
+msgid "Close"
+msgstr "Cerrar"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_report_consolidate__company_ids
+msgid "Companies"
+msgstr "Empresas"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_payroll_run_details_cfdi_wizard__company_ids
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_report_credit__company_id
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_wizard_payroll_report_filter__company_id
+msgid "Company"
+msgstr "Empresa"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_payroll_run_details_cfdi_wizard__create_uid
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_report_consolidate__create_uid
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_report_credit__create_uid
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_wizard_file_download__create_uid
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_wizard_payment_file__create_uid
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_wizard_payroll_report_filter__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_payroll_run_details_cfdi_wizard__create_date
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_report_consolidate__create_date
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_report_credit__create_date
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_wizard_file_download__create_date
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_wizard_payment_file__create_date
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_wizard_payroll_report_filter__create_date
+msgid "Created on"
+msgstr "Ceado el"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.model,name:l10n_mx_hr_payroll_reports.model_report_credit
+#: model_terms:ir.ui.view,arch_db:l10n_mx_hr_payroll_reports.view_wizard_report_credit_form
+msgid "Credit Report"
+msgstr "Reporte de crédito"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.ui.menu,name:l10n_mx_hr_payroll_reports.menu_action_credits_reports
+msgid "Credits Reports"
+msgstr "Reporte de créditos"
+
+#. module: l10n_mx_hr_payroll_reports
+#: code:addons/l10n_mx_hr_payroll_reports/models/payslip_run_report.py:0
+#: code:addons/l10n_mx_hr_payroll_reports/models/payslip_run_report_isn.py:0
+#: code:addons/l10n_mx_hr_payroll_reports/wizard/wizard_payment_file.py:0
+#: code:addons/l10n_mx_hr_payroll_reports/wizard/wizard_payment_file.py:0
+#, python-format
+msgid "Data Not Found"
+msgstr "No se encontraron resultados."
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_reports.selection__wizard_payment_file__account_type__003
+msgid "Debit"
+msgstr "Tarjeta de débito"
+
+#. module: l10n_mx_hr_payroll_reports
+#: code:addons/l10n_mx_hr_payroll_reports/models/payroll_report.py:0
+#, python-format
+msgid "Department"
+msgstr "Dirección"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.model,name:l10n_mx_hr_payroll_reports.model_payroll_run_details_cfdi_wizard
+#: model_terms:ir.ui.view,arch_db:l10n_mx_hr_payroll_reports.view_hr_payroll_run_details_cfdi_wizard
+msgid "Details CFDI"
+msgstr "Detalles CFDI"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_hr_payslip_run__display_name
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_payroll_run_details_cfdi_wizard__display_name
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_report_consolidate__display_name
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_report_credit__display_name
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_wizard_file_download__display_name
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_wizard_payment_file__display_name
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_wizard_payroll_report_filter__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_wizard_file_download__file
+msgid "Download"
+msgstr "Descargar"
+
+#. module: l10n_mx_hr_payroll_reports
+#: code:addons/l10n_mx_hr_payroll_reports/models/payslip_run_report.py:0
+#: code:addons/l10n_mx_hr_payroll_reports/models/payslip_run_report.py:0
+#: code:addons/l10n_mx_hr_payroll_reports/models/payslip_run_report.py:0
+#: code:addons/l10n_mx_hr_payroll_reports/wizard/wizard_credit_reports.py:0
+#: code:addons/l10n_mx_hr_payroll_reports/wizard/wizard_credit_reports.py:0
+#: code:addons/l10n_mx_hr_payroll_reports/wizard/wizard_payment_file.py:0
+#: code:addons/l10n_mx_hr_payroll_reports/wizard/wizard_payment_file.py:0
+#: model_terms:ir.ui.view,arch_db:l10n_mx_hr_payroll_reports.view_wizard_file_download_form
+#: model_terms:ir.ui.view,arch_db:l10n_mx_hr_payroll_reports.view_wizard_payroll_report_filter_form
+#, python-format
+msgid "Download Report"
+msgstr "Descargar Reporte"
+
+#. module: l10n_mx_hr_payroll_reports
+#: code:addons/l10n_mx_hr_payroll_reports/models/payslip_run_report_isn.py:0
+#, python-format
+msgid "Download Report ISN"
+msgstr "Descargar Reporte ISN"
+
+#. module: l10n_mx_hr_payroll_reports
+#: code:addons/l10n_mx_hr_payroll_reports/models/payroll_report.py:0
+#, python-format
+msgid "Empleado"
+msgstr ""
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_payroll_run_details_cfdi_wizard__estructure_ids
+msgid "Estructure"
+msgstr "Estructuras"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model_terms:ir.ui.view,arch_db:l10n_mx_hr_payroll_reports.view_wizard_payment_file_form
+msgid "Export (TXT)"
+msgstr "Exportar (TXT)"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model_terms:ir.ui.view,arch_db:l10n_mx_hr_payroll_reports.view_hr_payslip_run_report_form
+#: model_terms:ir.ui.view,arch_db:l10n_mx_hr_payroll_reports.view_wizard_payment_file_form
+#: model_terms:ir.ui.view,arch_db:l10n_mx_hr_payroll_reports.view_wizard_payroll_report_filter_form
+#: model_terms:ir.ui.view,arch_db:l10n_mx_hr_payroll_reports.view_wizard_report_credit_form
+msgid "Export (XLSX)"
+msgstr "Exportar (XLSX)"
+
+#. module: l10n_mx_hr_payroll_reports
+#: code:addons/l10n_mx_hr_payroll_reports/wizard/wizard_credit_reports.py:0
+#, python-format
+msgid "FONACOT Report %s"
+msgstr "Reporte FONACOT %s"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_wizard_file_download__name
+msgid "File"
+msgstr "Archivo"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.actions.act_window,name:l10n_mx_hr_payroll_reports.action_wizard_payroll_run_details_cfdi
+msgid "Fiscal Folio"
+msgstr "Folio Fiscal"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_reports.selection__report_credit__type__fonacot
+msgid "Fonacot"
+msgstr ""
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.actions.act_window,name:l10n_mx_hr_payroll_reports.action_wizard_report_credit_fonacot
+#: model:ir.ui.menu,name:l10n_mx_hr_payroll_reports.menu_action_credit_reports_fonacot
+msgid "Fonacot Report"
+msgstr "Reporte FONACOT"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model_terms:ir.ui.view,arch_db:l10n_mx_hr_payroll_reports.view_report_consolidate_form
+msgid "Generate Report"
+msgstr "Generar Reporte"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.actions.act_window,name:l10n_mx_hr_payroll_reports.action_report_consolidate
+#: model_terms:ir.ui.view,arch_db:l10n_mx_hr_payroll_reports.view_report_consolidate_form
+msgid "Generate Report Consolidate"
+msgstr "Generar Reporte Consolidado"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_hr_payslip_run__id
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_payroll_run_details_cfdi_wizard__id
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_report_consolidate__id
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_report_credit__id
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_wizard_file_download__id
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_wizard_payment_file__id
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_wizard_payroll_report_filter__id
+msgid "ID"
+msgstr "Identificación"
+
+#. module: l10n_mx_hr_payroll_reports
+#: code:addons/l10n_mx_hr_payroll_reports/wizard/wizard_credit_reports.py:0
+#, python-format
+msgid "INFONAVIT Report %s"
+msgstr "Reporte INFONAVIT %s"
+
+#. module: l10n_mx_hr_payroll_reports
+#: code:addons/l10n_mx_hr_payroll_reports/models/payslip_run_report_isn.py:0
+#, python-format
+msgid "ISN REPORT %s"
+msgstr "REPORTE ISN %s"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.actions.act_window,name:l10n_mx_hr_payroll_reports.action_wizard_isn_report
+#: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_reports.selection__wizard_payroll_report_filter__type__isn
+#: model:ir.ui.menu,name:l10n_mx_hr_payroll_reports.menu_wizard_isn_report
+msgid "ISN Report"
+msgstr "Reporte ISN"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_reports.selection__report_credit__type__infonavit
+msgid "Infonavit"
+msgstr "INFONAVIT"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.actions.act_window,name:l10n_mx_hr_payroll_reports.action_wizard_report_credit_infonavit
+#: model:ir.ui.menu,name:l10n_mx_hr_payroll_reports.menu_action_credit_reports_infonavit
+msgid "Infonavit Report"
+msgstr "Reporte INFONAVIT"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_reports.selection__report_credit__bimester__01
+msgid "January - February"
+msgstr "Enero - Febrero"
+
+#. module: l10n_mx_hr_payroll_reports
+#: code:addons/l10n_mx_hr_payroll_reports/models/payroll_report.py:0
+#, python-format
+msgid "Job Position"
+msgstr "Puesto de trabajo"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_reports.selection__report_credit__bimester__04
+msgid "July - August"
+msgstr "Julio - Agosto"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_hr_payslip_run____last_update
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_payroll_run_details_cfdi_wizard____last_update
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_report_consolidate____last_update
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_report_credit____last_update
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_wizard_file_download____last_update
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_wizard_payment_file____last_update
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_wizard_payroll_report_filter____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_payroll_run_details_cfdi_wizard__write_uid
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_report_consolidate__write_uid
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_report_credit__write_uid
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_wizard_file_download__write_uid
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_wizard_payment_file__write_uid
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_wizard_payroll_report_filter__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_payroll_run_details_cfdi_wizard__write_date
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_report_consolidate__write_date
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_report_credit__write_date
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_wizard_file_download__write_date
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_wizard_payment_file__write_date
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_wizard_payroll_report_filter__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_reports.selection__report_credit__bimester__02
+msgid "March - April"
+msgstr "Marzo - Abril"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_reports.selection__report_credit__bimester__03
+msgid "May - June"
+msgstr "Mayo - Junio"
+
+#. module: l10n_mx_hr_payroll_reports
+#: code:addons/l10n_mx_hr_payroll_reports/models/payslip_run_report.py:0
+#: code:addons/l10n_mx_hr_payroll_reports/models/payslip_run_report.py:0
+#: code:addons/l10n_mx_hr_payroll_reports/wizard/wizard_credit_reports.py:0
+#: code:addons/l10n_mx_hr_payroll_reports/wizard/wizard_credit_reports.py:0
+#, python-format
+msgid "No data found for the report"
+msgstr "No se encontraron datos para el reporte."
+
+#. module: l10n_mx_hr_payroll_reports
+#: code:addons/l10n_mx_hr_payroll_reports/models/payroll_report.py:0
+#, python-format
+msgid "No. Empleado"
+msgstr ""
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_reports.selection__report_credit__bimester__06
+msgid "November - December"
+msgstr "Noviembre - Diciembre"
+
+#. module: l10n_mx_hr_payroll_reports
+#: code:addons/l10n_mx_hr_payroll_reports/models/payslip_run_report.py:0
+#: code:addons/l10n_mx_hr_payroll_reports/models/payslip_run_report_isn.py:0
+#, python-format
+msgid "One of the struct for these payslips has no payslip code."
+msgstr "Una de las estructuras no tiene código de nómina."
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_reports.selection__wizard_payroll_report_filter__type__payroll
+msgid "Payroll"
+msgstr "Nómina"
+
+#. module: l10n_mx_hr_payroll_reports
+#: code:addons/l10n_mx_hr_payroll_reports/models/payroll_report.py:0
+#, python-format
+msgid "Payroll Concepts"
+msgstr "Conceptos de Nóminas"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_report_credit__period_ids
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_wizard_payroll_report_filter__period_ids
+msgid "Payroll Period"
+msgstr "Período de Nómina"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.actions.act_window,name:l10n_mx_hr_payroll_reports.action_wizard_payroll_report_filter
+#: model:ir.ui.menu,name:l10n_mx_hr_payroll_reports.menu_action_hr_payroll_report_filter
+msgid "Payroll Report"
+msgstr "Reporte de Nóminas"
+
+#. module: l10n_mx_hr_payroll_reports
+#: code:addons/l10n_mx_hr_payroll_reports/models/payslip_run_report.py:0
+#, python-format
+msgid "Payroll Report %s"
+msgstr "Reporte de Nóminas %s"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.model,name:l10n_mx_hr_payroll_reports.model_wizard_payroll_report_filter
+msgid "Payroll Report Filter"
+msgstr "Filtro de Reporte de Nómina"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.model,name:l10n_mx_hr_payroll_reports.model_hr_payslip_run
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_wizard_payment_file__payslip_run_id
+msgid "Payslip Batches"
+msgstr "Lotes de recibos de nómina"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_report_consolidate__run_ids
+msgid "Payslip Runs"
+msgstr "Lote de Nómina"
+
+#. module: l10n_mx_hr_payroll_reports
+#: code:addons/l10n_mx_hr_payroll_reports/models/payslip_run_report.py:0
+#, python-format
+msgid "Pending Discount %s %s"
+msgstr "Descuento Pendiente %s %s"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.actions.server,name:l10n_mx_hr_payroll_reports.action_pending_discount_report_payroll
+msgid "Pending Discount Report"
+msgstr "Reporte de Descuento Pendiente"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model_terms:ir.ui.view,arch_db:l10n_mx_hr_payroll_reports.view_hr_payroll_run_details_cfdi_wizard
+msgid "Print"
+msgstr "Imprimir"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_report_credit__type
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_wizard_payroll_report_filter__type
+msgid "Report Type"
+msgstr "Tipo de Informe"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.ui.menu,name:l10n_mx_hr_payroll_reports.menu_report_consolidate
+msgid "Reports Consolidates"
+msgstr "Reportes Consolidados"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.actions.act_window,name:l10n_mx_hr_payroll_reports.action_wizard_saving_fund_report_filter
+#: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_reports.selection__wizard_payroll_report_filter__type__saving
+#: model:ir.ui.menu,name:l10n_mx_hr_payroll_reports.menu_action_saving_fund_report_filter
+msgid "Saving Fund Report"
+msgstr "Reporte de Fondo de Ahorro"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_reports.selection__report_credit__bimester__05
+msgid "September - October"
+msgstr "Septiembre - Octubre"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.actions.server,name:l10n_mx_hr_payroll_reports.action_social_objective_report
+msgid "Social Objective Report"
+msgstr "Reporte Objetivo Social"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_reports.selection__report_consolidate__type__social
+msgid "Social Purpose"
+msgstr "Objetivo Social"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_report_credit__structure_ids
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_wizard_payroll_report_filter__structure_ids
+msgid "Structure"
+msgstr "Estructura Salarial"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.actions.act_window,name:l10n_mx_hr_payroll_reports.action_wizard_taxed_report_filter
+#: model:ir.actions.server,name:l10n_mx_hr_payroll_reports.action_hr_payroll_taxed_payroll
+#: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_reports.selection__wizard_payroll_report_filter__type__taxed
+#: model:ir.ui.menu,name:l10n_mx_hr_payroll_reports.menu_action_taxed_report_filter
+msgid "Taxed Report"
+msgstr "Reporte de Gravados"
+
+#. module: l10n_mx_hr_payroll_reports
+#: code:addons/l10n_mx_hr_payroll_reports/models/payslip_run_report.py:0
+#, python-format
+msgid "Taxed Report %s"
+msgstr "Reporte de Gravados %s"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model_terms:ir.ui.view,arch_db:l10n_mx_hr_payroll_reports.view_wizard_file_download_form
+msgid "The file was generated correctly, proceed to download it."
+msgstr "El archivo fué genarado correctamente, proceda a descargarlo."
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.model.fields,help:l10n_mx_hr_payroll_reports.field_wizard_payment_file__bank_code
+msgid ""
+"Three-digit number assigned by the ABM to identify banking institutions (ABM"
+" is an acronym for Asociación de Bancos de México)"
+msgstr ""
+"Número de tres dígitos asignado por el ABM para identificar instituciones "
+"bancarias (ABM es un acrónimo para Asociación de Bancos de México)"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_report_consolidate__type
+msgid "Type"
+msgstr "Tipo"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.model,name:l10n_mx_hr_payroll_reports.model_wizard_file_download
+msgid "Wizard File Download"
+msgstr "Asistente de Descarga de Archivo"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.model,name:l10n_mx_hr_payroll_reports.model_report_consolidate
+msgid "Wizard for generate consolidate reports"
+msgstr "Asistente para generar reportes consolidados"
+
+#. module: l10n_mx_hr_payroll_reports
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_reports.field_report_credit__year
+msgid "Year"
+msgstr "Año"
+
+#. module: l10n_mx_hr_payroll_reports
+#: code:addons/l10n_mx_hr_payroll_reports/wizard/wizard_payroll_run_details_cfdi.py:0
+#, python-format
+msgid "bruto"
+msgstr ""

@@ -1,0 +1,993 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <record forcecreate="True" id="decimal_configuration" model="decimal.precision">
+		<field name="name">Excess</field>
+		<field name="digits">3</field>
+	</record>
+
+    <!--  UMA  -->
+<!--    <record id="table_uma_2021" model="table.uma">-->
+<!--        <field name="year">2021</field>-->
+<!--        <field name="date_from">2021-01-01</field>-->
+<!--        <field name="date_to">2021-12-31</field>-->
+<!--        <field name="daily_amount">89.62</field>-->
+<!--    </record>-->
+
+    <!--  Table Settings 2021  -->
+    <record id="table_setting_2021" model="table.settings">
+        <field name="name">Tabla de valores 2021</field>
+        <field name="year">2021</field>
+<!--        <field name="smvdf">141.70</field>-->
+
+<!--        <field name="pantry_voucher_factor">1</field>-->
+<!--        <field name="holiday_bonus_factor">15</field>-->
+<!--        <field name="bonus_factor">30</field>-->
+<!--        <field name="savings_fund_factor">1.3</field>-->
+<!--        <field name="extra_time_factor">5</field>-->
+<!--        <field name="sunday_prime_factor">1</field>-->
+<!--        <field name="clearance_factor">90</field>-->
+<!--        <field name="factor_ptu">15</field>-->
+
+<!--        <field name="infonavit_contribution">5</field>-->
+<!--        <field name="umi">87.2</field>-->
+<!--        <field name="sbcm_general">25</field>-->
+<!--        <field name="sbcm_inv_inf">25</field>-->
+<!--        <field name="average_active_life">28</field>-->
+<!--        <field name="premium_factor">2.30</field>-->
+<!--        <field name="minimum_premium">0.50</field>-->
+<!--        <field name="maximum_premium">15</field>-->
+<!--        <field name="maximum_premium_variation">1</field>-->
+<!--        <field name="em_fixed_fee">20.40</field>-->
+<!--        <field name="em_surplus_p">1.10</field>-->
+<!--        <field name="em_cash_benefits_p">0.7</field>-->
+<!--        <field name="em_personal_medical_expenses_p">1.05</field>-->
+<!--        <field name="em_surplus_e">0.4</field>-->
+<!--        <field name="em_cash_benefits_e">0.25</field>-->
+<!--        <field name="em_personal_medical_expenses_e">0.375</field>-->
+<!--        <field name="disability_life_p">1.75</field>-->
+<!--        <field name="unemployment_old_age_p">3.15</field>-->
+<!--        <field name="retirement">2</field>-->
+<!--        <field name="nursery_social_benefits">1</field>-->
+<!--        <field name="disability_life_e">0.625</field>-->
+<!--        <field name="unemployment_old_age_e">1.125</field>-->
+    </record>
+
+    <!--  isr daily 2021  -->
+    <record id="table_isr_daily_21" model="table.isr.daily">
+        <field name="lim_inf">0.01</field>
+        <field name="lim_sup">21.20</field>
+        <field name="c_fija">0</field>
+        <field name="s_excedente">1.92</field>
+        <field name="sequence">1</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_daily_22" model="table.isr.daily">
+        <field name="lim_inf">21.21</field>
+        <field name="lim_sup">179.96</field>
+        <field name="c_fija">0.41</field>
+        <field name="s_excedente">6.40</field>
+        <field name="sequence">2</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_daily_23" model="table.isr.daily">
+        <field name="lim_inf">179.97</field>
+        <field name="lim_sup">316.27</field>
+        <field name="c_fija">10.57</field>
+        <field name="s_excedente">10.88</field>
+        <field name="sequence">3</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_daily_24" model="table.isr.daily">
+        <field name="lim_inf">316.28</field>
+        <field name="lim_sup">367.65</field>
+        <field name="c_fija">25.4</field>
+        <field name="s_excedente">16</field>
+        <field name="sequence">4</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_daily_25" model="table.isr.daily">
+        <field name="lim_inf">367.66</field>
+        <field name="lim_sup">440.18</field>
+        <field name="c_fija">33.62</field>
+        <field name="s_excedente">17.92</field>
+        <field name="sequence">5</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_daily_26" model="table.isr.daily">
+        <field name="lim_inf">440.19</field>
+        <field name="lim_sup">887.78</field>
+        <field name="c_fija">46.62</field>
+        <field name="s_excedente">21.36</field>
+        <field name="sequence">6</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_daily_27" model="table.isr.daily">
+        <field name="lim_inf">887.79</field>
+        <field name="lim_sup">1399.26</field>
+        <field name="c_fija">142.22</field>
+        <field name="s_excedente">23.52</field>
+        <field name="sequence">7</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_daily_28" model="table.isr.daily">
+        <field name="lim_inf">1399.27</field>
+        <field name="lim_sup">2671.42</field>
+        <field name="c_fija">262.52</field>
+        <field name="s_excedente">30</field>
+        <field name="sequence">8</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_daily_29" model="table.isr.daily">
+        <field name="lim_inf">2671.43</field>
+        <field name="lim_sup">3561.9</field>
+        <field name="c_fija">644.17</field>
+        <field name="s_excedente">32</field>
+        <field name="sequence">9</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_daily_210" model="table.isr.daily">
+        <field name="lim_inf">3561.91</field>
+        <field name="lim_sup">10685.69</field>
+        <field name="c_fija">929.12</field>
+        <field name="s_excedente">34</field>
+        <field name="sequence">10</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_daily_211" model="table.isr.daily">
+        <field name="lim_inf">10685.70</field>
+        <field name="lim_sup">9999999999.00</field>
+        <field name="c_fija">3351.21</field>
+        <field name="s_excedente">35</field>
+        <field name="sequence">11</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+
+    <!--  isr daily subsidy 2021  -->
+    <record id="table_isr_daily_subsidy_21" model="table.isr.daily.subsidy">
+        <field name="lim_inf">0.01</field>
+        <field name="lim_sup">58.19</field>
+        <field name="s_mensual">13.39</field>
+        <field name="sequence">1</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_daily_subsidy_22" model="table.isr.daily.subsidy">
+        <field name="lim_inf">58.20</field>
+        <field name="lim_sup">87.28</field>
+        <field name="s_mensual">13.38</field>
+        <field name="sequence">2</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_daily_subsidy_23" model="table.isr.daily.subsidy">
+        <field name="lim_inf">87.29</field>
+        <field name="lim_sup">114.24</field>
+        <field name="s_mensual">13.38</field>
+        <field name="sequence">3</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_daily_subsidy_24" model="table.isr.daily.subsidy">
+        <field name="lim_inf">114.25</field>
+        <field name="lim_sup">116.38</field>
+        <field name="s_mensual">12.92</field>
+        <field name="sequence">4</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_daily_subsidy_25" model="table.isr.daily.subsidy">
+        <field name="lim_inf">116.39</field>
+        <field name="lim_sup">146.25</field>
+        <field name="s_mensual">12.58</field>
+        <field name="sequence">5</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_daily_subsidy_26" model="table.isr.daily.subsidy">
+        <field name="lim_inf">146.26</field>
+        <field name="lim_sup">155.17</field>
+        <field name="s_mensual">11.65</field>
+        <field name="sequence">6</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_daily_subsidy_27" model="table.isr.daily.subsidy">
+        <field name="lim_inf">155.18</field>
+        <field name="lim_sup">175.51</field>
+        <field name="s_mensual">10.69</field>
+        <field name="sequence">7</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_daily_subsidy_28" model="table.isr.daily.subsidy">
+        <field name="lim_inf">175.52</field>
+        <field name="lim_sup">204.76</field>
+        <field name="s_mensual">9.69</field>
+        <field name="sequence">8</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_daily_subsidy_29" model="table.isr.daily.subsidy">
+        <field name="lim_inf">204.77</field>
+        <field name="lim_sup">234.01</field>
+        <field name="s_mensual">8.34</field>
+        <field name="sequence">9</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_daily_subsidy_210" model="table.isr.daily.subsidy">
+        <field name="lim_inf">234.02</field>
+        <field name="lim_sup">242.84</field>
+        <field name="s_mensual">7.16</field>
+        <field name="sequence">10</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_daily_subsidy_211" model="table.isr.daily.subsidy">
+        <field name="lim_inf">242.85</field>
+        <field name="lim_sup">9999999999.00</field>
+        <field name="s_mensual">0</field>
+        <field name="sequence">11</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+
+    <!--  isr Weekly 2021  -->
+    <record id="table_isr_weekly_21" model="table.isr.weekly">
+        <field name="lim_inf">0.01</field>
+        <field name="lim_sup">148.4</field>
+        <field name="c_fija">0</field>
+        <field name="s_excedente">1.92</field>
+        <field name="sequence">1</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_weekly_22" model="table.isr.weekly">
+        <field name="lim_inf">148.41</field>
+        <field name="lim_sup">1259.72</field>
+        <field name="c_fija">2.87</field>
+        <field name="s_excedente">6.40</field>
+        <field name="sequence">2</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_weekly_23" model="table.isr.weekly">
+        <field name="lim_inf">1259.73</field>
+        <field name="lim_sup">2213.89</field>
+        <field name="c_fija">73.99</field>
+        <field name="s_excedente">10.88</field>
+        <field name="sequence">3</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_weekly_24" model="table.isr.weekly">
+        <field name="lim_inf">2213.9</field>
+        <field name="lim_sup">2573.55</field>
+        <field name="c_fija">177.8</field>
+        <field name="s_excedente">16</field>
+        <field name="sequence">4</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_weekly_25" model="table.isr.weekly">
+        <field name="lim_inf">2573.56</field>
+        <field name="lim_sup">3081.26</field>
+        <field name="c_fija">235.34</field>
+        <field name="s_excedente">17.92</field>
+        <field name="sequence">5</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_weekly_26" model="table.isr.weekly">
+        <field name="lim_inf">3081.27</field>
+        <field name="lim_sup">6214.46</field>
+        <field name="c_fija">326.34</field>
+        <field name="s_excedente">21.36</field>
+        <field name="sequence">6</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_weekly_27" model="table.isr.weekly">
+        <field name="lim_inf">6214.47</field>
+        <field name="lim_sup">9794.82</field>
+        <field name="c_fija">995.54</field>
+        <field name="s_excedente">23.52</field>
+        <field name="sequence">7</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_weekly_28" model="table.isr.weekly">
+        <field name="lim_inf">9794.83</field>
+        <field name="lim_sup">18699.94</field>
+        <field name="c_fija">1837.64</field>
+        <field name="s_excedente">30</field>
+        <field name="sequence">8</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_weekly_29" model="table.isr.weekly">
+        <field name="lim_inf">18699.95</field>
+        <field name="lim_sup">24933.30</field>
+        <field name="c_fija">4509.19</field>
+        <field name="s_excedente">32</field>
+        <field name="sequence">9</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_weekly_210" model="table.isr.weekly">
+        <field name="lim_inf">24933.31</field>
+        <field name="lim_sup">74799.83</field>
+        <field name="c_fija">6503.84</field>
+        <field name="s_excedente">34</field>
+        <field name="sequence">10</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_weekly_211" model="table.isr.weekly">
+        <field name="lim_inf">74799.84</field>
+        <field name="lim_sup">9999999999.00</field>
+        <field name="c_fija">23458.47</field>
+        <field name="s_excedente">35</field>
+        <field name="sequence">11</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+
+    <!--  isr weekly subsidy 2021  -->
+    <record id="table_isr_weekly_subsidy_21" model="table.isr.weekly.subsidy">
+        <field name="lim_inf">0.01</field>
+        <field name="lim_sup">407.33</field>
+        <field name="s_mensual">93.73</field>
+        <field name="sequence">1</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_weekly_subsidy_22" model="table.isr.weekly.subsidy">
+        <field name="lim_inf">407.34</field>
+        <field name="lim_sup">610.96</field>
+        <field name="s_mensual">93.66</field>
+        <field name="sequence">2</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_weekly_subsidy_23" model="table.isr.weekly.subsidy">
+        <field name="lim_inf">610.97</field>
+        <field name="lim_sup">799.68</field>
+        <field name="s_mensual">93.66</field>
+        <field name="sequence">3</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_weekly_subsidy_24" model="table.isr.weekly.subsidy">
+        <field name="lim_inf">799.69</field>
+        <field name="lim_sup">814.66</field>
+        <field name="s_mensual">90.44</field>
+        <field name="sequence">4</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_weekly_subsidy_25" model="table.isr.weekly.subsidy">
+        <field name="lim_inf">814.67</field>
+        <field name="lim_sup">1023.75</field>
+        <field name="s_mensual">88.06</field>
+        <field name="sequence">5</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_weekly_subsidy_26" model="table.isr.weekly.subsidy">
+        <field name="lim_inf">1023.76</field>
+        <field name="lim_sup">1086.19</field>
+        <field name="s_mensual">81.55</field>
+        <field name="sequence">6</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_weekly_subsidy_27" model="table.isr.weekly.subsidy">
+        <field name="lim_inf">1086.20</field>
+        <field name="lim_sup">1228.57</field>
+        <field name="s_mensual">74.83</field>
+        <field name="sequence">7</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_weekly_subsidy_28" model="table.isr.weekly.subsidy">
+        <field name="lim_inf">1228.58</field>
+        <field name="lim_sup">1433.32</field>
+        <field name="s_mensual">67.83</field>
+        <field name="sequence">8</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_weekly_subsidy_29" model="table.isr.weekly.subsidy">
+        <field name="lim_inf">1433.33</field>
+        <field name="lim_sup">1638.07</field>
+        <field name="s_mensual">58.38</field>
+        <field name="sequence">9</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_weekly_subsidy_210" model="table.isr.weekly.subsidy">
+        <field name="lim_inf">1638.08</field>
+        <field name="lim_sup">1699.88</field>
+        <field name="s_mensual">50.12</field>
+        <field name="sequence">10</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_weekly_subsidy_211" model="table.isr.weekly.subsidy">
+        <field name="lim_inf">1699.89</field>
+        <field name="lim_sup">9999999999.00</field>
+        <field name="s_mensual">0</field>
+        <field name="sequence">11</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+
+    <!--  isr Decennial 2021  -->
+    <record id="table_isr_decennial_21" model="table.isr.decennial">
+        <field name="lim_inf">0.01</field>
+        <field name="lim_sup">212.00</field>
+        <field name="c_fija">0</field>
+        <field name="s_excedente">1.92</field>
+        <field name="sequence">1</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_decennial_22" model="table.isr.decennial">
+        <field name="lim_inf">212.01</field>
+        <field name="lim_sup">1799.60</field>
+        <field name="c_fija">4.10</field>
+        <field name="s_excedente">6.40</field>
+        <field name="sequence">2</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_decennial_23" model="table.isr.decennial">
+        <field name="lim_inf">1799.61</field>
+        <field name="lim_sup">3162.70</field>
+        <field name="c_fija">105.70</field>
+        <field name="s_excedente">10.88</field>
+        <field name="sequence">3</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_decennial_24" model="table.isr.decennial">
+        <field name="lim_inf">3162.71</field>
+        <field name="lim_sup">3676.50</field>
+        <field name="c_fija">254.00</field>
+        <field name="s_excedente">16</field>
+        <field name="sequence">4</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_decennial_25" model="table.isr.decennial">
+        <field name="lim_inf">3676.51</field>
+        <field name="lim_sup">4401.80</field>
+        <field name="c_fija">336.20</field>
+        <field name="s_excedente">17.92</field>
+        <field name="sequence">5</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_decennial_26" model="table.isr.decennial">
+        <field name="lim_inf">4401.81</field>
+        <field name="lim_sup">8877.80</field>
+        <field name="c_fija">466.20</field>
+        <field name="s_excedente">21.36</field>
+        <field name="sequence">6</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_decennial_27" model="table.isr.decennial">
+        <field name="lim_inf">8877.81</field>
+        <field name="lim_sup">13992.60</field>
+        <field name="c_fija">1422.20</field>
+        <field name="s_excedente">23.52</field>
+        <field name="sequence">7</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_decennial_28" model="table.isr.decennial">
+        <field name="lim_inf">13992.61</field>
+        <field name="lim_sup">26714.20</field>
+        <field name="c_fija">2625.20</field>
+        <field name="s_excedente">30</field>
+        <field name="sequence">8</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_decennial_29" model="table.isr.decennial">
+        <field name="lim_inf">26714.21</field>
+        <field name="lim_sup">35619.00</field>
+        <field name="c_fija">6441.70</field>
+        <field name="s_excedente">32</field>
+        <field name="sequence">9</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_decennial_210" model="table.isr.decennial">
+        <field name="lim_inf">35619.01</field>
+        <field name="lim_sup">106856.90</field>
+        <field name="c_fija">9291.20</field>
+        <field name="s_excedente">34</field>
+        <field name="sequence">10</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_decennial_211" model="table.isr.decennial">
+        <field name="lim_inf">106856.91</field>
+        <field name="lim_sup">9999999999.00</field>
+        <field name="c_fija">33512.10</field>
+        <field name="s_excedente">35</field>
+        <field name="sequence">11</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+
+    <!--  isr Decennial subsidy 2021  -->
+    <record id="table_isr_decennial_subsidy_21" model="table.isr.decennial.subsidy">
+        <field name="lim_inf">0.01</field>
+        <field name="lim_sup">581.90</field>
+        <field name="s_mensual">133.90</field>
+        <field name="sequence">1</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_decennial_subsidy_22" model="table.isr.decennial.subsidy">
+        <field name="lim_inf">581.91</field>
+        <field name="lim_sup">872.80</field>
+        <field name="s_mensual">133.80</field>
+        <field name="sequence">2</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_decennial_subsidy_23" model="table.isr.decennial.subsidy">
+        <field name="lim_inf">872.81</field>
+        <field name="lim_sup">1142.40</field>
+        <field name="s_mensual">133.80</field>
+        <field name="sequence">3</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_decennial_subsidy_24" model="table.isr.decennial.subsidy">
+        <field name="lim_inf">1142.41</field>
+        <field name="lim_sup">1163.80</field>
+        <field name="s_mensual">129.20</field>
+        <field name="sequence">4</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_decennial_subsidy_25" model="table.isr.decennial.subsidy">
+        <field name="lim_inf">1163.81</field>
+        <field name="lim_sup">1462.50</field>
+        <field name="s_mensual">125.80</field>
+        <field name="sequence">5</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_decennial_subsidy_26" model="table.isr.decennial.subsidy">
+        <field name="lim_inf">1462.51</field>
+        <field name="lim_sup">1551.70</field>
+        <field name="s_mensual">116.50</field>
+        <field name="sequence">6</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_decennial_subsidy_27" model="table.isr.decennial.subsidy">
+        <field name="lim_inf">1551.71</field>
+        <field name="lim_sup">1755.10</field>
+        <field name="s_mensual">106.90</field>
+        <field name="sequence">7</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_decennial_subsidy_28" model="table.isr.decennial.subsidy">
+        <field name="lim_inf">1755.11</field>
+        <field name="lim_sup">2047.60</field>
+        <field name="s_mensual">96.90</field>
+        <field name="sequence">8</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_decennial_subsidy_29" model="table.isr.decennial.subsidy">
+        <field name="lim_inf">2047.61</field>
+        <field name="lim_sup">2340.10</field>
+        <field name="s_mensual">83.40</field>
+        <field name="sequence">9</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_decennial_subsidy_210" model="table.isr.decennial.subsidy">
+        <field name="lim_inf">2340.11</field>
+        <field name="lim_sup">2428.40</field>
+        <field name="s_mensual">71.60</field>
+        <field name="sequence">10</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_decennial_subsidy_211" model="table.isr.decennial.subsidy">
+        <field name="lim_inf">2428.41</field>
+        <field name="lim_sup">9999999999.00</field>
+        <field name="s_mensual">0</field>
+        <field name="sequence">11</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+
+    <!--  isr biweekly 2020  -->
+    <record id="table_isr_biweekly_21" model="table.isr.biweekly">
+        <field name="lim_inf">0.01</field>
+        <field name="lim_sup">318.00</field>
+        <field name="c_fija">0</field>
+        <field name="s_excedente">1.92</field>
+        <field name="sequence">1</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_biweekly_22" model="table.isr.biweekly">
+        <field name="lim_inf">318.01</field>
+        <field name="lim_sup">2699.40</field>
+        <field name="c_fija">6.15</field>
+        <field name="s_excedente">6.40</field>
+        <field name="sequence">2</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_biweekly_23" model="table.isr.biweekly">
+        <field name="lim_inf">2699.41</field>
+        <field name="lim_sup">4744.05</field>
+        <field name="c_fija">158.55</field>
+        <field name="s_excedente">10.88</field>
+        <field name="sequence">3</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_biweekly_24" model="table.isr.biweekly">
+        <field name="lim_inf">4744.06</field>
+        <field name="lim_sup">5514.75</field>
+        <field name="c_fija">381.00</field>
+        <field name="s_excedente">16</field>
+        <field name="sequence">4</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_biweekly_25" model="table.isr.biweekly">
+        <field name="lim_inf">5514.76</field>
+        <field name="lim_sup">6602.70</field>
+        <field name="c_fija">504.30</field>
+        <field name="s_excedente">17.92</field>
+        <field name="sequence">5</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_biweekly_26" model="table.isr.biweekly">
+        <field name="lim_inf">6602.71</field>
+        <field name="lim_sup">13316.70</field>
+        <field name="c_fija">699.30</field>
+        <field name="s_excedente">21.36</field>
+        <field name="sequence">6</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_biweekly_27" model="table.isr.biweekly">
+        <field name="lim_inf">13316.71</field>
+        <field name="lim_sup">20988.90</field>
+        <field name="c_fija">2133.30</field>
+        <field name="s_excedente">23.52</field>
+        <field name="sequence">7</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_biweekly_28" model="table.isr.biweekly">
+        <field name="lim_inf">20988.91</field>
+        <field name="lim_sup">40071.30</field>
+        <field name="c_fija">3937.80</field>
+        <field name="s_excedente">30</field>
+        <field name="sequence">8</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_biweekly_29" model="table.isr.biweekly">
+        <field name="lim_inf">40071.31</field>
+        <field name="lim_sup">53428.50</field>
+        <field name="c_fija">9662.55</field>
+        <field name="s_excedente">32</field>
+        <field name="sequence">9</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_biweekly_210" model="table.isr.biweekly">
+        <field name="lim_inf">53428.51</field>
+        <field name="lim_sup">160285.35</field>
+        <field name="c_fija">13936.80</field>
+        <field name="s_excedente">34</field>
+        <field name="sequence">10</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_biweekly_211" model="table.isr.biweekly">
+        <field name="lim_inf">160285.36</field>
+        <field name="lim_sup">9999999999.00</field>
+        <field name="c_fija">50268.15</field>
+        <field name="s_excedente">35</field>
+        <field name="sequence">11</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+
+    <!--  isr biweekly subsidy 2021  -->
+    <record id="table_isr_biweekly_subsidy_21" model="table.isr.biweekly.subsidy">
+        <field name="lim_inf">0.01</field>
+        <field name="lim_sup">872.85</field>
+        <field name="s_mensual">200.85</field>
+        <field name="sequence">1</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_biweekly_subsidy_22" model="table.isr.biweekly.subsidy">
+        <field name="lim_inf">872.86</field>
+        <field name="lim_sup">1309.20</field>
+        <field name="s_mensual">200.70</field>
+        <field name="sequence">2</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_biweekly_subsidy_23" model="table.isr.biweekly.subsidy">
+        <field name="lim_inf">1309.21</field>
+        <field name="lim_sup">1713.60</field>
+        <field name="s_mensual">200.70</field>
+        <field name="sequence">3</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_biweekly_subsidy_24" model="table.isr.biweekly.subsidy">
+        <field name="lim_inf">1713.61</field>
+        <field name="lim_sup">1745.70</field>
+        <field name="s_mensual">193.80</field>
+        <field name="sequence">4</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_biweekly_subsidy_25" model="table.isr.biweekly.subsidy">
+        <field name="lim_inf">1745.71</field>
+        <field name="lim_sup">2193.75</field>
+        <field name="s_mensual">188.70</field>
+        <field name="sequence">5</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_biweekly_subsidy_26" model="table.isr.biweekly.subsidy">
+        <field name="lim_inf">2193.76</field>
+        <field name="lim_sup">2327.55</field>
+        <field name="s_mensual">174.75</field>
+        <field name="sequence">6</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_biweekly_subsidy_27" model="table.isr.biweekly.subsidy">
+        <field name="lim_inf">2327.56</field>
+        <field name="lim_sup">2632.65</field>
+        <field name="s_mensual">160.35</field>
+        <field name="sequence">7</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_biweekly_subsidy_28" model="table.isr.biweekly.subsidy">
+        <field name="lim_inf">2632.66</field>
+        <field name="lim_sup">3071.40</field>
+        <field name="s_mensual">145.35</field>
+        <field name="sequence">8</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_biweekly_subsidy_29" model="table.isr.biweekly.subsidy">
+        <field name="lim_inf">3071.41</field>
+        <field name="lim_sup">3510.15</field>
+        <field name="s_mensual">125.10</field>
+        <field name="sequence">9</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_biweekly_subsidy_210" model="table.isr.biweekly.subsidy">
+        <field name="lim_inf">3510.16</field>
+        <field name="lim_sup">3642.60</field>
+        <field name="s_mensual">107.40</field>
+        <field name="sequence">10</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_biweekly_subsidy_211" model="table.isr.biweekly.subsidy">
+        <field name="lim_inf">3642.61</field>
+        <field name="lim_sup">9999999999.00</field>
+        <field name="s_mensual">0</field>
+        <field name="sequence">11</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+
+    <!--  isr monthly 2021  -->
+    <record id="table_isr_monthly_21" model="table.isr.monthly">
+        <field name="lim_inf">0.01</field>
+        <field name="lim_sup">644.58</field>
+        <field name="c_fija">0</field>
+        <field name="s_excedente">1.92</field>
+        <field name="sequence">1</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_monthly_22" model="table.isr.monthly">
+        <field name="lim_inf">644.59</field>
+        <field name="lim_sup">5470.92</field>
+        <field name="c_fija">12.38</field>
+        <field name="s_excedente">6.40</field>
+        <field name="sequence">2</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_monthly_23" model="table.isr.monthly">
+        <field name="lim_inf">5470.93</field>
+        <field name="lim_sup">9614.66</field>
+        <field name="c_fija">321.26</field>
+        <field name="s_excedente">10.88</field>
+        <field name="sequence">3</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_monthly_24" model="table.isr.monthly">
+        <field name="lim_inf">9614.67</field>
+        <field name="lim_sup">11176.62</field>
+        <field name="c_fija">772.10</field>
+        <field name="s_excedente">16</field>
+        <field name="sequence">4</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_monthly_25" model="table.isr.monthly">
+        <field name="lim_inf">11176.63</field>
+        <field name="lim_sup">13381.47</field>
+        <field name="c_fija">1022.01</field>
+        <field name="s_excedente">17.92</field>
+        <field name="sequence">5</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_monthly_26" model="table.isr.monthly">
+        <field name="lim_inf">13381.48</field>
+        <field name="lim_sup">26988.50</field>
+        <field name="c_fija">1417.12</field>
+        <field name="s_excedente">21.36</field>
+        <field name="sequence">6</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_monthly_27" model="table.isr.monthly">
+        <field name="lim_inf">26988.51</field>
+        <field name="lim_sup">42537.58</field>
+        <field name="c_fija">4323.58</field>
+        <field name="s_excedente">23.52</field>
+        <field name="sequence">7</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_monthly_28" model="table.isr.monthly">
+        <field name="lim_inf">42537.59</field>
+        <field name="lim_sup">81211.25</field>
+        <field name="c_fija">7980.73</field>
+        <field name="s_excedente">30</field>
+        <field name="sequence">8</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_monthly_29" model="table.isr.monthly">
+        <field name="lim_inf">81211.26</field>
+        <field name="lim_sup">108281.67</field>
+        <field name="c_fija">19582.83</field>
+        <field name="s_excedente">32</field>
+        <field name="sequence">9</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_monthly_210" model="table.isr.monthly">
+        <field name="lim_inf">108281.68</field>
+        <field name="lim_sup">324845.01</field>
+        <field name="c_fija">28245.36</field>
+        <field name="s_excedente">34</field>
+        <field name="sequence">10</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_monthly_211" model="table.isr.monthly">
+        <field name="lim_inf">324845.02</field>
+        <field name="lim_sup">9999999999.00</field>
+        <field name="c_fija">101876.90</field>
+        <field name="s_excedente">35</field>
+        <field name="sequence">11</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+
+    <!--  isr monthly subsidy 2021  -->
+    <record id="table_isr_monthly_subsidy_21" model="table.isr.monthly.subsidy">
+        <field name="lim_inf">0.01</field>
+        <field name="lim_sup">1768.96</field>
+        <field name="s_mensual">407.02</field>
+        <field name="sequence">1</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_monthly_subsidy_22" model="table.isr.monthly.subsidy">
+        <field name="lim_inf">1768.97</field>
+        <field name="lim_sup">2653.38</field>
+        <field name="s_mensual">406.83</field>
+        <field name="sequence">2</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_monthly_subsidy_23" model="table.isr.monthly.subsidy">
+        <field name="lim_inf">2653.39</field>
+        <field name="lim_sup">3472.84</field>
+        <field name="s_mensual">406.62</field>
+        <field name="sequence">3</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_monthly_subsidy_24" model="table.isr.monthly.subsidy">
+        <field name="lim_inf">3472.85</field>
+        <field name="lim_sup">3537.87</field>
+        <field name="s_mensual">392.77</field>
+        <field name="sequence">4</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_monthly_subsidy_25" model="table.isr.monthly.subsidy">
+        <field name="lim_inf">3537.88</field>
+        <field name="lim_sup">4446.15</field>
+        <field name="s_mensual">382.46</field>
+        <field name="sequence">5</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_monthly_subsidy_26" model="table.isr.monthly.subsidy">
+        <field name="lim_inf">4446.16</field>
+        <field name="lim_sup">4717.18</field>
+        <field name="s_mensual">354.23</field>
+        <field name="sequence">6</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_monthly_subsidy_27" model="table.isr.monthly.subsidy">
+        <field name="lim_inf">4717.19</field>
+        <field name="lim_sup">5335.42</field>
+        <field name="s_mensual">324.87</field>
+        <field name="sequence">7</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_monthly_subsidy_28" model="table.isr.monthly.subsidy">
+        <field name="lim_inf">5335.43</field>
+        <field name="lim_sup">6224.67</field>
+        <field name="s_mensual">294.63</field>
+        <field name="sequence">8</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_monthly_subsidy_29" model="table.isr.monthly.subsidy">
+        <field name="lim_inf">6224.68</field>
+        <field name="lim_sup">7113.90</field>
+        <field name="s_mensual">253.54</field>
+        <field name="sequence">9</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_monthly_subsidy_210" model="table.isr.monthly.subsidy">
+        <field name="lim_inf">7113.91</field>
+        <field name="lim_sup">7382.33</field>
+        <field name="s_mensual">217.61</field>
+        <field name="sequence">10</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_monthly_subsidy_211" model="table.isr.monthly.subsidy">
+        <field name="lim_inf">7382.34</field>
+        <field name="lim_sup">9999999999.00</field>
+        <field name="s_mensual">0</field>
+        <field name="sequence">11</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+
+    <!--  isr annual 2020  -->
+    <record id="table_isr_annual_21" model="table.isr.annual">
+        <field name="lim_inf">0.01</field>
+        <field name="lim_sup">7735.00</field>
+        <field name="c_fija">0</field>
+        <field name="s_excedente">1.92</field>
+        <field name="sequence">1</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_annual_22" model="table.isr.annual">
+        <field name="lim_inf">7735.01</field>
+        <field name="lim_sup">65651.07</field>
+        <field name="c_fija">148.51</field>
+        <field name="s_excedente">6.40</field>
+        <field name="sequence">2</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_annual_23" model="table.isr.annual">
+        <field name="lim_inf">65651.08</field>
+        <field name="lim_sup">115375.90</field>
+        <field name="c_fija">3855.14</field>
+        <field name="s_excedente">10.88</field>
+        <field name="sequence">3</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_annual_24" model="table.isr.annual">
+        <field name="lim_inf">115375.91</field>
+        <field name="lim_sup">134119.41</field>
+        <field name="c_fija">9265.20</field>
+        <field name="s_excedente">16</field>
+        <field name="sequence">4</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_annual_25" model="table.isr.annual">
+        <field name="lim_inf">134119.42</field>
+        <field name="lim_sup">160577.65</field>
+        <field name="c_fija">12264.16</field>
+        <field name="s_excedente">17.92</field>
+        <field name="sequence">5</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_annual_26" model="table.isr.annual">
+        <field name="lim_inf">160577.66</field>
+        <field name="lim_sup">323862.00</field>
+        <field name="c_fija">17005.47</field>
+        <field name="s_excedente">21.36</field>
+        <field name="sequence">6</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_annual_27" model="table.isr.annual">
+        <field name="lim_inf">323862.01</field>
+        <field name="lim_sup">510451.00</field>
+        <field name="c_fija">51883.01</field>
+        <field name="s_excedente">23.52</field>
+        <field name="sequence">7</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_annual_28" model="table.isr.annual">
+        <field name="lim_inf">510451.01</field>
+        <field name="lim_sup">974535.03</field>
+        <field name="c_fija">95768.74</field>
+        <field name="s_excedente">30</field>
+        <field name="sequence">8</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_annual_29" model="table.isr.annual">
+        <field name="lim_inf">974535.04</field>
+        <field name="lim_sup">1299380.04</field>
+        <field name="c_fija">234993.95</field>
+        <field name="s_excedente">32</field>
+        <field name="sequence">9</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_annual_210" model="table.isr.annual">
+        <field name="lim_inf">1299380.05</field>
+        <field name="lim_sup">3898140.12</field>
+        <field name="c_fija">338944.34</field>
+        <field name="s_excedente">34</field>
+        <field name="sequence">10</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+    <record id="table_isr_annual_211" model="table.isr.annual">
+        <field name="lim_inf">3898140.13</field>
+        <field name="lim_sup">99999999999.00</field>
+        <field name="c_fija">1222522.76</field>
+        <field name="s_excedente">35</field>
+        <field name="sequence">11</field>
+        <field name="table_id" ref="table_setting_2021"/>
+    </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,38 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_cost_center_user,hr.cost.center.user,model_hr_cost_center,base.group_user,1,0,0,0
+access_hr_cost_center_hr_user,hr.cost.center.hr.user,model_hr_cost_center,hr.group_hr_user,1,1,1,1
+access_bank_account_employee_user,Bank account employee,model_bank_account_employee,hr.group_hr_user,1,1,1,0
+access_bank_account_employee_manager,Bank account employee,model_bank_account_employee,hr.group_hr_manager,1,1,1,1
+access_hr_family_burden_user,Family,model_hr_family_burden,hr.group_hr_user,1,1,1,1
+access_hr_relationship_user,Relationship,model_hr_relationship,hr.group_hr_user,1,1,1,1
+access_hr_table_antiquity_user,Table antiquity,model_hr_table_antiquity,hr.group_hr_user,1,0,0,0
+access_hr_table_antiquity_line_user,Table antiquity line,model_hr_table_antiquity_line,hr.group_hr_user,1,0,0,0
+access_hr_table_antiquity_manager,Table antiquity,model_hr_table_antiquity,hr.group_hr_manager,1,1,1,1
+access_hr_table_antiquity_line_manager,Table antiquity line,model_hr_table_antiquity_line,hr.group_hr_manager,1,1,1,1
+access_attachment_layout_user,Attachment Layout,model_attachment_layout,hr.group_hr_user,1,1,1,1
+access_history_changes_employee_user,history.changes.employee.hr.user,model_history_changes_employee,hr.group_hr_user,1,1,1,1
+access_employee_change_history_wizard_all,employee.change.wizard.group.all,model_hr_employee_change_wizard,,1,1,1,1
+access_contract_change_history_wizard_all,hr.contract.change.wizard.group.all,model_hr_contract_change_wizard,,1,1,1,1
+access_hr_employee_document_import_user,Employee Document Import,model_hr_employee_document_import,hr.group_hr_user,1,1,1,1
+access_massive_employee_modification_user,massive.employee.modification.user,model_massive_employee_modification,hr.group_hr_user,1,1,1,1
+access_employee_affiliate_movements_user,hr.employee.affiliate.movements.user,model_hr_employee_affiliate_movements,hr.group_hr_user,1,1,1,1
+access_contract_report_user,contract.report.user,model_contract_report,hr.group_hr_user,1,1,1,1
+access_hr_pilot_tab_user,Pilot tab,model_hr_pilot_tab,hr.group_hr_user,1,0,0,0
+access_hr_pilot_tab_line_user,Pilot tab line,model_hr_pilot_tab_line,hr.group_hr_user,1,0,0,0
+access_hr_pilot_tab_manager,Pilot tab (Manager),model_hr_pilot_tab,hr.group_hr_manager,1,1,1,0
+access_hr_pilot_tab_line_manager,Pilot tab line (Manager),model_hr_pilot_tab_line,hr.group_hr_manager,1,1,1,1
+access_change_salary_tab_user,Change Salary Tab,model_change_salary_tab,hr.group_hr_user,1,1,1,1
+access_tab_change_user,Change Tab Amounts user,model_tab_change,hr.group_hr_user,1,1,1,1
+access_contract_salary_change_line_user,contract.salary.change.line.user,model_contract_salary_change_line,hr.group_hr_user,1,0,0,0
+access_insurance_major_medical_expenses_user,insurance.major.medical.expenses.user,model_insurance_major_medical_expenses,hr.group_hr_user,1,1,1,0
+access_insurance_major_medical_expenses_manager,insurance.major.medical.expenses.user,model_insurance_major_medical_expenses,hr.group_hr_manager,1,1,1,1
+access_hr_alimony_user,hr.alimony.user,model_hr_alimony,hr.group_hr_user,1,1,1,0
+access_hr_alimony_manager,hr.alimony.user,model_hr_alimony,hr.group_hr_manager,1,1,1,1
+access_hr_job_position_user,hr.job.position.user,model_hr_job_position,base.group_user,1,0,0,0
+access_hr_job_position_hr_user,hr.job.position.hr.user,model_hr_job_position,hr.group_hr_user,1,1,0,0
+access_hr_job_position_hr_manager,hr.job.position.hr.user,model_hr_job_position,hr.group_hr_manager,1,1,1,1
+access_hr_job_position_history_user,hr.job.position.history.user,model_hr_job_position_history,hr.group_hr_user,1,1,1,1
+access_low_position_user,low.position.user,model_low_position,hr.group_hr_user,1,1,1,1
+access_contract_salary_change_line_group_salary_changes,contract.salary.change.line.group.salary.changes,model_contract_salary_change_line,hr_employe_mexico.group_salary_changes,1,1,1,1
+access_import_signature_users_hr_users,import.signature.users.hr.users,model_import_signature_users,hr.group_hr_user,1,1,1,1
+access_import_images_employees_hr_users,import.images.employees.hr.users,model_import_images_employees,hr.group_hr_user,1,1,1,1

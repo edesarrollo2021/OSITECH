@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>   
+            
+    <record id="view_res_bank_employee_form" model="ir.ui.view">
+        <field name="name">res.bank.employee.form</field>
+        <field name="model">res.bank</field>
+        <field name="arch" type="xml">
+            <form string="Bank" create="0" edit="0">
+                <group>
+                    <field name="name"/>
+                    <field name="business_name"/>
+                    <field name="clabe"/>
+                    <field name="code"/>
+                    <field name="number"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_res_bank_employee_tree" model="ir.ui.view">
+        <field name="name">bank.account.employee.tree</field>
+        <field name="model">res.bank</field>
+        <field name="arch" type="xml">
+            <tree string="Bank" create="0" edit="0">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_res_bank_employee" model="ir.actions.act_window">
+        <field name="name">Bank</field>
+        <field name="res_model">res.bank</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="menu_action_res_bank_employee_setting"
+        name="Bank"
+        parent="hr.menu_human_resources_configuration"
+        sequence="255"
+        action="action_res_bank_employee"/>
+            
+            
+            
+    </data>
+</odoo>

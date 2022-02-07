@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <record model="ir.ui.view" id="view_hr_payslip_sign_form">
+        <field name="name">hr.payslip.inherit.sign</field>
+        <field name="model">hr.payslip</field>
+        <field name="inherit_id" ref="hr_payroll.view_hr_payslip_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="send_pdf_to_sign"
+                    class="oe_stat_button"
+                    string="Sign payroll"
+                    icon="fa-file"
+                    type="object"
+                    groups="hr_payroll.group_hr_payroll_user"
+                    attrs="{'invisible': ['|', '|',
+                    ('request_send', '=', True),
+                    ('invoice_status', '!=', 'right_bill'),
+                    ('contracting_regime', 'in', ['05'])]}"
+                    >
+                </button>
+            </xpath>
+            <xpath expr="//field[@name='cfdi_use']" position="after">
+                <field name="request_send" invisible="1"/>
+            </xpath>
+            <xpath expr="//field[@name='cfdi_ids']//form" position="inside">
+                <group string="Signature of Receipt">
+                    <field name="sign_request_id"/>
+                    <field name="sign_status"/>
+                </group>
+            </xpath>
+            <xpath expr="//field[@name='cfdi_ids']//field[@name='pdf']" position="replace">
+                <field name="pdf" string="CFDI PDF"/>
+                <field name="pdf_sign" string="CFDI PDF (Sign)" attrs="{'invisible': [('pdf_sign', '=', False)]}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_hr_payslip_run_sign_form">
+        <field name="name">hr.payslip.run.sign</field>
+        <field name="model">hr.payslip.run</field>
+        <field name="inherit_id" ref="hr_payroll.hr_payslip_run_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <widget name="sign_cfdi_lot" states="close" groups="hr_payroll.group_hr_payroll_user"/>
+            </xpath>
+            <xpath expr="//sheet/group[@name='compute_cfdi']" position="after">
+                <group col="4" attrs="{'invisible': [('state', '!=', 'close')]}">
+                    <label for="progress_count_sign_signed" string="Payroll Receipts Sent"/>
+                    <div>
+                        <field name="progress_count_sign_signed" class="oe_inline" widget="progressbar"/> | <field name="count_sign_signed" class="oe_inline"/> / <field name="payslips_total" class="oe_inline"/>
+                    </div>
+                    <br/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+
+    </data>
+</odoo>

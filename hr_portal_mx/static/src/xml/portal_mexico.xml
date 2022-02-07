@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <!-- Error status Show Warning -->
+    <t t-name="hr_portal_mx.status_alert_warning">
+        <div class="alert alert-warning hidden holidays_remaining">
+            <center>
+                <strong>
+                    <t t-raw="responseText"/>
+                </strong>
+            </center>
+        </div>
+    </t>
+
+    <!-- Error status Show Info -->
+    <t t-name="hr_portal_mx.status_alert_info">
+        <span class="text-danger ml8">
+            <div class="alert alert-info hidden holidays_remaining">
+                <center>
+                    <strong>
+                        <t t-raw="responseText['virtual_remaining_leaves']"/> Días disponibles de
+                        <t t-raw="responseText['total_days']"/>.
+                    </strong>
+                </center>
+            </div>
+        </span>
+    </t>
+
+</templates>

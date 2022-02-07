@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <!--  Contract  -->
+    <record id="hr_contract_view_form_inherit" model="ir.ui.view">
+        <field name="name">hr.contract.mexico.form.inherit</field>
+        <field name="model">hr.contract</field>
+        <field name="type">form</field>
+        <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('oe_button_box')]" position="inside">
+                <button class="oe_stat_button" type="action" name="%(contract_salary_change_action)d"
+                        icon="fa-list"
+                        context="{'default_contract_id': id}">
+                    <span>Salary History</span>
+                </button>
+            </xpath>
+            <xpath expr="//header" position="inside">
+                <button
+                        type="action"
+                        name="%(action_contract_report_import)d"
+                        class="btn btn-primary"
+                        aria-label="Change"
+                        string="Generate Reports"
+                        context="{'default_contract_ids': [id]}"
+                    />
+            </xpath>
+            <xpath expr="//field[@name='employee_id']" position="after">
+                <field name="code" readonly="1"/>
+                <field name="id" invisible="1"/>
+            </xpath>
+            <xpath expr="//field[@name='structure_type_id']" position="after">
+                <field name="bank_account_id" attrs="{'readonly': [('state', '!=', 'draft')]}"
+                       context="{'default_employee_id': employee_id}"/>
+                <field name="contracting_regime" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                <field name="contract_type" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                <field name="training_end_date" attrs="{'invisible': [('contract_type', '!=', '06')], 'required': [('contract_type', '=', '06')]}"/>
+                <field name="days_duration_training" attrs="{'invisible': [('contract_type', '!=', '06')]}"/>
+                <field name="payment_period" attrs="{'readonly': [('state', '!=', 'draft')]}" required="1"/>
+                <field name="date_start_letter" invisible="1"/>
+                <field name="date_end_letter" invisible="1"/>
+                <field name="prev_date_end_letter" invisible="1"/>
+                <field name="wage_letters" invisible="1"/>
+            </xpath>
+            <xpath expr="//field[@name='date_end']" position="after">
+                <field name="previous_contract_date" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                <label for="years_antiquity" string="Antigüedad"/>
+                <div>
+                    <field name="years_antiquity" class="oe_inline" readonly="True" force_save="True"/> Año(s) y  <field name="days_rest"  readonly="True" force_save="True" class="oe_inline"/> día(s)
+                </div>
+            </xpath>
+            <xpath expr="//div[@name='wage']" position="after">
+                <label for="daily_salary"/>
+                <div class="o_row" name="daily_salary">
+                    <field name="daily_salary" nolabel="1" readonly="1"/>
+                    <span>/ daily</span>
+                </div>
+                <label for="integral_salary"/>
+                <div class="o_row" name="daily_salary" attrs="{'invisible': [('contracting_regime', '!=', '02')]}">
+                    <field name="integral_salary" nolabel="1" readonly="1"/>
+                    <span>/ daily</span>
+                </div>
+                <label for="variable_salary"/>
+                <div class="o_row" name="variable_salary" attrs="{'invisible': [('contracting_regime', '!=', '02')]}">
+                    <field name="variable_salary" nolabel="1" readonly="1"/>
+                    <span>/ daily</span>
+                </div>
+                <label for="sdi"/>
+                <div class="o_row" name="sdi" attrs="{'invisible': [('contracting_regime', '!=', '02')]}">
+                    <field name="sdi" nolabel="1" readonly="1"/>
+                    <span>/ daily</span>
+                </div>
+                <label for="sbc"/>
+                <div class="o_row" name="sdi" attrs="{'invisible': [('contracting_regime', '!=', '02')]}">
+                    <field name="sbc" nolabel="1" readonly="1"/>
+                    <span>/ daily</span>
+                </div>
+                <field name="monthly_savings_fund" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                <label for="seniority_premium"/>
+                <div class="o_row" name="seniority_premium" attrs="{'invisible': [('contracting_regime', '!=', '02')]}">
+                    <field name="seniority_premium" nolabel="1" attrs="{'readonly': [('id', '!=', False)]}"/>
+                    <button
+                        type="action"
+                        name="%(contract_change_form_action)d"
+                        class="btn-sm btn-link fa fa-pencil"
+                        aria-label="Change"
+                        title="Change"
+                        context="{'default_field_changes': 'seniority_premium'}"
+                    />
+                </div>
+            </xpath>
+            <xpath expr="//div[@name='wage']" position="inside">
+                <button
+                        type="action"
+                        name="%(contract_change_form_action)d"
+                        class="btn-sm btn-link fa fa-pencil"
+                        aria-label="Change"
+                        title="Change"
+                        context="{'default_field_changes': 'salary'}"
+                    />
+            </xpath>
+            <xpath expr="//field[@name='department_id']" position="attributes">
+                <attribute name="readonly">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='department_id']" position="attributes">
+                <attribute name="force_save">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='job_id']" position="attributes">
+                <attribute name="readonly">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='job_id']" position="attributes">
+                <attribute name="force_save">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='date_end']" position="after">
+                <field name="days_duration" attrs="{'invisible': [('date_end', '=', False)]}"/>
+            </xpath>
+            <!--  All readonly only where ... -->
+            <xpath expr="//field[@name='name']" position="attributes">
+                <attribute name="attrs">{'readonly': [('state', '!=', 'draft')]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='employee_id']" position="attributes">
+                <attribute name="attrs">{'readonly': [('state', '!=', 'draft')]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='structure_type_id']" position="attributes">
+                <attribute name="attrs">{'readonly': [('state', '!=', 'draft')]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='date_end']" position="attributes">
+                <attribute name="attrs">{'readonly': [('state', 'in', ['close', 'cancel'])], 'required': [('contract_type', '=', '03')]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='date_start']" position="attributes">
+                <attribute name="attrs">{'readonly': [('state', '!=', 'draft')]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='resource_calendar_id']" position="attributes">
+                <attribute name="attrs">{'readonly': [('state', '!=', 'draft')]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='company_id']" position="attributes">
+                <attribute name="attrs">{'readonly': [('state', '!=', 'draft')]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='hr_responsible_id']" position="attributes">
+                <attribute name="attrs">{'readonly': [('state', '!=', 'draft')]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='wage']" position="attributes">
+                <attribute name="attrs">{'readonly': [('id', '!=', False)]}</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="hr_contract_view_mex_search" model="ir.ui.view">
+        <field name="name">hr.contract.mx.search</field>
+        <field name="model">hr.contract</field>
+        <field name="inherit_id" ref="hr_contract.hr_contract_view_search"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='employee_id']" position="before">
+                <field name="code" string="Code"/>
+            </xpath>
+        </field>
+    </record>
+
+
+    </data>
+</odoo>
