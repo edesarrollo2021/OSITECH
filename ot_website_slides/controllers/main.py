@@ -118,11 +118,9 @@ class WebsiteAdresses(http.Controller):
         uid = request.session.uid
         if uid:
             employe = request.env['hr.employee'].sudo().search([('user_id', '=', uid)], limit=1)
-            print("employe233", employe.job_id)
             values = {
             "job_pos": employe.job_id.id
             }
-            print("values", values)
             return request.render("ot_website_slides.ot_web_my_life", values)
 
     @http.route('/adresses_mx', type='json', auth="public", website=True)
@@ -198,4 +196,71 @@ class WebsiteAdresses(http.Controller):
         'mandatarios': mandatarios,
         'public_courses': public_courses,
         }
+
+        print("*******************/*/*/*/*/*/*/*")
+        print("*******************/*/*/*/*/*/*/*")
+        print("*******************/*/*/*/*/*/*/*")
+
         return values
+
+    @http.route('/controller_my_life_mx', type='json', auth="public", website=True)
+    def ot_controller_my_life_mx_register(self, redirect=None, **kw):
+        user_id = request.session.uid
+        employee = request.env['hr.employee'].sudo().search([('user_id', '=', user_id)], limit=1)
+        job_position = request.env['slide.job.positions'].sudo().search([('id', '=', employee.job_id.id)], limit=1)
+        members = request.env['slide.channel'].sudo().search(
+            [('enroll_group_ids', 'in', job_position.enroll_group_id.id)])
+        slide_public = request.env['slide.channel'].sudo().search([('visibility', '=', 'public')])
+        mandatarios = {}
+        public_courses = {}
+        name = ""
+        acronym = ""
+
+        print('\nemployee.job_id', employee.job_id.id)
+        print("\njob_position::: ", job_position.job_id.id)
+        print("\njob_position.enroll_group_id.id::: ", job_position.id)
+        print("\njob_position.enroll_group_id.id::: ", job_position.id)
+        print("\nmembers::: ", members)
+
+        for public in slide_public:
+            image = public.image_1920 or False
+            if "|" in public.name:
+                position_I = public.name.find('|')
+                name = str(public.name)[position_I + 1:]
+                acronym = str(public.name)[0: position_I]
+            else:
+                name = public.name
+                acronym = False
+            public_courses[public.id] = [image, acronym, name]
+
+        for member in members:
+            image = member.image_1920 or False
+            if "|" in member.name:
+                position_I = member.name.find('|')
+                name = str(member.name)[position_I + 1:]
+                acronym = str(member.name)[0: position_I]
+            else:
+                name = member.name
+                acronym = False
+            mandatarios[member.id] = [image, acronym, name]
+
+        print("\nmandatarios:::", mandatarios)
+
+        values = {
+            'image': job_position.addresses_id.image,
+            'name': job_position.job_id.name,
+            'slide_public': slide_public,
+            'mandatarios': mandatarios,
+            'public_courses': public_courses,
+        }
+
+        print("*******************/*/*/*/*/*/*/*")
+        print("*******************/*/*/*/*/*/*/*")
+        print("*******************/*/*/*/*/*/*/*")
+
+        print(":D  :D  :D  :D  :D  :D  :D  ")
+        print(":D  :D  :D  :D  :D  :D  :D  ")
+
+        return values
+
+
