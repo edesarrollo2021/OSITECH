@@ -12,4 +12,14 @@ $(document).ready(function() {
             }
         });
     });
-});
+
+//	$('#wrap_home_mx').each(function(ev) {
+//	    var ot_addEffectContainer = this;
+//	    $('#ot__rec__img__20').effect("bounce", "delay-4s").focus();
+//	    $(ot_addEffectContainer).focus('#ot__rec__img__20', function() {
+//            console.log("@@@@@@@@@@@@@@@");
+//            console.log("@@@@@@@@@@@@@@@");
+//            console.log("@@@@@@@@@@@@@@@");
+//	        });
+//	    });
+//    });
