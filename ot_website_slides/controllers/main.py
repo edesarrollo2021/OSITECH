@@ -158,8 +158,8 @@ class WebsiteAdresses(http.Controller):
     def ot_my_life_mx_register(self, redirect=None, **kw):
         id_add = kw.get("id")
         job_position = request.env['slide.job.positions'].sudo().search([('id', '=', id_add)], limit=1)
-        members = request.env['slide.channel'].sudo().search([('enroll_group_ids', 'in', job_position.enroll_group_id.id)])
-        slide_public = request.env['slide.channel'].sudo().search([('visibility', '=', 'public')])
+        members = request.env['slide.channel'].sudo().search([('enroll_group_ids', 'in', job_position.enroll_group_id.id),('is_published', '=', True)])
+        slide_public = request.env['slide.channel'].sudo().search([('visibility', '=', 'public'), ('is_published', '=', True)])
         mandatarios = {}
         public_courses = {}
         name = ""
@@ -205,8 +205,8 @@ class WebsiteAdresses(http.Controller):
         job_position = request.env['hr.job'].sudo().search([('id', '=', employee.job_id.id)], limit=1)
         slide_job = request.env['slide.job.positions'].sudo().search([('job_id', '=', job_position.id)], limit=1)
         members = request.env['slide.channel'].sudo().search(
-            [('enroll_group_ids', 'in', slide_job.enroll_group_id.id)])
-        slide_public = request.env['slide.channel'].sudo().search([('visibility', '=', 'public')])
+            [('enroll_group_ids', 'in', slide_job.enroll_group_id.id), ('is_published', '=', True)])
+        slide_public = request.env['slide.channel'].sudo().search([('visibility', '=', 'public'), ('is_published', '=', True)])
         mandatarios = {}
         public_courses = {}
         name = ""
