@@ -604,14 +604,15 @@
             <field name="url">/miplandevidaycarrera</field>
             <field name="page_id" ref="ot_website_slides.my_life_page_mx"/>
             <field name="parent_id" ref="website.main_menu"/>
-            <field name="sequence" type="int">10</field>
+            <field name="sequence" type="int">15</field>
+            <field name="group_ids" eval="[(4, ref('base.group_portal'))]"/>
         </record>
         
         <record id="website_menu_slides_mx" model="website.menu">
             <field name="name">Mis cursos</field>
             <field name="url">/slides/all?my=1</field>
             <field name="parent_id" ref="website.main_menu"/>
-            <field name="sequence" type="int">15</field>
+            <field name="sequence" type="int">10</field>
         </record>
 
         <record id="website_menu_adresses_mx" model="website.menu">
@@ -619,6 +620,7 @@
             <field name="url">/direcciones</field>
             <field name="parent_id" ref="website.main_menu"/>
             <field name="sequence" type="int">25</field>
+            <field name="group_ids" eval="[(4, ref('base.group_user'))]"/>
         </record>
 
         <record id="menu_calendar" model="website.menu">
