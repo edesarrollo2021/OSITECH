@@ -24,4 +24,3 @@ class JobPositions(models.Model):
     order_by = fields.Float("Order")
     enroll_group_id = fields.Many2one('res.groups', string='Suscribir grupo', required=True)
     
-    

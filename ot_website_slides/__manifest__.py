@@ -21,6 +21,7 @@
         'ot_theme_blue',
         'website_livechat',
         'survey',
+        'ot_personalized_emails_mx',
     ],
     "data": [
         'templates/ot_web_adresses.xml',

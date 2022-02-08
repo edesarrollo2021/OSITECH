@@ -3,13 +3,11 @@
 import ast
 import collections
 
-from odoo import http, models, fields, _
+from odoo import http
 from odoo.http import request
 from odoo.addons.portal.controllers.web import Home
-from odoo.addons.http_routing.models.ir_http import slug
 
 from odoo.addons.web.controllers.main import Home
-from odoo.exceptions import UserError
 
 
 class Home(Home):
@@ -64,7 +62,6 @@ class WebsiteUserRegister(http.Controller):
         email3 = kw.get('email3')
         employe = request.env['hr.employee'].sudo().search([('work_email', '=', email)], limit=1)
         employe_one = request.env['hr.employee'].sudo().search([('work_email', '=', email3)], limit=1)
-        print("employe", employe)
         pasw = kw.get('pasw') or ''
         repeat_pasw = kw.get('repeat_pasw') or ''
         if pasw == repeat_pasw and pasw != '' and repeat_pasw != '':
@@ -85,10 +82,11 @@ class WebsiteUserRegister(http.Controller):
             user = request.env['res.users']
             user.sudo().create(vals_list)
             user = request.env['res.users'].sudo().search([('login', '=', email3)], limit=1)
+            slide_job = request.env['slide.job.positions'].sudo().search([('job_id', '=', employe_one.job_id.id)], limit=1)
             employe = request.env['hr.employee'].sudo().search([('work_email', '=', email3)], limit=1)
-            print("user", user)
-            print("employe", employe)
             employe.write({"user_id": user.id})
+            group = slide_job.enroll_group_id
+            group.write({'users': [[6, False, [user.id]]]})
             return http.local_redirect('/web/login', query=request.params, keep_hash=True)
         if pasw != '' and repeat_pasw != '' and pasw != repeat_pasw:
             pasw_true = False
