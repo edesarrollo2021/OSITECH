@@ -18,6 +18,22 @@ span.input-group-btn button.btn.btn-default {
     font-size:50px;
 }
 
+body {
+    font-family: 'CenturyGothic';
+}
+
+html {
+    font-family: 'CenturyGothic';
+}
+
+div{
+    font-family: 'CenturyGothic';
+}
+
+p {
+    font-family: 'CenturyGothic';
+}
+
 
 .swiper {
     width: 100%;
@@ -59,13 +75,11 @@ span.input-group-btn button.btn.btn-default {
 }
 
 .swiper-slide .title {
-    font-family: "Century Gothic";
     font-weight: 600;
     font-size: 60px;
 }
 
 button, input {
-    font-family: "OPTIFuturaDemiBold";
     font-size: 17px;
     border-radius: 3px;
 }
@@ -81,7 +95,6 @@ input {
 button.azul, button.amarillo {
     padding: 14px 0px 14px 0px;
     font-size: 21px;
-    font-family: "Century Gothic";
     font-weight: 500;
     background-color: #fedb31;
     border: 0;

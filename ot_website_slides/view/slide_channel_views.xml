@@ -24,6 +24,13 @@
                         </tree>
                     </field> 
                    <field name="constancy" widget="radio"/>
+                   <label for="year" string="Duración"/>
+                    <div class="o_row">
+                        <field name="year"/>Años
+                        <field name="month"/>Meses
+                        <field name="days"/>Días
+                    </div>
+                   <field name="duration" invisible="1"/>
                    <field name="vigencia"/>
                 </xpath>
                 <xpath expr="//page[@name='options']//group//field[@name='user_id']" position="attributes">
