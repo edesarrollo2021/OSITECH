@@ -168,6 +168,7 @@ class WebsiteAdresses(http.Controller):
 
         for public in slide_public:
             image = public.image_1920 or False
+            url_public = "slides/%s" % public.id
             if "|" in public.name:
                 position_I = public.name.find('|')
                 name = str(public.name)[position_I +1:]
@@ -175,7 +176,7 @@ class WebsiteAdresses(http.Controller):
             else:
                 name = public.name
                 acronym = False
-            public_courses[public.id] = [image, acronym, name]
+            public_courses[public.id] = [image, acronym, name, url_public]
 
         for member in members:
             image = member.image_1920 or False
@@ -213,6 +214,7 @@ class WebsiteAdresses(http.Controller):
         acronym = ""
 
         for public in slide_public:
+            url_public = "slides/%s" % public.id
             image = public.image_1920 or False
             if "|" in public.name:
                 position_I = public.name.find('|')
@@ -221,7 +223,7 @@ class WebsiteAdresses(http.Controller):
             else:
                 name = public.name
                 acronym = False
-            public_courses[public.id] = [image, acronym, name]
+            public_courses[public.id] = [image, acronym, name, url_public]
 
         for member in members:
             image = member.image_1920 or False

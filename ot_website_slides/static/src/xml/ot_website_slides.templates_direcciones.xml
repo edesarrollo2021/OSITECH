@@ -118,7 +118,7 @@
                                 </t>
 
                             <div style="text-align: center;"><span><t t-esc="public_value[2]"/></span></div>
-                            <a href="/slides/abc-curso-publico-1-1"
+                            <a t-att-href="public_value[3]"
                                class="btn btn-outline-primary rounded-circle btn-lg">Ingresar</a>
                             </div>
                             </div>
@@ -151,7 +151,7 @@
                                 </t>
 
                             <div style="text-align: center;"><span><t t-esc="mandatario_value[2]"/></span></div>
-                            <a href="/slides/abc-curso-publico-1-1"
+                            <a t-att-href="mandatario_value[3]"
                                class="btn btn-outline-primary rounded-circle btn-lg">Ingresar</a>
                             </div>
                             </div>
@@ -220,7 +220,7 @@
                                 </t>
 
                             <div style="text-align: center;"><span><t t-esc="public_value[2]"/></span></div>
-                            <a href="/slides/abc-curso-publico-1-1"
+                            <a t-att-href="public_value[3]"
                                class="btn btn-outline-primary rounded-circle btn-lg">Ingresar</a>
                             </div>
                             </div>
