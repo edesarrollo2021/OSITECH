@@ -74,7 +74,7 @@
         </div>
             <div class="col-12" style="padding-top: 5%; padding-bottom: 5%; text-align: center;">
                 <span style="font-size: 48px; ">
-                    Plan de Vida y Carrera para<t t-esc="name"/></span>
+                    Plan de Vida y Carrera para <t t-esc="name"/></span>
              </div>
 
             <section name="">
@@ -176,7 +176,7 @@
         </div>
             <div class="col-12" style="padding-top: 5%; padding-bottom: 5%; text-align: center;">
                 <span style="font-size: 48px; ">
-                    Plan de Vida y Carrera para<t t-esc="name"/></span>
+                    Plan de Vida y Carrera para <t t-esc="name"/></span>
              </div>
 
             <section name="">
@@ -238,6 +238,7 @@
                     </h3>
                     <div class="row" style="padding-bottom: 10%;">
                         <t t-foreach="mandatarios" t-as="mandatario">
+
                             <div class="col-2">
                             <div class="card bg-white h-100"
                                 style="align-items: center; border:solid 0px !important;">
@@ -253,7 +254,7 @@
                                 </t>
 
                             <div style="text-align: center;"><span><t t-esc="mandatario_value[2]"/></span></div>
-                            <a href="/slides/abc-curso-publico-1-1"
+                                <a t-att-href="mandatario_value[3]"
                                class="btn btn-outline-primary rounded-circle btn-lg">Ingresar</a>
                             </div>
                             </div>

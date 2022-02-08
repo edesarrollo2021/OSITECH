@@ -18,10 +18,10 @@ class JobPositions(models.Model):
     _name = 'slide.job.positions'
     _order = 'order_by asc'
 
-    job_id = fields.Many2one('hr.job', string="Puestos de trabajo")
-    image = fields.Binary(string="Imagen")
+    job_id = fields.Many2one('hr.job', string="Puestos de trabajo", required=True)
+    image = fields.Binary(string="Imagen", required=True)
     addresses_id = fields.Many2one('slide.addresses', string="Direcciones")
     order_by = fields.Float("Order")
-    enroll_group_id = fields.Many2one('res.groups', string='Suscribir grupo')
+    enroll_group_id = fields.Many2one('res.groups', string='Suscribir grupo', required=True)
     
     

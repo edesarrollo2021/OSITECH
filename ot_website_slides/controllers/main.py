@@ -166,6 +166,7 @@ class WebsiteAdresses(http.Controller):
         public_courses = {}
         name = ""
         acronym = ""
+        url = ""
 
         for public in slide_public:
             image = public.image_1920 or False
@@ -180,6 +181,7 @@ class WebsiteAdresses(http.Controller):
 
         for member in members:
             image = member.image_1920 or False
+            url = "slides/%s"% member.id
             if "|" in member.name:
                 position_I = member.name.find('|')
                 name = str(member.name)[position_I +1:]
@@ -187,7 +189,7 @@ class WebsiteAdresses(http.Controller):
             else:
                 name = member.name
                 acronym = False
-            mandatarios[member.id] = [image, acronym, name]
+            mandatarios[member.id] = [image, acronym, name, url]
 
         values = {
         'image': job_position.addresses_id.image,
@@ -225,6 +227,7 @@ class WebsiteAdresses(http.Controller):
 
         for member in members:
             image = member.image_1920 or False
+            url = "slides/%s" % member.id
             if "|" in member.name:
                 position_I = member.name.find('|')
                 name = str(member.name)[position_I + 1:]
@@ -232,9 +235,7 @@ class WebsiteAdresses(http.Controller):
             else:
                 name = member.name
                 acronym = False
-            mandatarios[member.id] = [image, acronym, name]
-
-        print("\nmandatarios:::", mandatarios)
+            mandatarios[member.id] = [image, acronym, name, url]
 
         values = {
             'image': slide_job.image,
@@ -243,13 +244,6 @@ class WebsiteAdresses(http.Controller):
             'mandatarios': mandatarios,
             'public_courses': public_courses,
         }
-
-        print("*******************/*/*/*/*/*/*/*")
-        print("*******************/*/*/*/*/*/*/*")
-        print("*******************/*/*/*/*/*/*/*")
-
-        print(":D  :D  :D  :D  :D  :D  :D  ")
-        print(":D  :D  :D  :D  :D  :D  :D  ")
 
         return values
 
