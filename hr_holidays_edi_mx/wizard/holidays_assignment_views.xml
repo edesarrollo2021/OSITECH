@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <record id="holidays_assignment_view" model="ir.ui.view">
+        <field name="name">holidays.assignment.view.wizard</field>
+        <field name="model">holidays.assignment</field>
+        <field name="arch" type="xml">
+            <form string="Holidays Assignment">
+                <group>
+                    <group>
+                        <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+                        <field name="holidays"/>
+                        <field name="personal_days"/>
+                    </group>
+                    <group>
+                        <field name="date_from"/>
+                        <field name="date_to"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="assign" string="Assign" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_holidays_assignment_wizard" model="ir.actions.act_window">
+        <field name="name">Holidays Assignment</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">holidays.assignment</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem
+        id="menu_holidays_assignment_wizard"
+        name="Holidays Assignment"
+        parent="hr_holidays.menu_hr_holidays_approvals"
+        action="action_holidays_assignment_wizard"/>
+
+    </data>
+</odoo>

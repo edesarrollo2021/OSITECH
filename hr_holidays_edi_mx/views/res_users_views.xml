@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <record id="view_users_customer_inherit_form" model="ir.ui.view">
+        <field name="name">res.users.mx.inherit.form</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="hr_employe_mexico.view_users_customer_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='messaging']" position="before">
+                <group string="Kiosk" name="kiosk">
+                    <field name="approve_holidays"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_users_mx_form" model="ir.ui.view">
+        <field name="name">res.users.form.inherit</field>
+        <field name="model">res.users</field>
+        <field name="type">form</field>
+        <field name="inherit_id" ref="base.view_users_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='preferences']" position="after">
+                <group name="kiosk" string="Kiosk">
+                    <field name="approve_holidays"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_users_leaves_form" model="ir.ui.view">
+        <field name="name">res.users.form</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="hr_employe_mexico.view_users_customer_form"/>
+        <field name="groups_id" eval="[(4, ref('hr_holidays.group_hr_holidays_user'))]"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="attributes">
+                <attribute name="create">0</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_users_leaves_tree" model="ir.ui.view">
+        <field name="name">res.users.tree</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="hr_employe_mexico.view_users_customer_tree"/>
+        <field name="groups_id" eval="[(4, ref('hr_holidays.group_hr_holidays_user'))]"/>
+        <field name="arch" type="xml">
+            <xpath expr="//tree" position="attributes">
+                <attribute name="create">0</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <menuitem
+        id="menu_users_leaves"
+        name="Users"
+        parent="hr_holidays.menu_hr_holidays_root"
+        groups="hr_holidays.group_hr_holidays_user"
+        action="hr_employe_mexico.action_res_users_customer"
+        sequence="3"/>
+
+    </data>
+</odoo>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <record id="view_locality_mx_form" model="ir.ui.view">
+        <field name="name">l10n_mx_edi.res.locality.form</field>
+        <field name="model">l10n_mx_edi.res.locality</field>
+        <field name="arch" type="xml">
+            <form string="Locality">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="state_id"/>
+                        </group>
+                        <group>
+                            <field name="code"/>
+                            <field name="country_id"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_locality_mx_tree" model="ir.ui.view">
+        <field name="name">l10n_mx_edi.res.locality.tree</field>
+        <field name="model">l10n_mx_edi.res.locality</field>
+        <field name="arch" type="xml">
+            <tree string="Localities">
+                <field name="name"/>
+                <field name="code"/>
+                <field name="country_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_locality_mx" model="ir.actions.act_window">
+        <field name="name">Localities</field>
+        <field name="res_model">l10n_mx_edi.res.locality</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Create your first Locality
+          </p>
+        </field>
+    </record>
+
+    <menuitem
+        id="menu_action_localitation"
+        name="Localitation"
+        parent="hr.menu_human_resources_configuration"
+        sequence="255"
+        />
+
+        <menuitem
+            id="menu_action_locality"
+            name="Locality"
+            action="action_locality_mx"
+            parent="menu_action_localitation"
+            sequence="5"
+            />
+
+    </data>
+</odoo>

@@ -1,0 +1,851 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_infonavit_fonacot
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-26 13:56+0000\n"
+"PO-Revision-Date: 2022-01-26 13:56+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_infonavit_fonacot
+#: code:addons/hr_infonavit_fonacot/models/fonacot_report.py:0
+#: code:addons/hr_infonavit_fonacot/models/infonavit_report.py:0
+#, python-format
+msgid "# Credit"
+msgstr "# Crédito"
+
+#. module: hr_infonavit_fonacot
+#: code:addons/hr_infonavit_fonacot/models/fonacot_report.py:0
+#, python-format
+msgid "# Employee"
+msgstr "# Empleado"
+
+#. module: hr_infonavit_fonacot
+#: code:addons/hr_infonavit_fonacot/models/hr_credit_infonavit_fonacot.py:0
+#: code:addons/hr_infonavit_fonacot/models/hr_credit_infonavit_fonacot.py:0
+#, python-format
+msgid ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"                               Click to Create for New Documents\n"
+"                            </p>"
+msgstr ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"                               Haga clic para crear para nuevos documentos\n"
+"                            </p>"
+
+#. module: hr_infonavit_fonacot
+#: model_terms:ir.ui.view,arch_db:hr_infonavit_fonacot.search_template_credits_filter
+msgid "<span class=\"fa fa-bar-chart\"/> Filter:"
+msgstr "<span class=\"fa fa-bar-chart\"/> Filtrar:"
+
+#. module: hr_infonavit_fonacot
+#: model_terms:ir.ui.view,arch_db:hr_infonavit_fonacot.search_template_periods
+msgid ""
+"<span class=\"fa fa-book\"/>\n"
+"            Periods:"
+msgstr ""
+"<span class=\"fa fa-book\"/>\n"
+"            Periodos:"
+
+#. module: hr_infonavit_fonacot
+#: code:addons/hr_infonavit_fonacot/models/fonacot_report.py:0
+#, python-format
+msgid "Absences"
+msgstr "Ausentismos"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_fonacot_credit_line__message_needaction
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_line__message_needaction
+msgid "Action Needed"
+msgstr "Acción necesaria"
+
+#. module: hr_infonavit_fonacot
+#: model_terms:ir.ui.view,arch_db:hr_infonavit_fonacot.hr_employee_infonavit_fonacot_inherit_form
+#: model_terms:ir.ui.view,arch_db:hr_infonavit_fonacot.view_hr_fonacot_credit_line_form
+#: model_terms:ir.ui.view,arch_db:hr_infonavit_fonacot.view_hr_infonavit_credit_line_form
+msgid "Activate"
+msgstr "Activar"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields.selection,name:hr_infonavit_fonacot.selection__hr_fonacot_credit_line__state__active
+#: model:ir.model.fields.selection,name:hr_infonavit_fonacot.selection__hr_infonavit_credit_line__state__active
+msgid "Active"
+msgstr "Activo"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_fonacot_credit_line__activity_ids
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_line__activity_ids
+msgid "Activities"
+msgstr "Actividades"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_fonacot_credit_line__activity_exception_decoration
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_line__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Decoración de excepción de actividad"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_fonacot_credit_line__activity_state
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_line__activity_state
+msgid "Activity State"
+msgstr "Estado de actividad"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_fonacot_credit_line__activity_type_icon
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_line__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Icono de tipo de actividad"
+
+#. module: hr_infonavit_fonacot
+#: model_terms:ir.ui.view,arch_db:hr_infonavit_fonacot.search_template_periods
+msgid "All"
+msgstr "Todo"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_fonacot_credit_line_payslip__amount
+msgid "Amount"
+msgstr "Monto"
+
+#. module: hr_infonavit_fonacot
+#: code:addons/hr_infonavit_fonacot/models/hr_credit_infonavit_fonacot.py:0
+#, python-format
+msgid "An active INFONAVIT credit already exists for the employee."
+msgstr "Ya existe un crédito INFONAVIT activo para el empleado."
+
+#. module: hr_infonavit_fonacot
+#: model_terms:ir.ui.view,arch_db:hr_infonavit_fonacot.search_template_credits_filter
+msgid "Apply"
+msgstr "Aplicar"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_fonacot_credit_line__attachment_count
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_line__attachment_count
+msgid "Attachment"
+msgstr "Adjunto"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_fonacot_credit_line__message_attachment_count
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_line__message_attachment_count
+msgid "Attachment Count"
+msgstr "Recuento de archivos adjuntos"
+
+#. module: hr_infonavit_fonacot
+#: code:addons/hr_infonavit_fonacot/models/fonacot_report.py:0
+#: code:addons/hr_infonavit_fonacot/models/infonavit_report.py:0
+#, python-format
+msgid "Biweekly Discount"
+msgstr "Descuento Quincenal"
+
+#. module: hr_infonavit_fonacot
+#: code:addons/hr_infonavit_fonacot/models/fonacot_report.py:0
+#, python-format
+msgid "C. Department"
+msgstr "C. Departamento"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields.selection,name:hr_infonavit_fonacot.selection__hr_infonavit_credit_line__state__closed
+msgid "Closed"
+msgstr "Cerrado"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_fonacot_credit_line__create_uid
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_fonacot_credit_line_payslip__create_uid
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_change_line__create_uid
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_history__create_uid
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_line__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_fonacot_credit_line__create_date
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_fonacot_credit_line_payslip__create_date
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_change_line__create_date
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_history__create_date
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_line__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.actions.act_window,name:hr_infonavit_fonacot.action_hr_fonacot_credit_line
+#: model_terms:ir.ui.view,arch_db:hr_infonavit_fonacot.view_hr_fonacot_credit_line_form
+msgid "Credit FONACOT"
+msgstr "Credito FONACOT"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.actions.act_window,name:hr_infonavit_fonacot.action_hr_infonavit_credit_line
+#: model_terms:ir.ui.view,arch_db:hr_infonavit_fonacot.view_hr_infonavit_credit_line_form
+#: model_terms:ir.ui.view,arch_db:hr_infonavit_fonacot.view_hr_infonavit_credit_line_tree
+msgid "Credit INFONAVIT"
+msgstr "Crédito INFONAVIT"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.ui.menu,name:hr_infonavit_fonacot.menu_credits_employee
+msgid "Credits"
+msgstr "Créditos"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.ui.menu,name:hr_infonavit_fonacot.menu_credits_fonacot_employee
+msgid "Credits FONACOT"
+msgstr "Créditos FONACOT"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.ui.menu,name:hr_infonavit_fonacot.menu_credits_infonavit_employee
+msgid "Credits INFONAVIT"
+msgstr "Créditos INFONAVIT"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_history__date
+msgid "Date"
+msgstr "Fecha"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_line__date
+msgid "Date (ICV)"
+msgstr "Fecha (ICV)"
+
+#. module: hr_infonavit_fonacot
+#: code:addons/hr_infonavit_fonacot/models/fonacot_report.py:0
+#, python-format
+msgid "Date Down"
+msgstr "Fecha de Baja"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_fonacot_credit_line__date_end
+msgid "Date End"
+msgstr "Fecha Final"
+
+#. module: hr_infonavit_fonacot
+#: code:addons/hr_infonavit_fonacot/models/fonacot_report.py:0
+#, python-format
+msgid "Date End Credit"
+msgstr "Fecha Final del Crédito"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_change_line__date_from
+msgid "Date From"
+msgstr "Desde"
+
+#. module: hr_infonavit_fonacot
+#: code:addons/hr_infonavit_fonacot/models/fonacot_report.py:0
+#, python-format
+msgid "Date High"
+msgstr "Fecha de Alta"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_fonacot_credit_line__date_start
+msgid "Date Start"
+msgstr "Fecha Inicial"
+
+#. module: hr_infonavit_fonacot
+#: code:addons/hr_infonavit_fonacot/models/fonacot_report.py:0
+#, python-format
+msgid "Date Start Credit"
+msgstr "Fecha Inicial del Crédito"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_change_line__date_to
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_line__date_suspension
+msgid "Date To"
+msgstr "Hasta"
+
+#. module: hr_infonavit_fonacot
+#: code:addons/hr_infonavit_fonacot/models/fonacot_report.py:0
+#, python-format
+msgid "Direction / Department"
+msgstr "Dirección / Departamento"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields.selection,name:hr_infonavit_fonacot.selection__hr_infonavit_credit_history__move_type__discontinued
+msgid "Discontinued"
+msgstr "Interrumpido"
+
+#. module: hr_infonavit_fonacot
+#: code:addons/hr_infonavit_fonacot/models/infonavit_report.py:0
+#, python-format
+msgid "Discount Factor"
+msgstr "Factor de Descuento"
+
+#. module: hr_infonavit_fonacot
+#: code:addons/hr_infonavit_fonacot/models/infonavit_report.py:0
+#, python-format
+msgid "Discount Rate"
+msgstr "Tasa de Descuento"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_fonacot_report__display_name
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_employee__display_name
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_employee_public__display_name
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_fonacot_credit_line__display_name
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_fonacot_credit_line_payslip__display_name
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_change_line__display_name
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_history__display_name
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_line__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: hr_infonavit_fonacot
+#: model_terms:ir.ui.view,arch_db:hr_infonavit_fonacot.view_hr_fonacot_credit_line_form
+#: model_terms:ir.ui.view,arch_db:hr_infonavit_fonacot.view_hr_infonavit_credit_line_form
+msgid "Documents"
+msgstr "Documentos"
+
+#. module: hr_infonavit_fonacot
+#: code:addons/hr_infonavit_fonacot/models/hr_credit_infonavit_fonacot.py:0
+#, python-format
+msgid "Documents FONACOT"
+msgstr "Documentos FONACOT"
+
+#. module: hr_infonavit_fonacot
+#: code:addons/hr_infonavit_fonacot/models/hr_credit_infonavit_fonacot.py:0
+#, python-format
+msgid "Documents INFONAVIT"
+msgstr "Documentos INFONAVIT"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields.selection,name:hr_infonavit_fonacot.selection__hr_fonacot_credit_line__state__draft
+#: model:ir.model.fields.selection,name:hr_infonavit_fonacot.selection__hr_infonavit_credit_line__state__draft
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: hr_infonavit_fonacot
+#: code:addons/hr_infonavit_fonacot/models/fonacot_report.py:0
+#: model:ir.model,name:hr_infonavit_fonacot.model_hr_employee
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_fonacot_credit_line__employee_id
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_line__employee_id
+#, python-format
+msgid "Employee"
+msgstr "Empleado"
+
+#. module: hr_infonavit_fonacot
+#: model_terms:ir.ui.view,arch_db:hr_infonavit_fonacot.search_template_credits_filter
+msgid "Employee :"
+msgstr "Empleado :"
+
+#. module: hr_infonavit_fonacot
+#: model_terms:ir.ui.view,arch_db:hr_infonavit_fonacot.search_template_credits_filter
+msgid "Employee Enrollment"
+msgstr "Matrícula del Empleado"
+
+#. module: hr_infonavit_fonacot
+#: code:addons/hr_infonavit_fonacot/models/infonavit_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_infonavit_fonacot.search_template_credits_filter
+#, python-format
+msgid "Employee Name"
+msgstr "Nombre del Empleado"
+
+#. module: hr_infonavit_fonacot
+#: code:addons/hr_infonavit_fonacot/models/infonavit_report.py:0
+#, python-format
+msgid "Enrollment"
+msgstr "Matrícula"
+
+#. module: hr_infonavit_fonacot
+#: model_terms:ir.ui.view,arch_db:hr_infonavit_fonacot.search_template_credits_filter
+msgid "Enrollment :"
+msgstr "Matrícula :"
+
+#. module: hr_infonavit_fonacot
+#: code:addons/hr_infonavit_fonacot/models/fonacot_report.py:0
+#: code:addons/hr_infonavit_fonacot/models/infonavit_report.py:0
+#, python-format
+msgid "Export (XLSX)"
+msgstr "Exportar (XLSX)"
+
+#. module: hr_infonavit_fonacot
+#: model_terms:ir.ui.view,arch_db:hr_infonavit_fonacot.hr_employee_infonavit_fonacot_inherit_form
+msgid "FONACOT"
+msgstr ""
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_fonacot_credit_line__fonacot_credit_number
+msgid "FONACOT Credit Number"
+msgstr "Número de Crédito FONACOT"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_employee__fonacot_ids
+msgid "FONACOT credit"
+msgstr "Crédito FONACOT"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_employee__fonacot_customer_number
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_fonacot_credit_line__fonacot_customer_number
+msgid "FONACOT customer number"
+msgstr "Número de cliente FONACOT"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields.selection,name:hr_infonavit_fonacot.selection__hr_infonavit_credit_change_line__type__fixed_amount
+#: model:ir.model.fields.selection,name:hr_infonavit_fonacot.selection__hr_infonavit_credit_line__type__fixed_amount
+msgid "Fixed Amount"
+msgstr "Cantidad fija"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_fonacot_credit_line__message_follower_ids
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_line__message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_fonacot_credit_line__message_channel_ids
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_line__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Seguidores (Canales)"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_fonacot_credit_line__message_partner_ids
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_line__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores (Socios)"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_fonacot_credit_line_payslip__fonacot_id
+msgid "Fonacot Credit"
+msgstr "Crédito Fonacot"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_employee_public__fonacot_customer_number
+msgid "Fonacot Customer Number"
+msgstr "Número de cliente de Fonacot"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.actions.client,name:hr_infonavit_fonacot.action_fonacot_report
+#: model:ir.model,name:hr_infonavit_fonacot.model_fonacot_report
+msgid "Fonacot Report"
+msgstr "Reporte Fonacot"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,help:hr_infonavit_fonacot.field_hr_fonacot_credit_line__activity_type_icon
+#: model:ir.model.fields,help:hr_infonavit_fonacot.field_hr_infonavit_credit_line__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Icono de fuente impresionante, p. Ej. fa-tasks"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields.selection,name:hr_infonavit_fonacot.selection__hr_infonavit_credit_history__move_type__high_credit
+msgid "High credit"
+msgstr "Crédito alto"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_fonacot_report__id
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_employee__id
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_employee_public__id
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_fonacot_credit_line__id
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_fonacot_credit_line_payslip__id
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_change_line__id
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_history__id
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_line__id
+msgid "ID"
+msgstr ""
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_change_line__infonavit_id
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_history__infonavit_id
+#: model_terms:ir.ui.view,arch_db:hr_infonavit_fonacot.hr_employee_infonavit_fonacot_inherit_form
+msgid "INFONAVIT"
+msgstr ""
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_line__infonavit_credit_number
+msgid "INFONAVIT Credit Number"
+msgstr "Número de Crédito INFONAVIT"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_employee__infonavit_ids
+msgid "INFONAVIT credit"
+msgstr "Crédito INFONAVIT"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_fonacot_credit_line__activity_exception_icon
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_line__activity_exception_icon
+msgid "Icon"
+msgstr "Icono"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,help:hr_infonavit_fonacot.field_hr_fonacot_credit_line__activity_exception_icon
+#: model:ir.model.fields,help:hr_infonavit_fonacot.field_hr_infonavit_credit_line__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Icono para indicar una actividad de excepción."
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,help:hr_infonavit_fonacot.field_hr_fonacot_credit_line__message_needaction
+#: model:ir.model.fields,help:hr_infonavit_fonacot.field_hr_fonacot_credit_line__message_unread
+#: model:ir.model.fields,help:hr_infonavit_fonacot.field_hr_infonavit_credit_line__message_needaction
+#: model:ir.model.fields,help:hr_infonavit_fonacot.field_hr_infonavit_credit_line__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Si está marcada, los mensajes nuevos requieren su atención."
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,help:hr_infonavit_fonacot.field_hr_fonacot_credit_line__message_has_error
+#: model:ir.model.fields,help:hr_infonavit_fonacot.field_hr_fonacot_credit_line__message_has_sms_error
+#: model:ir.model.fields,help:hr_infonavit_fonacot.field_hr_infonavit_credit_line__message_has_error
+#: model:ir.model.fields,help:hr_infonavit_fonacot.field_hr_infonavit_credit_line__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si está marcado, algunos mensajes tienen un error de entrega."
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields.selection,name:hr_infonavit_fonacot.selection__hr_fonacot_credit_line__state__inactive
+#: model:ir.model.fields.selection,name:hr_infonavit_fonacot.selection__hr_infonavit_credit_line__state__inactive
+#: model_terms:ir.ui.view,arch_db:hr_infonavit_fonacot.hr_employee_infonavit_fonacot_inherit_form
+#: model_terms:ir.ui.view,arch_db:hr_infonavit_fonacot.view_hr_fonacot_credit_line_form
+#: model_terms:ir.ui.view,arch_db:hr_infonavit_fonacot.view_hr_infonavit_credit_line_form
+msgid "Inactive"
+msgstr "Inactivo"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_fonacot_credit_line__message_is_follower
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_line__message_is_follower
+msgid "Is Follower"
+msgstr "Es Seguidor"
+
+#. module: hr_infonavit_fonacot
+#: code:addons/hr_infonavit_fonacot/models/fonacot_report.py:0
+#, python-format
+msgid "Job"
+msgstr "Puesto de Trabajo"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_fonacot_report____last_update
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_employee____last_update
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_employee_public____last_update
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_fonacot_credit_line____last_update
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_fonacot_credit_line_payslip____last_update
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_change_line____last_update
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_history____last_update
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_line____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_fonacot_credit_line__write_uid
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_fonacot_credit_line_payslip__write_uid
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_change_line__write_uid
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_history__write_uid
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_line__write_uid
+msgid "Last Updated by"
+msgstr "Última Actualización por"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_fonacot_credit_line__write_date
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_fonacot_credit_line_payslip__write_date
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_change_line__write_date
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_history__write_date
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_line__write_date
+msgid "Last Updated on"
+msgstr "Última Actualización el"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model,name:hr_infonavit_fonacot.model_hr_infonavit_credit_line
+msgid "Line of credit number"
+msgstr "Número de línea de crédito"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields.selection,name:hr_infonavit_fonacot.selection__hr_infonavit_credit_history__move_type__low_credit
+msgid "Low credit"
+msgstr "Crédito bajo"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_fonacot_credit_line__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_line__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Adjunto Principal"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_fonacot_credit_line__message_has_error
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_line__message_has_error
+msgid "Message Delivery error"
+msgstr "Error de entrega de mensaje"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_fonacot_credit_line__message_ids
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_line__message_ids
+msgid "Messages"
+msgstr "Mensajes"
+
+#. module: hr_infonavit_fonacot
+#: code:addons/hr_infonavit_fonacot/models/fonacot_report.py:0
+#, python-format
+msgid "Monthly Discount"
+msgstr "Descuento Mensual"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_fonacot_credit_line__fee
+#: model_terms:ir.ui.view,arch_db:hr_infonavit_fonacot.hr_employee_infonavit_fonacot_inherit_form
+#: model_terms:ir.ui.view,arch_db:hr_infonavit_fonacot.view_hr_fonacot_credit_line_form
+msgid "Monthly fee"
+msgstr "Cuota mensual"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_history__move_type
+msgid "Move type"
+msgstr "Tipo de movimiento"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_fonacot_credit_line__my_activity_date_deadline
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_line__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Mi fecha límite de actividad"
+
+#. module: hr_infonavit_fonacot
+#: code:addons/hr_infonavit_fonacot/models/fonacot_report.py:0
+#, python-format
+msgid "Net Days Worked"
+msgstr "Neto Días Trabajados"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_fonacot_credit_line__activity_date_deadline
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_line__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Fecha límite para la próxima actividad"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_fonacot_credit_line__activity_summary
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_line__activity_summary
+msgid "Next Activity Summary"
+msgstr "Resumen de la siguiente actividad"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_fonacot_credit_line__activity_type_id
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_line__activity_type_id
+msgid "Next Activity Type"
+msgstr "Siguiente tipo de actividad"
+
+#. module: hr_infonavit_fonacot
+#: model_terms:ir.ui.view,arch_db:hr_infonavit_fonacot.search_template_credits_filter
+msgid "No Filter"
+msgstr "No Filtrar"
+
+#. module: hr_infonavit_fonacot
+#: code:addons/hr_infonavit_fonacot/models/fonacot_report.py:0
+#, python-format
+msgid "No. Emp."
+msgstr ""
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_fonacot_credit_line__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_line__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Número de acciones"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_fonacot_credit_line__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_line__message_has_error_counter
+msgid "Number of errors"
+msgstr "Número de errores"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,help:hr_infonavit_fonacot.field_hr_fonacot_credit_line__message_needaction_counter
+#: model:ir.model.fields,help:hr_infonavit_fonacot.field_hr_infonavit_credit_line__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Número de mensajes que requieren una acción"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,help:hr_infonavit_fonacot.field_hr_fonacot_credit_line__message_has_error_counter
+#: model:ir.model.fields,help:hr_infonavit_fonacot.field_hr_infonavit_credit_line__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Número de mensajes con error de entrega"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,help:hr_infonavit_fonacot.field_hr_fonacot_credit_line__message_unread_counter
+#: model:ir.model.fields,help:hr_infonavit_fonacot.field_hr_infonavit_credit_line__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Número de mensajes no leídos"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_fonacot_credit_line_payslip__slip_id
+msgid "Payslip"
+msgstr "Nómina"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_fonacot_credit_line_payslip__payslip_run_id
+msgid "Payslip Batches"
+msgstr "Lotes de nómina"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields.selection,name:hr_infonavit_fonacot.selection__hr_infonavit_credit_change_line__type__percentage
+#: model:ir.model.fields.selection,name:hr_infonavit_fonacot.selection__hr_infonavit_credit_line__type__percentage
+msgid "Percentage"
+msgstr "Porcentaje"
+
+#. module: hr_infonavit_fonacot
+#: code:addons/hr_infonavit_fonacot/models/fonacot_report.py:0
+#, python-format
+msgid "Period"
+msgstr "Periodo"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model,name:hr_infonavit_fonacot.model_hr_employee_public
+msgid "Public Employee"
+msgstr "Empleado Público"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields.selection,name:hr_infonavit_fonacot.selection__hr_infonavit_credit_history__move_type__reboot
+msgid "Reboot"
+msgstr "Reiniciar"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model,name:hr_infonavit_fonacot.model_hr_fonacot_credit_line_payslip
+msgid "Relational Model for payslip and fonacot credit"
+msgstr "Modelo relacional de nómina y crédito fonacot"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_fonacot_credit_line__activity_user_id
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_line__activity_user_id
+msgid "Responsible User"
+msgstr "Usuario responsable"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_fonacot_credit_line__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_line__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Error de entrega de SMS"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_fonacot_credit_line__state
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_line__state
+msgid "State"
+msgstr "Estado"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,help:hr_infonavit_fonacot.field_hr_fonacot_credit_line__activity_state
+#: model:ir.model.fields,help:hr_infonavit_fonacot.field_hr_infonavit_credit_line__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Estado basado en actividades\n"
+"Vencido: la fecha de vencimiento ya ha pasado\n"
+"Hoy: la fecha de actividad es hoy\n"
+"Planificado: actividades futuras."
+
+#. module: hr_infonavit_fonacot
+#: code:addons/hr_infonavit_fonacot/models/fonacot_report.py:0
+#, python-format
+msgid "Structure"
+msgstr "Estructura"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.constraint,message:hr_infonavit_fonacot.constraint_hr_fonacot_credit_line_fonacot_credit_number_uniq
+msgid "There is already a FONACOT credit registered with this same number."
+msgstr "Ya existe un crédito FONACOT registrado con este mismo número."
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.constraint,message:hr_infonavit_fonacot.constraint_hr_infonavit_credit_line_infonavit_credit_number_company_uniq
+msgid "There is already an employee with this INFONAVIT credit number."
+msgstr "Ya existe un empleado con este número de crédito INFONAVIT."
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.constraint,message:hr_infonavit_fonacot.constraint_hr_employee_fonacot_customer_number_uniq
+msgid ""
+"There is already an employee with this registered FONACOT customer number."
+msgstr "Ya existe un empleado con este número de cliente FONACOT registrado."
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_fonacot_credit_line_payslip__timbre
+msgid "Timbre?"
+msgstr "¿Timbre?"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_change_line__type
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_line__type
+msgid "Type"
+msgstr "Tipo"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,help:hr_infonavit_fonacot.field_hr_fonacot_credit_line__activity_exception_decoration
+#: model:ir.model.fields,help:hr_infonavit_fonacot.field_hr_infonavit_credit_line__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Tipo de actividad de excepción registrada."
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields.selection,name:hr_infonavit_fonacot.selection__hr_infonavit_credit_line__type__umi
+msgid "UMI"
+msgstr ""
+
+#. module: hr_infonavit_fonacot
+#: code:addons/hr_infonavit_fonacot/models/hr_credit_infonavit_fonacot.py:0
+#, python-format
+msgid "Undefined bimonthly start or end period."
+msgstr "Periodo de inicio o finalización bimestral indefinido."
+
+#. module: hr_infonavit_fonacot
+#: code:addons/hr_infonavit_fonacot/models/hr_credit_infonavit_fonacot.py:0
+#, python-format
+msgid "Undefined start or end period."
+msgstr "Período de inicio o finalización indefinido."
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_fonacot_credit_line__message_unread
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_line__message_unread
+msgid "Unread Messages"
+msgstr "Mensajes no leídos"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_fonacot_credit_line__message_unread_counter
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_line__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Contador de mensajes no leídos"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields.selection,name:hr_infonavit_fonacot.selection__hr_infonavit_credit_change_line__type__vsm
+msgid "V.S.M"
+msgstr ""
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_change_line__value
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_line__value
+msgid "Value"
+msgstr "Valor"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_fonacot_credit_line__website_message_ids
+#: model:ir.model.fields,field_description:hr_infonavit_fonacot.field_hr_infonavit_credit_line__website_message_ids
+msgid "Website Messages"
+msgstr "Mensajes del sitio web"
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model.fields,help:hr_infonavit_fonacot.field_hr_fonacot_credit_line__website_message_ids
+#: model:ir.model.fields,help:hr_infonavit_fonacot.field_hr_infonavit_credit_line__website_message_ids
+msgid "Website communication history"
+msgstr "Historial de comunicación del sitio web"
+
+#. module: hr_infonavit_fonacot
+#: code:addons/hr_infonavit_fonacot/models/fonacot_report.py:0
+#, python-format
+msgid "Worked Days"
+msgstr "Días Trabajados"
+
+#. module: hr_infonavit_fonacot
+#: code:addons/hr_infonavit_fonacot/models/fonacot_report.py:0
+#: code:addons/hr_infonavit_fonacot/models/infonavit_report.py:0
+#, python-format
+msgid "XLSX"
+msgstr ""
+
+#. module: hr_infonavit_fonacot
+#: code:addons/hr_infonavit_fonacot/models/hr_credit_infonavit_fonacot.py:0
+#, python-format
+msgid "You must complete the field with the FONACOT customer number."
+msgstr "Debe completar el campo con el número de cliente FONACOT."
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model,name:hr_infonavit_fonacot.model_hr_fonacot_credit_line
+msgid "hr.fonacot.credit.line"
+msgstr ""
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model,name:hr_infonavit_fonacot.model_hr_infonavit_credit_change_line
+msgid "hr.infonavit.credit.change.line"
+msgstr ""
+
+#. module: hr_infonavit_fonacot
+#: model:ir.model,name:hr_infonavit_fonacot.model_hr_infonavit_credit_history
+msgid "hr.infonavit.credit.history"
+msgstr ""

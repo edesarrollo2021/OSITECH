@@ -1,0 +1,13 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_leave_employee_portal_mx,Leaves Employee Portal,hr_holidays.model_hr_leave,base.group_portal,1,1,1,0
+access_hr_leave_type_employee_portal_mx, Leaves Type Employee Portal,hr_holidays.model_hr_leave_type,base.group_portal,1,1,1,0
+access_hr_leave_allocation_employee_portal_mx, Leaves Allocation Employee Portal,hr_holidays.model_hr_leave_allocation,base.group_portal,1,0,0,0
+access_hr_leave_inhability_portal_mx,hr.leave.inhability.portal,hr_holidays_edi_mx.model_hr_leave_inhability,base.group_portal,1,0,0,0
+access_hr_leave_classification_portal_mx,hr_leave_classification_portal,hr_holidays_edi_mx.model_hr_leave_classification,base.group_portal,1,0,0,0
+access_hr_leave_category_portal_mx,hr_leave_category_portal_mx,hr_holidays_edi_mx.model_hr_leave_category,base.group_portal,1,0,0,0
+access_hr_leave_subcategory_portal_mx,hr_leave_subcategory_portal_mx,hr_holidays_edi_mx.model_hr_leave_subcategory,base.group_portal,1,0,0,0
+access_hr_employee_public_portal,hr.employee_portal,hr.model_hr_employee_public,base.group_portal,1,0,0,0
+access_calendar_event_portal,calendar.event.portal,calendar.model_calendar_event,base.group_portal,1,1,1,0
+access_mail_activity_portal,mail.activity.portal,mail.model_mail_activity,base.group_portal,1,1,1,0
+access_calendar_attendee_portal,calendar.attendee.portal,calendar.model_calendar_attendee,base.group_portal,1,1,1,0
+access_resource_calendar_leaves_portal,resource.calendar.leaves.portal,resource.model_resource_calendar_leaves,base.group_portal,1,1,1,0

@@ -1,0 +1,876 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_portal_mx
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-25 13:53+0000\n"
+"PO-Revision-Date: 2022-01-25 13:53+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holiday_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_leave_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_details
+msgid "<em class=\"text-muted\"><small>No description</small></em>"
+msgstr "<em class=\"text-muted\"><small>Sin descripción</small></em>"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holidays_request_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_requests_details
+msgid "<em class=\"text-muted\"><small>No info</small></em>"
+msgstr ""
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holiday_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holidays_request_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_leave_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_requests_details
+msgid "<em class=\"text-muted\"><small>Without description</small></em>"
+msgstr "<em class=\"text-muted\"><small>Sin descripción</small></em>"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_my_home_menu_inability
+msgid "<em>Holidays</em>"
+msgstr "<em>Vacaciones</em>"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_my_home_menu_inability
+msgid "<em>Inabilities</em>"
+msgstr "<em>Incapacidades</em>"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_my_home_menu_inability
+msgid "<em>Personal Days</em>"
+msgstr "<em>Días Personales</em>"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.holiday_submited
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.leave_submited
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.personal_days_submited
+msgid ""
+"<i class=\"fa fa-check-circle fa-2x text-success\" role=\"img\" aria-"
+"label=\"Success\" title=\"Success\"/>"
+msgstr ""
+"<i class=\"fa fa-check-circle fa-2x text-success\" role=\"img\" aria-"
+"label=\"Éxito\" title=\"Éxito\"/>"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.error_permission
+msgid ""
+"<i class=\"fa fa-times-circle fa-2x text-danger\" role=\"img\" aria-"
+"label=\"Fail\" title=\"Fail\"/>"
+msgstr ""
+"<i class=\"fa fa-times-circle fa-2x text-danger\" role=\"img\" aria-"
+"label=\"Fallido\" title=\"Fallido\"/>"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holiday_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_leave_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_details
+msgid "<small class=\"text-right\">State:</small>"
+msgstr "<small class=\"text-right\">Estado:</small>"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holidays_request_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_requests_details
+msgid "<small class=\"text-right\">Status:</small>"
+msgstr "<small class=\"text-right\">Estado:</small>"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.holidays_requests
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.personal_days_requests
+msgid "<span class=\"fa fa-download\"/>Download"
+msgstr "<span class=\"fa fa-download\"/>Descargar"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_my_holidays
+msgid "<span class=\"fa fa-pencil-square-o\"/>Holiday New"
+msgstr "<span class=\"fa fa-pencil-square-o\"/>Nuevas Vacaciones"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_my_inabilities
+msgid "<span class=\"fa fa-pencil-square-o\"/>Leave New"
+msgstr "<span class=\"fa fa-pencil-square-o\"/>Nueva Incapacidad"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_my_personals
+msgid "<span class=\"fa fa-pencil-square-o\"/>Personal Day New"
+msgstr "<span class=\"fa fa-pencil-square-o\"/>Nuevo Día Personal"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holidays_request_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_requests_details
+msgid "<strong class=\"col-lg-2\">Department</strong>"
+msgstr "<strong class=\"col-lg-2\">Departamento/Dirección</strong>"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holiday_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holidays_request_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_requests_details
+msgid "<strong class=\"col-lg-2\">Description Reject</strong>"
+msgstr "<strong class=\"col-lg-2\">Descripción del Rechazo</strong>"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holiday_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holidays_request_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_leave_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_requests_details
+msgid "<strong class=\"col-lg-2\">Description</strong>"
+msgstr "<strong class=\"col-lg-2\">Descripción</strong>"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holidays_request_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_requests_details
+msgid "<strong class=\"col-lg-2\">Employee</strong>"
+msgstr "<strong class=\"col-lg-2\">Empleado</strong>"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holiday_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holidays_request_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_leave_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_requests_details
+msgid "<strong class=\"col-lg-2\">From</strong>"
+msgstr "<strong class=\"col-lg-2\">Desde</strong"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holidays_request_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_requests_details
+msgid "<strong class=\"col-lg-2\">Qty Days</strong>"
+msgstr "<strong class=\"col-lg-2\">Qtd Días</strong>"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holiday_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holidays_request_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_requests_details
+msgid "<strong class=\"col-lg-2\">Reason Cancellation</strong>"
+msgstr "<strong class=\"col-lg-2\">Razón de Cancelación</strong>"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holiday_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holidays_request_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_requests_details
+msgid "<strong class=\"col-lg-2\">Reason Reject</strong>"
+msgstr "<strong class=\"col-lg-2\">Razón de Rechazo</strong>"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holiday_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holidays_request_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_requests_details
+msgid "<strong class=\"col-lg-2\">Reject Cancellation</strong>"
+msgstr "<strong class=\"col-lg-2\">Rechazo de la Cancelación</strong>"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holiday_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holidays_request_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_leave_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_requests_details
+msgid "<strong class=\"col-lg-2\">Reported by</strong>"
+msgstr "<strong class=\"col-lg-2\">Reportado por</strong>"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holiday_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holidays_request_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_leave_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_requests_details
+msgid "<strong class=\"col-lg-2\">Reported on</strong>"
+msgstr "<strong class=\"col-lg-2\">Reportado el</strong>"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holiday_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holidays_request_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_leave_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_requests_details
+msgid "<strong class=\"col-lg-2\">Responsible comment</strong>"
+msgstr "<strong class=\"col-lg-2\">Comentario del responsable</strong>"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holiday_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holidays_request_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_leave_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_requests_details
+msgid "<strong class=\"col-lg-2\">To</strong>"
+msgstr "<strong class=\"col-lg-2\">Hasta</strong>"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holidays_request_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_requests_details
+msgid "<strong class=\"col-lg-2\">Type</strong>"
+msgstr "<strong class=\"col-lg-2\">Tipo</strong>"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.personal_days_unavailable
+msgid ""
+"<strong>You do not have days available to request personal days.</strong>"
+msgstr ""
+"<strong>No tienes días disponibles para solicitar días personales.</strong>"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.holidays_unavailable
+msgid "<strong>You do not have days available to request vacations.</strong>"
+msgstr ""
+"<strong>No tienes días disponibles para solicitar vacaciones.</strong>"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holidays_request_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_requests_details
+msgid "Accept Cancellation"
+msgstr "Aceptar Cancelación"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holidays_request_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_requests_details
+msgid "Additional Information"
+msgstr "Información Adicional"
+
+#. module: hr_portal_mx
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#, python-format
+msgid "All"
+msgstr "Todo"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holidays_request_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_requests_details
+msgid "Approve"
+msgstr "Aprobar"
+
+#. module: hr_portal_mx
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#, python-format
+msgid "Approved"
+msgstr "Aprobado"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.leave_submit
+msgid "Attachment(s)"
+msgstr "Adjunto(s)"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holidays_request_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_requests_details
+msgid "Cancel request"
+msgstr "Cancelar solicitud"
+
+#. module: hr_portal_mx
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#, python-format
+msgid "Canceled"
+msgstr "Cancelado"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.leave_submit
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_leave_details
+msgid "Category"
+msgstr "Categoría"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.leave_submit
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_leave_details
+msgid "Classification"
+msgstr "Clasificación"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holiday_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holidays_request_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_leave_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_requests_details
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_my_holidays
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_my_inabilities
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_my_personals
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holiday_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holidays_request_details
+msgid "Current stage of this holiday"
+msgstr "Etapa actual de estas vacaciones"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_leave_details
+msgid "Current stage of this leave"
+msgstr "Etapa actual de esta ausencia"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_requests_details
+msgid "Current stage of this personal day"
+msgstr "Etapa actual de esta jornada personal"
+
+#. module: hr_portal_mx
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_my_holidays
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_my_inabilities
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_my_personals
+#, python-format
+msgid "Date From"
+msgstr "Desde"
+
+#. module: hr_portal_mx
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#, python-format
+msgid "Date To"
+msgstr "Hasta"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_my_holidays
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_my_inabilities
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_my_personals
+msgid "Date to"
+msgstr "Hasta"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holidays_request_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_requests_details
+msgid "Description"
+msgstr "Descripción"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.holiday_submit
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.leave_submit
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.personal_days_submit
+msgid "Description *"
+msgstr "Descripción *"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holiday_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_details
+msgid "Download Document"
+msgstr "Descargar Documento"
+
+#. module: hr_portal_mx
+#. openerp-web
+#: code:addons/hr_portal_mx/static/src/xml/portal_mexico.xml:0
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.holiday_submit
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.personal_days_submit
+#, python-format
+msgid "Días disponibles de"
+msgstr ""
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holiday_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holidays_request_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_requests_details
+msgid "Enter additional information ..."
+msgstr "Agregar información adicional ..."
+
+#. module: hr_portal_mx
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_leave_details
+#, python-format
+msgid "Folio"
+msgstr ""
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.leave_submit
+msgid "Folio *"
+msgstr ""
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.holidays_requests
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.personal_days_requests
+msgid "From"
+msgstr "Desde"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.holiday_submit
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.leave_submit
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.personal_days_submit
+msgid "From *"
+msgstr "Desde *"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holiday_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holidays_request_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_leave_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_requests_details
+msgid "History"
+msgstr "Historial"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_my_holidays
+msgid "Holiday"
+msgstr "Vacaciones"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.holiday_submit
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holiday_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_my_holidays
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_my_home_menu_inability
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_my_home_mx
+msgid "Holidays"
+msgstr "Vacaciones"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.holidays_requests
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_my_home_menu_inability
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_my_home_mx
+msgid "Holidays Request"
+msgstr "Solicitud de Vacaciones"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holidays_request_details
+msgid "Holidays Requests"
+msgstr "Solicitudes de Vacaciones"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.holidays_unavailable
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.personal_days_unavailable
+msgid "Home"
+msgstr "Inicio"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.leave_submit
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_leave_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_my_home_menu_inability
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_my_home_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_my_inabilities
+msgid "Inabilities"
+msgstr "Incapacidades"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holiday_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_details
+msgid "Information"
+msgstr "Información"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_leave_details
+msgid "Leave Type"
+msgstr "Tipo de Ausencia"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_my_inabilities
+msgid "Leave type"
+msgstr "Tipo de Ausencia"
+
+#. module: hr_portal_mx
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#, python-format
+msgid "More Recent"
+msgstr "Más Reciente"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.holidays_unavailable
+msgid "My Holidays"
+msgstr "Mis Vacaciones"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.personal_days_unavailable
+msgid "My Personal Days"
+msgstr "Mis Días Personales"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.holidays_requests
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.personal_days_requests
+msgid "Name"
+msgstr "Nombre"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.holiday_submit
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.holidays_unavailable
+msgid "New Holiday"
+msgstr "Nueva Vacaciones"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.leave_submit
+msgid "New Inability"
+msgstr "Nueva Incapacidad"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.personal_days_submit
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.personal_days_unavailable
+msgid "New Personal Day"
+msgstr "Nuevo Día Personal"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.personal_days_unavailable
+msgid "No personal days available"
+msgstr "No hay días personales disponibles"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.holidays_unavailable
+msgid "No vacation days available"
+msgstr "No hay días de vacaciones disponibles"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.holidays_requests
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.personal_days_requests
+msgid "Nro"
+msgstr ""
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_my_holidays
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_my_inabilities
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_my_personals
+msgid "Nro."
+msgstr ""
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.personal_days_submit
+msgid "Personal Day"
+msgstr "Día Personal"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_details
+msgid "Personal Day Type"
+msgstr "Tipo de Día Personal"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_my_home_menu_inability
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_my_home_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_my_personals
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_details
+msgid "Personal Days"
+msgstr "Días personales"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.personal_days_requests
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_my_home_menu_inability
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_my_home_mx
+msgid "Personal Days Request"
+msgstr "Solicitud de Días Personales"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_requests_details
+msgid "Personal Days Requests"
+msgstr "Solicitudes de días personales"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.holidays_requests
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.personal_days_requests
+msgid "Qty. Days"
+msgstr "Cant. Días"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holidays_request_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_requests_details
+msgid "Reason for rejection"
+msgstr "Razón de rechazo"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holidays_request_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_requests_details
+msgid "Reject"
+msgstr "Rechazar"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holidays_request_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_requests_details
+msgid "Reject Cancellation"
+msgstr "Rechazar Cancelación"
+
+#. module: hr_portal_mx
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#, python-format
+msgid "Rejected"
+msgstr "Rechazado"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.holidays_requests
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.personal_days_requests
+msgid "Report"
+msgstr "Reporte"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holiday_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_details
+msgid "Request Cancel"
+msgstr "Solicitar Cancelación"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holiday_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_details
+msgid "Request Cancellation"
+msgstr "Solicitar Cancelación"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.leave_submited
+msgid "Return to my disabilities"
+msgstr "Regresar a mis incapacidades"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.holiday_submited
+msgid "Return to my holidays"
+msgstr "Regresar a mis vacaciones"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.error_permission
+msgid "Return to my home"
+msgstr "Regresar a Inicio"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.personal_days_submited
+msgid "Return to my personal day"
+msgstr "Regresar a mis días personales"
+
+#. module: hr_portal_mx
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#, python-format
+msgid "Search <span class=\"nolabel\"> (in Content)</span>"
+msgstr "Search <span class=\"nolabel\"> (en Contenido)</span>"
+
+#. module: hr_portal_mx
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#, python-format
+msgid "Search in All"
+msgstr "Buscar por Todo"
+
+#. module: hr_portal_mx
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#, python-format
+msgid "Search in Employee"
+msgstr "Buscar por Empleado"
+
+#. module: hr_portal_mx
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#, python-format
+msgid "Search in Employee Enrollment"
+msgstr "Buscar por Matrícula de Empleado"
+
+#. module: hr_portal_mx
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#, python-format
+msgid "Search in Period"
+msgstr "Buscar por Periodo"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.holiday_submit
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.leave_submit
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.personal_days_submit
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holiday_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holidays_request_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_requests_details
+msgid "Send"
+msgstr "Enviar"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holiday_details
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_personal_days_details
+msgid "Sign Document"
+msgstr "Firmar Documento"
+
+#. module: hr_portal_mx
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.holidays_requests
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.personal_days_requests
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_my_holidays
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_my_inabilities
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_my_personals
+#, python-format
+msgid "State"
+msgstr "Estado"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.leave_submit
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_leave_details
+msgid "Subcategory"
+msgstr "Subcategoría"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.leave_submited
+msgid "Thank you for registering your disability"
+msgstr "Gracias por registrar tu incapacidad"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.holiday_submited
+msgid "Thank you for registering your holiday"
+msgstr "Gracias por registrar tus vacaciones"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.personal_days_submited
+msgid "Thank you for registering your personal day"
+msgstr "Gracias por registrar su día personal"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.holidays_requests
+msgid "There are currently no holidays requests your account."
+msgstr "Actualmente no hay solicitudes de vacaciones en su cuenta."
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_my_holidays
+msgid "There are currently no holidays your account."
+msgstr "Actualmente no hay vacaciones en su cuenta."
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_my_inabilities
+msgid "There are currently no inabilities your account."
+msgstr "Actualmente no hay incapacidades en su cuenta."
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.personal_days_requests
+msgid "There are currently no personal days requests your account."
+msgstr "Actualmente no hay solicitudes de días personales en su cuenta."
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_my_personals
+msgid "There are currently no personal days your account."
+msgstr "Actualmente no hay días personales en su cuenta."
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.error_dowload_economicdays
+msgid "This document could not be downloaded"
+msgstr "Este documento no se pudo descargar"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.holidays_requests
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.personal_days_requests
+msgid "To"
+msgstr "Hasta"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.holiday_submit
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.leave_submit
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.personal_days_submit
+msgid "To *"
+msgstr "Hasta *"
+
+#. module: hr_portal_mx
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#, python-format
+msgid "To Approve"
+msgstr "Aprobar"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.holidays_requests
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.personal_days_requests
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_my_personals
+msgid "Type"
+msgstr "Tipo"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.holiday_submit
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.leave_submit
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.personal_days_submit
+msgid "Type of Absence"
+msgstr "Tipo de Ausencia"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.leave_submit
+msgid "Type of Disability"
+msgstr "Tipo de Incapacidad"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_leave_details
+msgid "Type of disability"
+msgstr "Tipo de incapacidad"
+
+#. module: hr_portal_mx
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#, python-format
+msgid "Validation Error : %s"
+msgstr "Error de Validación : %s"
+
+#. module: hr_portal_mx
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#, python-format
+msgid "Validation Error : Holidays must be requested 1 days in advance."
+msgstr "Error de Validación : Las vacaciones deben solicitarse con 1 día de antelación."
+
+#. module: hr_portal_mx
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#, python-format
+msgid "Validation Error : Personal Days must be requested 1 days in advance."
+msgstr "Error de Validación: los días personales deben solicitarse con 1 día de anticipación."
+
+#. module: hr_portal_mx
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#, python-format
+msgid "Validation Error : The start date must be before the end date."
+msgstr "Error de Validación: la fecha de inicio debe ser anterior a la fecha de finalización."
+
+#. module: hr_portal_mx
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#, python-format
+msgid ""
+"Validation Error : You are selecting more days than are available for the "
+"selected period."
+msgstr ""
+"Error de Validación: está seleccionando más días de los que están disponibles "
+"para el período seleccionado."
+
+#. module: hr_portal_mx
+#: code:addons/hr_portal_mx/controllers/portal.py:0
+#, python-format
+msgid "Validation Error : You cannot request more than one personal day."
+msgstr "Error de Validación: No se puede solicitar más de un día personal."
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.holidays_requests
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.personal_days_requests
+msgid "Without proof"
+msgstr "Sin comprobante"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.error_permission
+msgid "You do not have permission to access this site"
+msgstr "No tienes permiso para acceder a este sitio"
+
+#. module: hr_portal_mx
+#: model_terms:ir.ui.view,arch_db:hr_portal_mx.portal_holiday_details
+msgid "holiday Type"
+msgstr "Tipo de vacaciones"

@@ -1,0 +1,194 @@
+<cfdi:Comprobante
+    xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv33.xsd"
+    xmlns:cfdi="http://www.sat.gob.mx/cfd/3"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    Version="3.3"
+    {% if inv.serie %} Serie="{{ inv.serie }}" {% endif %}
+    {% if inv.number %} Folio="{{ inv.number }}" {% endif %}
+    Fecha="{{ inv.date_invoice_tz }}"
+    Sello=""
+    {% if inv.payment_policy %}FormaPago="{{ inv.payment_policy }}" {% endif %}
+    NoCertificado="{{ inv.certificate_number }}"
+    Certificado="{{ inv.certificate }}"
+    {% if inv.conditions %} CondicionesDePago="{{ inv.conditions }}" {% endif %}
+    SubTotal="{{ inv.subtotal or 0.0 }}"
+    {% if inv.discount_amount %} Descuento="{{ inv.discount_amount }}" {% endif %}
+    Moneda="{{ inv.currency }}"
+    {% if inv.rate %} TipoCambio="{{ inv.rate }}" {% endif %}
+    Total="{{ inv.amount_total or 0.0}}"
+    TipoDeComprobante="{{ inv.document_type }}"
+    {% if inv.pay_method %} MetodoPago="{{ inv.pay_method }}" {% endif %}
+    {% if inv.emitter_zip %} LugarExpedicion="{{ inv.emitter_zip }}" {% endif %}
+    {% if inv.confirmation %} Confirmacion="{{ inv.confirmation }}" {% endif %}>
+    {% if inv.cfdi_related_type %}
+        <cfdi:CfdiRelacionados
+            TipoRelacion="{{ inv.cfdi_related_type }}">
+            {% for cfdi in inv.cfdi_related %}
+                <cfdi:CfdiRelacionado UUID="{{ cfdi.uuid }}"/>
+            {% endfor %}
+        </cfdi:CfdiRelacionados>
+    {% endif %}
+    <cfdi:Emisor
+        Rfc="{{ inv.emitter_rfc }}"
+        Nombre="{{ inv.emitter_name }}"
+        RegimenFiscal="{{ inv.emitter_fiscal_position or ''  }}"/>
+    <cfdi:Receptor
+        {% if inv.receiver_rfc %} Rfc="{{ inv.receiver_rfc }}" {% endif %}
+        {% if inv.receiver_name %} Nombre="{{ inv.receiver_name }}" {% endif %}
+        {% if inv.receiver_country %} ResidenciaFiscal="{{ inv.receiver_country }}" {% endif %}
+        {% if inv.receiver_reg_trib and inv.receiver_reg_trib != 'NA' %} NumRegIdTrib="{{ inv.receiver_reg_trib }}" {% endif %}
+        UsoCFDI="{{ inv.receiver_use_cfdi }}"/>
+    <cfdi:Conceptos>
+        {% for line in inv.invoice_lines %}
+        <cfdi:Concepto
+            {% if line.code_sat %} ClaveProdServ="{{ line.code_sat }}" {% endif %}
+            {% if line.code %} NoIdentificacion="{{ line.code }}" {% endif %}
+            Cantidad="{{ line.quantity }}"
+            {% if line.code_unit %} ClaveUnidad="{{ line.code_unit }}" {% endif %}
+            {% if line.unit %} Unidad="{{ line.unit }}" {% endif %}
+            Descripcion="{{ line.name }}"
+            ValorUnitario="{{ line.price_unit or 0.0 }}"
+            Importe="{{ line.subtotal_wo_discount or 0.0 }}"
+            {% if line.discount %} Descuento="{{ line.discount }}" {% endif %}>
+            {% if line.taxes %}
+                <cfdi:Impuestos>
+                    {% if line.taxes.transferred %}
+                        <cfdi:Traslados>
+                        {% for tax in line.taxes.transferred %}
+                            <cfdi:Traslado
+                                Base="{{ tax.base or 0.0  }}"
+                                Impuesto="{{ tax.name or 0.0 }}"
+                                TipoFactor="{{ tax.type or 0.0 }}"
+                                {% if tax.type != 'Exento' %}
+                                    TasaOCuota="{{ tax.rate or 0.0 }}"
+                                    Importe="{{ tax.amount or 0.0 }}"
+                                {% endif %}/>
+                        {% endfor %}
+                        </cfdi:Traslados>
+                    {% endif %}
+                    {% if line.taxes.withholding %}
+                        <cfdi:Retenciones>
+                        {% for tax in line.taxes.withholding %}
+                            <cfdi:Retencion
+                                Base="{{ tax.base or 0.0  }}"
+                                Impuesto="{{ tax.name or 0.0 }}"
+                                TipoFactor="{{ tax.type or 0.0 }}"
+                                TasaOCuota="{{ tax.rate or 0.0 }}"
+                                Importe="{{ tax.amount or 0.0 }}"/>
+                        {% endfor %}
+                        </cfdi:Retenciones>
+                    {% endif %}
+                </cfdi:Impuestos>
+            {% endif %}
+            {% for value in line.customs_number %}
+                <cfdi:InformacionAduanera
+                    NumeroPedimento="{{ value.number }}"/>
+            {% endfor %}
+        </cfdi:Concepto>
+        {% endfor %}
+    </cfdi:Conceptos>
+    {% if inv.taxes.transferred or inv.taxes.withholding %}
+    <cfdi:Impuestos
+        {% if inv.taxes.transferred %} TotalImpuestosTrasladados="{{ inv.taxes.total_transferred }}" {% endif %}
+        {% if inv.taxes.withholding %} TotalImpuestosRetenidos="{{ inv.taxes.total_withhold }}" {% endif %}>
+            {%if inv.taxes.withholding %}
+            <cfdi:Retenciones>
+                {%for withhold in inv.taxes.withholding %}
+                    <cfdi:Retencion
+                        Importe="{{ withhold.amount or 0.0 }}"
+                        Impuesto="{{ withhold.name }}"/>
+                {% endfor %}
+            </cfdi:Retenciones>
+            {% endif %}
+            {% if inv.taxes.transferred %}
+            <cfdi:Traslados>
+                {% for tax in inv.taxes.transferred %}
+                    <cfdi:Traslado
+                        Impuesto="{{ tax.name }}"
+                        TipoFactor="{{ tax.type }}"
+                        TasaOCuota="{{ tax.rate or 0.0 }}"
+                        Importe="{{ tax.amount or 0.0 }}"/>
+                {% endfor %}
+            </cfdi:Traslados>
+            {% endif %}
+    </cfdi:Impuestos>
+    {% endif %}
+    <cfdi:Complemento>
+        {% if inv.l10n_mx_edi_implocal %}
+          {% if inv.l10n_mx_edi_implocal.total_transferred_local > 0 or inv.l10n_mx_edi_implocal.total_withold_local > 0 %}
+             <implocal:ImpuestosLocales
+              xmlns:implocal="http://www.sat.gob.mx/implocal"
+              version="1.0"
+              TotaldeRetenciones="{{ inv.l10n_mx_edi_implocal.total_withold_local }}"
+              TotaldeTraslados="{{ inv.l10n_mx_edi_implocal.total_transferred_local }}">
+                 {% for tax_local in inv.l10n_mx_edi_implocal.local_taxes_transferred %}
+                     <implocal:TrasladosLocales
+                      ImpLocTrasladado="{{ tax_local.name}}"
+                      TasadeTraslado="{{ tax_local.amount}}"
+                      Importe="{{ tax_local.import}}"
+                     />
+                 {% endfor %}
+                 {% for tax_local in inv.l10n_mx_edi_implocal.local_taxes_withold %}
+                     <implocal:RetencionesLocales
+                      ImpLocRetenido="{{ tax_local.name}}"
+                      TasadeRetencion="{{ tax_local.amount}}"
+                      Importe="{{ tax_local.import}}"
+                     />
+                 {% endfor %}
+             </implocal:ImpuestosLocales>
+          {% endif %}
+        {% endif %}
+        {% if inv.l10n_mx_edi_external_trade %}
+            <cce11:ComercioExterior
+                   xmlns:cce11="http://www.sat.gob.mx/ComercioExterior11"
+                   Version="1.1"
+                   TipoOperacion="2"
+                   ClaveDePedimento="A1"
+                   CertificadoOrigen="{{ '1' if inv.l10n_mx_edi_cer_source else '0' }}"
+                   {% if inv.l10n_mx_edi_cer_source %} NumCertificadoOrigen="{{ inv.l10n_mx_edi_num_cer_source or '' }}" {% endif %}
+                   {% if inv.l10n_mx_edi_num_exporter %} NumeroExportadorConfiable="{{ inv.l10n_mx_edi_num_exporter or '' }}" {% endif %}
+                   Incoterm="{{ inv.l10n_mx_edi_incoterm }}"
+                   Subdivision="0"
+                   {% if inv.comment %} Observaciones="{{ inv.comment }}" {% endif %}
+                   TipoCambioUSD="{{ inv.amount_usd or 0.0}}"
+                   TotalUSD="{{ inv.total_usd or 0.0 }}">
+               <cce11:Emisor {% if inv.emitter_l10n_mx_edi_curp %} Curp="inv.emitter_l10n_mx_edi_curp or ''" {% endif %}>
+                   <cce11:Domicilio
+                       Calle="{{ inv.emitter_street or '' }}"
+                       {% if inv.emitter_exterior_no %} NumeroExterior="{{ inv.emitter_exterior_no or '' }}" {% endif %}
+                       {% if inv.emitter_interior_no %} NumeroInterior="{{ inv.emitter_interior_no or '' }}" {% endif %}
+                       {% if inv.emitter_colony %} Colonia="{{ inv.emitter_colony or '' }}" {% endif %}
+                       {% if inv.emitter_l10n_mx_edi_locality_code %} Localidad="{{ inv.emitter_l10n_mx_edi_locality_code or '' }}" {% endif %}
+                       {% if inv.emitter_l10n_mx_edi_city_code %} Municipio="{{ inv.emitter_l10n_mx_edi_city_code or '' }}" {% endif %}
+                       Estado="{{ inv.emmiter_state_l10n_mx_edi_code or '' }}"
+                       Pais="{{ inv.emitter_country_l10n_mx_edi_code or '' }}"
+                       CodigoPostal="{{ inv.emitter_zip or '' }}"/>
+               </cce11:Emisor>
+               <cce11:Receptor>
+                   <cce11:Domicilio
+                       Calle="{{ inv.receiver_street or '' }}"
+                       {% if inv.receiver_exterior_no %} NumeroExterior="{{ inv.receiver_exterior_no or '' }}" {% endif %}
+                       {% if inv.receiver_interior_no %} NumeroInterior="{{ inv.receiver_interior_no or '' }}" {% endif %}
+                       {% if inv.receiver_colony %} Colonia="{{ inv.receiver_colony or '' }}" {% endif %}
+                       {% if inv.receiver_l10n_mx_edi_locality %} Localidad="{{ inv.receiver_l10n_mx_edi_locality or '' }}" {% endif %}
+                       {% if inv.receiver_l10n_mx_edi_city %} Municipio="{{ inv.receiver_l10n_mx_edi_city or '' }}" {% endif %}
+                       Estado="{{ inv.receiver_state or '' }}"
+                       Pais="{{ inv.receiver_country_l10n_mx_edi_code or '' }}"
+                       CodigoPostal="{{ inv.receiver_zip or '' }}"/>
+               </cce11:Receptor>
+               <cce11:Mercancias>
+                    {% for line in inv.external_trade_invoice_lines %}
+                        <cce11:Mercancia
+                           NoIdentificacion="{{ line.product_default_code or '' }}"
+                           {% if line.product_l10n_mx_edi_tariff_fraction %} FraccionArancelaria="{{ line.product_l10n_mx_edi_tariff_fraction or '' }}" {% endif %}
+                           {% if line.quantity_aduana %} CantidadAduana="{{ line.quantity_aduana or 0.0 }}" {% endif %}
+                           {% if line.product_l10n_mx_edi_umt_aduana_l10n_mx_edi_code_aduana %} UnidadAduana="{{ line.product_l10n_mx_edi_umt_aduana_l10n_mx_edi_code_aduana or '' }}" {% endif %}
+                           {% if line.unit_value_usd %} ValorUnitarioAduana="{{ line.unit_value_usd or 0.0 }}" {% endif %}
+                           ValorDolares="{{ line.usd_value or 0.0 }}">
+                       </cce11:Mercancia>
+                    {% endfor %}
+               </cce11:Mercancias>
+            </cce11:ComercioExterior>
+        {% endif %}
+    </cfdi:Complemento>
+</cfdi:Comprobante>

@@ -1,14 +1,13 @@
 # -*- coding: utf-8 -*-
 
 import ast
+import collections
 
-from odoo import http, models, fields, _
+from odoo import http
 from odoo.http import request
 from odoo.addons.portal.controllers.web import Home
-from odoo.addons.http_routing.models.ir_http import slug
 
 from odoo.addons.web.controllers.main import Home
-from odoo.exceptions import UserError
 
 
 class Home(Home):
@@ -48,8 +47,11 @@ class Website(Home):
 
     @http.route('/', type='http', auth="public", website=True, sitemap=True)
     def index_welcome_aeromar(self, redirect=None, **kw):
-        # uid = request.session.uid
-        return request.render("ot_website_slides.ot_template_welcome_aeromar")
+        uid = request.session.uid
+        if not uid:
+            return request.render("ot_website_slides.ot_template_welcome_aeromar")
+        else:
+            return request.render("ot_website_slides.ot_webHome")
 
 class WebsiteUserRegister(http.Controller):
 
@@ -79,6 +81,12 @@ class WebsiteUserRegister(http.Controller):
             'livechat_username': False}] 
             user = request.env['res.users']
             user.sudo().create(vals_list)
+            user = request.env['res.users'].sudo().search([('login', '=', email3)], limit=1)
+            slide_job = request.env['slide.job.positions'].sudo().search([('job_id', '=', employe_one.job_id.id)], limit=1)
+            employe = request.env['hr.employee'].sudo().search([('work_email', '=', email3)], limit=1)
+            employe.write({"user_id": user.id})
+            group = slide_job.enroll_group_id
+            group.write({'users': [[6, False, [user.id]]]})
             return http.local_redirect('/web/login', query=request.params, keep_hash=True)
         if pasw != '' and repeat_pasw != '' and pasw != repeat_pasw:
             pasw_true = False
@@ -93,12 +101,6 @@ class WebsiteAdresses(http.Controller):
 
     @http.route('/direcciones', type='http', auth="public", website=True)
     def ot_adresses_mx(self, redirect=None, **kw):
-        url = request.httprequest.args.get('kw')
-        print("url", url)
-        
-        
-        
-        
         name_adresse = []
         addresses = request.env['slide.addresses'].sudo().search([])
         for add in addresses:
@@ -107,16 +109,142 @@ class WebsiteAdresses(http.Controller):
             'addresses': addresses,
             'name_adresse': name_adresse,
         }
-        print("\n values", values, "\n")
         return request.render("ot_website_slides.ot_web_adresses", values)
         
+    @http.route('/miplandevidaycarrera', type='http', auth="public", website=True)
+    def ot_my_life_mx(self, redirect=None, **kw):
+        uid = request.session.uid
+        if uid:
+            employe = request.env['hr.employee'].sudo().search([('user_id', '=', uid)], limit=1)
+            values = {
+            "job_pos": employe.job_id.id
+            }
+            return request.render("ot_website_slides.ot_web_my_life", values)
+
+    @http.route('/adresses_mx', type='json', auth="public", website=True)
+    def ot_met_web_user_register(self, redirect=None, **kw):
+        id_add = kw.get("id")
+        addresses = request.env['slide.addresses'].sudo().search([('id', '=', id_add)], limit=1)
+        name_job = []
+        image_job = []
+        position_job = []
+        list_pos = []
+        list_id = []
+        for job in addresses:
+            for name in job.job_positions_ids:
+                name_job.append(name.job_id.name)
+                image_job.append(name.image)
+                list_id.append(name.id)
+                position_job.append(str(name.order_by)[0])
+        counter = collections.Counter(position_job)
+        clients_sort = sorted(counter.items())
+        for val in clients_sort:
+            val_1 = val[1]
+            for dato in range(val_1):
+                list_pos.append(val_1)
+
+        values = {
+            'name_job': name_job,
+            'image_job': image_job,
+            'position_job': position_job,
+            'list_id': list_id,
+            'name_addresses': addresses.direction_id.name,
+            'image_addresses': addresses.image,
+            'list_pos': list_pos
+        }
+        return values
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
+    @http.route('/my_life_mx', type='json', auth="public", website=True)
+    def ot_my_life_mx_register(self, redirect=None, **kw):
+        id_add = kw.get("id")
+        job_position = request.env['slide.job.positions'].sudo().search([('id', '=', id_add)], limit=1)
+        members = request.env['slide.channel'].sudo().search([('enroll_group_ids', 'in', job_position.enroll_group_id.id),('is_published', '=', True)])
+        slide_public = request.env['slide.channel'].sudo().search([('visibility', '=', 'public'), ('is_published', '=', True)])
+        mandatarios = {}
+        public_courses = {}
+        name = ""
+        acronym = ""
+        url = ""
+
+        for public in slide_public:
+            image = public.image_1920 or False
+            url_public = "slides/%s" % public.id
+            if "|" in public.name:
+                position_I = public.name.find('|')
+                name = str(public.name)[position_I +1:]
+                acronym = str(public.name)[0: position_I]
+            else:
+                name = public.name
+                acronym = False
+            public_courses[public.id] = [image, acronym, name, url_public]
+
+        for member in members:
+            image = member.image_1920 or False
+            url = "slides/%s"% member.id
+            if "|" in member.name:
+                position_I = member.name.find('|')
+                name = str(member.name)[position_I +1:]
+                acronym = str(member.name)[0: position_I]
+            else:
+                name = member.name
+                acronym = False
+            mandatarios[member.id] = [image, acronym, name, url]
+
+        values = {
+        'image': job_position.addresses_id.image,
+        'name': job_position.job_id.name,
+        'slide_public': slide_public,
+        'mandatarios': mandatarios,
+        'public_courses': public_courses,
+        }
+        return values
+
+    @http.route('/controller_my_life_mx', type='json', auth="public", website=True)
+    def ot_controller_my_life_mx_register(self, redirect=None, **kw):
+        user_id = request.session.uid
+        employee = request.env['hr.employee'].sudo().search([('user_id', '=', user_id)], limit=1)
+        job_position = request.env['hr.job'].sudo().search([('id', '=', employee.job_id.id)], limit=1)
+        slide_job = request.env['slide.job.positions'].sudo().search([('job_id', '=', job_position.id)], limit=1)
+        members = request.env['slide.channel'].sudo().search(
+            [('enroll_group_ids', 'in', slide_job.enroll_group_id.id), ('is_published', '=', True)])
+        slide_public = request.env['slide.channel'].sudo().search([('visibility', '=', 'public'), ('is_published', '=', True)])
+        mandatarios = {}
+        public_courses = {}
+        name = ""
+        acronym = ""
+
+        for public in slide_public:
+            url_public = "slides/%s" % public.id
+            image = public.image_1920 or False
+            if "|" in public.name:
+                position_I = public.name.find('|')
+                name = str(public.name)[position_I + 1:]
+                acronym = str(public.name)[0: position_I]
+            else:
+                name = public.name
+                acronym = False
+            public_courses[public.id] = [image, acronym, name, url_public]
+
+        for member in members:
+            image = member.image_1920 or False
+            url = "slides/%s" % member.id
+            if "|" in member.name:
+                position_I = member.name.find('|')
+                name = str(member.name)[position_I + 1:]
+                acronym = str(member.name)[0: position_I]
+            else:
+                name = member.name
+                acronym = False
+            mandatarios[member.id] = [image, acronym, name, url]
+
+        values = {
+            'image': slide_job.image,
+            'name': job_position.name,
+            'slide_public': slide_public,
+            'mandatarios': mandatarios,
+            'public_courses': public_courses,
+        }
+
+        return values
+
+

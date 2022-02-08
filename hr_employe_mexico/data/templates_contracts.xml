@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <!--  Pilotos  -->
+    <record id="tmpl_cap_ini_primer_oficial" model="ir.attachment">
+        <field name="name">tmpl_cap_ini_primer_oficial.odt</field>
+        <field name="type">binary</field>
+        <field name="datas" type="base64" file="hr_employe_mexico/templates/pilotos/contrato_capacitación_inicial_aspirante_a_primer_oficial.odt"/>
+    </record>
+
+    <record id="tmpl_planta_primer_oficial" model="ir.attachment">
+        <field name="name">tmpl_planta_primer_oficial.odt</field>
+        <field name="type">binary</field>
+        <field name="datas" type="base64" file="hr_employe_mexico/templates/pilotos/contrato_planta_primer_oficial.odt"/>
+    </record>
+
+    <!--  Sobrecargos  -->
+    <record id="tmpl_cap_init_sobrecargo" model="ir.attachment">
+        <field name="name">tmpl_cap_init_sobrecargo.odt</field>
+        <field name="type">binary</field>
+        <field name="datas" type="base64" file="hr_employe_mexico/templates/sobrecargos/contrato_capacitación_inicial_aspirante_a_sobrecargo.odt"/>
+    </record>
+
+    <record id="tmpl_determinado_sobrecargo" model="ir.attachment">
+        <field name="name">tmpl_determinado_sobrecargo.odt</field>
+        <field name="type">binary</field>
+        <field name="datas" type="base64" file="hr_employe_mexico/templates/sobrecargos/contrato_determinado_aspirante_a_sobrecargo.odt"/>
+    </record>
+
+    <record id="tmpl_planta_sobrecargo" model="ir.attachment">
+        <field name="name">tmpl_planta_sobrecargo.odt</field>
+        <field name="type">binary</field>
+        <field name="datas" type="base64" file="hr_employe_mexico/templates/sobrecargos/contrato_planta_sobrecargo.odt"/>
+    </record>
+
+    <!--  Tierra  -->
+    <record id="tmpl_cap_init_pres_ley" model="ir.attachment">
+        <field name="name">tmpl_cap_init_pres_ley.odt</field>
+        <field name="type">binary</field>
+        <field name="datas" type="base64" file="hr_employe_mexico/templates/tierra/95179n_inicial_prestaciones_de_ley.odt"/>
+    </record>
+
+    <record id="tmpl_planta_pres_ley" model="ir.attachment">
+        <field name="name">tmpl_planta_pres_ley.odt</field>
+        <field name="type">binary</field>
+        <field name="datas" type="base64" file="hr_employe_mexico/templates/tierra/contrato_de_planta_prestaciones_de_ley.odt"/>
+    </record>
+
+    <record id="tmpl_planta_superiores" model="ir.attachment">
+        <field name="name">tmpl_planta_superiores.odt</field>
+        <field name="type">binary</field>
+        <field name="datas" type="base64" file="hr_employe_mexico/templates/tierra/contrato_de_planta_superiores.odt"/>
+    </record>
+
+    <record id="tmpl_determinado_pl" model="ir.attachment">
+        <field name="name">tmpl_determinado_pl.odt</field>
+        <field name="type">binary</field>
+        <field name="datas" type="base64" file="hr_employe_mexico/templates/tierra/contrato_determinado_prestaciones_de_ley.odt"/>
+    </record>
+
+    <record id="tmpl_determinado_superiores" model="ir.attachment">
+        <field name="name">tmpl_determinado_superiores.odt</field>
+        <field name="type">binary</field>
+        <field name="datas" type="base64" file="hr_employe_mexico/templates/tierra/contrato_determinado_superiores.odt"/>
+    </record>
+
+    <record id="tmpl_cap_init_superiores" model="ir.attachment">
+        <field name="name">tmpl_cap_init_superiores.odt</field>
+        <field name="type">binary</field>
+        <field name="datas" type="base64" file="hr_employe_mexico/templates/tierra/pacitaci195179n_inicial_superiores.odt"/>
+    </record>
+
+    <!--  Anexos  -->
+    <record id="tmpl_anexo_contrato_prestaciones_de_ley" model="ir.attachment">
+        <field name="name">tmpl_anexo_contrato_prestaciones_de_ley.odt</field>
+        <field name="type">binary</field>
+        <field name="datas" type="base64" file="hr_employe_mexico/templates/anexo_contrato_prestaciones_de_ley.odt"/>
+    </record>
+
+    <record id="tmpl_anexo_contrato_superiores" model="ir.attachment">
+        <field name="name">tmpl_anexo_contrato_superiores.odt</field>
+        <field name="type">binary</field>
+        <field name="datas" type="base64" file="hr_employe_mexico/templates/anexo_contrato_superiores.odt"/>
+    </record>
+
+
+    </data>
+</odoo>

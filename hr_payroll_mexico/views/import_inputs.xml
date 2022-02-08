@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <record id="action_view_menu_inputs_import" model="ir.actions.act_window">
+        <field name="name">Inputs Structure</field>
+        <field name="res_model">hr.employee.import</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="import_employees.view_employee_import_tree"/>
+        <field name="domain">[('type','=', 'input')]</field>
+        <field name="context">{'input_import': True, 'default_type': 'input'}</field>
+    </record>
+
+    <menuitem
+        id="menu_hr_import_input"
+        name="Import Inputs"
+        action="action_view_menu_inputs_import"
+        parent="hr_payroll_mexico.menu_hr_inputs_payslips"
+        sequence="15"/>
+
+    </data>
+</odoo>

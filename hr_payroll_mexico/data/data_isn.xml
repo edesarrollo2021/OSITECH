@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+    <!-- ISN 2021-->
+    <record id="isn_state_mx_ags_11" model="res.country.state.isn">
+        <field name="name">ESTACION (MEX) CIUDAD DE MEXICO</field>
+        <field name="type_isn">fixed</field>
+        <field name="percent">3</field>
+        <field name="state_id" ref="base.state_mx_df"/>
+    </record>
+    <record id="isn_state_mx_jal_1" model="res.country.state.isn">
+        <field name="name">ESTACION (GDL) GUADALAJARA</field>
+        <field name="type_isn">fixed</field>
+        <field name="percent">2</field>
+        <field name="state_id" ref="base.state_mx_jal"/>
+    </record>
+    <record id="isn_state_mx_jal_2" model="res.country.state.isn">
+        <field name="name">ESTACION (PVR) PUERTO VALLARTA</field>
+        <field name="type_isn">fixed</field>
+        <field name="percent">2</field>
+        <field name="state_id" ref="base.state_mx_jal"/>
+    </record>
+    <record id="isn_state_mx_son_1" model="res.country.state.isn">
+        <field name="name">ESTACION (HMO) HERMOSILLO</field>
+        <field name="type_isn">fixed</field>
+        <field name="percent">2</field>
+        <field name="state_id" ref="base.state_mx_son"/>
+    </record>
+    <record id="isn_state_mx_yuc_1" model="res.country.state.isn">
+        <field name="name">ESTACION (MID) MERIDA</field>
+        <field name="type_isn">fixed</field>
+        <field name="percent">2.5</field>
+        <field name="state_id" ref="base.state_mx_yuc"/>
+    </record>
+    <record id="isn_state_mx_q_roo_1" model="res.country.state.isn">
+        <field name="name">ESTACION (CUN) CANCUN</field>
+        <field name="type_isn">fixed</field>
+        <field name="percent">3</field>
+        <field name="state_id" ref="base.state_mx_q_roo"/>
+    </record>
+    <record id="isn_state_mx_chis_1" model="res.country.state.isn">
+        <field name="name">ESTACION (TGZ) TUXTLA GUTIERREZ</field>
+        <field name="type_isn">fixed</field>
+        <field name="percent">3</field>
+        <field name="state_id" ref="base.state_mx_chis"/>
+    </record>
+    <record id="isn_state_mx_chis_2" model="res.country.state.isn">
+        <field name="name">TAPACHULA (TAP)</field>
+        <field name="type_isn">fixed</field>
+        <field name="percent">3</field>
+        <field name="state_id" ref="base.state_mx_chis"/>
+    </record>
+    <record id="isn_state_mx_mich_1" model="res.country.state.isn">
+        <field name="name">ESTACION (MLM) MORELIA</field>
+        <field name="type_isn">fixed</field>
+        <field name="percent">2</field>
+        <field name="state_id" ref="base.state_mx_mich"/>
+    </record>
+    <record id="isn_state_mx_mich_2" model="res.country.state.isn">
+        <field name="name">ESTACION (LZC) LAZARO CARDENAS</field>
+        <field name="type_isn">fixed</field>
+        <field name="percent">2</field>
+        <field name="state_id" ref="base.state_mx_mich"/>
+    </record>
+    <record id="isn_state_mx_mich_2" model="res.country.state.isn">
+        <field name="name">ESTACION (LZC) LAZARO CARDENAS</field>
+        <field name="type_isn">fixed</field>
+        <field name="percent">2</field>
+        <field name="state_id" ref="base.state_mx_mich"/>
+    </record>
+    <record id="isn_state_mx_tamps_1" model="res.country.state.isn">
+        <field name="name">ESTACION (CVM) CIUDAD VICTORIA</field>
+        <field name="type_isn">fixed</field>
+        <field name="percent">3</field>
+        <field name="state_id" ref="base.state_mx_tamps"/>
+    </record>
+    <record id="isn_state_mx_slp_1" model="res.country.state.isn">
+        <field name="name">ESTACION (SLP) SAN LUIS POTOSI</field>
+        <field name="type_isn">fixed</field>
+        <field name="percent">2.5</field>
+        <field name="state_id" ref="base.state_mx_slp"/>
+    </record>
+    <record id="isn_state_mx_slp_2" model="res.country.state.isn">
+        <field name="name">ESTACION (TSL) TAMUIN</field>
+        <field name="type_isn">fixed</field>
+        <field name="percent">2.5</field>
+        <field name="state_id" ref="base.state_mx_slp"/>
+    </record>
+    <record id="isn_state_mx_col_1" model="res.country.state.isn">
+        <field name="name">ESTACION (CLQ) COLIMA</field>
+        <field name="type_isn">fixed</field>
+        <field name="percent">2</field>
+        <field name="state_id" ref="base.state_mx_col"/>
+    </record>
+    <record id="isn_state_mx_col_2" model="res.country.state.isn">
+        <field name="name">ESTACION (ZLO) MANZANILLO</field>
+        <field name="type_isn">fixed</field>
+        <field name="percent">2</field>
+        <field name="state_id" ref="base.state_mx_col"/>
+    </record>
+    <record id="isn_state_mx_ver_1" model="res.country.state.isn">
+        <field name="name">ESTACION (VER) VERACRUZ</field>
+        <field name="type_isn">fixed</field>
+        <field name="percent">3</field>
+        <field name="state_id" ref="base.state_mx_ver"/>
+    </record>
+    <record id="isn_state_mx_ver_2" model="res.country.state.isn">
+        <field name="name">ESTACION (PAZ) POZA RICA</field>
+        <field name="type_isn">fixed</field>
+        <field name="percent">3</field>
+        <field name="state_id" ref="base.state_mx_ver"/>
+    </record>
+    <record id="isn_state_mx_coah_1" model="res.country.state.isn">
+        <field name="name">ESTACION (PDS) PIEDRAS NEGRAS</field>
+        <field name="type_isn">fixed</field>
+        <field name="percent">2</field>
+        <field name="state_id" ref="base.state_mx_coah"/>
+    </record>
+    <record id="isn_state_mx_coah_2" model="res.country.state.isn">
+        <field name="name">ESTACION (LOV) MONCLOVA</field>
+        <field name="type_isn">fixed</field>
+        <field name="percent">2</field>
+        <field name="state_id" ref="base.state_mx_coah"/>
+    </record>
+    <record id="isn_state_mx_coah_3" model="res.country.state.isn">
+        <field name="name">ESTACION (SLW) SALTILLO</field>
+        <field name="type_isn">fixed</field>
+        <field name="percent">2</field>
+        <field name="state_id" ref="base.state_mx_coah"/>
+    </record>
+    <record id="isn_state_mx_oax_1" model="res.country.state.isn">
+        <field name="name">ESTACION (IZT) IXTEPEC</field>
+        <field name="type_isn">fixed</field>
+        <field name="percent">3</field>
+        <field name="state_id" ref="base.state_mx_oax"/>
+    </record>
+    <record id="isn_state_mx_oax_2" model="res.country.state.isn">
+        <field name="name">ESTACION (PXM) PUERTO ESCONDIDO</field>
+        <field name="type_isn">fixed</field>
+        <field name="percent">3</field>
+        <field name="state_id" ref="base.state_mx_oax"/>
+    </record>
+    <record id="isn_state_mx_oax_3" model="res.country.state.isn">
+        <field name="name">ESTACION (OAX) OAXACA</field>
+        <field name="type_isn">fixed</field>
+        <field name="percent">3</field>
+        <field name="state_id" ref="base.state_mx_oax"/>
+    </record>
+    <record id="isn_state_mx_oax_3" model="res.country.state.isn">
+        <field name="name">ESTACION (OAX) OAXACA</field>
+        <field name="type_isn">fixed</field>
+        <field name="percent">3</field>
+        <field name="state_id" ref="base.state_mx_oax"/>
+    </record>
+    <record id="isn_state_mx_gro_1" model="res.country.state.isn">
+        <field name="name">ESTACION (ZIH) ZIHUATANEJO</field>
+        <field name="type_isn">fixed</field>
+        <field name="percent">2</field>
+        <field name="state_id" ref="base.state_mx_gro"/>
+    </record>
+    <record id="isn_state_mx_gro_2" model="res.country.state.isn">
+        <field name="name">ESTACION (ACA) ACAPULCO</field>
+        <field name="type_isn">fixed</field>
+        <field name="percent">2</field>
+        <field name="state_id" ref="base.state_mx_gro"/>
+    </record>
+    <record id="isn_state_mx_sin_1" model="res.country.state.isn">
+        <field name="name">ESTACION (CUL)CULIACAN</field>
+        <field name="type_isn">fixed</field>
+        <field name="percent">2.4</field>
+        <field name="state_id" ref="base.state_mx_sin"/>
+    </record>
+    <record id="isn_state_mx_sin_2" model="res.country.state.isn">
+        <field name="name">ESTACION (MZT) MAZATLAN</field>
+        <field name="type_isn">fixed</field>
+        <field name="percent">2.5</field>
+        <field name="state_id" ref="base.state_mx_sin"/>
+    </record>
+    <record id="isn_state_mx_nay_1" model="res.country.state.isn">
+        <field name="name">ESTACION (TPQ) TEPIC</field>
+        <field name="type_isn">fixed</field>
+        <field name="percent">2</field>
+        <field name="state_id" ref="base.state_mx_nay"/>
+    </record>
+    <record id="isn_state_mx_pue_1" model="res.country.state.isn">
+        <field name="name">ESTACION (PBC) PUEBLA</field>
+        <field name="type_isn">fixed</field>
+        <field name="percent">3</field>
+        <field name="state_id" ref="base.state_mx_pue"/>
+    </record>
+    <record id="isn_state_mx_tab_1" model="res.country.state.isn">
+        <field name="name">ESTACION (PBC) PUEBLA</field>
+        <field name="type_isn">fixed</field>
+        <field name="percent">2.5</field>
+        <field name="state_id" ref="base.state_mx_tab"/>
+    </record>
+    <record id="isn_state_mx_nl_1" model="res.country.state.isn">
+        <field name="name">ESTACION (MTY) MONTERREY</field>
+        <field name="type_isn">fixed</field>
+        <field name="percent">3</field>
+        <field name="state_id" ref="base.state_mx_nl"/>
+    </record>
+    <record id="isn_state_mx_qro_1" model="res.country.state.isn">
+        <field name="name">ESTACION (QRO) QUERETARO</field>
+        <field name="type_isn">fixed</field>
+        <field name="percent">2</field>
+        <field name="state_id" ref="base.state_mx_qro"/>
+    </record>
+    <record id="isn_state_mx_ags_1" model="res.country.state.isn">
+        <field name="name">ESTACION (AGU) AGUASCALIENTES</field>
+        <field name="type_isn">fixed</field>
+        <field name="percent">2.5</field>
+        <field name="state_id" ref="base.state_mx_ags"/>
+    </record>
+    
+    </data>
+</odoo>

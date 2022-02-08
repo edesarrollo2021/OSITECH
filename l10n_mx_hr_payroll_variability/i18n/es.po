@@ -1,0 +1,372 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_mx_hr_payroll_variability
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-11 23:12+0000\n"
+"PO-Revision-Date: 2021-12-11 23:12+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_mx_hr_payroll_variability
+#: model_terms:ir.ui.view,arch_db:l10n_mx_hr_payroll_variability.search_template_variables
+msgid ""
+"<span class=\"fa fa-book\"/>\n"
+"                        Variable:"
+msgstr ""
+
+#. module: l10n_mx_hr_payroll_variability
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_hr_payslip_variability__bimestre
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_wizard_payslip_variability__bimestre
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_wizard_payslip_variability_line__bimestre
+msgid "Bimester"
+msgstr "Bimestre"
+
+#. module: l10n_mx_hr_payroll_variability
+#: model_terms:ir.ui.view,arch_db:l10n_mx_hr_payroll_variability.wizard_payslip_variability_view
+msgid "Calculate"
+msgstr "Calcular"
+
+#. module: l10n_mx_hr_payroll_variability
+#: model:ir.ui.menu,name:l10n_mx_hr_payroll_variability.hr_payslip_variability
+msgid "Calculated variables"
+msgstr "Calculos realizados"
+
+#. module: l10n_mx_hr_payroll_variability
+#: model_terms:ir.ui.view,arch_db:l10n_mx_hr_payroll_variability.wizard_payslip_variability_view
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: l10n_mx_hr_payroll_variability
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_wizard_payslip_variability__computed
+msgid "Computed"
+msgstr "Computado"
+
+#. module: l10n_mx_hr_payroll_variability
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_hr_payslip_variability__contract_id
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_wizard_payslip_variability_line__contract_id
+msgid "Contract"
+msgstr "Contrato"
+
+#. module: l10n_mx_hr_payroll_variability
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_hr_payslip_variability__create_uid
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_wizard_payslip_variability__create_uid
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_wizard_payslip_variability_line__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: l10n_mx_hr_payroll_variability
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_hr_payslip_variability__create_date
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_wizard_payslip_variability__create_date
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_wizard_payslip_variability_line__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: l10n_mx_hr_payroll_variability
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_hr_payslip_variability__current_sdi
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_wizard_payslip_variability_line__current_sdi
+msgid "Current SDI"
+msgstr "SDI Actual"
+
+#. module: l10n_mx_hr_payroll_variability
+#: code:addons/l10n_mx_hr_payroll_variability/wizard/wizard_hr_payroll_variability.py:0
+#, python-format
+msgid "Data Not Found"
+msgstr "No se necontraron resultados."
+
+#. module: l10n_mx_hr_payroll_variability
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_wizard_payslip_variability__date
+msgid "Date Move"
+msgstr "Fecha de movimiento"
+
+#. module: l10n_mx_hr_payroll_variability
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_hr_payslip_variability__days_bimestre
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_wizard_payslip_variability_line__days_bimestre
+msgid "Days of the bimester"
+msgstr "Días del bimestre"
+
+#. module: l10n_mx_hr_payroll_variability
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_hr_payslip_variability__display_name
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_wizard_payslip_variability__display_name
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_wizard_payslip_variability_line__display_name
+msgid "Display Name"
+msgstr "Nombre a mostrar"
+
+#. module: l10n_mx_hr_payroll_variability
+#: code:addons/l10n_mx_hr_payroll_variability/wizard/wizard_hr_payroll_variability.py:0
+#, python-format
+msgid "Download Report"
+msgstr "Descargar Reporte"
+
+#. module: l10n_mx_hr_payroll_variability
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_hr_payslip_variability__employee_id
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_wizard_payslip_variability_line__employee_id
+msgid "Employee"
+msgstr "Empleado"
+
+#. module: l10n_mx_hr_payroll_variability
+#: model_terms:ir.ui.view,arch_db:l10n_mx_hr_payroll_variability.wizard_payslip_variability_view
+msgid "Export (XLSX)"
+msgstr "Exportar (XLSX)"
+
+#. module: l10n_mx_hr_payroll_variability
+#: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_variability.selection__hr_payslip_variability__type_change_salary__0
+#: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_variability.selection__wizard_payslip_variability_line__type_change_salary__0
+msgid "Fijo"
+msgstr ""
+
+#. module: l10n_mx_hr_payroll_variability
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_wizard_payslip_variability_line__wizard_id
+msgid "Form"
+msgstr ""
+
+#. module: l10n_mx_hr_payroll_variability
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_wizard_payslip_variability__date_from
+msgid "From"
+msgstr "Desde"
+
+#. module: l10n_mx_hr_payroll_variability
+#: model:ir.actions.act_window,name:l10n_mx_hr_payroll_variability.wizard_payslip_variability_action
+#: model:ir.ui.menu,name:l10n_mx_hr_payroll_variability.hr_payslip_variability_generate
+msgid "Generate variables"
+msgstr "Calcular variables"
+
+#. module: l10n_mx_hr_payroll_variability
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_hr_payslip_variability__id
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_wizard_payslip_variability__id
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_wizard_payslip_variability_line__id
+msgid "ID"
+msgstr ""
+
+#. module: l10n_mx_hr_payroll_variability
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_hr_payslip_variability__inhabilitys
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_wizard_payslip_variability_line__inhabilitys
+msgid "Inability"
+msgstr "Incapacidad"
+
+#. module: l10n_mx_hr_payroll_variability
+#: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_variability.selection__wizard_payslip_variability_line__type_change_salary__4
+msgid "Incapacitado"
+msgstr ""
+
+#. module: l10n_mx_hr_payroll_variability
+#: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_variability.selection__hr_payslip_variability__bimestre__1
+#: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_variability.selection__wizard_payslip_variability__bimestre__1
+#: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_variability.selection__wizard_payslip_variability_line__bimestre__1
+msgid "January - February"
+msgstr "Enero - Febrero"
+
+#. module: l10n_mx_hr_payroll_variability
+#: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_variability.selection__hr_payslip_variability__bimestre__4
+#: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_variability.selection__wizard_payslip_variability__bimestre__4
+#: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_variability.selection__wizard_payslip_variability_line__bimestre__4
+msgid "July - August"
+msgstr "Julio - Agosto"
+
+#. module: l10n_mx_hr_payroll_variability
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_hr_payslip_variability____last_update
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_wizard_payslip_variability____last_update
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_wizard_payslip_variability_line____last_update
+msgid "Last Modified on"
+msgstr "Última modifiación el"
+
+#. module: l10n_mx_hr_payroll_variability
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_hr_payslip_variability__write_uid
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_wizard_payslip_variability__write_uid
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_wizard_payslip_variability_line__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: l10n_mx_hr_payroll_variability
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_hr_payslip_variability__write_date
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_wizard_payslip_variability__write_date
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_wizard_payslip_variability_line__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: l10n_mx_hr_payroll_variability
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_hr_payslip_variability__leaves
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_wizard_payslip_variability_line__leaves
+msgid "Leaves"
+msgstr "Ausencias"
+
+#. module: l10n_mx_hr_payroll_variability
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_wizard_payslip_variability__compute_lines
+msgid "Lines"
+msgstr "Lineas de calculos"
+
+#. module: l10n_mx_hr_payroll_variability
+#: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_variability.selection__hr_payslip_variability__bimestre__2
+#: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_variability.selection__wizard_payslip_variability__bimestre__2
+#: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_variability.selection__wizard_payslip_variability_line__bimestre__2
+msgid "March - April"
+msgstr "Marzo - Abril"
+
+#. module: l10n_mx_hr_payroll_variability
+#: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_variability.selection__hr_payslip_variability__bimestre__3
+#: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_variability.selection__wizard_payslip_variability__bimestre__3
+#: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_variability.selection__wizard_payslip_variability_line__bimestre__3
+msgid "May - June"
+msgstr "Mayo - Junio"
+
+#. module: l10n_mx_hr_payroll_variability
+#: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_variability.selection__hr_payslip_variability__type_change_salary__2
+#: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_variability.selection__wizard_payslip_variability_line__type_change_salary__2
+msgid "Mixto"
+msgstr ""
+
+#. module: l10n_mx_hr_payroll_variability
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_hr_payslip_variability__ssnid
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_wizard_payslip_variability_line__ssnid
+msgid "NSS"
+msgstr ""
+
+#. module: l10n_mx_hr_payroll_variability
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_hr_payslip_variability__new_sdi
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_wizard_payslip_variability_line__new_sdi
+msgid "New SDI"
+msgstr "Nuevo SDI"
+
+#. module: l10n_mx_hr_payroll_variability
+#: model_terms:ir.actions.act_window,help:l10n_mx_hr_payroll_variability.hr_payslip_variability_action
+msgid "No se ha calculado variables"
+msgstr ""
+
+#. module: l10n_mx_hr_payroll_variability
+#: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_variability.selection__hr_payslip_variability__bimestre__6
+#: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_variability.selection__wizard_payslip_variability__bimestre__6
+#: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_variability.selection__wizard_payslip_variability_line__bimestre__6
+msgid "November - December"
+msgstr "Noviembre - Deciembre"
+
+#. module: l10n_mx_hr_payroll_variability
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_hr_payslip_variability__days_worked
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_wizard_payslip_variability_line__days_worked
+msgid "Number of days worked"
+msgstr "Días trabajados"
+
+#. module: l10n_mx_hr_payroll_variability
+#: code:addons/l10n_mx_hr_payroll_variability/wizard/wizard_hr_payroll_variability.py:0
+#, python-format
+msgid "One of the struct for these payslips has no payslip code."
+msgstr "Una de las estructuras no tiene código de nómina."
+
+#. module: l10n_mx_hr_payroll_variability
+#: model:ir.model,name:l10n_mx_hr_payroll_variability.model_hr_payslip_variability
+msgid "Payroll MX Variability"
+msgstr "Variables de nóminas MX"
+
+#. module: l10n_mx_hr_payroll_variability
+#: model:ir.model,name:l10n_mx_hr_payroll_variability.model_wizard_payslip_variability
+msgid "Payroll Variability"
+msgstr "Variables de nóminas"
+
+#. module: l10n_mx_hr_payroll_variability
+#: model:ir.model,name:l10n_mx_hr_payroll_variability.model_wizard_payslip_variability_line
+msgid "Payroll Variability Line"
+msgstr "líneas de variables de nóminas"
+
+#. module: l10n_mx_hr_payroll_variability
+#: model_terms:ir.ui.view,arch_db:l10n_mx_hr_payroll_variability.wizard_payslip_variability_view
+msgid "Process"
+msgstr "Procesar"
+
+#. module: l10n_mx_hr_payroll_variability
+#: model_terms:ir.ui.view,arch_db:l10n_mx_hr_payroll_variability.wizard_payslip_variability_view
+msgid "Resultado"
+msgstr ""
+
+#. module: l10n_mx_hr_payroll_variability
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_hr_payslip_variability__sbc
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_wizard_payslip_variability_line__sbc
+msgid "SBC"
+msgstr ""
+
+#. module: l10n_mx_hr_payroll_variability
+#: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_variability.selection__hr_payslip_variability__bimestre__5
+#: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_variability.selection__wizard_payslip_variability__bimestre__5
+#: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_variability.selection__wizard_payslip_variability_line__bimestre__5
+msgid "September - October"
+msgstr "Septiembre - Octubre"
+
+#. module: l10n_mx_hr_payroll_variability
+#: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_variability.selection__hr_payslip_variability__type_change_salary__3
+#: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_variability.selection__wizard_payslip_variability_line__type_change_salary__3
+msgid "Sin Modificación"
+msgstr ""
+
+#. module: l10n_mx_hr_payroll_variability
+#: model:ir.model.fields,help:l10n_mx_hr_payroll_variability.field_hr_payslip_variability__ssnid
+#: model:ir.model.fields,help:l10n_mx_hr_payroll_variability.field_wizard_payslip_variability_line__ssnid
+msgid "Social Security Number"
+msgstr "No. Seguridad Social"
+
+#. module: l10n_mx_hr_payroll_variability
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_wizard_payslip_variability__structure_ids
+msgid "Structure"
+msgstr "Estructura salarial"
+
+#. module: l10n_mx_hr_payroll_variability
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_wizard_payslip_variability__date_to
+msgid "To"
+msgstr "Hasta"
+
+#. module: l10n_mx_hr_payroll_variability
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_hr_payslip_variability__type_change_salary
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_wizard_payslip_variability_line__type_change_salary
+msgid "Type Move"
+msgstr "Movimiento"
+
+#. module: l10n_mx_hr_payroll_variability
+#: code:addons/l10n_mx_hr_payroll_variability/wizard/wizard_hr_payroll_variability.py:0
+#, python-format
+msgid "VARIABILITY-%s-%s"
+msgstr "VARIABILIDAD-%s-%s"
+
+#. module: l10n_mx_hr_payroll_variability
+#: code:addons/l10n_mx_hr_payroll_variability/wizard/wizard_hr_payroll_variability.py:0
+#: model:ir.actions.act_window,name:l10n_mx_hr_payroll_variability.hr_payslip_variability_action
+#: model:ir.ui.menu,name:l10n_mx_hr_payroll_variability.hr_payslip_variability_root
+#: model_terms:ir.ui.view,arch_db:l10n_mx_hr_payroll_variability.hr_payslip_variability_form
+#: model_terms:ir.ui.view,arch_db:l10n_mx_hr_payroll_variability.hr_payslip_variability_tree
+#, python-format
+msgid "Variability"
+msgstr "Variabilidad"
+
+#. module: l10n_mx_hr_payroll_variability
+#: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_variability.selection__hr_payslip_variability__type_change_salary__1
+#: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_variability.selection__wizard_payslip_variability_line__type_change_salary__1
+msgid "Variable"
+msgstr ""
+
+#. module: l10n_mx_hr_payroll_variability
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_hr_payslip_variability__variable_salary
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_wizard_payslip_variability_line__variable_salary
+msgid "Variable Salary"
+msgstr "Salario variable"
+
+#. module: l10n_mx_hr_payroll_variability
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_hr_payslip_variability__perceptions_bimonthly
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_wizard_payslip_variability_line__perceptions_bimonthly
+msgid "Variable perceptions"
+msgstr "Percepciones variables"
+
+#. module: l10n_mx_hr_payroll_variability
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_hr_payslip_variability__year
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_wizard_payslip_variability__year
+#: model:ir.model.fields,field_description:l10n_mx_hr_payroll_variability.field_wizard_payslip_variability_line__year
+msgid "Year"
+msgstr "Año"
+
+#. module: l10n_mx_hr_payroll_variability
+#: code:addons/l10n_mx_hr_payroll_variability/wizard/wizard_hr_payroll_variability.py:0
+#, python-format
+msgid "You can only calculate variables, for a previous two-month period."
+msgstr "Solo puede calcular variables, para un período bimestre anterior."

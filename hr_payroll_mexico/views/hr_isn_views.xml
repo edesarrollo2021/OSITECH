@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <record id="view_hr_isn_form" model="ir.ui.view">
+        <field name="name">view.hr.isn.form</field>
+        <field name="model">hr.isn</field>
+        <field name="arch" type="xml">
+        <form string="ISN">
+            <sheet>
+                <div>
+                    <h1 class="oe_title">
+                        <field name="name" class="oe_inline" attrs="{'invisible': [('name', '=', False)]}" force_save="1"/>
+                    </h1>
+                </div>
+                <field name="country_id" invisible="1"/>
+                <group>
+                    <group>
+                        <field name="year"/>
+                        <field name="state_id" domain="[('country_id','=', country_id)]"/>
+                    </group>
+                    <group>
+                        <field name="type"/>
+                        <field name="percent" attrs="{'invisible': [('type', '!=', 'fixed')]}"/>
+                    </group>
+                </group>
+                 <notebook attrs="{'invisible': [('type', '==', 'fixed')]}">
+                    <page name="range_rate" string="Rate">
+                        <field name="isn_line" string="Rate">
+                            <tree editable="bottom">
+                                <field name="lim_inf"/>
+                                <field name="lim_sup"/>
+                                <field name="c_fija"/>
+                                <field name="s_excedente"/>
+                            </tree>
+                        </field>
+                    </page>
+                </notebook>
+            </sheet>
+         </form>
+       </field>
+    </record>
+
+    <record id="view_hr_isn_tree" model="ir.ui.view">
+        <field name="name">view.hr.isn.tree</field>
+        <field name="model">hr.isn</field>
+        <field name="arch" type="xml">
+            <tree string="ISN">
+               <field name="name"/>
+               <field name="state_id"/>
+               <field name="year"/>
+               <field name="type"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_hr_isn_search" model="ir.ui.view">
+        <field name="name">view.hr.isn.search</field>
+        <field name="model">hr.isn</field>
+        <field name="arch" type="xml">
+            <search string="ISN">
+               <field name="name"/>
+               <field name="year"/>
+               <field name="state_id"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_tree_hr_isn" model="ir.actions.act_window">
+        <field name="name">ISN</field>
+        <field name="res_model">hr.isn</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_hr_isn_tree" />
+        <field name="search_view_id" ref="view_hr_isn_search"/>
+    </record>
+
+    <menuitem
+          name="ISN"
+          parent="menu_action_tables"
+          id="menu_action_tree_hr_isn"
+          action="action_tree_hr_isn"
+          sequence="10"
+      />
+
+    </data>
+</odoo>

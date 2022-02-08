@@ -1,0 +1,1604 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">  
+
+    
+   
+<!--        Table of antiquity TIERRA NOMINA TR-->
+
+    <record id="table_of_antiquity" model="hr.table.antiquity">
+        <field name="name">TIERRA NOMINA TR</field>
+    </record>
+
+    <record id="table_of_antiquity_liness_1" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity"/>
+        <field name="year">1</field>
+        <field name="holidays">6</field>
+        <field name="vacation_cousin">25</field>
+        <field name="aguinaldo">15</field>
+    </record>
+
+    <record id="table_of_antiquity_lines_2" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity"/>
+        <field name="year">2</field>
+        <field name="holidays">8</field>
+        <field name="vacation_cousin">25</field>
+        <field name="aguinaldo">15</field>
+    </record>
+
+    <record id="table_of_antiquity_lines_3" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity"/>
+        <field name="year">3</field>
+        <field name="holidays">10</field>
+        <field name="vacation_cousin">25</field>
+        <field name="aguinaldo">15</field>
+    </record>
+
+    <record id="table_of_antiquity_lines_4" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity"/>
+        <field name="year">4</field>
+        <field name="holidays">12</field>
+        <field name="vacation_cousin">25</field>
+        <field name="aguinaldo">15</field>
+    </record>
+
+    <record id="table_of_antiquity_lines_5" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity"/>
+        <field name="year">5</field>
+        <field name="holidays">14</field>
+        <field name="vacation_cousin">25</field>
+        <field name="aguinaldo">15</field>
+    </record>
+
+    <record id="table_of_antiquity_lines_6" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity"/>
+        <field name="year">6</field>
+        <field name="holidays">14</field>
+        <field name="vacation_cousin">25</field>
+        <field name="aguinaldo">15</field>
+    </record>
+
+    <record id="table_of_antiquity_lines_7" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity"/>
+        <field name="year">7</field>
+        <field name="holidays">14</field>
+        <field name="vacation_cousin">25</field>
+        <field name="aguinaldo">15</field>
+    </record>
+
+    <record id="table_of_antiquity_lines_8" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity"/>
+        <field name="year">8</field>
+        <field name="holidays">14</field>
+        <field name="vacation_cousin">25</field>
+        <field name="aguinaldo">15</field>
+    </record>
+
+    <record id="table_of_antiquity_lines_9" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity"/>
+        <field name="year">9</field>
+        <field name="holidays">14</field>
+        <field name="vacation_cousin">25</field>
+        <field name="aguinaldo">15</field>
+    </record>
+
+    <record id="table_of_antiquity_lines_10" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity"/>
+        <field name="year">10</field>
+        <field name="holidays">16</field>
+        <field name="vacation_cousin">25</field>
+        <field name="aguinaldo">15</field>
+    </record>
+
+    <record id="table_of_antiquity_lines_11" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity"/>
+        <field name="year">11</field>
+        <field name="holidays">16</field>
+        <field name="vacation_cousin">25</field>
+        <field name="aguinaldo">15</field>
+    </record>
+
+    <record id="table_of_antiquity_lines_12" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity"/>
+        <field name="year">12</field>
+        <field name="holidays">16</field>
+        <field name="vacation_cousin">25</field>
+        <field name="aguinaldo">15</field>
+    </record>
+
+    <record id="table_of_antiquity_lines_13" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity"/>
+        <field name="year">13</field>
+        <field name="holidays">16</field>
+        <field name="vacation_cousin">25</field>
+        <field name="aguinaldo">15</field>
+    </record>
+
+    <record id="table_of_antiquity_lines_14" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity"/>
+        <field name="year">14</field>
+        <field name="holidays">16</field>
+        <field name="vacation_cousin">25</field>
+        <field name="aguinaldo">15</field>
+    </record>
+
+    <record id="table_of_antiquity_lines_15" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity"/>
+        <field name="year">15</field>
+        <field name="holidays">18</field>
+        <field name="vacation_cousin">25</field>
+        <field name="aguinaldo">15</field>
+    </record>
+
+    <record id="table_of_antiquity_lines_16" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity"/>
+        <field name="year">16</field>
+        <field name="holidays">18</field>
+        <field name="vacation_cousin">25</field>
+        <field name="aguinaldo">15</field>
+    </record>
+
+    <record id="table_of_antiquity_lines_17" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity"/>
+        <field name="year">17</field>
+        <field name="holidays">18</field>
+        <field name="vacation_cousin">25</field>
+        <field name="aguinaldo">15</field>
+    </record>
+
+    <record id="table_of_antiquity_lines_18" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity"/>
+        <field name="year">18</field>
+        <field name="holidays">18</field>
+        <field name="vacation_cousin">25</field>
+        <field name="aguinaldo">15</field>
+    </record>
+
+    <record id="table_of_antiquity_lines_19" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity"/>
+        <field name="year">19</field>
+        <field name="holidays">18</field>
+        <field name="vacation_cousin">25</field>
+        <field name="aguinaldo">15</field>
+    </record>
+
+    <record id="table_of_antiquity_lines_20" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity"/>
+        <field name="year">20</field>
+        <field name="holidays">20</field>
+        <field name="vacation_cousin">25</field>
+        <field name="aguinaldo">15</field>
+    </record>
+
+    <record id="table_of_antiquity_lines_21" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity"/>
+        <field name="year">21</field>
+        <field name="holidays">20</field>
+        <field name="vacation_cousin">25</field>
+        <field name="aguinaldo">15</field>
+    </record>
+
+    <record id="table_of_antiquity_lines_22" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity"/>
+        <field name="year">22</field>
+        <field name="holidays">20</field>
+        <field name="vacation_cousin">25</field>
+        <field name="aguinaldo">15</field>
+    </record>
+
+    <record id="table_of_antiquity_lines_23" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity"/>
+        <field name="year">23</field>
+        <field name="holidays">20</field>
+        <field name="vacation_cousin">25</field>
+        <field name="aguinaldo">15</field>
+    </record>
+
+    <record id="table_of_antiquity_lines_24" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity"/>
+        <field name="year">24</field>
+        <field name="holidays">20</field>
+        <field name="vacation_cousin">25</field>
+        <field name="aguinaldo">15</field>
+    </record>
+
+    <record id="table_of_antiquity_lines_25" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity"/>
+        <field name="year">25</field>
+        <field name="holidays">22</field>
+        <field name="vacation_cousin">25</field>
+        <field name="aguinaldo">15</field>
+    </record>
+
+
+    <record id="table_of_antiquity_lines_26" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity"/>
+        <field name="year">26</field>
+        <field name="holidays">22</field>
+        <field name="vacation_cousin">25</field>
+        <field name="aguinaldo">15</field>
+    </record>
+
+    <record id="table_of_antiquity_lines_27" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity"/>
+        <field name="year">27</field>
+        <field name="holidays">22</field>
+        <field name="vacation_cousin">25</field>
+        <field name="aguinaldo">15</field>
+    </record>
+
+    <record id="table_of_antiquity_lines_28" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity"/>
+        <field name="year">28</field>
+        <field name="holidays">22</field>
+        <field name="vacation_cousin">25</field>
+        <field name="aguinaldo">15</field>
+    </record>
+
+    <record id="table_of_antiquity_lines_29" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity"/>
+        <field name="year">29</field>
+        <field name="holidays">22</field>
+        <field name="vacation_cousin">25</field>
+        <field name="aguinaldo">15</field>
+    </record>
+
+    <record id="table_of_antiquity_lines_30" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity"/>
+        <field name="year">30</field>
+        <field name="holidays">24</field>
+        <field name="vacation_cousin">25</field>
+        <field name="aguinaldo">15</field>
+    </record>
+
+    <record id="table_of_antiquity_lines_31" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity"/>
+        <field name="year">31</field>
+        <field name="holidays">24</field>
+        <field name="vacation_cousin">25</field>
+        <field name="aguinaldo">15</field>
+    </record>
+
+    <record id="table_of_antiquity_lines_32" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity"/>
+        <field name="year">32</field>
+        <field name="holidays">24</field>
+        <field name="vacation_cousin">25</field>
+        <field name="aguinaldo">15</field>
+    </record>
+
+    <record id="table_of_antiquity_lines_33" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity"/>
+        <field name="year">33</field>
+        <field name="holidays">24</field>
+        <field name="vacation_cousin">25</field>
+        <field name="aguinaldo">15</field>
+    </record>
+
+    <record id="table_of_antiquity_lines_34" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity"/>
+        <field name="year">34</field>
+        <field name="holidays">24</field>
+        <field name="vacation_cousin">25</field>
+        <field name="aguinaldo">15</field>
+    </record>
+    
+    <record id="table_of_antiquity_lines_35" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity"/>
+        <field name="year">35</field>
+        <field name="holidays">26</field>
+        <field name="vacation_cousin">25</field>
+        <field name="aguinaldo">15</field>
+    </record>
+    
+    <record id="table_of_antiquity_lines_36" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity"/>
+        <field name="year">36</field>
+        <field name="holidays">26</field>
+        <field name="vacation_cousin">25</field>
+        <field name="aguinaldo">15</field>
+    </record>
+    
+    
+    <!--        Table of antiquity TIERRA NOMINA TR-->
+    
+    
+     <record id="table_of_antiquity_2" model="hr.table.antiquity">
+        <field name="name">TIERRA</field>
+    </record>
+
+    <record id="table_of_antiquity_liness_21" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_2"/>
+        <field name="year">1</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">6</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    
+    <record id="table_of_antiquity_liness_22" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_2"/>
+        <field name="year">2</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">8</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+
+    <record id="table_of_antiquity_liness_23" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_2"/>
+        <field name="year">3</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">10</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+
+    <record id="table_of_antiquity_liness_24" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_2"/>
+        <field name="year">4</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">12</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    
+    <record id="table_of_antiquity_liness_25" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_2"/>
+        <field name="year">5</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">14</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_26" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_2"/>
+        <field name="year">6</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">14</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_27" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_2"/>
+        <field name="year">7</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">14</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_28" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_2"/>
+        <field name="year">8</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">14</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_29" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_2"/>
+        <field name="year">9</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">14</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_210" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_2"/>
+        <field name="year">10</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">16</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_211" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_2"/>
+        <field name="year">11</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">16</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_212" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_2"/>
+        <field name="year">12</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">16</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_213" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_2"/>
+        <field name="year">13</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">16</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_214" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_2"/>
+        <field name="year">14</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">16</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_215" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_2"/>
+        <field name="year">15</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">18</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_216" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_2"/>
+        <field name="year">16</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">18</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_217" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_2"/>
+        <field name="year">17</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">18</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_218" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_2"/>
+        <field name="year">18</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">18</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_219" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_2"/>
+        <field name="year">19</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">18</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_220" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_2"/>
+        <field name="year">20</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">20</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_221" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_2"/>
+        <field name="year">21</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">20</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_222" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_2"/>
+        <field name="year">22</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">20</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_223" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_2"/>
+        <field name="year">23</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">20</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_224" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_2"/>
+        <field name="year">24</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">20</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_225" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_2"/>
+        <field name="year">25</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">22</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_226" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_2"/>
+        <field name="year">26</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">22</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_227" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_2"/>
+        <field name="year">27</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">22</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_228" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_2"/>
+        <field name="year">28</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">22</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_229" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_2"/>
+        <field name="year">29</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">22</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_230" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_2"/>
+        <field name="year">30</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">24</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_231" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_2"/>
+        <field name="year">31</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">24</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_232" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_2"/>
+        <field name="year">32</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">24</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_233" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_2"/>
+        <field name="year">33</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">24</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_234" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_2"/>
+        <field name="year">34</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">24</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_235" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_2"/>
+        <field name="year">35</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">26</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_236" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_2"/>
+        <field name="year">36</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">26</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    
+    
+    
+    
+    
+    <!--        Table of antiquity DIRECTORES-->
+    
+    
+     <record id="table_of_antiquity_3" model="hr.table.antiquity">
+        <field name="name">DIRECTORES</field>
+    </record>
+
+    <record id="table_of_antiquity_liness_31" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_3"/>
+        <field name="year">1</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">15</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_32" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_3"/>
+        <field name="year">2</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">17</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_33" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_3"/>
+        <field name="year">3</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">19</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_34" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_3"/>
+        <field name="year">4</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">21</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_35" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_3"/>
+        <field name="year">5</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">23</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_36" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_3"/>
+        <field name="year">6</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">23</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_37" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_3"/>
+        <field name="year">7</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">23</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_38" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_3"/>
+        <field name="year">8</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">23</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_39" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_3"/>
+        <field name="year">9</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">23</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_310" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_3"/>
+        <field name="year">10</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">25</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_311" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_3"/>
+        <field name="year">11</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">25</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_312" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_3"/>
+        <field name="year">12</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">25</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_313" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_3"/>
+        <field name="year">13</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">25</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_314" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_3"/>
+        <field name="year">14</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">25</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_315" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_3"/>
+        <field name="year">15</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">27</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_316" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_3"/>
+        <field name="year">16</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">27</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_317" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_3"/>
+        <field name="year">17</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">27</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_318" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_3"/>
+        <field name="year">18</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">27</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_319" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_3"/>
+        <field name="year">19</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">27</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_320" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_3"/>
+        <field name="year">20</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">29</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_321" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_3"/>
+        <field name="year">21</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">29</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_322" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_3"/>
+        <field name="year">22</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">29</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_323" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_3"/>
+        <field name="year">23</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">29</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_324" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_3"/>
+        <field name="year">24</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">29</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_325" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_3"/>
+        <field name="year">25</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">31</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_326" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_3"/>
+        <field name="year">26</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">31</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_327" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_3"/>
+        <field name="year">27</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">31</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_328" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_3"/>
+        <field name="year">28</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">31</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_329" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_3"/>
+        <field name="year">29</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">31</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_330" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_3"/>
+        <field name="year">30</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">33</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_331" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_3"/>
+        <field name="year">31</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">33</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_332" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_3"/>
+        <field name="year">32</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">33</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_333" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_3"/>
+        <field name="year">33</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">33</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_334" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_3"/>
+        <field name="year">34</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">33</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_335" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_3"/>
+        <field name="year">35</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">35</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_336" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_3"/>
+        <field name="year">36</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">35</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    
+    
+    
+    
+    <!--        Table of antiquity GERENTES SR-->
+    
+    
+     <record id="table_of_antiquity_4" model="hr.table.antiquity">
+        <field name="name">GERENTES SR</field>
+    </record>
+
+    <record id="table_of_antiquity_liness_41" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_4"/>
+        <field name="year">1</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">10</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_42" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_4"/>
+        <field name="year">2</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">12</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_43" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_4"/>
+        <field name="year">3</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">14</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_44" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_4"/>
+        <field name="year">4</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">16</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_45" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_4"/>
+        <field name="year">5</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">18</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_46" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_4"/>
+        <field name="year">6</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">18</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_47" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_4"/>
+        <field name="year">7</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">18</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_48" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_4"/>
+        <field name="year">8</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">18</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_49" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_4"/>
+        <field name="year">9</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">18</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_410" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_4"/>
+        <field name="year">10</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">20</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_411" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_4"/>
+        <field name="year">11</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">20</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_412" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_4"/>
+        <field name="year">12</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">20</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_413" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_4"/>
+        <field name="year">13</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">20</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_414" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_4"/>
+        <field name="year">14</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">20</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_415" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_4"/>
+        <field name="year">15</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">22</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_416" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_4"/>
+        <field name="year">16</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">22</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_417" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_4"/>
+        <field name="year">17</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">22</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_418" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_4"/>
+        <field name="year">18</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">22</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_419" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_4"/>
+        <field name="year">19</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">22</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_420" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_4"/>
+        <field name="year">20</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">24</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_421" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_4"/>
+        <field name="year">21</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">24</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_422" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_4"/>
+        <field name="year">22</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">24</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_423" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_4"/>
+        <field name="year">23</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">24</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_424" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_4"/>
+        <field name="year">24</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">24</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_425" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_4"/>
+        <field name="year">25</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">26</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_426" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_4"/>
+        <field name="year">26</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">26</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_427" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_4"/>
+        <field name="year">27</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">26</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_428" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_4"/>
+        <field name="year">28</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">26</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_429" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_4"/>
+        <field name="year">29</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">26</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_430" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_4"/>
+        <field name="year">30</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">28</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_431" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_4"/>
+        <field name="year">31</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">28</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_432" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_4"/>
+        <field name="year">32</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">28</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_433" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_4"/>
+        <field name="year">33</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">28</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_434" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_4"/>
+        <field name="year">34</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">28</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_435" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_4"/>
+        <field name="year">35</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">30</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_436" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_4"/>
+        <field name="year">36</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">30</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    
+    
+    <!--        Table of antiquity PRIMEROS OFICIALES Y CAPITANES-->
+    
+    
+     <record id="table_of_antiquity_5" model="hr.table.antiquity">
+        <field name="name">PRIMEROS OFICIALES Y CAPITANES</field>
+    </record>
+
+    <record id="table_of_antiquity_liness_51" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_5"/>
+        <field name="year">1</field>
+        <field name="aguinaldo">35</field>
+        <field name="holidays">30</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_52" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_5"/>
+        <field name="year">2</field>
+        <field name="aguinaldo">35</field>
+        <field name="holidays">31</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_53" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_5"/>
+        <field name="year">3</field>
+        <field name="aguinaldo">35</field>
+        <field name="holidays">32</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_54" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_5"/>
+        <field name="year">4</field>
+        <field name="aguinaldo">35</field>
+        <field name="holidays">33</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_55" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_5"/>
+        <field name="year">5</field>
+        <field name="aguinaldo">35</field>
+        <field name="holidays">34</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_56" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_5"/>
+        <field name="year">6</field>
+        <field name="aguinaldo">35</field>
+        <field name="holidays">35</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_57" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_5"/>
+        <field name="year">7</field>
+        <field name="aguinaldo">35</field>
+        <field name="holidays">36</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_58" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_5"/>
+        <field name="year">8</field>
+        <field name="aguinaldo">35</field>
+        <field name="holidays">37</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_59" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_5"/>
+        <field name="year">9</field>
+        <field name="aguinaldo">35</field>
+        <field name="holidays">38</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_510" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_5"/>
+        <field name="year">10</field>
+        <field name="aguinaldo">35</field>
+        <field name="holidays">39</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_511" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_5"/>
+        <field name="year">11</field>
+        <field name="aguinaldo">35</field>
+        <field name="holidays">40</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_512" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_5"/>
+        <field name="year">12</field>
+        <field name="aguinaldo">35</field>
+        <field name="holidays">41</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_513" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_5"/>
+        <field name="year">13</field>
+        <field name="aguinaldo">35</field>
+        <field name="holidays">42</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_514" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_5"/>
+        <field name="year">14</field>
+        <field name="aguinaldo">35</field>
+        <field name="holidays">43</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_515" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_5"/>
+        <field name="year">15</field>
+        <field name="aguinaldo">35</field>
+        <field name="holidays">44</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_516" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_5"/>
+        <field name="year">16</field>
+        <field name="aguinaldo">35</field>
+        <field name="holidays">45</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_517" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_5"/>
+        <field name="year">17</field>
+        <field name="aguinaldo">35</field>
+        <field name="holidays">46</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_518" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_5"/>
+        <field name="year">18</field>
+        <field name="aguinaldo">35</field>
+        <field name="holidays">47</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_519" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_5"/>
+        <field name="year">19</field>
+        <field name="aguinaldo">35</field>
+        <field name="holidays">48</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_520" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_5"/>
+        <field name="year">20</field>
+        <field name="aguinaldo">35</field>
+        <field name="holidays">49</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_521" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_5"/>
+        <field name="year">21</field>
+        <field name="aguinaldo">35</field>
+        <field name="holidays">50</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_522" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_5"/>
+        <field name="year">22</field>
+        <field name="aguinaldo">35</field>
+        <field name="holidays">51</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_523" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_5"/>
+        <field name="year">23</field>
+        <field name="aguinaldo">35</field>
+        <field name="holidays">52</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_524" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_5"/>
+        <field name="year">24</field>
+        <field name="aguinaldo">35</field>
+        <field name="holidays">53</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_525" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_5"/>
+        <field name="year">25</field>
+        <field name="aguinaldo">35</field>
+        <field name="holidays">54</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_526" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_5"/>
+        <field name="year">26</field>
+        <field name="aguinaldo">35</field>
+        <field name="holidays">55</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_527" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_5"/>
+        <field name="year">27</field>
+        <field name="aguinaldo">35</field>
+        <field name="holidays">56</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_528" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_5"/>
+        <field name="year">28</field>
+        <field name="aguinaldo">35</field>
+        <field name="holidays">57</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    
+    <record id="table_of_antiquity_liness_529" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_5"/>
+        <field name="year">29</field>
+        <field name="aguinaldo">35</field>
+        <field name="holidays">58</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_530" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_5"/>
+        <field name="year">30</field>
+        <field name="aguinaldo">35</field>
+        <field name="holidays">59</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_531" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_5"/>
+        <field name="year">31</field>
+        <field name="aguinaldo">35</field>
+        <field name="holidays">60</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_532" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_5"/>
+        <field name="year">32</field>
+        <field name="aguinaldo">35</field>
+        <field name="holidays">61</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_533" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_5"/>
+        <field name="year">33</field>
+        <field name="aguinaldo">35</field>
+        <field name="holidays">62</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_534" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_5"/>
+        <field name="year">34</field>
+        <field name="aguinaldo">35</field>
+        <field name="holidays">63</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_535" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_5"/>
+        <field name="year">35</field>
+        <field name="aguinaldo">35</field>
+        <field name="holidays">64</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    
+    <!--        Table of antiquity ASPIRANTES A SOBRECARGOS Y SOBRECARGOS-->
+    
+    
+     <record id="table_of_antiquity_6" model="hr.table.antiquity">
+        <field name="name">ASPIRANTES A SOBRECARGOS Y SOBRECARGOS</field>
+    </record>
+
+    <record id="table_of_antiquity_liness_61" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_6"/>
+        <field name="year">1</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">30</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_62" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_6"/>
+        <field name="year">2</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">31</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_63" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_6"/>
+        <field name="year">3</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">32</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_64" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_6"/>
+        <field name="year">4</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">33</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_65" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_6"/>
+        <field name="year">5</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">34</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_66" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_6"/>
+        <field name="year">6</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">35</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_67" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_6"/>
+        <field name="year">7</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">36</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_68" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_6"/>
+        <field name="year">8</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">37</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_69" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_6"/>
+        <field name="year">9</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">38</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_610" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_6"/>
+        <field name="year">10</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">39</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_611" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_6"/>
+        <field name="year">11</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">40</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_612" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_6"/>
+        <field name="year">12</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">41</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_613" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_6"/>
+        <field name="year">13</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">42</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_614" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_6"/>
+        <field name="year">14</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">43</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_615" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_6"/>
+        <field name="year">15</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">44</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_616" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_6"/>
+        <field name="year">16</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">45</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_617" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_6"/>
+        <field name="year">17</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">46</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_618" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_6"/>
+        <field name="year">18</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">47</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_619" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_6"/>
+        <field name="year">19</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">48</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_620" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_6"/>
+        <field name="year">20</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">49</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_621" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_6"/>
+        <field name="year">21</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">50</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_622" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_6"/>
+        <field name="year">22</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">51</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_623" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_6"/>
+        <field name="year">23</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">52</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_624" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_6"/>
+        <field name="year">24</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">53</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_625" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_6"/>
+        <field name="year">25</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">54</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_626" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_6"/>
+        <field name="year">26</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">55</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_627" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_6"/>
+        <field name="year">27</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">56</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_628" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_6"/>
+        <field name="year">28</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">57</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    
+    <record id="table_of_antiquity_liness_629" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_6"/>
+        <field name="year">29</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">58</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_630" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_6"/>
+        <field name="year">30</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">59</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_631" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_6"/>
+        <field name="year">31</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">60</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_632" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_6"/>
+        <field name="year">32</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">61</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_633" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_6"/>
+        <field name="year">33</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">62</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_634" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_6"/>
+        <field name="year">34</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">63</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    <record id="table_of_antiquity_liness_635" model="hr.table.antiquity.line">
+        <field name="antiquity_line_id" ref="table_of_antiquity_6"/>
+        <field name="year">35</field>
+        <field name="aguinaldo">30</field>
+        <field name="holidays">64</field>
+        <field name="vacation_cousin">50</field>
+    </record>
+    
+   </data>
+</odoo>

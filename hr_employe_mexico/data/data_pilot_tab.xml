@@ -1,0 +1,836 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+    
+   
+<!--        Pilot Tab COPILOTOS-->
+
+    <record id="table_pilot_tab_captain" model="hr.pilot.tab">
+        <field name="name">CAPITANES</field>
+    </record>
+
+    <record id="table_pilot_tab_captain_line_0" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_captain"/>
+        <field name="year">0</field>
+        <field name="salary">77096.40</field>
+        <field name="seniority_premium">0</field>
+    </record>
+    <record id="table_pilot_tab_captain_line_1" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_captain"/>
+        <field name="year">1</field>
+        <field name="salary">83174.70</field>
+        <field name="seniority_premium">1033.05</field>
+    </record>
+    <record id="table_pilot_tab_captain_line_2" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_captain"/>
+        <field name="year">2</field>
+        <field name="salary">87288.60</field>
+        <field name="seniority_premium">1882.98</field>
+    </record>
+    <record id="table_pilot_tab_captain_line_3" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_captain"/>
+        <field name="year">3</field>
+        <field name="salary">91634.70</field>
+        <field name="seniority_premium">2780.40</field>
+    </record>
+    <record id="table_pilot_tab_captain_line_4" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_captain"/>
+        <field name="year">4</field>
+        <field name="salary">95850.30</field>
+        <field name="seniority_premium">3651.20</field>
+    </record>
+    <record id="table_pilot_tab_captain_line_5" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_captain"/>
+        <field name="year">5</field>
+        <field name="salary">95850.30</field>
+        <field name="seniority_premium">3651.20</field>
+    </record>
+    <record id="table_pilot_tab_captain_line_6" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_captain"/>
+        <field name="year">6</field>
+        <field name="salary">95850.30</field>
+        <field name="seniority_premium">3651.20</field>
+    </record>
+    <record id="table_pilot_tab_captain_line_7" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_captain"/>
+        <field name="year">7</field>
+        <field name="salary">97959.00</field>
+        <field name="seniority_premium">4134.73</field>
+    </record>
+    <record id="table_pilot_tab_captain_line_8" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_captain"/>
+        <field name="year">8</field>
+        <field name="salary">98446.80</field>
+        <field name="seniority_premium">4472.83</field>
+    </record>
+    <record id="table_pilot_tab_captain_line_9" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_captain"/>
+        <field name="year">9</field>
+        <field name="salary">98702.10</field>
+        <field name="seniority_premium">4810.93</field>
+    </record>
+    <record id="table_pilot_tab_captain_line_10" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_captain"/>
+        <field name="year">10</field>
+        <field name="salary">98957.70</field>
+        <field name="seniority_premium">5149.03</field>
+    </record>
+    <record id="table_pilot_tab_captain_line_11" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_captain"/>
+        <field name="year">11</field>
+        <field name="salary">99213.30</field>
+        <field name="seniority_premium">5487.13</field>
+    </record>
+    <record id="table_pilot_tab_captain_line_12" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_captain"/>
+        <field name="year">12</field>
+        <field name="salary">99478.80</field>
+        <field name="seniority_premium">5838.75</field>
+    </record>
+    <record id="table_pilot_tab_captain_line_13" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_captain"/>
+        <field name="year">13</field>
+        <field name="salary">99744.60</field>
+        <field name="seniority_premium">6190.38</field>
+    </record>
+    <record id="table_pilot_tab_captain_line_14" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_captain"/>
+        <field name="year">14</field>
+        <field name="salary">100009.80</field>
+        <field name="seniority_premium">6542</field>
+    </record>
+    <record id="table_pilot_tab_captain_line_15" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_captain"/>
+        <field name="year">15</field>
+        <field name="salary">100276.20</field>
+        <field name="seniority_premium">6893.63</field>
+    </record>
+    <record id="table_pilot_tab_captain_line_16" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_captain"/>
+        <field name="year">16</field>
+        <field name="salary">100478.70</field>
+        <field name="seniority_premium">7266.18</field>
+    </record>
+    <record id="table_pilot_tab_captain_line_17" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_captain"/>
+        <field name="year">17</field>
+        <field name="salary">100681.80</field>
+        <field name="seniority_premium">7638.72</field>
+    </record>
+    <record id="table_pilot_tab_captain_line_18" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_captain"/>
+        <field name="year">18</field>
+        <field name="salary">100884.60</field>
+        <field name="seniority_premium">8011.27</field>
+    </record>
+    <record id="table_pilot_tab_captain_line_19" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_captain"/>
+        <field name="year">19</field>
+        <field name="salary">101087.70</field>
+        <field name="seniority_premium">8383.81</field>
+    </record>
+    <record id="table_pilot_tab_captain_line_20" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_captain"/>
+        <field name="year">20</field>
+        <field name="salary">101253.60</field>
+        <field name="seniority_premium">8782.25</field>
+    </record>
+    <record id="table_pilot_tab_captain_line_21" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_captain"/>
+        <field name="year">21</field>
+        <field name="salary">101419.20</field>
+        <field name="seniority_premium">9180.69</field>
+    </record>
+    <record id="table_pilot_tab_captain_line_22" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_captain"/>
+        <field name="year">22</field>
+        <field name="salary">101585.40</field>
+        <field name="seniority_premium">9579.13</field>
+    </record>
+    <record id="table_pilot_tab_captain_line_23" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_captain"/>
+        <field name="year">23</field>
+        <field name="salary">101750.70</field>
+        <field name="seniority_premium">9977.57</field>
+    </record>
+    <record id="table_pilot_tab_captain_line_24" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_captain"/>
+        <field name="year">24</field>
+        <field name="salary">101891.40</field>
+        <field name="seniority_premium">10407.80</field>
+    </record>
+    <record id="table_pilot_tab_captain_line_25" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_captain"/>
+        <field name="year">25</field>
+        <field name="salary">102003.30</field>
+        <field name="seniority_premium">10863.50</field>
+    </record>
+    <record id="table_pilot_tab_captain_line_26" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_captain"/>
+        <field name="year">26</field>
+        <field name="salary">102090.00</field>
+        <field name="seniority_premium">11371.05</field>
+    </record>
+    <record id="table_pilot_tab_captain_line_27" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_captain"/>
+        <field name="year">27</field>
+        <field name="salary">102136.50</field>
+        <field name="seniority_premium">11878.60</field>
+    </record>
+    <record id="table_pilot_tab_captain_line_28" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_captain"/>
+        <field name="year">28</field>
+        <field name="salary">102178.80</field>
+        <field name="seniority_premium">12417.76</field>
+    </record>
+    <record id="table_pilot_tab_captain_line_29" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_captain"/>
+        <field name="year">29</field>
+        <field name="salary">102178.80</field>
+        <field name="seniority_premium">12975.80</field>
+    </record>
+    <record id="table_pilot_tab_captain_line_30" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_captain"/>
+        <field name="year">30</field>
+        <field name="salary">102178.80</field>
+        <field name="seniority_premium">13556.16</field>
+    </record>
+    <record id="table_pilot_tab_captain_line_31" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_captain"/>
+        <field name="year">31</field>
+        <field name="salary">102178.80</field>
+        <field name="seniority_premium">14495.98</field>
+    </record>
+    <record id="table_pilot_tab_captain_line_32" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_captain"/>
+        <field name="year">32</field>
+        <field name="salary">102178.80</field>
+        <field name="seniority_premium">15473.77</field>
+    </record>
+    <record id="table_pilot_tab_captain_line_33" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_captain"/>
+        <field name="year">33</field>
+        <field name="salary">102178.80</field>
+        <field name="seniority_premium">16451.55</field>
+    </record>
+    <record id="table_pilot_tab_captain_line_34" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_captain"/>
+        <field name="year">34</field>
+        <field name="salary">102178.80</field>
+        <field name="seniority_premium">17429.33</field>
+    </record>
+    
+    
+    <!--        Pilot Tab PRIMER OFICIAL-->
+
+    <record id="table_pilot_tab_copilot" model="hr.pilot.tab">
+        <field name="name">PRIMER OFICIAL</field>
+    </record>
+
+    <record id="table_pilot_tab_copilot_line_0" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_copilot"/>
+        <field name="year">0</field>
+        <field name="salary">53685.00</field>
+        <field name="seniority_premium">0</field>
+    </record>
+    <record id="table_pilot_tab_copilot_line_1" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_copilot"/>
+        <field name="year">1</field>
+        <field name="salary">58424.40</field>
+        <field name="seniority_premium">978.95</field>
+    </record>
+    <record id="table_pilot_tab_copilot_line_2" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_copilot"/>
+        <field name="year">2</field>
+        <field name="salary">60428.70</field>
+        <field name="seniority_premium">1330</field>
+    </record>
+    <record id="table_pilot_tab_copilot_line_3" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_copilot"/>
+        <field name="year">3</field>
+        <field name="salary">62733</field>
+        <field name="seniority_premium">1806</field>
+    </record>
+    <record id="table_pilot_tab_copilot_line_4" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_copilot"/>
+        <field name="year">4</field>
+        <field name="salary">62877.90</field>
+        <field name="seniority_premium">1997.73</field>
+    </record>
+    <record id="table_pilot_tab_copilot_line_5" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_copilot"/>
+        <field name="year">5</field>
+        <field name="salary">63022.20</field>
+        <field name="seniority_premium">2189.45</field>
+    </record>
+    <record id="table_pilot_tab_copilot_line_6" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_copilot"/>
+        <field name="year">6</field>
+        <field name="salary">63167.10</field>
+        <field name="seniority_premium">2381.18</field>
+    </record>
+    <record id="table_pilot_tab_copilot_line_7" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_copilot"/>
+        <field name="year">7</field>
+        <field name="salary">63312.30</field>
+        <field name="seniority_premium">2572.91</field>
+    </record>
+    <record id="table_pilot_tab_copilot_line_8" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_copilot"/>
+        <field name="year">8</field>
+        <field name="salary">63462.30</field>
+        <field name="seniority_premium">2772.30</field>
+    </record>
+    <record id="table_pilot_tab_copilot_line_9" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_copilot"/>
+        <field name="year">9</field>
+        <field name="salary">63613.50</field>
+        <field name="seniority_premium">2971.70</field>
+    </record>
+    <record id="table_pilot_tab_copilot_line_10" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_copilot"/>
+        <field name="year">10</field>
+        <field name="salary">63764.10</field>
+        <field name="seniority_premium">3171.10</field>
+    </record>
+    <record id="table_pilot_tab_copilot_line_11" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_copilot"/>
+        <field name="year">11</field>
+        <field name="salary">63914.70</field>
+        <field name="seniority_premium">3370.49</field>
+    </record>
+    <record id="table_pilot_tab_copilot_line_12" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_copilot"/>
+        <field name="year">12</field>
+        <field name="salary">64029.90</field>
+        <field name="seniority_premium">3581.75</field>
+    </record>
+    <record id="table_pilot_tab_copilot_line_13" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_copilot"/>
+        <field name="year">13</field>
+        <field name="salary">64144.80</field>
+        <field name="seniority_premium">3793.01</field>
+    </record>
+    <record id="table_pilot_tab_copilot_line_14" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_copilot"/>
+        <field name="year">14</field>
+        <field name="salary">64259.70</field>
+        <field name="seniority_premium">4004.27</field>
+    </record>
+    <record id="table_pilot_tab_copilot_line_15" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_copilot"/>
+        <field name="year">15</field>
+        <field name="salary">64374.60</field>
+        <field name="seniority_premium">4215.53</field>
+    </record>
+    <record id="table_pilot_tab_copilot_line_16" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_copilot"/>
+        <field name="year">16</field>
+        <field name="salary">64469.10</field>
+        <field name="seniority_premium">4441.57</field>
+    </record>
+    <record id="table_pilot_tab_copilot_line_17" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_copilot"/>
+        <field name="year">17</field>
+        <field name="salary">64563</field>
+        <field name="seniority_premium">4667.41</field>
+    </record>
+    <record id="table_pilot_tab_copilot_line_18" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_copilot"/>
+        <field name="year">18</field>
+        <field name="salary">64657.20</field>
+        <field name="seniority_premium">4893.36</field>
+    </record>
+    <record id="table_pilot_tab_copilot_line_19" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_copilot"/>
+        <field name="year">19</field>
+        <field name="salary">64751.10</field>
+        <field name="seniority_premium">5119.30</field>
+    </record>
+    <record id="table_pilot_tab_copilot_line_20" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_copilot"/>
+        <field name="year">20</field>
+        <field name="salary">64830.90</field>
+        <field name="seniority_premium">5363.27</field>
+    </record>
+    <record id="table_pilot_tab_copilot_line_21" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_copilot"/>
+        <field name="year">21</field>
+        <field name="salary">64894.20</field>
+        <field name="seniority_premium">5621.68</field>
+    </record>
+    <record id="table_pilot_tab_copilot_line_22" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_copilot"/>
+        <field name="year">22</field>
+        <field name="salary">64943.40</field>
+        <field name="seniority_premium">5909.49</field>
+    </record>
+    <record id="table_pilot_tab_copilot_line_23" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_copilot"/>
+        <field name="year">23</field>
+        <field name="salary">64970.10</field>
+        <field name="seniority_premium">6197.30</field>
+    </record>
+    <record id="table_pilot_tab_copilot_line_24" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_copilot"/>
+        <field name="year">24</field>
+        <field name="salary">64993.50</field>
+        <field name="seniority_premium">6503.04</field>
+    </record>
+    <record id="table_pilot_tab_copilot_line_25" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_copilot"/>
+        <field name="year">25</field>
+        <field name="salary">64993.50</field>
+        <field name="seniority_premium">6819.48</field>
+    </record>
+    <record id="table_pilot_tab_copilot_line_26" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_copilot"/>
+        <field name="year">26</field>
+        <field name="salary">64993.50</field>
+        <field name="seniority_premium">7148.58</field>
+    </record>
+    <record id="table_pilot_tab_copilot_line_27" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_copilot"/>
+        <field name="year">27</field>
+        <field name="salary">64993.50</field>
+        <field name="seniority_premium">7746.38</field>
+    </record>
+    <record id="table_pilot_tab_copilot_line_28" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_copilot"/>
+        <field name="year">28</field>
+        <field name="salary">64993.50</field>
+        <field name="seniority_premium">8368.33</field>
+    </record>
+    <record id="table_pilot_tab_copilot_line_29" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_copilot"/>
+        <field name="year">29</field>
+        <field name="salary">64993.50</field>
+        <field name="seniority_premium">8990.28</field>
+    </record>
+    <record id="table_pilot_tab_copilot_line_30" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_copilot"/>
+        <field name="year">30</field>
+        <field name="salary">64993.50</field>
+        <field name="seniority_premium">9612.22</field>
+    </record>
+    
+    <!--        Pilot Tab APIRANTE-->
+
+    <record id="table_pilot_tab_candidate" model="hr.pilot.tab">
+        <field name="name">ASPIRANTE</field>
+    </record>
+
+    <record id="table_pilot_tab_candidate_line_0" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_candidate"/>
+        <field name="year">0</field>
+        <field name="salary">15373.50</field>
+        <field name="seniority_premium">0</field>
+    </record>
+    
+    
+    <!--        Pilot Tab SOBRECARGO A-->
+
+    <record id="table_pilot_tab_sobrecargo_a" model="hr.pilot.tab">
+        <field name="name">SOBRECARGO A</field>
+    </record>
+
+    <record id="table_pilot_tab_sobrecargo_a_line_0" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_a"/>
+        <field name="year">0</field>
+        <field name="salary">13266.90</field>
+        <field name="seniority_premium">0</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_a_line_1" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_a"/>
+        <field name="year">1</field>
+        <field name="salary">13498.80</field>
+        <field name="seniority_premium">899.13</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_a_line_2" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_a"/>
+        <field name="year">2</field>
+        <field name="salary">13498.80</field>
+        <field name="seniority_premium">899.13</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_a_line_3" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_a"/>
+        <field name="year">3</field>
+        <field name="salary">13810.50</field>
+        <field name="seniority_premium">2112.96</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_a_line_4" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_a"/>
+        <field name="year">4</field>
+        <field name="salary">13810.50</field>
+        <field name="seniority_premium">2112.96</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_a_line_5" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_a"/>
+        <field name="year">5</field>
+        <field name="salary">14078.70</field>
+        <field name="seniority_premium">3146.95</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_a_line_6" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_a"/>
+        <field name="year">6</field>
+        <field name="salary">14078.70</field>
+        <field name="seniority_premium">3146.95</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_a_line_7" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_a"/>
+        <field name="year">7</field>
+        <field name="salary">14310.00</field>
+        <field name="seniority_premium">4046.08</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_a_line_8" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_a"/>
+        <field name="year">8</field>
+        <field name="salary">14310.00</field>
+        <field name="seniority_premium">4115.96</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_a_line_9" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_a"/>
+        <field name="year">9</field>
+        <field name="salary">14310.00</field>
+        <field name="seniority_premium">4185.83</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_a_line_10" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_a"/>
+        <field name="year">10</field>
+        <field name="salary">14310.00</field>
+        <field name="seniority_premium">4255.71</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_a_line_11" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_a"/>
+        <field name="year">11</field>
+        <field name="salary">14310.00</field>
+        <field name="seniority_premium">4325.58</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_a_line_12" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_a"/>
+        <field name="year">12</field>
+        <field name="salary">14310.00</field>
+        <field name="seniority_premium">4398.26</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_a_line_13" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_a"/>
+        <field name="year">13</field>
+        <field name="salary">14310.00</field>
+        <field name="seniority_premium">4470.92</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_a_line_14" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_a"/>
+        <field name="year">14</field>
+        <field name="salary">14310.00</field>
+        <field name="seniority_premium">4543.60</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_a_line_15" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_a"/>
+        <field name="year">15</field>
+        <field name="salary">14310.00</field>
+        <field name="seniority_premium">4616.26</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_a_line_16" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_a"/>
+        <field name="year">16</field>
+        <field name="salary">14978.10</field>
+        <field name="seniority_premium">4699.09</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_a_line_17" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_a"/>
+        <field name="year">17</field>
+        <field name="salary">14978.10</field>
+        <field name="seniority_premium">4781.93</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_a_line_18" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_a"/>
+        <field name="year">18</field>
+        <field name="salary">14978.10</field>
+        <field name="seniority_premium">4864.76</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_a_line_19" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_a"/>
+        <field name="year">19</field>
+        <field name="salary">14978.10</field>
+        <field name="seniority_premium">4947.60</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_a_line_20" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_a"/>
+        <field name="year">20</field>
+        <field name="salary">14978.10</field>
+        <field name="seniority_premium">5030.43</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_a_line_21" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_a"/>
+        <field name="year">21</field>
+        <field name="salary">14978.10</field>
+        <field name="seniority_premium">5113.27</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_a_line_22" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_a"/>
+        <field name="year">22</field>
+        <field name="salary">14978.10</field>
+        <field name="seniority_premium">5196.10</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_a_line_23" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_a"/>
+        <field name="year">23</field>
+        <field name="salary">14978.10</field>
+        <field name="seniority_premium">5278.93</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_a_line_24" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_a"/>
+        <field name="year">24</field>
+        <field name="salary">14978.10</field>
+        <field name="seniority_premium">5528.06</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_a_line_25" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_a"/>
+        <field name="year">25</field>
+        <field name="salary">14978.10</field>
+        <field name="seniority_premium">5627.41</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_a_line_26" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_a"/>
+        <field name="year">26</field>
+        <field name="salary">14978.10</field>
+        <field name="seniority_premium">5636.01</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_a_line_27" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_a"/>
+        <field name="year">27</field>
+        <field name="salary">14978.10</field>
+        <field name="seniority_premium">5752.01</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_a_line_28" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_a"/>
+        <field name="year">28</field>
+        <field name="salary">14978.10</field>
+        <field name="seniority_premium">5877.48</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_a_line_29" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_a"/>
+        <field name="year">29</field>
+        <field name="salary">14978.10</field>
+        <field name="seniority_premium">6002.95</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_a_line_30" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_a"/>
+        <field name="year">30</field>
+        <field name="salary">14978.10</field>
+        <field name="seniority_premium">6131.48</field>
+    </record>
+
+
+    <!--        Pilot Tab SOBRECARGO B-->
+
+    <record id="table_pilot_tab_sobrecargo_b" model="hr.pilot.tab">
+        <field name="name">SOBRECARGO B</field>
+    </record>
+
+    <record id="table_pilot_tab_sobrecargo_b_line_0" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_b"/>
+        <field name="year">0</field>
+        <field name="salary">12341.70</field>
+        <field name="seniority_premium">0</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_b_line_1" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_b"/>
+        <field name="year">1</field>
+        <field name="salary">12573.60</field>
+        <field name="seniority_premium">899.13</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_b_line_2" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_b"/>
+        <field name="year">2</field>
+        <field name="salary">12573.60</field>
+        <field name="seniority_premium">899.13</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_b_line_3" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_b"/>
+        <field name="year">3</field>
+        <field name="salary">12885.30</field>
+        <field name="seniority_premium">2112.96</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_b_line_4" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_b"/>
+        <field name="year">4</field>
+        <field name="salary">12885.30</field>
+        <field name="seniority_premium">2112.96</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_b_line_5" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_b"/>
+        <field name="year">5</field>
+        <field name="salary">13153.50</field>
+        <field name="seniority_premium">3146.95</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_b_line_6" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_b"/>
+        <field name="year">6</field>
+        <field name="salary">13153.50</field>
+        <field name="seniority_premium">3146.95</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_b_line_7" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_b"/>
+        <field name="year">7</field>
+        <field name="salary">13384.80</field>
+        <field name="seniority_premium">4046.08</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_b_line_8" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_b"/>
+        <field name="year">8</field>
+        <field name="salary">13384.80</field>
+        <field name="seniority_premium">4115.96</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_b_line_9" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_b"/>
+        <field name="year">9</field>
+        <field name="salary">13384.80</field>
+        <field name="seniority_premium">4185.83</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_b_line_10" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_b"/>
+        <field name="year">10</field>
+        <field name="salary">13384.80</field>
+        <field name="seniority_premium">4255.71</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_b_line_11" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_b"/>
+        <field name="year">11</field>
+        <field name="salary">13384.80</field>
+        <field name="seniority_premium">4325.58</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_b_line_12" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_b"/>
+        <field name="year">12</field>
+        <field name="salary">13384.80</field>
+        <field name="seniority_premium">4398.26</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_b_line_13" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_b"/>
+        <field name="year">13</field>
+        <field name="salary">13384.80</field>
+        <field name="seniority_premium">4470.92</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_b_line_14" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_b"/>
+        <field name="year">14</field>
+        <field name="salary">13384.80</field>
+        <field name="seniority_premium">4543.60</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_b_line_15" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_b"/>
+        <field name="year">15</field>
+        <field name="salary">13384.80</field>
+        <field name="seniority_premium">4616.26</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_b_line_16" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_b"/>
+        <field name="year">16</field>
+        <field name="salary">14052.90</field>
+        <field name="seniority_premium">4699.09</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_b_line_17" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_b"/>
+        <field name="year">17</field>
+        <field name="salary">14052.90</field>
+        <field name="seniority_premium">4781.93</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_b_line_18" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_b"/>
+        <field name="year">18</field>
+        <field name="salary">14052.90</field>
+        <field name="seniority_premium">4864.76</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_b_line_19" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_b"/>
+        <field name="year">19</field>
+        <field name="salary">14052.90</field>
+        <field name="seniority_premium">4947.60</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_b_line_20" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_b"/>
+        <field name="year">20</field>
+        <field name="salary">14052.90</field>
+        <field name="seniority_premium">5030.43</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_b_line_21" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_b"/>
+        <field name="year">21</field>
+        <field name="salary">14052.90</field>
+        <field name="seniority_premium">5113.27</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_b_line_22" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_b"/>
+        <field name="year">22</field>
+        <field name="salary">14052.90</field>
+        <field name="seniority_premium">5196.10</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_b_line_23" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_b"/>
+        <field name="year">23</field>
+        <field name="salary">14052.90</field>
+        <field name="seniority_premium">5278.93</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_b_line_24" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_b"/>
+        <field name="year">24</field>
+        <field name="salary">14052.90</field>
+        <field name="seniority_premium">5518.81</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_b_line_25" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_b"/>
+        <field name="year">25</field>
+        <field name="salary">14052.90</field>
+        <field name="seniority_premium">5618.16</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_b_line_26" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_b"/>
+        <field name="year">26</field>
+        <field name="salary">14052.90</field>
+        <field name="seniority_premium">5619.26</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_b_line_27" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_b"/>
+        <field name="year">27</field>
+        <field name="salary">14052.90</field>
+        <field name="seniority_premium">5727.76</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_b_line_28" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_b"/>
+        <field name="year">28</field>
+        <field name="salary">14052.90</field>
+        <field name="seniority_premium">5845.12</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_b_line_29" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_b"/>
+        <field name="year">29</field>
+        <field name="salary">14052.90</field>
+        <field name="seniority_premium">5962.48</field>
+    </record>
+    <record id="table_pilot_tab_sobrecargo_b_line_30" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_sobrecargo_b"/>
+        <field name="year">30</field>
+        <field name="salary">14052.90</field>
+        <field name="seniority_premium">6082.70</field>
+    </record>
+
+
+
+    <!--        Pilot Tab ASPIRANTE A SOBRECARGO -->
+
+    <record id="table_pilot_tab_asp_sobrecargo" model="hr.pilot.tab">
+        <field name="name">ASPIRANTE A SOBRECARGO</field>
+    </record>
+
+    <record id="table_pilot_tab_asp_sobrecargo_line_0" model="hr.pilot.tab.line">
+        <field name="pilot_tab_id" ref="table_pilot_tab_asp_sobrecargo"/>
+        <field name="year">0</field>
+        <field name="salary">9103.20</field>
+        <field name="seniority_premium">0</field>
+    </record>
+
+ 
+   </data>
+</odoo>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <record id="reverse_calculation_salary_form" model="ir.ui.view">
+        <field name="name">reverse.calculation.salary.form</field>
+        <field name="model">reverse.calculation.salary</field>
+        <field name="arch" type="xml">
+        <form string="Reverse Calculation Salary">
+            <group>
+                <group>
+                    <field name="net_salary"/>
+                    <field name="state" invisible="1"/>
+<!--
+                    <field name="contract_benefits"/>
+-->
+                </group>
+                <group>
+                    <field name="gross_salary" readonly="1"/>
+                    <field name="contract_id" invisible="1"/>
+                </group>
+            </group>
+            <footer>
+                <button name="reverse_calculation_salary" string="Calcular" type="object"/>
+                <button string="Cancel" special="cancel" class="btn-default"/>
+            </footer>
+        </form>
+        </field>
+    </record>
+
+    <record id="action_reverse_calculation_salary" model="ir.actions.act_window">
+        <field name="name">Reverse Calculation Salary</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">reverse.calculation.salary</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    </data>
+</odoo>

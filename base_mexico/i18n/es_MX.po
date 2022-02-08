@@ -1,0 +1,467 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* base_mexico
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-26 13:50+0000\n"
+"PO-Revision-Date: 2022-01-26 13:50+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: base_mexico
+#: model_terms:ir.ui.view,arch_db:base_mexico.view_company_form_mexico_inherit
+#: model_terms:ir.ui.view,arch_db:base_mexico.view_res_employer_register_form
+msgid "Address"
+msgstr "Dirección"
+
+#. module: base_mexico
+#: model:ir.model.constraint,message:base_mexico.constraint_res_company_name_uniq
+msgid "And there is a company with this name!."
+msgstr "¡Ya hay una empresa con este nombre!."
+
+#. module: base_mexico
+#: model:ir.model,name:base_mexico.model_res_group_risk_factor
+#: model:ir.model.fields,field_description:base_mexico.field_res_employer_register__risk_factor_ids
+msgid "Annual Risk Factor"
+msgstr "Factor de riesgo anual"
+
+#. module: base_mexico
+#: model:ir.model,name:base_mexico.model_res_bank
+#: model:ir.ui.menu,name:base_mexico.menu_action_res_bank_form_setting
+msgid "Bank"
+msgstr "Banco"
+
+#. module: base_mexico
+#: model:ir.model.fields,field_description:base_mexico.field_res_bank__business_name
+msgid "Business name"
+msgstr "Razón Social"
+
+#. module: base_mexico
+#: model:ir.model.fields,field_description:base_mexico.field_res_employer_register__city
+#: model_terms:ir.ui.view,arch_db:base_mexico.view_company_form_mexico_inherit
+#: model_terms:ir.ui.view,arch_db:base_mexico.view_res_employer_register_form
+msgid "City"
+msgstr "Ciudad"
+
+#. module: base_mexico
+#: model:ir.model.fields,field_description:base_mexico.field_res_bank__clabe
+msgid "Clabe"
+msgstr ""
+
+#. module: base_mexico
+#: model:ir.model.fields.selection,name:base_mexico.selection__res_employer_register__job_risk__1
+msgid "Class I"
+msgstr "Clase I"
+
+#. module: base_mexico
+#: model:ir.model.fields.selection,name:base_mexico.selection__res_employer_register__job_risk__2
+msgid "Class II"
+msgstr "Clase II"
+
+#. module: base_mexico
+#: model:ir.model.fields.selection,name:base_mexico.selection__res_employer_register__job_risk__3
+msgid "Class III"
+msgstr "Clase III"
+
+#. module: base_mexico
+#: model:ir.model.fields.selection,name:base_mexico.selection__res_employer_register__job_risk__4
+msgid "Class IV"
+msgstr "Clase IV"
+
+#. module: base_mexico
+#: model:ir.model.fields.selection,name:base_mexico.selection__res_employer_register__job_risk__5
+msgid "Class V"
+msgstr "Clase V"
+
+#. module: base_mexico
+#: model:ir.model.fields,field_description:base_mexico.field_res_bank__code
+#: model:ir.model.fields,field_description:base_mexico.field_res_company_delegation__code
+#: model:ir.model.fields,field_description:base_mexico.field_res_company_economic_sector__code
+#: model:ir.model.fields,field_description:base_mexico.field_res_company_subdelegation__code
+msgid "Code"
+msgstr "Código"
+
+#. module: base_mexico
+#: model:ir.model.fields,field_description:base_mexico.field_res_employer_register__colony_code
+#: model_terms:ir.ui.view,arch_db:base_mexico.view_company_form_mexico_inherit
+#: model_terms:ir.ui.view,arch_db:base_mexico.view_res_employer_register_form
+msgid "Colony Code"
+msgstr "Código de Colonia"
+
+#. module: base_mexico
+#: model:ir.model.fields,field_description:base_mexico.field_res_employer_register__colony
+msgid "Colony Name"
+msgstr "Nombre de Colonia"
+
+#. module: base_mexico
+#: model:ir.model.fields,help:base_mexico.field_res_employer_register__colony_code
+msgid ""
+"Colony code that will be used in the CFDI with the external trade as Emitter"
+" colony. It must be a code from the SAT catalog."
+msgstr ""
+"Código de colonia que se utilizará en el CFDI con el comercio exterior como "
+"colonia emisora. Debe ser un código del catálogo SAT."
+
+#. module: base_mexico
+#: model_terms:ir.ui.view,arch_db:base_mexico.view_company_form_mexico_inherit
+#: model_terms:ir.ui.view,arch_db:base_mexico.view_res_employer_register_form
+msgid "Colony..."
+msgstr "Colonia..."
+
+#. module: base_mexico
+#: model:ir.model,name:base_mexico.model_res_company
+msgid "Companies"
+msgstr "Compañías"
+
+#. module: base_mexico
+#: model:ir.model.fields,field_description:base_mexico.field_res_employer_register__company_id
+msgid "Company"
+msgstr "Compañía"
+
+#. module: base_mexico
+#: model_terms:ir.ui.view,arch_db:base_mexico.view_company_form_mexico_inherit
+msgid "Company Information"
+msgstr "Información de la Compañía"
+
+#. module: base_mexico
+#: model:ir.model.fields,field_description:base_mexico.field_res_employer_register__country_id
+#: model_terms:ir.ui.view,arch_db:base_mexico.view_company_form_mexico_inherit
+#: model_terms:ir.ui.view,arch_db:base_mexico.view_res_employer_register_form
+msgid "Country"
+msgstr "País"
+
+#. module: base_mexico
+#: model:ir.model.fields,field_description:base_mexico.field_res_employer_register__country_code
+msgid "Country Code"
+msgstr "Código de País"
+
+#. module: base_mexico
+#: model_terms:ir.actions.act_window,help:base_mexico.action_locality_mx
+msgid "Create your first Locality"
+msgstr "Crea tu primera Localidad"
+
+#. module: base_mexico
+#: model:ir.model.fields,field_description:base_mexico.field_res_company_delegation__create_uid
+#: model:ir.model.fields,field_description:base_mexico.field_res_company_economic_sector__create_uid
+#: model:ir.model.fields,field_description:base_mexico.field_res_company_subdelegation__create_uid
+#: model:ir.model.fields,field_description:base_mexico.field_res_employer_register__create_uid
+#: model:ir.model.fields,field_description:base_mexico.field_res_group_risk_factor__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: base_mexico
+#: model:ir.model.fields,field_description:base_mexico.field_res_company_delegation__create_date
+#: model:ir.model.fields,field_description:base_mexico.field_res_company_economic_sector__create_date
+#: model:ir.model.fields,field_description:base_mexico.field_res_company_subdelegation__create_date
+#: model:ir.model.fields,field_description:base_mexico.field_res_employer_register__create_date
+#: model:ir.model.fields,field_description:base_mexico.field_res_group_risk_factor__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: base_mexico
+#: model:ir.model.fields,field_description:base_mexico.field_res_company_delegation__name
+#: model:ir.model.fields,field_description:base_mexico.field_res_company_subdelegation__delegation_id
+#: model:ir.model.fields,field_description:base_mexico.field_res_employer_register__delegation_id
+msgid "Delegation"
+msgstr "Delegación"
+
+#. module: base_mexico
+#: model:ir.model.fields,field_description:base_mexico.field_res_bank__display_name
+#: model:ir.model.fields,field_description:base_mexico.field_res_company__display_name
+#: model:ir.model.fields,field_description:base_mexico.field_res_company_delegation__display_name
+#: model:ir.model.fields,field_description:base_mexico.field_res_company_economic_sector__display_name
+#: model:ir.model.fields,field_description:base_mexico.field_res_company_subdelegation__display_name
+#: model:ir.model.fields,field_description:base_mexico.field_res_employer_register__display_name
+#: model:ir.model.fields,field_description:base_mexico.field_res_group_risk_factor__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: base_mexico
+#: model:ir.model.fields,field_description:base_mexico.field_res_employer_register__street_number2
+msgid "Door Number"
+msgstr "Número de puerta"
+
+#. module: base_mexico
+#: model:ir.model.fields,field_description:base_mexico.field_res_company_economic_sector__name
+#: model_terms:ir.ui.view,arch_db:base_mexico.view_res_company_economic_sector_search
+#: model_terms:ir.ui.view,arch_db:base_mexico.view_res_company_economic_sector_tree
+msgid "Economic Sector"
+msgstr "Sector Económico"
+
+#. module: base_mexico
+#: model:ir.model.fields,field_description:base_mexico.field_res_employer_register__economic_activity
+msgid "Economic activity"
+msgstr "Actividad económica"
+
+#. module: base_mexico
+#: model:ir.model.fields,field_description:base_mexico.field_res_employer_register__electronic_signature
+msgid "Electronic Signature"
+msgstr "Firma Electrónica"
+
+#. module: base_mexico
+#: model:ir.model.fields,field_description:base_mexico.field_res_company__employer_register_ids
+#: model_terms:ir.ui.view,arch_db:base_mexico.view_res_employer_register_form
+#: model_terms:ir.ui.view,arch_db:base_mexico.view_res_employer_register_tree
+msgid "Employer Register"
+msgstr "Registro Patronal"
+
+#. module: base_mexico
+#: model:ir.model.fields,field_description:base_mexico.field_res_employer_register__employer_registry
+msgid "Employer Registry"
+msgstr "Registro Patronal"
+
+#. module: base_mexico
+#: model:ir.model.fields,field_description:base_mexico.field_res_group_risk_factor__date_to
+msgid "End Date"
+msgstr "Fecha final"
+
+#. module: base_mexico
+#: model:ir.model.fields,field_description:base_mexico.field_res_employer_register__state_id
+msgid "Fed. State"
+msgstr "Estado"
+
+#. module: base_mexico
+#: model:ir.model.fields.selection,name:base_mexico.selection__res_employer_register__geographic_area__1
+msgid "General Minimum Wages"
+msgstr "Salarios mínimos generales"
+
+#. module: base_mexico
+#: model:ir.model.fields,field_description:base_mexico.field_res_employer_register__geographic_area
+msgid "Geographic area"
+msgstr "Área geográfica"
+
+#. module: base_mexico
+#: model:ir.model.fields,field_description:base_mexico.field_res_employer_register__street_number
+msgid "House Number"
+msgstr "Número de casa"
+
+#. module: base_mexico
+#: model:ir.model.fields,field_description:base_mexico.field_res_bank__id
+#: model:ir.model.fields,field_description:base_mexico.field_res_company__id
+#: model:ir.model.fields,field_description:base_mexico.field_res_company_delegation__id
+#: model:ir.model.fields,field_description:base_mexico.field_res_company_economic_sector__id
+#: model:ir.model.fields,field_description:base_mexico.field_res_company_subdelegation__id
+#: model:ir.model.fields,field_description:base_mexico.field_res_employer_register__id
+#: model:ir.model.fields,field_description:base_mexico.field_res_group_risk_factor__id
+msgid "ID"
+msgstr "Identificación"
+
+#. module: base_mexico
+#: model:ir.model.fields,field_description:base_mexico.field_res_employer_register__job_risk
+msgid "Job risk"
+msgstr "Riesgo laboral"
+
+#. module: base_mexico
+#: model:ir.model.fields,field_description:base_mexico.field_res_bank____last_update
+#: model:ir.model.fields,field_description:base_mexico.field_res_company____last_update
+#: model:ir.model.fields,field_description:base_mexico.field_res_company_delegation____last_update
+#: model:ir.model.fields,field_description:base_mexico.field_res_company_economic_sector____last_update
+#: model:ir.model.fields,field_description:base_mexico.field_res_company_subdelegation____last_update
+#: model:ir.model.fields,field_description:base_mexico.field_res_employer_register____last_update
+#: model:ir.model.fields,field_description:base_mexico.field_res_group_risk_factor____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: base_mexico
+#: model:ir.model.fields,field_description:base_mexico.field_res_company_delegation__write_uid
+#: model:ir.model.fields,field_description:base_mexico.field_res_company_economic_sector__write_uid
+#: model:ir.model.fields,field_description:base_mexico.field_res_company_subdelegation__write_uid
+#: model:ir.model.fields,field_description:base_mexico.field_res_employer_register__write_uid
+#: model:ir.model.fields,field_description:base_mexico.field_res_group_risk_factor__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: base_mexico
+#: model:ir.model.fields,field_description:base_mexico.field_res_company_delegation__write_date
+#: model:ir.model.fields,field_description:base_mexico.field_res_company_economic_sector__write_date
+#: model:ir.model.fields,field_description:base_mexico.field_res_company_subdelegation__write_date
+#: model:ir.model.fields,field_description:base_mexico.field_res_employer_register__write_date
+#: model:ir.model.fields,field_description:base_mexico.field_res_group_risk_factor__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: base_mexico
+#: model:ir.ui.menu,name:base_mexico.menu_action_localitation
+msgid "Localitation"
+msgstr "Localización"
+
+#. module: base_mexico
+#: model:ir.actions.act_window,name:base_mexico.action_locality_mx
+#: model_terms:ir.ui.view,arch_db:base_mexico.view_locality_mx_tree
+msgid "Localities"
+msgstr "Localidades"
+
+#. module: base_mexico
+#: model:ir.model.fields,field_description:base_mexico.field_res_employer_register__locality_id
+#: model:ir.ui.menu,name:base_mexico.menu_action_locality
+#: model_terms:ir.ui.view,arch_db:base_mexico.view_locality_mx_form
+msgid "Locality"
+msgstr "Localidad"
+
+#. module: base_mexico
+#: model:ir.model.fields,field_description:base_mexico.field_res_employer_register__locality
+msgid "Locality Name"
+msgstr "Nombre de Localidad"
+
+#. module: base_mexico
+#: model_terms:ir.ui.view,arch_db:base_mexico.view_company_form_mexico_inherit
+#: model_terms:ir.ui.view,arch_db:base_mexico.view_res_employer_register_form
+msgid "Locality..."
+msgstr "Localidad..."
+
+#. module: base_mexico
+#: model:ir.model.fields,field_description:base_mexico.field_res_bank__number
+msgid "No. Inst."
+msgstr ""
+
+#. module: base_mexico
+#: model:ir.model.fields.selection,name:base_mexico.selection__res_employer_register__geographic_area__2
+msgid "Northern border"
+msgstr "Frontera norte"
+
+#. module: base_mexico
+#: model:ir.model.fields.selection,name:base_mexico.selection__res_employer_register__job_risk__99
+msgid "Not apply"
+msgstr "No aplica"
+
+#. module: base_mexico
+#: model:ir.model.fields,help:base_mexico.field_res_employer_register__locality_id
+msgid ""
+"Optional attribute used in the XML that serves to define the locality where "
+"the domicile is located."
+msgstr ""
+"Atributo opcional utilizado en el XML que sirve para definir la localidad "
+"donde se ubica el domicilio."
+
+#. module: base_mexico
+#: model:ir.model.fields,field_description:base_mexico.field_res_employer_register__economic_sector_id
+msgid "RT fraction"
+msgstr "Fracción de RT"
+
+#. module: base_mexico
+#: model_terms:ir.ui.view,arch_db:base_mexico.view_company_form_mexico_inherit
+#: model_terms:ir.ui.view,arch_db:base_mexico.view_res_employer_register_form
+msgid "Revoke"
+msgstr "Revocar"
+
+#. module: base_mexico
+#: model:ir.model.fields.selection,name:base_mexico.selection__res_employer_register__state__revoked
+msgid "Revoked"
+msgstr "Revocado"
+
+#. module: base_mexico
+#: model:ir.model.fields,field_description:base_mexico.field_res_group_risk_factor__risk_factor
+msgid "Risk Factor"
+msgstr "Factor de riesgo"
+
+#. module: base_mexico
+#: model:ir.model.fields,field_description:base_mexico.field_res_group_risk_factor__date_from
+msgid "Start Date"
+msgstr "Fecha de inicio"
+
+#. module: base_mexico
+#: model:ir.model.fields,field_description:base_mexico.field_res_employer_register__state
+#: model_terms:ir.ui.view,arch_db:base_mexico.view_company_form_mexico_inherit
+#: model_terms:ir.ui.view,arch_db:base_mexico.view_res_employer_register_form
+msgid "State"
+msgstr "Estado"
+
+#. module: base_mexico
+#: model:ir.model.fields,field_description:base_mexico.field_res_employer_register__street2
+msgid "Street 2"
+msgstr "Calle 2"
+
+#. module: base_mexico
+#: model_terms:ir.ui.view,arch_db:base_mexico.view_company_form_mexico_inherit
+#: model_terms:ir.ui.view,arch_db:base_mexico.view_res_employer_register_form
+msgid "Street 2..."
+msgstr "Calle 2..."
+
+#. module: base_mexico
+#: model:ir.model.fields,field_description:base_mexico.field_res_employer_register__street_name
+msgid "Street Name"
+msgstr "Nombre de Calle"
+
+#. module: base_mexico
+#: model_terms:ir.ui.view,arch_db:base_mexico.view_company_form_mexico_inherit
+#: model_terms:ir.ui.view,arch_db:base_mexico.view_res_employer_register_form
+msgid "Street Name..."
+msgstr "Nombre de Calle..."
+
+#. module: base_mexico
+#: model:ir.model.fields,field_description:base_mexico.field_res_company_delegation__subdelegation_ids
+#: model:ir.model.fields,field_description:base_mexico.field_res_company_subdelegation__name
+#: model:ir.model.fields,field_description:base_mexico.field_res_employer_register__subdelegation_id
+msgid "Sub-Delegation"
+msgstr "Sub-Delegación"
+
+#. module: base_mexico
+#: model:ir.model.fields,help:base_mexico.field_res_employer_register__country_code
+msgid ""
+"The ISO country code in two chars. \n"
+"You can use this field for quick search."
+msgstr ""
+"El código de país ISO en dos caracteres. \n"
+"Puede utilizar este campo para una búsqueda rápida."
+
+#. module: base_mexico
+#: model:ir.model.constraint,message:base_mexico.constraint_res_employer_register_employer_registryt_uniq
+msgid ""
+"There is already an employer number registered with the number entered!"
+msgstr "¡Ya hay un número de empleador registrado con el número ingresado!"
+
+#. module: base_mexico
+#: model:ir.model.fields.selection,name:base_mexico.selection__res_employer_register__state__timed_out
+#: model_terms:ir.ui.view,arch_db:base_mexico.view_company_form_mexico_inherit
+#: model_terms:ir.ui.view,arch_db:base_mexico.view_res_employer_register_form
+msgid "Timed out"
+msgstr "Desconectado"
+
+#. module: base_mexico
+#: model:ir.model.fields.selection,name:base_mexico.selection__res_employer_register__state__valid
+msgid "Valid"
+msgstr "Válido"
+
+#. module: base_mexico
+#: model:ir.model.fields,field_description:base_mexico.field_res_employer_register__validity_signature
+msgid "Validity of Signature"
+msgstr "Validez de la firma"
+
+#. module: base_mexico
+#: model:ir.model.fields,field_description:base_mexico.field_res_employer_register__zip
+#: model_terms:ir.ui.view,arch_db:base_mexico.view_company_form_mexico_inherit
+#: model_terms:ir.ui.view,arch_db:base_mexico.view_res_employer_register_form
+msgid "ZIP"
+msgstr ""
+
+#. module: base_mexico
+#: model:ir.model.fields,field_description:base_mexico.field_res_group_risk_factor__employer_id
+msgid "group"
+msgstr "grupo"
+
+#. module: base_mexico
+#: model:ir.model,name:base_mexico.model_res_company_delegation
+msgid "res.company.delegation"
+msgstr ""
+
+#. module: base_mexico
+#: model:ir.model,name:base_mexico.model_res_company_economic_sector
+msgid "res.company.economic_sector"
+msgstr ""
+
+#. module: base_mexico
+#: model:ir.model,name:base_mexico.model_res_company_subdelegation
+msgid "res.company.subdelegation"
+msgstr ""
+
+#. module: base_mexico
+#: model:ir.model,name:base_mexico.model_res_employer_register
+msgid "res.employer.register"
+msgstr ""

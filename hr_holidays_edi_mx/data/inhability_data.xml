@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+
+        <!-- Sub Category -->
+        <record id="subcategory_S001" model="hr.leave.subcategory">
+            <field name="name">Única</field>
+            <field name="code">0</field>
+        </record>
+        <record id="subcategory_S002" model="hr.leave.subcategory">
+            <field name="name">Inicial</field>
+            <field name="code">1</field>
+        </record>
+        <record id="subcategory_S003" model="hr.leave.subcategory">
+            <field name="name">Provicional ST-3</field>
+            <field name="code">1</field>
+        </record>
+        <record id="subcategory_S004" model="hr.leave.subcategory">
+            <field name="name">Definitiva ST-3</field>
+            <field name="code">3</field>
+        </record>
+        <record id="subcategory_S005" model="hr.leave.subcategory">
+            <field name="name">ST-3</field>
+            <field name="code">3</field>
+        </record>
+        <record id="subcategory_S006" model="hr.leave.subcategory">
+            <field name="name">Subsecuente</field>
+            <field name="code">2</field>
+        </record>
+        <record id="subcategory_S007" model="hr.leave.subcategory">
+            <field name="name">Alta Médica o ST-2</field>
+            <field name="code">3</field>
+        </record>
+
+        <!-- category -->
+        <record id="category_G001" model="hr.leave.category">
+            <field name="name">No aplica</field>
+            <field name="code">0</field>
+            <field name="subcategory_ids" eval="[(6, 0, [ref('subcategory_S001')])]"/>
+        </record>
+        <record id="category_G002" model="hr.leave.category">
+            <field name="name">Inicial</field>
+            <field name="code">1</field>
+            <field name="subcategory_ids" eval="[(6, 0, [ref('subcategory_S001'),ref('subcategory_S002'),ref('subcategory_S006'),ref('subcategory_S007')])]"/>
+        </record>
+        <record id="category_G003" model="hr.leave.category">
+            <field name="name">Recaída</field>
+            <field name="code">2</field>
+            <field name="subcategory_ids" eval="[(6, 0, [ref('subcategory_S001'),ref('subcategory_S002'),ref('subcategory_S006'),ref('subcategory_S007')])]"/>
+        </record>
+        <record id="category_G004" model="hr.leave.category">
+            <field name="name">Valuación</field>
+            <field name="code">3</field>
+            <field name="subcategory_ids" eval="[(6, 0, [ref('subcategory_S003'),ref('subcategory_S004')])]"/>
+        </record>
+        <record id="category_G005" model="hr.leave.category">
+            <field name="name">Revaluación</field>
+            <field name="code">4</field>
+            <field name="subcategory_ids" eval="[(6, 0, [ref('subcategory_S003'),ref('subcategory_S004')])]"/>
+        </record>
+        <record id="category_G006" model="hr.leave.category">
+            <field name="name">Defución</field>
+            <field name="code">5</field>
+            <field name="subcategory_ids" eval="[(6, 0, [ref('subcategory_S005')])]"/>
+        </record>
+
+        <!-- classification -->
+        <record id="classification_C001" model="hr.leave.classification">
+            <field name="name">No aplica</field>
+            <field name="code">0</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_G001'),ref('category_G002')])]"/>
+        </record>
+        <record id="classification_C002" model="hr.leave.classification">
+            <field name="name">Accidente de trabajo</field>
+            <field name="code">1</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_G001'),ref('category_G002'),ref('category_G003')
+                ,ref('category_G004'),ref('category_G005'),ref('category_G006')])]"/>
+        </record>
+        <record id="classification_C003" model="hr.leave.classification">
+            <field name="name">Accidente en trayecto</field>
+            <field name="code">2</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_G001'),ref('category_G002')])]"/>
+        </record>
+        <record id="classification_C004" model="hr.leave.classification">
+            <field name="name">Enfermedad de trabajo</field>
+            <field name="code">3</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_G001'),ref('category_G002')])]"/>
+        </record>
+        <record id="classification_C005" model="hr.leave.classification">
+            <field name="name">Pre</field>
+            <field name="code">1</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_G001')])]"/>
+        </record>
+        <record id="classification_C006" model="hr.leave.classification">
+            <field name="name">Enlace</field>
+            <field name="code">2</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_G001')])]"/>
+        </record>
+        <record id="classification_C007" model="hr.leave.classification">
+            <field name="name">Post</field>
+            <field name="code">3</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_G001')])]"/>
+        </record>
+        <record id="classification_C008" model="hr.leave.classification">
+            <field name="name">Unica</field>
+            <field name="code">1</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_G001')])]"/>
+        </record>
+
+        <!-- Inhability -->
+        <record id="inhability_type_1" model="hr.leave.inhability">
+            <field name="name">Enfermedad general</field>
+            <field name="code">1</field>
+            <field name="classification_ids" eval="[(6, 0, [ref('classification_C001')])]"/>
+        </record>
+        <record id="inhability_type_2" model="hr.leave.inhability">
+            <field name="name">Maternidad</field>
+            <field name="code">3</field>
+            <field name="classification_ids" eval="[(6, 0, [ref('classification_C005'),
+                ref('classification_C006'),ref('classification_C007'),ref('classification_C008')])]"/>
+        </record>
+        <record id="inhability_type_3" model="hr.leave.inhability">
+            <field name="name">Riesgo de trabajo</field>
+            <field name="code">2</field>
+            <field name="classification_ids" eval="[(6, 0, [ref('classification_C002'),
+                ref('classification_C003'),ref('classification_C004'),])]"/>
+        </record>
+        <record id="inhability_type_4" model="hr.leave.inhability">
+            <field name="name">Licencia por cuidados médicos de hijos diagnosticados con cáncer.</field>
+            <field name="code">4</field>
+            <field name="classification_ids" eval="[(6, 0, [ref('classification_C001')])]"/>
+        </record>
+
+   </data>
+</odoo>

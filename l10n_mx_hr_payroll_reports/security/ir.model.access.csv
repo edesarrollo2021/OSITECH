@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_wizard_file_download,wizard.file.download.user,model_wizard_file_download,,1,1,1,1
+access_wizard_payroll_report_filter,wizard.payroll.report.filter.user,model_wizard_payroll_report_filter,,1,1,1,1
+access_wizard_payment_file,wizard.payment.file.user,model_wizard_payment_file,,1,1,1,1
+access_repor_credit,report.credit.user,model_report_credit,hr.group_hr_user,1,1,1,1
+access_payroll_run_details_cfdi_wizard,payroll.run.details.cfdi.wizard.user,model_payroll_run_details_cfdi_wizard,hr.group_hr_user,1,1,1,1
+access_report_consolidate_hr_user,report.consolidate.hr.user,model_report_consolidate,hr.group_hr_user,1,1,1,1

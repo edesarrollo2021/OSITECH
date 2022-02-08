@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <!-- Sequences for hr.contract -->
+    <record id="seq_hr_contract" model="ir.sequence">
+        <field name="name">Contract</field>
+        <field name="code">hr.contract</field>
+        <field name="prefix">CONT-</field>
+        <field name="padding">4</field>
+        <field name="company_id" eval="False"/>
+    </record>
+
+    <!-- Sequences for hr.job -->
+    <record id="seq_hr_job_ra" model="ir.sequence">
+        <field name="name">Jop Position</field>
+        <field name="code">hr.job</field>
+        <field name="prefix">PT</field>
+        <field name="padding">4</field>
+        <field name="company_id" eval="False"/>
+    </record>
+
+    <!-- Sequences for hr.department -->
+    <record id="seq_hr_department_ra" model="ir.sequence">
+        <field name="name">Department</field>
+        <field name="code">hr.department</field>
+        <field name="prefix">DP</field>
+        <field name="padding">4</field>
+        <field name="company_id" eval="False"/>
+    </record>
+
+    <!-- Sequences for hr.cost.center -->
+    <record id="seq_cost_center" model="ir.sequence">
+        <field name="name">Cost Centers</field>
+        <field name="code">hr.cost.center</field>
+        <field name="prefix">CC</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False"/>
+    </record>
+
+    <!-- Sequences for hr.workplace -->
+<!--    <record id="seq_hr_workplace" model="ir.sequence">-->
+<!--        <field name="name">Workplace</field>-->
+<!--        <field name="code">hr.workplace</field>-->
+<!--        <field name="prefix">CT</field>-->
+<!--        <field name="padding">5</field>-->
+<!--        <field name="company_id" eval="False"/>-->
+<!--    </record>-->
+
+    <!-- Sequences for hr.employee -->
+    <record id="seq_hr_employee" model="ir.sequence">
+        <field name="name">Employees</field>
+        <field name="code">hr.employee</field>
+        <field name="prefix">EMP-</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False"/>
+    </record>
+
+    <!-- Sequences for contract.salary.change.line -->
+    <record id="seq_contract_salary" model="ir.sequence">
+        <field name="name">Contract Salary</field>
+        <field name="code">contract.salary.change</field>
+        <field name="prefix">SAL</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False"/>
+    </record>
+    
+    <record forcecreate="True" id="decimal_configuration_antiquity" model="decimal.precision">
+        <field name="name">Antiquity</field>
+        <field name="digits">4</field>
+    </record>  
+
+    </data>
+</odoo>

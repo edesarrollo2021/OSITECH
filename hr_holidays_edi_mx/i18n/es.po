@@ -1,0 +1,2386 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_holidays_edi_mx
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-26 13:47+0000\n"
+"PO-Revision-Date: 2022-01-26 13:47+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.actions.report,print_report_name:hr_holidays_edi_mx.action_report_tmpl_holidays_report
+msgid "'Holidays Report - %s' % (object.employee_id.name)"
+msgstr "'Reporte de Vacaciones - %s' % (object.employee_id.name)"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.actions.report,print_report_name:hr_holidays_edi_mx.action_report_tmpl_personal_days_report
+msgid "'Personal Days Report - %s' % (object.employee_id.name)"
+msgstr "'Reporte de Días Personales - %s' % (object.employee_id.name)"
+
+#. module: hr_holidays_edi_mx
+#: model_terms:ir.ui.view,arch_db:hr_holidays_edi_mx.search_template_history_filter
+msgid "<span class=\"fa fa-bar-chart\"/> Filter:"
+msgstr "<span class=\"fa fa-bar-chart\"/> Filtro:"
+
+#. module: hr_holidays_edi_mx
+#: model_terms:ir.ui.view,arch_db:hr_holidays_edi_mx.hr_leave_view_form_edi_mx
+msgid "<span class=\"o_stat_text\">Documents</span>"
+msgstr "<span class=\"o_stat_text\">Documentos</span>"
+
+#. module: hr_holidays_edi_mx
+#: model:mail.template,body_html:hr_holidays_edi_mx.mail_template_holidays_cancel
+msgid ""
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\">\n"
+"                <tbody>\n"
+"                    <tr>\n"
+"                        <td align=\"center\">\n"
+"                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"padding: 16px; background-color: white; color: #454748; border-collapse:separate;\">\n"
+"                                <tbody>\n"
+"                                    <!-- HEADER -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                                <tbody><tr><td valign=\"middle\">\n"
+"                                                    <span style=\"font-size: 10px;\">Notification</span><br/>\n"
+"                                                    <span style=\"font-size: 20px; font-weight: bold;\">\n"
+"                                                        Canceled Holidays\n"
+"                                                    </span>\n"
+"                                                </td><td valign=\"middle\" align=\"right\">\n"
+"                                                </td></tr>\n"
+"                                                    <tr><td colspan=\"2\" style=\"text-align:center;\">\n"
+"                                                        <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                                                    </td></tr>\n"
+"                                                </tbody>\n"
+"                                            </table>\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                    <!-- CONTENT -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                                <tbody><tr><td valign=\"top\" style=\"font-size: 13px;\">\n"
+"                                                    <div>\n"
+"                                                        Dear<br/><br/>\n"
+"                                                        A vacation request has been canceled on the portal, The registration details are:<br/>\n"
+"                                                        <div style=\"margin: 16px 0px 16px 0px;\">\n"
+"                                                            <strong>Employee:</strong> ${object.employee_id.complete_name or ''}<br/>\n"
+"                                                            <strong>Period:</strong> ${object.holiday_status_id.name or ''}<br/>\n"
+"                                                            <strong>Start date:</strong> ${object.request_date_from.strftime('%d/%m/%Y')}<br/>\n"
+"                                                            <strong>Finish date:</strong> ${object.request_date_to.strftime('%d/%m/%Y')}<br/>\n"
+"                                                            <strong>Duration:</strong> ${object.number_of_days}<br/>\n"
+"                                                            <strong>State:</strong> ${object.state}<br/>\n"
+"                                                            <strong>Reason:</strong> ${object.description_cancellation}<br/>\n"
+"                                                        </div>\n"
+"                                                        If you weren't expecting this message, you can safely ignore it.<br/><br/>\n"
+"                                                        Thanks,<br/>\n"
+"                                                    </div>\n"
+"                                                </td></tr>\n"
+"                                                    <tr><td style=\"text-align:center;\">\n"
+"                                                        <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                                                    </td></tr>\n"
+"                                                </tbody></table>\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                    <!-- FOOTER -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                </tbody>\n"
+"                            </table>\n"
+"                        </td>\n"
+"                    </tr>\n"
+"                <!-- POWERED BY -->\n"
+"                </tbody>\n"
+"            </table>\n"
+"\n"
+"        "
+msgstr ""
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\">\n"
+"                <tbody>\n"
+"                    <tr>\n"
+"                        <td align=\"center\">\n"
+"                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"padding: 16px; background-color: white; color: #454748; border-collapse:separate;\">\n"
+"                                <tbody>\n"
+"                                    <!-- HEADER -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                                <tbody><tr><td valign=\"middle\">\n"
+"                                                    <span style=\"font-size: 10px;\">Notificación</span><br/>\n"
+"                                                    <span style=\"font-size: 20px; font-weight: bold;\">\n"
+"                                                        Vacaciones Canceladas\n"
+"                                                    </span>\n"
+"                                                </td><td valign=\"middle\" align=\"right\">\n"
+"                                                </td></tr>\n"
+"                                                    <tr><td colspan=\"2\" style=\"text-align:center;\">\n"
+"                                                        <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                                                    </td></tr>\n"
+"                                                </tbody>\n"
+"                                            </table>\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                    <!-- CONTENT -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                                <tbody><tr><td valign=\"top\" style=\"font-size: 13px;\">\n"
+"                                                    <div>\n"
+"                                                        Estimado(a)<br/><br/>\n"
+"                                                        Se ha cancelado una solicitud de vacaciones en el portal. Los detalles de registro son:<br/>\n"
+"                                                        <div style=\"margin: 16px 0px 16px 0px;\">\n"
+"                                                            <strong>Empleado:</strong> ${object.employee_id.complete_name or ''}<br/>\n"
+"                                                            <strong>Periodo:</strong> ${object.holiday_status_id.name or ''}<br/>\n"
+"                                                            <strong>Fecha de Inicio:</strong> ${object.request_date_from.strftime('%d/%m/%Y')}<br/>\n"
+"                                                            <strong>Fecha de Finalización:</strong> ${object.request_date_to.strftime('%d/%m/%Y')}<br/>\n"
+"                                                            <strong>Duración:</strong> ${object.number_of_days}<br/>\n"
+"                                                            <strong>Estado:</strong> ${object.state}<br/>\n"
+"                                                            <strong>Razón:</strong> ${object.description_cancellation}<br/>\n"
+"                                                        </div>\n"
+"                                                        Si no esperaba este mensaje, puede ignorarlo sin problemas.<br/><br/>\n"
+"                                                        Gracias,<br/>\n"
+"                                                    </div>\n"
+"                                                </td></tr>\n"
+"                                                    <tr><td style=\"text-align:center;\">\n"
+"                                                        <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                                                    </td></tr>\n"
+"                                                </tbody></table>\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                    <!-- FOOTER -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                </tbody>\n"
+"                            </table>\n"
+"                        </td>\n"
+"                    </tr>\n"
+"                <!-- POWERED BY -->\n"
+"                </tbody>\n"
+"            </table>\n"
+"\n"
+"        "
+
+#. module: hr_holidays_edi_mx
+#: model:mail.template,body_html:hr_holidays_edi_mx.mail_template_personal_days_cancel
+msgid ""
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\">\n"
+"                <tbody>\n"
+"                    <tr>\n"
+"                        <td align=\"center\">\n"
+"                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"padding: 16px; background-color: white; color: #454748; border-collapse:separate;\">\n"
+"                                <tbody>\n"
+"                                    <!-- HEADER -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                                <tbody><tr><td valign=\"middle\">\n"
+"                                                    <span style=\"font-size: 10px;\">Notification</span><br/>\n"
+"                                                    <span style=\"font-size: 20px; font-weight: bold;\">\n"
+"                                                        Canceled Personal Days\n"
+"                                                    </span>\n"
+"                                                </td><td valign=\"middle\" align=\"right\">\n"
+"                                                </td></tr>\n"
+"                                                    <tr><td colspan=\"2\" style=\"text-align:center;\">\n"
+"                                                        <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                                                    </td></tr>\n"
+"                                                </tbody>\n"
+"                                            </table>\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                    <!-- CONTENT -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                                <tbody><tr><td valign=\"top\" style=\"font-size: 13px;\">\n"
+"                                                    <div>\n"
+"                                                        Dear<br/><br/>\n"
+"                                                        A personal days request has been canceled on the portal, The registration details are:<br/>\n"
+"                                                        <div style=\"margin: 16px 0px 16px 0px;\">\n"
+"                                                            <strong>Employee:</strong> ${object.employee_id.complete_name or ''}<br/>\n"
+"                                                            <strong>Period:</strong> ${object.holiday_status_id.name or ''}<br/>\n"
+"                                                            <strong>Start date:</strong> ${object.request_date_from.strftime('%d/%m/%Y')}<br/>\n"
+"                                                            <strong>Finish date:</strong> ${object.request_date_to.strftime('%d/%m/%Y')}<br/>\n"
+"                                                            <strong>Duration:</strong> ${object.number_of_days}<br/>\n"
+"                                                            <strong>State:</strong> ${object.state}<br/>\n"
+"                                                            <strong>Reason:</strong> ${object.description_cancellation}<br/>\n"
+"                                                        </div>\n"
+"                                                        If you weren't expecting this message, you can safely ignore it.<br/><br/>\n"
+"                                                        Thanks,<br/>\n"
+"                                                    </div>\n"
+"                                                </td></tr>\n"
+"                                                    <tr><td style=\"text-align:center;\">\n"
+"                                                        <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                                                    </td></tr>\n"
+"                                                </tbody></table>\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                    <!-- FOOTER -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                </tbody>\n"
+"                            </table>\n"
+"                        </td>\n"
+"                    </tr>\n"
+"                <!-- POWERED BY -->\n"
+"                </tbody>\n"
+"            </table>\n"
+"\n"
+"        "
+msgstr ""
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\">\n"
+"                <tbody>\n"
+"                    <tr>\n"
+"                        <td align=\"center\">\n"
+"                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"padding: 16px; background-color: white; color: #454748; border-collapse:separate;\">\n"
+"                                <tbody>\n"
+"                                    <!-- HEADER -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                                <tbody><tr><td valign=\"middle\">\n"
+"                                                    <span style=\"font-size: 10px;\">Notificación</span><br/>\n"
+"                                                    <span style=\"font-size: 20px; font-weight: bold;\">\n"
+"                                                        Días Personales Cancelados\n"
+"                                                    </span>\n"
+"                                                </td><td valign=\"middle\" align=\"right\">\n"
+"                                                </td></tr>\n"
+"                                                    <tr><td colspan=\"2\" style=\"text-align:center;\">\n"
+"                                                        <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                                                    </td></tr>\n"
+"                                                </tbody>\n"
+"                                            </table>\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                    <!-- CONTENT -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                                <tbody><tr><td valign=\"top\" style=\"font-size: 13px;\">\n"
+"                                                    <div>\n"
+"                                                        Estimado(a)<br/><br/>\n"
+"                                                        Se ha cancelado una solicitud de días personales en el portal.Los datos de registro son:<br/>\n"
+"                                                        <div style=\"margin: 16px 0px 16px 0px;\">\n"
+"                                                            <strong>Empleado:</strong> ${object.employee_id.complete_name or ''}<br/>\n"
+"                                                            <strong>Periodo:</strong> ${object.holiday_status_id.name or ''}<br/>\n"
+"                                                            <strong>Fecha de Inicio:</strong> ${object.request_date_from.strftime('%d/%m/%Y')}<br/>\n"
+"                                                            <strong>Fecha de Finalización:</strong> ${object.request_date_to.strftime('%d/%m/%Y')}<br/>\n"
+"                                                            <strong>Duración:</strong> ${object.number_of_days}<br/>\n"
+"                                                            <strong>Estado:</strong> ${object.state}<br/>\n"
+"                                                            <strong>Razón:</strong> ${object.description_cancellation}<br/>\n"
+"                                                        </div>\n"
+"                                                        Si no esperaba este mensaje, puede ignorarlo sin problemas.<br/><br/>\n"
+"                                                        Gracias,<br/>\n"
+"                                                    </div>\n"
+"                                                </td></tr>\n"
+"                                                    <tr><td style=\"text-align:center;\">\n"
+"                                                        <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                                                    </td></tr>\n"
+"                                                </tbody></table>\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                    <!-- FOOTER -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                </tbody>\n"
+"                            </table>\n"
+"                        </td>\n"
+"                    </tr>\n"
+"                <!-- POWERED BY -->\n"
+"                </tbody>\n"
+"            </table>\n"
+"\n"
+"        "
+
+#. module: hr_holidays_edi_mx
+#: model:mail.template,body_html:hr_holidays_edi_mx.mail_template_personal_days_refuse
+msgid ""
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\">\n"
+"                <tbody>\n"
+"                    <tr>\n"
+"                        <td align=\"center\">\n"
+"                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"padding: 16px; background-color: white; color: #454748; border-collapse:separate;\">\n"
+"                                <tbody>\n"
+"                                    <!-- HEADER -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                                <tbody><tr><td valign=\"middle\">\n"
+"                                                    <span style=\"font-size: 10px;\">Notification</span><br/>\n"
+"                                                    <span style=\"font-size: 20px; font-weight: bold;\">\n"
+"                                                        Declined personal days\n"
+"                                                    </span>\n"
+"                                                </td><td valign=\"middle\" align=\"right\">\n"
+"                                                </td></tr>\n"
+"                                                    <tr><td colspan=\"2\" style=\"text-align:center;\">\n"
+"                                                        <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                                                    </td></tr>\n"
+"                                                </tbody></table>\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                    <!-- CONTENT -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                                <tbody><tr><td valign=\"top\" style=\"font-size: 13px;\">\n"
+"                                                    <div>\n"
+"                                                        Dear<br/><br/>\n"
+"                                                        A personal days request has been rejected on the portal, Registration details are:<br/>\n"
+"                                                        <div style=\"margin: 16px 0px 16px 0px;\">\n"
+"                                                            <strong>Employee:</strong> ${object.employee_id.complete_name or ''}<br/>\n"
+"                                                            <strong>Period:</strong> ${object.holiday_status_id.name or ''}<br/>\n"
+"                                                            <strong>Start date:</strong> ${object.request_date_from}<br/>\n"
+"                                                            <strong>Finish date:</strong> ${object.request_date_to}<br/>\n"
+"                                                            <strong>Duration:</strong> ${object.number_of_days}<br/>\n"
+"                                                            <strong>State:</strong> ${object.state}<br/>\n"
+"                                                            <strong>Reason for rejection:</strong> ${object.reason_reject.name}<br/>\n"
+"                                                            <strong>Additional Information:</strong> ${object.description_reject}<br/>\n"
+"                                                        </div>\n"
+"                                                        If you weren't expecting this message, you can safely ignore it.<br/><br/>\n"
+"                                                        Thanks,<br/>\n"
+"                                                    </div>\n"
+"                                                </td></tr>\n"
+"                                                    <tr><td style=\"text-align:center;\">\n"
+"                                                        <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                                                    </td></tr>\n"
+"                                                </tbody></table>\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                    <!-- FOOTER -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                </tbody>\n"
+"                            </table>\n"
+"                        </td>\n"
+"                    </tr>\n"
+"                </tbody>\n"
+"            </table>\n"
+"\n"
+"        "
+msgstr ""
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\">\n"
+"                <tbody>\n"
+"                    <tr>\n"
+"                        <td align=\"center\">\n"
+"                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"padding: 16px; background-color: white; color: #454748; border-collapse:separate;\">\n"
+"                                <tbody>\n"
+"                                    <!-- HEADER -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                                <tbody><tr><td valign=\"middle\">\n"
+"                                                    <span style=\"font-size: 10px;\">Notificación</span><br/>\n"
+"                                                    <span style=\"font-size: 20px; font-weight: bold;\">\n"
+"                                                        Días Personales Rechazados\n"
+"                                                    </span>\n"
+"                                                </td><td valign=\"middle\" align=\"right\">\n"
+"                                                </td></tr>\n"
+"                                                    <tr><td colspan=\"2\" style=\"text-align:center;\">\n"
+"                                                        <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                                                    </td></tr>\n"
+"                                                </tbody></table>\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                    <!-- CONTENT -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                                <tbody><tr><td valign=\"top\" style=\"font-size: 13px;\">\n"
+"                                                    <div>\n"
+"                                                        Estimado(a)<br/><br/>\n"
+"                                                        Se ha rechazado una solicitud de días personales en el portal. Los detalles de registro son:<br/>\n"
+"                                                        <div style=\"margin: 16px 0px 16px 0px;\">\n"
+"                                                            <strong>Empleado:</strong> ${object.employee_id.complete_name or ''}<br/>\n"
+"                                                            <strong>Periodo:</strong> ${object.holiday_status_id.name or ''}<br/>\n"
+"                                                            <strong>Fecha de Inicio:</strong> ${object.request_date_from}<br/>\n"
+"                                                            <strong>Fecha de Finalización:</strong> ${object.request_date_to}<br/>\n"
+"                                                            <strong>Duración:</strong> ${object.number_of_days}<br/>\n"
+"                                                            <strong>Estado:</strong> ${object.state}<br/>\n"
+"                                                            <strong>Motivo del rechazo:</strong> ${object.reason_reject.name}<br/>\n"
+"                                                            <strong>Información adicional:</strong> ${object.description_reject}<br/>\n"
+"                                                        </div>\n"
+"                                                        Si no esperaba este mensaje, puede ignorarlo sin problemas.<br/><br/>\n"
+"                                                        Thanks,<br/>\n"
+"                                                    </div>\n"
+"                                                </td></tr>\n"
+"                                                    <tr><td style=\"text-align:center;\">\n"
+"                                                        <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                                                    </td></tr>\n"
+"                                                </tbody></table>\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                    <!-- FOOTER -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                </tbody>\n"
+"                            </table>\n"
+"                        </td>\n"
+"                    </tr>\n"
+"                </tbody>\n"
+"            </table>\n"
+"\n"
+"        "
+
+#. module: hr_holidays_edi_mx
+#: model:mail.template,body_html:hr_holidays_edi_mx.mail_template_holidays_refuse
+msgid ""
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\">\n"
+"                <tbody>\n"
+"                    <tr>\n"
+"                        <td align=\"center\">\n"
+"                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"padding: 16px; background-color: white; color: #454748; border-collapse:separate;\">\n"
+"                                <tbody>\n"
+"                                    <!-- HEADER -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                                <tbody><tr><td valign=\"middle\">\n"
+"                                                    <span style=\"font-size: 10px;\">Notification</span><br/>\n"
+"                                                    <span style=\"font-size: 20px; font-weight: bold;\">\n"
+"                                                        Declined vacations\n"
+"                                                    </span>\n"
+"                                                </td><td valign=\"middle\" align=\"right\">\n"
+"                                                </td></tr>\n"
+"                                                    <tr><td colspan=\"2\" style=\"text-align:center;\">\n"
+"                                                        <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                                                    </td></tr>\n"
+"                                                </tbody></table>\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                    <!-- CONTENT -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                                <tbody><tr><td valign=\"top\" style=\"font-size: 13px;\">\n"
+"                                                    <div>\n"
+"                                                        Dear<br/><br/>\n"
+"                                                        A vacation request has been rejected on the portal, Registration details are:<br/>\n"
+"                                                        <div style=\"margin: 16px 0px 16px 0px;\">\n"
+"                                                            <strong>Employee:</strong> ${object.employee_id.complete_name or ''}<br/>\n"
+"                                                            <strong>Period:</strong> ${object.holiday_status_id.name or ''}<br/>\n"
+"                                                            <strong>Start date:</strong> ${object.request_date_from}<br/>\n"
+"                                                            <strong>Finish date:</strong> ${object.request_date_to}<br/>\n"
+"                                                            <strong>Duration:</strong> ${object.number_of_days}<br/>\n"
+"                                                            <strong>State:</strong> ${object.state}<br/>\n"
+"                                                            <strong>Reason for rejection:</strong> ${object.reason_reject.name}<br/>\n"
+"                                                            <strong>Additional Information:</strong> ${object.description_reject}<br/>\n"
+"                                                        </div>\n"
+"                                                        If you weren't expecting this message, you can safely ignore it.<br/><br/>\n"
+"                                                        Thanks,<br/>\n"
+"                                                    </div>\n"
+"                                                </td></tr>\n"
+"                                                    <tr><td style=\"text-align:center;\">\n"
+"                                                        <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                                                    </td></tr>\n"
+"                                                </tbody></table>\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                    <!-- FOOTER -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                </tbody>\n"
+"                            </table>\n"
+"                        </td>\n"
+"                    </tr>\n"
+"                </tbody>\n"
+"            </table>\n"
+"\n"
+"        "
+msgstr ""
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\">\n"
+"                <tbody>\n"
+"                    <tr>\n"
+"                        <td align=\"center\">\n"
+"                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"padding: 16px; background-color: white; color: #454748; border-collapse:separate;\">\n"
+"                                <tbody>\n"
+"                                    <!-- HEADER -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                                <tbody><tr><td valign=\"middle\">\n"
+"                                                    <span style=\"font-size: 10px;\">Notification</span><br/>\n"
+"                                                    <span style=\"font-size: 20px; font-weight: bold;\">\n"
+"                                                        Vacaciones Rechazadas\n"
+"                                                    </span>\n"
+"                                                </td><td valign=\"middle\" align=\"right\">\n"
+"                                                </td></tr>\n"
+"                                                    <tr><td colspan=\"2\" style=\"text-align:center;\">\n"
+"                                                        <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                                                    </td></tr>\n"
+"                                                </tbody></table>\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                    <!-- CONTENT -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                                <tbody><tr><td valign=\"top\" style=\"font-size: 13px;\">\n"
+"                                                    <div>\n"
+"                                                        Estimado(a)<br/><br/>\n"
+"                                                        Se ha rechazado una solicitud de vacaciones en el portal, los detalles de registro son:<br/>\n"
+"                                                        <div style=\"margin: 16px 0px 16px 0px;\">\n"
+"                                                            <strong>Empleado:</strong> ${object.employee_id.complete_name or ''}<br/>\n"
+"                                                            <strong>Periodo:</strong> ${object.holiday_status_id.name or ''}<br/>\n"
+"                                                            <strong>Fecha de Inicio:</strong> ${object.request_date_from}<br/>\n"
+"                                                            <strong>Fecha de Finalización:</strong> ${object.request_date_to}<br/>\n"
+"                                                            <strong>Duración:</strong> ${object.number_of_days}<br/>\n"
+"                                                            <strong>Estado:</strong> ${object.state}<br/>\n"
+"                                                            <strong>Razón de Rechazo:</strong> ${object.reason_reject.name}<br/>\n"
+"                                                            <strong>Información Adicional:</strong> ${object.description_reject}<br/>\n"
+"                                                        </div>\n"
+"                                                        Si no esperaba este mensaje, puede ignorarlo sin problemas.<br/><br/>\n"
+"                                                        Gracias,<br/>\n"
+"                                                    </div>\n"
+"                                                </td></tr>\n"
+"                                                    <tr><td style=\"text-align:center;\">\n"
+"                                                        <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                                                    </td></tr>\n"
+"                                                </tbody></table>\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                    <!-- FOOTER -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                </tbody>\n"
+"                            </table>\n"
+"                        </td>\n"
+"                    </tr>\n"
+"                </tbody>\n"
+"            </table>\n"
+"\n"
+"        "
+
+#. module: hr_holidays_edi_mx
+#: model:mail.template,body_html:hr_holidays_edi_mx.mail_template_holidays_approve
+msgid ""
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\">\n"
+"                <tbody>\n"
+"                    <tr>\n"
+"                        <td align=\"center\">\n"
+"                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"padding: 16px; background-color: white; color: #454748; border-collapse:separate;\">\n"
+"                                <tbody>\n"
+"                                    <!-- HEADER -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                                <tbody><tr><td valign=\"middle\">\n"
+"                                                    <span style=\"font-size: 10px;\">Notification</span><br/>\n"
+"                                                    <span style=\"font-size: 20px; font-weight: bold;\">\n"
+"                                                        Holiday approval\n"
+"                                                    </span>\n"
+"                                                </td><td valign=\"middle\" align=\"right\">\n"
+"                                                </td></tr>\n"
+"                                                    <tr><td colspan=\"2\" style=\"text-align:center;\">\n"
+"                                                        <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                                                    </td></tr>\n"
+"                                                </tbody>\n"
+"                                            </table>\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                    <!-- CONTENT -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                                <tbody><tr><td valign=\"top\" style=\"font-size: 13px;\">\n"
+"                                                    <div>\n"
+"                                                        Dear<br/><br/>\n"
+"                                                        A vacation request has been approved on the portal, Registration details are:<br/>\n"
+"                                                        <div style=\"margin: 16px 0px 16px 0px;\">\n"
+"                                                            <strong>Employee:</strong> ${object.employee_id.complete_name or ''}<br/>\n"
+"                                                            <strong>Period:</strong> ${object.holiday_status_id.name or ''}<br/>\n"
+"                                                            <strong>Start date:</strong> ${object.request_date_from.strftime('%d/%m/%Y')}<br/>\n"
+"                                                            <strong>Finish date:</strong> ${object.request_date_to.strftime('%d/%m/%Y')}<br/>\n"
+"                                                            <strong>Duration:</strong> ${object.number_of_days}<br/>\n"
+"                                                            <strong>State:</strong> ${object.state}<br/>\n"
+"                                                        </div>\n"
+"                                                        If you weren't expecting this message, you can safely ignore it.<br/><br/>\n"
+"                                                        Thanks,<br/>\n"
+"                                                    </div>\n"
+"                                                </td></tr>\n"
+"                                                    <tr><td style=\"text-align:center;\">\n"
+"                                                        <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                                                    </td></tr>\n"
+"                                                </tbody>\n"
+"                                            </table>\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                    <!-- FOOTER -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                </tbody>\n"
+"                            </table>\n"
+"                        </td>\n"
+"                    </tr>\n"
+"                <!-- POWERED BY -->\n"
+"                </tbody>\n"
+"            </table>\n"
+"\n"
+"        "
+msgstr ""
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\">\n"
+"                <tbody>\n"
+"                    <tr>\n"
+"                        <td align=\"center\">\n"
+"                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"padding: 16px; background-color: white; color: #454748; border-collapse:separate;\">\n"
+"                                <tbody>\n"
+"                                    <!-- HEADER -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                                <tbody><tr><td valign=\"middle\">\n"
+"                                                    <span style=\"font-size: 10px;\">Notificación</span><br/>\n"
+"                                                    <span style=\"font-size: 20px; font-weight: bold;\">\n"
+"                                                        Aprobación de vacaciones\n"
+"                                                    </span>\n"
+"                                                </td><td valign=\"middle\" align=\"right\">\n"
+"                                                </td></tr>\n"
+"                                                    <tr><td colspan=\"2\" style=\"text-align:center;\">\n"
+"                                                        <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                                                    </td></tr>\n"
+"                                                </tbody>\n"
+"                                            </table>\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                    <!-- CONTENT -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                                <tbody><tr><td valign=\"top\" style=\"font-size: 13px;\">\n"
+"                                                    <div>\n"
+"                                                        Estimado(a)<br/><br/>\n"
+"                                                        Se ha aprobado una solicitud de vacaciones en el portal. Los detalles de registro son:<br/>\n"
+"                                                        <div style=\"margin: 16px 0px 16px 0px;\">\n"
+"                                                            <strong>Empleado:</strong> ${object.employee_id.complete_name or ''}<br/>\n"
+"                                                            <strong>Periodo:</strong> ${object.holiday_status_id.name or ''}<br/>\n"
+"                                                            <strong>Fecha de Inicio:</strong> ${object.request_date_from.strftime('%d/%m/%Y')}<br/>\n"
+"                                                            <strong>Fecha de Finalización:</strong> ${object.request_date_to.strftime('%d/%m/%Y')}<br/>\n"
+"                                                            <strong>Duración:</strong> ${object.number_of_days}<br/>\n"
+"                                                            <strong>Estado:</strong> ${object.state}<br/>\n"
+"                                                        </div>\n"
+"                                                        Si no esperaba este mensaje, puede ignorarlo sin problemas.<br/><br/>\n"
+"                                                        Gracias,<br/>\n"
+"                                                    </div>\n"
+"                                                </td></tr>\n"
+"                                                    <tr><td style=\"text-align:center;\">\n"
+"                                                        <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                                                    </td></tr>\n"
+"                                                </tbody>\n"
+"                                            </table>\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                    <!-- FOOTER -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                </tbody>\n"
+"                            </table>\n"
+"                        </td>\n"
+"                    </tr>\n"
+"                <!-- POWERED BY -->\n"
+"                </tbody>\n"
+"            </table>\n"
+"\n"
+"        "
+
+#. module: hr_holidays_edi_mx
+#: model:mail.template,body_html:hr_holidays_edi_mx.mail_template_personal_days_approve
+msgid ""
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\">\n"
+"                <tbody>\n"
+"                    <tr>\n"
+"                        <td align=\"center\">\n"
+"                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"padding: 16px; background-color: white; color: #454748; border-collapse:separate;\">\n"
+"                                <tbody>\n"
+"                                    <!-- HEADER -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                                <tbody><tr><td valign=\"middle\">\n"
+"                                                    <span style=\"font-size: 10px;\">Notification</span><br/>\n"
+"                                                    <span style=\"font-size: 20px; font-weight: bold;\">\n"
+"                                                        Personal Days approval\n"
+"                                                    </span>\n"
+"                                                </td><td valign=\"middle\" align=\"right\">\n"
+"                                                </td></tr>\n"
+"                                                    <tr><td colspan=\"2\" style=\"text-align:center;\">\n"
+"                                                        <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                                                    </td></tr>\n"
+"                                                </tbody>\n"
+"                                            </table>\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                    <!-- CONTENT -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                                <tbody><tr><td valign=\"top\" style=\"font-size: 13px;\">\n"
+"                                                    <div>\n"
+"                                                        Dear<br/><br/>\n"
+"                                                        A persnal days request has been approved on the portal, Registration details are:<br/>\n"
+"                                                        <div style=\"margin: 16px 0px 16px 0px;\">\n"
+"                                                            <strong>Employee:</strong> ${object.employee_id.complete_name or ''}<br/>\n"
+"                                                            <strong>Period:</strong> ${object.holiday_status_id.name or ''}<br/>\n"
+"                                                            <strong>Start date:</strong> ${object.request_date_from.strftime('%d/%m/%Y')}<br/>\n"
+"                                                            <strong>Finish date:</strong> ${object.request_date_to.strftime('%d/%m/%Y')}<br/>\n"
+"                                                            <strong>Duration:</strong> ${object.number_of_days}<br/>\n"
+"                                                            <strong>State:</strong> ${object.state}<br/>\n"
+"                                                        </div>\n"
+"                                                        If you weren't expecting this message, you can safely ignore it.<br/><br/>\n"
+"                                                        Thanks,<br/>\n"
+"                                                    </div>\n"
+"                                                </td></tr>\n"
+"                                                    <tr><td style=\"text-align:center;\">\n"
+"                                                        <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                                                    </td></tr>\n"
+"                                                </tbody>\n"
+"                                            </table>\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                    <!-- FOOTER -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                </tbody>\n"
+"                            </table>\n"
+"                        </td>\n"
+"                    </tr>\n"
+"                <!-- POWERED BY -->\n"
+"                </tbody>\n"
+"            </table>\n"
+"\n"
+"        "
+msgstr ""
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\">\n"
+"                <tbody>\n"
+"                    <tr>\n"
+"                        <td align=\"center\">\n"
+"                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"padding: 16px; background-color: white; color: #454748; border-collapse:separate;\">\n"
+"                                <tbody>\n"
+"                                    <!-- HEADER -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                                <tbody><tr><td valign=\"middle\">\n"
+"                                                    <span style=\"font-size: 10px;\">Notificación</span><br/>\n"
+"                                                    <span style=\"font-size: 20px; font-weight: bold;\">\n"
+"                                                        Días Personales Aprobados\n"
+"                                                    </span>\n"
+"                                                </td><td valign=\"middle\" align=\"right\">\n"
+"                                                </td></tr>\n"
+"                                                    <tr><td colspan=\"2\" style=\"text-align:center;\">\n"
+"                                                        <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                                                    </td></tr>\n"
+"                                                </tbody>\n"
+"                                            </table>\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                    <!-- CONTENT -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                                <tbody><tr><td valign=\"top\" style=\"font-size: 13px;\">\n"
+"                                                    <div>\n"
+"                                                        Estimado(a)<br/><br/>\n"
+"                                                        Se ha aprobado una solicitud de días personales en el portal, los detalles de registro son:<br/>\n"
+"                                                        <div style=\"margin: 16px 0px 16px 0px;\">\n"
+"                                                            <strong>Empleado:</strong> ${object.employee_id.complete_name or ''}<br/>\n"
+"                                                            <strong>Periodo:</strong> ${object.holiday_status_id.name or ''}<br/>\n"
+"                                                            <strong>Fecha de Inicio:</strong> ${object.request_date_from.strftime('%d/%m/%Y')}<br/>\n"
+"                                                            <strong>Fecha de Finalización:</strong> ${object.request_date_to.strftime('%d/%m/%Y')}<br/>\n"
+"                                                            <strong>Duración:</strong> ${object.number_of_days}<br/>\n"
+"                                                            <strong>Estado:</strong> ${object.state}<br/>\n"
+"                                                        </div>\n"
+"                                                        Si no esperaba este mensaje, puede ignorarlo sin problemas.<br/><br/>\n"
+"                                                        Gracias,<br/>\n"
+"                                                    </div>\n"
+"                                                </td></tr>\n"
+"                                                    <tr><td style=\"text-align:center;\">\n"
+"                                                        <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                                                    </td></tr>\n"
+"                                                </tbody>\n"
+"                                            </table>\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                    <!-- FOOTER -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                </tbody>\n"
+"                            </table>\n"
+"                        </td>\n"
+"                    </tr>\n"
+"                <!-- POWERED BY -->\n"
+"                </tbody>\n"
+"            </table>\n"
+"\n"
+"        "
+
+#. module: hr_holidays_edi_mx
+#: model:mail.template,body_html:hr_holidays_edi_mx.mail_template_personal_days_create
+msgid ""
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\">\n"
+"                <tbody>\n"
+"                    <tr>\n"
+"                        <td align=\"center\">\n"
+"                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"padding: 16px; background-color: white; color: #454748; border-collapse:separate;\">\n"
+"                                <tbody>\n"
+"                                    <!-- HEADER -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                                <tbody><tr><td valign=\"middle\">\n"
+"                                                    <span style=\"font-size: 10px;\">Notification</span><br/>\n"
+"                                                    <span style=\"font-size: 20px; font-weight: bold;\">\n"
+"                                                        Personal Days registration\n"
+"                                                    </span>\n"
+"                                                </td><td valign=\"middle\" align=\"right\">\n"
+"                                                </td></tr>\n"
+"                                                    <tr><td colspan=\"2\" style=\"text-align:center;\">\n"
+"                                                        <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                                                    </td></tr>\n"
+"                                                </tbody>\n"
+"                                            </table>\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                    <!-- CONTENT -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                                <tbody><tr><td valign=\"top\" style=\"font-size: 13px;\">\n"
+"                                                    <div>\n"
+"                                                        Dear<br/><br/>\n"
+"                                                        A Personal Days request has been registered on the portal, The details of the registration are:<br/>\n"
+"                                                        <div style=\"margin: 16px 0px 16px 0px;\">\n"
+"                                                            <strong>Employee:</strong> ${object.employee_id.complete_name or ''}<br/>\n"
+"                                                            <strong>Period:</strong> ${object.holiday_status_id.name or ''}<br/>\n"
+"                                                            <strong>Start date:</strong> ${object.request_date_from.strftime('%d/%m/%Y')}<br/>\n"
+"                                                            <strong>Finish date:</strong> ${object.request_date_to.strftime('%d/%m/%Y')}<br/>\n"
+"                                                            <strong>Duration:</strong> ${object.number_of_days} day(s)<br/>\n"
+"                                                            <strong>State:</strong> ${object.state}<br/>\n"
+"                                                        </div>\n"
+"                                                        Please enter the portal // EMPLOYEES DOCUMENTS // to approve or reject the personal days.<br/><br/>\n"
+"                                                        If you weren't expecting this message, you can safely ignore it.<br/><br/>\n"
+"                                                        Thanks,<br/>\n"
+"                                                    </div>\n"
+"                                                </td></tr>\n"
+"                                                    <tr><td style=\"text-align:center;\">\n"
+"                                                        <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                                                    </td></tr>\n"
+"                                                </tbody>\n"
+"                                            </table>\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                    <!-- FOOTER -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                </tbody>\n"
+"                            </table>\n"
+"                        </td>\n"
+"                    </tr>\n"
+"                <!-- POWERED BY -->\n"
+"                </tbody>\n"
+"            </table>\n"
+"        "
+msgstr ""
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\">\n"
+"                <tbody>\n"
+"                    <tr>\n"
+"                        <td align=\"center\">\n"
+"                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"padding: 16px; background-color: white; color: #454748; border-collapse:separate;\">\n"
+"                                <tbody>\n"
+"                                    <!-- HEADER -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                                <tbody><tr><td valign=\"middle\">\n"
+"                                                    <span style=\"font-size: 10px;\">Notificación</span><br/>\n"
+"                                                    <span style=\"font-size: 20px; font-weight: bold;\">\n"
+"                                                        Registro de Días Personales\n"
+"                                                    </span>\n"
+"                                                </td><td valign=\"middle\" align=\"right\">\n"
+"                                                </td></tr>\n"
+"                                                    <tr><td colspan=\"2\" style=\"text-align:center;\">\n"
+"                                                        <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                                                    </td></tr>\n"
+"                                                </tbody>\n"
+"                                            </table>\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                    <!-- CONTENT -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                                <tbody><tr><td valign=\"top\" style=\"font-size: 13px;\">\n"
+"                                                    <div>\n"
+"                                                        Estimado(a)<br/><br/>\n"
+"                                                        Se ha registrado una solicitud de Días Personales en el portal, Los detalles del registro son:<br/>\n"
+"                                                        <div style=\"margin: 16px 0px 16px 0px;\">\n"
+"                                                            <strong>Empleado:</strong> ${object.employee_id.complete_name or ''}<br/>\n"
+"                                                            <strong>Periodo:</strong> ${object.holiday_status_id.name or ''}<br/>\n"
+"                                                            <strong>Fecha de Inicio:</strong> ${object.request_date_from.strftime('%d/%m/%Y')}<br/>\n"
+"                                                            <strong>Fecha de Finalización:</strong> ${object.request_date_to.strftime('%d/%m/%Y')}<br/>\n"
+"                                                            <strong>Duración:</strong> ${object.number_of_days} day(s)<br/>\n"
+"                                                            <strong>Estado:</strong> ${object.state}<br/>\n"
+"                                                        </div>\n"
+"                                                        Por favor ingrese al portal // DOCUMENTOS EMPLEADOS // para aprobar o rechazar los días personales.<br/><br/>\n"
+"                                                        Si no esperaba este mensaje, puede ignorarlo sin problemas.<br/><br/>\n"
+"                                                        Gracias,<br/>\n"
+"                                                    </div>\n"
+"                                                </td></tr>\n"
+"                                                    <tr><td style=\"text-align:center;\">\n"
+"                                                        <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                                                    </td></tr>\n"
+"                                                </tbody>\n"
+"                                            </table>\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                    <!-- FOOTER -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                </tbody>\n"
+"                            </table>\n"
+"                        </td>\n"
+"                    </tr>\n"
+"                <!-- POWERED BY -->\n"
+"                </tbody>\n"
+"            </table>\n"
+"        "
+
+#. module: hr_holidays_edi_mx
+#: model:mail.template,body_html:hr_holidays_edi_mx.mail_template_holidays_reject_cancel
+msgid ""
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\">\n"
+"                <tbody>\n"
+"                    <tr>\n"
+"                        <td align=\"center\">\n"
+"                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"padding: 16px; background-color: white; color: #454748; border-collapse:separate;\">\n"
+"                                <tbody>\n"
+"                                    <!-- HEADER -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                                <tbody><tr><td valign=\"middle\">\n"
+"                                                    <span style=\"font-size: 10px;\">Notification</span><br/>\n"
+"                                                    <span style=\"font-size: 20px; font-weight: bold;\">\n"
+"                                                        Reject Cancellation Holidays\n"
+"                                                    </span>\n"
+"                                                </td><td valign=\"middle\" align=\"right\">\n"
+"                                                </td></tr>\n"
+"                                                    <tr><td colspan=\"2\" style=\"text-align:center;\">\n"
+"                                                        <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                                                    </td></tr>\n"
+"                                                </tbody>\n"
+"                                            </table>\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                    <!-- CONTENT -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                                <tbody><tr><td valign=\"top\" style=\"font-size: 13px;\">\n"
+"                                                    <div>\n"
+"                                                        Dear<br/><br/>\n"
+"                                                        A request to cancel a vacation has been rejected on the portal. The registration details are:<br/>\n"
+"                                                        <div style=\"margin: 16px 0px 16px 0px;\">\n"
+"                                                            <strong>Employee:</strong> ${object.employee_id.complete_name or ''}<br/>\n"
+"                                                            <strong>Period:</strong> ${object.holiday_status_id.name or ''}<br/>\n"
+"                                                            <strong>Start date:</strong> ${object.request_date_from.strftime('%d/%m/%Y')}<br/>\n"
+"                                                            <strong>Finish date:</strong> ${object.request_date_to.strftime('%d/%m/%Y')}<br/>\n"
+"                                                            <strong>Duration:</strong> ${object.number_of_days}<br/>\n"
+"                                                            <strong>State:</strong> ${object.state}<br/>\n"
+"                                                            <strong>Reason:</strong> ${object.reject_cancellation}<br/>\n"
+"                                                        </div>\n"
+"                                                        If you weren't expecting this message, you can safely ignore it.<br/><br/>\n"
+"                                                        Thanks,<br/>\n"
+"                                                    </div>\n"
+"                                                </td></tr>\n"
+"                                                    <tr><td style=\"text-align:center;\">\n"
+"                                                        <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                                                    </td></tr>\n"
+"                                                </tbody></table>\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                    <!-- FOOTER -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                </tbody>\n"
+"                            </table>\n"
+"                        </td>\n"
+"                    </tr>\n"
+"                <!-- POWERED BY -->\n"
+"                </tbody>\n"
+"            </table>\n"
+"\n"
+"        "
+msgstr ""
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\">\n"
+"                <tbody>\n"
+"                    <tr>\n"
+"                        <td align=\"center\">\n"
+"                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"padding: 16px; background-color: white; color: #454748; border-collapse:separate;\">\n"
+"                                <tbody>\n"
+"                                    <!-- HEADER -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                                <tbody><tr><td valign=\"middle\">\n"
+"                                                    <span style=\"font-size: 10px;\">Notificación</span><br/>\n"
+"                                                    <span style=\"font-size: 20px; font-weight: bold;\">\n"
+"                                                        Rechazar Cancelación de Vacaciones\n"
+"                                                    </span>\n"
+"                                                </td><td valign=\"middle\" align=\"right\">\n"
+"                                                </td></tr>\n"
+"                                                    <tr><td colspan=\"2\" style=\"text-align:center;\">\n"
+"                                                        <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                                                    </td></tr>\n"
+"                                                </tbody>\n"
+"                                            </table>\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                    <!-- CONTENT -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                                <tbody><tr><td valign=\"top\" style=\"font-size: 13px;\">\n"
+"                                                    <div>\n"
+"                                                        Estimado(a)<br/><br/>\n"
+"                                                        Se ha rechazado una solicitud para cancelar unas vacaciones en el portal. Los datos de registro son:<br/>\n"
+"                                                        <div style=\"margin: 16px 0px 16px 0px;\">\n"
+"                                                            <strong>Empleado:</strong> ${object.employee_id.complete_name or ''}<br/>\n"
+"                                                            <strong>Periodo:</strong> ${object.holiday_status_id.name or ''}<br/>\n"
+"                                                            <strong>Fecha de Inicio:</strong> ${object.request_date_from.strftime('%d/%m/%Y')}<br/>\n"
+"                                                            <strong>Fecha de Finalización:</strong> ${object.request_date_to.strftime('%d/%m/%Y')}<br/>\n"
+"                                                            <strong>Duración:</strong> ${object.number_of_days}<br/>\n"
+"                                                            <strong>Estado:</strong> ${object.state}<br/>\n"
+"                                                            <strong>Razón:</strong> ${object.reject_cancellation}<br/>\n"
+"                                                        </div>\n"
+"                                                        Si no esperaba este mensaje, puede ignorarlo sin problemas.<br/><br/>\n"
+"                                                        Gracias,<br/>\n"
+"                                                    </div>\n"
+"                                                </td></tr>\n"
+"                                                    <tr><td style=\"text-align:center;\">\n"
+"                                                        <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                                                    </td></tr>\n"
+"                                                </tbody></table>\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                    <!-- FOOTER -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                </tbody>\n"
+"                            </table>\n"
+"                        </td>\n"
+"                    </tr>\n"
+"                <!-- POWERED BY -->\n"
+"                </tbody>\n"
+"            </table>\n"
+"\n"
+"        "
+
+#. module: hr_holidays_edi_mx
+#: model:mail.template,body_html:hr_holidays_edi_mx.mail_template_personal_reject_cancel
+msgid ""
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\">\n"
+"                <tbody>\n"
+"                    <tr>\n"
+"                        <td align=\"center\">\n"
+"                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"padding: 16px; background-color: white; color: #454748; border-collapse:separate;\">\n"
+"                                <tbody>\n"
+"                                    <!-- HEADER -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                                <tbody><tr><td valign=\"middle\">\n"
+"                                                    <span style=\"font-size: 10px;\">Notification</span><br/>\n"
+"                                                    <span style=\"font-size: 20px; font-weight: bold;\">\n"
+"                                                        Reject Cancellation Personal Day\n"
+"                                                    </span>\n"
+"                                                </td><td valign=\"middle\" align=\"right\">\n"
+"                                                </td></tr>\n"
+"                                                    <tr><td colspan=\"2\" style=\"text-align:center;\">\n"
+"                                                        <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                                                    </td></tr>\n"
+"                                                </tbody>\n"
+"                                            </table>\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                    <!-- CONTENT -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                                <tbody><tr><td valign=\"top\" style=\"font-size: 13px;\">\n"
+"                                                    <div>\n"
+"                                                        Dear<br/><br/>\n"
+"                                                        A request to cancel a personal day has been rejected on the portal. The registration details are:<br/>\n"
+"                                                        <div style=\"margin: 16px 0px 16px 0px;\">\n"
+"                                                            <strong>Employee:</strong> ${object.employee_id.complete_name or ''}<br/>\n"
+"                                                            <strong>Period:</strong> ${object.holiday_status_id.name or ''}<br/>\n"
+"                                                            <strong>Start date:</strong> ${object.request_date_from.strftime('%d/%m/%Y')}<br/>\n"
+"                                                            <strong>Finish date:</strong> ${object.request_date_to.strftime('%d/%m/%Y')}<br/>\n"
+"                                                            <strong>Duration:</strong> ${object.number_of_days}<br/>\n"
+"                                                            <strong>State:</strong> ${object.state}<br/>\n"
+"                                                            <strong>Reason:</strong> ${object.reject_cancellation}<br/>\n"
+"                                                        </div>\n"
+"                                                        If you weren't expecting this message, you can safely ignore it.<br/><br/>\n"
+"                                                        Thanks,<br/>\n"
+"                                                    </div>\n"
+"                                                </td></tr>\n"
+"                                                    <tr><td style=\"text-align:center;\">\n"
+"                                                        <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                                                    </td></tr>\n"
+"                                                </tbody></table>\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                    <!-- FOOTER -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                </tbody>\n"
+"                            </table>\n"
+"                        </td>\n"
+"                    </tr>\n"
+"                <!-- POWERED BY -->\n"
+"                </tbody>\n"
+"            </table>\n"
+"\n"
+"        "
+msgstr ""
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\">\n"
+"                <tbody>\n"
+"                    <tr>\n"
+"                        <td align=\"center\">\n"
+"                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"padding: 16px; background-color: white; color: #454748; border-collapse:separate;\">\n"
+"                                <tbody>\n"
+"                                    <!-- HEADER -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                                <tbody><tr><td valign=\"middle\">\n"
+"                                                    <span style=\"font-size: 10px;\">Notificación</span><br/>\n"
+"                                                    <span style=\"font-size: 20px; font-weight: bold;\">\n"
+"                                                        Rechazo de Cancelación de Días Personales\n"
+"                                                    </span>\n"
+"                                                </td><td valign=\"middle\" align=\"right\">\n"
+"                                                </td></tr>\n"
+"                                                    <tr><td colspan=\"2\" style=\"text-align:center;\">\n"
+"                                                        <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                                                    </td></tr>\n"
+"                                                </tbody>\n"
+"                                            </table>\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                    <!-- CONTENT -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                                <tbody><tr><td valign=\"top\" style=\"font-size: 13px;\">\n"
+"                                                    <div>\n"
+"                                                        Estimado(a)<br/><br/>\n"
+"                                                        Se rechazó una solicitud para cancelar un día personal en el portal. Los datos de registro son:<br/>\n"
+"                                                        <div style=\"margin: 16px 0px 16px 0px;\">\n"
+"                                                            <strong>Empleado:</strong> ${object.employee_id.complete_name or ''}<br/>\n"
+"                                                            <strong>Periodo:</strong> ${object.holiday_status_id.name or ''}<br/>\n"
+"                                                            <strong>Fecha de Inicio:</strong> ${object.request_date_from.strftime('%d/%m/%Y')}<br/>\n"
+"                                                            <strong>Fecha de Finalización:</strong> ${object.request_date_to.strftime('%d/%m/%Y')}<br/>\n"
+"                                                            <strong>Duración:</strong> ${object.number_of_days}<br/>\n"
+"                                                            <strong>Estado:</strong> ${object.state}<br/>\n"
+"                                                            <strong>Razón:</strong> ${object.reject_cancellation}<br/>\n"
+"                                                        </div>\n"
+"                                                        Si no esperaba este mensaje, puede ignorarlo sin problemas.<br/><br/>\n"
+"                                                        Gracias,<br/>\n"
+"                                                    </div>\n"
+"                                                </td></tr>\n"
+"                                                    <tr><td style=\"text-align:center;\">\n"
+"                                                        <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                                                    </td></tr>\n"
+"                                                </tbody></table>\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                    <!-- FOOTER -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                </tbody>\n"
+"                            </table>\n"
+"                        </td>\n"
+"                    </tr>\n"
+"                <!-- POWERED BY -->\n"
+"                </tbody>\n"
+"            </table>\n"
+"\n"
+"        "
+
+#. module: hr_holidays_edi_mx
+#: model:mail.template,body_html:hr_holidays_edi_mx.mail_template_holidays_create
+msgid ""
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\">\n"
+"                <tbody>\n"
+"                    <tr>\n"
+"                        <td align=\"center\">\n"
+"                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"padding: 16px; background-color: white; color: #454748; border-collapse:separate;\">\n"
+"                                <tbody>\n"
+"                                    <!-- HEADER -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                                <tbody><tr><td valign=\"middle\">\n"
+"                                                    <span style=\"font-size: 10px;\">Notification</span><br/>\n"
+"                                                    <span style=\"font-size: 20px; font-weight: bold;\">\n"
+"                                                        Vacation registration\n"
+"                                                    </span>\n"
+"                                                </td><td valign=\"middle\" align=\"right\">\n"
+"                                                </td></tr>\n"
+"                                                    <tr><td colspan=\"2\" style=\"text-align:center;\">\n"
+"                                                        <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                                                    </td></tr>\n"
+"                                                </tbody>\n"
+"                                            </table>\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                    <!-- CONTENT -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                                <tbody><tr><td valign=\"top\" style=\"font-size: 13px;\">\n"
+"                                                    <div>\n"
+"                                                        Dear<br/><br/>\n"
+"                                                        A vacation request has been registered on the portal, The details of the registration are:<br/>\n"
+"                                                        <div style=\"margin: 16px 0px 16px 0px;\">\n"
+"                                                            <strong>Employee:</strong> ${object.employee_id.complete_name or ''}<br/>\n"
+"                                                            <strong>Period:</strong> ${object.holiday_status_id.name or ''}<br/>\n"
+"                                                            <strong>Start date:</strong> ${object.request_date_from.strftime('%d/%m/%Y')}<br/>\n"
+"                                                            <strong>Finish date:</strong> ${object.request_date_to.strftime('%d/%m/%Y')}<br/>\n"
+"                                                            <strong>Duration:</strong> ${object.number_of_days} day(s)<br/>\n"
+"                                                            <strong>State:</strong> ${object.state}<br/>\n"
+"                                                        </div>\n"
+"                                                        Please enter the portal // EMPLOYEES DOCUMENTS // to approve or reject the holidays.<br/><br/>\n"
+"                                                        If you weren't expecting this message, you can safely ignore it.<br/><br/>\n"
+"                                                        Thanks,<br/>\n"
+"                                                    </div>\n"
+"                                                </td></tr>\n"
+"                                                    <tr><td style=\"text-align:center;\">\n"
+"                                                        <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                                                    </td></tr>\n"
+"                                                </tbody>\n"
+"                                            </table>\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                    <!-- FOOTER -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                </tbody>\n"
+"                            </table>\n"
+"                        </td>\n"
+"                    </tr>\n"
+"                <!-- POWERED BY -->\n"
+"                </tbody>\n"
+"            </table>\n"
+"        "
+msgstr ""
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\">\n"
+"                <tbody>\n"
+"                    <tr>\n"
+"                        <td align=\"center\">\n"
+"                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"padding: 16px; background-color: white; color: #454748; border-collapse:separate;\">\n"
+"                                <tbody>\n"
+"                                    <!-- HEADER -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                                <tbody><tr><td valign=\"middle\">\n"
+"                                                    <span style=\"font-size: 10px;\">Notificación</span><br/>\n"
+"                                                    <span style=\"font-size: 20px; font-weight: bold;\">\n"
+"                                                        Registro de Vacaciones\n"
+"                                                    </span>\n"
+"                                                </td><td valign=\"middle\" align=\"right\">\n"
+"                                                </td></tr>\n"
+"                                                    <tr><td colspan=\"2\" style=\"text-align:center;\">\n"
+"                                                        <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                                                    </td></tr>\n"
+"                                                </tbody>\n"
+"                                            </table>\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                    <!-- CONTENT -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                                <tbody><tr><td valign=\"top\" style=\"font-size: 13px;\">\n"
+"                                                    <div>\n"
+"                                                        Estimado(a)<br/><br/>\n"
+"                                                        Se ha registrado una solicitud de vacaciones en el portal, Los detalles del registro son:<br/>\n"
+"                                                        <div style=\"margin: 16px 0px 16px 0px;\">\n"
+"                                                            <strong>Empleado:</strong> ${object.employee_id.complete_name or ''}<br/>\n"
+"                                                            <strong>Periodo:</strong> ${object.holiday_status_id.name or ''}<br/>\n"
+"                                                            <strong>Fecha de Inicio:</strong> ${object.request_date_from.strftime('%d/%m/%Y')}<br/>\n"
+"                                                            <strong>Fecha de Finalización:</strong> ${object.request_date_to.strftime('%d/%m/%Y')}<br/>\n"
+"                                                            <strong>Duración:</strong> ${object.number_of_days} day(s)<br/>\n"
+"                                                            <strong>Estado:</strong> ${object.state}<br/>\n"
+"                                                        </div>\n"
+"                                                        Por favor ingrese al portal // DOCUMENTOS DE EMPLEADOS // para aprobar o rechazar las vacaciones.<br/><br/>\n"
+"                                                        Si no esperaba este mensaje, puede ignorarlo sin problemas.<br/><br/>\n"
+"                                                        Gracias,<br/>\n"
+"                                                    </div>\n"
+"                                                </td></tr>\n"
+"                                                    <tr><td style=\"text-align:center;\">\n"
+"                                                        <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                                                    </td></tr>\n"
+"                                                </tbody>\n"
+"                                            </table>\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                    <!-- FOOTER -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                </tbody>\n"
+"                            </table>\n"
+"                        </td>\n"
+"                    </tr>\n"
+"                <!-- POWERED BY -->\n"
+"                </tbody>\n"
+"            </table>\n"
+"        "
+
+#. module: hr_holidays_edi_mx
+#: model:ir.ui.menu,name:hr_holidays_edi_mx.menu_action_report_availability
+msgid "Absence availability"
+msgstr "Disponibilidad de ausencia"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_category__active
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_classification__active
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_inhability__active
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_subcategory__active
+msgid "Active"
+msgstr "Activo"
+
+#. module: hr_holidays_edi_mx
+#: code:addons/hr_holidays_edi_mx/models/vacation_availability.py:0
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave__partner_id
+#, python-format
+msgid "Address"
+msgstr "Dirección"
+
+#. module: hr_holidays_edi_mx
+#: model_terms:ir.ui.view,arch_db:hr_holidays_edi_mx.search_template_history_filter
+msgid "Apply"
+msgstr "Aplicar"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_res_users__approve_holidays
+msgid "Approve Holidays"
+msgstr "Aprobar Vacaciones"
+
+#. module: hr_holidays_edi_mx
+#: model:mail.template,subject:hr_holidays_edi_mx.mail_template_personal_days_approve
+msgid "Approved personal days: ${object.employee_id.complete_name}"
+msgstr "Días personales aprobados: ${object.employee_id.complete_name}"
+
+#. module: hr_holidays_edi_mx
+#: model:mail.template,subject:hr_holidays_edi_mx.mail_template_holidays_approve
+msgid "Approved vacations: ${object.employee_id.complete_name}"
+msgstr "Vacaciones aprobadas: ${object.employee_id.complete_name}"
+
+#. module: hr_holidays_edi_mx
+#: model_terms:ir.ui.view,arch_db:hr_holidays_edi_mx.holidays_assignment_view
+msgid "Assign"
+msgstr "Asignar"
+
+#. module: hr_holidays_edi_mx
+#: model_terms:ir.ui.view,arch_db:hr_holidays_edi_mx.hr_leave_import_view
+msgid "Attach Layout"
+msgstr "Adjuntar Layout"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave__year
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave__year_to
+msgid "Año"
+msgstr ""
+
+#. module: hr_holidays_edi_mx
+#: model_terms:ir.ui.view,arch_db:hr_holidays_edi_mx.holidays_assignment_view
+#: model_terms:ir.ui.view,arch_db:hr_holidays_edi_mx.hr_leave_import_view
+#: model_terms:ir.ui.view,arch_db:hr_holidays_edi_mx.sicoss_report_view
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: hr_holidays_edi_mx
+#: model:mail.template,subject:hr_holidays_edi_mx.mail_template_holidays_cancel
+msgid "Canceled Holidays: ${object.employee_id.complete_name}"
+msgstr "Vacaciones Canceladas: ${object.employee_id.complete_name}"
+
+#. module: hr_holidays_edi_mx
+#: model:mail.template,subject:hr_holidays_edi_mx.mail_template_personal_days_cancel
+msgid "Canceled Personal Days: ${object.employee_id.complete_name}"
+msgstr "Días Personales Cancelados: ${object.employee_id.complete_name}"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave__cancellation
+msgid "Cancellation"
+msgstr "Cancelación"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave__inhability_category_id
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_classification__category_ids
+msgid "Category"
+msgstr "Categoría"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model,name:hr_holidays_edi_mx.model_hr_leave_classification
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave__inhability_classification_id
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_inhability__classification_ids
+msgid "Classification"
+msgstr "Clasificación"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_classification__code
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_inhability__code
+msgid "Code"
+msgstr "Código"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.constraint,message:hr_holidays_edi_mx.constraint_hr_leave_category_code_unique
+#: model:ir.model.constraint,message:hr_holidays_edi_mx.constraint_hr_leave_classification_code_unique
+#: model:ir.model.constraint,message:hr_holidays_edi_mx.constraint_hr_leave_inhability_code_unique
+#: model:ir.model.constraint,message:hr_holidays_edi_mx.constraint_hr_leave_subcategory_code_unique
+msgid "Code must be unique!"
+msgstr "¡El código debe ser único!"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_holidays_assignment__company_id
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_sicoss_report__company_id
+msgid "Company"
+msgstr "Empresa"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave__contract_id
+msgid "Contract"
+msgstr "Contrato"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_import_wizard__create_document
+msgid "Create Documents"
+msgstr "Crear documentos"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_holidays_assignment__create_uid
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_category__create_uid
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_classification__create_uid
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_import_wizard__create_uid
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_inhability__create_uid
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_reason_reject__create_uid
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_subcategory__create_uid
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_sicoss_report__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_holidays_assignment__create_date
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_category__create_date
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_classification__create_date
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_import_wizard__create_date
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_inhability__create_date
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_reason_reject__create_date
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_subcategory__create_date
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_sicoss_report__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: hr_holidays_edi_mx
+#: code:addons/hr_holidays_edi_mx/wizard/hr_leave_import.py:0
+#, python-format
+msgid "DATE FORMAT: value (%s) field %s in row %s.\n"
+msgstr "FORMATO FECHA: valor (%s) columna %s en la fila %s.\n"
+
+#. module: hr_holidays_edi_mx
+#: code:addons/hr_holidays_edi_mx/wizard/hr_leave_import.py:0
+#, python-format
+msgid ""
+"DATE VALUE: start date (%s) cannot be later than End date (%s), column %s in"
+" row %s.\n"
+msgstr ""
+"VALOR FECHA: Fecha de inicio (%s) no puede ser posterior a la Fecha de "
+"finalización (%s), columna %s en la fila %s.\n"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave__date_approve
+msgid "Date Approve"
+msgstr "Fecha de Aprobación"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave__date_approve_chart
+msgid "Date Approve (format)"
+msgstr "Fecha de Aprobación (Formateada)"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_allocation__date_due
+msgid "Date Due"
+msgstr "Fecha de Vencimiento"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_holidays_assignment__date_from
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_sicoss_report__date_from
+msgid "Date from"
+msgstr "Fecha Desde"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave__date_of_return
+msgid "Date of return"
+msgstr "Fecha de retorno"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave__date_of_return_char
+msgid "Date of return (format)"
+msgstr "Fecha de retorno (Formateada)"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave__date_start_contract_char
+msgid "Date start (Letters)"
+msgstr "Fecha de Inicio (Letras)"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_holidays_assignment__date_to
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_sicoss_report__date_to
+msgid "Date to"
+msgstr "Fecha hasta"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave__description
+msgid "Description"
+msgstr "Descripción"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave__description_cancellation
+msgid "Description Cancellation"
+msgstr "Descripción de Cancelación"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave__description_reject
+msgid "Description Reject"
+msgstr "Descripción de Rechazo"
+
+#. module: hr_holidays_edi_mx
+#: model_terms:ir.ui.view,arch_db:hr_holidays_edi_mx.search_template_history_filter
+msgid "Direction"
+msgstr "Dirección/Departamento"
+
+#. module: hr_holidays_edi_mx
+#: model_terms:ir.ui.view,arch_db:hr_holidays_edi_mx.search_template_history_filter
+msgid "Direction :"
+msgstr "Dirección/Departamento :"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_documents_document__display_name
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_holidays_assignment__display_name
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_contract__display_name
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_employee__display_name
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_employee_import__display_name
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_employee_public__display_name
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_holiday_history__display_name
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave__display_name
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_allocation__display_name
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_category__display_name
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_classification__display_name
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_import_wizard__display_name
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_inhability__display_name
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_reason_reject__display_name
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_subcategory__display_name
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_type__display_name
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_personal_days_history__display_name
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_res_users__display_name
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_resource_calendar_leaves__display_name
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_sicoss_report__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model,name:hr_holidays_edi_mx.model_documents_document
+msgid "Document"
+msgstr "Documento"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave__document_count
+msgid "Document Count"
+msgstr "Cantidad de documentos"
+
+#. module: hr_holidays_edi_mx
+#: code:addons/hr_holidays_edi_mx/models/hr_leave.py:0
+#, python-format
+msgid "Documents"
+msgstr "Documentos"
+
+#. module: hr_holidays_edi_mx
+#: model_terms:ir.ui.view,arch_db:hr_holidays_edi_mx.sicoss_report_view
+msgid "Download"
+msgstr "Descargas"
+
+#. module: hr_holidays_edi_mx
+#: code:addons/hr_holidays_edi_mx/wizard/sicoss_report.py:0
+#, python-format
+msgid "Download Report"
+msgstr "Descargar Reporte"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_allocation__is_due
+msgid "Due"
+msgstr "Vencido"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_type__duration_months
+msgid "Duration Months"
+msgstr "Meses de duración"
+
+#. module: hr_holidays_edi_mx
+#: model:hr.leave.type,name:hr_holidays_edi_mx.leave_personal_days_2021
+msgid "Días Personales-2021"
+msgstr ""
+
+#. module: hr_holidays_edi_mx
+#: code:addons/hr_holidays_edi_mx/models/vacation_availability.py:0
+#: model:ir.model,name:hr_holidays_edi_mx.model_hr_employee
+#, python-format
+msgid "Employee"
+msgstr "Empleado"
+
+#. module: hr_holidays_edi_mx
+#: model_terms:ir.ui.view,arch_db:hr_holidays_edi_mx.search_template_history_filter
+msgid "Employee :"
+msgstr "Empleado :"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model,name:hr_holidays_edi_mx.model_hr_contract
+msgid "Employee Contract"
+msgstr "Contrato de empleados"
+
+#. module: hr_holidays_edi_mx
+#: model_terms:ir.ui.view,arch_db:hr_holidays_edi_mx.search_template_history_filter
+msgid "Employee Enrollment"
+msgstr "No. Registro del Empleado"
+
+#. module: hr_holidays_edi_mx
+#: model_terms:ir.ui.view,arch_db:hr_holidays_edi_mx.search_template_history_filter
+msgid "Employee Name"
+msgstr "Nombre de empleado"
+
+#. module: hr_holidays_edi_mx
+#: code:addons/hr_holidays_edi_mx/models/vacation_availability.py:0
+#, python-format
+msgid "Enrollment"
+msgstr "No. Registro"
+
+#. module: hr_holidays_edi_mx
+#: model_terms:ir.ui.view,arch_db:hr_holidays_edi_mx.search_template_history_filter
+msgid "Enrollment :"
+msgstr "No. Registro :"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,help:hr_holidays_edi_mx.field_hr_leave__partner_id
+msgid ""
+"Enter here the private address of the employee, not the one linked to your "
+"company."
+msgstr ""
+"Ingresa aquí la dirección privada del empleado, no la asociada a tu empresa."
+" "
+
+#. module: hr_holidays_edi_mx
+#: code:addons/hr_holidays_edi_mx/models/personal_days_availability.py:0
+#: code:addons/hr_holidays_edi_mx/models/vacation_availability.py:0
+#, python-format
+msgid "Export (XLSX)"
+msgstr "Exportar (XLSX)"
+
+#. module: hr_holidays_edi_mx
+#: model:hr.leave.type,name:hr_holidays_edi_mx.leave_type_f04
+msgid "Falta Injustificada"
+msgstr ""
+
+#. module: hr_holidays_edi_mx
+#: model:hr.leave.type,name:hr_holidays_edi_mx.leave_type_f05
+msgid "Falta Justificada"
+msgstr ""
+
+#. module: hr_holidays_edi_mx
+#: model:hr.leave.type,name:hr_holidays_edi_mx.leave_type_f11
+msgid "Falta por Retardo"
+msgstr ""
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_import_wizard__file_zip
+msgid "File Content Document"
+msgstr "Archivo con documentos"
+
+#. module: hr_holidays_edi_mx
+#: code:addons/hr_holidays_edi_mx/wizard/hr_leave_import.py:0
+#, python-format
+msgid "File Content Document is required."
+msgstr "El Archivo de contenido es requerido"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_import_wizard__file_name
+msgid "File Name"
+msgstr "Nombre del archivo"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.ui.menu,name:hr_holidays_edi_mx.menu_hr_holidays_file_upload
+msgid "File Upload"
+msgstr "Importar"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave__folio
+msgid "Folio"
+msgstr ""
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave__date_from_char
+msgid "From"
+msgstr "Desde"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model,name:hr_holidays_edi_mx.model_sicoss_report
+msgid "Generate Sicoss for inabilities"
+msgstr "Generar Sicoss para incapacidades"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields.selection,name:hr_holidays_edi_mx.selection__hr_leave_type__time_type__holidays
+#: model:ir.model.fields.selection,name:hr_holidays_edi_mx.selection__resource_calendar_leaves__time_type__holidays
+msgid "Holidays"
+msgstr "Vacaciones"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.actions.act_window,name:hr_holidays_edi_mx.action_holidays_assignment_wizard
+#: model:ir.ui.menu,name:hr_holidays_edi_mx.menu_holidays_assignment_wizard
+#: model_terms:ir.ui.view,arch_db:hr_holidays_edi_mx.holidays_assignment_view
+msgid "Holidays Assignment"
+msgstr "Asignación de vacaciones"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model,name:hr_holidays_edi_mx.model_hr_holiday_history
+msgid "Holidays Availability"
+msgstr "Disponibilidad de vacaciones"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model,name:hr_holidays_edi_mx.model_hr_leave_reason_reject
+msgid "Holidays Reason Reject"
+msgstr "Razón de Rechazo de las Vacaciones"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.actions.report,name:hr_holidays_edi_mx.action_report_tmpl_holidays_report
+msgid "Holidays Report"
+msgstr "Reporte de Vacaciones"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_holidays_assignment__holidays
+msgid "Holidays?"
+msgstr "¿Vacaciones?"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_documents_document__id
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_holidays_assignment__id
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_contract__id
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_employee__id
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_employee_import__id
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_employee_public__id
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_holiday_history__id
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave__id
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_allocation__id
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_category__id
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_classification__id
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_import_wizard__id
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_inhability__id
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_reason_reject__id
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_subcategory__id
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_type__id
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_personal_days_history__id
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_res_users__id
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_resource_calendar_leaves__id
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_sicoss_report__id
+msgid "ID"
+msgstr "Identificación"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model,name:hr_holidays_edi_mx.model_hr_employee_import
+msgid "Import Employees"
+msgstr "Importar empleados"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields.selection,name:hr_holidays_edi_mx.selection__hr_leave_type__time_type__inability
+#: model:ir.model.fields.selection,name:hr_holidays_edi_mx.selection__resource_calendar_leaves__time_type__inability
+msgid "Inability"
+msgstr "Incapacidades"
+
+#. module: hr_holidays_edi_mx
+#: model:hr.leave.type,name:hr_holidays_edi_mx.leave_type_f01
+msgid "Incapacidad Por Enfermedad General"
+msgstr ""
+
+#. module: hr_holidays_edi_mx
+#: model:hr.leave.type,name:hr_holidays_edi_mx.leave_type_f03
+msgid "Incapacidad Por Maternidad"
+msgstr ""
+
+#. module: hr_holidays_edi_mx
+#: model:hr.leave.type,name:hr_holidays_edi_mx.leave_type_f02
+msgid "Incapacidad Por Riesgo de Trabajo"
+msgstr ""
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model,name:hr_holidays_edi_mx.model_hr_leave_category
+msgid "Inhability categories"
+msgstr "Categoría"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model,name:hr_holidays_edi_mx.model_hr_leave_subcategory
+msgid "Inhability subcategories"
+msgstr "Subcategoría"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model,name:hr_holidays_edi_mx.model_hr_leave_inhability
+msgid "Inhability type"
+msgstr "tipo"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave__time_type
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_type__time_type
+msgid "Kind of Leave"
+msgstr "Tipo de ausencia"
+
+#. module: hr_holidays_edi_mx
+#: model_terms:ir.ui.view,arch_db:hr_holidays_edi_mx.view_users_customer_inherit_form
+#: model_terms:ir.ui.view,arch_db:hr_holidays_edi_mx.view_users_mx_form
+msgid "Kiosk"
+msgstr "Kiosko"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_documents_document____last_update
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_holidays_assignment____last_update
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_contract____last_update
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_employee____last_update
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_employee_import____last_update
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_employee_public____last_update
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_holiday_history____last_update
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave____last_update
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_allocation____last_update
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_category____last_update
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_classification____last_update
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_import_wizard____last_update
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_inhability____last_update
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_reason_reject____last_update
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_subcategory____last_update
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_type____last_update
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_personal_days_history____last_update
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_res_users____last_update
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_resource_calendar_leaves____last_update
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_sicoss_report____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_holidays_assignment__write_uid
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_category__write_uid
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_classification__write_uid
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_import_wizard__write_uid
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_inhability__write_uid
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_reason_reject__write_uid
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_subcategory__write_uid
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_sicoss_report__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_holidays_assignment__write_date
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_category__write_date
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_classification__write_date
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_import_wizard__write_date
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_inhability__write_date
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_reason_reject__write_date
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_subcategory__write_date
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_sicoss_report__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_import_wizard__file_ids
+msgid "Layout"
+msgstr ""
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_documents_document__leave_id
+msgid "Leave"
+msgstr "Ausencia"
+
+#. module: hr_holidays_edi_mx
+#: code:addons/hr_holidays_edi_mx/wizard/hr_leave_import.py:0
+#, python-format
+msgid "Leaves"
+msgstr "Ausencias"
+
+#. module: hr_holidays_edi_mx
+#: model:hr.leave.type,name:hr_holidays_edi_mx.leave_type_f09
+msgid "Licencia por cuidados médicos de hijos diagnosticados con cáncer"
+msgstr ""
+
+#. module: hr_holidays_edi_mx
+#: model_terms:ir.ui.view,arch_db:hr_holidays_edi_mx.hr_leave_import_view
+msgid "Load"
+msgstr "Cargar"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave__max_leaves
+msgid "Max Leaves"
+msgstr "Max. Ausencias"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_category__name
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_classification__name
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_inhability__name
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_reason_reject__name
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_subcategory__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: hr_holidays_edi_mx
+#: model_terms:ir.ui.view,arch_db:hr_holidays_edi_mx.search_template_history_filter
+msgid "No Filter"
+msgstr "No Filtrar"
+
+#. module: hr_holidays_edi_mx
+#: code:addons/hr_holidays_edi_mx/wizard/hr_leave_import.py:0
+#, python-format
+msgid ""
+"OVERLAPS: You can not set 2 time off that overlaps on the same day for the "
+"same employee, %s, row %s\n"
+msgstr ""
+"SUPERPOSICIÓN: No puede establecer 2 días libres que se superpongan el mismo"
+" día para el mismo empleado, %s, en la fila %s.\n"
+
+#. module: hr_holidays_edi_mx
+#: code:addons/hr_holidays_edi_mx/wizard/hr_leave_import.py:0
+#, python-format
+msgid "Only one XLSX file can be selected."
+msgstr "Solo se puede seleccionar un archivo XLSX."
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave__pdf
+msgid "PDF"
+msgstr ""
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave__pdf_sign
+msgid "PDF Sign"
+msgstr "PDF Firmado"
+
+#. module: hr_holidays_edi_mx
+#: code:addons/hr_holidays_edi_mx/models/vacation_availability.py:0
+#: model_terms:ir.ui.view,arch_db:hr_holidays_edi_mx.search_template_history_filter
+#, python-format
+msgid "Period"
+msgstr "Periodo"
+
+#. module: hr_holidays_edi_mx
+#: model_terms:ir.ui.view,arch_db:hr_holidays_edi_mx.search_template_history_filter
+msgid "Period :"
+msgstr "Periodo :"
+
+#. module: hr_holidays_edi_mx
+#: model:hr.leave.type,name:hr_holidays_edi_mx.leave_type_f06
+msgid "Permiso con gose de sueldo"
+msgstr ""
+
+#. module: hr_holidays_edi_mx
+#: model:hr.leave.type,name:hr_holidays_edi_mx.leave_type_f07
+msgid "Permiso sin gose de sueldo"
+msgstr ""
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields.selection,name:hr_holidays_edi_mx.selection__hr_leave_type__time_type__personal
+#: model:ir.model.fields.selection,name:hr_holidays_edi_mx.selection__resource_calendar_leaves__time_type__personal
+msgid "Personal Days"
+msgstr "Días Personales"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.actions.client,name:hr_holidays_edi_mx.action_report_personal_availability
+#: model:ir.model,name:hr_holidays_edi_mx.model_hr_personal_days_history
+#: model:ir.ui.menu,name:hr_holidays_edi_mx.menu_action_report_personal_availability
+msgid "Personal Days Availability"
+msgstr "Disponibilidad de Días Personales"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.actions.report,name:hr_holidays_edi_mx.action_report_tmpl_personal_days_report
+msgid "Personal Days Report"
+msgstr "Reporte de Días Personales"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_holidays_assignment__personal_days
+msgid "Personal Days?"
+msgstr "¿Días Personales?"
+
+#. module: hr_holidays_edi_mx
+#: model:mail.template,subject:hr_holidays_edi_mx.mail_template_personal_days_create
+msgid "Personal days Registration: ${object.employee_id.complete_name}"
+msgstr "Días personales Inscripción: ${object.employee_id.complete_name}"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,help:hr_holidays_edi_mx.field_hr_employee__responsible_holidays
+msgid ""
+"Persons who will be notified of this employee's vacation and personal days."
+msgstr ""
+"Personas que serán notificadas de las vacaciones y días personales de este "
+"empleado."
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model,name:hr_holidays_edi_mx.model_hr_employee_public
+msgid "Public Employee"
+msgstr "Empleado Público"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave__reason_reject
+msgid "Reason Reject"
+msgstr "Razón de Rechazo"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.actions.act_window,name:hr_holidays_edi_mx.action_hr_leave_reason_reject
+#: model:ir.ui.menu,name:hr_holidays_edi_mx.hr_leave_reason_reject_menu
+msgid "Reason Reject (Holidays)"
+msgstr "Motivo de Rechazo (Vacaciones)"
+
+#. module: hr_holidays_edi_mx
+#: model_terms:ir.ui.view,arch_db:hr_holidays_edi_mx.view_hr_leave_reason_reject_form
+#: model_terms:ir.ui.view,arch_db:hr_holidays_edi_mx.view_hr_leave_reason_reject_tree
+msgid "Reason Reject Holidays"
+msgstr "Razón de Rechazo de las Vacaciones"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave__reject_cancellation
+msgid "Reject Cancellation"
+msgstr "Rechazo de Cancelación"
+
+#. module: hr_holidays_edi_mx
+#: model:mail.template,subject:hr_holidays_edi_mx.mail_template_holidays_reject_cancel
+msgid "Reject Cancellation Holidays: ${object.employee_id.complete_name}"
+msgstr ""
+"Rechazo de Cancelación de Vacaciones: ${object.employee_id.complete_name}"
+
+#. module: hr_holidays_edi_mx
+#: model:mail.template,subject:hr_holidays_edi_mx.mail_template_personal_reject_cancel
+msgid "Reject Cancellation Personal Day: ${object.employee_id.complete_name}"
+msgstr ""
+"Rechazo de Cancelación de Día Personal: ${object.employee_id.complete_name}"
+
+#. module: hr_holidays_edi_mx
+#: model:mail.template,subject:hr_holidays_edi_mx.mail_template_holidays_refuse
+msgid "Rejected Holidays: ${object.employee_id.complete_name}"
+msgstr "Vacaciones Rechazadas: ${object.employee_id.complete_name}"
+
+#. module: hr_holidays_edi_mx
+#: model:mail.template,subject:hr_holidays_edi_mx.mail_template_personal_days_refuse
+msgid "Rejected personal days: ${object.employee_id.complete_name}"
+msgstr "Días Personales Rechazados: ${object.employee_id.complete_name}"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave__remaining_days_qty
+msgid "Remaining"
+msgstr "Restante"
+
+#. module: hr_holidays_edi_mx
+#: model_terms:ir.ui.view,arch_db:hr_holidays_edi_mx.hr_leave_import_view
+msgid "Remaining leaves"
+msgstr "Ausencias restantes"
+
+#. module: hr_holidays_edi_mx
+#: model_terms:ir.ui.view,arch_db:hr_holidays_edi_mx.hr_leave_import_view
+msgid "Remove File"
+msgstr "Remover archivo"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model,name:hr_holidays_edi_mx.model_resource_calendar_leaves
+msgid "Resource Time Off Detail"
+msgstr "Detalle de las ausencias de los recursos"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_employee__responsible_holidays
+#: model_terms:ir.ui.view,arch_db:hr_holidays_edi_mx.view_employee_mexico_form
+msgid "Responsible Holidays"
+msgstr "Responsable de Vacaciones"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave__document_ids
+msgid "Set Tags"
+msgstr "Establecer etiquetas"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.ui.menu,name:hr_holidays_edi_mx.menu_sicoss_report
+msgid "Sicoss Inabilities Report"
+msgstr "Reporte de Incapacidades Sicoss"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.actions.act_window,name:hr_holidays_edi_mx.action_sicoss_report
+#: model_terms:ir.ui.view,arch_db:hr_holidays_edi_mx.sicoss_report_view
+msgid "Sicoss Report"
+msgstr "Reporte Sicoss"
+
+#. module: hr_holidays_edi_mx
+#: code:addons/hr_holidays_edi_mx/models/hr_leave.py:0
+#, python-format
+msgid "Sign"
+msgstr "Firmar"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave__sign_request_id
+msgid "Sign Request"
+msgstr "Solicitud de Firma"
+
+#. module: hr_holidays_edi_mx
+#: model_terms:ir.ui.view,arch_db:hr_holidays_edi_mx.hr_leave_view_form_edi_mx
+msgid "Sign Status"
+msgstr "Estatus de la Firma"
+
+#. module: hr_holidays_edi_mx
+#: code:addons/hr_holidays_edi_mx/models/hr_leave.py:0
+#, python-format
+msgid "Signature Request - %s"
+msgstr "Solicitud de Firma - %s"
+
+#. module: hr_holidays_edi_mx
+#: model_terms:ir.ui.view,arch_db:hr_holidays_edi_mx.hr_leave_view_form_edi_mx
+msgid "Signature of Receipt"
+msgstr "Firma del recibo"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave__sign_status
+msgid "State"
+msgstr "Estado"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave__inhability_subcategory_id
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_category__subcategory_ids
+msgid "Subcategory"
+msgstr "Subcategoría"
+
+#. module: hr_holidays_edi_mx
+#: model:hr.leave.type,name:hr_holidays_edi_mx.leave_type_f10
+msgid "Suspenciones"
+msgstr ""
+
+#. module: hr_holidays_edi_mx
+#: code:addons/hr_holidays_edi_mx/models/hr_leave.py:0
+#, python-format
+msgid ""
+"The number of remaining time off is not sufficient for this time off type %s.\n"
+"Please also check the time off waiting for validation. No. Employee %s"
+msgstr ""
+"El número de ausencias restantes no es suficiente para esta tipo de ausencias. %s.\n"
+"Por favor, compruebe también el tiempo de espera para la validación. No. Empleado (%s)"
+
+#. module: hr_holidays_edi_mx
+#: code:addons/hr_holidays_edi_mx/models/hr_leave.py:0
+#, python-format
+msgid "There cannot be consecutive vacations of different years"
+msgstr "No puede haber vacaciones consecutivas de diferentes años."
+
+#. module: hr_holidays_edi_mx
+#: code:addons/hr_holidays_edi_mx/wizard/holidays_assignment.py:0
+#, python-format
+msgid "There is no type of absence for a holidays"
+msgstr "No hay ningún tipo de ausencia para vacaciones"
+
+#. module: hr_holidays_edi_mx
+#: code:addons/hr_holidays_edi_mx/wizard/holidays_assignment.py:0
+#, python-format
+msgid "There is no type of absence for a personal day"
+msgstr "No hay ningún tipo de ausencia para día personal"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model,name:hr_holidays_edi_mx.model_hr_leave
+msgid "Time Off"
+msgstr "Ausencias"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model,name:hr_holidays_edi_mx.model_hr_leave_allocation
+msgid "Time Off Allocation"
+msgstr "Asignación de ausencias"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.actions.act_window,name:hr_holidays_edi_mx.action_hr_leave_import_wizard
+#: model:ir.ui.menu,name:hr_holidays_edi_mx.menu_hr_leave_import_wizard
+#: model_terms:ir.ui.view,arch_db:hr_holidays_edi_mx.hr_leave_import_view
+msgid "Time Off Import"
+msgstr "Ausencias"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model,name:hr_holidays_edi_mx.model_hr_leave_type
+msgid "Time Off Type"
+msgstr "Tipo de Ausencia"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_resource_calendar_leaves__time_type
+msgid "Time Type"
+msgstr "Tipo de tiempo"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave__date_to_char
+msgid "To"
+msgstr "Hasta"
+
+#. module: hr_holidays_edi_mx
+#: code:addons/hr_holidays_edi_mx/models/vacation_availability.py:0
+#, python-format
+msgid "Total Days Assigned"
+msgstr "Total de Días Asignados"
+
+#. module: hr_holidays_edi_mx
+#: code:addons/hr_holidays_edi_mx/models/vacation_availability.py:0
+#, python-format
+msgid "Total Days Available"
+msgstr "Total de Días Disponibles"
+
+#. module: hr_holidays_edi_mx
+#: code:addons/hr_holidays_edi_mx/models/vacation_availability.py:0
+#, python-format
+msgid "Total Days Used"
+msgstr "Total de Días Usados"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave__type_inhability_id
+msgid "Type inhability"
+msgstr "Tipo de incapacidad"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model,name:hr_holidays_edi_mx.model_res_users
+#: model:ir.ui.menu,name:hr_holidays_edi_mx.menu_users_leaves
+msgid "Users"
+msgstr "Usuarios"
+
+#. module: hr_holidays_edi_mx
+#: model:hr.leave.type,name:hr_holidays_edi_mx.leave_holidays_2021
+msgid "Vacaciones-2021"
+msgstr ""
+
+#. module: hr_holidays_edi_mx
+#: model:ir.actions.client,name:hr_holidays_edi_mx.action_report_holiday_availability
+#: model:ir.ui.menu,name:hr_holidays_edi_mx.menu_action_report_holidays_availability
+msgid "Vacation Availability"
+msgstr "Disponibilidad de Vacaciones"
+
+#. module: hr_holidays_edi_mx
+#: model:mail.template,subject:hr_holidays_edi_mx.mail_template_holidays_create
+msgid "Vacation Registration: ${object.employee_id.complete_name}"
+msgstr "Registro de Vacaciones: ${object.employee_id.complete_name}"
+
+#. module: hr_holidays_edi_mx
+#: code:addons/hr_holidays_edi_mx/wizard/holidays_assignment.py:0
+#: model:ir.model,name:hr_holidays_edi_mx.model_holidays_assignment
+#, python-format
+msgid "Vacation and Personal Day Allowance"
+msgstr "Asignación por vacaciones y días personales"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,help:hr_holidays_edi_mx.field_hr_leave__time_type
+#: model:ir.model.fields,help:hr_holidays_edi_mx.field_hr_leave_type__time_type
+msgid ""
+"Whether this should be computed as a holiday or as work time (eg: formation)"
+msgstr ""
+"Si esto debe calcularse como vacaciones o como tiempo de trabajo (por "
+"ejemplo, formación)"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,help:hr_holidays_edi_mx.field_resource_calendar_leaves__time_type
+msgid ""
+"Whether this should be computed as a time off or as work time (eg: "
+"formation)"
+msgstr ""
+"Si esto debe computarse como tiempo libre o como tiempo de trabajo (por "
+"ejemplo: formación)"
+
+#. module: hr_holidays_edi_mx
+#: code:addons/hr_holidays_edi_mx/models/personal_days_availability.py:0
+#: code:addons/hr_holidays_edi_mx/models/vacation_availability.py:0
+#, python-format
+msgid "XLSX"
+msgstr ""
+
+#. module: hr_holidays_edi_mx
+#: code:addons/hr_holidays_edi_mx/wizard/hr_leave_import.py:0
+#, python-format
+msgid "XLSX files only. File not supported."
+msgstr "Solo archivos XLSX. Archivo no admitido."
+
+#. module: hr_holidays_edi_mx
+#: code:addons/hr_holidays_edi_mx/models/hr_leave.py:0
+#, python-format
+msgid "You cannot request consecutive personal days"
+msgstr "No puede solicitar días personales consecutivos"
+
+#. module: hr_holidays_edi_mx
+#: code:addons/hr_holidays_edi_mx/wizard/hr_leave_import.py:0
+#: code:addons/hr_holidays_edi_mx/wizard/hr_leave_import.py:0
+#, python-format
+msgid "ZIP files only. File not supported."
+msgstr "Solo archivos ZIP. Archivo no admitido."
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_import_wizard__zip_name
+msgid "Zip name"
+msgstr "Nombre del archivo"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_employee__approver_kiosk_id
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_employee_public__approver_kiosk_id
+msgid "approver (kiosk)"
+msgstr "Aprobador (Kiosko)"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_category__code
+#: model:ir.model.fields,field_description:hr_holidays_edi_mx.field_hr_leave_subcategory__code
+msgid "code"
+msgstr "Código"
+
+#. module: hr_holidays_edi_mx
+#: model:ir.model,name:hr_holidays_edi_mx.model_hr_leave_import_wizard
+msgid "hr.leave.import.wizard"
+msgstr ""
+
+#. module: hr_holidays_edi_mx
+#: code:addons/hr_holidays_edi_mx/wizard/hr_leave_import.py:0
+#, python-format
+msgid "¡Oops!, wrong file: \n"
+msgstr "¡Ups!, Archivo incorrecto: \n"

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <template id="employee_reports_backend" inherit_id="web.assets_backend" active="True">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/hr_employe_mexico/static/src/js/employee_reports.js"></script>
+            <script type="text/javascript" src="/hr_employe_mexico/static/src/js/action_manager_employee_report_dl.js"></script>
+            <link rel="stylesheet" type="text/scss" href="/hr_employe_mexico/static/src/scss/employee_reports.scss"/>
+        </xpath>
+    </template>
+
+    </data>
+</odoo>

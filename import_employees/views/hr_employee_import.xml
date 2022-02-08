@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_employee_import_tree" model="ir.ui.view">
+            <field name="name">hr.employee.import.tree</field>
+            <field name="model">hr.employee.import</field>
+            <field name="arch" type="xml">
+                <tree string="Employees" multi_edit="1" sample="1">
+                    <field name="file_name"/>
+                    <field name="create_date"/>
+                    <field name="create_uid"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_menu_hr_import" model="ir.ui.view">
+            <field name="name">view.hr.employee.import</field>
+            <field name="model">hr.employee.import</field>
+            <field name="arch" type="xml">
+                <form string="Employees">
+                    <header>
+                        <button name="import_file" string="Preview File" context="{'type_import': type}" type="object" attrs="{'invisible': [('read_file', '=', False)]}"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="file_ids" widget="many2many_binary"/>
+                                <label for="clean_file_ids" string=""/>
+                                <div class="o_row">
+                                    <button
+                                        type="object"
+                                        name="clean_file_ids"
+                                        class="btn-sm btn-link mb4 fa fa-trash-o"
+                                        aria-label="Remove File"
+                                        title="Remove File"
+                                        attrs="{'invisible':[('file_ids', '=', False)]}"
+                                        help="Remaining leaves"
+                                    />
+                                </div>
+                                <field name="file_name" readonly="1"/>
+                                <field name="read_file" invisible="1"/>
+                                <field name="type" invisible="1"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_view_menu_hr_import" model="ir.actions.act_window">
+            <field name="name">Employees Structure</field>
+            <field name="res_model">hr.employee.import</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_employee_import_tree"/>
+            <field name="domain">[('type','=', 'employee')]</field>
+            <field name="context">{'employee_import': True, 'default_type': 'employee'}</field>
+        </record>
+
+        <menuitem
+            id="menu_hr_import_employee"
+            name="Import Employees"
+            action="action_view_menu_hr_import"
+            parent="hr_employe_mexico.menu_hr_employee_import"
+            sequence="5"/>
+
+        <record id="action_view_menu_contract_import" model="ir.actions.act_window">
+            <field name="name">Contract Structure</field>
+            <field name="res_model">hr.employee.import</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_employee_import_tree"/>
+            <field name="domain">[('type','=', 'contract')]</field>
+            <field name="context">{'contract_import': True, 'default_type': 'contract'}</field>
+        </record>
+
+        <menuitem
+            id="menu_hr_import_contract"
+            name="Import Contract"
+            action="action_view_menu_contract_import"
+            parent="hr_employe_mexico.menu_hr_employee_import"
+            sequence="6"/>
+
+    </data>
+</odoo>

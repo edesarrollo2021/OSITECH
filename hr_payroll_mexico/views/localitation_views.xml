@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <!--   States     -->
+    <record id="view_country_state_tree" model="ir.ui.view">
+        <field name="name">res.country.state.tree</field>
+        <field name="model">res.country.state</field>
+        <field name="arch" type="xml">
+            <tree string="State" edit="0" create="0">
+                <field name="name"/>
+                <field name="code"/>
+                <field name="country_id" options="{'no_create': True}"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_country_state_form" model="ir.ui.view">
+        <field name="name">res.country.state.form</field>
+        <field name="model">res.country.state</field>
+        <field name="arch" type="xml">
+            <form string="State" edit="0" create="0">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="code"/>
+                        </group>
+                        <group>
+                            <field name="country_id" options='{"no_open": True, "no_create": True}'/>
+                        </group>
+                    </group>
+                    <notebook>
+                    <page string="ISN">
+                        <field name="state_isn_line">
+                            <form>
+                                <group>
+                                    <group>
+                                        <field name="name"/>
+                                        <field name="type_isn"/>
+                                        <field name="percent"/>
+                                    </group>
+                                    <group>
+                                        <field name="gratification"/>
+                                        <field name="gratification_amount"
+                                               attrs="{'invisible': [('gratification', '=', False)], 'required': [('gratification', '=', True)]}"/>
+                                    </group>
+                                </group>
+                                <field name="isn_line" attrs="{'invisible': [('type_isn', '=', 'fixed')]}">
+                                    <tree editable="botton">
+                                        <field name="lim_inf"/>
+                                        <field name="lim_sup"/>
+                                        <field name="c_fija"/>
+                                        <field name="s_excedente"/>
+                                    </tree>
+                                </field>
+                            </form>
+                            <tree>
+                                <field name="name"/>
+                            </tree>
+                        </field>
+                    </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_states_search" model="ir.ui.view">
+        <field name="name">res.country.state.search</field>
+        <field name="model">res.country.state</field>
+        <field name="arch" type="xml">
+            <search string="Country">
+                <field name="name"/>
+                <field name="country_id" string="Country" filter_domain="['|', ('country_id.name', 'ilike', self), ('country_id.code', 'ilike', self)]"/>
+                <group string="Group By">
+                    <filter name="groupby_country" string="Country" context="{'group_by': 'country_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_states_mx" model="ir.actions.act_window">
+        <field name="name">States</field>
+        <field name="res_model">res.country.state</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="view_states_search"/>
+        <field name="context" eval="{'search_default_country_id': ref('base.mx'),}"/>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Create your first State
+          </p>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window.view" id="act_form_states_mx_action">
+        <field eval="100" name="sequence"/>
+        <field name="view_mode">form</field>
+        <field name="act_window_id" ref="action_states_mx"/>
+        <field name="view_id" ref="hr_payroll_mexico.view_country_state_form"/>
+    </record>
+    <record model="ir.actions.act_window.view" id="act_tree_states_mx_action">
+        <field name="sequence" eval="99"/>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="hr_payroll_mexico.view_country_state_tree"/>
+        <field name="act_window_id" ref="action_states_mx"/>
+    </record>
+
+    <menuitem
+            id="menu_action_states"
+            name="States"
+            action="action_states_mx"
+            parent="base_mexico.menu_action_localitation"
+            sequence="10"
+            />
+    
+    <record model="ir.ui.view" id="view_hr_employee_station_inherit">
+        <field name="name">hr.employee.station.inherit</field>
+        <field name="model">hr.employee</field>
+        <field name="priority">6</field>
+        <field name="inherit_id" ref="hr_employe_mexico.view_employee_mexico_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='employer_register_id']" position="before">
+                <field name="state_isn_id"/>
+            </xpath>
+        </field>
+    </record>
+    
+    
+    
+    <record id="view_res_country_state_isn_tree" model="ir.ui.view">
+        <field name="name">res.country.state.isn.tree</field>
+        <field name="model">res.country.state.isn</field>
+        <field name="arch" type="xml">
+            <tree string="Station">
+                <field name="name"/>
+                <field name="state_id"/>
+                <field name="type_isn" />
+                <field name="percent" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_res_country_state_isn_form" model="ir.ui.view">
+        <field name="name">res.country.state.isn.form</field>
+        <field name="model">res.country.state.isn</field>
+        <field name="arch" type="xml">
+            <form string="Station">
+                <group>
+                    <group>
+                        <field name="name"/>
+                        <field name="type_isn"/>
+                        <field name="percent"/>
+                    </group>
+                    <group>
+                        <field name="gratification"/>
+                        <field name="gratification_amount"
+                               attrs="{'invisible': [('gratification', '=', False)], 'required': [('gratification', '=', True)]}"/>
+                    </group>
+                </group>
+                <field name="isn_line" attrs="{'invisible': [('type_isn', '=', 'fixed')]}">
+                    <tree editable="botton">
+                        <field name="lim_inf"/>
+                        <field name="lim_sup"/>
+                        <field name="c_fija"/>
+                        <field name="s_excedente"/>
+                    </tree>
+                </field>
+            </form>
+        </field>
+    </record>
+    
+     <record id="action_res_country_state_isn" model="ir.actions.act_window">
+        <field name="name">Stations</field>
+        <field name="res_model">res.country.state.isn</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Create your first Station
+          </p>
+        </field>
+    </record>
+
+    <menuitem
+            id="menu_res_country_state_isn"
+            name="Stations"
+            action="action_res_country_state_isn"
+            parent="base_mexico.menu_action_localitation"
+            sequence="20"
+            />
+    
+
+    </data>
+</odoo>

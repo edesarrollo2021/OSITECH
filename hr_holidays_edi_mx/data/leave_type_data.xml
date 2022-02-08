@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+
+    <record id="leave_holidays_2021" model="hr.leave.type">
+        <field name="name">Vacaciones-2021</field>
+        <field name="code">F08-2021</field>
+        <field name="time_type">holidays</field>
+        <field name="duration_months">18</field>
+        <field name="allocation_type">fixed</field>
+    </record>
+
+    <record id="leave_personal_days_2021" model="hr.leave.type">
+        <field name="name">Días Personales-2021</field>
+        <field name="code">F11-2021</field>
+        <field name="time_type">personal</field>
+        <field name="duration_months">12</field>
+        <field name="allocation_type">fixed</field>
+    </record>
+
+    <record id="leave_type_f01" model="hr.leave.type">
+        <field name="name">Incapacidad Por Enfermedad General</field>
+        <field name="code">F01</field>
+        <field name="time_type">inability</field>
+        <field name="unpaid">1</field>
+        <field name="allocation_type">no</field>
+    </record>
+
+    <record id="leave_type_f02" model="hr.leave.type">
+        <field name="name">Incapacidad Por Riesgo de Trabajo</field>
+        <field name="code">F02</field>
+        <field name="time_type">inability</field>
+        <field name="unpaid">1</field>
+        <field name="allocation_type">no</field>
+    </record>
+
+    <record id="leave_type_f03" model="hr.leave.type">
+        <field name="name">Incapacidad Por Maternidad</field>
+        <field name="code">F03</field>
+        <field name="time_type">inability</field>
+        <field name="unpaid">1</field>
+        <field name="allocation_type">no</field>
+    </record>
+
+    <record id="leave_type_f04" model="hr.leave.type">
+        <field name="name">Falta Injustificada</field>
+        <field name="code">F04</field>
+        <field name="time_type">leave</field>
+        <field name="unpaid">1</field>
+        <field name="allocation_type">no</field>
+    </record>
+
+    <record id="leave_type_f05" model="hr.leave.type">
+        <field name="name">Falta Justificada</field>
+        <field name="code">F05</field>
+        <field name="time_type">leave</field>
+        <field name="unpaid">1</field>
+        <field name="allocation_type">no</field>
+    </record>
+
+    <record id="leave_type_f06" model="hr.leave.type">
+        <field name="name">Permiso con gose de sueldo</field>
+        <field name="code">F06</field>
+        <field name="time_type">leave</field>
+        <field name="unpaid">0</field>
+        <field name="allocation_type">no</field>
+    </record>
+
+    <record id="leave_type_f07" model="hr.leave.type">
+        <field name="name">Permiso sin gose de sueldo</field>
+        <field name="code">F07</field>
+        <field name="time_type">leave</field>
+        <field name="unpaid">1</field>
+        <field name="allocation_type">no</field>
+    </record>
+
+    <record id="leave_type_f09" model="hr.leave.type">
+        <field name="name">Licencia por cuidados médicos de hijos diagnosticados con cáncer</field>
+        <field name="code">F09</field>
+        <field name="time_type">inability</field>
+        <field name="unpaid">1</field>
+        <field name="allocation_type">no</field>
+    </record>
+
+    <record id="leave_type_f10" model="hr.leave.type">
+        <field name="name">Suspenciones</field>
+        <field name="code">F10</field>
+        <field name="time_type">leave</field>
+        <field name="unpaid">1</field>
+        <field name="allocation_type">no</field>
+    </record>
+
+    <record id="leave_type_f11" model="hr.leave.type">
+        <field name="name">Falta por Retardo</field>
+        <field name="code">F11</field>
+        <field name="time_type">leave</field>
+        <field name="unpaid">1</field>
+        <field name="allocation_type">no</field>
+    </record>
+
+    </data>
+</odoo>

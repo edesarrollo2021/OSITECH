@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<odoo>
+
+    <menuitem
+        id="menu_hr_holidays_file_upload"
+        name="File Upload"
+        parent="hr_holidays.menu_hr_holidays_root"
+        sequence="3"/>
+
+    <!-- Holiday on resource leave -->
+    <record id="hr_leave_view_form_edi_mx" model="ir.ui.view">
+        <field name="name">hr.leave.view.form.edi.mx</field>
+        <field name="model">hr.leave</field>
+        <field name="priority">15</field>
+        <field name="inherit_id" ref="hr_holidays.hr_leave_view_form_manager"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('alert')]" position="before">
+                <div class="oe_button_box" name="button_box">
+                    <button name="action_see_documents" type="object" class="oe_stat_button" icon="fa-file-text-o">
+                        <div class="o_field_widget o_stat_info">
+                            <span class="o_stat_value"><field name="document_count"/></span>
+                            <span class="o_stat_text">Documents</span>
+                        </div>
+                    </button>
+                </div>
+            </xpath>
+            <xpath expr="//sheet/group/group" position="before">
+                <group name="inhability" attrs="{'invisible': [('time_type', '!=', 'inability')]}">
+                    <field name="time_type" attrs="{'invisible': 1}"/>
+                    <field name="folio" attrs="{'required': [('time_type', '=', 'inability')]}"/>
+                    <field name="type_inhability_id" attrs="{'required': [('time_type', '=', 'inability')]}"
+                        options='{"no_open": True, "no_create": True}'/>
+                    <field name="inhability_classification_id" attrs="{'required': [('time_type', '=', 'inability')]}"
+                        options='{"no_open": True, "no_create": True}'/>
+                    <field name="inhability_category_id" attrs="{'required': [('time_type', '=', 'inability')]}"
+                        options='{"no_open": True, "no_create": True}'/>
+                    <field name="inhability_subcategory_id" attrs="{'required': [('time_type', '=', 'inability')]}"
+                        options='{"no_open": True, "no_create": True}'/>
+                </group>
+            </xpath>
+            <xpath expr="//field[@name='employee_id']" position="after">
+                <field name="contract_id" attrs="{'invisible': [('holiday_type', '!=', 'employee')],
+                'readonly': [('state', 'in', ['cancel', 'refuse', 'validate1', 'validate'])],
+                 'required': [('holiday_type', '=', 'employee')]}" domain="[('employee_id', '=', employee_id)]"/>
+            </xpath>
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="reason_reject" readonly="1" states="refuse"/>
+                <field name="description_reject" readonly="1" states="refuse"/>
+                <field name="description_cancellation" readonly="1" states="cancel,validate1,validate"/>
+                <field name="reject_cancellation" readonly="1"
+                       attrs="{'invisible': ['|', '|', ('state', 'not in', ('cancel','validate1','validate')), ('reject_cancellation', '=', False), ('cancellation', '=', True)]}"/>
+                <field name="remaining_days_qty" invisible="1"/>
+                <field name="max_leaves" invisible="1"/>
+                <field name="cancellation" invisible="1"/>
+            </xpath>
+            <xpath expr="//group//group[last()]" position="before">
+                <group string="Signature of Receipt" attrs="{'invisible': [('time_type', 'not in', ['holidays', 'personal'])]}">
+                    <field name="sign_request_id" readonly="1"/>
+                    <field name="sign_status" string="Sign Status"/>
+                    <field name="pdf" readonly="1"/>
+                    <field name="pdf_sign" readonly="1"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <!--  hr.leave.allocation  -->
+    <record id="hr_leave_allocation_inherit" model="ir.ui.view">
+        <field name="name">hr.leave.allocation.inherit.view</field>
+        <field name="model">hr.leave.allocation</field>
+        <field name="type">form</field>
+        <field name="inherit_id" ref="hr_holidays.hr_leave_allocation_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='employee_id']" position="after">
+                <field name="date_due"/>
+            </xpath>
+<!--
+            <xpath expr="//field[@name='employee_id']" position="attributes">
+                <attribute name="domain">[('syndicalist', '=', False)]</attribute>
+            </xpath>
+-->
+        </field>
+    </record>
+
+<!--
+    <record id="hr_leave_allocation_mx_form" model="ir.ui.view">
+        <field name="name">hr.leave.allocation.mx.view.form</field>
+        <field name="model">hr.leave.allocation</field>
+        <field name="inherit_id" ref="hr_holidays.hr_leave_allocation_view_form_manager"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='employee_id']" position="attributes">
+                <attribute name="domain">[('syndicalist', '=', False)]</attribute>
+            </xpath>
+        </field>
+    </record>
+-->
+
+    <record id="view_hr_leave_reason_reject_form" model="ir.ui.view">
+        <field name="name">hr.leave.reason.reject.form</field>
+        <field name="model">hr.leave.reason.reject</field>
+        <field name="arch" type="xml">
+            <form string="Reason Reject Holidays">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_hr_leave_reason_reject_tree" model="ir.ui.view">
+        <field name="name">hr.leave.reason.reject.tree</field>
+        <field name="model">hr.leave.reason.reject</field>
+        <field name="arch" type="xml">
+            <tree string="Reason Reject Holidays">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+     <record id="action_hr_leave_reason_reject" model="ir.actions.act_window">
+        <field name="name">Reason Reject (Holidays)</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.leave.reason.reject</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="hr_leave_reason_reject_menu"
+        name="Reason Reject (Holidays)"
+        action="action_hr_leave_reason_reject"
+        parent="hr_holidays.menu_hr_holidays_configuration"
+        sequence="10"
+       />
+
+</odoo>

@@ -1,0 +1,3733 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_employe_mexico
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-02 20:56+0000\n"
+"PO-Revision-Date: 2022-02-02 20:56+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/models/contract_salary_change.py:0
+#, python-format
+msgid ""
+"\n"
+"                    The end date must be greater than the start date!\n"
+"                    Review previous salary changes for the contract if the contract has no errors\n"
+"                "
+msgstr ""
+"\n"
+"                    ¡La fecha de finalización debe ser mayor que la fecha de inicio!\n"
+"                    Revise los cambios salariales anteriores para el contrato si el contrato no tiene errores.\n"
+"                "
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/wizard/hr_employee_document_import.py:0
+#: code:addons/hr_employe_mexico/wizard/import_images_employees.py:0
+#: code:addons/hr_employe_mexico/wizard/import_signatures_users.py:0
+#: code:addons/hr_employe_mexico/wizard/massive_employee_modification.py:0
+#: code:addons/hr_employe_mexico/wizard/massive_employee_modification.py:0
+#: code:addons/hr_employe_mexico/wizard/massive_employee_modification.py:0
+#: code:addons/hr_employe_mexico/wizard/massive_employee_modification.py:0
+#: code:addons/hr_employe_mexico/wizard/massive_employee_modification.py:0
+#: code:addons/hr_employe_mexico/wizard/massive_employee_modification.py:0
+#, python-format
+msgid ""
+"\n"
+"Invalid format: \n"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/wizard/hr_employee_document_import.py:0
+#: code:addons/hr_employe_mexico/wizard/import_images_employees.py:0
+#: code:addons/hr_employe_mexico/wizard/import_signatures_users.py:0
+#: code:addons/hr_employe_mexico/wizard/massive_employee_modification.py:0
+#: code:addons/hr_employe_mexico/wizard/massive_employee_modification.py:0
+#: code:addons/hr_employe_mexico/wizard/massive_employee_modification.py:0
+#: code:addons/hr_employe_mexico/wizard/massive_employee_modification.py:0
+#: code:addons/hr_employe_mexico/wizard/massive_employee_modification.py:0
+#: code:addons/hr_employe_mexico/wizard/massive_employee_modification.py:0
+#, python-format
+msgid ""
+"\n"
+"No results were found for: \n"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/wizard/hr_employee_document_import.py:0
+#: code:addons/hr_employe_mexico/wizard/import_images_employees.py:0
+#: code:addons/hr_employe_mexico/wizard/import_signatures_users.py:0
+#, python-format
+msgid ""
+"\n"
+"The document name cannot be found in the .zip file: \n"
+msgstr ""
+"\n"
+"No se puede encontrar el nombre del documento en el archivo .zip: \n"
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/wizard/hr_employee_document_import.py:0
+#: code:addons/hr_employe_mexico/wizard/import_images_employees.py:0
+#: code:addons/hr_employe_mexico/wizard/import_signatures_users.py:0
+#: code:addons/hr_employe_mexico/wizard/massive_employee_modification.py:0
+#: code:addons/hr_employe_mexico/wizard/massive_employee_modification.py:0
+#: code:addons/hr_employe_mexico/wizard/massive_employee_modification.py:0
+#: code:addons/hr_employe_mexico/wizard/massive_employee_modification.py:0
+#: code:addons/hr_employe_mexico/wizard/massive_employee_modification.py:0
+#: code:addons/hr_employe_mexico/wizard/massive_employee_modification.py:0
+#, python-format
+msgid ""
+"\n"
+"The following fields are mandatory: \n"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/wizard/massive_employee_modification.py:0
+#, python-format
+msgid ""
+"\n"
+"The selected place is not available: \n"
+msgstr ""
+"\n"
+"El lugar seleccionado no está disponible: \n"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_company__social_objective
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_config_settings__social_objective
+msgid "% Social objective"
+msgstr "% Objetivo social"
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/models/hr_contract.py:0
+#, python-format
+msgid "%s of %s of %s"
+msgstr "%s de %s del %s"
+
+#. module: hr_employe_mexico
+#: model:ir.actions.report,print_report_name:hr_employe_mexico.action_report_tmpl_anexo_Superiores
+msgid "'Anexo Superiores - %s' % (object.code)"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.actions.report,print_report_name:hr_employe_mexico.action_report_tmpl_anx_prestaciones_de_ley
+msgid "'Anexo prestaciones de ley - %s' % (object.code)"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.actions.report,print_report_name:hr_employe_mexico.action_report_tmpl_cap_init_pres_ley
+msgid "'Cap Ini IPL Contract - %s' % (object.code)"
+msgstr "'Contrato Cap Ini IPL - %s' % (object.code)"
+
+#. module: hr_employe_mexico
+#: model:ir.actions.report,print_report_name:hr_employe_mexico.action_report_tmpl_cap_init_superiores
+msgid "'Cap Ini SU Contract - %s' % (object.code)"
+msgstr "'Cap Ini SU Contrato - %s' % (object.code)"
+
+#. module: hr_employe_mexico
+#: model:ir.actions.report,print_report_name:hr_employe_mexico.action_report_tmpl_cap_ini_primer_oficial
+msgid "'Cap Init PO Contract - %s' % (object.code)"
+msgstr "'Cap Init PO Contrato - %s' % (object.code)"
+
+#. module: hr_employe_mexico
+#: model:ir.actions.report,print_report_name:hr_employe_mexico.action_report_tmpl_cap_init_sobrecargo
+msgid "'Cap Init SOB Contract - %s' % (object.code)"
+msgstr "'Cap Init SOB Contrato - %s' % (object.code)"
+
+#. module: hr_employe_mexico
+#: model:ir.actions.report,print_report_name:hr_employe_mexico.action_report_tmpl_determinado_pl
+msgid "'Determinado PL Contract - %s' % (object.code)"
+msgstr "'Contrato Determinado PL - %s' % (object.code)"
+
+#. module: hr_employe_mexico
+#: model:ir.actions.report,print_report_name:hr_employe_mexico.action_report_tmpl_determinado_sobrecargo
+msgid "'Determinado SOB Contract - %s' % (object.code)"
+msgstr "'Contrato Determinado SOB - %s' % (object.code)"
+
+#. module: hr_employe_mexico
+#: model:ir.actions.report,print_report_name:hr_employe_mexico.action_report_tmpl_determinado_superiores
+msgid "'Determinado SU Contract - %s' % (object.code)"
+msgstr "'Contrato Determinado SU - %s' % (object.code)"
+
+#. module: hr_employe_mexico
+#: model:ir.actions.report,print_report_name:hr_employe_mexico.action_report_tmpl_planta_pres_ley
+msgid "'Planta PL Contract - %s' % (object.code)"
+msgstr "'Contrato Planta PL - %s' % (object.code)"
+
+#. module: hr_employe_mexico
+#: model:ir.actions.report,print_report_name:hr_employe_mexico.action_report_tmpl_planta_primer_oficial
+msgid "'Planta PO Contract - %s' % (object.code)"
+msgstr "'Contrato Planta PO - %s' % (object.code)"
+
+#. module: hr_employe_mexico
+#: model:ir.actions.report,print_report_name:hr_employe_mexico.action_report_tmpl_planta_sobrecargo
+msgid "'Planta SOB Contract - %s' % (object.code)"
+msgstr "'Contrato Planta SOB - %s' % (object.code)"
+
+#. module: hr_employe_mexico
+#: model:ir.actions.report,print_report_name:hr_employe_mexico.action_report_tmpl_planta_superiores
+msgid "'Planta SU Contract - %s' % (object.code)"
+msgstr "'Contrato Planta SU - %s' % (object.code)"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.res_config_settings_view_form
+msgid "(Days)"
+msgstr "(Días)"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_document_import__file_zip_ids
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_import_images_employees__file_zip_ids
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_import_signature_users__file_zip_ids
+msgid ".ZIP"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_job__percentage_compensation__15
+msgid "15%"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_job__percentage_compensation__20
+msgid "20%"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_job__percentage_compensation__23
+msgid "23%"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_job__percentage_compensation__24
+msgid "24%"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_job__percentage_compensation__26
+msgid "26%"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.line_template
+msgid ""
+"<i class=\"fa fa-caret-right invisible\" role=\"img\" aria-"
+"label=\"Unfolded\" title=\"Unfolded\"/>"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.search_template_date_filter
+msgid "<span class=\"fa fa-calendar\" title=\"Dates\" role=\"img\" aria-label=\"Dates\"/>"
+msgstr "<span class=\"fa fa-calendar\" title=\"fechas\" role=\"img\" aria-label=\"fechas\"/>"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.res_config_settings_view_form
+msgid ""
+"<span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-"
+"specific.\" role=\"img\" aria-label=\"Values set here are company-"
+"specific.\" groups=\"base.group_multi_company\"/>"
+msgstr ""
+"<span class=\"fa fa-lg fa-building-o\" title=\"Los valores establecidos aquí"
+" son específicos de-la empresa.\" role=\"img\" aria-label=\"Los valores "
+"establecidos aquí son específicos de-la empresa.\" "
+"groups=\"base.group_multi_company\"/>"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_users_customer_form
+msgid ""
+"<span class=\"o_stat_text\" attrs=\"{'invisible': [('active', '=', True)]}\">Active</span>\n"
+"                            <span class=\"o_stat_text\" attrs=\"{'invisible': [('active', '=', False)]}\">Not Active</span>"
+msgstr ""
+"<span class=\"o_stat_text\" attrs=\"{'invisible': [('active', '=', True)]}\">Activo</span>\n"
+"                            <span class=\"o_stat_text\" attrs=\"{'invisible': [('active', '=', False)]}\">Desactivo</span>"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.hr_contract_view_form_inherit
+msgid "<span>/ daily</span>"
+msgstr "<span>/ diario</span>"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.hr_contract_view_form_inherit
+msgid "<span>Salary History</span>"
+msgstr "<span>Historial salarial</span>"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_users_customer_form
+msgid ""
+"<strong>A password reset has been requested for this user. An email "
+"containing the following link has been sent:</strong>"
+msgstr ""
+"<strong>Se ha solicitado un restablecimiento de contraseña para este "
+"usuario. Se ha enviado un correo electrónico con el siguiente "
+"enlace:</strong>"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_users_customer_form
+msgid ""
+"<strong>An invitation email containing the following subscription link has "
+"been sent:</strong>"
+msgstr ""
+"<strong>Se ha enviado un correo electrónico de invitación que contiene el "
+"siguiente enlace de suscripción:</strong>"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_users_customer_form
+msgid "<strong>The contact linked to this user is still active</strong>"
+msgstr ""
+"<strong> El contacto vinculado a este usuario aún está activo </strong>"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee__blood_type__ab+
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_public__blood_type__ab+
+msgid "AB+"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee__blood_type__ab-
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_public__blood_type__ab-
+msgid "AB-"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_affiliate_movements__reason_liquidation__3
+msgid "ABANDONO DE EMPLEO"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_affiliate_movements__reason_liquidation__7
+msgid "AUSENTISMOS"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__bank_account_employee__account_type__001
+msgid "Account"
+msgstr "Cuenta"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_bank_account_employee__account_type
+msgid "Account type"
+msgstr "Tipo de cuenta"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job_position__message_needaction
+msgid "Action Needed"
+msgstr "Acción Necesaria"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_alimony__state__active
+msgid "Active"
+msgstr "Activo"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job_position__activity_ids
+msgid "Activities"
+msgstr "Actividades"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job_position__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Decoración de excepción de actividad"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job_position__activity_state
+msgid "Activity State"
+msgstr "Estado de actividad"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job_position__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Icono de Tipo de Actividad"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee__payment_holidays_bonus__2
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_public__payment_holidays_bonus__2
+msgid "Advance payment to enjoy the holidays"
+msgstr "Pago anticipado al disfrute de las vacaciones"
+
+#. module: hr_employe_mexico
+#: model:ir.model,name:hr_employe_mexico.model_report_affiliate_movements
+msgid "Affiliate Movements"
+msgstr "Movimientos Afiliatorios"
+
+#. module: hr_employe_mexico
+#: model:ir.model,name:hr_employe_mexico.model_affiliate_movements_low
+msgid "Affiliate Movements Low"
+msgstr "Movimientos Afiliatorios de Bajas"
+
+#. module: hr_employe_mexico
+#: model:ir.model,name:hr_employe_mexico.model_affiliate_movements_salary
+msgid "Affiliate Movements Salary"
+msgstr "Movimientos Afiliatorios Salarios"
+
+#. module: hr_employe_mexico
+#: model:ir.ui.menu,name:hr_employe_mexico.menu_action_report_affiliate_mov
+msgid "Affiliate Movements [ TXT ]"
+msgstr "Movimientos Afiliatorios [ TXT ]"
+
+#. module: hr_employe_mexico
+#: model:ir.ui.menu,name:hr_employe_mexico.menu_hr_employee_affiliate_movements
+msgid "Affiliate movements"
+msgstr "Movimientos afiliatorios"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee__age
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_family_burden__age
+msgid "Age"
+msgstr "Edad"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_table_antiquity_line__aguinaldo
+msgid "Aguinaldo/Days"
+msgstr "Aguinaldo/Días"
+
+#. module: hr_employe_mexico
+#: model:ir.actions.act_window,name:hr_employe_mexico.action_hr_alimony
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee__alimony_ids
+#: model:ir.ui.menu,name:hr_employe_mexico.menu_hr_alimony
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_employee_mexico_form
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_hr_alimony_form
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_hr_alimony_tree
+msgid "Alimony"
+msgstr "Pensiones Alimenticias"
+
+#. module: hr_employe_mexico
+#: model:ir.model,name:hr_employe_mexico.model_hr_alimony
+msgid "Alimony of Employee"
+msgstr "Pensiones Alimenticias del Empleado"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.hr_employee_affiliate_movements_view_filter
+msgid "Altas"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_alimony__amount
+msgid "Amount / Percentage Applicable"
+msgstr "Monto / Porcentaje Aplicable"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job__amount_compensation
+msgid "Amount Compensation"
+msgstr "Importe de Compensación"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.res_config_settings_view_form
+msgid ""
+"Amount of monthly base salary to consider the employee for the covib "
+"discount."
+msgstr ""
+"Monto de salario base mensual a considerar el empleado para el descuento "
+"covid."
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/models/insurance_major_medical_expenses.py:0
+#, python-format
+msgid "An employee cannot have two medical policies on the same dates."
+msgstr "Un empleado no puede tener dos pólizas médicas en las mismas fechas."
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/models/hr_employee.py:0
+#, python-format
+msgid "An employee with this private address already exists"
+msgstr "Ya existe un empleado con esta dirección privada"
+
+#. module: hr_employe_mexico
+#: model:ir.actions.report,name:hr_employe_mexico.action_report_tmpl_anx_prestaciones_de_ley
+msgid "Anexo Prestaciones de Ley"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.actions.report,name:hr_employe_mexico.action_report_tmpl_anexo_Superiores
+msgid "Anexo Superiores"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.line_template
+msgid "Annotate"
+msgstr "Anotar"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee__type_working_day__99
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_public__type_working_day__99
+msgid "Another day"
+msgstr "Otra jornada"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.hr_contract_view_form_inherit
+msgid "Antigüedad"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_contract__years_antiquity
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_public__antiquity_id
+msgid "Antiquity"
+msgstr "Antigüedad"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_pilot_tab_line__year
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_table_antiquity_line__year
+msgid "Antiquity/Years"
+msgstr "Antigüedad/Años"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.search_template_date_filter
+msgid "Apply"
+msgstr "Aplicar"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,help:hr_employe_mexico.field_hr_employee__isr_adjustment
+msgid "Apply Annual ISR Adjustment?"
+msgstr "¿Aplicar ajuste anual de ISR?"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_affiliate_movements__state__approved
+msgid "Approved"
+msgstr "Aprobado"
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/models/report_affiliate_movements.py:0
+#, python-format
+msgid "As of %s"
+msgstr "A partir de %s"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_contract__contracting_regime__07
+msgid "Asimilados Miembros consejos"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_contract__contracting_regime__09
+msgid "Asimilados a honorarios"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_contract__contracting_regime__08
+msgid "Asimilados comisionistas"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_contract__contracting_regime__11
+msgid "Asimilados otros"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_company__aspiring_flight_attendant_union_clause
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_config_settings__aspiring_flight_attendant_union_clause
+msgid "Aspiring flight attendant union clause"
+msgstr "Cláusula sindical de aspirantes a auxiliar de vuelo"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_company__aspiring_pilots_union_clause
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_config_settings__aspiring_pilots_union_clause
+msgid "Aspiring pilots union clause"
+msgstr "Cláusula sindical de aspirantes a pilotos"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_hr_employee_document_import_form
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_import_images_employees_form
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_import_signature_users_form
+msgid "Attach Documents"
+msgstr "Adjuntar Documentos"
+
+#. module: hr_employe_mexico
+#: model:ir.model,name:hr_employe_mexico.model_ir_attachment
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_attachment_layout__attachment_ids
+msgid "Attachment"
+msgstr "Archivo adjunto"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job_position__message_attachment_count
+msgid "Attachment Count"
+msgstr "Recuento de archivos adjuntos"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.hr_contract_view_form_inherit
+msgid "Año(s) y"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/wizard/wizard_generate_reports.py:0
+#, python-format
+msgid "BadZipfile exception"
+msgstr "Excepción BadZipfile"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.hr_employee_affiliate_movements_view_filter
+msgid "Bajas"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_bank_account_employee__bank_id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_alimony__bank_id
+msgid "Bank"
+msgstr "Banco"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_alimony__bank_account
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_contract__bank_account_id
+msgid "Bank Account"
+msgstr "Cuenta bancaria"
+
+#. module: hr_employe_mexico
+#: model:ir.ui.menu,name:hr_employe_mexico.menu_bank_account_employee
+msgid "Bank Accounts"
+msgstr "Cuentas Bancarias"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_employee_mexico_form
+msgid "Bank Information"
+msgstr "Información Bancaria"
+
+#. module: hr_employe_mexico
+#: model:ir.actions.act_window,name:hr_employe_mexico.action_bank_account_employee
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_bank_account_employee__bank_account
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee__bank_account_ids
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_bank_account_employee_form
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_bank_account_employee_tree
+msgid "Bank account"
+msgstr "Cuenta Bancaria"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_bank_account_employee__beneficiary
+msgid "Beneficiary"
+msgstr "Beneficiario"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_family_burden__birthday
+msgid "Birthday"
+msgstr "Fecha de Nacimiento"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_public__blood_type
+msgid "Blood Type"
+msgstr "Tipo de Sangre"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee__blood_type
+msgid "Blood type"
+msgstr "Tipo de Sangre"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_partner__building
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_users__building
+msgid "Building"
+msgstr "Edificio"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,help:hr_employe_mexico.field_res_partner__building
+#: model:ir.model.fields,help:hr_employe_mexico.field_res_users__building
+msgid "Building and/or Department"
+msgstr "Edificio y/o Departamento"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_partner_address_mexico_form
+msgid "Building and/or Department..."
+msgstr "Edificio y/o Departamento..."
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.hr_employee_affiliate_movements_view_filter
+msgid "Buscar Movimientos Afiliatorios"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee__type_working_day__08
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_public__type_working_day__08
+msgid "By turns"
+msgstr "Por turnos"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__bank_account_employee__account_type__040
+msgid "CLABE"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_affiliate_movements__reason_liquidation__5
+msgid "CLAUSURA"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_affiliate_movements__origin_move__405
+msgid "CORRECIÓN POR INVITACIÓN, CORRECIÓN ESPONTÁNEA SATICA O SATICB."
+msgstr ""
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/models/affiliate_movements_low.py:0
+#: code:addons/hr_employe_mexico/models/affiliate_movements_salary.py:0
+#: code:addons/hr_employe_mexico/models/report_affiliate_movements.py:0
+#, python-format
+msgid "CSV"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/models/affiliate_movements_salary.py:0
+#: code:addons/hr_employe_mexico/models/report_affiliate_movements.py:0
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_partner__curp
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_users__curp
+#, python-format
+msgid "CURP"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.hr_employee_affiliate_movements_view_filter
+msgid "Cambio de Salario"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_affiliate_movements__state__cancel
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.hr_contract_change_wizard_view
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.hr_employee_affiliate_movements_form_view
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.hr_employee_change_wizard_view
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_change_salary_tab_form
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_contract_report_form
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_hr_employee_document_import_form
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_import_images_employees_form
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_import_signature_users_form
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_low_position_form
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_mas_empl_modification_form
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_tab_change_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job__candidate
+msgid "Candidate"
+msgstr "Aspirante"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee__pilot_category__captains
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_public__pilot_category__captains
+msgid "Captains"
+msgstr "Capitanes"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_contract__payment_period__03
+msgid "Catorcenal"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.hr_contract_change_wizard_view
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.hr_contract_view_form_inherit
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.hr_employee_change_wizard_view
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_employee_mexico_form
+msgid "Change"
+msgstr "Cambio"
+
+#. module: hr_employe_mexico
+#: model:ir.actions.act_window,name:hr_employe_mexico.action_change_salary_tab
+#: model:ir.ui.menu,name:hr_employe_mexico.menu_change_salary_tab
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_change_salary_tab_form
+msgid "Change Salary Tab"
+msgstr "Cambiar de Salario por Tabulador"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_history_changes_form
+msgid "Changes"
+msgstr "Cambios"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__bank_account_employee__account_type__099
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_alimony__payment_type__check
+msgid "Check"
+msgstr "Cheque"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job__sat_code
+msgid "Clave SAT"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_users_customer_form
+msgid "Close"
+msgstr "Cerrar"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_contract_salary_change_line__name
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_contract__code
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_department__code
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job__code
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.hr_contract_view_mex_search
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.hr_job_inherit
+msgid "Code"
+msgstr "Código"
+
+#. module: hr_employe_mexico
+#: model:ir.model,name:hr_employe_mexico.model_res_company
+msgid "Companies"
+msgstr "Compañías"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_change_salary_tab__company_id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_affiliate_movements__company_id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_document_import__company_id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_import_images_employees__company_id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_import_signature_users__company_id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_massive_employee_modification__company_id
+msgid "Company"
+msgstr "Compañía"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_config_settings__resource_calendar_leave_id
+msgid "Company Working Hours"
+msgstr "Horas de trabajo de la Empresa"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_company__resource_calendar_leave_id
+msgid "Company Working leave Hours"
+msgstr "Horas de licencia laboral de la empresa"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_company__compensation_ro
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_config_settings__compensation_ro
+msgid "Compensation ro"
+msgstr "Compensación ro"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee__working_day_week__0
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_public__working_day_week__0
+msgid "Complete"
+msgstr "Completo"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee__complete_name
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_public__complete_name
+msgid "Complete Name"
+msgstr "Nombre completo"
+
+#. module: hr_employe_mexico
+#: model:ir.model,name:hr_employe_mexico.model_res_config_settings
+msgid "Config Settings"
+msgstr "Opciones de configuración"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.res_config_settings_view_form
+msgid ""
+"Configure the monthly amount to be considered to make the payment of the "
+"Punctuality and Attendance payment."
+msgstr ""
+"Configurar el monto mensual a considerar para realizar el pago del pago de "
+"Puntualidad y Asistencia."
+
+#. module: hr_employe_mexico
+#: model:ir.model,name:hr_employe_mexico.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee__type_working_day__06
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_public__type_working_day__06
+msgid "Continued"
+msgstr "Continuado"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_contract_salary_change_line__contract_id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_history_changes_employee__contract_id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_contract_change_wizard__contract_id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_affiliate_movements__contract_id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_ir_actions_report__contract
+msgid "Contract"
+msgstr "Contrato"
+
+#. module: hr_employe_mexico
+#: model:ir.actions.act_window,name:hr_employe_mexico.contract_change_form_action
+msgid "Contract Change"
+msgstr "Cambio de contrato"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.hr_contract_change_wizard_view
+msgid "Contract Change Wizard"
+msgstr "Asistente de cambio de contrato"
+
+#. module: hr_employe_mexico
+#: model:ir.actions.act_window,name:hr_employe_mexico.action_contract_report_import
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_contract_report_form
+msgid "Contract Reports"
+msgstr "Reportes de Contrato"
+
+#. module: hr_employe_mexico
+#: model:ir.actions.act_window,name:hr_employe_mexico.contract_salary_change_action
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.contract_salary_change_form_view
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.contract_salary_change_tree_view
+msgid "Contract Salary Change Line"
+msgstr "Línea de cambio de salario por contrato"
+
+#. module: hr_employe_mexico
+#: model:ir.actions.act_window,name:hr_employe_mexico.mexico_reports_action
+#: model:ir.ui.menu,name:hr_employe_mexico.menu_view_report_employee
+msgid "Contract reports"
+msgstr "Informes de contratos"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_contract__contracting_regime
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_affiliate_movements__contracting_regime
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.hr_employee_affiliate_movements_view_filter
+msgid "Contracting Regime"
+msgstr "Régimen de contratación"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_contract__contract_type
+msgid "Contracting Type"
+msgstr "Tipo de contratación"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_contract_report__contract_ids
+msgid "Contracts"
+msgstr "Contratos"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_contract__contract_type__06
+msgid "Contrato de trabajo con capacitación inicial"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_contract__contract_type__02
+msgid "Contrato de trabajo por obra determinada"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_contract__contract_type__04
+msgid "Contrato de trabajo por temporada"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_contract__contract_type__03
+msgid "Contrato de trabajo por tiempo determinado"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_contract__contract_type__01
+msgid "Contrato de trabajo por tiempo indeterminado"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_contract__contract_type__05
+msgid "Contrato de trabajo sujeto a prueba"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model,name:hr_employe_mexico.model_hr_cost_center
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_history_changes_employee__cost_center_id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee__cost_center_id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_change_wizard__cost_center_id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_public__cost_center_id
+msgid "Cost Center"
+msgstr "Centro de Costos"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__history_changes_employee__type__cost_center
+msgid "Cost Center Change"
+msgstr "Cambio de centro de costos"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_cost_center__country_id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_partner__country_id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_users__country_id
+msgid "Country"
+msgstr "País"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.actions.act_window,help:hr_employe_mexico.action_partner_address_form
+msgid "Create a new address in your address book"
+msgstr "Cree una nueva dirección en su cuaderno de direcciones"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.actions.act_window,help:hr_employe_mexico.action_history_changes_employee
+msgid "Create your first History Change"
+msgstr "Crea tu primer cambio de historial"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.actions.act_window,help:hr_employe_mexico.action_hr_job_position
+msgid "Create your first Job Position"
+msgstr "Crea tu primer Puesto de Trabajo"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_attachment_layout__create_uid
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_bank_account_employee__create_uid
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_change_salary_tab__create_uid
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_contract_report__create_uid
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_contract_salary_change_line__create_uid
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_history_changes_employee__create_uid
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_alimony__create_uid
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_contract_change_wizard__create_uid
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_cost_center__create_uid
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_affiliate_movements__create_uid
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_change_wizard__create_uid
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_document_import__create_uid
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_family_burden__create_uid
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job_position__create_uid
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job_position_history__create_uid
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_pilot_tab__create_uid
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_pilot_tab_line__create_uid
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_relationship__create_uid
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_table_antiquity__create_uid
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_table_antiquity_line__create_uid
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_import_images_employees__create_uid
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_import_signature_users__create_uid
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_insurance_major_medical_expenses__create_uid
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_low_position__create_uid
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_massive_employee_modification__create_uid
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_tab_change__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_attachment_layout__create_date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_bank_account_employee__create_date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_change_salary_tab__create_date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_contract_report__create_date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_contract_salary_change_line__create_date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_history_changes_employee__create_date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_alimony__create_date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_contract_change_wizard__create_date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_cost_center__create_date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_affiliate_movements__create_date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_change_wizard__create_date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_document_import__create_date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_family_burden__create_date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job_position__create_date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job_position_history__create_date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_pilot_tab__create_date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_pilot_tab_line__create_date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_relationship__create_date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_table_antiquity__create_date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_table_antiquity_line__create_date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_import_images_employees__create_date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_import_signature_users__create_date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_insurance_major_medical_expenses__create_date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_low_position__create_date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_massive_employee_modification__create_date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_tab_change__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_company__cultural_sports_evolution
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_config_settings__cultural_sports_evolution
+msgid "Cultural and sports evolution"
+msgstr "Evolución cultural y deportiva"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.search_template_date_filter
+msgid "Custom"
+msgstr "Personalizado"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_affiliate_movements__reason_liquidation__4
+msgid "DEFUNCIÓN"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_affiliate_movements__origin_move__400
+msgid ""
+"DISPOSITIVOS MAGNÉTICOS (REINTEGROS, MODIFICACIONES DE SALARIOS Y BAJAS)"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_contract__daily_salary
+msgid "Daily salary"
+msgstr "Sueldo diario"
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/models/affiliate_movements_low.py:0
+#: code:addons/hr_employe_mexico/models/affiliate_movements_salary.py:0
+#: code:addons/hr_employe_mexico/models/report_affiliate_movements.py:0
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_history_changes_employee__date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_contract_change_wizard__date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_affiliate_movements__date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_change_wizard__date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_massive_employee_modification__date
+#, python-format
+msgid "Date"
+msgstr "Fecha"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.search_template_date_filter
+msgid "Date :"
+msgstr "Fecha :"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job_position_history__date_end
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_insurance_major_medical_expenses__date_end
+msgid "Date End"
+msgstr "Fecha Final"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_contract__prev_date_end_letter
+msgid "Date Previous contract on letters for reports"
+msgstr "Fecha Contrato anterior en letras para informes"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job_position_history__date_start
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_insurance_major_medical_expenses__date_start
+msgid "Date Start"
+msgstr "Fecha de Inicio"
+
+#. module: hr_employe_mexico
+#. openerp-web
+#: code:addons/hr_employe_mexico/static/src/js/employee_reports.js:0
+#: code:addons/hr_employe_mexico/static/src/js/employee_reports.js:0
+#: code:addons/hr_employe_mexico/static/src/js/employee_reports.js:0
+#: code:addons/hr_employe_mexico/static/src/js/employee_reports.js:0
+#, python-format
+msgid "Date cannot be empty"
+msgstr "La fecha no puede estar vacia"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_contract_salary_change_line__date_end
+msgid "Date end"
+msgstr "Fin de la fecha"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_contract__date_end_letter
+msgid "Date end on letters for reports"
+msgstr "Fecha de finalización en letras para informes"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_change_salary_tab__date_from
+msgid "Date from"
+msgstr "Desde"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_low_position__date
+msgid "Date of low"
+msgstr "Fecha de baja"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_contract_salary_change_line__date_start
+msgid "Date start"
+msgstr "Fecha de inicio"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_contract__date_start_letter
+msgid "Date start on letters for reports"
+msgstr "Fecha de inicio en letras para reportes"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_change_salary_tab__date_to
+msgid "Date to"
+msgstr "Hasta"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.search_template_date_filter
+msgid "Date:"
+msgstr "Fecha:"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_company__days_factor
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_config_settings__days_factor
+msgid "Days Factor"
+msgstr "Factor días"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_contract__days_duration
+msgid "Days of Duration"
+msgstr "Duración del Contrato"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_contract__days_rest
+msgid "Days of seniority last year"
+msgstr "Días de antigüedad el año pasado"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee__type_working_day__01
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_public__type_working_day__01
+msgid "Daytime"
+msgstr "Diurna"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__bank_account_employee__account_type__003
+msgid "Debit"
+msgstr "Tarjeta de Débito"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_public__deceased
+msgid "Deceased"
+msgstr "Fallecido"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee__deceased
+msgid "Deceased?"
+msgstr "¿Fallecido?"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_contract__payment_period__10
+msgid "Decenal"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.res_config_settings_view_form
+msgid "Default INFONAVIT Mixed Unit"
+msgstr "Unidad mixta INFONAVIT predeterminada"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.res_config_settings_view_form
+msgid "Default Measurement and Update Unit (UMA)"
+msgstr "Unidad de actualización y medición predeterminada (UMA)"
+
+#. module: hr_employe_mexico
+#: model:ir.model,name:hr_employe_mexico.model_hr_department
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_history_changes_employee__department_id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee__department_id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_change_wizard__department_id
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_change_wizard__field_changes__department
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__massive_employee_modification__change_fields__department
+msgid "Department"
+msgstr "Departamento"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__history_changes_employee__type__department
+msgid "Department change"
+msgstr "Cambio de departamento"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee__type_working_day__07
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_public__type_working_day__07
+msgid "Departure"
+msgstr "Partida"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_contract__payment_period__01
+msgid "Diario"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_users_customer_form
+msgid "Digital Signatures"
+msgstr "Firmas Digitales"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_employee_mexico_form
+msgid "Direction"
+msgstr "Dirección/Departamento"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.hr_department_inherit
+msgid "Direction Name"
+msgstr "Nombre de la Dirección/Departamento"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.hr_department_inherit
+msgid "Direction parent"
+msgstr "Dirección/Departamento padre"
+
+#. module: hr_employe_mexico
+#: model:ir.ui.menu,name:hr_employe_mexico.menu_hr_department_kanban
+#: model:ir.ui.menu,name:hr_employe_mexico.menu_hr_department_tree
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_department_filter
+msgid "Directions"
+msgstr "Direcciones/Departamentos"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_contract__discount_covid
+msgid "Discount Covid-19"
+msgstr "Descuento Covid-19"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_affiliate_movements_low__display_name
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_affiliate_movements_salary__display_name
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_attachment_layout__display_name
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_bank_account_employee__display_name
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_change_salary_tab__display_name
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_contract_report__display_name
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_contract_salary_change_line__display_name
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_documents_document__display_name
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_history_changes_employee__display_name
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_alimony__display_name
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_contract__display_name
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_contract_change_wizard__display_name
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_cost_center__display_name
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_department__display_name
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee__display_name
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_affiliate_movements__display_name
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_change_wizard__display_name
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_document_import__display_name
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_public__display_name
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_family_burden__display_name
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job__display_name
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job_position__display_name
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job_position_history__display_name
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_pilot_tab__display_name
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_pilot_tab_line__display_name
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_relationship__display_name
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_table_antiquity__display_name
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_table_antiquity_line__display_name
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_import_images_employees__display_name
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_import_signature_users__display_name
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_insurance_major_medical_expenses__display_name
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_ir_actions_employee_report_download__display_name
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_ir_actions_report__display_name
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_ir_attachment__display_name
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_low_position__display_name
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_massive_employee_modification__display_name
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_report_affiliate_movements__display_name
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_company__display_name
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_partner__display_name
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_users__display_name
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_tab_change__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: hr_employe_mexico
+#: model:ir.model,name:hr_employe_mexico.model_documents_document
+msgid "Document"
+msgstr "Documento"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee__partner_document_count
+msgid "Document Count"
+msgstr "Recuento de documentos"
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/wizard/hr_employee_document_import.py:0
+#, python-format
+msgid "Documents Employee"
+msgstr "Documentos de Empleado"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_affiliate_movements__state__draft
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_users_customer_form
+msgid "Email Address"
+msgstr "Dirección de Correo"
+
+#. module: hr_employe_mexico
+#: model:ir.model,name:hr_employe_mexico.model_hr_employee
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_bank_account_employee__employee_id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_history_changes_employee__employee_id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_alimony__employee_id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_contract_change_wizard__employee_id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_affiliate_movements__employee_id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_change_wizard__employee_id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_family_burden__employee_id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job_position__employee_id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job_position_history__employee_id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_insurance_major_medical_expenses__employee_id
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.hr_employee_affiliate_movements_view_filter
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_employee_filter
+msgid "Employee"
+msgstr "Empleado"
+
+#. module: hr_employe_mexico
+#: model:ir.actions.server,name:hr_employe_mexico.employee_anniversary_cron_ir_actions_server
+#: model:ir.cron,cron_name:hr_employe_mexico.employee_anniversary_cron
+#: model:ir.cron,name:hr_employe_mexico.employee_anniversary_cron
+msgid "Employee Anniversary Cron"
+msgstr "Cron de Aniversario del Empleado"
+
+#. module: hr_employe_mexico
+#: model:ir.actions.act_window,name:hr_employe_mexico.employee_change_form_action
+msgid "Employee Change"
+msgstr "Cambio de Empleado"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.hr_employee_change_wizard_view
+msgid "Employee Change Wizard"
+msgstr "Wizard de Cambio de Empleado"
+
+#. module: hr_employe_mexico
+#: model:ir.model,name:hr_employe_mexico.model_hr_contract
+msgid "Employee Contract"
+msgstr "Contrato del empleado"
+
+#. module: hr_employe_mexico
+#: model:ir.actions.act_window,name:hr_employe_mexico.action_hr_employee_document_import
+#: model:ir.model,name:hr_employe_mexico.model_hr_employee_document_import
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_hr_employee_document_import_form
+msgid "Employee Document Import"
+msgstr "Importar Documento de Empleado"
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/models/affiliate_movements_low.py:0
+#: code:addons/hr_employe_mexico/models/affiliate_movements_salary.py:0
+#: code:addons/hr_employe_mexico/models/report_affiliate_movements.py:0
+#, python-format
+msgid "Employee Registry"
+msgstr "Registro Patronal"
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/models/report_affiliate_movements.py:0
+#, python-format
+msgid "Employee Report"
+msgstr "Reporte de Empleado"
+
+#. module: hr_employe_mexico
+#: model:ir.actions.act_window,name:hr_employe_mexico.employee_hr_employee_affiliate_movements_action
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.hr_employee_affiliate_movements_form_view
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.hr_employee_affiliate_movements_tree
+msgid "Employee affiliate movements"
+msgstr "Movimientos de empleados afiliados"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_bank_account_employee__employee_code
+msgid "Employee code"
+msgstr "Código de Empleado"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,help:hr_employe_mexico.field_hr_contract__daily_salary
+msgid "Employee daily salary."
+msgstr "Sueldo diario de empleado."
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/wizard/hr_employee_document_import.py:0
+#: code:addons/hr_employe_mexico/wizard/massive_employee_modification.py:0
+#: code:addons/hr_employe_mexico/wizard/massive_employee_modification.py:0
+#: code:addons/hr_employe_mexico/wizard/massive_employee_modification.py:0
+#: code:addons/hr_employe_mexico/wizard/massive_employee_modification.py:0
+#: code:addons/hr_employe_mexico/wizard/massive_employee_modification.py:0
+#: code:addons/hr_employe_mexico/wizard/massive_employee_modification.py:0
+#, python-format
+msgid "Employee registration %s in the row %s. \n"
+msgstr "Registro de empleado %s en la fila %s. \n"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,help:hr_employe_mexico.field_hr_employee__salary_reduction
+#: model:ir.model.fields,help:hr_employe_mexico.field_hr_employee_public__salary_reduction
+msgid "Employee with definitive salary reduction."
+msgstr "Empleado con reducción de salario definitiva."
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.hr_kanban_view_employees_mx
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.hr_tree_view_employees_mx
+msgid "Employee's Name"
+msgstr "Nombre del empleado"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,help:hr_employe_mexico.field_hr_contract__wage
+#: model:ir.model.fields,help:hr_employe_mexico.field_hr_employee_affiliate_movements__wage
+msgid "Employee's monthly gross wage."
+msgstr "Salario bruto mensual por empleado."
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/wizard/import_images_employees.py:0
+#, python-format
+msgid "Employees"
+msgstr "Empleados"
+
+#. module: hr_employe_mexico
+#: model:ir.actions.act_window,name:hr_employe_mexico.action_partner_address_form
+msgid "Employees Address"
+msgstr "Direcciones de Empleados"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee__employer_register_id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_public__employer_register_id
+msgid "Employer Register"
+msgstr "Registro de Empleado"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_contract__date_end
+msgid "End Date"
+msgstr "Fecha de finalización"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.search_template_date_filter
+msgid "End Date :"
+msgstr "Fecha final :"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,help:hr_employe_mexico.field_hr_contract__date_end
+msgid "End date of the contract (if it's a fixed-term contract)."
+msgstr ""
+"Fecha de finalización del contrato (si es un contrato por tiempo "
+"determinado)."
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.search_template_date_filter
+msgid "End of Last Month"
+msgstr "Fin del Último Mes"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.search_template_date_filter
+msgid "End of Last Quarter"
+msgstr "Fin del último Trimestre"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee__type_worker__4
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_public__type_worker__4
+msgid "Eventual from the field"
+msgstr "Eventual del campo"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job__no_of_recruitment
+msgid "Expected New Employees"
+msgstr "Nuevos empleados esperados"
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/models/affiliate_movements_low.py:0
+#: code:addons/hr_employe_mexico/models/affiliate_movements_salary.py:0
+#: code:addons/hr_employe_mexico/models/report_affiliate_movements.py:0
+#, python-format
+msgid "Export (XLSX)"
+msgstr "Exportar (XLSX)"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_contract_report_form
+msgid "Export completed"
+msgstr "Exportación completada"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_partner_address_mexico_form
+msgid "Exterior"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_partner__street_number
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_users__street_number
+msgid "Exterior/Block No."
+msgstr "Núm. Exterior/Manzana"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_employee_mexico_form
+msgid "Extra payments"
+msgstr "Pagos Extras"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee__family_ids
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_employee_mexico_form
+msgid "Family"
+msgstr "Familia"
+
+#. module: hr_employe_mexico
+#: model:ir.model,name:hr_employe_mexico.model_hr_family_burden
+msgid "Family Burden"
+msgstr "Carga familiar"
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/models/report_affiliate_movements.py:0
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee__family_medicine_unit
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_public__family_medicine_unit
+#, python-format
+msgid "Family Medicine Unit"
+msgstr "Unidad de Medicina Familiar"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_contract_change_wizard__field_changes
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_change_wizard__field_changes
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_massive_employee_modification__change_fields
+msgid "Field Change"
+msgstr "Campos a Cambiar"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_contract_report__data
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_hr_employee_document_import_form
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_import_images_employees_form
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_import_signature_users_form
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_mas_empl_modification_form
+msgid "File"
+msgstr "Archivo"
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/wizard/hr_employee_document_import.py:0
+#: code:addons/hr_employe_mexico/wizard/import_images_employees.py:0
+#: code:addons/hr_employe_mexico/wizard/import_signatures_users.py:0
+#, python-format
+msgid "File Content Document is required."
+msgstr "Se requiere el documento de contenido de archivo."
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_document_import__file_ids
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_import_images_employees__file_ids
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_import_signature_users__file_ids
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_massive_employee_modification__file_id
+msgid "File excel"
+msgstr "Archivo excel"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee__pilot_category__official
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_public__pilot_category__official
+msgid "First Official"
+msgstr "Primer oficial"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee__salary_type__0
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_affiliate_movements__type_change_salary__0
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_public__salary_type__0
+msgid "Fixed"
+msgstr "Fijo"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee__fixed_resistance_background
+msgid "Fixed ASSA resistance fund"
+msgstr "Fondo fijo de resistencia ASSA"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_public__fixed_resistance_background
+msgid "Fixed Resistance Background"
+msgstr "Fondo de resistencia fija"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_alimony__type__fixed_amount
+msgid "Fixed amount"
+msgstr "Cantidad fija"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_company__flight_attendant_retreat
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_config_settings__flight_attendant_retreat
+msgid "Flight attendant retreat"
+msgstr "Retiro de auxiliares de vuelo"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_company__flight_attendant_union_clause
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_config_settings__flight_attendant_union_clause
+msgid "Flight attendant union clause"
+msgstr "Cláusula del sindicato de auxiliares de vuelo"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.line_template
+msgid "Folded"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee__folder_id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_public__folder_id
+msgid "Folder"
+msgstr "Carpeta"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_company__folder_document_id
+msgid "Folder Documents"
+msgstr "Carpetas de Documentos"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,help:hr_employe_mexico.field_res_company__folder_document_id
+msgid "Folder where all documents associated with company will be stored."
+msgstr ""
+"Carpeta donde se almacenarán todos los documentos asociados a la empresa."
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job_position__message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job_position__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Seguidores (Canales)"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job_position__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores (Socios)"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,help:hr_employe_mexico.field_hr_job_position__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Icono de fuente impresionante, ej. fa-tasks"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee__marital__free_union
+msgid "Free Union"
+msgstr "Unión libre"
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/models/report_affiliate_movements.py:0
+#, python-format
+msgid ""
+"From %s\n"
+"to  %s"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.search_template_date_filter
+msgid "From:"
+msgstr "Desde:"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_alimony__name
+msgid "Full Name"
+msgstr "Nombre Completo"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_company__gasoline_voucher
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_config_settings__gasoline_voucher
+msgid "Gasoline voucher"
+msgstr "Vale de gasolina"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_company__general_uma
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_config_settings__general_uma
+msgid "General (UMA)"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.res_config_settings_view_form
+msgid "General Data"
+msgstr "General Fecha"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_change_salary_tab_form
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_contract_report_form
+msgid "Generate"
+msgstr "Generar"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.hr_contract_view_form_inherit
+msgid "Generate Reports"
+msgstr "Generar Reportes"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_alimony__type__gross
+msgid "Gross earnings"
+msgstr "Ingresos Brutos"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_alimony__type__gross-isr-imss
+msgid "Gross earnings - ISR - IMSS"
+msgstr "Ingresos Brutos - ISR - IMSS"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.hr_employee_affiliate_movements_view_filter
+msgid "Group By"
+msgstr "Agrupar por"
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/models/affiliate_movements_low.py:0
+#: code:addons/hr_employe_mexico/models/affiliate_movements_salary.py:0
+#: code:addons/hr_employe_mexico/models/report_affiliate_movements.py:0
+#, python-format
+msgid "Guide"
+msgstr "Guía"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_contract_report_form
+msgid "Here is the exported file:"
+msgstr "Aquí está el archivo exportado:"
+
+#. module: hr_employe_mexico
+#: model:ir.actions.client,name:hr_employe_mexico.action_report_affiliate_movements
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_affiliate_movements__type__08
+#: model:ir.ui.menu,name:hr_employe_mexico.menu_action_report_affiliate_08
+msgid "High or Reentry"
+msgstr "Alta o Reingreso"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job_position__history_ids
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_hr_job_position_form
+msgid "History"
+msgstr "Historial"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_history_changes_form
+msgid "History Changes"
+msgstr "Historial de Cambios"
+
+#. module: hr_employe_mexico
+#: model:ir.actions.act_window,name:hr_employe_mexico.action_history_changes_employee
+#: model:ir.ui.menu,name:hr_employe_mexico.menu_view_history_changes_employee
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_history_changes_employee_tree
+msgid "History Changes Employee"
+msgstr "Historial de Cambios de Empleado"
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/wizard/massive_employee_modification.py:0
+#: code:addons/hr_employe_mexico/wizard/massive_employee_modification.py:0
+#: code:addons/hr_employe_mexico/wizard/massive_employee_modification.py:0
+#: code:addons/hr_employe_mexico/wizard/massive_employee_modification.py:0
+#, python-format
+msgid "History Changes Employees"
+msgstr "Historial de Cambios de Empleados"
+
+#. module: hr_employe_mexico
+#: model:ir.model,name:hr_employe_mexico.model_history_changes_employee
+msgid "History of Changes of Employees"
+msgstr "Historial de Cambios de Empleados"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_table_antiquity_line__holidays
+msgid "Holidays/Days"
+msgstr "Vacaciones/Días"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_affiliate_movements_low__id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_affiliate_movements_salary__id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_attachment_layout__id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_bank_account_employee__id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_change_salary_tab__id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_contract_report__id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_contract_salary_change_line__id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_documents_document__id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_history_changes_employee__id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_alimony__id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_contract__id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_contract_change_wizard__id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_cost_center__id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_department__id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee__id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_affiliate_movements__id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_change_wizard__id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_document_import__id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_public__id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_family_burden__id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job__id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job_position__id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job_position_history__id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_pilot_tab__id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_pilot_tab_line__id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_relationship__id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_table_antiquity__id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_table_antiquity_line__id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_import_images_employees__id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_import_signature_users__id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_insurance_major_medical_expenses__id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_ir_actions_employee_report_download__id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_ir_actions_report__id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_ir_attachment__id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_low_position__id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_massive_employee_modification__id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_report_affiliate_movements__id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_company__id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_config_settings__id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_partner__id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_users__id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_tab_change__id
+msgid "ID"
+msgstr "Identificación"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_employee_mexico_form
+msgid "IMSS"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee__isr_adjustment
+msgid "ISR Adjustment"
+msgstr "Ajuste de ISR Anual"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job_position__activity_exception_icon
+msgid "Icon"
+msgstr "Icono"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,help:hr_employe_mexico.field_hr_job_position__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Icono para indicar una actividad de excepción."
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,help:hr_employe_mexico.field_hr_employee__pay_extra_hours
+msgid "If checked, extra hours are paid to the employee"
+msgstr "Si está marcado, se pagan horas extras al empleado."
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,help:hr_employe_mexico.field_hr_job_position__message_needaction
+#: model:ir.model.fields,help:hr_employe_mexico.field_hr_job_position__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Si está marcado, los nuevos mensajes requieren su atención."
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,help:hr_employe_mexico.field_hr_job_position__message_has_error
+#: model:ir.model.fields,help:hr_employe_mexico.field_hr_job_position__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si está marcada, algunos mensajes tienen un error de entrega."
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,help:hr_employe_mexico.field_hr_employee__deceased
+msgid "If checked, the employee is considered deceased"
+msgstr "Si está marcado, el empleado se considera fallecido."
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,help:hr_employe_mexico.field_hr_employee__syndicalist
+msgid "If checked, the employee is considered part of the union"
+msgstr "Si está marcado, el empleado se considera parte del sindicato."
+
+#. module: hr_employe_mexico
+#: model:ir.ui.menu,name:hr_employe_mexico.menu_hr_employee_import
+msgid "Import"
+msgstr "Importar"
+
+#. module: hr_employe_mexico
+#: model:ir.ui.menu,name:hr_employe_mexico.menu_hr_employee_document_import
+msgid "Import Employee Document"
+msgstr "Importar Documento de Empleado"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_hr_employee_document_import_form
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_import_images_employees_form
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_import_signature_users_form
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_mas_empl_modification_form
+msgid "Import File"
+msgstr "Importar Archivo"
+
+#. module: hr_employe_mexico
+#: model:ir.actions.act_window,name:hr_employe_mexico.action_import_images_employees
+#: model:ir.ui.menu,name:hr_employe_mexico.menu_import_images_employees
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_import_images_employees_form
+msgid "Import Images Employees"
+msgstr "Importar Fotos de Empleados"
+
+#. module: hr_employe_mexico
+#: model:ir.model,name:hr_employe_mexico.model_import_images_employees
+msgid "Import Images for employees"
+msgstr "Importar Fotos por empleados"
+
+#. module: hr_employe_mexico
+#: model:ir.actions.act_window,name:hr_employe_mexico.action_import_signature_users
+#: model:ir.ui.menu,name:hr_employe_mexico.menu_import_signature_users
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_import_signature_users_form
+msgid "Import Signature Users"
+msgstr "Importar Firmas de Usuarios"
+
+#. module: hr_employe_mexico
+#: model:ir.model,name:hr_employe_mexico.model_import_signature_users
+msgid "Import Signatures for users"
+msgstr "Importar Firmas por usuarios"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_alimony__state__inactive
+msgid "Inactive"
+msgstr "Inactivo"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_tab_change_form
+msgid "Increase"
+msgstr "Incrementar"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_tab_change_form
+msgid "Indicate the percentage to be added for these pilot tables"
+msgstr "Indique el porcentaje que se agregará para estas tablas piloto"
+
+#. module: hr_employe_mexico
+#: model:ir.actions.act_window,name:hr_employe_mexico.action_insurance_major_medical
+#: model:ir.model,name:hr_employe_mexico.model_insurance_major_medical_expenses
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee__insurance_medical_ids
+#: model:ir.ui.menu,name:hr_employe_mexico.menu_insurance_major_medical
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_employee_mexico_form
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_insurance_major_medical_form
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_insurance_major_medical_tree
+msgid "Insurance Major Medical Expenses"
+msgstr "Seguro de Gastos Médicos Mayores"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_contract_salary_change_line__integrated_salary
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_contract__integral_salary
+msgid "Integrated Salary"
+msgstr "Salario Integrado"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_table_antiquity_line__factor
+msgid "Integration factor"
+msgstr "Factor de integración"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_partner__street_number2
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_users__street_number2
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_partner_address_mexico_form
+msgid "Interior"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,help:hr_employe_mexico.field_res_partner__street_number2
+#: model:ir.model.fields,help:hr_employe_mexico.field_res_users__street_number2
+msgid "Interior/Lot No."
+msgstr "Núm. Interior/Lote"
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/wizard/import_images_employees.py:0
+#: code:addons/hr_employe_mexico/wizard/import_signatures_users.py:0
+#, python-format
+msgid ""
+"Invalid format for %s in the row %s. \n"
+" (Charge only png, jpg and jpeg)"
+msgstr ""
+"Formato invalido para %s en la fila %s. \n"
+" (Carge solo png, jpg y jpeg)"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job_position__message_is_follower
+msgid "Is Follower"
+msgstr "Es Seguidor"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee__is_manager
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_public__is_manager
+msgid "Is Manager"
+msgstr "Es Director"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_public__isr_adjustment
+msgid "Isr Adjustment"
+msgstr "Ajuste ISR"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_affiliate_movements__reason_liquidation__9
+msgid "JUBILACIÓN"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_history_changes_employee__job_id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_change_wizard__job_id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job_position__job_id
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_change_wizard__field_changes__job
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__massive_employee_modification__change_fields__job
+msgid "Job"
+msgstr "Puesto de Trabajo"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee__type_worker__3
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_public__type_worker__3
+msgid "Job Ev. Construction"
+msgstr "Trab. Ev. Construcción"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee__type_worker__2
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_public__type_worker__2
+msgid "Job Ev. Town"
+msgstr "Trab. Ev. Ciudad"
+
+#. module: hr_employe_mexico
+#: model:ir.model,name:hr_employe_mexico.model_hr_job
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee__job_id
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_hr_job_position_form
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_hr_job_position_tree
+msgid "Job Position"
+msgstr "Puesto de trabajo"
+
+#. module: hr_employe_mexico
+#: model:ir.model,name:hr_employe_mexico.model_hr_job_position_history
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_hr_job_position_history_form
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_hr_job_position_history_tree
+msgid "Job Position History"
+msgstr "Historial de plazas"
+
+#. module: hr_employe_mexico
+#: model:ir.actions.act_window,name:hr_employe_mexico.action_hr_job_position
+#: model:ir.ui.menu,name:hr_employe_mexico.menu_view_hr_job_position
+msgid "Job Positions"
+msgstr "Plazas"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee__type_worker__1
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_public__type_worker__1
+msgid "Job permanent"
+msgstr "Trab. permanente"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_affiliate_movements_low____last_update
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_affiliate_movements_salary____last_update
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_attachment_layout____last_update
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_bank_account_employee____last_update
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_change_salary_tab____last_update
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_contract_report____last_update
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_contract_salary_change_line____last_update
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_documents_document____last_update
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_history_changes_employee____last_update
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_alimony____last_update
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_contract____last_update
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_contract_change_wizard____last_update
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_cost_center____last_update
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_department____last_update
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee____last_update
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_affiliate_movements____last_update
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_change_wizard____last_update
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_document_import____last_update
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_public____last_update
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_family_burden____last_update
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job____last_update
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job_position____last_update
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job_position_history____last_update
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_pilot_tab____last_update
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_pilot_tab_line____last_update
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_relationship____last_update
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_table_antiquity____last_update
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_table_antiquity_line____last_update
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_import_images_employees____last_update
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_import_signature_users____last_update
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_insurance_major_medical_expenses____last_update
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_ir_actions_employee_report_download____last_update
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_ir_actions_report____last_update
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_ir_attachment____last_update
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_low_position____last_update
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_massive_employee_modification____last_update
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_report_affiliate_movements____last_update
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_company____last_update
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_partner____last_update
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_users____last_update
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_tab_change____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.search_template_date_filter
+msgid "Last Month"
+msgstr "Último Mes"
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/models/affiliate_movements_low.py:0
+#: code:addons/hr_employe_mexico/models/affiliate_movements_salary.py:0
+#: code:addons/hr_employe_mexico/models/report_affiliate_movements.py:0
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee__last_name
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_public__last_name
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_employee_mexico_form
+#, python-format
+msgid "Last Name"
+msgstr "Apellido"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.search_template_date_filter
+msgid "Last Quarter"
+msgstr "Último trimestre"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_attachment_layout__write_uid
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_bank_account_employee__write_uid
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_change_salary_tab__write_uid
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_contract_report__write_uid
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_contract_salary_change_line__write_uid
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_history_changes_employee__write_uid
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_alimony__write_uid
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_contract_change_wizard__write_uid
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_cost_center__write_uid
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_affiliate_movements__write_uid
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_change_wizard__write_uid
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_document_import__write_uid
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_family_burden__write_uid
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job_position__write_uid
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job_position_history__write_uid
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_pilot_tab__write_uid
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_pilot_tab_line__write_uid
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_relationship__write_uid
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_table_antiquity__write_uid
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_table_antiquity_line__write_uid
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_import_images_employees__write_uid
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_import_signature_users__write_uid
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_insurance_major_medical_expenses__write_uid
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_low_position__write_uid
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_massive_employee_modification__write_uid
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_tab_change__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_attachment_layout__write_date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_bank_account_employee__write_date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_change_salary_tab__write_date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_contract_report__write_date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_contract_salary_change_line__write_date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_history_changes_employee__write_date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_alimony__write_date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_contract_change_wizard__write_date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_cost_center__write_date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_affiliate_movements__write_date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_change_wizard__write_date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_document_import__write_date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_family_burden__write_date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job_position__write_date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job_position_history__write_date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_pilot_tab__write_date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_pilot_tab_line__write_date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_relationship__write_date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_table_antiquity__write_date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_table_antiquity_line__write_date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_import_images_employees__write_date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_import_signature_users__write_date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_insurance_major_medical_expenses__write_date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_low_position__write_date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_massive_employee_modification__write_date
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_tab_change__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.form_attachment_layout_view
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.tree_attachment_layout_view
+msgid "Layout"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.actions.act_window,name:hr_employe_mexico.action_attachment_layout
+#: model:ir.ui.menu,name:hr_employe_mexico.menu_attachment_layout
+msgid "Layouts"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_contract__contracting_regime__05
+msgid "Libre"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_cost_center__locality_id
+msgid "Locality"
+msgstr "Localidad"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_users_customer_form
+msgid "Localization"
+msgstr "Localización"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_bank_account_employee__location_branch
+msgid "Location / Branch"
+msgstr "Ubicación / Sucursal"
+
+#. module: hr_employe_mexico
+#: model:ir.actions.client,name:hr_employe_mexico.action_affiliate_movements_low
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_affiliate_movements__type__02
+#: model:ir.ui.menu,name:hr_employe_mexico.menu_action_report_affiliate_02
+msgid "Low"
+msgstr "Baja"
+
+#. module: hr_employe_mexico
+#: model:ir.actions.act_window,name:hr_employe_mexico.action_low_positions
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_low_position_form
+msgid "Low Position"
+msgstr "Baja de Plaza"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job_position__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Archivo adjunto principal"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee__marital
+msgid "Marital Status"
+msgstr "Estado civil"
+
+#. module: hr_employe_mexico
+#: model:ir.actions.act_window,name:hr_employe_mexico.action_mas_empl_modification_import
+#: model:ir.ui.menu,name:hr_employe_mexico.menu_mas_empl_modification_import
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_mas_empl_modification_form
+msgid "Massive Employee Modification"
+msgstr "Modificación Masiva de Empleados"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_employee_mexico_form
+msgid "Medical Policy"
+msgstr "Poliza Médica"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_employee_mexico_form
+msgid "Medical data"
+msgstr "Datos Médicos"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_contract__payment_period__06
+msgid "Mensual"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_users_customer_form
+msgid "Menus Customization"
+msgstr "Personalización de menús"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job_position__message_has_error
+msgid "Message Delivery error"
+msgstr "Error de entrega de mensajes"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job_position__message_ids
+msgid "Messages"
+msgstr "Mensajes"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_users_customer_form
+msgid "Messaging and Social"
+msgstr "Mensajería y redes sociales"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_company__minimum_discount_covid_base
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_config_settings__minimum_discount_covid_base
+msgid "Minimum discount covid base"
+msgstr "Mínimo descuento covid base"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_company__minimum_triple_compensation
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_config_settings__minimum_triple_compensation
+msgid "Minimum triple compensation"
+msgstr "Triple compensación mínima"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_company__minimum_wage
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_config_settings__minimum_wage
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.res_config_settings_view_form
+msgid "Minimum wage"
+msgstr "Salario mínimo"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_company__minimum_wage_border
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_config_settings__minimum_wage_border
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.res_config_settings_view_form
+msgid "Minimum wage north border free zone"
+msgstr "Salario mínimo zona franca frontera norte"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee__salary_type__2
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee__type_working_day__03
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee__working_day_week__2
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_public__salary_type__2
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_public__type_working_day__03
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_public__working_day_week__2
+msgid "Mixed"
+msgstr "Mixto"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_affiliate_movements__type_change_salary__2
+msgid "Mixted"
+msgstr "Mixto"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_contract__contract_type__07
+msgid "Modalidad de contratación por pago de hora laborada"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_contract__contract_type__08
+msgid "Modalidad de trabajo por comisión laboral"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_insurance_major_medical_expenses__amount
+msgid "Monthly Amount of the policy"
+msgstr "Monto Mensual de la Póliza"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_contract_salary_change_line__wage
+msgid "Monthly Salary"
+msgstr "Sueldo Mensual"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_contract__monthly_savings_fund
+msgid "Monthly Savings Fund"
+msgstr "Fondo de Ahorro Mensual"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_contract__wage
+msgid "Monthly Wage"
+msgstr "Salario Mensual"
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/models/affiliate_movements_low.py:0
+#: code:addons/hr_employe_mexico/models/affiliate_movements_salary.py:0
+#: code:addons/hr_employe_mexico/models/report_affiliate_movements.py:0
+#, python-format
+msgid "Mother Last Name"
+msgstr "Apellido de la madre"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee__mothers_last_name
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_employee_mexico_form
+msgid "Mother's Last Name"
+msgstr "Apellido Materno"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_public__mothers_last_name
+msgid "Mothers Last Name"
+msgstr "Apellido Materno"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.hr_employee_affiliate_movements_view_filter
+msgid "Move Date"
+msgstr "Mover fecha"
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/models/affiliate_movements_low.py:0
+#: code:addons/hr_employe_mexico/models/affiliate_movements_salary.py:0
+#: code:addons/hr_employe_mexico/models/report_affiliate_movements.py:0
+#, python-format
+msgid "Movement Type"
+msgstr "Tipo de movimiento"
+
+#. module: hr_employe_mexico
+#: model:ir.actions.act_window,name:hr_employe_mexico.employee_hr_employee_others_movements_action
+#: model:ir.ui.menu,name:hr_employe_mexico.menu_hr_employee_others_movements
+msgid "Movements other contracts"
+msgstr "Movimientos otros contratos"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,help:hr_employe_mexico.field_hr_cost_center__locality_id
+msgid "Municipality configured for this company"
+msgstr "Municipio configurado para esta empresa"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job_position__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Fecha límite de mi actividad"
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/models/affiliate_movements_low.py:0
+#: code:addons/hr_employe_mexico/models/affiliate_movements_salary.py:0
+#: code:addons/hr_employe_mexico/models/report_affiliate_movements.py:0
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_attachment_layout__name
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_contract_report__name
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_cost_center__name
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_family_burden__name
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_pilot_tab__name
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_relationship__name
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_table_antiquity__name
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.hr_pilot_tab_form_view
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.hr_table_antiquity_form_view
+#, python-format
+msgid "Name"
+msgstr "Nombre"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_history_changes_employee__new_cost_center_id
+msgid "New Cost Center"
+msgstr "Nuevo centro de costos"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_history_changes_employee__new_department_id
+msgid "New Department"
+msgstr "Departamento Nuevo"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_history_changes_employee__new_job_id
+msgid "New Job"
+msgstr "Nuevo Puesto de Trabajo"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_history_changes_employee__new_position_id
+msgid "New Position"
+msgstr "Nueva Plaza"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job_position__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Fecha límite de la próxima actividad"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job_position__activity_summary
+msgid "Next Activity Summary"
+msgstr "Resumen de la siguiente actividad"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job_position__activity_type_id
+msgid "Next Activity Type"
+msgstr "Siguiente tipo de actividad"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee__type_working_day__02
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_public__type_working_day__02
+msgid "Nightly"
+msgstr "Nocturna"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.hr_employee_affiliate_movements_tree
+msgid "No aprobado"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/wizard/import_images_employees.py:0
+#: code:addons/hr_employe_mexico/wizard/import_signatures_users.py:0
+#, python-format
+msgid "Not found User for email %s in the row %s. \n"
+msgstr "No se ha encontrado Usuario para el correo %s en la fila %s. \n"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_cost_center__code
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job_position__name
+msgid "Number"
+msgstr "Número"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job_position__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Número de acciones"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,help:hr_employe_mexico.field_res_company__personal_days_factor
+#: model:ir.model.fields,help:hr_employe_mexico.field_res_config_settings__personal_days_factor
+msgid "Number of Personal Days by default"
+msgstr "Número de Días Personales por defecto"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job_position__message_has_error_counter
+msgid "Number of errors"
+msgstr "Número de errores"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,help:hr_employe_mexico.field_hr_job_position__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Número de mensajes que requieren una acción"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,help:hr_employe_mexico.field_hr_job_position__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Número de mensajes con error de entrega"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,help:hr_employe_mexico.field_hr_job__no_of_recruitment
+msgid "Number of new employees you expect to recruit."
+msgstr "Número de empleados que esperas contratar."
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.res_config_settings_view_form
+msgid "Number of personal days per year by default for workers"
+msgstr "Número de días personales por año por defecto para los trabajadores"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,help:hr_employe_mexico.field_hr_job_position__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Número de mensajes no leídos"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_affiliate_movements__reason_liquidation__6
+msgid "OTROS"
+msgstr ""
+
+#. module: hr_employe_mexico
+#. openerp-web
+#: code:addons/hr_employe_mexico/static/src/js/employee_reports.js:0
+#: code:addons/hr_employe_mexico/static/src/js/employee_reports.js:0
+#: code:addons/hr_employe_mexico/static/src/js/employee_reports.js:0
+#: code:addons/hr_employe_mexico/static/src/js/employee_reports.js:0
+#, python-format
+msgid "Odoo Warning"
+msgstr "Advertencia de Odoo"
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/wizard/hr_employee_document_import.py:0
+#: code:addons/hr_employe_mexico/wizard/import_images_employees.py:0
+#: code:addons/hr_employe_mexico/wizard/import_signatures_users.py:0
+#, python-format
+msgid "Only zip files are supported."
+msgstr "Solo se admiten archivos zip."
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_affiliate_movements__origin_move
+msgid "Origin of movement"
+msgstr "Origen de movimientos"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_contract__contracting_regime__99
+msgid "Otro Regimen"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job__overhead_compensation
+msgid "Overhead compensation"
+msgstr "Compensación de sobrecargos"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_affiliate_movements__reason_liquidation__a
+msgid "PENSIÓN"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_affiliate_movements__origin_move__406
+msgid ""
+"PROGRAMA DE DICTAMEN (OBLIGADO Y VOLUNTARIO) PROCEDIMIENTO DE REVISIÓN "
+"INTERNA (RO Y RV)."
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_public__pay_extra_hours
+msgid "Pay Extra Hours"
+msgstr "Pagar Horas Extras"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee__payment_holidays_bonus__0
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_public__payment_holidays_bonus__0
+msgid "Pay at the expiration of the vacation"
+msgstr "Pago al aniversario de vacaciones"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee__pay_extra_hours
+msgid "Pay extra hours?"
+msgstr "¿Pagar horas extra?"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee__payment_holidays_bonus__1
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_public__payment_holidays_bonus__1
+msgid "Pay with the enjoyment of the holidays"
+msgstr "Pago al disfrute de las vacaciones"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_public__payment_holidays_bonus
+msgid "Payment Holidays Bonus"
+msgstr "Pago Bono Vacaciones"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_contract__payment_period
+msgid "Payment Period"
+msgstr "Periodo de Pago"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_alimony__payment_type
+msgid "Payment type"
+msgstr "Tipo de pago"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_employee_mexico_form
+msgid "Payroll Data"
+msgstr "Datos de nómina"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee__type_working_day__04
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_public__type_working_day__04
+msgid "Per hour"
+msgstr "Por hora"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_tab_change__percentage
+msgid "Percentage"
+msgstr "Porcentaje"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_tab_change__percentage_antiquity
+msgid "Percentage of Seniority Premium"
+msgstr "Porcentaje de Prima de Antigüedad"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job__percentage_compensation
+msgid "Percentage of compensation"
+msgstr "Porcentaje de compensación"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_company__personal_days_factor
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_config_settings__personal_days_factor
+msgid "Personal Days"
+msgstr "Días personales"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_public__personal_savings_bank
+msgid "Personal Savings Bank"
+msgstr "Caja de Ahorros Personales"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee__personal_savings_bank
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_company__personal_savings_bank
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_config_settings__personal_savings_bank
+msgid "Personal savings bank"
+msgstr "Caja de ahorros personales"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee__pilot_tab_id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_public__pilot_tab_id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_pilot_tab_line__pilot_tab_id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_tab_change__pilot_tab_id
+msgid "Pilor Tab"
+msgstr "Tabulador de Pilotos"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee__pilot_category
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_public__pilot_category
+msgid "Pilot Category"
+msgstr "Categoría de Piloto"
+
+#. module: hr_employe_mexico
+#: model:ir.actions.act_window,name:hr_employe_mexico.hr_pilot_tab_action
+#: model:ir.model,name:hr_employe_mexico.model_hr_pilot_tab
+#: model:ir.ui.menu,name:hr_employe_mexico.hr_pilot_tab_menu
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.hr_pilot_tab_form_view
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_tab_change_form
+msgid "Pilot Tab"
+msgstr "Tabulador de Pilotos"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_pilot_tab__pilot_tab_line
+msgid "Pilot Tab Line"
+msgstr "Línea de Tabulador de Pilotos"
+
+#. module: hr_employe_mexico
+#: model:ir.model,name:hr_employe_mexico.model_hr_pilot_tab_line
+msgid "Pilot Tab line"
+msgstr "Línea de Tabulador de Pilotos"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job__pilot_compensation
+msgid "Pilot compensation"
+msgstr "Compensación piloto"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.hr_pilot_tab_tree_view
+msgid "Pilot tab"
+msgstr "Tabulador de Pilotos"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_company__pilots_retreat
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_config_settings__pilots_retreat
+msgid "Pilots retreat"
+msgstr "Retiro de pilotos"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_company__pilots_union_clause
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_config_settings__pilots_union_clause
+msgid "Pilots union clause"
+msgstr "Cláusula sindical de pilotos"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_public__place_of_birth
+msgid "Place Of Birth"
+msgstr "Lugar de nacimiento"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee__place_of_birth
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_users__place_of_birth
+msgid "Place of Birth"
+msgstr "Lugar de nacimiento"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_history_changes_employee__position_id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee__position_id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_change_wizard__position_id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_public__position_id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job_position_history__position_id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_low_position__position_id
+msgid "Position"
+msgstr "Plaza"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__history_changes_employee__type__position
+msgid "Position change"
+msgstr "Cambio de plaza"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job__position_ids
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.hr_job_inherit
+msgid "Positions"
+msgstr "Plazas"
+
+#. module: hr_employe_mexico
+#: model:ir.model,name:hr_employe_mexico.model_hr_job_position
+msgid "Positions in the Jobs"
+msgstr "Plazas en los Empleos"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_users_customer_form
+msgid "Preferences"
+msgstr "Preferencias"
+
+#. module: hr_employe_mexico
+#: model:ir.actions.report,name:hr_employe_mexico.action_report_tmpl_cap_init_pres_ley
+msgid "Prestaciones de Ley (Capacitación Inicial)"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.actions.report,name:hr_employe_mexico.action_report_tmpl_determinado_pl
+msgid "Prestaciones de Ley (Determinado)"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.actions.report,name:hr_employe_mexico.action_report_tmpl_planta_pres_ley
+msgid "Prestaciones de Ley (Planta)"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_contract__previous_contract_date
+msgid "Previous Contract Date"
+msgstr "Fecha de contrato anterior"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee__previous_salary
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_public__previous_salary
+msgid "Previous salary"
+msgstr "Salario anterior"
+
+#. module: hr_employe_mexico
+#: model:ir.actions.report,name:hr_employe_mexico.action_report_tmpl_cap_ini_primer_oficial
+msgid "Primer Oficial (Capacitacion Inicial)"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.actions.report,name:hr_employe_mexico.action_report_tmpl_planta_primer_oficial
+msgid "Primer Oficial (Planta)"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/models/affiliate_movements_low.py:0
+#: code:addons/hr_employe_mexico/models/affiliate_movements_salary.py:0
+#: code:addons/hr_employe_mexico/models/report_affiliate_movements.py:0
+#, python-format
+msgid "Print (TXT)"
+msgstr "Imprimir (TXT)"
+
+#. module: hr_employe_mexico
+#: model:ir.ui.menu,name:hr_employe_mexico.menu_private_address
+msgid "Private Address Employees"
+msgstr "Direcciones Privadas de Empleados"
+
+#. module: hr_employe_mexico
+#: model:ir.model,name:hr_employe_mexico.model_hr_employee_public
+msgid "Public Employee"
+msgstr "Empleado Público"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_company__punctuality_attendance_voucher
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_config_settings__punctuality_attendance_voucher
+msgid "Punctuality and attendance voucher"
+msgstr "Bono de puntualidad y asistencia"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_contract__payment_period__04
+msgid "Quincenal"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_affiliate_movements__reason_liquidation__8
+msgid "RESICIÓN DE CONTRATO"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_affiliate_movements__origin_move__374
+msgid "REVISIÓN DE GABINETE ART. 48"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_affiliate_movements__origin_move__375
+msgid "REVISIÓN POR ART. 12 A"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_affiliate_movements__origin_move__371
+msgid "REVISIÓN POR ART. 18"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_affiliate_movements__origin_move__397
+msgid "REVISIÓN ÁGIL ART. 17"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_partner__rfc
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_users__rfc
+msgid "RFC"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/models/affiliate_movements_low.py:0
+#, python-format
+msgid "Reason Liquidation"
+msgstr "Causa de la Baja"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_affiliate_movements__reason_liquidation
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.hr_employee_affiliate_movements_view_filter
+msgid "Reason for liquidation"
+msgstr "Razón de la liquidación"
+
+#. module: hr_employe_mexico
+#: model:ir.model,name:hr_employe_mexico.model_contract_salary_change_line
+msgid "Record for the change of salary"
+msgstr "Registro de cambio de salario"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee__type_working_day__05
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_public__type_working_day__05
+msgid "Reduced"
+msgstr "Reducida"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee__working_day_week__6
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_public__working_day_week__6
+msgid "Reduced working hours"
+msgstr "Horas de trabajo reducidas"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_bank_account_employee__reference
+msgid "Reference"
+msgstr "Referencia"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_employee_filter
+msgid "Registration Number"
+msgstr "Número de registro"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee__registration_number
+msgid "Registration Number of the Employee"
+msgstr "Número de Registro del Empleado"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_family_burden__relationship_id
+msgid "Relationship"
+msgstr "Relación"
+
+#. module: hr_employe_mexico
+#: model:ir.model,name:hr_employe_mexico.model_ir_actions_report
+msgid "Report Action"
+msgstr "Acción de informe"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_contract_report__report_ids
+#: model:ir.ui.menu,name:hr_employe_mexico.menu_report_label_employee
+msgid "Reports"
+msgstr "Reportes"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_public__resistance_bottom_new
+msgid "Resistance Bottom New"
+msgstr "Nueva Resistencia Inferior"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee__resistance_bottom_new
+msgid "Resistance fund ASSA new income"
+msgstr "Fondo de resistencia ASSA nuevos ingresos"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job_position__activity_user_id
+msgid "Responsible User"
+msgstr "Usuario responsable"
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/models/affiliate_movements_salary.py:0
+#: code:addons/hr_employe_mexico/models/report_affiliate_movements.py:0
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_contract_salary_change_line__sbc
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_contract__sbc
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_affiliate_movements__sbc
+#, python-format
+msgid "SBC"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_contract_salary_change_line__sdi
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_contract__sdi
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_affiliate_movements__salary
+#: model:ir.model.fields,help:hr_employe_mexico.field_hr_employee_affiliate_movements__salary
+msgid "SDI"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_affiliate_movements__reason_liquidation__2
+msgid "SEPARACIÓN VOLUNTARIA"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/models/affiliate_movements_low.py:0
+#: code:addons/hr_employe_mexico/models/affiliate_movements_salary.py:0
+#, python-format
+msgid "SICOSS (TXT)"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/models/report_affiliate_movements.py:0
+#, python-format
+msgid "SICOSS Hight(TXT)"
+msgstr "SICOSS Altas (TXT)"
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/models/report_affiliate_movements.py:0
+#, python-format
+msgid "SICOSS Movements (TXT)"
+msgstr "SICOSS de Movimientos (TXT)"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job_position__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Error de entrega de SMS"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_company__smvdf
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_config_settings__smvdf
+msgid "SMVDF"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_contract_salary_change_line__daily_salary
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_contract_change_wizard__salary
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_pilot_tab_line__salary
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_contract_change_wizard__field_changes__salary
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__massive_employee_modification__change_fields__salary
+msgid "Salary"
+msgstr "Sueldo"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_contract__salary_changes_line_ids
+msgid "Salary Change Lines"
+msgstr "Líneas de cambio de salario"
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/models/affiliate_movements_salary.py:0
+#: code:addons/hr_employe_mexico/models/report_affiliate_movements.py:0
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee__salary_type
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_public__salary_type
+#, python-format
+msgid "Salary Type"
+msgstr "Tipo de salario"
+
+#. module: hr_employe_mexico
+#: model:ir.actions.client,name:hr_employe_mexico.action_affiliate_movements_salary
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_affiliate_movements__type__07
+#: model:ir.ui.menu,name:hr_employe_mexico.menu_action_report_affiliate_07
+msgid "Salary change"
+msgstr "Cambio de Sueldo"
+
+#. module: hr_employe_mexico
+#: model:res.groups,name:hr_employe_mexico.group_salary_changes
+msgid "Salary changes"
+msgstr "Cambios salariales"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee__salary_reduction
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_public__salary_reduction
+msgid "Salary reduction?"
+msgstr "¿Reducción de salario?"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_affiliate_movements__type_change_salary
+msgid "Salary type"
+msgstr "Tipo de salario"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_contract__payment_period__02
+msgid "Semanal"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_users_customer_form
+msgid "Send Reset Password Instructions"
+msgstr "Enviar instrucciones de restablecimiento de contraseña"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_users_customer_form
+msgid "Send an Invitation Email"
+msgstr "Envíe un correo electrónico de invitación"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_contract_salary_change_line__seniority_premium
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_contract_change_wizard__field_changes__seniority_premium
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__massive_employee_modification__change_fields__seniority_premium
+msgid "Seniority Premium"
+msgstr "Prima de antigüedad"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_contract__seniority_premium
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_pilot_tab_line__seniority_premium
+msgid "Seniority premium"
+msgstr "prima de antigüedad"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.res_config_settings_view_form
+msgid "Set the company's default hours to manage your employees' absence time"
+msgstr ""
+"Establezca el horario predeterminado de la empresa para administrar el "
+"tiempo de ausencia de sus empleados"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.res_config_settings_view_form
+msgid "Set the monthly days factor for payroll calculations"
+msgstr "Establecer el factor de días mensuales para los cálculos de nómina"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.res_config_settings_view_form
+msgid "Set up Flight attendant union clause."
+msgstr "Configurar cláusula de unión de asistente de vuelo."
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.res_config_settings_view_form
+msgid "Set up the Aspiring flight attendant union clause."
+msgstr "Constituir la cláusula sindical de aspirantes a auxiliar de vuelo."
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.res_config_settings_view_form
+msgid "Set up the Cultural and sports evolution."
+msgstr "Poner en marcha la Evolución Cultural y Deportiva."
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.res_config_settings_view_form
+msgid "Set up the aspiring pilots union clause."
+msgstr "Establecer la cláusula sindical de aspirantes a pilotos."
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.res_config_settings_view_form
+msgid "Set up the compensation ro."
+msgstr "Configure el ro de compensación."
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.res_config_settings_view_form
+msgid "Set up the flight attendant retreat."
+msgstr "Organiza el retiro de asistentes de vuelo."
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.res_config_settings_view_form
+msgid "Set up the gas voucher."
+msgstr "Configure el vale de gasolina."
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.res_config_settings_view_form
+msgid "Set up the minimum triple compensation."
+msgstr "Configurar la triple compensación mínima."
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.res_config_settings_view_form
+msgid "Set up the personal savings bank."
+msgstr "Montar la caja de ahorro personal."
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.res_config_settings_view_form
+msgid "Set up the pilots retreat."
+msgstr "Prepara el retiro de pilotos."
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.res_config_settings_view_form
+msgid "Set up the pilots union clause."
+msgstr "Establecer la cláusula sindical de pilotos."
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.res_config_settings_view_form
+msgid "Set up the union aid."
+msgstr "Establecer la ayuda sindical."
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.res_config_settings_view_form
+msgid "Set up the union_dues."
+msgstr "Establecer las cuotas sindicales."
+
+#. module: hr_employe_mexico
+#: model:ir.actions.report,name:hr_employe_mexico.action_report_tmpl_cap_init_sobrecargo
+msgid "Sobrecargo (Capacitación Inicial)"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.actions.report,name:hr_employe_mexico.action_report_tmpl_determinado_sobrecargo
+msgid "Sobrecargo (Determinado)"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.actions.report,name:hr_employe_mexico.action_report_tmpl_planta_sobrecargo
+msgid "Sobrecargo (Planta)"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_contract__date_start
+msgid "Start Date"
+msgstr "Fecha de inicio"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.search_template_date_filter
+msgid "Start Date :"
+msgstr "Fecha Inicial :"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,help:hr_employe_mexico.field_hr_contract__date_start
+msgid "Start date of the contract."
+msgstr "Fecha de inicio del contrato"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,help:hr_employe_mexico.field_hr_contract__previous_contract_date
+msgid "Start date of the previous contract for antiquity."
+msgstr "Fecha de inicio del contrato anterior por antigüedad."
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/models/affiliate_movements_low.py:0
+#: code:addons/hr_employe_mexico/models/affiliate_movements_salary.py:0
+#: code:addons/hr_employe_mexico/models/report_affiliate_movements.py:0
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_contract_report__state
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_alimony__state
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_cost_center__state_id
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_affiliate_movements__state
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.hr_employee_affiliate_movements_view_filter
+#, python-format
+msgid "State"
+msgstr "Estado"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,help:hr_employe_mexico.field_hr_job_position__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Estado basado en actividades\n"
+"Vencido: la fecha de vencimiento ya ha pasado\n"
+"Hoy: la fecha de la actividad es hoy\n"
+"Planeado: Actividades futuras."
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_contract__contracting_regime__02
+msgid "Sueldos y Salarios"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.actions.report,name:hr_employe_mexico.action_report_tmpl_cap_init_superiores
+msgid "Superiores (Capacitación Inicial)"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.actions.report,name:hr_employe_mexico.action_report_tmpl_determinado_superiores
+msgid "Superiores (Determinado)"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.actions.report,name:hr_employe_mexico.action_report_tmpl_planta_superiores
+msgid "Superiores (Planta)"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_public__syndicalist
+msgid "Syndicalist"
+msgstr "Sindicalista"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee__syndicalist
+msgid "Syndicalist?"
+msgstr "¿Sindicalizado?"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_affiliate_movements__reason_liquidation__1
+msgid "TERMINACIÓN DE CONTRATO"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/models/affiliate_movements_low.py:0
+#: code:addons/hr_employe_mexico/models/affiliate_movements_salary.py:0
+#: code:addons/hr_employe_mexico/models/report_affiliate_movements.py:0
+#: code:addons/hr_employe_mexico/models/report_affiliate_movements.py:0
+#, python-format
+msgid "TXT"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.actions.act_window,name:hr_employe_mexico.action_tab_change
+#: model:ir.ui.menu,name:hr_employe_mexico.menu_tab_change
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_tab_change_form
+msgid "Tab Change"
+msgstr "Cambio de Tabulador"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_table_antiquity__table_antiquity_ids
+msgid "Table Antiquity"
+msgstr "Tabla Factor Antigüedad"
+
+#. module: hr_employe_mexico
+#: model:ir.model,name:hr_employe_mexico.model_hr_table_antiquity
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_table_antiquity_line__antiquity_line_id
+msgid "Table antiquity"
+msgstr "Tabla factor antigüedad"
+
+#. module: hr_employe_mexico
+#: model:ir.model,name:hr_employe_mexico.model_hr_table_antiquity_line
+msgid "Table antiquity line"
+msgstr "Línea de antigüedad de mesa"
+
+#. module: hr_employe_mexico
+#: model:ir.actions.act_window,name:hr_employe_mexico.hr_table_antiquity_action
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee__antiquity_id
+#: model:ir.ui.menu,name:hr_employe_mexico.hr_table_antiquity_menu
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.hr_pilot_tab_search_view
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.hr_table_antiquity_form_view
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.hr_table_antiquity_search_view
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.hr_table_antiquity_tree_view
+msgid "Table of antiquity"
+msgstr "Tabla Factor antigüedad"
+
+#. module: hr_employe_mexico
+#: model:ir.model,name:hr_employe_mexico.model_ir_actions_employee_report_download
+msgid "Technical model for Employees report downloads"
+msgstr "Modelo técnico para descargas de informes de empleados"
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/wizard/massive_employee_modification.py:0
+#, python-format
+msgid "The change date must be less than today."
+msgstr "La fecha de cambio debe ser anterior a la actual."
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/wizard/employee_change.py:0
+#, python-format
+msgid "The changeover date must be less than or equal to today."
+msgstr "La fecha de cambio debe ser menor o igual a la actual."
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/wizard/massive_employee_modification.py:0
+#: code:addons/hr_employe_mexico/wizard/massive_employee_modification.py:0
+#: code:addons/hr_employe_mexico/wizard/massive_employee_modification.py:0
+#: code:addons/hr_employe_mexico/wizard/massive_employee_modification.py:0
+#: code:addons/hr_employe_mexico/wizard/massive_employee_modification.py:0
+#, python-format
+msgid "The code of the contract in the row %s not exist. \n"
+msgstr "El código del contrato en la fila %s no existe. \n"
+
+#. module: hr_employe_mexico
+#: model:ir.model.constraint,message:hr_employe_mexico.constraint_hr_cost_center_name_uniq
+msgid "The cost center name must be unique !"
+msgstr "¡El nombre del centro de costes debe ser único!"
+
+#. module: hr_employe_mexico
+#: model:ir.model.constraint,message:hr_employe_mexico.constraint_hr_cost_center_code_uniq
+msgid "The cost center number  must be unique !"
+msgstr "¡El número del centro de coste debe ser único!"
+
+#. module: hr_employe_mexico
+#: model:ir.model.constraint,message:hr_employe_mexico.constraint_hr_department_name_uniq
+msgid "The department name must be unique !"
+msgstr "¡El nombre del departamento debe ser único!"
+
+#. module: hr_employe_mexico
+#: model:ir.model.constraint,message:hr_employe_mexico.constraint_hr_department_code_uniq
+msgid "The department number  must be unique !"
+msgstr "¡El número de departamento debe ser único!"
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/wizard/hr_employee_document_import.py:0
+#: code:addons/hr_employe_mexico/wizard/import_images_employees.py:0
+#: code:addons/hr_employe_mexico/wizard/import_signatures_users.py:0
+#, python-format
+msgid "The document %s in the row %s. \n"
+msgstr "El documento %s en la fila %s. \n"
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/models/hr_employee.py:0
+#, python-format
+msgid "The following fields are required: %s."
+msgstr "Los siguientes campos son obligatorios: %s."
+
+#. module: hr_employe_mexico
+#: model:ir.model.constraint,message:hr_employe_mexico.constraint_hr_job_name_uniq
+msgid "The job name must be unique!"
+msgstr "¡El nombre del trabajo debe ser único!"
+
+#. module: hr_employe_mexico
+#: model:ir.model.constraint,message:hr_employe_mexico.constraint_hr_job_code_uniq
+msgid "The job number must be unique!"
+msgstr "¡El número de trabajo debe ser único!"
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/wizard/massive_employee_modification.py:0
+#: code:addons/hr_employe_mexico/wizard/massive_employee_modification.py:0
+#, python-format
+msgid "The name of the cost center in the row %s not exist. \n"
+msgstr "El nombre del centro de coste en la fila %s no existe. \n"
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/wizard/massive_employee_modification.py:0
+#, python-format
+msgid "The name of the department in the row %s not exist. \n"
+msgstr "El nombre del departamento en la fila %s no existe. \n"
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/wizard/hr_employee_document_import.py:0
+#: code:addons/hr_employe_mexico/wizard/import_images_employees.py:0
+#: code:addons/hr_employe_mexico/wizard/import_signatures_users.py:0
+#, python-format
+msgid "The name of the file in the row %s. \n"
+msgstr "El nombre del archivo en la fila %s. \n"
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/wizard/massive_employee_modification.py:0
+#, python-format
+msgid "The name of the job in the row %s not exist. \n"
+msgstr "El nombre del puesto de trabajo en la fila %s no existe. \n"
+
+#. module: hr_employe_mexico
+#: model:ir.model.constraint,message:hr_employe_mexico.constraint_attachment_layout_name_uniq
+msgid "The name of the layout must be unique!"
+msgstr "¡El nombre del layout debe ser único!"
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/wizard/massive_employee_modification.py:0
+#, python-format
+msgid "The name of the position in the row %s not exist. \n"
+msgstr "El nombre de la plaza en la fila %s no existe. \n"
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/wizard/massive_employee_modification.py:0
+#, python-format
+msgid "The position in row %s is taken. \n"
+msgstr "La plaza en la fila %s está ocupada. \n"
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/models/hr_job_position.py:0
+#, python-format
+msgid ""
+"The start date cannot be greater than the end date of the history of the "
+"position."
+msgstr ""
+"La fecha de inicio no puede ser mayor que la fecha de finalización del "
+"historial de la plaza."
+
+#. module: hr_employe_mexico
+#: model:ir.model.constraint,message:hr_employe_mexico.constraint_bank_account_employee_bank_account_uniq
+msgid "There is already a bank account with this number.!"
+msgstr "Ya existe una cuenta bancaria con este número.!"
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/wizard/hr_employee_document_import.py:0
+#: code:addons/hr_employe_mexico/wizard/import_images_employees.py:0
+#: code:addons/hr_employe_mexico/wizard/import_signatures_users.py:0
+#: code:addons/hr_employe_mexico/wizard/massive_employee_modification.py:0
+#, python-format
+msgid "There is no EXCEL file"
+msgstr "No hay archivo EXCEL"
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/wizard/hr_employee_document_import.py:0
+#: code:addons/hr_employe_mexico/wizard/import_images_employees.py:0
+#: code:addons/hr_employe_mexico/wizard/import_signatures_users.py:0
+#, python-format
+msgid "There is no ZIP file"
+msgstr "No hay archivo ZIP"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.search_template_date_filter
+msgid "This Month"
+msgstr "Este Mes"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.search_template_date_filter
+msgid "This Quarter"
+msgstr "Este Trimestre"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.search_template_date_filter
+msgid "Today"
+msgstr "Hoy"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_contract__days_duration_training
+msgid "Training Days of Duration"
+msgstr "Días de Duración de Capacitación"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_contract__training_end_date
+msgid "Training End Date"
+msgstr "Fecha Final de Capacitación"
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/models/contract_salary_change.py:0
+#: code:addons/hr_employe_mexico/models/contract_salary_change.py:0
+#, python-format
+msgid "Two salaries cannot be active within the same date ranges!"
+msgstr ""
+"¡Dos salarios no pueden estar activos dentro de los mismos rangos de fechas!"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_history_changes_employee__type
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_alimony__type
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_affiliate_movements__type
+msgid "Type"
+msgstr "Tipo"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_public__type_worker
+msgid "Type Worker"
+msgstr "Tipo de Trabajador"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee__type_working_day
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_public__type_working_day
+msgid "Type Working Day"
+msgstr "Tipo Jornada Laboral"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,help:hr_employe_mexico.field_hr_job_position__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Tipo de actividad de excepción registrada."
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee__type_worker
+msgid "Type of worker"
+msgstr "Tipo de trabajador"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_company__uma
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_config_settings__uma
+msgid "UMA"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_company__umi
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_config_settings__umi
+msgid "UMI"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.line_template
+msgid "Unfolded"
+msgstr "Desplegado"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_company__union_aid
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_config_settings__union_aid
+msgid "Union aid"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_company__union_dues
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_res_config_settings__union_dues
+msgid "Union dues"
+msgstr "cuotas sindicales"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job_position__message_unread
+msgid "Unread Messages"
+msgstr "Mensajes no leídos"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job_position__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Contador de mensajes no leídos"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_low_position_form
+msgid "Unsubscribe"
+msgstr "Darse de baja"
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/wizard/import_signatures_users.py:0
+#: model:ir.actions.act_window,name:hr_employe_mexico.action_res_users_customer
+#: model:ir.model,name:hr_employe_mexico.model_res_users
+#: model:ir.ui.menu,name:hr_employe_mexico.menu_user_customer
+#: model:ir.ui.menu,name:hr_employe_mexico.menu_users_hr
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_users_customer_form
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_users_customer_tree
+#, python-format
+msgid "Users"
+msgstr "Usuarios"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_affiliate_movements__origin_move__376
+msgid "VISITA ESPECÍFICA ART. 46"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_affiliate_movements__origin_move__373
+msgid "VISITA INTEGRAL ART. 46"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_table_antiquity_line__vacation_cousin
+msgid "Vacation Cousin (%)"
+msgstr "Prima de vacaciones (%)"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_employee_mexico_form
+msgid "Vacation bonus"
+msgstr "Bono de vacaciones"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee__payment_holidays_bonus
+msgid "Vacation premium payment"
+msgstr "Pago de prima de vacaciones"
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/models/affiliate_movements_salary.py:0
+#: code:addons/hr_employe_mexico/models/affiliate_movements_salary.py:0
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_affiliate_movements__variable
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee__salary_type__1
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_affiliate_movements__type_change_salary__1
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_public__salary_type__1
+#, python-format
+msgid "Variable"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_contract__variable_salary
+msgid "Variable Salary"
+msgstr "Sueldo Variable"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.hr_employee_affiliate_movements_view_filter
+msgid "Variables"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_affiliate_movements__wage
+msgid "Wage"
+msgstr "Sueldo"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_contract__wage_letters
+msgid "Wage in letters"
+msgstr "Sueldo en letras"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_job_position__website_message_ids
+msgid "Website Messages"
+msgstr "Mensajes del sitio web"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,help:hr_employe_mexico.field_hr_job_position__website_message_ids
+msgid "Website communication history"
+msgstr "Historial de comunicación del sitio web"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee__working_day_week
+msgid "Weekly shift"
+msgstr "Turno semanal"
+
+#. module: hr_employe_mexico
+#: model:ir.model,name:hr_employe_mexico.model_massive_employee_modification
+msgid "Wizard for massive employee modification"
+msgstr "Asistente para modificación masiva de empleados"
+
+#. module: hr_employe_mexico
+#: model:ir.model,name:hr_employe_mexico.model_tab_change
+msgid "Wizard to change pilots tab amount"
+msgstr "Asistente para cambio de monto de tabulador de pilotos"
+
+#. module: hr_employe_mexico
+#: model:ir.model,name:hr_employe_mexico.model_low_position
+msgid "Wizard to low position"
+msgstr "Asistente para dar de baja una plaza"
+
+#. module: hr_employe_mexico
+#: model:ir.model,name:hr_employe_mexico.model_contract_report
+msgid "Wizard to print contract reports"
+msgstr "Asistente para imprimir informes de contratos"
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/models/affiliate_movements_low.py:0
+#: code:addons/hr_employe_mexico/models/affiliate_movements_salary.py:0
+#: code:addons/hr_employe_mexico/models/report_affiliate_movements.py:0
+#, python-format
+msgid "Work Center"
+msgstr "Centro"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee__working_day_week__5
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_public__working_day_week__5
+msgid "Work five days"
+msgstr "Trabaja cinco días"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee__working_day_week__4
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_public__working_day_week__4
+msgid "Work four days"
+msgstr "Trabaja cuatro días"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee__working_day_week__1
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_public__working_day_week__1
+msgid "Work one day"
+msgstr "Trabaja un día"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee__working_day_week__3
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_employee_public__working_day_week__3
+msgid "Work three days"
+msgstr "Trabaja tres días"
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/models/report_affiliate_movements.py:0
+#, python-format
+msgid "Worker Type"
+msgstr "Tipo de Trabajador"
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/models/affiliate_movements_salary.py:0
+#: code:addons/hr_employe_mexico/models/report_affiliate_movements.py:0
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_hr_employee_public__working_day_week
+#, python-format
+msgid "Working Day Week"
+msgstr "Semana o Jornada Reducida"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields,field_description:hr_employe_mexico.field_ir_attachment__folder_id
+msgid "Workspace"
+msgstr "Centro de Trabajo"
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/models/affiliate_movements_low.py:0
+#: code:addons/hr_employe_mexico/models/affiliate_movements_salary.py:0
+#: code:addons/hr_employe_mexico/models/report_affiliate_movements.py:0
+#, python-format
+msgid "XLSX"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/wizard/import_images_employees.py:0
+#: code:addons/hr_employe_mexico/wizard/import_signatures_users.py:0
+#, python-format
+msgid "You are entering more than one file"
+msgstr "Está introduciendo mas de un archivo."
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.view_users_customer_form
+msgid "You can archive the contact"
+msgstr "Puede archivar el contacto"
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/models/hr_employee_affiliate.py:0
+#, python-format
+msgid "You cannot delete affiliate movements that are not in \"Draft\" status."
+msgstr ""
+"No puede eliminar movimientos de afiliados que no estén en estado "
+"\"Borrador\"."
+
+#. module: hr_employe_mexico
+#: model:ir.model,name:hr_employe_mexico.model_attachment_layout
+msgid "attachment.layout"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model,name:hr_employe_mexico.model_bank_account_employee
+msgid "bank_id"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__contract_report__state__choose
+msgid "choose"
+msgstr "escoger"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.hr_contract_view_form_inherit
+msgid "día(s)"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__contract_report__state__get
+msgid "get"
+msgstr "obtener"
+
+#. module: hr_employe_mexico
+#: model:ir.model,name:hr_employe_mexico.model_hr_employee_affiliate_movements
+msgid "hr.employee.affiliate.movements"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.model,name:hr_employe_mexico.model_hr_relationship
+msgid "hr.relationship"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: model:ir.ui.menu,name:hr_employe_mexico.menu_view_history_changes
+msgid "menu_view_history_changes"
+msgstr "Historial de Cambios de Empleado"
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/models/affiliate_movements_low.py:0
+#: code:addons/hr_employe_mexico/models/affiliate_movements_salary.py:0
+#: code:addons/hr_employe_mexico/models/report_affiliate_movements.py:0
+#, python-format
+msgid "ssnid"
+msgstr ""
+
+#. module: hr_employe_mexico
+#: code:addons/hr_employe_mexico/wizard/massive_employee_modification.py:0
+#: code:addons/hr_employe_mexico/wizard/massive_employee_modification.py:0
+#: code:addons/hr_employe_mexico/wizard/massive_employee_modification.py:0
+#: code:addons/hr_employe_mexico/wizard/massive_employee_modification.py:0
+#: code:addons/hr_employe_mexico/wizard/massive_employee_modification.py:0
+#, python-format
+msgid "the employee in row %s does not belong to the specified contract. \n"
+msgstr "el empleado de la fila %s no pertenece al contrato especificado. \n"
+
+#. module: hr_employe_mexico
+#: model_terms:ir.ui.view,arch_db:hr_employe_mexico.search_template_date_filter
+msgid "to:"
+msgstr "a:"
+
+#. module: hr_employe_mexico
+#: model:ir.model.fields.selection,name:hr_employe_mexico.selection__hr_alimony__payment_type__wire_transfer
+msgid "wire transfer"
+msgstr "transferencia bancaria"
+
+#. module: hr_employe_mexico
+#: model:ir.model,name:hr_employe_mexico.model_hr_employee_change_wizard
+msgid "wizard to change the Cost Center title of the employee record"
+msgstr ""
+"asistente para cambiar el título del centro de coste del registro de "
+"empleado"
+
+#. module: hr_employe_mexico
+#: model:ir.model,name:hr_employe_mexico.model_hr_contract_change_wizard
+msgid "wizard to change the department and job title of the contract"
+msgstr ""
+"asistente para cambiar el departamento y el puesto de trabajo del contrato"
+
+#. module: hr_employe_mexico
+#: model:ir.model,name:hr_employe_mexico.model_change_salary_tab
+msgid "wizard to change the salary for table tab"
+msgstr "wizard para cambiar el salario por tabla de tabulador"

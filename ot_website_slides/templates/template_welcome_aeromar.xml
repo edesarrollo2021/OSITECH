@@ -5,11 +5,6 @@
             <link
                     rel="stylesheet"
                     type="text/css"
-                    href="/ot_website_slides/static/src/swiper/css/swiper-bundle.min.css"
-            />
-            <link
-                    rel="stylesheet"
-                    type="text/css"
                     href="/ot_website_slides/static/src/swiper/css/swiper-tema.css"
             />
         </xpath>
@@ -47,10 +42,6 @@
                         <meta
                                 name="viewport"
                                 content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
-                        <link
-                                rel="stylesheet"
-                                href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-
                         <style>
                             html,
                             body {
@@ -209,23 +200,6 @@
                             <div class="swiper-button-prev"></div>
                             <div class="swiper-pagination"></div>
                         </div>
-
-                        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-                        <script>
-                            var swiper = new Swiper(".mySwiper", {
-                            speed: 600,
-                            parallax: true,
-                            pagination: {
-                            el: ".swiper-pagination",
-                            clickable: true,
-                            },
-                            navigation: {
-                            nextEl: ".swiper-button-next",
-                            prevEl: ".swiper-button-prev",
-                            },
-                            });
-                        </script>
 
                     </body>
                 </div>

@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <!--  Table Settings  -->
+    <record id="form_table_settings_view" model="ir.ui.view">
+        <field name="name">table.settings.form</field>
+        <field name="model">table.settings</field>
+        <field name="arch" type="xml">
+        <form string="Table Settings">
+            <sheet>
+                <group col="4">
+                    <field name="name"/>
+                    <field name="year" widget="mask" data-inputmask="'mask': '9', 'repeat': 4, 'greedy' : false"/>
+                </group>
+                <notebook>
+                    <page string="ISR Daily">
+                        <group>
+                            <field name="isr_daily_ids">
+                                <form>
+                                    <group col="4">
+                                        <field name="lim_inf"/>
+                                        <field name="lim_sup"/>
+                                        <field name="c_fija"/>
+                                        <field name="s_excedente"/>
+                                    </group>
+                                </form>
+                                <tree>
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="lim_inf"/>
+                                    <field name="lim_sup"/>
+                                    <field name="c_fija"/>
+                                    <field name="s_excedente"/>
+                                </tree>
+                            </field>
+                            <field name="isr_daily_subsidy_ids">
+                                <form>
+                                    <group col="4">
+                                        <field name="lim_inf"/>
+                                        <field name="lim_sup"/>
+                                        <field name="s_mensual"/>
+                                    </group>
+                                </form>
+                                <tree>
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="lim_inf"/>
+                                    <field name="lim_sup"/>
+                                    <field name="s_mensual"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </page>
+                    <page string="ISR Weekly">
+                        <group>
+                            <field name="isr_weekly_ids">
+                                <form>
+                                    <group col="4">
+                                        <field name="lim_inf"/>
+                                        <field name="lim_sup"/>
+                                        <field name="c_fija"/>
+                                        <field name="s_excedente"/>
+                                    </group>
+                                </form>
+                                <tree>
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="lim_inf"/>
+                                    <field name="lim_sup"/>
+                                    <field name="c_fija"/>
+                                    <field name="s_excedente"/>
+                                </tree>
+                            </field>
+                            <field name="isr_Weekly_subsidy_ids">
+                                <form>
+                                    <group col="4">
+                                        <field name="lim_inf"/>
+                                        <field name="lim_sup"/>
+                                        <field name="s_mensual"/>
+                                    </group>
+                                </form>
+                                <tree>
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="lim_inf"/>
+                                    <field name="lim_sup"/>
+                                    <field name="s_mensual"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </page>
+                    <page string="ISR Decennial">
+                        <group>
+                            <field name="isr_decennial_ids">
+                                <form>
+                                    <group col="4">
+                                        <field name="lim_inf"/>
+                                        <field name="lim_sup"/>
+                                        <field name="c_fija"/>
+                                        <field name="s_excedente"/>
+                                    </group>
+                                </form>
+                                <tree>
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="lim_inf"/>
+                                    <field name="lim_sup"/>
+                                    <field name="c_fija"/>
+                                    <field name="s_excedente"/>
+                                </tree>
+                            </field>
+                            <field name="isr_decennial_subsidy_ids">
+                                <form>
+                                    <group col="4">
+                                        <field name="lim_inf"/>
+                                        <field name="lim_sup"/>
+                                        <field name="s_mensual"/>
+                                    </group>
+                                </form>
+                                <tree>
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="lim_inf"/>
+                                    <field name="lim_sup"/>
+                                    <field name="s_mensual"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </page>
+                    <page string="ISR Biweekly">
+                        <group>
+                            <field name="isr_biweekly_ids">
+                                <form>
+                                    <group col="4">
+                                        <field name="lim_inf"/>
+                                        <field name="lim_sup"/>
+                                        <field name="c_fija"/>
+                                        <field name="s_excedente"/>
+                                    </group>
+                                </form>
+                                <tree>
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="lim_inf"/>
+                                    <field name="lim_sup"/>
+                                    <field name="c_fija"/>
+                                    <field name="s_excedente"/>
+                                </tree>
+                            </field>
+                            <field name="isr_biweekly_subsidy_ids">
+                                <form>
+                                    <group col="4">
+                                        <field name="lim_inf"/>
+                                        <field name="lim_sup"/>
+                                        <field name="s_mensual"/>
+                                    </group>
+                                </form>
+                                <tree>
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="lim_inf"/>
+                                    <field name="lim_sup"/>
+                                    <field name="s_mensual"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </page>
+                    <page string="ISR Monthly">
+                        <group>
+                            <field name="isr_monthly_ids">
+                                <form>
+                                    <group col="4">
+                                        <field name="lim_inf"/>
+                                        <field name="lim_sup"/>
+                                        <field name="c_fija"/>
+                                        <field name="s_excedente"/>
+                                    </group>
+                                </form>
+                                <tree>
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="lim_inf"/>
+                                    <field name="lim_sup"/>
+                                    <field name="c_fija"/>
+                                    <field name="s_excedente"/>
+                                </tree>
+                            </field>
+                            <field name="isr_monthly_subsidy_ids">
+                                <form>
+                                    <group col="4">
+                                        <field name="lim_inf"/>
+                                        <field name="lim_sup"/>
+                                        <field name="s_mensual"/>
+                                    </group>
+                                </form>
+                                <tree>
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="lim_inf"/>
+                                    <field name="lim_sup"/>
+                                    <field name="s_mensual"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </page>
+                    <page string="ISR Annual">
+                        <group>
+                            <field name="isr_annual_ids">
+                                <form>
+                                    <group col="4">
+                                        <field name="lim_inf"/>
+                                        <field name="lim_sup"/>
+                                        <field name="c_fija"/>
+                                        <field name="s_excedente"/>
+                                    </group>
+                                </form>
+                                <tree>
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="lim_inf"/>
+                                    <field name="lim_sup"/>
+                                    <field name="c_fija"/>
+                                    <field name="s_excedente"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </page>
+<!--                    <page string="Exemptions">-->
+<!--                        <group>-->
+<!--                            <group>-->
+<!--                                <field name="pantry_voucher_factor"/>-->
+<!--                                <field name="holiday_bonus_factor"/>-->
+<!--                                <field name="bonus_factor"/>-->
+<!--                                <field name="savings_fund_factor"/>-->
+<!--                                <field name="extra_time_factor"/>-->
+<!--                                <field name="sunday_prime_factor"/>-->
+<!--                                <field name="clearance_factor"/>-->
+<!--                                <field name="factor_ptu"/>-->
+<!--                            </group>-->
+<!--                        </group>-->
+<!--                    </page>-->
+<!--                    <page string="IMSS/INFONAVIT">-->
+<!--                        <group string="INFONAVIT">-->
+<!--                            <group>-->
+<!--                                <field name="infonavit_contribution"/>-->
+<!--                                <field name="umi"/>-->
+<!--                            </group>-->
+<!--&lt;!&ndash;                            <group string="Base salary of maximum contribution">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <field name="sbcm_general"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <field name="sbcm_inv_inf"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </group>&ndash;&gt;-->
+<!--                        </group>-->
+<!--                        <group string="Occupational Risk">-->
+<!--                            <group>-->
+<!--                                <field name="average_active_life"/>-->
+<!--                                <field name="premium_factor"/>-->
+<!--                                <field name="minimum_premium"/>-->
+<!--                                <field name="maximum_premium"/>-->
+<!--                                <field name="maximum_premium_variation"/>-->
+<!--                            </group>-->
+<!--                        </group>-->
+<!--                        <group string="Diseases and Maternity">-->
+<!--                            <group string="Pattern">-->
+<!--                                <field name="em_fixed_fee"/>-->
+<!--&lt;!&ndash;                                <field name="em_surplus_p"/>&ndash;&gt;-->
+<!--                                <field name="em_cash_benefits_p"/>-->
+<!--                                <field name="em_personal_medical_expenses_p"/>-->
+<!--                            </group>-->
+<!--                            <group string="Employee">-->
+<!--&lt;!&ndash;                                <field name="em_surplus_e"/>&ndash;&gt;-->
+<!--                                <field name="em_cash_benefits_e"/>-->
+<!--                                <field name="em_personal_medical_expenses_e"/>-->
+<!--                            </group>-->
+<!--                        </group>-->
+<!--                        <group string="Other branches">-->
+<!--                            <group string="Pattern">-->
+<!--                                <field name="disability_life_p"/>-->
+<!--                                <field name="unemployment_old_age_p"/>-->
+<!--                                <field name="retirement"/>-->
+<!--                                <field name="nursery_social_benefits"/>-->
+<!--                            </group>-->
+<!--                            <group string="Employee">-->
+<!--                                <field name="disability_life_e"/>-->
+<!--                                <field name="unemployment_old_age_e"/>-->
+<!--                            </group>-->
+<!--                        </group>-->
+<!--                    </page>-->
+                </notebook>
+            </sheet>
+         </form>
+       </field>
+    </record>
+
+    <record id="tree_table_settings_view" model="ir.ui.view">
+        <field name="name">table.settings.tree</field>
+        <field name="model">table.settings</field>
+        <field name="arch" type="xml">
+            <tree string="Table Settings">
+               <field name="name"/>
+               <field name="year"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_table_settings" model="ir.actions.act_window">
+        <field name="name">Table Settings</field>
+        <field name="res_model">table.settings</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="tree_table_settings_view" />
+    </record>
+
+    <menuitem
+          id="menu_action_tables"
+          name="Tables"
+          parent="hr_work_entry_contract.menu_hr_payroll_configuration"
+          groups="hr_payroll.group_hr_payroll_user"
+          sequence="21"/>
+
+<!--    <menuitem-->
+<!--          id="menu_action_tables_uma"-->
+<!--          name="UMA Tables"-->
+<!--          action="action_table_uma"-->
+<!--          parent="menu_action_tables"-->
+<!--          sequence="1"/>-->
+
+    <menuitem
+          id="menu_action_table_settings"
+          name="ISR Table"
+          action="action_table_settings"
+          parent="menu_action_tables"
+          sequence="5"/>
+
+    </data>
+</odoo>

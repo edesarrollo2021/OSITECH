@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <!--   Type  High or Reentry    -->
+    <record id="action_report_affiliate_movements" model="ir.actions.client">
+        <field name="name">High or Reentry</field>
+        <field name="tag">employee_report</field>
+        <field name="context" eval="{'model': 'report.affiliate.movements', 'type': '08-ALTA'}"/>
+    </record>
+
+    <!--   Type Salary    -->
+    <record id="action_affiliate_movements_salary" model="ir.actions.client">
+        <field name="name">Salary change</field>
+        <field name="tag">employee_report</field>
+        <field name="context" eval="{'model': 'affiliate.movements.salary', 'type': '07-MOD'}"/>
+    </record>
+
+    <!--   Type Low    -->
+    <record id="action_affiliate_movements_low" model="ir.actions.client">
+        <field name="name">Low</field>
+        <field name="tag">employee_report</field>
+        <field name="context" eval="{'model': 'affiliate.movements.low', 'type': '02-BAJA'}"/>
+    </record>
+
+    <menuitem id="menu_action_report_affiliate_mov"
+              name="Affiliate Movements [ TXT ]"
+              parent="menu_view_history_changes"/>
+
+    <menuitem id="menu_action_report_affiliate_08"
+              name="High or Reentry"
+              action="action_report_affiliate_movements"
+              sequence="5"
+              parent="menu_action_report_affiliate_mov"/>
+
+    <menuitem id="menu_action_report_affiliate_07"
+              name="Salary change"
+              action="action_affiliate_movements_salary"
+              sequence="10"
+              parent="menu_action_report_affiliate_mov"/>
+
+    <menuitem id="menu_action_report_affiliate_02"
+              name="Low"
+              action="action_affiliate_movements_low"
+              sequence="15"
+              parent="menu_action_report_affiliate_mov"/>
+
+    </data>
+</odoo>

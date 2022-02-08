@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <record id="view_hr_job_position_form" model="ir.ui.view">
+        <field name="name">hr.job.position.form</field>
+        <field name="model">hr.job.position</field>
+        <field name="arch" type="xml">
+            <form string="Job Position">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="job_id"/>
+                        </group>
+                        <group>
+                            <field name="employee_id"
+                                   domain="['|', ('job_id', '=', False), ('job_id', '=', job_id)]" readonly="1"/>
+                        </group>
+                    </group>
+                    <notebook colspan="4">
+                        <page string="History">
+                            <field name="history_ids" readonly="1"/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+					<field name="message_follower_ids" widget="mail_followers"/>
+					<field name="activity_ids" widget="mail_activity"/>
+					<field name="message_ids" widget="mail_thread"/>
+				</div>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_hr_job_position_tree" model="ir.ui.view">
+        <field name="name">hr.job.position.tree</field>
+        <field name="model">hr.job.position</field>
+        <field name="arch" type="xml">
+            <tree string="Job Position">
+                <field name="name"/>
+                <field name="employee_id"/>
+                <field name="job_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_hr_job_position" model="ir.actions.act_window">
+        <field name="name">Job Positions</field>
+        <field name="res_model">hr.job.position</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Create your first Job Position
+          </p>
+        </field>
+    </record>
+
+    <!--  Position History  -->
+    <record id="view_hr_job_position_history_form" model="ir.ui.view">
+        <field name="name">hr.job.position.history.form</field>
+        <field name="model">hr.job.position.history</field>
+        <field name="arch" type="xml">
+            <form string="Job Position History">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="date_start"/>
+                            <field name="employee_id"/>
+                        </group>
+                        <group>
+                            <field name="date_end"/>
+                            <field name="position_id"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_hr_job_position_history_tree" model="ir.ui.view">
+        <field name="name">hr.job.position.history.tree</field>
+        <field name="model">hr.job.position.history</field>
+        <field name="arch" type="xml">
+            <tree string="Job Position History">
+                <field name="date_start"/>
+                <field name="date_end"/>
+                <field name="employee_id"/>
+                <field name="position_id" optional="hidden"/>
+            </tree>
+        </field>
+    </record>
+
+    <menuitem
+        id="menu_view_hr_job_position"
+        action="action_hr_job_position"
+        parent="hr.menu_human_resources_configuration"
+        sequence="1"/>
+
+    </data>
+</odoo>

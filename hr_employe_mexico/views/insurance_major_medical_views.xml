@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <record id="view_insurance_major_medical_form" model="ir.ui.view">
+        <field name="name">insurance.major.medical.expenses.form</field>
+        <field name="model">insurance.major.medical.expenses</field>
+        <field name="arch" type="xml">
+            <form string="Insurance Major Medical Expenses">
+                <group col="4">
+                    <field name="employee_id"/>
+                    <field name="date_start"/>
+                    <field name="date_end"/>
+                    <field name="amount"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_insurance_major_medical_tree" model="ir.ui.view">
+        <field name="name">insurance.major.medical.expenses.tree</field>
+        <field name="model">insurance.major.medical.expenses</field>
+        <field name="arch" type="xml">
+            <tree string="Insurance Major Medical Expenses">
+                <field name="employee_id"/>
+                <field name="date_start"/>
+                <field name="date_end"/>
+                <field name="amount"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_insurance_major_medical" model="ir.actions.act_window">
+        <field name="name">Insurance Major Medical Expenses</field>
+        <field name="res_model">insurance.major.medical.expenses</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="menu_insurance_major_medical"
+        name="Insurance Major Medical Expenses"
+        parent="hr.menu_hr_employee_payroll"
+        sequence="14"
+        action="action_insurance_major_medical"/>
+
+    </data>
+</odoo>

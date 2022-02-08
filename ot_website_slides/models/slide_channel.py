@@ -15,6 +15,10 @@ class Channel(models.Model):
     descriptive_picture = fields.Binary(string="Imagen descriptiva")
     user_id = fields.Many2one('res.users', string='Instructor', default=lambda self: self.env.uid)
     vigencia = fields.Char(string="Vigencia")
+    duration = fields.Char(string="Duración")
+    year = fields.Integer(string="Años")
+    month = fields.Integer(string="Meses")
+    days = fields.Integer(string="Días")
     channel_type_mx = fields.Selection([('inicial', 'Inicial'),
                                     ('formativo', 'Formativo'),
                                     ('inducción', 'Inducción'),
@@ -23,7 +27,36 @@ class Channel(models.Model):
                                     ('mandatorio', 'Mandatorio'),
                                     ('otro', 'Otro')], string="Tipo", default="inducción", required=True)
     type_course_ids = fields.One2many('type.course', 'course_id', 'Evaluacion')
-
+    
+    @api.onchange('year','month','days')
+    def duration_completed(self):
+        self.duration = ''
+        if self.year:
+            self.duration += str(self.year) + " Años "
+        if self.month:
+            self.duration += str(self.month) + " Meses "
+        if self.days:
+            self.duration += str(self.days) + " Días "
+            
+    @api.onchange('month','days')
+    def duration_user_error(self):
+        if self.month >= 12:
+            raise UserError("Los Meses no deben de ser igual o mayor a 12 ya que esto se representa con Años")
+        if self.days >= 31:
+            raise UserError("Los Días no deben de ser igual o mayor a 31 ya que esto se representa con Meses")
+            
+            
+    @api.onchange('enroll_group_ids')
+    def slide_visibility(self):
+        if self.enroll_group_ids:
+            self.visibility = 'members'
+        
+            
+    @api.onchange('visibility')
+    def slide_visibility_public(self):
+        if self.visibility == 'public':
+            self.enroll_group_ids = False
+            
     @api.onchange('type_course_ids')
     def _validate_field_type_course_ids(self):
         type_course_ids = self.type_course_ids

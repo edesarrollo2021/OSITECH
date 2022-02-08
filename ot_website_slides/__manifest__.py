@@ -21,17 +21,19 @@
         'ot_theme_blue',
         'website_livechat',
         'survey',
+        'ot_personalized_emails_mx',
     ],
     "data": [
         'templates/ot_web_adresses.xml',
+        'templates/ot_web_my_life.xml',
+        'security/ir.model.access.csv',
+        'security/website_slides_security.xml',
         'data/website_data.xml',
         'data/forum_data.xml',
         'data/ir_config_parameter.xml',
         'data/gamification_karma_rank_data.xml',
-        'data/job_positions.xml',
-        'data/adresses.xml',
-        'security/ir.model.access.csv',
-        'security/website_slides_security.xml',
+        # ~ 'data/job_positions.xml',
+        # ~ 'data/adresses.xml',
         'view/website_templates.xml',
         'view/website_calendar_templates.xml',
         'view/website_forum.xml',
@@ -42,6 +44,8 @@
         'view/slide_channel_views.xml',
         'view/website_slides_templates_homepage.xml',
         'view/ot_constancy.xml',
+        'view/hr_employee_views.xml',
+        'view/hr_department_views.xml',
         'templates/website_delete_elements_templates.xml',
         'templates/web_client_templates.xml',
         'templates/template_welcome_aeromar.xml',
@@ -52,6 +56,10 @@
     'css': [
         '/ot_website_slides/static/src/swiper/css/swiper-tema.css',
         ],
+'qweb': [
+
+        "/ot_website_slides/static/src/xml/ot_website_slides.templates_direcciones.xml",
+    ],
     'odoo-apps' : True
 }
 

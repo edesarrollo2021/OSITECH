@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <record id="hr_employee_affiliate_movements_view_filter" model="ir.ui.view">
+            <field name="name">hr.employee.affiliate.movements.view.filter</field>
+            <field name="model">hr.employee.affiliate.movements</field>
+            <field name="priority" eval="15"/>
+            <field name="arch" type="xml">
+                <search string="Buscar Movimientos Afiliatorios">
+                    <field name="employee_id" filter_domain="[('employee_id','ilike',self)]"/>
+                    <field name="company_id" filter_domain="[('company_id','ilike',self)]"/>
+                    <field name="contract_id" filter_domain="[('contract_id','ilike',self)]"/>
+                    <filter string="Variables" name="variable" domain="[('variable', '=', True)]"/>
+                    <filter string="Altas" name="high" domain="[('type', '=', '08')]"/>
+                    <filter string="Cambio de Salario" name="low" domain="[('type', '=', '07'), ('variable', '=', False)]"/>
+                    <filter string="Bajas" name="low" domain="[('type', '=', '02')]"/>
+                    <separator/>
+                    <group expand="0" string="Group By">
+                        <filter string="Employee" name="group_employee" domain="[]" context="{'group_by':'employee_id'}"/>
+                        <filter name="company_id" domain="[]" context="{'group_by':'company_id'}"/>
+                        <filter name="contract_id" domain="[]" context="{'group_by':'contract_id'}"/>
+                        <filter name="type"  domain="[]" context="{'group_by':'type'}"/>
+                        <filter name="reason_liquidation" string="Reason for liquidation" domain="[]" context="{'group_by':'reason_liquidation'}"/>
+                        <filter name="contracting_regime" string="Contracting Regime" domain="[]" context="{'group_by':'contracting_regime'}"/>
+                        <filter name="origin_move" domain="[]" context="{'group_by':'origin_move'}"/>
+                        <filter name="state" string="State" domain="[]" context="{'group_by':'state'}"/>
+                        <filter string="Move Date" name="date_move" domain="[]" context="{'group_by':'date'}"/>
+                    </group>
+               </search>
+            </field>
+        </record>
+
+    <record id="hr_employee_affiliate_movements_form_view" model="ir.ui.view">
+        <field name="name">hr.employee.affiliate.movements.form.view</field>
+        <field name="model">hr.employee.affiliate.movements</field>
+        <field name="arch" type="xml">
+            <form string="Employee affiliate movements" edit="false" create="false">
+				<header>
+                    <button name="action_cancel" attrs="{'invisible': [('state', 'not in', ('approved', 'draft'))]}" string="Cancel" type="object"/>
+                    <field name="state" widget="statusbar" readonly="1"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="type" />
+							<field name="date" />
+                            <field name="employee_id" readonly="1"/>
+                            <field name="contract_id" readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="reason_liquidation" attrs="{'invisible': [('type','not in', ['02'])]}"/>
+                            <field name="wage"/>
+                            <field name="salary" attrs="{'invisible': [('contracting_regime','!=', '02')]}"/>
+                            <field name="sbc" attrs="{'invisible': [('contracting_regime','!=', '02')]}"/>
+                            <field name="origin_move" attrs="{'invisible': [('contracting_regime','!=', '02')]}"/>
+                            <field name="variable" invisible="1"/>
+                        </group>
+                    </group>
+                    <field name="contracting_regime" invisible="1"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="hr_employee_affiliate_movements_tree" model="ir.ui.view">
+        <field name="name">hr.employee.affiliate.movements.tree</field>
+        <field name="model">hr.employee.affiliate.movements</field>
+        <field name="priority">2</field>
+        <field name="arch" type="xml">
+            <tree string="Employee affiliate movements" decoration-info="state == 'generated'" decoration-success="state == 'approved'" decoration-muted="state == 'draft'" edit="false" create="false">
+                <field name="employee_id"/>
+                <field name="company_id"/>
+                <field name="contract_id"/>
+                <field name="type"/>
+                <field name="state" invisible="1"/>
+                <field name="contracting_regime" invisible="1"/>
+                <button name="action_move_draft" string="No aprobado" states="generated" type="object" icon="fa-times-circle-o" groups="hr.group_hr_user"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="employee_hr_employee_affiliate_movements_action" model="ir.actions.act_window">
+        <field name="name">Employee affiliate movements</field>
+        <field name="res_model">hr.employee.affiliate.movements</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('contracting_regime','in',['02'])]</field>
+        <field name="view_id" ref="hr_employee_affiliate_movements_tree"/>
+    </record>
+
+    <record id="employee_hr_employee_others_movements_action" model="ir.actions.act_window">
+        <field name="name">Movements other contracts</field>
+        <field name="res_model">hr.employee.affiliate.movements</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('contracting_regime','not in',['02'])]</field>
+        <field name="view_id" ref="hr_employee_affiliate_movements_tree"/>
+    </record>
+
+    <menuitem
+        id="menu_hr_employee_affiliate_movements"
+        name="Affiliate movements"
+        action="employee_hr_employee_affiliate_movements_action"
+        parent="menu_view_history_changes"
+        sequence="15"/>
+    
+    <menuitem
+        id="menu_hr_employee_others_movements"
+        name="Movements other contracts"
+        action="employee_hr_employee_others_movements_action"
+        parent="menu_view_history_changes"
+        sequence="20"/>
+
+    </data>
+</odoo>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<templates>
+    <t t-name="employeeReports.buttons">
+        <t t-foreach="buttons" t-as="button">
+            <button type="button" class="btn btn-primary" t-att-action="button.action"><t t-esc="button.name"/> </button>
+        </t>
+        <span style="background-color:transparent"/>
+    </t>
+</templates>

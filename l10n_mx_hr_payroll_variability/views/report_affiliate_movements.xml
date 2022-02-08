@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="search_template_variables">
+            <button t-if="options.get('variable')" type="button" class="o_dropdown_toggler_btn btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+                <span class="fa fa-book"/>
+                        Variable:
+                <div class="o_dropdown_menu dropdown-menu o_filter_menu" role="menu">
+                    <t t-foreach="options['variable']" t-as="j">
+                        <t t-if="j.get('id') == 'divider'">
+                            <div role="separator" class="dropdown-divider"/>
+                            <b role="menuitem" class="ml4 dropdown-item-text"><t t-esc="j.get('name')"/></b>
+                            <div role="separator" class="dropdown-divider"/>
+                        </t>
+                        <t t-if="j.get('id') != 'divider'">
+                            <t t-if="j.get('id') == 'group'">
+                                <a role="menuitem" class="dropdown-item js_account_report_group_choice_filter" data-filter="variable" t-att-data-id="j.get('id')" t-att-data-member-ids="j.get('ids')">
+                                    <t t-esc="j.get('name')"/>
+                                </a>
+                            </t>
+                            <t t-else="">
+                                <a role="menuitem" class="dropdown-item js_account_report_choice_filter" t-att-title="j.get('name')" t-att-data-id="j.get('id')" data-filter="variable">
+                                    <t t-esc="j.get('name')"/>
+                                </a>
+                            </t>
+                        </t>
+                    </t>
+                </div>
+            </button>
+        </template>
+
+        <template id="search_template" inherit_id="hr_employe_mexico.search_template">
+            <xpath expr="." position="inside">
+                <div class="btn-group o_dropdown o_account_reports_filter_variable">
+                    <t t-call="l10n_mx_hr_payroll_variability.search_template_variables"/>
+                </div>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>

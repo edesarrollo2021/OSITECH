@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <record id="act_report_employee_mex_view" model="ir.ui.view">
+        <field name="name">ir.actions.report.mexico</field>
+        <field name="model">ir.actions.report</field>
+        <field name="inherit_id" ref="base.act_report_xml_view"/>
+        <field name="arch" type="xml">
+            <field name='paperformat_id' position="after">
+                <field name="contract"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="mexico_reports_action" model="ir.actions.act_window">
+        <field name="name">Contract reports</field>
+        <field name="res_model">ir.actions.report</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="domain">[('report_type', '=', 'controller'), ('contract', '=', True)]</field>
+        <field name="context">{'default_contract': True}</field>
+        <field name="search_view_id" ref="base.act_report_xml_search_view"/>
+    </record>
+
+    <record model="ir.actions.act_window.view" id="act_kanban_mexico_reports_action">
+        <field eval="99" name="sequence"/>
+        <field name="view_mode">kanban</field>
+        <field name="act_window_id" ref="mexico_reports_action"/>
+        <field name="view_id" ref="report_extend_bf.act_report_xml_kanban_view"/>
+    </record>
+    <record model="ir.actions.act_window.view" id="act_tree_mexico_reports_action">
+        <field name="sequence" eval="100"/>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="base.act_report_xml_view_tree"/>
+        <field name="act_window_id" ref="mexico_reports_action"/>
+    </record>
+    <record model="ir.actions.act_window.view" id="act_form_mexico_reports_action">
+        <field name="sequence" eval="101"/>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="base.act_report_xml_view"/>
+        <field name="act_window_id" ref="mexico_reports_action"/>
+    </record>
+
+    <menuitem
+            id="menu_report_label_employee"
+            name="Reports"
+            parent="hr.menu_human_resources_configuration"
+            groups="base.group_no_one"
+            sequence="1"/>
+
+            <menuitem
+                id="menu_view_report_employee"
+                name="Contract reports"
+                action="mexico_reports_action"
+                parent="menu_report_label_employee"
+                groups="base.group_no_one"
+                sequence="1"/>
+
+    </data>
+</odoo>

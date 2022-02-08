@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="ir.ui.view" id="view_hr_payslip_run_account_form">
+        <field name="name">view.hr.payslip.run.account.form</field>
+        <field name="model">hr.payslip.run</field>
+        <field name="priority">6</field>
+        <field name="inherit_id" ref="hr_payroll.hr_payslip_run_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="action_post_account" type="object" string="Send to Account" states="close" class="oe_highlight"/>
+             </xpath>
+        </field>
+    </record>
+
+    <!-- Department View -->
+
+    <record id="view_department_form_inherit" model="ir.ui.view">
+        <field name="name">hr.department.view.form.inherit</field>
+        <field name="model">hr.department</field>
+        <field name="inherit_id" ref="hr.view_department_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="inside">
+                <group>
+                    <group name="account" groups="analytic.group_analytic_accounting">
+                        <field name="analytic_account_id" domain="['|', ('company_id', '=', company_id), ('company_id', '=', False)]"/>
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+    
+</odoo>

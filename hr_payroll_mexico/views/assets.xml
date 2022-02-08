@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="assets_backend" name="Backend Assets" inherit_id="web.assets_backend">
+		<xpath expr="." position="inside">
+			<script type="text/javascript" src="/hr_payroll_mexico/static/src/js/payroll_lot.js"/>
+			<script type="text/javascript" src="/hr_payroll_mexico/static/src/js/input_import.js"/>
+		</xpath>
+	</template>
+</odoo>

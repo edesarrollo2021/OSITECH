@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="wizard_payslip_variability_view" model="ir.ui.view">
+            <field name="name">wizard.payslip.variability.view</field>
+            <field name="model">wizard.payslip.variability</field>
+            <field name="arch" type="xml">
+                <form edit="false" create="false">
+                    <group>
+                        <field name="date"/>
+                    </group><group>
+                        <field name="structure_ids" widget="many2many_tags"/>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="year"/>
+                        </group>
+                        <group>
+                            <field name="bimestre"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Resultado">
+                            <field name="computed" invisible="1"/>
+                            <field name="compute_lines">
+                                <tree edit="false" create="false" delete="1">
+                                    <field name="ssnid"/>
+                                    <field name="employee_id"/>
+                                    <field name="contract_id" invisible="True"/>
+                                    <field name="perceptions_bimonthly"/>
+                                    <field name="variable_salary"/>
+                                    <field name="current_sdi"/>
+                                    <field name="new_sdi"/>
+                                    <field name="sbc"/>
+                                    <field name="leaves"/>
+                                    <field name="inhabilitys"/>
+                                    <field name="days_bimestre"/>
+                                    <field name="days_worked"/>
+                                    <field name="type_change_salary"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+               <footer>
+                   <button string="Export (XLSX)" name="export_report" type="object"/>
+                    <button string="Calculate" name="calculate" type="object" default_focus="1"/>
+                    <button string="Process" name="process" type="object" attrs="{'invisible': [('computed','=', False)]}" default_focus="1" class="btn-primary"/>
+                    <button string="Cancel" class="btn-default" special="cancel"/>
+                </footer>
+               </form>
+            </field>
+        </record>
+
+        <record id="wizard_payslip_variability_action" model="ir.actions.act_window">
+            <field name="name">Generate variables</field>
+            <field name="res_model">wizard.payslip.variability</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="view_id" ref="wizard_payslip_variability_view"/>
+        </record>
+
+    </data>
+</odoo>

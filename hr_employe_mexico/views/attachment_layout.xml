@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="form_attachment_layout_view" model="ir.ui.view">
+       <field name="name">attachment.layout.form</field>
+       <field name="model">attachment.layout</field>
+       <field name="type">form</field>
+       <field name="arch" type="xml">
+            <form string="Layout">
+                <group>
+                    <field name="name"/>
+                    <field name="attachment_ids" widget="many2many_binary"/>
+                </group>
+            </form>
+       </field>
+    </record>
+
+    <record id="tree_attachment_layout_view" model="ir.ui.view">
+        <field name="name">attachment.layout.tree</field>
+        <field name="model">attachment.layout</field>
+        <field name="arch" type="xml">
+            <tree string="Layout">
+               <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_attachment_layout" model="ir.actions.act_window">
+        <field name="name">Layouts</field>
+        <field name="res_model">attachment.layout</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="tree_attachment_layout_view" />
+    </record>
+
+    <menuitem
+          name="Layouts"
+          parent="hr.menu_hr_root"
+          id="menu_attachment_layout"
+          action="action_attachment_layout"
+          sequence="95"
+      />
+
+</odoo>

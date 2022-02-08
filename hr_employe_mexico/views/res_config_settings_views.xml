@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.pmx.view.form</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="70"/>
+        <field name="inherit_id" ref="hr.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@id='default_company_schedule_setting']" position="after">
+                <div class="col-12 col-lg-6 o_setting_box" id="default_company_schedule_leave_setting">
+                        <div class="o_setting_right_pane">
+                            <label for="resource_calendar_leave_id"/>
+                            <span class="fa fa-lg fa-building-o" title="Values set here are company-specific." role="img" aria-label="Values set here are company-specific." groups="base.group_multi_company"/>
+                            <div class="row">
+                                <div class="text-muted col-lg-8">
+                                    Set the company's default hours to manage your employees' absence time
+                                </div>
+                            </div>
+                            <div class="content-group">
+                                <div class="mt16">
+                                    <field name="resource_calendar_leave_id" required="1"
+                                        class="o_light_label"
+                                        domain="[('company_id', '=', company_id)]"
+                                        context="{'default_company_id': company_id}"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+            </xpath>
+            <xpath expr="//div[@name='employee_rights_setting_container']" position="after">
+                <h2>General Data</h2>
+                    <div class="row mt16 o_settings_container" name="general_employee_container">
+                        <div class="col-12 col-lg-6 o_setting_box" id="general_employee_settings">
+                           <div class="o_setting_right_pane">
+                                <label for="days_factor"/>
+                                <span class="fa fa-lg fa-building-o" title="Values set here are company-specific." role="img" aria-label="Values set here are company-specific." groups="base.group_multi_company"/>
+                                <div class="row">
+                                    <div class="text-muted col-lg-8">
+                                        Set the monthly days factor for payroll calculations
+                                    </div>
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="days_factor" required="1"
+                                            class="o_light_label"
+                                            context="{'default_company_id': company_id}"/> (Days)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box" id="general_employee_settings">
+                           <div class="o_setting_right_pane">
+                                <label for="personal_days_factor"/>
+                                <div class="row">
+                                    <div class="text-muted col-lg-8">
+                                        Number of personal days per year by default for workers
+                                    </div>
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="personal_days_factor" required="1"
+                                            class="o_light_label"/> (Days)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                           <div class="o_setting_right_pane">
+                                <label for="smvdf"/>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="smvdf"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                           <div class="o_setting_right_pane">
+                                <label for="general_uma"/>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="general_uma"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                           <div class="o_setting_right_pane">
+                                <label for="uma"/>
+                                <div class="text-muted">
+                                    Default Measurement and Update Unit (UMA)
+                                </div>
+                                <field name="uma" required="1"/>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                           <div class="o_setting_right_pane">
+                                <label for="umi"/>
+                                <div class="text-muted">
+                                    Default INFONAVIT Mixed Unit
+                                </div>
+                                <field name="umi" required="1"/>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                           <div class="o_setting_right_pane">
+                                <label for="minimum_wage"/>
+                                <div class="text-muted">
+                                    Minimum wage
+                                </div>
+                                <field name="minimum_wage" required="1"/>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                           <div class="o_setting_right_pane">
+                                <label for="minimum_wage_border"/>
+                                <div class="text-muted">
+                                    Minimum wage north border free zone
+                                </div>
+                                <field name="minimum_wage_border" required="1"/>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                           <div class="o_setting_right_pane">
+                                <label for="punctuality_attendance_voucher"/>
+                                <div class="text-muted">
+                                    Configure the monthly amount to be considered to make the payment of the Punctuality and Attendance payment.
+                                </div>
+                                <field name="punctuality_attendance_voucher" required="1"/>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                           <div class="o_setting_right_pane">
+                                <label for="gasoline_voucher"/>
+                                <div class="text-muted">
+                                    Set up the gas voucher.
+                                </div>
+                                <field name="gasoline_voucher" required="1"/>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                           <div class="o_setting_right_pane">
+                                <label for="minimum_triple_compensation"/>
+                                <div class="text-muted">
+                                    Set up the minimum triple compensation.
+                                </div>
+                                <field name="minimum_triple_compensation" required="1"/>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                           <div class="o_setting_right_pane">
+                                <label for="compensation_ro"/>
+                                <div class="text-muted">
+                                    Set up the compensation ro.
+                                </div>
+                                <field name="compensation_ro" required="1"/>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                           <div class="o_setting_right_pane">
+                                <label for="pilots_union_clause"/>
+                                <div class="text-muted">
+                                    Set up the pilots union clause.
+                                </div>
+                                <field name="pilots_union_clause" required="1"/>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                           <div class="o_setting_right_pane">
+                                <label for="aspiring_pilots_union_clause"/>
+                                <div class="text-muted">
+                                    Set up the aspiring pilots union clause.
+                                </div>
+                                <field name="aspiring_pilots_union_clause" required="1"/>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                           <div class="o_setting_right_pane">
+                                <label for="aspiring_pilots_union_clause"/>
+                                <div class="text-muted">
+                                    Set up the pilots retreat.
+                                </div>
+                                <field name="pilots_retreat" required="1"/>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                           <div class="o_setting_right_pane">
+                                <label for="flight_attendant_union_clause"/>
+                                <div class="text-muted">
+                                    Set up Flight attendant union clause.
+                                </div>
+                                <field name="flight_attendant_union_clause" required="1"/>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                           <div class="o_setting_right_pane">
+                                <label for="aspiring_flight_attendant_union_clause"/>
+                                <div class="text-muted">
+                                    Set up the Aspiring flight attendant union clause.
+                                </div>
+                                <field name="aspiring_flight_attendant_union_clause" required="1"/>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                           <div class="o_setting_right_pane">
+                                <label for="flight_attendant_retreat"/>
+                                <div class="text-muted">
+                                    Set up the flight attendant retreat.
+                                </div>
+                                <field name="flight_attendant_retreat" required="1"/>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                           <div class="o_setting_right_pane">
+                                <label for="union_aid"/>
+                                <div class="text-muted">
+                                    Set up the union aid.
+                                </div>
+                                <field name="union_aid" required="1"/>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                           <div class="o_setting_right_pane">
+                                <label for="cultural_sports_evolution"/>
+                                <div class="text-muted">
+                                    Set up the Cultural and sports evolution.
+                                </div>
+                                <field name="cultural_sports_evolution" required="1"/>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                           <div class="o_setting_right_pane">
+                                <label for="union_dues"/>
+                                <div class="text-muted">
+                                    Set up the union_dues.
+                                </div>
+                                <field name="union_dues" required="1"/>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                           <div class="o_setting_right_pane">
+                                <label for="personal_savings_bank"/>
+                                <div class="text-muted">
+                                    Set up the personal savings bank.
+                                </div>
+                                <field name="personal_savings_bank" required="1"/>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                           <div class="o_setting_right_pane">
+                                <label for="social_objective"/>
+                                <div class="text-muted">
+                                    Set up the personal savings bank.
+                                </div>
+                                <field name="social_objective" required="1"/>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                           <div class="o_setting_right_pane">
+                                <label for="minimum_discount_covid_base"/>
+                                <div class="text-muted">
+                                    Amount of monthly base salary to consider the employee for the covib discount.
+                                </div>
+                                <field name="minimum_discount_covid_base" required="1"/>
+                            </div>
+                        </div>
+                    </div>
+            </xpath>
+        </field>
+    </record>
+    
+</odoo>

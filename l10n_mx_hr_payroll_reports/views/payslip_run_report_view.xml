@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <record model="ir.ui.view" id="view_hr_payslip_run_report_form">
+        <field name="name">view.hr.payslip.run.report.form</field>
+        <field name="model">hr.payslip.run</field>
+        <field name="priority">6</field>
+        <field name="inherit_id" ref="hr_payroll.hr_payslip_run_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='action_validate']" position="after">
+                <button name="print_xlsx" type="object" string="Export (XLSX)" states="verify,close" context="{'one_lote': True}" class="oe_highlight" />
+<!--                <button name="%(action_wizard_payroll_run_details_cfdi)d" type="action" string="Print Details CFDI" states="close"/>-->
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_pending_discount_report_payroll">
+        <field name="name">Pending Discount Report</field>
+        <field name="model_id" ref="hr_payroll.model_hr_payslip_run"/>
+        <field name="binding_model_id" ref="hr_payroll.model_hr_payslip_run"/>
+        <field name="state">code</field>
+        <field name="code">
+            if records:
+                action = records.pending_discount_report()
+        </field>
+    </record>
+
+    </data>
+</odoo>

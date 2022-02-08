@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="ot_web_my_life" name="Adresses">
+        <t t-call="website.layout">
+        <div id="ot_web_my_user_life">
+            <div  class="jobs_pos" style="padding-left: 20%; padding-right: 20%; padding-top: 2%; padding-bottom: 2%;">
+                <div id="dddd">
+                    <p t-att-id="number" t-esc="number"/>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="/web/static/lib/jquery/jquery.js"/>
+        <script>
+        $(document).ready(function() {
+            odoo.define('ot_website_slides.ot_my_life_mx', function (require) {
+                var Widget = require('web.Widget');
+                const publicWidget = require('web.public.widget');
+                var ajax = require('web.ajax');
+                var core = require('web.core');
+                var rpc = require('web.rpc');
+                var session = require('web.session');
+                var qweb = core.qweb;
+                publicWidget.registry.otMyLifeMx = publicWidget.Widget.extend({
+                selector: '#ot_web_my_user_life',
+                events: {
+                },
+                start:function(){
+                    console.log("ALFONSO MONRROY AGELVIS");
+                    console.log("ALFONSO MONRROY AGELVIS");
+                    console.log("ALFONSO MONRROY AGELVIS");
+                    this.self= this
+                    this.template = ajax.loadXML('/ot_website_slides/static/src/xml/ot_website_slides.templates_direcciones.xml', qweb);
+                    this._url_my_life()
+                },
+                _url_my_life: function(){
+                return ajax.jsonRpc('/controller_my_life_mx', 'call', {
+                    "id": 2,
+                    })
+                    .then(function (result) {
+                        var container = $('#dddd');
+                        container.replaceWith(qweb.render('ot_website_slides.my_life_user_mx', result))
+                    
+                    });
+                },
+                });
+                return publicWidget.registry.otMyLifeMx;
+            });
+            });
+        </script>
+        </t>
+    </template>
+
+</odoo>

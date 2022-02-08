@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <record id="view_change_salary_tab_form" model="ir.ui.view">
+        <field name="name">change.salary.tab.form</field>
+        <field name="model">change.salary.tab</field>
+        <field name="arch" type="xml">
+        <form string="Change Salary Tab">
+            <group>
+                <group><field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/></group>
+            </group>
+            <group>
+                <group>
+                    <field name="date_from"/>
+                </group>
+                <group>
+                    <field name="date_to"/>
+                </group>
+            </group>
+            <footer>
+                <button name="generate" string="Generate" type="object" class="btn-primary"/>
+                <button string="Cancel" special="cancel" class="btn-default"/>
+            </footer>
+        </form>
+        </field>
+    </record>
+
+    <record id="action_change_salary_tab" model="ir.actions.act_window">
+        <field name="name">Change Salary Tab</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">change.salary.tab</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem
+        id="menu_change_salary_tab"
+        name="Change Salary Tab"
+        parent="hr.menu_hr_employee_payroll"
+        sequence="20"
+        action="action_change_salary_tab"/>
+
+    </data>
+</odoo>

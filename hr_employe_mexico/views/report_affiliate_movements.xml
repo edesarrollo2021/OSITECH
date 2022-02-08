@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <template id="main_template">
+        <div class='o_employee_reports_body'>
+            <div class="o_employee_reports_page o_employee_reports_no_print">
+                <div class="o_employee_reports_header">
+                    <div class="print_only"><h2><t t-esc="report.get('name')"></t></h2></div>
+<!--                    <t t-call="hr_employe_mexico.filter_info_template"/>-->
+                </div>
+                <div class="o_employee_reports_summary"/>
+                <div class="table-responsive">
+                    <table class="o_employee_reports_table table-hover">
+                        <t t-call="{{model._get_templates()['main_table_header_template']}}"/>
+                        <tbody>
+                            <t t-if="lines.get('lines')">
+                                <t t-call="{{model._get_templates()['line_template']}}"/>
+                            </t>
+                        </tbody>
+                    </table>
+                </div>
+<!--                <div class="js_employee_report_footnotes"/>-->
+            </div>
+        </div>
+    </template>
+
+    <template id="line_template">
+        <t t-foreach="lines['lines']" t-as="line">
+            <tr t-attf-class="#{trclass} #{line.get('class', '')} #{'o_js_employee_report_parent_row_unfolded' if line.get('unfolded', False) else ''}"
+                t-att-data-pagebreak="'before' if (line.get('page_break') and context.get('print_mode')) else None"
+                t-att-data-parent-id="line.get('parent_id', False)"
+                t-att="{k: v for k, v in line.items() if k.startswith('data-')}"
+                t-att-style="line.get('style', '')">
+                <td t-att-data-id="line['id']" t-att-class="'o_account_report_line o_account_report_line_indent ' + (line.get('unfoldable') and 'js_account_report_foldable o_foldable_total' or '') + ' ' + line.get('name_class', '')" t-att-data-unfolded="line.get('unfolded', False)"
+                t-att-data-offset="line.get('offset', False)" t-att-data-progress="line.get('progress', False)" t-att-data-remaining="line.get('remaining', False)"
+                >
+                        <t t-if="line.get('unfoldable')">
+                            <span t-att-data-id="line['id']" class="o_employee_reports_caret_icon">
+                                <i class="fa fa-caret-down" t-if="line.get('unfolded')" role="img" aria-label="Unfolded" title="Unfolded"/>
+                                <i class="fa fa-caret-right" t-if="not line.get('unfolded')" role="img" aria-label="Folded" title="Folded"/>
+                            </span>
+                        </t>
+                        <t t-elif="not line.get('caret_options')">
+                            <span t-att-data-id="line['id']" class="o_employee_reports_caret_icon">
+                                <i class="fa fa-caret-right invisible" role="img" aria-label="Unfolded" title="Unfolded"/>
+                            </span>
+                        </t>
+                        <t t-if="not line.get('caret_options')">
+                                <span class="employee_report_line_name" t-att-title="line.get('title_hover')">
+                                    <a t-if="line.get('action_id')" t-att-data-id="line['id']" t-att-data-action-id="line['action_id']" t-att-action="line.get('action', 'execute_action')">
+                                        <t t-esc="line.get('name')"/>
+                                    </a>
+                                    <t t-if="not line.get('action_id')" t-esc="line.get('name')"/>
+                                    <span class="js_account_report_line_footnote" t-att-data-id="line['id']">
+                                        <sup t-if="line.get('footnote')"><b class="o_account_reports_footnote_sup"><a t-att-href="'#footnote'+line['footnote']"></a><t t-esc="line['footnote']"/></b></sup>
+                                    </span>
+                                </span>
+                        </t>
+                        <t t-if="line.get('caret_options')">
+                            <t t-if="not context.get('print_mode')">
+                                <div class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href='#'>
+                                        <span t-att-data-id="line['id']" t-att-class="domainClass" t-att-title="line.get('title_hover')">
+                                            <t t-esc="line.get('name')"/>
+                                        </span>
+                                    </a>
+                                    <span class="js_account_report_line_footnote" t-att-data-id="line['id']"><sup t-if="line.get('footnote')"><b class="o_account_reports_footnote_sup"><a t-att-href="'#footnote'+line['footnote']"></a><t t-esc="line['footnote']"/></b></sup></span>
+                                    <div class="dropdown-menu o_account_reports_domain_dropdown" role="menu">
+                                        <t t-call="account_reports.line_caret_options"/>
+                                        <a role="menuitem" tabindex="-1" t-att-data-id="line['id']" class="dropdown-item js_account_reports_add_footnote">Annotate</a>
+                                    </div>
+                                </div>
+                            </t>
+                            <t t-else="">
+                                <span t-att-data-id="line['id']" t-att-class="domainClass" t-att-title="line.get('title_hover')">
+                                    <t t-esc="line.get('name')"/>
+                                </span>
+                                <span class="js_account_report_line_footnote" t-att-data-id="line['id']"><sup t-if="line.get('footnote')"><b class="o_account_reports_footnote_sup"><a t-att-href="'#footnote'+line['footnote']"></a><t t-esc="line['footnote']"/></b></sup></span>
+                            </t>
+                        </t>
+                </td>
+                <t t-foreach="range(int(line.get('colspan', '1')) - 1)" t-as="l">
+                    <td></td>
+                </t>
+                <t t-set="column_index" t-value="0"/>
+                <t t-foreach="line.get('columns')" t-as="cell">
+                    <t t-set="hierarchies_enabled" t-value="len(lines.get('columns_header', [])) > 1"/>
+                    <td t-att-class="'o_account_report_line ' + (cell.get('class', lines.get('columns_header')[-1][column_index+line.get('colspan', 1)].get('class', '')) + (line.get('unfoldable') and ' o_foldable_total' or '')) + ('' if hierarchies_enabled else ' o_account_report_line_indent')" t-att-style="cell.get('style', lines.get('columns_header')[-1][column_index+line.get('colspan', 1)].get('style', ''))">
+                        <span class="o_account_report_column_value" t-att-title="cell.get('title')">
+                            <t t-call="{{cell.get('template', 'account_reports.cell_template')}}"/>
+                        </span>
+                    </td>
+                    <t t-set="column_index" t-value="column_index + 1"/>
+                </t>
+            </tr>
+        </t>
+    </template>
+
+
+    <template id="main_table_header">
+        <thead class="o_employee_reports_header_hierarchy">
+            <t t-foreach="lines.get('columns_header')" t-as="header_line">
+                <tr>
+                    <t t-foreach="header_line" t-as="cell">
+                        <th t-att-class="'o_employee_report_column_header ' + (cell.get('class', ''))"
+                            t-att-colspan="cell.get('colspan')"
+                            t-att-style="cell.get('style', '')"
+                            t-att-title="cell.get('title')"
+                            t-att-data-toggle="cell.get('data-toggle')">
+                            <t t-call="{{cell.get('template', 'hr_employe_mexico.cell_template')}}"/>
+                        </th>
+                    </t>
+                </tr>
+            </t>
+        </thead>
+    </template>
+
+    <template id="cell_template_show_bug_financial_reports">
+        <span class="fa fa-bug"/>
+    </template>
+
+    <template id="cell_template">
+        <t t-esc="cell.get('name')"/>
+    </template>
+
+
+    <template id="search_template_date_filter">
+        <button type="button" class="o_dropdown_toggler_btn btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+            <span class="fa fa-calendar" title="Dates" role="img" aria-label="Dates"/>
+            <t t-if="options['date'].get('string') and options['date'].get('filter') != 'custom'"><t t-esc="options['date']['string']"/></t>
+            <t t-if="options['date'].get('filter') == 'custom'">
+                <t t-if="options['date']['mode'] == 'single'">Date: <span class="js_format_date"><t t-esc="options['date']['date_to']"/></span></t>
+                <t t-if="options['date']['mode'] == 'range'">From: <span class="js_format_date"><t t-esc="options['date']['date_from']"/></span> <br/><span class="o_reports_date_to">to: <span class="js_format_date"><t t-esc="options['date']['date_to']"/></span></span></t>
+            </t>
+        </button>
+        <div class="dropdown-menu o_filter_menu" role="menu">
+            <t t-if="options['date']['mode'] == 'single'">
+                <a role="menuitem" class="dropdown-item js_account_report_date_filter" title="Today" data-filter="today">Today</a>
+                <a role="menuitem" class="dropdown-item js_account_report_date_filter" title="End of Last Month" data-filter="last_month">End of Last Month</a>
+                <a role="menuitem" class="dropdown-item js_account_report_date_filter" title="End of Last Quarter" data-filter="last_quarter">End of Last Quarter</a>
+            </t>
+            <t t-if="options['date']['mode'] == 'range'">
+                <a role="menuitem" class="dropdown-item js_account_report_date_filter" title="This Month" data-filter="this_month">This Month</a>
+                <a role="menuitem" class="dropdown-item js_account_report_date_filter" title="This Quarter" data-filter="this_quarter">This Quarter</a>
+                <div role="separator" class="dropdown-divider"></div>
+                <a role="menuitem" class="dropdown-item js_account_report_date_filter" title="Last Month" data-filter="last_month">Last Month</a>
+                <a role="menuitem" class="dropdown-item js_account_report_date_filter" title="Last Quarter" data-filter="last_quarter">Last Quarter</a>
+            </t>
+            <div role="separator" class="dropdown-divider"></div>
+            <a role="menuitem" class="dropdown-item js_foldable_trigger o_closed_menu" data-filter='custom_filter_date'>Custom</a>
+            <div class="o_foldable_menu o_closed_menu o_account_report_search" data-filter='custom_filter_date'>
+                <t t-if="options['date']['mode'] == 'range'">
+                    <label class="custom-date" for="date_from">Start Date :</label>
+                    <div class="form-group custom-date">
+                        <div class='o_datepicker js_account_reports_datetimepicker' t-att-data-default-value="options['date']['date_from']">
+                            <input type='text' class="o_datepicker_input" name="date_from" />
+                            <span class="o_datepicker_button"/>
+                        </div>
+                    </div>
+                </t>
+                <label class="custom-date" for="date_to" t-if="options['date']['mode'] == 'single'">End Date :</label>
+                <label class="custom-date" for="date_to" t-if="options['date']['mode'] == 'range'">Date :</label>
+                <div class="form-group custom-date">
+                    <div class='o_datepicker js_account_reports_datetimepicker' t-att-data-default-value="options['date']['date_to']">
+                        <input type='text' class="o_datepicker_input" name="date_to" />
+                        <span class="o_datepicker_button"/>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-primary js_account_report_date_filter" data-filter="custom">Apply</button>
+            </div>
+        </div>
+    </template>
+
+    <template id="search_template">
+        <div class="btn-group o_dropdown o_account_reports_filter_date" t-if="options.get('date') != None">
+            <t t-call="hr_employe_mexico.search_template_date_filter"/>
+        </div>
+    </template>
+
+    </data>
+</odoo>

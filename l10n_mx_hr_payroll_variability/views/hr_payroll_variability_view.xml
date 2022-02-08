@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="hr_payslip_variability_tree" model="ir.ui.view">
+            <field name="name">hr.payslip.variability.tree</field>
+            <field name="model">hr.payslip.variability</field>
+            <field name="arch" type="xml">
+                <tree string="Variability" sample="1" create="false" edit="false">
+                    <field name="ssnid"/>
+                    <field name="employee_id"/>
+                    <field name="contract_id" invisible="True"/>
+                    <field name="perceptions_bimonthly"/>
+                    <field name="variable_salary"/>
+                    <field name="current_sdi"/>
+                    <field name="new_sdi"/>
+                    <field name="sbc"/>
+                    <field name="leaves"/>
+                    <field name="inhabilitys"/>
+                    <field name="days_worked"/>
+                    <field name="days_bimestre"/>
+                    <field name="bimestre"/>
+                    <field name="year"/>
+                    <field name="type_change_salary"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="hr_payslip_variability_form" model="ir.ui.view">
+            <field name="name">hr.payslip.variability.form</field>
+            <field name="model">hr.payslip.variability</field>
+            <field name="arch" type="xml">
+                <form string="Variability" sample="1" create="false" edit="false">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="employee_id"/>
+                                <field name="ssnid"/>
+                                <field name="contract_id" invisible="True"/>
+                                <field name="perceptions_bimonthly"/>
+                                <field name="current_sdi"/>
+                                <field name="new_sdi"/>
+                                <field name="sbc"/>
+                            </group>
+                            <group>
+                                <field name="leaves"/>
+                                <field name="inhabilitys"/>
+                                <field name="days_worked"/>
+                                <field name="days_bimestre"/>
+                                <field name="bimestre"/>
+                                <field name="year"/>
+                                <field name="type_change_salary"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="hr_payslip_variability_action" model="ir.actions.act_window">
+            <field name="name">Variability</field>
+            <field name="res_model">hr.payslip.variability</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">No se ha calculado variables</p>
+            </field>
+        </record>
+
+        <menuitem name="Variability"
+                  id="hr_payslip_variability_root"
+                  parent="hr.menu_hr_employee_payroll"
+                  sequence="100"/>
+
+        <menuitem name="Calculated variables"
+                  id="hr_payslip_variability"
+                  parent="hr_payslip_variability_root"
+                  sequence="5"
+                  action="hr_payslip_variability_action"/>
+
+        <menuitem name="Generate variables"
+                  id="hr_payslip_variability_generate"
+                  parent="hr_payslip_variability_root"
+                  sequence="10"
+                  action="l10n_mx_hr_payroll_variability.wizard_payslip_variability_action"/>
+
+    </data>
+</odoo>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        
+        <record id="view_wizard_file_download_form" model="ir.ui.view">
+            <field name="name">Report</field>
+            <field name="model">wizard.file.download</field>
+            <field name="arch" type="xml">
+                <form string="Download Report">
+                    <div class="alert alert-info text-center" role="alert" style="margin-bottom:0px;">
+                        The file was generated correctly, proceed to download it.
+                    </div>
+                    <group>
+                        <field name="file" readonly="1" filename="name"/>
+                        <field name="name" invisible="1"/>
+                    </group>
+                    <footer>
+                        <button string="Close" class="oe_link" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+        
+<!--        <record id="action_wizard_file_download" model="ir.actions.act_window">-->
+<!--            <field name="name">Download Report</field>-->
+<!--            <field name="view_id" ref="view_wizard_file_download_form"/>-->
+<!--            <field name="view_type">form</field>-->
+<!--            <field name="view_mode">form</field>-->
+<!--            <field name="res_model">wizard.file.download</field>-->
+<!--            <field name="target">new</field>-->
+<!--        </record>-->
+
+   </data>
+</odoo>

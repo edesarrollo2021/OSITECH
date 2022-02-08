@@ -3,155 +3,64 @@
 
     <template id="ot_web_adresses" name="Adresses">
         <t t-call="website.layout">
-            <form>
-                <div class="container-fluid row" style="padding-left: 20%;">
-                    <t t-set="val" t-value="1"/>
+            <div id="ot_web_adresses_mx">
+                <div id="div_mx" class="row" style="padding-left: 20%; padding-right: 20%; padding-top: 2%; padding-bottom: 2%;">
                     <t t-foreach="addresses" t-as="add">
-                         <a t-attf-href="direcciones/##{val}">
-                              <section>
-                                <div class="col-lg-40" style="margin: 5%">
-                                    <img class="img-fluid o_we_custom_image m-3 d- mx-auto" t-attf-src="data:image/*;base64,{{add.image}}"/>
-                                </div>
-                              </section>
-                         </a>
-                   <t t-set="val" t-value="val + 1"/>
+                        <div class="bt_class col-4" style="display: block; width: 100% !important; height: auto !important;" data-name="string">
+                            <img t-att-id="add.id"
+                                 class="img-fluid o_we_custom_image m-3 d- mx-auto"
+                                t-attf-src="data:image/*;base64,{{add.image}}"/>
+                        </div>
                     </t>
                 </div>
-                
-                <div id="1" class="oe_structure oe_empty">
-                      <div class="container-fluid row">
-                        <div class="pt16 pb16 col-lg-5 offset-lg-1 o_colored_level">
-                          <img src="/ot_website_slides/static/src/img/recurso_78.jpg" class="img img-fluid mx-auto"/>
-                        </div>
-                        <div class="pt16 pb16 o_colored_level col-lg-4">
-                          <h2 style="text-align: center; ">Bienvenido</h2>
-                          <h5 style="text-align: center; ">
-                            <span style="color: rgb(0, 0, 0); font-family: Calibri, sans-serif; line-height: 15.6933px;">La Dirección General te invita a seleccionar el puesto que te corresponde para conocer tu plan de vida y carrera.</span>
-                            <span style="color: rgb(0, 0, 0); font-size: medium;"/>
-                            <br/>
-                          </h5>
-                       </div>
-                     </div>
-                     <div class="row align-items-center s_text_image pt32 o_colored_level pb40" style="padding-left: 20%;">
-                        <t t-foreach="addresses[0]" t-as="add">
-                            <t t-foreach="add.job_positions_ids[0]" t-as="job">
-                                <section>
-                                  <div class="container row">
-                                        <div class="col-lg-4 text-center">
-                                        </div>
-                                        <div class="col-lg-4 text-center">
-                                            <img class="img-fluid o_we_custom_image m-3 d- mx-auto" t-attf-src="data:image/*;base64,{{add.job_positions_ids[0].image}}"/>
-                                            <h5 t-esc="add.job_positions_ids[0].name"></h5>
-                                        </div>
-                                        <div class="col-lg-4 text-center">
-                                        </div>
-                                        <div class="s_allow_columns">
-                                          <h3 style="font-size: 1.97754rem; text-align: center;">
-                                            <font style="color: rgb(155, 155, 160);">_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _</font>
-                                          </h3>
-                                        </div>
-                                   
-                                    </div>
-                                </section>
-                                <section>
-                                    <div class="container row">
-                                        <div class="col-lg-4 text-center">
-                                            <img class="img-fluid o_we_custom_image m-3 d- mx-auto" t-attf-src="data:image/*;base64,{{add.job_positions_ids[1].image}}"/>
-                                            <h5 t-esc="add.job_positions_ids[1].name"></h5>
-                                        </div>
-                                        <div class="col-lg-4 text-center">
-                                            <img class="img-fluid o_we_custom_image m-3 d- mx-auto" t-attf-src="data:image/*;base64,{{add.job_positions_ids[2].image}}"/>
-                                            <h5 t-esc="add.job_positions_ids[2].name"></h5>
-                                        </div>
-                                        <div class="col-lg-4 text-center">
-                                            <img class="img-fluid o_we_custom_image m-3 d- mx-auto" t-attf-src="data:image/*;base64,{{add.job_positions_ids[3].image}}"/>
-                                            <h5 t-esc="add.job_positions_ids[3].name"></h5>
-                                        </div>
-                                        <div class="s_allow_columns">
-                                          <h3 style="font-size: 1.97754rem; text-align: center;">
-                                            <font style="color: rgb(155, 155, 160);">_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _</font>
-                                          </h3>
-                                        </div>
-                                    </div>
-                                </section>
-                                <section>
-                                    <div class="container row">
-                                        <div class="col-lg-4 text-center">
-                                            <img class="img-fluid o_we_custom_image m-3 d- mx-auto" t-attf-src="data:image/*;base64,{{add.job_positions_ids[4].image}}"/>
-                                            <h5 t-esc="add.job_positions_ids[4].name"></h5>
-                                        </div>
-                                        <div class="col-lg-4 text-center">
-                                            <img class="img-fluid o_we_custom_image m-3 d- mx-auto" t-attf-src="data:image/*;base64,{{add.job_positions_ids[5].image}}"/>
-                                            <h5 t-esc="add.job_positions_ids[5].name"></h5>
-                                        </div>
-                                        <div class="s_allow_columns">
-                                          <h3 style="font-size: 1.97754rem; text-align: center;">
-                                            <font style="color: rgb(155, 155, 160);">_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _</font>
-                                          </h3>
-                                        </div>
-                                    </div>
-                                </section>
-                                <section>
-                                    <div class="container row">
-                                        <div class="col-lg-4 text-center">
-                                            <img class="img-fluid o_we_custom_image m-3 d- mx-auto" t-attf-src="data:image/*;base64,{{add.job_positions_ids[6].image}}"/>
-                                            <h5 t-esc="add.job_positions_ids[6].name"></h5>
-                                        </div>
-                                        <div class="col-lg-4 text-center">
-                                            <img class="img-fluid o_we_custom_image m-3 d- mx-auto" t-attf-src="data:image/*;base64,{{add.job_positions_ids[7].image}}"/>
-                                            <h5 t-esc="add.job_positions_ids[7].name"></h5>
-                                        </div>
-                                        <div class="s_allow_columns">
-                                          <h3 style="font-size: 1.97754rem; text-align: center;">
-                                            <font style="color: rgb(155, 155, 160);">_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _</font>
-                                          </h3>
-                                        </div>
-                                    </div>
-                                </section>
-                                <section>
-                                    <div class="container row">
-                                        <div class="col-lg-4 text-center">
-                                            <img class="img-fluid o_we_custom_image m-3 d- mx-auto" t-attf-src="data:image/*;base64,{{add.job_positions_ids[8].image}}"/>
-                                            <h5 t-esc="add.job_positions_ids[8].name"></h5>
-                                        </div>
-                                        <div class="col-lg-4 text-center">
-                                            <img class="img-fluid o_we_custom_image m-3 d- mx-auto" t-attf-src="data:image/*;base64,{{add.job_positions_ids[9].image}}"/>
-                                            <h5 t-esc="add.job_positions_ids[9].name"></h5>
-                                        </div>
-                                        <div class="s_allow_columns">
-                                          <h3 style="font-size: 1.97754rem; text-align: center;">
-                                            <font style="color:#FFFFFF">_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _</font>
-                                          </h3>
-                                        </div>
-                                    </div>
-                                </section>
-                                <section>
-                                    <div class="container row">
-                                        <div class="col-lg-4 text-center">
-                                            <img class="img-fluid o_we_custom_image m-3 d- mx-auto" t-attf-src="data:image/*;base64,{{add.job_positions_ids[10].image}}"/>
-                                            <h5 t-esc="add.job_positions_ids[10].name"></h5>
-                                        </div>
-                                        <div class="col-lg-4 text-center">
-                                            <img class="img-fluid o_we_custom_image m-3 d- mx-auto" t-attf-src="data:image/*;base64,{{add.job_positions_ids[11].image}}"/>
-                                            <h5 t-esc="add.job_positions_ids[11].name"></h5>
-                                        </div>
-                                        <div class="col-lg-4 text-center">
-                                            <img class="img-fluid o_we_custom_image m-3 d- mx-auto" t-attf-src="data:image/*;base64,{{add.job_positions_ids[12].image}}"/>
-                                            <h5 t-esc="add.job_positions_ids[12].name"></h5>
-                                        </div>
-                                        <div class="s_allow_columns">
-                                          <h3 style="font-size: 1.97754rem; text-align: center;">
-                                            <font style="color: rgb(155, 155, 160);">_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _</font>
-                                          </h3>
-                                        </div>
-                                    </div>
-                                </section>
-                            </t>
-                        </t>
-                     </div>
-                </div>
-            </form>
+            </div>
+
+            <script type="text/javascript" src="/web/static/lib/jquery/jquery.js"/>
+            <script>
+            $(document).ready(function() {
+                odoo.define('ot_website_slides.ot_register_employee_mx', function (require) {
+                    var Widget = require('web.Widget');
+                    const publicWidget = require('web.public.widget');
+                    var ajax = require('web.ajax');
+                    var core = require('web.core');
+                    var rpc = require('web.rpc');
+                    var session = require('web.session');
+                    var qweb = core.qweb;
+                    publicWidget.registry.otRegisterEmployee = publicWidget.Widget.extend({
+                    selector: '#ot_web_adresses_mx',
+                    events: {
+                        'click .bt_class': '_url_adresses',
+                        'click .jobs_pos': '_url_my_life',
+                    },
+                    start:function(){
+                        this.self= this
+                        this.template = ajax.loadXML('/ot_website_slides/static/src/xml/ot_website_slides.templates_direcciones.xml', qweb);
+                    },
+                    _url_adresses: function(e){
+                    return ajax.jsonRpc('/adresses_mx', 'call', {
+                        "id": e.target.id,
+                        })
+                        .then(function (result) {
+                        var container = $('#div_mx');
+                            container.replaceWith(qweb.render('ot_website_slides.warning_format_number', result))
+                        });
+                    },
+                    _url_my_life: function(e){
+                    return ajax.jsonRpc('/my_life_mx', 'call', {
+                        "id": e.target.id,
+                        })
+                        .then(function (result) {
+                        var container = $('#jobs_position');
+                            container.replaceWith(qweb.render('ot_website_slides.my_life_mx', result))
+                        
+                        });
+                    },
+                    });
+                    return publicWidget.registry.otRegisterEmployee;
+                });
+                });
+            </script>
         </t>
     </template>
-    
+
 </odoo>

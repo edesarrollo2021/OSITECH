@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <record id="view_annual_isr_adjustment_tree" model="ir.ui.view">
+        <field name="name">annual.isr.adjustment.tree</field>
+        <field name="model">annual.isr.adjustment</field>
+        <field name="arch" type="xml">
+            <tree string="Annual ISR Adjustment">
+                <field name="year"/>
+                <field name="company_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_annual_isr_adjustment_form" model="ir.ui.view">
+        <field name="name">annual.isr.adjustment.form</field>
+        <field name="model">annual.isr.adjustment</field>
+        <field name="arch" type="xml">
+            <form string="Annual ISR Adjustment">
+                <header>
+                    <widget name="adjustment_lot" attrs="{'invisible': ['|', ('line_ids', '=', []), ('state', '!=', 'verify')]}"/>
+                    <widget name="adjustment_lot" recompute="True" attrs="{'invisible': ['|', ('line_ids', '=', []), ('state', '!=', 'calculated')]}"/>
+                    <button name="%(action_isr_adjustment_employee3)d" type="action" string="Generate Lines"
+                        context="{'company_id': company_id, 'year': year, 'default_adjustment_id': active_id, 'struct': structure_type_id}"/>
+                    <button string="Approve" name="aproved_isr_adjustment" type="object" class="oe_highlight" states="calculated"/>
+                    <button string="Reopen" name="change_verified" type="object" class="oe_highlight" states="approved"/>
+                    <field name="state" widget="statusbar" readonly="1"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="year" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="table_id" attrs="{'readonly': [('state', '=', 'approved')]}"/>
+                            <field name="project_december" attrs="{'readonly': [('state', '=', 'approved')]}"/>
+                            <field name="period_ids" attrs="{'readonly': [('state', '=', 'approved')],
+                                                             'required': [('project_december', '=', True)],
+                                                             'invisible': [('project_december', '=', False)]}" 
+                                                     domain="[('type','=','ordinary'),('state','!=','close'),('month','=','12')]" widget="many2many_tags"/>
+                            <field name="project_bonuses" attrs="{'readonly': [('state', '=', 'approved')]}"/>
+                        </group>
+                        <group>
+                            <field name="structure_type_id" required="1"/>
+                            <field name="seniority_premium" attrs="{'readonly': [('state', '=', 'approved')],
+                                                             'invisible': [('project_december', '=', False)]}" />
+                            <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"
+                                   attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                        </group>
+                    </group>
+                    <group string="Annual ISR Adjustment Line">
+                        <field name="line_ids" readonly="0" nolabel="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+     <record id="view_annual_isr_adjustment_line_tree" model="ir.ui.view">
+        <field name="name">annual.isr.adjustment.line.tree</field>
+        <field name="model">annual.isr.adjustment.line</field>
+        <field name="arch" type="xml">
+            <tree string="Annual ISR Adjustment Line">
+                <field name="employee_id"/>
+                <field name="contract_id" invisible="1"/>
+                <field name="total_gross"/>
+                <field name="total_taxed"/>
+                <field name="isr_withheld"/>
+                <field name="adjustment_paid"/>
+                <field name="calculated" invisible="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_annual_isr_adjustment_line_form" model="ir.ui.view">
+        <field name="name">annual.isr.adjustment.line.form</field>
+        <field name="model">annual.isr.adjustment.line</field>
+        <field name="arch" type="xml">
+            <form string="Annual ISR Adjustment Line" create="0" edit="0">
+                <group>
+                    <group>
+                        <field name="contract_id" readonly="1"/>
+                        <field name="total_taxed" readonly="1"/>
+                        <field name="isr_withheld" readonly="1"/>
+<!--
+                        <field name="projected_periods" readonly="1"/>
+                        <field name="total_annual_perceptions" readonly="1"/>
+-->
+
+                    </group>
+                    <group>
+                        <field name="employee_id" readonly="1"/>
+                        <field name="calculated" readonly="1"/>
+                        <field name="adjustment_paid" readonly="1"/>
+                        <field name="total_gross" readonly="1"/>
+<!--
+                        <field name="total_annual_taxed" readonly="1"/>
+                        <field name="total_annual_perceptions" readonly="1"/>
+                        <field name="total_annual_taxed" readonly="1"/>
+                        <field name="annual_isr" readonly="1"/>
+                        <field name="annual_subsidy" readonly="1"/>
+-->
+                    </group>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_annual_isr_adjustment_form" model="ir.actions.act_window">
+        <field name="name">Annual ISR Adjustment</field>
+        <field name="res_model">annual.isr.adjustment</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem action="action_annual_isr_adjustment_form"
+              id="menu_annual_isr_adjustment"
+              parent="hr_payroll.menu_hr_payroll_employees_root"
+              sequence="40"/>
+
+    <record id="action_annual_isr_adjustment_line_form" model="ir.actions.act_window">
+        <field name="name">Annual ISR Adjustment Line</field>
+        <field name="res_model">annual.isr.adjustment.line</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem action="action_annual_isr_adjustment_line_form"
+              id="menu_annual_isr_adjustment_line"
+              parent="hr_payroll.menu_hr_payroll_employees_root"
+              sequence="50"/>
+
+    </data>
+</odoo>

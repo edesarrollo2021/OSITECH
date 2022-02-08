@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <template id="search_template_history_filter">
+        <button type="button" class="o_dropdown_toggler_btn btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+            <span class="fa fa-bar-chart"/> Filter:
+            <t t-if="options['filters_leave'].get('string') and options['filters_leave'].get('filter') != 'custom'"><t t-esc="options['filters_leave']['string']"/></t>
+        </button>
+        <div class="dropdown-menu o_filter_menu" role="menu">
+            <a role="menuitem" title="No Filter" data-filter="no_filter" class="dropdown-item js_leave_report_filter">No Filter</a>
+            <div role="separator" class="dropdown-divider"></div>
+            <a role="menuitem" class="dropdown-item js_foldable_trigger o_closed_menu" data-filter='enrollment_filter'>Employee Enrollment</a>
+            <div class="o_foldable_menu o_closed_menu o_account_report_search" data-filter='enrollment_filter'>
+                <label for="enrollment_number">Enrollment :</label><br />
+                <input type="text" name="enrollment_number" t-att-value="options['filters_leave'].get('enrollment')"/><br />
+                <button type="button" class="btn btn-primary js_leave_report_filter" data-filter='enrollment_empl'>Apply</button>
+            </div>
+            <div role="separator" class="dropdown-divider"></div>
+            <a role="menuitem" class="dropdown-item js_foldable_trigger o_closed_menu" data-filter='employee_filter'>Employee Name</a>
+            <li class="o_foldable_menu o_closed_menu o_account_report_search" data-filter='employee_filter'>
+                <label for="employee_name">Employee :</label><br />
+                <input type="text" name="employee_name" t-att-value="options['filters_leave'].get('period')"/><br />
+                <button type="button" class="btn btn-primary js_leave_report_filter" data-filter='employee'>Apply</button>
+            </li>
+            <div role="separator" class="dropdown-divider"></div>
+            <a role="menuitem" class="dropdown-item js_foldable_trigger o_closed_menu" data-filter='period_filter'>Period</a>
+            <li class="o_foldable_menu o_closed_menu o_account_report_search" data-filter='period_filter'>
+                <label for="period_number">Period :</label><br />
+                <input type="text" name="period_number" t-att-value="options['filters_leave'].get('period')"/><br />
+                <button type="button" class="btn btn-primary js_leave_report_filter" data-filter='period'>Apply</button>
+            </li>
+            <div role="separator" class="dropdown-divider"></div>
+            <a role="menuitem" class="dropdown-item js_foldable_trigger o_closed_menu" data-filter='address_filter'>Direction</a>
+            <li class="o_foldable_menu o_closed_menu o_account_report_search" data-filter='address_filter'>
+                <label for="address_name">Direction :</label><br />
+                <input type="text" name="address_name" t-att-value="options['filters_leave'].get('address')"/><br />
+                <button type="button" class="btn btn-primary js_leave_report_filter" data-filter='address'>Apply</button>
+            </li>
+        </div>
+    </template>
+
+    <template id="search_template" inherit_id="hr_employe_mexico.search_template">
+        <xpath expr="." position="inside">
+            <div class="btn-group o_dropdown" t-if="options.get('filters_leave') != None">
+                <t t-call="hr_holidays_edi_mx.search_template_history_filter"/>
+            </div>
+        </xpath>
+    </template>
+
+
+    </data>
+</odoo>

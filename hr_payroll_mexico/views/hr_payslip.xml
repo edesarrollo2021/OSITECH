@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        
+    <record model="ir.ui.view" id="hr_payroll_account.hr_payslip_view_form">
+        <field name="name">hr.payslip.inherit.form</field>
+        <field name="model">hr.payslip</field>
+        <field name="inherit_id" ref="hr_payroll.view_hr_payslip_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='action_payslip_done']" position="replace">
+                <button string="Create Draft Entry" name="action_payslip_done" type="object" invisible="1" class="oe_highlight" context="{'payslip_generate_pdf': True}"/>
+            </xpath>
+            <field name="paid" position="after">
+                <field name="date"/>
+                <field name="journal_id" required="1"/>
+                <field name="move_id" readonly="1"/>
+            </field>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_hr_payslip_mexico_form">
+        <field name="name">hr.payslip.inherit.mexico</field>
+        <field name="model">hr.payslip</field>
+        <field name="priority">6</field>
+        <field name="inherit_id" ref="hr_payroll.view_hr_payslip_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='action_print_payslip']" position="replace">
+<!--                <button string="run" name="run_example" type="object"/>-->
+            </xpath>
+            <xpath expr="//button[@name='refund_sheet']" position="replace">
+                <button string="Refund" name="refund_sheet" states="done" type='object' invisible="1"/>
+            </xpath>
+            <xpath expr="//button[@name='action_payslip_cancel']" position="replace">
+                <button string="Cancel Payslip" name="action_payslip_cancel" type="object" states="draft,verify"/>
+                <button string="Draft Payslip" name="action_payslip_draft" type="object" states="verify"/>
+            </xpath>
+            <xpath expr="//button[@name='compute_sheet']" position="replace">
+            </xpath>
+            <xpath expr="//button[@name='action_refresh_from_work_entries']" position="replace">
+                <button string="Recompute" name="action_refresh_from_work_entries" type="object" title="Recompute the worked days lines and the payslip lines and input Lines" attrs="{'invisible': ['|', ('state', 'not in', ['draft', 'verify']), ('employee_id', '=', False)]}"/>
+                <button string="CFDI Generate" name="action_cfdi_nomina_generate" type="object" attrs="{'invisible': ['|','|',('state', '!=', 'done'),('contracting_regime', 'in', ['05']),('invoice_status', 'in', ['right_bill'])]}"/>
+            </xpath>
+            <xpath expr="//field[@name='number']" position="attributes">
+                <attribute name="string">Folio</attribute>
+                <attribute name="readonly">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='line_ids']//tree" position="attributes">
+                <attribute name="limit">200</attribute>
+            </xpath>
+            <xpath expr="//form" position="attributes">
+                <attribute name="create">0</attribute>
+                <attribute name="edit">0</attribute>
+            </xpath>
+            
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <div class="alert alert-danger" attrs="{'invisible':[('computed_error','=',False)]}">
+                  <strong><field name="payslip_error"/></strong>
+                </div>
+                <field name="computed_error" invisible="1"/>
+                <field name="calculated" invisible="1"/>
+            </xpath>
+            
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="payroll_period_id" attrs="{'readonly': [('state', 'not in', ['draft', 'verify'])]}"/>
+                <field name="code" readonly="1"/>
+                <field name="code_payslip" readonly="1"/>
+                <field name="payment_date"/>
+                <field name="contracting_regime"/>
+                <field name="payroll_type"/>
+                <field name="year" readonly="1"/>
+                <field name="payroll_month" readonly="1"/>
+                <field name="payroll_period" readonly="1"/>
+                <field name="taxable_month" invisible="0"/>
+                <field name="subsidy_month" invisible="0"/>
+                <field name="isr_month" invisible="0"/>
+                <field name="subsidy_caused_month" invisible="0"/>
+                <field name="infonavit_amount_bimester" invisible="0"/>
+            </xpath>
+            <xpath expr="//field[@name='line_ids']//tree//field[@name='amount']" position="before">
+                <field name="days"/>
+                <field name="tax_amount"/>
+                <field name="isn_amount"/>
+                <field name="pending_amount"/>
+            </xpath>
+            <xpath expr="//field[@name='line_ids']//tree//field[@name='salary_rule_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='line_ids']//tree//field[@name='rate']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='line_ids']//tree//field[@name='quantity']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='line_ids']//form//field[@name='amount']" position="after">
+                <field name="pending_amount"/>
+            </xpath>
+            <xpath expr="//field[@name='struct_id']" position="after">
+                <field name="type_struct_id"/>
+            </xpath>
+            <xpath expr="//notebook" position="inside">
+               <page string="CFDI" attrs="{'invisible': [('contracting_regime', '=', '05')]}" name="cfdi">
+                   <group>
+                        <group string="CFDI Data">
+                            <field name="way_pay" readonly="1"/>
+                            <field name="type_voucher" string="Type of Voucher" readonly="1"/>
+                            <field name="payment_method" readonly="1"/>
+                            <field name="cfdi_use" readonly="1"/>
+                         </group>
+                   </group>
+                   <group string="Details">
+                        <field name="invoice_status"/>
+                        <field name="code_error"/>
+                        <field name="error"/>
+                   </group>
+                   <field name="cfdi_ids">
+                           <tree>
+                                <field name="invoice_status"/>
+                                <field name="cfdi_issue_date"/>
+                                <field name="uuid_sat"/>
+                           </tree>
+                           <form>
+                                <header>
+                                    <button string="Cancel CFDI" name="action_cfdi_nomina_cancel" type="object" attrs="{'invisible': [('invoice_status', '!=', 'right_bill')]}"/>
+                                </header>
+                                <group string="Details">
+                                    <field name="invoice_status"/>
+                                    <field name="certificate_number"/>
+                                    <field name="certificate_number_emisor"/>
+                                    <field name="stamp_cfd" invisible="1"/>
+                                    <field name="stamp_sat" invisible="1"/>
+                                    <field name="cfdi_issue_date"/>
+                                    <field name="invoice_date"/>
+                                    <field name="uuid_sat"/>
+                                    <field name="xml_timbre"/>
+                                    <field name="qr_timbre"/>
+                                    <field name="pdf" string="QFDI PDF"/>
+                               </group>
+                           </form>
+                       </field>
+               </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_hr_payslip_mexico_tree" model="ir.ui.view">
+        <field name="name">hr.payslip.tree</field>
+        <field name="model">hr.payslip</field>
+        <field name="inherit_id" ref="hr_payroll.view_hr_payslip_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//tree" position="attributes">
+                <attribute name="create">0</attribute>
+            </xpath>
+            <xpath expr="//tree" position="inside">
+                <field name="invoice_status" widget="badge"
+                       decoration-info="invoice_status == 'invoice_not_generated'"
+                       decoration-warning="invoice_status in ('invoice_not_generated', 'problems_canceled')"
+                       decoration-success="invoice_status == 'right_bill'"/>
+            </xpath>
+        </field>
+    </record>
+    
+     <record model="ir.ui.view" id="view_hr_payslip_line_tree_mx">
+        <field name="name">hr.payslip.line.inherit.mx.form</field>
+        <field name="model">hr.payslip.line</field>
+        <field name="inherit_id" ref="hr_payroll.view_hr_payslip_line_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='amount']" position="after">
+                <field name="pending_amount"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="hr_payroll.hr_payslip_action_view_to_pay" model="ir.actions.act_window">
+        <field name="domain">[('state', 'in', ['draft', 'verify']), ('settlement', '=', False)]</field>
+    </record>
+    <record id="hr_payroll.action_view_hr_payslip_form" model="ir.actions.act_window">
+        <field name="domain">[('settlement', '=', False)]</field>
+    </record>
+    <record id="hr_payroll.action_view_hr_payslip_month_form" model="ir.actions.act_window">
+        <field name="domain">[('settlement', '=', False)]</field>
+    </record>
+
+    <record id="hr_payroll.act_hr_employee_payslip_list" model="ir.actions.act_window">
+        <field name="domain">[('settlement', '=', False)]</field>
+    </record>
+    
+    <record id="view_hr_payslip_error_cfdi_tree" model="ir.ui.view">
+        <field name="name">hr.payslip.tree</field>
+        <field name="model">hr.payslip</field>
+        <field name="arch" type="xml">
+            <tree string="Payslips" js_class="hr_payroll_payslip_tree" sample="1">
+                <field name="employee_id" widget="many2one_avatar_employee"/>
+                <field name="payslip_run_id"/>
+                <field name="date_from"/>
+                <field name="date_to"/>
+                <field name="error"/>
+                <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+                <field name="state" widget="badge" decoration-info="state == 'draft'" decoration-warning="state == 'verify'" decoration-success="state in ('done','paid')"/>
+            </tree>
+        </field>
+    </record>
+    
+
+    <!--  settlement  -->
+    <record id="view_hr_settlement_form" model="ir.ui.view">
+        <field name="name">hr.settlement.form</field>
+        <field name="model">hr.payslip</field>
+        <field name="arch" type="xml">
+            <form string="Settlement">
+            <header>     
+                <button string="Cancel Payslip" name="action_payslip_cancel" type="object" states="draft,verify"/>
+                <button string="Draft Payslip" name="action_payslip_draft" type="object" states="verify,cancel"/>
+                <button string="Recompute" name="action_refresh_from_work_entries" type="object" title="Recompute the worked days lines and the payslip lines and input Lines" attrs="{'invisible': ['|', ('state', 'not in', ['draft', 'verify']), ('employee_id', '=', False)]}"/>
+                <button string="Draft payroll" name="action_payslip_draft" type="object" attrs="{'invisible': ['|','|',('state', '!=', 'done'),('contracting_regime', 'in', ['05']),('invoice_status', 'in', ['right_bill'])]}"/>
+                <button string="Validate" name="action_payslip_done" type="object" states="verify"/>
+                <button string="CFDI Generate" name="action_cfdi_nomina_generate" type="object" attrs="{'invisible': ['|','|',('state', '!=', 'done'),('contracting_regime', 'in', ['05']),('invoice_status', 'in', ['right_bill'])]}"/>
+                <field name="state" widget="statusbar" statusbar_visible="draft,done"/>
+            </header>
+            <sheet>
+                <div class="alert alert-danger" attrs="{'invisible':[('computed_error','=',False)]}">
+                  <strong><field name="payslip_error"/></strong>
+                </div>
+                <field name="computed_error" invisible="1"/>
+                <field name="calculated" invisible="1"/>
+                <div class="oe_button_box" name="button_box"/>
+                <div class="oe_title">
+                    <label for="employee_id" class="oe_edit_only"/>
+                    <h1><field name="employee_id" placeholder="Employee"/></h1>
+                </div>
+                 <div class="alert alert-warning" role="alert" attrs="{'invisible': [('warning_message','=',False)]}">
+                    <field name="warning_message"/>
+                </div>
+                <group col="4">
+                    <field name="payroll_period_id"  required="1" domain="[('type','=','settlement'),('state','=','open')]" attrs="{'readonly': [('state', 'not in', ['draft', 'verify'])]}"/>
+                    <field name="contract_id" domain="[
+                                                        ('employee_id','=',employee_id),
+                                                        ('date_start','&lt;=',date_to),'|',('date_end','&gt;=',date_from),('date_end','=',False),
+                                                        ('contracting_regime','=','02'),
+                                                        ('state','=','open'),
+                                                        ]" context="{'default_employee_id': employee_id}" required="1"/>
+                    <field name="number" string="Folio" readonly="1"/>
+                    <field name="struct_id" required="1" domain="[('settlement','=',True),('type_id','=',type_struct_id)]"/>
+                    <field name="type_struct_id"/>
+                    <field name="wage_type" invisible="1"/>
+                    <field name="name"/>
+                    <field name="payment_date" attrs="{'readonly': [('state', 'not in', ['draft','verify'])]}"/>
+                    <field name="code" readonly="1"/>
+                    <field name="code_payslip" readonly="1"/>
+                    <field name="contracting_regime"/>
+                    <field name="payroll_type" invisible="1"/>
+                    <field name="year" readonly="1"/>
+                    <field name="payroll_month" readonly="1"/>
+                    <field name="payroll_period" readonly="1"/>
+                    <field name="reason_liquidation" required="1" attrs="{'readonly': [('state', 'not in', ['draft','verify'])]}"/>
+                    <field name="ordinary_period" attrs="{'readonly': [('state', 'not in', ['draft','verify'])]}"/>
+                    <label for="date_from" string="Period" invisible="1"/>
+                    <div invisible="1"> 
+                        <field name="date_from" class="oe_inline"/> - <field name="date_to" class="oe_inline"/>
+                    </div>
+                    <field name="sum_worked_hours" invisible="1"/>
+                    <field name="normal_wage" invisible="1"/>
+                    <field name="credit_note" invisible="1"/>
+                    <field name="settlement" invisible="1"/>
+                </group>
+                <group>
+					<group string="Compensation of law">
+						<field name="seniority_premium" attrs="{'readonly': [('state', 'not in', ['draft','verify'])]}"/>
+						<field name="indemnify_employee" attrs="{'readonly': [('state', 'not in', ['draft','verify'])]}"/>
+						<field name="value_type" attrs="{'invisible':[('indemnify_employee','=',False)], 'readonly': [('state', 'not in', ['draft','verify'])]}"/>
+						<field name="days_indemnify" attrs="{'invisible':[('indemnify_employee','=',False)],'readonly': [('state', 'not in', ['draft','verify'])]}"/>
+						<field name="compensation_20" attrs="{'invisible':[('indemnify_employee','=',False)],'readonly': [('state', 'not in', ['draft','verify'])]}"/>
+                        <field name="value_type_20" attrs="{'invisible':['|',('compensation_20','=',False),('indemnify_employee','=',False)], 'readonly': [('state', 'not in', ['draft','verify'])]}"/>
+                        <field name="days_compensation_20" attrs="{'invisible':['|',('compensation_20','=',False),('indemnify_employee','=',False)], 'readonly': [('state', 'not in', ['draft','verify'])]}"/>
+					</group>
+					<group string="Agreement">
+						<field name="agreement_employee" attrs="{'readonly': [('state', 'not in', ['draft','verify'])]}"/>
+						<field name="amount_agreement" attrs="{'readonly': [('state', 'not in', ['draft','verify'])]}"/>
+					</group>
+				</group>
+                <group>
+					<group string="Payroll Lot">
+						<field name="payslip_run_id" domain="[('state', 'in', ['verify']),('type', 'not in', ['ordinary','special']),('structure_id', '=', struct_id)]"/>
+					</group>
+				</group>
+                <notebook>
+                    <page string="Worked Days &amp; Inputs" name="worked_days_input">
+                        <separator string="Worked Days"/>
+                        <field name="worked_days_line_ids">
+                            <tree string="Worked Days" editable="bottom" create="0" delete="0">
+                                <field name="work_entry_type_id" readonly="1" force_save="1"/>
+                                <field name="name"/>
+                                <field name="number_of_days" sum="Total Working Days" readonly="1" force_save="1"/>
+                                <field name="number_of_hours" readonly="1" force_save="1"/>
+                                <field name="amount" readonly="1" sum="Total Amount" force_save="1"/>
+                                <field name="is_paid" invisible="True" readonly="1" force_save="1"/>
+                                <field name="sequence" invisible="True" readonly="1" force_save="1"/>
+                            </tree>
+                            <form string="Worked Day">
+                                <group col="4">
+                                    <field name="work_entry_type_id"/>
+                                    <field name="name"/>
+                                    <field name="sequence"/>
+                                    <field name="number_of_days"/>
+                                    <field name="number_of_hours"/>
+                                    <field name="amount"/>
+                                    <field name="is_paid"/>
+                                    <field name="contract_id"/>
+                                </group>
+                            </form>
+                        </field>
+                        <separator string="Other Inputs"/>
+                        <field name="input_line_ids" colspan="4" nolabel="1">
+                            <tree string="Input Data" editable="bottom">
+                                <field name="payslip_id" invisible="1"/>
+                                <field name="_allowed_input_type_ids" invisible="1"/>
+                                <field name="input_type_id"/>
+                                <field name="amount"/>
+                                <field name="contract_id" invisible="True"/>
+                                <field name="sequence" invisible="True"/>
+                            </tree>
+                            <form string="Payslip Line">
+                                <group col="4">
+                                    <field name="payslip_id" invisible="1"/>
+                                    <field name="_allowed_input_type_ids" invisible="1"/>
+                                    <field name="input_type_id"/>
+                                    <field name="sequence"/>
+                                    <field name="amount"/>
+                                    <field name="contract_id"/>
+                                </group>
+                            </form>
+                        </field>
+                    </page>
+                    <page string="Salary Computation" name="salary_computation">
+                        <field name="line_ids" colspan="4" nolabel="1">
+                            <tree string="Salary Structure" editable="bottom" decoration-info="total == 0" create="0" delete="0" limit="200">
+                                <field name="name"/>
+                                <field name="code" readonly="1" force_save="1"/>
+                                <field name="category_id" readonly="1" force_save="1"/>
+                                <field name="sequence" invisible="1" readonly="1" force_save="1"/>
+                                <field name="days" readonly="1" force_save="1"/>
+                                <field name="tax_amount"/>
+                                <field name="isn_amount"/>
+                                <field name="pending_amount"/>
+                                <field name="amount" readonly="1" force_save="1"/>
+                                <field name="total" readonly="1" force_save="1"/>
+                            </tree>
+                            <form string="Payslip Line">
+                                <group col="4">
+                                    <field name="name"/>
+                                    <field name="code"/>
+                                    <field name="category_id"/>
+                                    <field name="sequence"/>
+                                    <field name="quantity"/>
+                                    <field name="rate"/>
+                                    <field name="days" readonly="1" force_save="1"/>
+                                    <field name="tax_amount"/>
+                                    <field name="isn_amount"/>
+                                    <field name="pending_amount"/>
+                                    <field name="amount"/>
+                                    <field name="total"/>
+                                    <field name="salary_rule_id"/>
+                                </group>
+                            </form>
+                        </field>
+                    </page>
+                    <page string="Accounting Information" name="account_info">
+                        <group>
+                            <group string="Miscellaneous">
+                                <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+                            </group>
+                            <group name="accounting" string="Accounting">
+                                <field name="paid" readonly="1"/>
+                            </group>
+                        </group>
+                        <div colspan="4">
+                            <field name="note" placeholder="Add an internal note..."/>
+                        </div>
+                    </page>
+                    <page string="CFDI" attrs="{'invisible': [('contracting_regime', '=', '05')]}">
+                        <group>
+							<group string="CFDI Data">
+								<field name="way_pay" readonly="1"/>
+								<field name="type_voucher" string="Type of Voucher" readonly="1"/>
+								<field name="payment_method" readonly="1"/>
+								<field name="cfdi_use" readonly="1"/>
+							 </group>
+					   </group>
+                       <group string="Details">
+                            <field name="invoice_status"/>
+                            <field name="code_error"/>
+                            <field name="error"/>
+                       </group>
+                       <field name="cfdi_ids" readonly="1">
+                           <tree>
+                                <field name="invoice_status"/>
+                                <field name="cfdi_issue_date"/>
+                                <field name="uuid_sat"/>
+                           </tree>
+                           <form>
+                               <header>
+                                    <button string="Cancel CFDI" name="action_cfdi_nomina_cancel" type="object" attrs="{'invisible': [('invoice_status', '!=', 'right_bill')]}"/>
+                                </header>
+                                <group string="Details">
+                                    <field name="invoice_status"/>
+                                    <field name="certificate_number"/>
+                                    <field name="certificate_number_emisor"/>
+                                    <field name="stamp_cfd"/>
+                                    <field name="stamp_sat"/>
+                                    <field name="cfdi_issue_date"/>
+                                    <field name="invoice_date"/>
+                                    <field name="uuid_sat"/>
+                                    <field name="xml_timbre"/>
+                                    <field name="qr_timbre"/>
+                                    <field name="pdf" string="QFDI PDF"/>
+                               </group>
+                           </form>
+                       </field>
+                   </page>
+                </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_hr_settlement_tree" model="ir.ui.view">
+        <field name="name">hr.settlement.tree</field>
+        <field name="model">hr.payslip</field>
+        <field name="arch" type="xml">
+            <tree string="Settlements" js_class="hr_payroll_payslip_tree" sample="1">
+                <field name="currency_id" invisible="1"/>
+                <field name="number" decoration-bf="1"/>
+                <field name="employee_id" widget="many2one_avatar_employee"/>
+                <field name="payslip_run_id"/>
+                <field name="date_from"/>
+                <field name="date_to"/>
+                <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+                <field name="basic_wage" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                <field name="net_wage" widget="monetary" options="{'currency_field': 'currency_id'}" decoration-bf="1"/>
+                <field name="state" widget="badge" decoration-info="state == 'draft'" decoration-warning="state == 'verify'" decoration-success="state in ('done','paid')"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_view_hr_settlement_form" model="ir.actions.act_window">
+        <field name="name">Settlements</field>
+        <field name="res_model">hr.payslip</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="domain">[('settlement', '=', True)]</field>
+        <field name="search_view_id" ref="hr_payroll.view_hr_payslip_filter"/>
+        <field name="context">{"default_settlement": 1}</field>
+    </record>
+
+    <record id="action_settlement_view_list" model="ir.actions.act_window.view">
+        <field name="sequence" eval="1"/>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="view_hr_settlement_tree"/>
+        <field name="act_window_id" ref="action_view_hr_settlement_form"/>
+    </record>
+
+    <record id="action_settlement_view_form" model="ir.actions.act_window.view">
+        <field name="sequence" eval="2"/>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_hr_settlement_form"/>
+        <field name="act_window_id" ref="action_view_hr_settlement_form"/>
+    </record>
+
+    <menuitem
+        id="menu_settlement_view_run"
+        action="action_view_hr_settlement_form"
+        name="Settlement"
+        sequence="90"
+        parent="hr_payroll.menu_hr_payroll_payslips"/>
+
+    </data>
+</odoo>

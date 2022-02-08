@@ -9,7 +9,7 @@
     'website': "http://www.ositech.com.mx/",
     'category': 'Uncategorized',
     'version': '0.1',
-    'depends': ['base', 'web', 'website', 'website_slides', 'ot_website_slides'],
+    'depends': ['base', 'web', 'website', 'website_slides'],
     'data': [
         'views/ot_email_template_welcome.xml',
         'views/ot_email_template_type_b_certificate.xml',
