@@ -5,13 +5,12 @@ from odoo.exceptions import UserError
 
 class Addresses(models.Model):
     _name = 'slide.addresses'
+    _rec_name = 'id'
     
-    # ~ def _compute_instructions(self):
-        # ~ self.instructions = 'hola mundo 1'
-
     direction_id = fields.Many2one('hr.department', string="Direcciones", domain=[('elearning', '=', True)])
     image = fields.Binary(string="Imagen", required=True)
     job_positions_ids = fields.One2many('slide.job.positions', 'addresses_id', string="Puestos de trabajo", required=True)
+    image_banner_website = fields.Binary(string="Banner Website", required=True)
 
 class JobPositions(models.Model):
     _name = 'slide.job.positions'

@@ -65,41 +65,37 @@
         <xpath expr="//div[@id='footer']" position="replace">
             <div id="footer" class="o_footer" style="font-size: 18px;">
                 <section>
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-lg-2 pt24" style="padding-left: 80px;">
-                                <img src="/ot_website_slides/static/src/img/logo.png" class="img-fluid" aria-label="Logo of My Company" title="Aeromar" role="img"/>
-                            </div>
-                            <div class="col-lg-9 pt24 pb24">
-                                <p style="font-size: 28px;">Hacemos la diferencia, capacítate con nosotros...</p>
-                                <br></br>
-                                <p style="font-size: 20px;">En la Universidad Aeromar capacitamos a todos nuestros colaboradores para brindar a nuestros pasajeros la mejor experiencia de vuelo.</p>
-                                <br></br>
-                                <p><a class="o_footer" href="https://www.aeromar.mx/es/aviso-de-privacidad">Aviso de privacidad</a></p>
-                            </div>
+                    <div class="container-fluid row">
+                        <div class="col-lg-3" style="padding-left: 80px; padding-top: 2%; padding-bottom: 2%;">
+                            <img src="/ot_website_slides/static/src/img/logo.png" class="img-fluid" aria-label="Logo of My Company" title="Aeromar" role="img"/>
                         </div>
-                    </div>
-                </section>
-                <section>
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-lg-2" style="padding-left: 80px;">
-                                <ul>
-                                    <li><a class="o_footer" href="/">Inicio</a></li>
-                                    <li><a class="o_footer" href="/contactus">Contáctenos</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-9">
-                                <ul class="list-unstyled mb-0">
-                                    <li>
-                                        <i class="fa fa-phone fa-fw mr-2"></i>
-                                        <a class="o_footer" href="tel:+52 55 5133 1107 Ext. 1297">+52 (55) 5133-1107 Ext. 1297</a>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-envelope fa-fw mr-2"></i>
-                                        <a class="o_footer" href="mailto:claudia.martinez@aeromar.com.mx">claudia.martinez@aeromar.com.mx</a>
-                                    </li>
-                                </ul>
+                        <div class="col-lg-9 pt24 pb24">
+                           <center>
+                                <strong><p style="font-size: 50px;">Hacemos la diferencia, capacítate con nosotros...</p></strong>
+                                <br></br>
+                                <p style="font-size: 30px;">En la Universidad Aeromar capacitamos a todos nuestros colaboradores para brindar a nuestros pasajeros la mejor experiencia de vuelo.</p>
+                                <br></br>
+                            </center>
+                            <div class="container-fluid row">
+                                <div>
+                                    <ul>
+                                        <li><a class="o_footer" href="/">Inicio</a></li>
+                                        <li><a class="o_footer" href="/contactus">Contáctenos</a></li>
+                                        <li><a class="o_footer" href="https://www.aeromar.mx/es/aviso-de-privacidad">Aviso de privacidad</a></li>
+                                    </ul>
+                                </div>
+                                <div style="padding-left: 55%;">
+                                    <ul class="list-unstyled mb-0">
+                                        <li>
+                                            <i class="fa fa-phone fa-fw mr-2"></i>
+                                            <a class="o_footer" href="tel:+52 55 5133 1107 Ext. 1297">+52 (55) 5133-1107 Ext. 1297</a>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-envelope fa-fw mr-2"></i>
+                                            <a class="o_footer" href="mailto:claudia.martinez@aeromar.com.mx">claudia.martinez@aeromar.com.mx</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
