@@ -160,11 +160,14 @@ class WebsiteAdresses(http.Controller):
         job_position = request.env['slide.job.positions'].sudo().search([('id', '=', id_add)], limit=1)
         members = request.env['slide.channel'].sudo().search([('enroll_group_ids', 'in', job_position.enroll_group_id.id),('is_published', '=', True)])
         slide_public = request.env['slide.channel'].sudo().search([('visibility', '=', 'public'), ('is_published', '=', True)])
+        image_banner = job_position.addresses_id.image_banner_website
         mandatarios = {}
         public_courses = {}
         name = ""
         acronym = ""
         url = ""
+
+        print("\nimage_banner", image_banner)
 
         for public in slide_public:
             image = public.life_plan_resource
@@ -196,6 +199,7 @@ class WebsiteAdresses(http.Controller):
         'slide_public': slide_public,
         'mandatarios': mandatarios,
         'public_courses': public_courses,
+        'image_banner_website': image_banner,
         }
         return values
 
@@ -208,6 +212,7 @@ class WebsiteAdresses(http.Controller):
         members = request.env['slide.channel'].sudo().search(
             [('enroll_group_ids', 'in', slide_job.enroll_group_id.id), ('is_published', '=', True)])
         slide_public = request.env['slide.channel'].sudo().search([('visibility', '=', 'public'), ('is_published', '=', True)])
+        image_banner = slide_job.addresses_id.image_banner_website
         mandatarios = {}
         public_courses = {}
         name = ""
@@ -243,6 +248,7 @@ class WebsiteAdresses(http.Controller):
             'slide_public': slide_public,
             'mandatarios': mandatarios,
             'public_courses': public_courses,
+            'image_banner_website': image_banner,
         }
 
         return values
