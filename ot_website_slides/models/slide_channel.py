@@ -27,6 +27,7 @@ class Channel(models.Model):
                                     ('mandatorio', 'Mandatorio'),
                                     ('otro', 'Otro')], string="Tipo", default="inducción", required=True)
     type_course_ids = fields.One2many('type.course', 'course_id', 'Evaluacion')
+    life_plan_resource = fields.Binary(string="Imagen plan de vida y carrera")
     
     @api.onchange('year','month','days')
     def duration_completed(self):
