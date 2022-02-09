@@ -32,6 +32,7 @@
                     </div>
                    <field name="duration" invisible="1"/>
                    <field name="vigencia"/>
+                   <field name="life_plan_resource" widget="image"  class="oe_avatar"/>
                 </xpath>
                 <xpath expr="//page[@name='options']//group//field[@name='user_id']" position="attributes">
                     <attribute name="string">Instructor</attribute>
