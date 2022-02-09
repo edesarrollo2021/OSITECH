@@ -24,7 +24,7 @@
                         </field>
                     </group>
                         <p>Instrucciones:</p>
-                        <p>-La jerarquia de los puestos de trabajo deben estar reflejadas de forma numérica de menor a mayor en el campo <strong>Orden</strong>, ya que es esta la jerarquia que se utilizara en la pagina web para representar el organigrama de dichos puestos de trabajo</p>
+                        <p>-La selección de los puestos de trabajo deberá seguir un orden numérico de menor a mayor en el campo <strong>ORDEN</strong>, ya que ésta representa la jerarquía del organigrama de cada dirección dentro de la página web. </p>
                         <p>Ejemplo:</p>
                         <table class="table table-bordered">
                           <thead>
