@@ -19,8 +19,9 @@
             </div>
             <div class="col-lg-4">
                 <h2 style="text-align: center; padding-top: 20%;">Bienvenido</h2>
-                <h5 style="text-align: center;"><span>La <t t-esc="name_addresses"/> te invita a seleccionar el puesto
-                    que te corresponde para conocer tu plan de vida y carrera.</span></h5>
+                <h5 style="text-align: center;">
+                    <span>La <t t-esc="name_addresses"/>
+                    Te invita a seleccionar el puesto que te corresponde para conocer tu plan de vida y carrera.</span></h5>
             </div>
         </div>
 
@@ -61,7 +62,6 @@
     </t>
 
     <t t-name="ot_website_slides.my_life_mx">
-
         <div class="container">
         <div class="row" style="padding-top: 5%;">
          <div class="col-6">
@@ -72,10 +72,9 @@
              <h1>(OJO - ESTATICO) | Gerencia de Operaciones Terrestres</h1>
          </div>
         </div>
-            <div class="col-12" style="padding-top: 5%; padding-bottom: 5%; text-align: center; font-size: 3.09002344rem;">
+            <div class="col-12" style="padding-top: 5%; text-align: center; font-size: 3.09002344rem;">
                 Plan de Vida y Carrera
              </div>
-
             <section name="">
                 <div class="row">
                     <div class="col-lg-12">
@@ -173,7 +172,7 @@
              <h1>(OJO - ESTATICO) | Gerencia de Operaciones Terrestres</h1>
          </div>
         </div>
-            <div class="col-12" style="padding-top: 5%; padding-bottom: 5%; text-align: center; font-size: 48px; ">
+            <div class="col-12" style="padding-top: 5%; text-align: center; font-size: 48px; ">
                 Plan de Vida y Carrera
              </div>
             <section name="">
