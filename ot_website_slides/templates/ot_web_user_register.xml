@@ -94,7 +94,7 @@
                                                        style="border: none; border-bottom: 1px solid black; width:100%; outline: none; margin-right:10px;"
                                                 />
                                                 <div class="input-group-append">
-                                                    <button class="btn btn-secondary" type="button" style="background-color: darkblue;">
+                                                    <button class="btn btn-secondary" type="button" style="background-color:darkblue; color:white;">
                                                         <i class="fa fa-eye"></i>
                                                     </button>
                                                 </div>
