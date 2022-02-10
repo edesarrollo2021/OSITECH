@@ -202,15 +202,13 @@
                                             <font style="color: rgb(13, 16, 20);">Direcciones</font>
                                         </h2>
                                         <h4>
-                                            <font style="color: rgb(13, 16, 20);">¿A qué dirección
-                                                perteneces?</font>
+                                            <font style="color: rgb(13, 16, 20);">
+                                                ¿A qué dirección perteneces?</font>
                                         </h4>
                                         <p>
-                                            <font style="color: rgb(13, 16, 20); font-size: 19.2px;">Haz clic sobre la dirección a
-                                                la
-                                                que perteneces y busca tu puesto para ingresar a tu Plan de Vida
-                                                y
-                                                Carrera.&amp;nbsp;</font>
+                                            <font style="color: rgb(13, 16, 20); font-size: 19.2px;">
+                                                Haz clic sobre la dirección a la que perteneces y busca tu puesto para
+                                                ingresar a tu Plan de Vida y Carrera.&amp;nbsp;</font>
                                         </p>
                                     </div>
                                     <div class="text-center o_colored_level col-lg-2 pb0 pt0">
@@ -272,6 +270,8 @@
                                              src="/ot_website_slides/static/src/img/recurso83.jpg"/>
                                         <img class="img-fluid o_we_custom_image m-3 d-block mx-auto o_animate o_anim_fade_in_right o_animate_both_scroll"
                                              src="/ot_website_slides/static/src/img/recurso86.jpg"/>
+                                        <img class="img-fluid o_we_custom_image m-3 d-block mx-auto o_animate o_anim_fade_in_up o_animate_both_scroll"
+                                             src="/ot_website_slides/static/src/img/log_fondo_blanco.png"/>
                                     </div>
                                 </div>
                             </div>
@@ -287,7 +287,7 @@
                                     <img src="/ot_website_slides/static/src/img/curso_onboarding.jpeg"
                                          style="width:100%; height:auto;"/>
                                 </div>
-                                <div class="col-md-6" style="background-color: rgb(255, 234, 0);">
+                                <div class="col-md-6" style="background-color: #FEDB31 !important;">
                                     <h5 style="text-align: center; padding-top: 25%;">Bienvenido a bordo</h5>
                                     <h2 style="text-align: center;">Cursos Onboarding</h2>
                                     <p style="text-align: center; font-size: 19.2px;">
