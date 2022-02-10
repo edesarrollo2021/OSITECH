@@ -158,11 +158,14 @@ class WebsiteAdresses(http.Controller):
     def ot_my_life_mx_register(self, redirect=None, **kw):
         id_add = kw.get("id")
         job_position = request.env['slide.job.positions'].sudo().search([('id', '=', id_add)], limit=1)
-        members = request.env['slide.channel'].sudo().search([('enroll_group_ids', 'in', job_position.enroll_group_id.id),('is_published', '=', True)])
+        members = request.env['slide.channel'].sudo().search([('enroll_group_ids', 'in', job_position.enroll_group_id.id),('is_published', '=', True), ('complementary', '=', False)])
         slide_public = request.env['slide.channel'].sudo().search([('visibility', '=', 'public'), ('is_published', '=', True)])
         image_banner = job_position.addresses_id.image_banner_website
+        skill_courses = request.env['slide.channel'].sudo().search([('enroll_group_ids', 'in', job_position.enroll_group_id.id),('complementary', '=', True)])
+
         mandatarios = {}
         public_courses = {}
+        skill_courses_add = {}
         name = ""
         acronym = ""
         url = ""
@@ -191,12 +194,25 @@ class WebsiteAdresses(http.Controller):
                 acronym = False
             mandatarios[member.id] = [image, acronym, name, url]
 
+        for skill_course in skill_courses:
+            image = skill_course.life_plan_resource
+            url = "slides/%s"% skill_course.id
+            if "|" in skill_course.name:
+                position_I = skill_course.name.find('|')
+                name = str(skill_course.name)[position_I +1:]
+                acronym = str(skill_course.name)[0: position_I]
+            else:
+                name = skill_course.name
+                acronym = False
+            skill_courses_add[skill_course.id] = [image, acronym, name, url]
+
         values = {
         'image': job_position.addresses_id.image,
         'name': job_position.job_id.name,
         'slide_public': slide_public,
         'mandatarios': mandatarios,
         'public_courses': public_courses,
+        'skill_courses_add': skill_courses_add,
         'image_banner_website': image_banner,
         }
         return values
@@ -210,9 +226,12 @@ class WebsiteAdresses(http.Controller):
         members = request.env['slide.channel'].sudo().search(
             [('enroll_group_ids', 'in', slide_job.enroll_group_id.id), ('is_published', '=', True)])
         slide_public = request.env['slide.channel'].sudo().search([('visibility', '=', 'public'), ('is_published', '=', True)])
+        skill_courses = request.env['slide.channel'].sudo().search(
+            [('enroll_group_ids', 'in', slide_job.enroll_group_id.id), ('complementary', '=', True)])
         image_banner = slide_job.addresses_id.image_banner_website
         mandatarios = {}
         public_courses = {}
+        skill_courses_add = {}
         name = ""
         acronym = ""
 
@@ -240,11 +259,24 @@ class WebsiteAdresses(http.Controller):
                 acronym = False
             mandatarios[member.id] = [image, acronym, name, url]
 
+        for skill_course in skill_courses:
+            image = skill_course.life_plan_resource
+            url = "slides/%s"% skill_course.id
+            if "|" in skill_course.name:
+                position_I = skill_course.name.find('|')
+                name = str(skill_course.name)[position_I +1:]
+                acronym = str(skill_course.name)[0: position_I]
+            else:
+                name = skill_course.name
+                acronym = False
+            skill_courses_add[skill_course.id] = [image, acronym, name, url]
+
         values = {
             'image': slide_job.image,
             'name': job_position.name,
             'slide_public': slide_public,
             'mandatarios': mandatarios,
+            'skill_courses_add': skill_courses_add,
             'public_courses': public_courses,
             'image_banner_website': image_banner,
         }
