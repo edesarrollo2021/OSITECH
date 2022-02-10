@@ -10,10 +10,12 @@ class HrEmployeePrivate(models.Model):
     _inherit = "hr.employee"
     
     def write(self, vals):
-        # ~ print ("vals", vals)
-        # ~ user_id = self.env['res.users'].sudo().search([('login', '=', self.work_email)], limit=1)
-        # ~ user_group = self.env['res.groups'].sudo().search([('users', 'in', user_id.id),('category_id', 'in', category.id)])
-        # ~ res = super(HrEmployeePrivate, self).write(vals)
-        return res
+        if "job_id" in vals:
+            print ("vals", vals)
+            user_id = self.env['res.users'].sudo().search([('login', '=', self.work_email)], limit=1)
+            slide_job = self.env['slide.job.positions'].sudo().search([('job_id', '=', vals.get("job_id"))], limit=1)
+            group = slide_job.enroll_group_id
+            group.write({'users': [[6, False, [user_id.id]]]})
+        return super(HrEmployeePrivate, self).write(vals)
 
   
