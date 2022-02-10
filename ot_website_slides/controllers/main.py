@@ -167,8 +167,6 @@ class WebsiteAdresses(http.Controller):
         acronym = ""
         url = ""
 
-        print("\nimage_banner", image_banner)
-
         for public in slide_public:
             image = public.life_plan_resource
             url_public = "slides/%s" % public.id

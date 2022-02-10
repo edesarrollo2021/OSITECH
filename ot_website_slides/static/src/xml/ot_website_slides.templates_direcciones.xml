@@ -72,7 +72,7 @@
              <h1>(OJO - ESTATICO) | Gerencia de Operaciones Terrestres</h1>
          </div>
         </div>
-            <div class="col-12" style="padding-top: 5%; padding-bottom: 5%; text-align: center;">
+            <div class="col-12" style="padding-top: 5%; padding-bottom: 5%; text-align: center; font-size: 3.09002344rem;">
                 Plan de Vida y Carrera
              </div>
 
@@ -101,7 +101,7 @@
                     <h3 style="padding-bottom: 20px; border-bottom: solid 2px aquamarine; border-bottom-style: dashed;  padding-top: 60px;">
                         <b>Onboarding</b>
                     </h3>
-                    <div class="row" style="padding-bottom: 10%;">
+                    <div class="row">
                         <t t-foreach="public_courses" t-as="public">
                             <div class="col-2">
                             <div class="card bg-white h-100"
@@ -110,15 +110,15 @@
                                 <img class="img-fluid o_we_custom_image m-3 d- mx-auto" style="border-radius:150px; height: 150px; border: solid darkgray 1px;"
                                      t-attf-src="data:image/*;base64,{{public_value[0]}}"/>
                             </div>
-                                <t t-if="public[1]">
+                                <t t-if="public_value[1]">
                                     <div style="text-align: center; font-size:1.97753906rem;"><span><t t-esc="public_value[1]"/></span></div>
                                 </t>
                                 <t t-else="">
                                     <p style="height: 36px;"/>
                                 </t>
 
-                            <div style="text-align: center;"><span><t t-esc="public_value[2]"/></span></div>
-                            <a t-att-href="public_value[3]"
+                            <div style="text-align: center; padding-top: 10px; padding-bottom: 10px;"><span><t t-esc="public_value[2]"/></span></div>
+                            <a t-att-href="public_value[3]" style="padding-top:1%;"
                                class="btn btn-outline-primary rounded-circle btn-lg">Ingresar</a>
                             </div>
                             </div>
@@ -149,8 +149,7 @@
                                 <t t-else="">
                                     <p style="height: 36px;"/>
                                 </t>
-
-                            <div style="text-align: center;"><span><t t-esc="mandatario_value[2]"/></span></div>
+                            <div style="text-align: center; padding-top: 10px; padding-bottom: 10px;"><span><t t-esc="mandatario_value[2]"/></span></div>
                             <a t-att-href="mandatario_value[3]"
                                class="btn btn-outline-primary rounded-circle btn-lg">Ingresar</a>
                             </div>
@@ -177,7 +176,6 @@
             <div class="col-12" style="padding-top: 5%; padding-bottom: 5%; text-align: center; font-size: 48px; ">
                 Plan de Vida y Carrera
              </div>
-
             <section name="">
                 <div class="row">
                     <div class="col-lg-12">
@@ -203,7 +201,7 @@
                     <h3 style="padding-bottom: 20px; border-bottom: solid 2px aquamarine; border-bottom-style: dashed;  padding-top: 60px;">
                         <b>Onboarding</b>
                     </h3>
-                    <div class="row" style="padding-bottom: 10%;">
+                    <div class="row">
                         <t t-foreach="public_courses" t-as="public">
                             <div class="col-2">
                             <div class="card bg-white h-100"
@@ -212,14 +210,14 @@
                                 <img class="img-fluid o_we_custom_image m-3 d- mx-auto" style="border-radius:150px; height: 150px; border: solid darkgray 1px;"
                                      t-attf-src="data:image/*;base64,{{public_value[0]}}"/>
                             </div>
-                                <t t-if="public[1]">
+                                <t t-if="public_value[1]">
                                     <div style="text-align: center; font-size:1.97753906rem;"><span><t t-esc="public_value[1]"/></span></div>
                                 </t>
                                 <t t-else="">
                                     <p style="height: 36px;"/>
                                 </t>
 
-                            <div style="text-align: center;"><span><t t-esc="public_value[2]"/></span></div>
+                            <div style="text-align: center; padding-top: 10px; padding-bottom: 10px;"><span><t t-esc="public_value[2]"/></span></div>
                             <a t-att-href="public_value[3]"
                                class="btn btn-outline-primary rounded-circle btn-lg">Ingresar</a>
                             </div>
@@ -238,7 +236,6 @@
                     </h3>
                     <div class="row" style="padding-bottom: 10%;">
                         <t t-foreach="mandatarios" t-as="mandatario">
-
                             <div class="col-2">
                             <div class="card bg-white h-100"
                                 style="align-items: center; border:solid 0px !important;">
@@ -252,8 +249,7 @@
                                 <t t-else="">
                                     <p style="height: 36px;"/>
                                 </t>
-
-                            <div style="text-align: center;"><span><t t-esc="mandatario_value[2]"/></span></div>
+                            <div style="text-align: center; padding-top: 10px; padding-bottom: 10px;"><span><t t-esc="mandatario_value[2]"/></span></div>
                                 <a t-att-href="mandatario_value[3]"
                                class="btn btn-outline-primary rounded-circle btn-lg">Ingresar</a>
                             </div>
