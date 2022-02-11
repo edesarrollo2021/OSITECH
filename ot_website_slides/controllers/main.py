@@ -163,7 +163,7 @@ class WebsiteAdresses(http.Controller):
         members = request.env['slide.channel'].sudo().search([('enroll_group_ids', 'in', job_position.enroll_group_id.id),('is_published', '=', True), ('complementary', '=', False)])
         slide_public = request.env['slide.channel'].sudo().search([('visibility', '=', 'public'), ('is_published', '=', True)])
         image_banner = job_position.addresses_id.image_banner_website
-        skill_courses = request.env['slide.channel'].sudo().search([('enroll_group_ids', 'in', job_position.enroll_group_id.id),('complementary', '=', True)])
+        skill_courses = request.env['slide.channel'].sudo().search([('enroll_group_ids', 'in', job_position.enroll_group_id.id), ('complementary', '=', True), ('is_published', '=', True)])
 
         mandatarios = {}
         public_courses = {}
@@ -226,10 +226,10 @@ class WebsiteAdresses(http.Controller):
         job_position = request.env['hr.job'].sudo().search([('id', '=', employee.job_id.id)], limit=1)
         slide_job = request.env['slide.job.positions'].sudo().search([('job_id', '=', job_position.id)], limit=1)
         members = request.env['slide.channel'].sudo().search(
-            [('enroll_group_ids', 'in', slide_job.enroll_group_id.id), ('is_published', '=', True)])
+            [('enroll_group_ids', 'in', slide_job.enroll_group_id.id), ('is_published', '=', True), ('complementary', '=', False)])
         slide_public = request.env['slide.channel'].sudo().search([('visibility', '=', 'public'), ('is_published', '=', True)])
         skill_courses = request.env['slide.channel'].sudo().search(
-            [('enroll_group_ids', 'in', slide_job.enroll_group_id.id), ('complementary', '=', True)])
+            [('enroll_group_ids', 'in', slide_job.enroll_group_id.id), ('complementary', '=', True), ('is_published', '=', True)])
         image_banner = slide_job.addresses_id.image_banner_website
         mandatarios = {}
         public_courses = {}
