@@ -94,7 +94,7 @@
                                                        style="border: none; border-bottom: 1px solid black; width:100%; outline: none; margin-right:10px;"
                                                 />
                                                 <div class="input-group-append">
-                                                    <button class="btn btn-secondary" type="button" style="background-color: darkblue;">
+                                                    <button class="btn btn-secondary" type="button" style="background-color:darkblue; color:white;">
                                                         <i class="fa fa-eye"></i>
                                                     </button>
                                                 </div>
@@ -116,11 +116,10 @@
                                             <br/>
                                             <button id="ot_register_user" style="background-color: darkblue;"
                                                     name="register" class="btn btn-primary">Registrar</button>
-                                            <p style="margin: 0px;font-size: 15px; color: black; padding-top:10px;"><a href="../web/login" role="button">Ya tengo una cuenta</a></p>
-
                                         </div>
                                     </div>
                                 </div>
+                                <p style="margin: 0px;font-size: 15px; color: black; padding-top:20px;"><a href="../web/login" role="button">Ya tengo una cuenta</a></p>
                             </form>
                         </div>
                     </div>

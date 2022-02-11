@@ -39,7 +39,7 @@
                                                     <p class="lead" style="text-align: center; ">
                                                         <font class="text-white" style="">
                                                             <font style="vertical-align: inherit;">
-                                                                <font style="vertical-align: inherit;">
+                                                                <font style="vertical-align: inherit; font-size:1.09375rem;">
                                                                     Universidad
                                                                     Aeromar te ofrece un plan de vida y carrera,
                                                                     en
@@ -69,7 +69,7 @@
                                                             <b>Alcanza tus sueños...</b>
                                                         </font>
                                                     </h2>
-                                                    <p class="lead" style="text-align: center; ">
+                                                    <p class="lead" style="text-align: center; font-size: 19.2px;">
                                                         <font class="text-white" style="">Universidad Aeromar
                                                             pone a tu disposición un plan de desarrollo que&amp;nbsp;potencializa
                                                             tus conocimientos, habilidades y desempeño.&amp;nbsp;&amp;nbsp;</font>
@@ -93,7 +93,7 @@
                                                             <b>Emprende el vuelo...</b>
                                                         </font>
                                                     </h2>
-                                                    <p class="lead" style="text-align: center; ">
+                                                    <p class="lead" style="text-align: center; font-size: 19.2px;">
                                                         <font color="#ffffff">Te capacitamos con planes de
                                                             estudio y certificaciones que garanticen tu mejor
                                                             desempeño dentro de nuestra organización.</font>
@@ -128,7 +128,7 @@
                                         <font style="vertical-align: inherit;">Universidad Aeromar</font>
                                     </font>
                                 </h2>
-                                <p style="text-align: center; ">Te damos la más cordial bienvenida a nuestra
+                                <p style="text-align: center; font-size: 19.2px;">Te damos la más cordial bienvenida a nuestra
                                     universidad virtual, una plataforma pensada para ti. En donde encontrarás
                                     cursos
                                     de capacitación y certificaciones que te permitirán acceder a mejores
@@ -148,7 +148,7 @@
                                             <h4>Vida y Carrera</h4>
                                         </div>
                                         <div class="col-md-12"
-                                             style="text-align: center; padding-left: 10%; padding-right: 10%;">
+                                             style="text-align: center; padding-left: 10%; padding-right: 10%; font-size: 19.2px;">
                                             <p>Conoce el plan de vida y carrera que la nueva Universidad Aeromar
                                                 ha
                                                 diseñado para ti.</p>
@@ -165,7 +165,7 @@
                                             <h4>Avisos Aeromar</h4>
                                         </div>
                                         <div class="col-md-12"
-                                             style="text-align: center; padding-left: 10%; padding-right: 10%;">
+                                             style="text-align: center; padding-left: 10%; padding-right: 10%; font-size: 19.2px;">
                                             <p>Infórmate a detalle sobre noticias, utilidades y deja que los
                                                 expertos de
                                                 ayuden. </p>
@@ -182,7 +182,7 @@
                                             <h4>Certificados y Constancias</h4>
                                         </div>
                                         <div class="col-md-12"
-                                             style="text-align: center; padding-left: 10%; padding-right: 10%;">
+                                             style="text-align: center; padding-left: 10%; padding-right: 10%; font-size: 19.2px;">
                                             <p>Imprime fácil, rápido y en línea tu historial de certificados y
                                                 constancias.</p>
                                         </div>
@@ -202,15 +202,13 @@
                                             <font style="color: rgb(13, 16, 20);">Direcciones</font>
                                         </h2>
                                         <h4>
-                                            <font style="color: rgb(13, 16, 20);">¿A qué dirección
-                                                perteneces?</font>
+                                            <font style="color: rgb(13, 16, 20);">
+                                                ¿A qué dirección perteneces?</font>
                                         </h4>
                                         <p>
-                                            <font style="color: rgb(13, 16, 20);">Haz clic sobre la dirección a
-                                                la
-                                                que perteneces y busca tu puesto para ingresar a tu Plan de Vida
-                                                y
-                                                Carrera.&amp;nbsp;</font>
+                                            <font style="color: rgb(13, 16, 20); font-size: 19.2px;">
+                                                Haz clic sobre la dirección a la que perteneces y busca tu puesto para
+                                                ingresar a tu Plan de Vida y Carrera.&amp;nbsp;</font>
                                         </p>
                                     </div>
                                     <div class="text-center o_colored_level col-lg-2 pb0 pt0">
@@ -272,6 +270,8 @@
                                              src="/ot_website_slides/static/src/img/recurso83.jpg"/>
                                         <img class="img-fluid o_we_custom_image m-3 d-block mx-auto o_animate o_anim_fade_in_right o_animate_both_scroll"
                                              src="/ot_website_slides/static/src/img/recurso86.jpg"/>
+                                        <img class="img-fluid o_we_custom_image m-3 d-block mx-auto o_animate o_anim_fade_in_up o_animate_both_scroll"
+                                             src="/ot_website_slides/static/src/img/log_fondo_blanco.png"/>
                                     </div>
                                 </div>
                             </div>
@@ -287,11 +287,11 @@
                                     <img src="/ot_website_slides/static/src/img/curso_onboarding.jpeg"
                                          style="width:100%; height:auto;"/>
                                 </div>
-                                <div class="col-md-6" style="background-color: rgb(255, 234, 0);">
+                                <div class="col-md-6" style="background-color: #FEDB31 !important;">
                                     <h5 style="text-align: center; padding-top: 25%;">Bienvenido a bordo</h5>
                                     <h2 style="text-align: center;">Cursos Onboarding</h2>
-                                    <p style="text-align: center;">Diseñado para todos los colaboradores
-                                        de nuevo ingreso.</p>
+                                    <p style="text-align: center; font-size: 19.2px;">
+                                        Diseñado para todos los colaboradores de nuevo ingreso.</p>
                                 </div>
                             </div>
                         </section>
@@ -301,7 +301,7 @@
                                 <div class="col-md-6" style=" padding-top: 10%; padding-left: 20%;">
                                     <h5 style="text-align: center;">Continúa tu formación con los</h5>
                                     <h2 style="text-align: center;">Cursos Mandatorios</h2>
-                                    <p style="text-align: center; ">Tan pronto termines la fase de Onboarding
+                                    <p style="text-align: center; font-size: 19.2px;">Tan pronto termines la fase de Onboarding
                                         deberás continuar tu formación con los Cursos Mandatorios para
                                         fortalecer tu conocimiento y mejorar tu desempeño personal.</p>
                                 </div>
@@ -332,7 +332,7 @@
                                     <h5 style="text-align: center;">Valida tu conocimiento con los</h5>
                                     <h2 style="text-align: center;">Cursos Periódicos</h2>
                                     <h4/>
-                                    <p style="font-family: Montserrat, &quot;Odoo Unicode Support Noto&quot;, sans-serif; font-size: 19.2px; text-align: center;">
+                                    <p style="font-size: 19.2px; text-align: center;">
                                         Desde ahora podrás validar en línea todo tu conocimiento acerca de las
                                         funciones y deberes relacionados con tu puesto.</p>
                                 </div>
@@ -354,10 +354,8 @@
                             <div class="container-fluid">
                                 <div class="row align-items-center">
                                     <div id="ot_rec_img_20">
-                                        <div class="pt16 pb16 o_colored_level col-lg-7">
-                                            <img id="ot__rec__img__20" src="/ot_website_slides/static/src/img/home/rec_img_20.png"
-                                                 class="img img-fluid mx-auto o_animate_both_scroll o_animate o_anim_bounce_in"/>
-                                        </div>
+                                        <img id="ot__rec__img__20" src="/ot_website_slides/static/src/img/home/rec_img_20.png"
+                                                 style="padding-left:20%;" class="img img-fluid mx-auto o_animate_both_scroll o_animate o_anim_bounce_in"/>
                                     </div>
                                     <div class="pt16 pb16 o_colored_level col-lg-5">
                                         <div id="ot_rec_img_21">
@@ -380,13 +378,10 @@
                                                     historial tu mismo</font>
                                             </font>
                                         </h4>
-                                        <p style="text-align: center; ">
-                                            <font color="#ffffff">Comparte tus certificados fácilmente y en
-                                                tiempo
-                                                real gracias a las funcionalidades de la nueva plataforma de
-                                                Universidad Aeromar. Empieza con un cambio orgánico desde hoy y
-                                                haz
-                                                mas con menos.</font>
+                                        <p style="text-align: center; font-size: 19.2px; color: white;">
+                                            Comparte tus certificados fácilmente y en tiempo real gracias a las
+                                            funcionalidades de la nueva plataforma de Universidad Aeromar. Empieza con
+                                            un cambio orgánico desde hoy y haz mas con menos.
                                         </p>
                                     </div>
                                 </div>
@@ -403,16 +398,10 @@
                                                      src="/ot_website_slides/static/src/img/home/rec_img_13.jpg"/>
                                                 <div class="card-body">
                                                     <h3 class="card-title">Ayuda y Soporte</h3>
-                                                    <p class="card-text">¿Tienes dudas o no sabes por donde
-                                                        empezar?
-                                                        te
-                                                        ayudamos y ofrecemos soporte 24/7. Utiliza el chat,
-                                                        envíanos
-                                                        un
-                                                        mensaje por correo electrónico o simplemente llama al
-                                                        número
-                                                        de
-                                                        contacto: +52 55 5133 1107 Ext. 1297</p>
+                                                    <p class="card-text" style="text-align: justify;">¿Tienes dudas o no sabes por donde empezar?
+                                                        te ayudamos y ofrecemos soporte 24/7. Utiliza el chat,
+                                                        envíanos un mensaje por correo electrónico o simplemente llama al
+                                                        número de contacto: +52 55 5133 1107 Ext. 1297</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -422,13 +411,10 @@
                                                      src="/ot_website_slides/static/src/img/home/rec_img_14.png"/>
                                                 <div class="card-body">
                                                     <h3 class="card-title">Foro General</h3>
-                                                    <p class="card-text">¿Ayuda y Soporte no contesto? ¿Estás
-                                                        estudiando
+                                                    <p class="card-text" style="text-align: justify;">¿Ayuda y Soporte no contesto? ¿Estás estudiando
                                                         desde casa y no es hora laboral? Entonces pregunta a la
-                                                        comunidad. Utiliza el Foro General para despejar todas
-                                                        tus
-                                                        dudas
-                                                        sobre el uso de la plataforma.&amp;nbsp;&amp;nbsp;</p>
+                                                        comunidad. Utiliza el Foro General para despejar todas tus
+                                                        dudas sobre el uso de la plataforma.&amp;nbsp;&amp;nbsp;</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -438,16 +424,11 @@
                                                      src="/ot_website_slides/static/src/img/home/rec_img_15.jpg"/>
                                                 <div class="card-body">
                                                     <h3 class="card-title">Rúbrica</h3>
-                                                    <p class="card-text">Conoce a detalle cómo es que tu
-                                                        instructor
-                                                        va a
-                                                        calificar&amp;nbsp;tu desempeño en cada uno de los
-                                                        cursos,
-                                                        ya
-                                                        que tu aprendizaje no se refleja con un solo examen ni
-                                                        todos
-                                                        los
-                                                        cursos se califican de la misma manera.</p>
+                                                    <p class="card-text" style="text-align: justify;">
+                                                        Conoce a detalle cómo es que tu instructor va a calificar&amp;nbsp;tu
+                                                        desempeño en cada uno de los cursos, ya que tu aprendizaje no se
+                                                        refleja con un solo examen ni todos los cursos se califican de
+                                                        la misma manera.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -466,13 +447,11 @@
                                                      src="/ot_website_slides/static/src/img/home/rec_img_16.jpg"/>
                                                 <div class="card-body">
                                                     <h3 class="card-title">Mi Vida y Carrera</h3>
-                                                    <p class="card-text">Conoce desde ahora tu plan de vida y
-                                                        carrera
+                                                    <p class="card-text" style="text-align: justify;">
+                                                        Conoce desde ahora tu plan de vida y carrera
                                                         para comenzar con tu formación. Haz clic sobre el menú
-                                                        superior
-                                                        con la etiqueta "Mi Plan de Vida y Carrera" para que el
-                                                        sistema
-                                                        te muestre el camino.</p>
+                                                        superior con la etiqueta "Mi Plan de Vida y Carrera" para que el
+                                                        sistema te muestre el camino.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -482,10 +461,9 @@
                                                      src="/ot_website_slides/static/src/img/home/rec_img_17.jpg"/>
                                                 <div class="card-body">
                                                     <h3 class="card-title">Mis Cursos</h3>
-                                                    <p class="card-text">Obtén tu avance en tiempo real con un
-                                                        tablero
-                                                        dinámico que te permite agilizar tu
-                                                        formación.&amp;nbsp;</p>
+                                                    <p class="card-text" style="text-align: justify;">
+                                                        Obtén tu avance en tiempo real con un tablero dinámico que te
+                                                        permite agilizar tu formación.&amp;nbsp;</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -495,12 +473,10 @@
                                                      src="/ot_website_slides/static/src/img/home/rec_img_18.jpg"/>
                                                 <div class="card-body">
                                                     <h3 class="card-title">Mis Insignias</h3>
-                                                    <p class="card-text">Cada logro se reconoce y la Universidad
-                                                        Aeromar
-                                                        te premia&amp;nbsp;con Insignias. Existen tres niveles
-                                                        de
-                                                        usuario, empiezas en nivel básico, intermedio y
-                                                        avanzado.</p>
+                                                    <p class="card-text" style="text-align: justify;">
+                                                        Cada logro se reconoce y la Universidad Aeromar te premia&amp;nbsp;con
+                                                        Insignias. Existen tres niveles de usuario, empiezas en nivel
+                                                        básico, intermedio y avanzado.</p>
                                                 </div>
                                             </div>
                                         </div>

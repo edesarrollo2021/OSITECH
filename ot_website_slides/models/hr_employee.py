@@ -10,16 +10,19 @@ class HrEmployeePrivate(models.Model):
     _inherit = "hr.employee"
     
     def write(self, vals):
-        print ("vals", vals)
-        user_id = self.env['res.users'].sudo().search([('login', '=', self.work_email)], limit=1)
-        print ("user_id", user_id)
-        category = self.env['ir.module.category'].sudo().search([('xml_id', 'in', 'base.module_category_website_elearning')], limit=1)
-        print ("category", category)
-        print ("category.name", category.name)
-        user_group = self.env['res.groups'].sudo().search([('users', 'in', user_id.id),('category_id', 'in', category.id)])
-        print ("user_group", user_group)
-        res = super(HrEmployeePrivate, self).write(vals)
-        print ("self", self.job_id.name)
-        return res
+        if "job_id" in vals:
+            user_id = self.env['res.users'].sudo().search([('login', '=', self.work_email)], limit=1)
+            slide_job = self.env['slide.job.positions'].sudo().search([('job_id', '=', vals.get("job_id"))], limit=1)
+            group = slide_job.enroll_group_id
+            group.write({'users': [[6, False, [user_id.id]]]})
+        if "active" in vals:
+            print("AAAAA")
+            if not vals.get("active"):
+                user = self.user_id
+                user.update({"active":False})
+            elif vals.get("active"):
+                user = self.user_id
+                user.update({"active":True})
+        return super(HrEmployeePrivate, self).write(vals)
 
   

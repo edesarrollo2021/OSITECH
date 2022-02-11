@@ -61,7 +61,7 @@
                                                                    autofocus="autofocus" required="required"
                                                                    autocapitalize="off"/>
                                                             <div class="input-group-append">
-                                                                <button class="btn btn-secondary" type="button">
+                                                                <button class="btn btn-secondary" type="button" style="background-color:darkblue; color:white;">
                                                                     <i class="fa fa-eye"></i>
                                                                 </button>
                                                             </div>
@@ -74,12 +74,12 @@
                                                 <input type="hidden" name="redirect" t-att-value="redirect"/>
                                                 <input type="hidden" name="token" t-att-value="token"/>
                                                 <div class="clearfix oe_login_buttons">
-                                                    <button type="submit" class="btn btn-primary btn-block">
-                                                        Confirm</button>
+                                                    <button type="submit" class="btn btn-primary btn-block" style="background-color:darkblue; color:white;">
+                                                        Confirmar</button>
                                                     <div class="d-flex justify-content-between align-items-center small mt-2">
                                                         <a t-if="not token" t-attf-href="/web/login?{{ keep_query() }}">
-                                                            Back to Login</a>
-                                                        <a t-if="invalid_token" href="/web/login">Back to Login</a>
+                                                            Regresar al login</a>
+                                                        <a t-if="invalid_token" href="/web/login">Regresar al login</a>
                                                     </div>
                                                     <div class="o_login_auth"/>
                                                 </div>

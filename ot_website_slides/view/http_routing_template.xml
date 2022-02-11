@@ -21,4 +21,47 @@
         </xpath>
     </template>
     
+    <template id="404_inherit" inherit_id="http_routing.404" name="404 inherit">
+        <xpath expr="." position="replace">
+            <t t-call="web.frontend_layout">
+                <script type="text/javascript" src="/web/static/lib/jquery/jquery.js"/>
+                <script>
+                    $(document).ready(function (){
+                    $('.o_header_standard').hide()
+                    });
+                </script>
+                <div id="wrap">
+                    <t t-raw="0"/>
+                    <div class="oe_structure oe_empty">
+                        <section class="pt128 pb104">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-6 text-center text-md-right my-md-auto mb-5 mb-md-0">
+                                        <img class="img img-fluid" src="/http_routing/static/src/img/404.svg"/>
+                                    </div>
+                                    <div class="col-md-6 text-center text-md-left my-auto">
+                                        <h1 class="sr-only">Error 404</h1>
+                                        <h2 class="mb16">No pudimos encontrar la página que busca!</h2>
+                                        <p><b>No se preocupes.</b> Si piensa que es un error mándenos un mensaje. <a href="/contactus">esta página.</a>.</p>
+                                    </div>
+                                    <div class="col-12 pt40 pb24">
+                                        <hr/>
+                                    </div>
+                                    <div class="col-12">
+                                        <p class="text-center pt24">Quizás se refiere a <b>¿páginas populares?</b></p>
+                                        <ul class="list-inline text-center">
+                                            <li class="list-inline-item mb-2"><a href="/" class="btn btn-secondary">Inicio</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </t>
+        </xpath>
+    </template>
+    
+    
+    
 </odoo>

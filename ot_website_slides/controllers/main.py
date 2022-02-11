@@ -57,44 +57,46 @@ class WebsiteUserRegister(http.Controller):
 
     @http.route('/web/registration', type='http', auth="public", website=True)
     def ot_met_web_user_register(self, redirect=None, **kw):
-        pasw_true = True
-        email = kw.get('email')
-        email3 = kw.get('email3')
-        employe = request.env['hr.employee'].sudo().search([('work_email', '=', email)], limit=1)
-        employe_one = request.env['hr.employee'].sudo().search([('work_email', '=', email3)], limit=1)
-        pasw = kw.get('pasw') or ''
-        repeat_pasw = kw.get('repeat_pasw') or ''
-        if pasw == repeat_pasw and pasw != '' and repeat_pasw != '':
-            vals_list = [{'employee_ids': [], 
-            'is_published': False, 
-            'name': employe_one.name, 
-            'email': employe_one.work_email, 
-            'login': employe_one.work_email,
-            'password': pasw,
-            'company_ids': [[6, False, [1]]], 
-            'company_id': 1, 
-            'sel_groups_1_9_10': 9, 
-            'active': True,
-            'action_id': False, 'notification_type': 'email',
-            'signature': '<p style="margin:0px;font-size:13px;font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif;"><br></p>', 
-            'karma': 0, 
-            'livechat_username': False}] 
-            user = request.env['res.users']
-            user.sudo().create(vals_list)
-            user = request.env['res.users'].sudo().search([('login', '=', email3)], limit=1)
-            slide_job = request.env['slide.job.positions'].sudo().search([('job_id', '=', employe_one.job_id.id)], limit=1)
-            employe = request.env['hr.employee'].sudo().search([('work_email', '=', email3)], limit=1)
-            employe.write({"user_id": user.id})
-            group = slide_job.enroll_group_id
-            group.write({'users': [[6, False, [user.id]]]})
-            return http.local_redirect('/web/login', query=request.params, keep_hash=True)
-        if pasw != '' and repeat_pasw != '' and pasw != repeat_pasw:
-            pasw_true = False
-        values = {
-            'employe': employe,
-            'email': email,
-            'pasw_true': pasw_true,
-        }
+        values = {}
+        if kw:
+            pasw_true = True
+            email = kw.get('email')
+            email3 = kw.get('email3')
+            employe = request.env['hr.employee'].sudo().search([('work_email', '=', email)], limit=1)
+            employe_one = request.env['hr.employee'].sudo().search([('work_email', '=', email3)], limit=1)
+            pasw = kw.get('pasw') or ''
+            repeat_pasw = kw.get('repeat_pasw') or ''
+            if pasw == repeat_pasw and pasw != '' and repeat_pasw != '':
+                vals_list = [{'employee_ids': [], 
+                'is_published': False, 
+                'name': employe_one.name, 
+                'email': employe_one.work_email, 
+                'login': employe_one.work_email,
+                'password': pasw,
+                'company_ids': [[6, False, [1]]], 
+                'company_id': 1, 
+                'sel_groups_1_9_10': 9, 
+                'active': True,
+                'action_id': False, 'notification_type': 'email',
+                'signature': '<p style="margin:0px;font-size:13px;font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif;"><br></p>', 
+                'karma': 0, 
+                'livechat_username': False}] 
+                user = request.env['res.users']
+                user.sudo().create(vals_list)
+                user = request.env['res.users'].sudo().search([('login', '=', email3)], limit=1)
+                slide_job = request.env['slide.job.positions'].sudo().search([('job_id', '=', employe_one.job_id.id)], limit=1)
+                employe = request.env['hr.employee'].sudo().search([('work_email', '=', email3)], limit=1)
+                employe.write({"user_id": user.id})
+                group = slide_job.enroll_group_id
+                group.write({'users': [[6, False, [user.id]]]})
+                return http.local_redirect('/web/login', query=request.params, keep_hash=True)
+            if pasw != '' and repeat_pasw != '' and pasw != repeat_pasw:
+                pasw_true = False
+            values = {
+                'employe': employe,
+                'email': email,
+                'pasw_true': pasw_true,
+            }
         return request.render("ot_website_slides.ot_web_user_register", values)
 
 class WebsiteAdresses(http.Controller):
@@ -158,16 +160,17 @@ class WebsiteAdresses(http.Controller):
     def ot_my_life_mx_register(self, redirect=None, **kw):
         id_add = kw.get("id")
         job_position = request.env['slide.job.positions'].sudo().search([('id', '=', id_add)], limit=1)
-        members = request.env['slide.channel'].sudo().search([('enroll_group_ids', 'in', job_position.enroll_group_id.id),('is_published', '=', True)])
+        members = request.env['slide.channel'].sudo().search([('enroll_group_ids', 'in', job_position.enroll_group_id.id),('is_published', '=', True), ('complementary', '=', False)])
         slide_public = request.env['slide.channel'].sudo().search([('visibility', '=', 'public'), ('is_published', '=', True)])
         image_banner = job_position.addresses_id.image_banner_website
+        skill_courses = request.env['slide.channel'].sudo().search([('enroll_group_ids', 'in', job_position.enroll_group_id.id), ('complementary', '=', True), ('is_published', '=', True)])
+
         mandatarios = {}
         public_courses = {}
+        skill_courses_add = {}
         name = ""
         acronym = ""
         url = ""
-
-        print("\nimage_banner", image_banner)
 
         for public in slide_public:
             image = public.life_plan_resource
@@ -193,12 +196,25 @@ class WebsiteAdresses(http.Controller):
                 acronym = False
             mandatarios[member.id] = [image, acronym, name, url]
 
+        for skill_course in skill_courses:
+            image = skill_course.life_plan_resource
+            url = "slides/%s"% skill_course.id
+            if "|" in skill_course.name:
+                position_I = skill_course.name.find('|')
+                name = str(skill_course.name)[position_I +1:]
+                acronym = str(skill_course.name)[0: position_I]
+            else:
+                name = skill_course.name
+                acronym = False
+            skill_courses_add[skill_course.id] = [image, acronym, name, url]
+
         values = {
         'image': job_position.addresses_id.image,
         'name': job_position.job_id.name,
         'slide_public': slide_public,
         'mandatarios': mandatarios,
         'public_courses': public_courses,
+        'skill_courses_add': skill_courses_add,
         'image_banner_website': image_banner,
         }
         return values
@@ -210,11 +226,14 @@ class WebsiteAdresses(http.Controller):
         job_position = request.env['hr.job'].sudo().search([('id', '=', employee.job_id.id)], limit=1)
         slide_job = request.env['slide.job.positions'].sudo().search([('job_id', '=', job_position.id)], limit=1)
         members = request.env['slide.channel'].sudo().search(
-            [('enroll_group_ids', 'in', slide_job.enroll_group_id.id), ('is_published', '=', True)])
+            [('enroll_group_ids', 'in', slide_job.enroll_group_id.id), ('is_published', '=', True), ('complementary', '=', False)])
         slide_public = request.env['slide.channel'].sudo().search([('visibility', '=', 'public'), ('is_published', '=', True)])
+        skill_courses = request.env['slide.channel'].sudo().search(
+            [('enroll_group_ids', 'in', slide_job.enroll_group_id.id), ('complementary', '=', True), ('is_published', '=', True)])
         image_banner = slide_job.addresses_id.image_banner_website
         mandatarios = {}
         public_courses = {}
+        skill_courses_add = {}
         name = ""
         acronym = ""
 
@@ -242,11 +261,24 @@ class WebsiteAdresses(http.Controller):
                 acronym = False
             mandatarios[member.id] = [image, acronym, name, url]
 
+        for skill_course in skill_courses:
+            image = skill_course.life_plan_resource
+            url = "slides/%s"% skill_course.id
+            if "|" in skill_course.name:
+                position_I = skill_course.name.find('|')
+                name = str(skill_course.name)[position_I +1:]
+                acronym = str(skill_course.name)[0: position_I]
+            else:
+                name = skill_course.name
+                acronym = False
+            skill_courses_add[skill_course.id] = [image, acronym, name, url]
+
         values = {
             'image': slide_job.image,
             'name': job_position.name,
             'slide_public': slide_public,
             'mandatarios': mandatarios,
+            'skill_courses_add': skill_courses_add,
             'public_courses': public_courses,
             'image_banner_website': image_banner,
         }
