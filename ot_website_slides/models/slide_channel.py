@@ -15,10 +15,13 @@ class Channel(models.Model):
     descriptive_picture = fields.Binary(string="Imagen descriptiva")
     user_id = fields.Many2one('res.users', string='Instructor', default=lambda self: self.env.uid)
     vigencia = fields.Char(string="Vigencia")
-    duration = fields.Char(string="Duración")
+    duration = fields.Char(string="Periodicidad")
     year = fields.Integer(string="Años")
     month = fields.Integer(string="Meses")
+    duration_hours = fields.Char(string="Duración")
     days = fields.Integer(string="Días")
+    hours = fields.Integer(string="Horas")
+    minutes = fields.Integer(string="Minutos")
     channel_type_mx = fields.Selection([('inicial', 'Inicial'),
                                     ('formativo', 'Formativo'),
                                     ('inducción', 'Inducción'),
@@ -30,7 +33,15 @@ class Channel(models.Model):
     life_plan_resource = fields.Binary(string="Icono del curso")
     complementary = fields.Boolean(string="Complementario")
 
-    @api.onchange('year','month','days')
+    @api.onchange('hours','minutes')
+    def duration_hours_completed(self):
+        self.duration_hours = ''
+        if self.hours:
+            self.duration_hours += str(self.hours) + " Horas "
+        if self.minutes:
+            self.duration_hours += str(self.minutes) + " Minutos "
+            
+    @api.onchange('year','month', 'days')
     def duration_completed(self):
         self.duration = ''
         if self.year:
@@ -39,6 +50,13 @@ class Channel(models.Model):
             self.duration += str(self.month) + " Meses "
         if self.days:
             self.duration += str(self.days) + " Días "
+            
+    @api.onchange('hours','minutes')
+    def duration_hours_user_error(self):
+        if self.hours >= 24:
+            raise UserError("Las Horas no pueden ser igual o mayor a 24 ya que esto se representa en Días")
+        if self.minutes >= 60:
+            raise UserError("Los minutos no pueden ser igual o mayor 60 ya que esto se representa en Horas")
             
     @api.onchange('month','days')
     def duration_user_error(self):

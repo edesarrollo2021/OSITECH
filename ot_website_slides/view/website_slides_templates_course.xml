@@ -65,12 +65,12 @@
                             <td class="border-top-0"><span t-field="channel.channel_type_mx"/></td>
                         </tr>
                         <tr t-if="channel.duration">
-                            <th class="border-top-0">Duración:</th>
+                            <th class="border-top-0">Periodicidad:</th>
                             <td class="border-top-0"><t class="font-weight-bold" t-esc="channel.duration"/></td>
                         </tr>
-                        <tr t-if="channel.total_time">
+                        <tr t-if="channel.duration_hours">
                             <th class="border-top-0">Duración:</th>
-                            <td class="border-top-0"><t class="font-weight-bold" t-esc="channel.year"/><t t-esc="channel.month"></t><t t-esc="channel.days"/></td>
+                            <td class="border-top-0"><t class="font-weight-bold" t-esc="channel.duration_hours"/></td>
                         </tr>
                         <tr>
                             <th class="border-top-0">Vigencia:</th>

@@ -24,13 +24,19 @@
                         </tree>
                     </field> 
                    <field name="constancy" widget="radio"/>
-                   <label for="year" string="Duración"/>
+                   <label for="year" string="Periodicidad"/>
                     <div class="o_row">
                         <field name="year"/>Años
                         <field name="month"/>Meses
                         <field name="days"/>Días
                     </div>
-                   <field name="duration" invisible="1"/>
+                   <label for="hours" string="Duración"/>
+                    <div class="o_row">
+                        <field name="hours"/>Horas
+                        <field name="minutes"/>Minutos
+                    </div>
+                   <field name="duration" invisible="0"/>
+                   <field name="duration_hours" invisible="0"/>
                    <field name="vigencia"/>
                    <field name="life_plan_resource" widget="image"  class="oe_avatar"/>
                 </xpath>
