@@ -35,8 +35,8 @@
                         <field name="hours"/>Horas
                         <field name="minutes"/>Minutos
                     </div>
-                   <field name="duration" invisible="0"/>
-                   <field name="duration_hours" invisible="0"/>
+                   <field name="duration" invisible="1"/>
+                   <field name="duration_hours" invisible="1"/>
                    <field name="vigencia"/>
                    <field name="life_plan_resource" widget="image"  class="oe_avatar"/>
                 </xpath>
