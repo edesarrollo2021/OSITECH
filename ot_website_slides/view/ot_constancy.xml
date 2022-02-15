@@ -69,9 +69,14 @@
                                         <span t-if="user_input.survey_id.slide_channel_ids.constancy == 'certificate'"
                                               t-esc="'certificado'"/>
                                         <span t-else="">constancia</span></p>
-                                    <span style="font-size:45px;">a: </span><span style="font-size:45px; font-family: Castellar;" class="text-uppercase "><t t-esc="user_input.partner_id.name" /></span>
+                                    <div style="padding-left:7%; padding-right:10%;">
+                                        <span style="font-size:45px;">a: </span><span style="font-size:45px; font-family: Castellar;" class="text-uppercase "><t t-esc="user_input.partner_id.name" /></span>
+                                    </div>
                                     <p style="font-size:30px; padding-top:40px;">Por haber completado satisfactoriamente el curso:</p>
-                                    <span style="font-size:45px; font-family: Castellar;" class="text-uppercase"><span t-esc="user_input.survey_id.slide_channel_ids.name"/></span>
+                                    <div style="padding-left:7%; padding-right:10%;">
+                                        <span style="font-size:45px; font-family: Castellar;" class="text-uppercase"><span t-esc="user_input.survey_id.slide_channel_ids.name"/></span>
+                                    </div>
+
                                     <t t-foreach="user_input.survey_id.slide_channel_ids.channel_partner_ids"
                                        t-as="line">
                                         <t t-if="line.id == user_input.partner_id.user_ids.id">
