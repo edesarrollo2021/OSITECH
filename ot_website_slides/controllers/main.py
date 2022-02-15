@@ -274,7 +274,7 @@ class WebsiteAdresses(http.Controller):
             skill_courses_add[skill_course.id] = [image, acronym, name, url]
 
         values = {
-            'image': slide_job.image,
+            'image': slide_job.addresses_id.image,
             'name': job_position.name,
             'slide_public': slide_public,
             'mandatarios': mandatarios,

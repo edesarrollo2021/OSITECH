@@ -26,9 +26,6 @@
                 events: {
                 },
                 start:function(){
-                    console.log("ALFONSO MONRROY AGELVIS");
-                    console.log("ALFONSO MONRROY AGELVIS");
-                    console.log("ALFONSO MONRROY AGELVIS");
                     this.self= this
                     this.template = ajax.loadXML('/ot_website_slides/static/src/xml/ot_website_slides.templates_direcciones.xml', qweb);
                     this._url_my_life()
