@@ -51,10 +51,8 @@ class Channel(models.Model):
         if self.days:
             self.duration += str(self.days) + " Días "
             
-    @api.onchange('hours','minutes')
+    @api.onchange('minutes')
     def duration_hours_user_error(self):
-        if self.hours >= 24:
-            raise UserError("Las Horas no pueden ser igual o mayor a 24 ya que esto se representa en Días")
         if self.minutes >= 60:
             raise UserError("Los minutos no pueden ser igual o mayor 60 ya que esto se representa en Horas")
             

@@ -86,14 +86,13 @@
                                                     t-esc="create_date_course"/>,</p>
                                         </t>
                                     </t>
-                                    <p style="font-size:25px; margin-bottom: -7px;">con una duración de: <t
-                                            t-esc="user_input.survey_id.slide_channel_ids.total_time"
-                                            t-options="{'widget': 'duration', 'unit': 'hour', 'round': 'minute'}"/>.</p>
+                                    <p style="font-size:25px; margin-bottom: -7px;">Con una duración de: <t
+                                            t-esc="user_input.survey_id.slide_channel_ids.duration_hours"/></p>
                                     <p style="font-size:25px; margin-bottom: -7px;">Obteniendo una calificación de: <t
-                                            t-esc="user_input.last_displayed_page_id.answer_score"/>.</p>
+                                            t-esc="user_input.last_displayed_page_id.answer_score"/></p>
                                     <p style="font-size:25px; margin-bottom: -7px;">En Hangar 1 Zona "D" Col.
                                         Federal,</p>
-                                    <p style="font-size:25px; margin-bottom: -7px;">Ciudad de México.</p>
+                                    <p style="font-size:25px; margin-bottom: -7px;">Ciudad de México</p>
                                     <p style="font-size:25px; margin-bottom: -7px;">Modalidad: <t
                                             t-esc="user_input.survey_id.slide_channel_ids.training_model"/></p>
                                 </td>
